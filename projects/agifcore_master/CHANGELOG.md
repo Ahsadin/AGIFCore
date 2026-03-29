@@ -54,3 +54,6 @@
 - Recorded explicit user approval for Phase 1 in `00_admin/codex_threads/handoffs/PHASE_01_USER_VERDICT.md`.
 - Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 1 is now `approved`.
 - Logged the earned Phase 1 approval state in `DECISIONS.md` while keeping Phase 2 not started.
+- Materialized `01_plan/PHASE_02_FABRIC_KERNEL_AND_WORKSPACE.md` as the approved Phase 2 planning baseline for execution start.
+- Added `00_admin/codex_threads/handoffs/PHASE_02_PLAN_FREEZE_HANDOFF.md` and `00_admin/codex_threads/handoffs/PHASE_02_EXECUTION_START_BRIEF.md`.
+- Recorded that the Phase 2 planning baseline is frozen for execution start while Phase 2 remains `open` and Phase 3 has not started.
