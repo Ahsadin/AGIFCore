@@ -27,3 +27,6 @@
   - Meta & Growth Pod is now marked as a danger zone with extra audit and stronger governor review
   - Source Cartographer is default-active only in Phase 0 and Phase 1 unless lineage is touched again
   - Product & Sandbox Pod stays one pod for restart but cannot become a late-phase dumping ground
+- Materialized the agreed Phase 1 planning baseline into `01_plan/PHASE_01_CONSTITUTION_AND_FULL_SYSTEM_BLUEPRINT.md`.
+- Froze the Phase 1 planning baseline for execution handoff and recorded the deferment of Phase 2 planning until Phase 1 execution, validation, and explicit user approval are complete.
+- Added Governor handoff artifacts for the next execution thread under `00_admin/codex_threads/handoffs/`.
