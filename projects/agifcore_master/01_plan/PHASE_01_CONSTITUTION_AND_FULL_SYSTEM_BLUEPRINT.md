@@ -4,7 +4,7 @@
 
 - Phase number: `1`
 - Canonical phase name: `Constitution and Full-System Blueprint`
-- Status: `planning_draft`
+- Status: `open`
 - Intended canonical artifact path: `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/01_plan/PHASE_01_CONSTITUTION_AND_FULL_SYSTEM_BLUEPRINT.md`
 - Source-of-truth references reviewed:
   - `/Users/ahsadin/Documents/AGIFCore/AGENTS.md`
@@ -68,7 +68,7 @@
 - Any Meta & Growth activation
 - Any Product & Sandbox implementation work beyond Phase 1 blueprint planning
 
-## 4. Phase 0 prerequisite check
+## 4. Phase 0 prerequisite state
 
 ### Prerequisites already satisfied from files
 
@@ -78,23 +78,20 @@
 - Frozen build-machine rule stack exists.
 - Admin enforcement templates exist.
 - Placeholder targets exist for all required `01_plan`, `02_requirements`, and `03_design` Phase 1 artifacts.
+- Canonical Phase 0 artifacts exist in `01_plan/PHASE_00_AGIFCORE_RESET_AND_SOURCE_FREEZE.md`, `01_plan/AGIF_V2_HISTORICAL_ARCHIVAL_NOTE.md`, `01_plan/SOURCE_FREEZE_INVENTORY.md`, `01_plan/SOURCE_FREEZE_METHOD.md`, and `01_plan/PROJECT_STRUCTURE_AUDIT.md`.
+- `PHASE_GATE_CHECKLIST.md` records Phase 0 as `approved`.
 - Root README and decisions already mark AGIF v2 as historical source material.
 
-### Unresolved prerequisites
+### Current gate truth
 
-- No distinct project-level archival note file was found that explicitly closes AGIF v2 as a failed historical attempt inside the project workspace.
-- No distinct source-freeze inventory or source-freeze method artifact was found inside the project workspace.
-- `PHASE_GATE_CHECKLIST.md` still shows Phase 0 as `open`.
-
-### Blockers
-
-- Phase 1 execution should not be treated as closure-ready until the missing Phase 0 archival note and source-freeze method are explicitly resolved or explicitly waived by the user.
-- Phase 0 open status is a governance blocker for later Phase 1 closure, even though it does not block planning this draft.
+- Phase 0 prerequisite blockers are resolved in repo files.
+- Phase 1 remains `open`.
+- Phase 1 is still unfinished and may not be treated as approved or complete until the validation chain and explicit user verdict exist.
 
 ### Non-blockers
 
 - Existing placeholder files in `01_plan`, `02_requirements`, and `03_design` are acceptable starting targets for later Phase 1 authoring.
-- The Phase 1 plan file now exists as the canonical frozen planning baseline for the later execution run.
+- The Phase 1 plan file remains the canonical frozen execution baseline while the phase itself stays `open`.
 
 ## 5. Active team map for Phase 1
 
@@ -682,11 +679,11 @@ User is active approval-only and does not receive a task card.
 | Source Cartographer overhead persists after Phase 1 | role-activation review | `PG` | `SC` remains active without lineage touch | deactivate `SC` and record reason |
 | Product & Sandbox becomes late-phase dumping lane | task-card scope audit | `ASA` | unrelated late-phase work assigned to Product & Sandbox | reject assignment and reassign by Governor |
 | placeholder planning files get mistaken as completion | line-count and substantive-content audit | `ASA` | any current placeholder file counted as closure evidence | block closure and require substantive draft |
-| unresolved Phase 0 blockers ignored | prerequisite check before execution | `PG` | archival note/source-freeze method still absent at execution start | hold Phase 1 execution until resolved or explicitly waived |
+| stale Phase 0 gate truth ignored | prerequisite check before validation | `PG` | the baseline still claims Phase 0 is open or Phase 0 artifacts are missing when repo files show otherwise | repair the baseline before the next validation pass |
 
 ## 13. Approval, commit, and freeze protocol
 
-- This run is planning-only.
+- This file remains the frozen Phase 1 execution baseline.
 - No commit now.
 - No freeze now.
 - No tag now.
@@ -694,22 +691,19 @@ User is active approval-only and does not receive a task card.
 - No approval now.
 - No runtime code now.
 - No later-phase work now.
-- This planning draft does not authorize writing any Phase 1 artifact by itself.
-- Only after the user explicitly says approved may a later separate run create or update the Phase 1 plan artifact and any optional planning-support drafts.
-- Only after a later separate user approval may another later run commit and freeze the approved Phase 1 plan artifacts.
-- After user approval and any later freeze, any future change must require:
+- This baseline does not authorize Phase 2 work or runtime completion claims by itself.
+- After user approval and any later freeze, any future change to this baseline must require:
   - explicit reopen instruction from the user
   - a supersession note that names the replaced Phase 1 plan artifact
   - a new validation pass before re-freeze
-- Nothing in this draft implies that Phase 1 is complete.
-- Nothing in this draft implies that Phase 2 may begin.
+- Nothing in this baseline implies that Phase 1 is complete.
+- Nothing in this baseline implies that Phase 2 may begin.
 
 ## 14. Final readiness judgment
 
-`blocked_pending_prerequisites`
+`ready_for_validation_pass`
 
 Why:
-- the planning draft can be reviewed now,
-- but Phase 0 still appears open from repo files,
-- and the explicit Phase 0 archival note and source-freeze method artifacts required by the master plan were not found as distinct project artifacts,
-- so later Phase 1 execution should be treated as blocked until those prerequisites are resolved or explicitly waived by the user.
+- the Phase 0 canonical artifacts and approval state are now present in repo files,
+- this baseline now matches the current gate truth recorded in `PHASE_INDEX.md` and `PHASE_GATE_CHECKLIST.md`,
+- and Phase 1 itself still remains `open` until a fresh validation pass and explicit user verdict confirm the current artifact set.

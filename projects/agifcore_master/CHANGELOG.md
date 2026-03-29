@@ -48,3 +48,9 @@
 - Updated `01_plan/PHASE_GATE_CHECKLIST.md` so the Phase 0 row points to the canonical artifacts and states that older `PHASE_00_*` files are noncanonical draft inputs only.
 - Added the Phase 0 audit, governor verification, validation request, and user verdict records under `00_admin/codex_threads/`.
 - Updated `01_plan/PHASE_GATE_CHECKLIST.md` to move Phase 0 from `open` to `approved` after the explicit user verdict.
+
+## 2026-03-30
+
+- Recorded explicit user approval for Phase 1 in `00_admin/codex_threads/handoffs/PHASE_01_USER_VERDICT.md`.
+- Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 1 is now `approved`.
+- Logged the earned Phase 1 approval state in `DECISIONS.md` while keeping Phase 2 not started.
