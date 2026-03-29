@@ -30,3 +30,21 @@
 - Materialized the agreed Phase 1 planning baseline into `01_plan/PHASE_01_CONSTITUTION_AND_FULL_SYSTEM_BLUEPRINT.md`.
 - Froze the Phase 1 planning baseline for execution handoff and recorded the deferment of Phase 2 planning until Phase 1 execution, validation, and explicit user approval are complete.
 - Added Governor handoff artifacts for the next execution thread under `00_admin/codex_threads/handoffs/`.
+- Opened task card `P1-TC-PG-02` for Phase 0 blocker remediation before broader Phase 1 execution.
+- Added distinct Phase 0 blocker artifacts:
+  - `01_plan/PHASE_00_AGIF_V2_ARCHIVAL_NOTE.md`
+  - `01_plan/PHASE_00_SOURCE_FREEZE_INVENTORY.md`
+  - `01_plan/PHASE_00_SOURCE_FREEZE_METHOD.md`
+- Updated `01_plan/PHASE_GATE_CHECKLIST.md` to show that the missing Phase 0 artifacts now exist while Phase 0 still remains open pending audit, validation, and separate user approval.
+- Opened `P0-TC-ASA-01` to finish Phase 0 only through independent audit of the new Phase 0 artifacts.
+- Created the canonical Phase 0 artifact set under the requested names:
+  - `01_plan/PHASE_00_AGIFCORE_RESET_AND_SOURCE_FREEZE.md`
+  - `01_plan/AGIF_V2_HISTORICAL_ARCHIVAL_NOTE.md`
+  - `01_plan/SOURCE_FREEZE_INVENTORY.md`
+  - `01_plan/SOURCE_FREEZE_METHOD.md`
+  - `01_plan/PROJECT_STRUCTURE_AUDIT.md`
+- Added the Phase 0 role-task map under `00_admin/codex_threads/tasks/phase_00/` for Program Governor, Constitution Keeper, Source Cartographer, Test & Replay Lead, Release & Evidence Lead, Anti-Shortcut Auditor, and Validation Agent.
+- Added `00_admin/codex_threads/tasks/phase_00/P0-REVIEW-SURFACE-01_PHASE_0_REVIEW_PACKET_PLAN.md` to define the later user review packet.
+- Updated `01_plan/PHASE_GATE_CHECKLIST.md` so the Phase 0 row points to the canonical artifacts and states that older `PHASE_00_*` files are noncanonical draft inputs only.
+- Added the Phase 0 audit, governor verification, validation request, and user verdict records under `00_admin/codex_threads/`.
+- Updated `01_plan/PHASE_GATE_CHECKLIST.md` to move Phase 0 from `open` to `approved` after the explicit user verdict.
