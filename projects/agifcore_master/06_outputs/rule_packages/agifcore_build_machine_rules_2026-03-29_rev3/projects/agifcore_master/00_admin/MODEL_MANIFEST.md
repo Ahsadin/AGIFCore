@@ -30,3 +30,5 @@ If a role's primary model is unavailable and no allowed fallback exists, the tas
 - No role may use an unlisted model.
 - Utility helpers may not do high-judgment approval work.
 - Critical roles should pin a dated snapshot in the task card when the active build environment supports it.
+- The same model family does not mean the same agent.
+- Build Pod Lead, Merge Arbiter, and Validation Agent must be separate agents, sessions, or threads even if they use the same model family.

@@ -127,6 +127,12 @@ Source Cartographer responsibilities:
 - inventory inherited items from v1, tasklet, v2, and `agif_v2_master`
 - label inherited items exactly as `rebuild_clean`, `port_with_provenance`, `adapt_for_research_only`, or `reject`
 
+Source Cartographer activation rule:
+
+- active by default in Phase 0
+- active by default in Phase 1
+- reopened only when inherited lineage is touched again
+
 Source Cartographer may not:
 
 - port code directly as completed work
@@ -245,6 +251,12 @@ Scope:
 - bounded self-initiated inquiry
 - structural growth
 
+Danger-zone rule:
+
+- mandatory extra audit
+- mandatory stronger Program Governor review
+- mandatory additional human demo checkpoint whenever self-improvement, self-initiated inquiry, or structural growth behavior changes land
+
 ### Product & Sandbox Pod Lead
 
 Recommended build-model tier:
@@ -268,6 +280,12 @@ Scope:
 - profile manifests
 - release packaging
 - public evidence alignment
+
+Scope guard:
+
+- keep this as one pod for the restart
+- do not use this pod as a dumping ground for unrelated late-phase work
+- unrelated late-phase work must be rejected or reassigned by the Program Governor
 
 ## Test & Replay Lead
 
@@ -372,6 +390,8 @@ Release & Evidence Lead may not:
 - No inherited code counts until it is mapped, rebuilt or ported, verified, demoed, and approved.
 - No phase may close without verifier output, evidence, demo, validation request, and explicit user approval.
 - No role may claim runtime truth from build-time agent text.
+- The same model family does not mean the same agent.
+- Build Pod Lead, Merge Arbiter, and Validation Agent must be separate agents, sessions, or threads even if they use the same model family.
 
 ## Task Card Rule
 

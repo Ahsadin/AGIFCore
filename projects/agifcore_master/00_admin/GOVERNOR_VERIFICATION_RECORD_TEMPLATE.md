@@ -16,7 +16,14 @@
 - Tool Permission Matrix Followed:
 - Branch And Worktree Policy Followed:
 - Model Manifest Followed:
+- Separate Agent Sessions Confirmed:
 - Escalation Rule Triggered:
+
+## Danger-Zone Checks
+
+- Meta & Growth Extra Audit Completed:
+- Meta & Growth Stronger Governor Review Completed:
+- Additional Human Demo Checkpoint Completed:
 
 ## Decision
 

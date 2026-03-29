@@ -14,3 +14,7 @@
 | D-010 | 2026-03-29 | Tool permissions and branch/worktree isolation are mandatory controls, not optional conventions. | Prevents silent drift in commands, file access, and integration behavior. |
 | D-011 | 2026-03-29 | Exact role-to-model mappings and downgrade rules are frozen in a model manifest before live build work. | Prevents model drift and improvised downgrades. |
 | D-012 | 2026-03-29 | Repeated evidence mismatch or misleading completion claims trigger escalation and freeze rules. | Stops endless reopen loops and forces human review when trust breaks. |
+| D-013 | 2026-03-29 | The same model family does not mean the same agent. Build Pod Lead, Merge Arbiter, and Validation Agent must be separate sessions or threads. | Keeps separation of duties real instead of cosmetic. |
+| D-014 | 2026-03-29 | Meta & Growth Pod is a danger zone and always gets extra audit, stronger governor review, and additional human checkpoints when behavior changes land. | Prevents impressive-sounding self-modification claims from escaping proof. |
+| D-015 | 2026-03-29 | Source Cartographer is active by default in Phase 0 and Phase 1 and reopens only when inherited lineage is touched again. | Keeps source mapping strict without creating permanent overhead. |
+| D-016 | 2026-03-29 | Product & Sandbox Pod stays one pod for restart but may not become a dumping ground for unrelated late-phase work. | Keeps the late-phase product lane scoped and readable. |

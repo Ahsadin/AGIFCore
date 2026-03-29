@@ -30,7 +30,9 @@ Rules:
 - Specialized planning, build, test, audit, merge, validation, and release roles must follow the frozen role manifest.
 - Build agents are outside the AGIFCore runtime and may never be treated as runtime truth.
 - No agent may both write and validate the same artifact.
+- The same model family does not mean the same agent. Build Pod Lead, Merge Arbiter, and Validation Agent must be separate agents, sessions, or threads.
 - Tool permissions, branch/worktree isolation, model use, and escalation behavior must follow the frozen admin control files.
+- Meta & Growth Pod is a danger zone and always gets extra audit and stronger governor review.
 - Program Governor must independently inspect code, rerun checks, and verify demos. Report text alone is not enough.
 - Program Governor is the only role that may ask the user for final phase review.
 - One active build pod is the default unless the governor explicitly authorizes more parallel build work.

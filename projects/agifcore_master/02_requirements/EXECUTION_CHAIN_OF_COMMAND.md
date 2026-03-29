@@ -30,6 +30,9 @@ Specialized frozen roles include:
 
 There is no generic manager/worker approval chain anymore.
 
+The same model family does not mean the same agent.
+Build Pod Lead, Merge Arbiter, and Validation Agent must be separate agents, sessions, or threads.
+
 ## Fixed Reporting Rule
 
 - specialized roles report findings through the frozen task-card and evidence flow
@@ -53,6 +56,9 @@ More parallel build pods require:
 - disjoint write scopes
 - evaluation evidence that the extra coordination cost is justified
 
+Source Cartographer is not a forever-active role.
+It is active by default in Phase 0 and Phase 1, and reopens only when inherited lineage is touched again.
+
 ## Phase Work Pipeline
 
 Every phase follows this pipeline:
@@ -74,6 +80,12 @@ Every phase follows this pipeline:
 15. the user approves or rejects
 16. only then may the phase be marked earned and the next phase begin
 
+If the active pod is Meta & Growth Pod Lead, add these mandatory controls:
+
+- one extra audit pass
+- stronger Program Governor review
+- one additional human demo checkpoint before phase close whenever self-improvement, self-initiated inquiry, or structural growth behavior changes land
+
 ## Hard Work Rules
 
 - No patch without a task card naming the exact files and expected outputs.
@@ -82,6 +94,7 @@ Every phase follows this pipeline:
 - No role may invent public claims beyond the evidence bundle.
 - No role may close a phase by summary text alone.
 - No role may bypass the tool-permission matrix, branch/worktree policy, or escalation rules.
+- Product & Sandbox Pod may not become a dumping ground for unrelated late-phase work.
 
 ## Runtime Separation Rule
 

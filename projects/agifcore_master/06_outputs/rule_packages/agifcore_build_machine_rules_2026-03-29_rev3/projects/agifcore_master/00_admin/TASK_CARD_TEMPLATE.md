@@ -14,6 +14,9 @@
 - Active Build Role:
 - Supporting Roles:
 - Allowed Models:
+- Build Pod Agent Session ID:
+- Merge Arbiter Session ID:
+- Validation Agent Session ID:
 - Required Reads:
 
 ## Scope Control
@@ -34,6 +37,9 @@
 - Goal:
 - Expected Outputs:
 - Non-Goals:
+- Inherited Lineage Touched: `yes` | `no`
+- Source Cartographer Required: `yes` | `no`
+- Meta & Growth Danger-Zone Controls Required: `yes` | `no`
 
 ## Verification
 
@@ -46,9 +52,11 @@
 ## Handoff Records
 
 - Audit Report Path:
+- Extra Audit Report Path:
 - Governor Verification Record Path:
 - Validation Request Path:
 - User Verdict Path:
+- Additional Human Demo Checkpoint Path:
 
 ## Approval Chain
 

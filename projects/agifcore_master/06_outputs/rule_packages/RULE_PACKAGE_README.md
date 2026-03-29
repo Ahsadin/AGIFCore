@@ -14,6 +14,8 @@ It is meant to be uploaded as supporting context so another GPT can verify:
 - the tool-permission, branch/worktree, and escalation rules
 - the full Phase 1 planning files required by the master plan
 - the full requirements pack and design pack that the package refers to
+- the rule that same model family does not mean same agent
+- the danger-zone controls for Meta & Growth Pod
 
 ## Included Files
 

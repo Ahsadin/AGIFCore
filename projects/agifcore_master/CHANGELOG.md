@@ -21,3 +21,9 @@
   - branch and worktree policy
   - escalation and freeze rules
 - Expanded the external rule package so it includes the full Phase 1 plan files, the requirements pack, the design pack, and the admin enforcement files.
+- Tightened role-level enforcement:
+  - same model family does not mean same agent
+  - Build Pod Lead, Merge Arbiter, and Validation Agent must be separate sessions or threads
+  - Meta & Growth Pod is now marked as a danger zone with extra audit and stronger governor review
+  - Source Cartographer is default-active only in Phase 0 and Phase 1 unless lineage is touched again
+  - Product & Sandbox Pod stays one pod for restart but cannot become a late-phase dumping ground

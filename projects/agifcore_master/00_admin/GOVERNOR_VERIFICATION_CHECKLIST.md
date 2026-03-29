@@ -9,6 +9,7 @@ Program Governor must complete this checklist before asking the user for phase r
 - required evidence files exist
 - demo path exists
 - validation request draft exists
+- required agent session ids are recorded
 
 ## Code Truth
 
@@ -35,6 +36,15 @@ Program Governor must complete this checklist before asking the user for phase r
 - confirm branch/worktree policy was followed
 - confirm no unauthorized model downgrade occurred
 - confirm no role both wrote and validated the same artifact
+- confirm Build Pod Lead, Merge Arbiter, and Validation Agent are separate agents or sessions
+
+## Danger-Zone Truth
+
+If Meta & Growth Pod Lead is active:
+
+- confirm the extra audit pass exists
+- confirm stronger Program Governor review was performed
+- confirm the additional human demo checkpoint was completed when required
 
 ## Decision
 

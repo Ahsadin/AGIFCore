@@ -33,8 +33,10 @@ Working rules:
 - Program Governor is the highest agent authority below the user.
 - Build agents are outside the AGIFCore runtime and may never become part of the runtime truth path.
 - No agent may both write and validate the same artifact.
+- The same model family does not mean the same agent. Build Pod Lead, Merge Arbiter, and Validation Agent must use separate agents, sessions, or threads.
 - One active build pod is the default. More parallel build pods require explicit governor approval backed by evaluation evidence.
 - Tool access, branch/worktree isolation, model use, and escalation behavior are controlled by frozen policy files, not by ad hoc judgment.
+- Meta & Growth Pod is a danger zone and always gets extra audit and stronger governor review.
 - Program Governor must never trust report text alone and must independently verify code, checks, and demos before any phase-review request.
 - Program Governor is the only role that may ask the user for end-of-phase review.
 - No next phase starts until the Program Governor has completed verification and the user has approved the phase demo.

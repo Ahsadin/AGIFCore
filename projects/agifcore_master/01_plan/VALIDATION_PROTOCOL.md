@@ -48,3 +48,8 @@ Required closure chain:
 14. only then may the phase be marked earned
 
 If any required record is missing, the phase stays open.
+
+Special rules:
+
+- Build Pod Lead, Merge Arbiter, and Validation Agent must be separate agents, sessions, or threads even if they use the same model family.
+- If Meta & Growth Pod Lead is active, one extra audit pass and one additional human demo checkpoint are mandatory when self-improvement, self-initiated inquiry, or structural growth behavior changes land.
