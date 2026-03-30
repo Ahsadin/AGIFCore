@@ -6,10 +6,10 @@ Governor can rerun the same verifiers later without external `PYTHONPATH` wiring
 
 ## Inspect
 
-- `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-01/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json`
-- `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-01/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_cell_contracts_report.json`
-- `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-01/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_validation_report.json`
-- `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-01/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_demo_bundle/phase_03_bundle_validation_demo.md`
+- `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-MA-01/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json`
+- `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-MA-01/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_cell_contracts_report.json`
+- `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-MA-01/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_validation_report.json`
+- `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-MA-01/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_demo_bundle/phase_03_bundle_validation_demo.md`
 
 ## What this proves
 

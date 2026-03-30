@@ -6,8 +6,8 @@ Governor can rerun the same verifier later without external `PYTHONPATH` wiring.
 
 ## Review
 
-- `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-01/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_validation_report.json`
-- `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-01/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json`
+- `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-MA-01/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_validation_report.json`
+- `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-MA-01/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json`
 
 ## Good Looks Like
 

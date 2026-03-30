@@ -9,16 +9,16 @@
   "reports": [
     {
       "overall_pass": true,
-      "path": "/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-01/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_cell_contracts_report.json",
+      "path": "/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-MA-01/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_cell_contracts_report.json",
       "report_id": "cell_contracts"
     },
     {
       "overall_pass": true,
-      "path": "/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-01/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_validation_report.json",
+      "path": "/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-MA-01/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_validation_report.json",
       "report_id": "bundle_validation"
     }
   ],
-  "runtime_modules_available": false,
+  "runtime_modules_available": true,
   "slice": "slice_1",
   "status": "slice_1_only"
 }

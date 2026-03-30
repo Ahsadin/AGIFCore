@@ -56,7 +56,7 @@
     "cell_contracts",
     "tissue_manifests"
   ],
-  "runtime_modules_available": false,
+  "runtime_modules_available": true,
   "slice": "slice_1",
   "summary": {
     "expected_failures_verified": true,
