@@ -1,0 +1,79 @@
+{
+  "max_manifest_size_bytes": 65536,
+  "max_routing_targets": 8,
+  "max_tissue_members": 16,
+  "notes": [
+    "slice-1 only",
+    "verifier resolves runtime modules from the repo-relative execution path",
+    "reports are generated from executed case checks, not summary prose"
+  ],
+  "phase": "Phase 3",
+  "results": [
+    {
+      "case_id": "cell-contract-pass",
+      "expected_pass": true,
+      "message": "passed",
+      "passed": true,
+      "target": "cell_contract"
+    },
+    {
+      "case_id": "tissue-manifest-pass",
+      "expected_pass": true,
+      "message": "passed",
+      "passed": true,
+      "target": "tissue_manifest"
+    },
+    {
+      "case_id": "missing-contract-field",
+      "expected_pass": false,
+      "message": "failed as expected: missing required cell contract field: bundle_ref",
+      "passed": true,
+      "target": "cell_contract"
+    },
+    {
+      "case_id": "duplicate-tissue-member",
+      "expected_pass": false,
+      "message": "failed as expected: member_cell_ids contains duplicate entries",
+      "passed": true,
+      "target": "tissue_manifest"
+    },
+    {
+      "case_id": "illegal-tissue-membership",
+      "expected_pass": false,
+      "message": "failed as expected: member cell cell-alpha does not allow tissue membership for tissue-orchestration",
+      "passed": true,
+      "target": "cross_reference"
+    },
+    {
+      "case_id": "manifest-size-breach",
+      "expected_pass": false,
+      "message": "failed as expected: tissue manifest exceeds max manifest size",
+      "passed": true,
+      "target": "tissue_manifest"
+    },
+    {
+      "case_id": "fanout-breach",
+      "expected_pass": false,
+      "message": "failed as expected: tissue manifest exceeds max tissue membership fanout",
+      "passed": true,
+      "target": "tissue_manifest"
+    }
+  ],
+  "runtime_imports": [
+    "cell_contracts",
+    "tissue_manifests",
+    "bundle_manifest",
+    "bundle_schema_validation"
+  ],
+  "runtime_modules_available": true,
+  "slice": "slice_1",
+  "summary": {
+    "expected_failures_verified": true,
+    "expected_pass_cases": 2,
+    "expected_succeeded": true,
+    "overall_pass": true,
+    "passed_cases": 7,
+    "total_cases": 7
+  },
+  "verification": "cell_contracts"
+}

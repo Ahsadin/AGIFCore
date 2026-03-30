@@ -1,0 +1,77 @@
+{
+  "assertions": [
+    {
+      "id": "workspace-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "cell-registry-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "workspace-ingest-preserves-anchors",
+      "result": "pass"
+    },
+    {
+      "id": "workspace-memory-review-boundary",
+      "result": "pass"
+    },
+    {
+      "id": "registry-export-roundtrip",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/event_types.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/event_bus.py",
+    "projects/agifcore_master/01_plan/PHASE_02_FABRIC_KERNEL_AND_WORKSPACE.md",
+    "projects/agifcore_master/03_design/WORKSPACE_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/workspace_state.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/cell_registry.py"
+  ],
+  "notes": [
+    "workspace hooks remain bounded",
+    "no semantic memory or graph persistence",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_evidence/phase_02_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_evidence/phase_02_workspace_state_report.json"
+  },
+  "phase": "2",
+  "runtime_symbols": {
+    "cell_registry": [
+      "active_cells",
+      "export_state",
+      "get_cell_record",
+      "list_cells",
+      "load_export",
+      "register_cell",
+      "set_quarantine",
+      "update_cell"
+    ],
+    "workspace_state": [
+      "attach_evidence_ref",
+      "attach_memory_review_ref",
+      "attach_quarantine_ref",
+      "attach_replay_ref",
+      "attach_rollback_ref",
+      "bind_event",
+      "cell_ref",
+      "estimated_size_bytes",
+      "load_export",
+      "memory_review_export",
+      "register_cell_anchor",
+      "state_export",
+      "turn_ref",
+      "update_cell_anchor"
+    ]
+  },
+  "slice": "2",
+  "status": "pass",
+  "trace_event_order": [
+    "turn_admitted",
+    "response_ready"
+  ],
+  "verifier": "verify_phase_02_workspace_state"
+}

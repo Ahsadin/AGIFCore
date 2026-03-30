@@ -1,0 +1,66 @@
+{
+  "assertions": [
+    {
+      "id": "scheduler-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "scheduler-enqueue-order-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "scheduler-queue-depth-bound-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "scheduler-payload-size-bound-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "scheduler-dispatch-metrics-tracked",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/event_types.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/event_bus.py",
+    "projects/agifcore_master/01_plan/PHASE_02_FABRIC_KERNEL_AND_WORKSPACE.md",
+    "projects/agifcore_master/03_design/GOVERNANCE_MODEL.md",
+    "projects/agifcore_master/03_design/FORMAL_MODELS.md",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/workspace_state.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/cell_registry.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/lifecycle_engine.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/scheduler.py"
+  ],
+  "notes": [
+    "scheduler must stay inside the planning ceilings and remain inspectable",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_evidence/phase_02_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_evidence/phase_02_scheduler_report.json"
+  },
+  "phase": "2",
+  "runtime_symbols": {
+    "scheduler": [
+      "dispatch_next",
+      "enqueue_task",
+      "queue_depth",
+      "queue_export",
+      "scheduler_metrics"
+    ],
+    "task": [
+      "cell_id",
+      "enqueued_at",
+      "estimated_cost",
+      "need_score",
+      "payload",
+      "priority",
+      "task_id",
+      "to_dict"
+    ]
+  },
+  "slice": "3",
+  "status": "pass",
+  "verifier": "verify_phase_02_scheduler"
+}

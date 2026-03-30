@@ -1,0 +1,51 @@
+{
+  "available_report_count": 9,
+  "invalid_reports": [],
+  "missing_reports": [],
+  "notes": [
+    "this manifest tracks machine-readable verifier outputs only",
+    "final audit, governor verification, and validation remain separate review gates outside this manifest",
+    "no approval implied"
+  ],
+  "phase": "4",
+  "reports": {
+    "phase_04_continuity_memory_report.json": {
+      "path": "projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_evidence/phase_04_continuity_memory_report.json",
+      "status": "pass"
+    },
+    "phase_04_corrections_and_promotion_report.json": {
+      "path": "projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_evidence/phase_04_corrections_and_promotion_report.json",
+      "status": "pass"
+    },
+    "phase_04_episodic_memory_report.json": {
+      "path": "projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_evidence/phase_04_episodic_memory_report.json",
+      "status": "pass"
+    },
+    "phase_04_forgetting_and_compression_report.json": {
+      "path": "projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_evidence/phase_04_forgetting_and_compression_report.json",
+      "status": "pass"
+    },
+    "phase_04_memory_review_report.json": {
+      "path": "projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_evidence/phase_04_memory_review_report.json",
+      "status": "pass"
+    },
+    "phase_04_procedural_memory_report.json": {
+      "path": "projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_evidence/phase_04_procedural_memory_report.json",
+      "status": "pass"
+    },
+    "phase_04_rollback_safe_updates_report.json": {
+      "path": "projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_evidence/phase_04_rollback_safe_updates_report.json",
+      "status": "pass"
+    },
+    "phase_04_semantic_memory_report.json": {
+      "path": "projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_evidence/phase_04_semantic_memory_report.json",
+      "status": "pass"
+    },
+    "phase_04_working_memory_report.json": {
+      "path": "projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_evidence/phase_04_working_memory_report.json",
+      "status": "pass"
+    }
+  },
+  "required_report_count": 9,
+  "status": "phase_4_verifier_family_pass"
+}

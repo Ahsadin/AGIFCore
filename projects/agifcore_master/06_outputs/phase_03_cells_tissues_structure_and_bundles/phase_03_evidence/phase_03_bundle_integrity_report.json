@@ -1,0 +1,197 @@
+{
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_03_CELLS_TISSUES_STRUCTURE_AND_BUNDLES.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_cell_contracts_report.json",
+    "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_activation_and_trust_report.json",
+    "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_validation_report.json",
+    "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_profile_budget_report.json",
+    "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_split_merge_report.json",
+    "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_tissue_orchestration_report.json",
+    "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/bundle_integrity_checks.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/bundle_manifest.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/bundle_schema_validation.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/cell_contracts.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/tissue_manifests.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/schemas/phase_03_bundle_manifest.schema.json",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/schemas/phase_03_cell_contract.schema.json",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/schemas/phase_03_tissue_manifest.schema.json"
+  ],
+  "notes": [
+    "bundle integrity is exercised directly against the runtime API when the runtime file exists",
+    "schema validation is checked as part of integrity, not as a substitute for it",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_integrity_report.json"
+  },
+  "phase": "Phase 3",
+  "results": [
+    {
+      "case_id": "bundle-integrity-pass",
+      "expected_pass": true,
+      "message": "passed",
+      "passed": true,
+      "target": "bundle_integrity_checks"
+    },
+    {
+      "case_id": "missing-inventory-entry",
+      "expected_pass": false,
+      "message": "failed as expected: missing integrity inventory entry for manifest payload: tissue_manifest",
+      "passed": true,
+      "target": "bundle_integrity_checks"
+    },
+    {
+      "case_id": "unknown-extra-inventory-entry",
+      "expected_pass": false,
+      "message": "failed as expected: integrity inventory has unknown entry not present in manifest: unexpected_extra",
+      "passed": true,
+      "target": "bundle_integrity_checks"
+    },
+    {
+      "case_id": "invalid-digest-format",
+      "expected_pass": false,
+      "message": "failed as expected: integrity_inventory.cell_contract.digest must be a sha256 digest in format sha256:<64 lowercase hex>",
+      "passed": true,
+      "target": "bundle_integrity_checks"
+    },
+    {
+      "case_id": "hash-mismatch",
+      "expected_pass": false,
+      "message": "failed as expected: hash mismatch for payload inventory entry: tissue_manifest",
+      "passed": true,
+      "target": "bundle_integrity_checks"
+    },
+    {
+      "case_id": "manifest-inventory-payload-mismatch",
+      "expected_pass": false,
+      "message": "failed as expected: manifest/inventory payload mismatch for entry: cell_contract",
+      "passed": true,
+      "target": "bundle_integrity_checks"
+    }
+  ],
+  "runtime_exports": {
+    "bundle_manifest_fields": [
+      "bundle_id",
+      "bundle_type",
+      "bundle_version",
+      "entry_contracts",
+      "payload_inventory",
+      "provenance_fields",
+      "schema_refs"
+    ],
+    "bundle_payload_size_bytes": 1119,
+    "entrypoint_kind": "validate_bundle_integrity",
+    "modules": {
+      "bundle_integrity_checks": [
+        "Any",
+        "BundleIntegrityResult",
+        "DIGEST_PREFIX",
+        "Mapping",
+        "Phase3StructureError",
+        "annotations",
+        "canonical_payload_bytes",
+        "compute_sha256_digest",
+        "dataclass",
+        "hashlib",
+        "json",
+        "re",
+        "require_mapping",
+        "require_non_empty_str",
+        "validate_bundle_integrity",
+        "validate_bundle_manifest_payload",
+        "validate_digest_format"
+      ],
+      "bundle_manifest": [
+        "Any",
+        "BundleManifest",
+        "MAX_BUNDLE_PAYLOAD_BYTES",
+        "Mapping",
+        "Phase3StructureError",
+        "REQUIRED_BUNDLE_MANIFEST_FIELDS",
+        "REQUIRED_SCHEMA_KEYS",
+        "annotations",
+        "canonical_size_bytes",
+        "dataclass",
+        "require_mapping",
+        "require_non_empty_str",
+        "require_unique_string_list",
+        "validate_bundle_manifest_payload"
+      ],
+      "bundle_schema_validation": [
+        "Any",
+        "Mapping",
+        "Path",
+        "Phase3StructureError",
+        "REQUIRED_SCHEMA_KEYS",
+        "annotations",
+        "json",
+        "load_schema_document",
+        "resolve_schema_path",
+        "runtime_root",
+        "schema_root",
+        "validate_bundle_manifest_payload",
+        "validate_bundle_schema_foundation",
+        "validate_cell_contract_payload",
+        "validate_tissue_manifest_payload"
+      ],
+      "cell_contracts": [
+        "Any",
+        "CellContract",
+        "MAX_MANIFEST_SIZE_BYTES",
+        "Mapping",
+        "Phase3StructureError",
+        "REQUIRED_CELL_CONTRACT_FIELDS",
+        "annotations",
+        "canonical_size_bytes",
+        "dataclass",
+        "json",
+        "require_mapping",
+        "require_non_empty_str",
+        "require_unique_string_list",
+        "validate_cell_contract_payload"
+      ],
+      "tissue_manifests": [
+        "Any",
+        "MAX_MANIFEST_SIZE_BYTES",
+        "MAX_ROUTING_TARGETS",
+        "MAX_TISSUE_MEMBERS",
+        "Mapping",
+        "Phase3StructureError",
+        "REQUIRED_TISSUE_MANIFEST_FIELDS",
+        "SPLIT_PRESSURE_MEMBER_COUNT",
+        "TissueManifest",
+        "annotations",
+        "canonical_size_bytes",
+        "dataclass",
+        "require_mapping",
+        "require_non_empty_str",
+        "require_unique_string_list",
+        "validate_tissue_manifest_payload"
+      ]
+    }
+  },
+  "runtime_imports": [
+    "bundle_integrity_checks",
+    "bundle_manifest",
+    "bundle_schema_validation",
+    "cell_contracts",
+    "tissue_manifests"
+  ],
+  "runtime_modules_available": true,
+  "slice": "slice_4",
+  "status": "pass",
+  "summary": {
+    "expected_failures_verified": true,
+    "expected_pass_cases": 1,
+    "expected_succeeded": true,
+    "overall_pass": true,
+    "passed_cases": 6,
+    "total_cases": 6
+  },
+  "supporting_modules_available": true,
+  "verification": "bundle_integrity"
+}

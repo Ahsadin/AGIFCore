@@ -1,0 +1,93 @@
+{
+  "assertions": [
+    {
+      "id": "rollback-snapshot-created",
+      "result": "pass"
+    },
+    {
+      "id": "quarantine-cell-created",
+      "result": "pass"
+    },
+    {
+      "id": "known-good-restore-roundtrip",
+      "result": "pass"
+    },
+    {
+      "id": "quarantine-release-path-cleared",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/event_types.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/event_bus.py",
+    "projects/agifcore_master/01_plan/PHASE_02_FABRIC_KERNEL_AND_WORKSPACE.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/03_design/GOVERNANCE_MODEL.md",
+    "projects/agifcore_master/03_design/WORKSPACE_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/workspace_state.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/cell_registry.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/lifecycle_engine.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/scheduler.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/replay_ledger.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/rollback_controller.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/quarantine_controller.py"
+  ],
+  "notes": [
+    "recovery must stay bounded and explicit",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_evidence/phase_02_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_evidence/phase_02_rollback_quarantine_report.json"
+  },
+  "phase": "2",
+  "runtime_symbols": {
+    "cell_registry": [
+      "register_cell",
+      "update_cell",
+      "set_quarantine",
+      "export_state"
+    ],
+    "lifecycle_engine": [
+      "bootstrap_cell",
+      "activate",
+      "quarantine",
+      "export_state"
+    ],
+    "quarantine_controller": [
+      "quarantine_cell",
+      "release_quarantine",
+      "active_for_cell"
+    ],
+    "rollback_controller": [
+      "create_snapshot",
+      "restore_snapshot",
+      "snapshot_export"
+    ],
+    "workspace_state": [
+      "state_export",
+      "load_export",
+      "attach_rollback_ref",
+      "attach_quarantine_ref"
+    ]
+  },
+  "slice": "4",
+  "snapshot": {
+    "quarantine_ref": "quarantine-00000001",
+    "quarantined_state_counts": {
+      "active": 0,
+      "quarantined": 1,
+      "total": 1
+    },
+    "release_reason": "known-good snapshot restored",
+    "restored_state_counts": {
+      "active": 1,
+      "quarantined": 0,
+      "total": 1
+    },
+    "rollback_ref": "rollback-00000001",
+    "state_hash": "55f5e68dc75ca9c2cd04cfbfdae45c404804c2819d559cba51b1312c9b7dc359"
+  },
+  "status": "pass",
+  "verifier": "verify_phase_02_rollback_quarantine"
+}

@@ -1,0 +1,110 @@
+{
+  "anchors": {
+    "event_ids": [
+      "event-0001",
+      "event-0002"
+    ],
+    "exported_event_count": 2,
+    "recent_window": [
+      {
+        "content_refs": [
+          "trace://phase4/episodic/turn-0001"
+        ],
+        "conversation_id": "conv-phase4-slice1-episodic",
+        "correction_markers": [
+          {
+            "corrected_at": "2026-03-30T18:42:46+00:00",
+            "correction_id": "correction-0001",
+            "reason": "replace initial summary with reviewed summary",
+            "replacement_event_id": "event-0002"
+          }
+        ],
+        "correction_status": "corrected",
+        "created_at": "2026-03-30T18:42:46+00:00",
+        "event_id": "event-0001",
+        "event_summary": "turn entered bounded memory",
+        "event_type": "turn_admitted",
+        "provenance_refs": [
+          "support://phase4/episodic/turn-0001"
+        ],
+        "turn_id": "turn-0001"
+      },
+      {
+        "content_refs": [
+          "trace://phase4/episodic/turn-0002"
+        ],
+        "conversation_id": "conv-phase4-slice1-episodic",
+        "correction_markers": [],
+        "correction_status": "original",
+        "created_at": "2026-03-30T18:42:46+00:00",
+        "event_id": "event-0002",
+        "event_summary": "response anchored for replay",
+        "event_type": "response_ready",
+        "provenance_refs": [
+          "support://phase4/episodic/turn-0002"
+        ],
+        "turn_id": "turn-0002"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "id": "episodic-memory-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "replayable-event-order-preserved",
+      "result": "pass"
+    },
+    {
+      "id": "correction-marker-attached",
+      "result": "pass"
+    },
+    {
+      "id": "duplicate-event-id-blocked",
+      "result": "pass"
+    },
+    {
+      "id": "load-state-roundtrip-clean",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_04_MEMORY_PLANES.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/05_testing/phase_02_fabric_kernel_and_workspace/verify_phase_02_workspace_state.py",
+    "projects/agifcore_master/05_testing/phase_02_fabric_kernel_and_workspace/verify_phase_02_replay.py",
+    "projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_activation_and_trust.py",
+    "projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_bundle_integrity.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/__init__.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/working_memory.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/episodic_memory.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/continuity_memory.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/memory_review.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/rollback_safe_updates.py"
+  ],
+  "notes": [
+    "episodic memory is replayable event history only",
+    "correction markers stay explicit and auditable",
+    "no approval implied"
+  ],
+  "outputs": {
+    "report": "projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_evidence/phase_04_episodic_memory_report.json"
+  },
+  "phase": "4",
+  "runtime_symbols": {
+    "episodic_memory": [
+      "EpisodicMemoryStore",
+      "EpisodicEvent",
+      "EpisodicMemoryError",
+      "append_event",
+      "add_correction_marker",
+      "recent_window",
+      "load_state"
+    ]
+  },
+  "slice": "slice_1",
+  "status": "pass",
+  "verifier": "verify_phase_04_episodic_memory"
+}

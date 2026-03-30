@@ -1,0 +1,117 @@
+{
+  "assertions": [
+    {
+      "id": "unsafe-answer-blocked",
+      "result": "pass"
+    },
+    {
+      "id": "policy-blocked-case-escalated",
+      "result": "pass"
+    },
+    {
+      "id": "safe-allowed-case-remains-allowed",
+      "result": "pass"
+    },
+    {
+      "id": "explicit-reason-action-fields-present",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/event_types.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/event_bus.py",
+    "projects/agifcore_master/01_plan/PHASE_02_FABRIC_KERNEL_AND_WORKSPACE.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/03_design/GOVERNANCE_MODEL.md",
+    "projects/agifcore_master/03_design/SANDBOX_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/workspace_state.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/cell_registry.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/lifecycle_engine.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/scheduler.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/replay_ledger.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/rollback_controller.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/quarantine_controller.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/kernel_fail_closed.py"
+  ],
+  "decision_results": {
+    "explicit_allow": {
+      "action": "halt_turn",
+      "blocked": false,
+      "context": {
+        "case": "explicit-allow"
+      },
+      "message": "safe answer allowed",
+      "occurred_at": "2026-03-30T09:58:28+00:00",
+      "reason_code": null
+    },
+    "policy_blocked": {
+      "action": "escalate_governor",
+      "blocked": true,
+      "context": {
+        "case": "policy-blocked",
+        "knowledge_gap_reason": "blocked_by_policy",
+        "next_action": "clarify",
+        "support_state": "grounded"
+      },
+      "message": "blocked by policy and escalated",
+      "occurred_at": "2026-03-30T09:58:28+00:00",
+      "reason_code": "POLICY_BLOCKED"
+    },
+    "safe_allowed": {
+      "action": "halt_turn",
+      "blocked": false,
+      "context": {
+        "case": "safe-answer",
+        "knowledge_gap_reason": "none",
+        "next_action": "answer",
+        "support_state": "grounded"
+      },
+      "message": "support-state check passed",
+      "occurred_at": "2026-03-30T09:58:28+00:00",
+      "reason_code": null
+    },
+    "unsafe_answer": {
+      "action": "halt_turn",
+      "blocked": true,
+      "context": {
+        "case": "unsafe-answer",
+        "knowledge_gap_reason": "none",
+        "next_action": "answer",
+        "support_state": "unknown"
+      },
+      "message": "blocked answer because support_state requires caution",
+      "occurred_at": "2026-03-30T09:58:28+00:00",
+      "reason_code": "SUPPORT_STATE_BLOCK"
+    }
+  },
+  "notes": [
+    "fail-closed must stop unsafe continuation explicitly",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_evidence/phase_02_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_evidence/phase_02_fail_closed_report.json"
+  },
+  "phase": "2",
+  "runtime_symbols": {
+    "actions": [
+      "halt_turn",
+      "escalate_governor"
+    ],
+    "kernel_fail_closed": [
+      "allow",
+      "block",
+      "enforce_condition",
+      "evaluate_support_state",
+      "decisions_export"
+    ],
+    "reason_codes": [
+      "SUPPORT_STATE_BLOCK",
+      "POLICY_BLOCKED",
+      "QUARANTINE_REQUIRED"
+    ]
+  },
+  "slice": "4",
+  "status": "pass",
+  "verifier": "verify_phase_02_fail_closed"
+}

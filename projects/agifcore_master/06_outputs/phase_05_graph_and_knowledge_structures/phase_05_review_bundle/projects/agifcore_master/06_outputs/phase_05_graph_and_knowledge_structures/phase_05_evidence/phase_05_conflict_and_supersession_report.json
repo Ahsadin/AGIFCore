@@ -1,0 +1,164 @@
+{
+  "anchors": {
+    "blocked_decision": {
+      "blocked_candidate_ids": [
+        "cand-e"
+      ],
+      "chosen_candidate_id": null,
+      "competing_candidate_ids": [
+        "cand-e"
+      ],
+      "decided_at": "2026-03-30T19:56:16+00:00",
+      "reason_code": "all_candidates_blocked",
+      "scored_candidates": [
+        {
+          "active": false,
+          "blocked_reason": "inactive_source",
+          "candidate_id": "cand-e",
+          "metadata": {},
+          "policy_requirements_met": false,
+          "provenance_score": 0.5,
+          "retired": true,
+          "superseded": false,
+          "target_domains": [],
+          "total_score": 0.535,
+          "trust_band": "unknown",
+          "trust_score": 0.6,
+          "utility_score": 0.5
+        }
+      ],
+      "status": "blocked"
+    },
+    "clear_decision": {
+      "blocked_candidate_ids": [],
+      "chosen_candidate_id": "cand-a",
+      "competing_candidate_ids": [
+        "cand-a",
+        "cand-b"
+      ],
+      "decided_at": "2026-03-30T19:56:16+00:00",
+      "reason_code": "highest_governed_score",
+      "scored_candidates": [
+        {
+          "active": true,
+          "blocked_reason": null,
+          "candidate_id": "cand-a",
+          "metadata": {},
+          "policy_requirements_met": true,
+          "provenance_score": 0.9,
+          "retired": false,
+          "superseded": false,
+          "target_domains": [],
+          "total_score": 0.9175,
+          "trust_band": "policy",
+          "trust_score": 0.95,
+          "utility_score": 0.9
+        },
+        {
+          "active": true,
+          "blocked_reason": null,
+          "candidate_id": "cand-b",
+          "metadata": {},
+          "policy_requirements_met": true,
+          "provenance_score": 0.7,
+          "retired": false,
+          "superseded": false,
+          "target_domains": [],
+          "total_score": 0.676,
+          "trust_band": "bounded_local",
+          "trust_score": 0.76,
+          "utility_score": 0.6
+        }
+      ],
+      "status": "clear"
+    },
+    "defer_decision": {
+      "blocked_candidate_ids": [],
+      "chosen_candidate_id": null,
+      "competing_candidate_ids": [
+        "cand-c",
+        "cand-d"
+      ],
+      "decided_at": "2026-03-30T19:56:16+00:00",
+      "reason_code": "insufficient_separation",
+      "scored_candidates": [
+        {
+          "active": true,
+          "blocked_reason": null,
+          "candidate_id": "cand-c",
+          "metadata": {},
+          "policy_requirements_met": true,
+          "provenance_score": 0.7,
+          "retired": false,
+          "superseded": false,
+          "target_domains": [],
+          "total_score": 0.6805,
+          "trust_band": "bounded_local",
+          "trust_score": 0.76,
+          "utility_score": 0.61
+        },
+        {
+          "active": true,
+          "blocked_reason": null,
+          "candidate_id": "cand-d",
+          "metadata": {},
+          "policy_requirements_met": true,
+          "provenance_score": 0.71,
+          "retired": false,
+          "superseded": false,
+          "target_domains": [],
+          "total_score": 0.678,
+          "trust_band": "bounded_local",
+          "trust_score": 0.76,
+          "utility_score": 0.6
+        }
+      ],
+      "status": "defer"
+    },
+    "supersession_chain": [
+      "desc-1",
+      "desc-2",
+      "desc-3",
+      "desc-4",
+      "desc-5"
+    ]
+  },
+  "assertions": [
+    {
+      "id": "conflict-clear-path-supported",
+      "result": "pass"
+    },
+    {
+      "id": "conflict-defer-path-supported",
+      "result": "pass"
+    },
+    {
+      "id": "conflict-blocked-path-supported",
+      "result": "pass"
+    },
+    {
+      "id": "supersession-active-resolution-supported",
+      "result": "pass"
+    },
+    {
+      "id": "supersession-chain-ceiling-enforced",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_05_GRAPH_AND_KNOWLEDGE_STRUCTURES.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/conflict_rules.py",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/supersession_rules.py"
+  ],
+  "notes": [
+    "conflict and supersession are runtime behavior, not prose",
+    "no approval implied"
+  ],
+  "outputs": {
+    "report": "projects/agifcore_master/06_outputs/phase_05_graph_and_knowledge_structures/phase_05_evidence/phase_05_conflict_and_supersession_report.json"
+  },
+  "phase": "5",
+  "status": "pass",
+  "verifier": "verify_phase_05_conflict_and_supersession"
+}

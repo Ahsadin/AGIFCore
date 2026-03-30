@@ -30,3 +30,59 @@
 - Materialized the agreed Phase 1 planning baseline into `01_plan/PHASE_01_CONSTITUTION_AND_FULL_SYSTEM_BLUEPRINT.md`.
 - Froze the Phase 1 planning baseline for execution handoff and recorded the deferment of Phase 2 planning until Phase 1 execution, validation, and explicit user approval are complete.
 - Added Governor handoff artifacts for the next execution thread under `00_admin/codex_threads/handoffs/`.
+- Opened task card `P1-TC-PG-02` for Phase 0 blocker remediation before broader Phase 1 execution.
+- Added distinct Phase 0 blocker artifacts:
+  - `01_plan/PHASE_00_AGIF_V2_ARCHIVAL_NOTE.md`
+  - `01_plan/PHASE_00_SOURCE_FREEZE_INVENTORY.md`
+  - `01_plan/PHASE_00_SOURCE_FREEZE_METHOD.md`
+- Updated `01_plan/PHASE_GATE_CHECKLIST.md` to show that the missing Phase 0 artifacts now exist while Phase 0 still remains open pending audit, validation, and separate user approval.
+- Opened `P0-TC-ASA-01` to finish Phase 0 only through independent audit of the new Phase 0 artifacts.
+- Created the canonical Phase 0 artifact set under the requested names:
+  - `01_plan/PHASE_00_AGIFCORE_RESET_AND_SOURCE_FREEZE.md`
+  - `01_plan/AGIF_V2_HISTORICAL_ARCHIVAL_NOTE.md`
+  - `01_plan/SOURCE_FREEZE_INVENTORY.md`
+  - `01_plan/SOURCE_FREEZE_METHOD.md`
+  - `01_plan/PROJECT_STRUCTURE_AUDIT.md`
+- Added the Phase 0 role-task map under `00_admin/codex_threads/tasks/phase_00/` for Program Governor, Constitution Keeper, Source Cartographer, Test & Replay Lead, Release & Evidence Lead, Anti-Shortcut Auditor, and Validation Agent.
+- Added `00_admin/codex_threads/tasks/phase_00/P0-REVIEW-SURFACE-01_PHASE_0_REVIEW_PACKET_PLAN.md` to define the later user review packet.
+- Updated `01_plan/PHASE_GATE_CHECKLIST.md` so the Phase 0 row points to the canonical artifacts and states that older `PHASE_00_*` files are noncanonical draft inputs only.
+- Added the Phase 0 audit, governor verification, validation request, and user verdict records under `00_admin/codex_threads/`.
+- Updated `01_plan/PHASE_GATE_CHECKLIST.md` to move Phase 0 from `open` to `approved` after the explicit user verdict.
+
+## 2026-03-30
+
+- Recorded explicit user approval for Phase 1 in `00_admin/codex_threads/handoffs/PHASE_01_USER_VERDICT.md`.
+- Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 1 is now `approved`.
+- Logged the earned Phase 1 approval state in `DECISIONS.md` while keeping Phase 2 not started.
+- Materialized `01_plan/PHASE_02_FABRIC_KERNEL_AND_WORKSPACE.md` as the approved Phase 2 planning baseline for execution start.
+- Added `00_admin/codex_threads/handoffs/PHASE_02_PLAN_FREEZE_HANDOFF.md` and `00_admin/codex_threads/handoffs/PHASE_02_EXECUTION_START_BRIEF.md`.
+- Recorded that the Phase 2 planning baseline is frozen for execution start while Phase 2 remains `open` and Phase 3 has not started.
+- Completed the Phase 2 runtime package under `04_execution/phase_02_fabric_kernel_and_workspace/`, with paired verifiers under `05_testing/phase_02_fabric_kernel_and_workspace/` and evidence/demo outputs under `06_outputs/phase_02_fabric_kernel_and_workspace/`.
+- Added the Phase 2 task-card set under `00_admin/codex_threads/tasks/phase_02/`.
+- Added the Phase 2 audit, governor verification, validation request, and user verdict records under `00_admin/codex_threads/`.
+- Repaired the Phase 2 review bundle so the aggregate evidence manifest references all slice reports and the external review zip includes the full demo, evidence, runtime, and verifier surfaces.
+- Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 2 is now `approved`.
+- Completed the full Phase 3 runtime package under `04_execution/phase_03_cells_tissues_structure_and_bundles/`, with paired verifiers under `05_testing/phase_03_cells_tissues_structure_and_bundles/` and evidence/demo outputs under `06_outputs/phase_03_cells_tissues_structure_and_bundles/`.
+- Added the Phase 3 audit, governor verification, validation request, and user verdict records under `00_admin/codex_threads/`.
+- Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 3 is now `approved`.
+- Materialized `01_plan/PHASE_03_CELLS_TISSUES_STRUCTURE_AND_BUNDLES.md` as the approved Phase 3 planning baseline for execution start.
+- Added `00_admin/codex_threads/handoffs/PHASE_03_PLAN_FREEZE_HANDOFF.md` and `00_admin/codex_threads/handoffs/PHASE_03_EXECUTION_START_BRIEF.md`.
+- Recorded that the Phase 3 planning baseline is frozen for execution start while Phase 3 remains `open` and Phase 4 has not started.
+- Materialized `01_plan/PHASE_04_MEMORY_PLANES.md` as the approved Phase 4 planning baseline for execution start.
+- Added the Phase 4 planning task-card set under `00_admin/codex_threads/tasks/phase_04/`.
+- Added `00_admin/codex_threads/handoffs/PHASE_04_PLAN_FREEZE_HANDOFF.md` and `00_admin/codex_threads/handoffs/PHASE_04_EXECUTION_START_BRIEF.md`.
+- Recorded that the Phase 4 planning baseline is frozen for execution start while Phase 4 remains `open` and Phase 5 has not started.
+- Completed the full Phase 4 runtime package under `04_execution/phase_04_memory_planes/`, with paired verifiers under `05_testing/phase_04_memory_planes/` and evidence/demo outputs under `06_outputs/phase_04_memory_planes/`.
+- Added the Phase 4 audit, governor verification, validation request, and user verdict records under `00_admin/codex_threads/`.
+- Repaired the standalone Phase 4 review package so the exported verifier reruns work from a repo-shaped bundle and the validation protocol wording is phase-neutral.
+- Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 4 is now `approved`.
+- Materialized `01_plan/PHASE_05_GRAPH_AND_KNOWLEDGE_STRUCTURES.md` as the approved Phase 5 planning baseline for execution start.
+- Added `00_admin/codex_threads/handoffs/PHASE_05_PLAN_FREEZE_HANDOFF.md` and `00_admin/codex_threads/handoffs/PHASE_05_EXECUTION_START_BRIEF.md`.
+- Recorded that the Phase 5 planning baseline is frozen for execution start while Phase 5 remains `open` and Phase 6 has not started.
+- Completed the Phase 5 runtime package under `04_execution/phase_05_graph_and_knowledge_structures/`, with paired verifiers under `05_testing/phase_05_graph_and_knowledge_structures/` and evidence/demo outputs under `06_outputs/phase_05_graph_and_knowledge_structures/`.
+- Added the Phase 5 task-card set, audit report, merge handoff, Governor verification record, and validation request under `00_admin/codex_threads/`.
+- Added a standalone Phase 5 review bundle under `06_outputs/phase_05_graph_and_knowledge_structures/phase_05_review_bundle/` and prepared a zip-ready review package for user inspection.
+- Rebuilt the Phase 5 review bundle so it preserves exact repo-root-relative paths under `projects/agifcore_master/` and includes the missing plan, protocol, design, runtime, verifier, evidence, and demo surfaces.
+- Repaired the exported Phase 5 review bundle so the extracted verifier family can rediscover the bundle root through `projects/agifcore_master/PROJECT_README.md`.
+- Recorded the explicit Phase 5 user verdict in `00_admin/codex_threads/handoffs/PHASE_05_USER_VERDICT.md`.
+- Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 5 is now `approved`.

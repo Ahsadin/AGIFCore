@@ -1,0 +1,76 @@
+{
+  "assertions": [
+    {
+      "id": "slice1-kernel-trace-report",
+      "result": "pass"
+    },
+    {
+      "id": "slice2-workspace-state-report",
+      "result": "pass"
+    },
+    {
+      "id": "slice3-lifecycle-report",
+      "result": "pass"
+    },
+    {
+      "id": "slice3-scheduler-report",
+      "result": "pass"
+    },
+    {
+      "id": "slice4-replay-report",
+      "result": "pass"
+    },
+    {
+      "id": "slice4-rollback-quarantine-report",
+      "result": "pass"
+    },
+    {
+      "id": "slice4-fail-closed-report",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/event_types.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/event_bus.py",
+    "projects/agifcore_master/01_plan/PHASE_02_FABRIC_KERNEL_AND_WORKSPACE.md",
+    "projects/agifcore_master/03_design/WORKSPACE_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/workspace_state.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/cell_registry.py",
+    "projects/agifcore_master/03_design/GOVERNANCE_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/lifecycle_engine.py",
+    "projects/agifcore_master/03_design/FORMAL_MODELS.md",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/scheduler.py",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/replay_ledger.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/rollback_controller.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/quarantine_controller.py",
+    "projects/agifcore_master/03_design/SANDBOX_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/kernel_fail_closed.py"
+  ],
+  "notes": [
+    "aggregate Phase 2 evidence index",
+    "slice 1 through slice 4 outputs are now referenced",
+    "phase 2 remains open",
+    "no phase approval implied"
+  ],
+  "outputs": {
+    "demo_index": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_demo_bundle/phase_02_demo_index.md",
+    "evidence_manifest": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_evidence/phase_02_evidence_manifest.json",
+    "phase_02_demo_index": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_demo_bundle/phase_02_demo_index.md",
+    "phase_02_fail_closed_report": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_evidence/phase_02_fail_closed_report.json",
+    "phase_02_kernel_trace_demo": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_demo_bundle/phase_02_kernel_trace_demo.md",
+    "phase_02_kernel_trace_report": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_evidence/phase_02_kernel_trace_report.json",
+    "phase_02_lifecycle_report": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_evidence/phase_02_lifecycle_report.json",
+    "phase_02_replay_demo": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_demo_bundle/phase_02_replay_demo.md",
+    "phase_02_replay_report": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_evidence/phase_02_replay_report.json",
+    "phase_02_rollback_quarantine_demo": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_demo_bundle/phase_02_rollback_quarantine_demo.md",
+    "phase_02_rollback_quarantine_report": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_evidence/phase_02_rollback_quarantine_report.json",
+    "phase_02_scheduler_report": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_evidence/phase_02_scheduler_report.json",
+    "phase_02_shared_workspace_demo": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_demo_bundle/phase_02_shared_workspace_demo.md",
+    "phase_02_workspace_state_report": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_evidence/phase_02_workspace_state_report.json"
+  },
+  "phase": "2",
+  "slice": "aggregate",
+  "status": "pass",
+  "verifier": "phase_02_evidence_manifest"
+}

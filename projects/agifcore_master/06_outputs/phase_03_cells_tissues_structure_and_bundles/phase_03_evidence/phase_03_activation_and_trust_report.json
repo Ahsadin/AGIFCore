@@ -1,0 +1,218 @@
+{
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_03_CELLS_TISSUES_STRUCTURE_AND_BUNDLES.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/activation_policies.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/trust_bands.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/active_dormant_control.py"
+  ],
+  "notes": [
+    "activation trust checks remain local-first and fail-closed",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_activation_and_trust_report.json"
+  },
+  "phase": "Phase 3",
+  "results": [
+    {
+      "case_id": "trust-band-pass",
+      "expected_pass": true,
+      "message": "passed",
+      "passed": true,
+      "target": "trust_bands"
+    },
+    {
+      "case_id": "trust-band-invalid-name",
+      "expected_pass": false,
+      "message": "failed as expected: no candidate payload was accepted: band_name must be one of ['blocked', 'guarded', 'standard', 'elevated']",
+      "passed": true,
+      "target": "trust_bands"
+    },
+    {
+      "case_id": "trust-band-negative-scheduler-priority",
+      "expected_pass": false,
+      "message": "failed as expected: no candidate payload was accepted: max_scheduler_priority must be >= 0",
+      "passed": true,
+      "target": "trust_bands"
+    },
+    {
+      "case_id": "trust-band-explicit-block",
+      "expected_pass": false,
+      "message": "failed as expected: trust band guarded blocks activation",
+      "passed": true,
+      "target": "trust_bands"
+    },
+    {
+      "case_id": "activation-policy-pass",
+      "expected_pass": true,
+      "message": "passed",
+      "passed": true,
+      "target": "activation_policies"
+    },
+    {
+      "case_id": "activation-policy-missing-field",
+      "expected_pass": false,
+      "message": "failed as expected: no candidate payload was accepted: missing required activation policy field: policy_id",
+      "passed": true,
+      "target": "activation_policies"
+    },
+    {
+      "case_id": "dormant-to-active-readiness-pass",
+      "expected_pass": true,
+      "message": "passed",
+      "passed": true,
+      "target": "active_dormant_control"
+    },
+    {
+      "case_id": "blocked-trust-band-fails",
+      "expected_pass": false,
+      "message": "failed as expected: blocked decision",
+      "passed": true,
+      "target": "active_dormant_control"
+    },
+    {
+      "case_id": "active-cell-ceiling-breach-fails",
+      "expected_pass": false,
+      "message": "failed as expected: blocked decision",
+      "passed": true,
+      "target": "active_dormant_control"
+    },
+    {
+      "case_id": "dormant-blueprint-ceiling-breach-fails",
+      "expected_pass": false,
+      "message": "failed as expected: blocked decision",
+      "passed": true,
+      "target": "active_dormant_control"
+    },
+    {
+      "case_id": "invalid-lifecycle-transition-request-fails",
+      "expected_pass": false,
+      "message": "failed as expected: active-dormant control only allows dormant<->active requests",
+      "passed": true,
+      "target": "active_dormant_control"
+    },
+    {
+      "case_id": "activation-policy-direct-evaluation-pass",
+      "expected_pass": true,
+      "message": "passed",
+      "passed": true,
+      "target": "activation_policies"
+    }
+  ],
+  "runtime_exports": {
+    "activation_policy": {
+      "fields": [
+        "cell_id",
+        "maximum_estimated_cost",
+        "minimum_need_score",
+        "minimum_trust_band",
+        "policy_envelope",
+        "policy_id",
+        "profile",
+        "tissue_id"
+      ],
+      "type": "ActivationPolicy"
+    },
+    "modules": {
+      "activation_policies": [
+        "ActivationPolicy",
+        "Any",
+        "Mapping",
+        "PHASE3_DORMANT_BLUEPRINT_CEILING",
+        "PHASE3_PROFILE_ACTIVE_CELL_CEILINGS",
+        "PHASE3_TISSUE_CEILING",
+        "Phase3StructureError",
+        "REQUIRED_ACTIVATION_POLICY_FIELDS",
+        "TrustBand",
+        "annotations",
+        "dataclass",
+        "normalize_trust_band_name",
+        "profile_active_cell_ceiling",
+        "require_float",
+        "require_mapping",
+        "require_non_empty_str",
+        "require_non_negative_float",
+        "require_profile_name",
+        "trust_band_at_least",
+        "validate_activation_policy_payload"
+      ],
+      "active_dormant_control": [
+        "ActivationPolicy",
+        "ActiveDormantDecision",
+        "Any",
+        "Mapping",
+        "PHASE2_LIFECYCLE_STATES",
+        "PHASE3_DORMANT_BLUEPRINT_CEILING",
+        "Phase3StructureError",
+        "TrustBand",
+        "annotations",
+        "build_lifecycle_transition_request",
+        "dataclass",
+        "evaluate_activation_readiness",
+        "evaluate_dormant_pressure",
+        "require_non_empty_str",
+        "require_non_negative_int",
+        "require_profile_name",
+        "validate_phase2_lifecycle_state",
+        "validate_profile_context"
+      ],
+      "trust_bands": [
+        "Any",
+        "Mapping",
+        "Phase3StructureError",
+        "REQUIRED_TRUST_BAND_FIELDS",
+        "TRUST_BAND_ORDER",
+        "TRUST_BAND_RANK",
+        "TRUST_SCORE_BAND_TABLE",
+        "TrustBand",
+        "annotations",
+        "dataclass",
+        "default_trust_band_policy",
+        "normalize_trust_band_name",
+        "normalize_trust_score",
+        "require_bool",
+        "require_int",
+        "require_mapping",
+        "require_non_empty_str",
+        "trust_band_at_least",
+        "trust_band_for_score",
+        "validate_trust_band_payload"
+      ]
+    },
+    "policy_helpers": {
+      "default_policy_type": "dict",
+      "recommended_band_type": "str"
+    },
+    "trust_band": {
+      "fields": [
+        "allow_activation",
+        "allow_split_merge",
+        "band_name",
+        "max_scheduler_priority",
+        "policy_envelope",
+        "require_manual_review"
+      ],
+      "type": "TrustBand"
+    }
+  },
+  "runtime_imports": [
+    "activation_policies",
+    "trust_bands",
+    "active_dormant_control"
+  ],
+  "runtime_modules_available": true,
+  "slice": "slice_2",
+  "status": "pass",
+  "summary": {
+    "expected_failures_verified": true,
+    "expected_pass_cases": 4,
+    "expected_succeeded": true,
+    "overall_pass": true,
+    "passed_cases": 12,
+    "total_cases": 12
+  },
+  "verification": "activation_and_trust"
+}

@@ -1,0 +1,103 @@
+{
+  "anchors": {
+    "conversation_id": "conv-phase2-replay",
+    "replay_id": "replay-001",
+    "scheduler_dispatch": {
+      "cell_id": "cell-replay-001",
+      "enqueued_at": "2026-03-30T09:58:28+00:00",
+      "estimated_cost": 1.0,
+      "need_score": 0.9,
+      "payload": {
+        "conversation_id": "conv-phase2-replay",
+        "turn_id": "turn-0001"
+      },
+      "priority": 5,
+      "task_id": "task-replay-001"
+    },
+    "state_anchor_hash": "58a44fa21aef5cc2a4aef703f619fa6e11187d3ecc3f9322cc4ec36e308c03b2",
+    "state_match": true,
+    "state_mismatch_match": false,
+    "trace_anchor_hash": "cd19774bac5d1c973a3d1fe06e6f26ca2a7325452a48ba32ed3920f3e049fee9",
+    "trace_match": true,
+    "trace_mismatch_match": false,
+    "turn_id": "turn-0001"
+  },
+  "assertions": [
+    {
+      "id": "replay-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "replay-recorded-deterministic-anchors",
+      "result": "pass"
+    },
+    {
+      "id": "replay-match-proved",
+      "result": "pass"
+    },
+    {
+      "id": "replay-trace-mismatch-proved",
+      "result": "pass"
+    },
+    {
+      "id": "replay-state-mismatch-proved",
+      "result": "pass"
+    },
+    {
+      "id": "scheduler-dispatch-used",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/event_types.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/event_bus.py",
+    "projects/agifcore_master/01_plan/PHASE_02_FABRIC_KERNEL_AND_WORKSPACE.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/03_design/GOVERNANCE_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/workspace_state.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/cell_registry.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/lifecycle_engine.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/scheduler.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/replay_ledger.py"
+  ],
+  "notes": [
+    "replay must remain deterministic and trace-anchored",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_evidence/phase_02_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_evidence/phase_02_replay_report.json"
+  },
+  "phase": "2",
+  "runtime_symbols": {
+    "cell_registry": [
+      "register_cell",
+      "update_cell",
+      "export_state"
+    ],
+    "lifecycle_engine": [
+      "bootstrap_cell",
+      "activate",
+      "export_state"
+    ],
+    "replay_ledger": [
+      "record_replay",
+      "verify_replay",
+      "replay_export"
+    ],
+    "scheduler": [
+      "enqueue_task",
+      "dispatch_next",
+      "scheduler_metrics"
+    ],
+    "workspace_state": [
+      "bind_event",
+      "register_cell_anchor",
+      "state_export",
+      "attach_evidence_ref"
+    ]
+  },
+  "slice": "4",
+  "status": "pass",
+  "verifier": "verify_phase_02_replay"
+}

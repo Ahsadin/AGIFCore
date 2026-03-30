@@ -1,0 +1,98 @@
+{
+  "anchors": {
+    "approval": {
+      "assigned_tier": "hot",
+      "candidate_id": "candidate-0001",
+      "decision_ref": "memory-review-decision-00000001",
+      "review_ref": "memory-review-00000001",
+      "status": "approved"
+    },
+    "hold": {
+      "assigned_tier": "cold",
+      "candidate_id": "candidate-0003",
+      "decision_ref": "memory-review-decision-00000003",
+      "review_ref": "memory-review-00000003",
+      "status": "held"
+    },
+    "rejection": {
+      "assigned_tier": "warm",
+      "candidate_id": "candidate-0002",
+      "decision_ref": "memory-review-decision-00000002",
+      "review_ref": "memory-review-00000002",
+      "status": "rejected"
+    },
+    "review_refs": [
+      "memory-review-00000001",
+      "memory-review-00000002",
+      "memory-review-00000003",
+      "memory-review-00000004"
+    ],
+    "tier_summary": {
+      "cold": 1,
+      "ephemeral": 1,
+      "hot": 1,
+      "warm": 1
+    }
+  },
+  "assertions": [
+    {
+      "id": "memory-review-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "approval-state-change-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "rejection-state-change-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "hold-state-change-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "tier-summary-tracks-submissions",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_04_MEMORY_PLANES.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/05_testing/phase_02_fabric_kernel_and_workspace/verify_phase_02_workspace_state.py",
+    "projects/agifcore_master/05_testing/phase_02_fabric_kernel_and_workspace/verify_phase_02_replay.py",
+    "projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_activation_and_trust.py",
+    "projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_bundle_integrity.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/__init__.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/working_memory.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/episodic_memory.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/continuity_memory.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/memory_review.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/rollback_safe_updates.py"
+  ],
+  "notes": [
+    "memory review state changes are explicit",
+    "tier tracking stays visible in exported state",
+    "no approval implied"
+  ],
+  "outputs": {
+    "report": "projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_evidence/phase_04_memory_review_report.json"
+  },
+  "phase": "4",
+  "runtime_symbols": {
+    "memory_review": [
+      "MemoryReviewQueue",
+      "ReviewCandidate",
+      "ReviewDecision",
+      "MemoryReviewError",
+      "submit_candidate",
+      "decide",
+      "approved_candidates",
+      "tier_summary"
+    ]
+  },
+  "slice": "slice_1",
+  "status": "pass",
+  "verifier": "verify_phase_04_memory_review"
+}

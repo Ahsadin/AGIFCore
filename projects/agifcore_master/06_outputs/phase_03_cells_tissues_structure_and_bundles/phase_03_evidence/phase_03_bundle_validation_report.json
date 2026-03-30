@@ -1,0 +1,70 @@
+{
+  "max_bundle_size_bytes": 8388608,
+  "notes": [
+    "slice-1 only",
+    "bundle validation checks manifest structure and nested payloads",
+    "verifier resolves runtime modules from the repo-relative execution path"
+  ],
+  "phase": "Phase 3",
+  "results": [
+    {
+      "case_id": "bundle-pass",
+      "expected_pass": true,
+      "message": "passed",
+      "passed": true,
+      "target": "bundle_manifest"
+    },
+    {
+      "case_id": "missing-manifest-field",
+      "expected_pass": false,
+      "message": "failed as expected: missing required bundle manifest field: bundle_type",
+      "passed": true,
+      "target": "bundle_manifest"
+    },
+    {
+      "case_id": "invalid-object-shape",
+      "expected_pass": false,
+      "message": "failed as expected: missing required bundle manifest field: bundle_id",
+      "passed": true,
+      "target": "bundle_manifest"
+    },
+    {
+      "case_id": "missing-schema-ref",
+      "expected_pass": false,
+      "message": "failed as expected: bundle manifest is missing required schema refs",
+      "passed": true,
+      "target": "bundle_manifest"
+    },
+    {
+      "case_id": "invalid-cell-contract-payload",
+      "expected_pass": false,
+      "message": "failed as expected: allowed_tissues must be a list",
+      "passed": true,
+      "target": "cell_contract"
+    },
+    {
+      "case_id": "invalid-tissue-manifest-payload",
+      "expected_pass": false,
+      "message": "failed as expected: member_cell_ids contains duplicate entries",
+      "passed": true,
+      "target": "tissue_manifest"
+    }
+  ],
+  "runtime_imports": [
+    "bundle_manifest",
+    "bundle_schema_validation",
+    "cell_contracts",
+    "tissue_manifests"
+  ],
+  "runtime_modules_available": true,
+  "slice": "slice_1",
+  "summary": {
+    "expected_failures_verified": true,
+    "expected_pass_cases": 1,
+    "expected_succeeded": true,
+    "overall_pass": true,
+    "passed_cases": 6,
+    "total_cases": 6
+  },
+  "verification": "bundle_validation"
+}

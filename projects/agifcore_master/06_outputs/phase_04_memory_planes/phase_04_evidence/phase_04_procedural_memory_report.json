@@ -1,0 +1,96 @@
+{
+  "anchors": {
+    "active_procedure_ids": [
+      "procedure-0001"
+    ],
+    "exported_entry_count": 1,
+    "procedure_id": "procedure-0001",
+    "retired_entry": {
+      "constraints": [
+        "no execution side effects",
+        "keep provenance attached"
+      ],
+      "created_at": "2026-03-30T18:42:47+00:00",
+      "graph_refs": [
+        "skill-ref://memory/review-note"
+      ],
+      "metadata": {
+        "risk_band": "bounded"
+      },
+      "objective": "Summarize a reviewed memory note safely.",
+      "postconditions": [
+        "summary artifact exists"
+      ],
+      "preconditions": [
+        "reviewed note exists"
+      ],
+      "procedure_id": "procedure-0001",
+      "procedure_name": "review_memory_note",
+      "provenance_refs": [
+        "trace://phase4/procedural/0001"
+      ],
+      "retirement_ref": "retire://phase4/procedural/0001",
+      "review_ref": "memory-review-00000021",
+      "source_candidate_id": "candidate-0021",
+      "status": "retired",
+      "steps": [
+        "read reviewed note",
+        "extract stable summary",
+        "attach provenance"
+      ],
+      "updated_at": "2026-03-30T18:42:47+00:00"
+    }
+  },
+  "assertions": [
+    {
+      "id": "procedural-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "procedure-fields-preserved",
+      "result": "pass"
+    },
+    {
+      "id": "explicit-constraints-preserved",
+      "result": "pass"
+    },
+    {
+      "id": "automatic-execution-surface-absent",
+      "result": "pass"
+    },
+    {
+      "id": "load-state-roundtrip-clean",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_04_MEMORY_PLANES.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/__init__.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/procedural_memory.py"
+  ],
+  "notes": [
+    "procedural memory stores reusable procedures, not executable behavior",
+    "constraints and pre/postconditions remain explicit",
+    "no approval implied"
+  ],
+  "outputs": {
+    "report": "projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_evidence/phase_04_procedural_memory_report.json"
+  },
+  "phase": "4",
+  "runtime_symbols": {
+    "procedural_memory": [
+      "ProceduralMemoryStore",
+      "ProcedureEntry",
+      "ProceduralMemoryError",
+      "add_procedure",
+      "retire_procedure",
+      "active_procedure_ids",
+      "load_state"
+    ]
+  },
+  "slice": "slice_2",
+  "status": "pass",
+  "verifier": "verify_phase_04_procedural_memory"
+}

@@ -1,0 +1,94 @@
+{
+  "anchors": {
+    "approved_candidate_ids": [
+      "candidate-001"
+    ],
+    "candidate_id": "candidate-001",
+    "consumed_candidate": {
+      "candidate_id": "candidate-001",
+      "candidate_kind": "promotable_summary",
+      "created_at": "2026-03-30T18:42:46+00:00",
+      "payload": {
+        "confidence": 0.94,
+        "summary": "ready for review"
+      },
+      "provenance_refs": [
+        "turn://conv-phase4-slice1-working/turn-0001",
+        "trace://phase4/working/turn-0001"
+      ],
+      "review_ref": "memory-review://phase4/working/turn-0001",
+      "source_turn_ref": "turn://conv-phase4-slice1-working/turn-0001",
+      "status": "approved",
+      "target_plane": "semantic"
+    },
+    "memory_pressure": {
+      "candidate_count": 1,
+      "current_state_bytes": 1095,
+      "max_candidate_count": 1,
+      "max_state_bytes": 4096,
+      "utilization": 0.2673
+    },
+    "turn_ref": "turn://conv-phase4-slice1-working/turn-0001"
+  },
+  "assertions": [
+    {
+      "id": "working-memory-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "bounded-turn-state-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "promotable-candidate-budget-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "candidate-review-status-roundtrip",
+      "result": "pass"
+    },
+    {
+      "id": "candidate-consume-clears-working-state",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_04_MEMORY_PLANES.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/05_testing/phase_02_fabric_kernel_and_workspace/verify_phase_02_workspace_state.py",
+    "projects/agifcore_master/05_testing/phase_02_fabric_kernel_and_workspace/verify_phase_02_replay.py",
+    "projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_activation_and_trust.py",
+    "projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_bundle_integrity.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/__init__.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/working_memory.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/episodic_memory.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/continuity_memory.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/memory_review.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/rollback_safe_updates.py"
+  ],
+  "notes": [
+    "working memory is bounded current-turn state only",
+    "promotable candidates stay explicit until consumed",
+    "no approval implied"
+  ],
+  "outputs": {
+    "report": "projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_evidence/phase_04_working_memory_report.json"
+  },
+  "phase": "4",
+  "runtime_symbols": {
+    "working_memory": [
+      "WorkingMemoryStore",
+      "WorkingCandidate",
+      "WorkingMemoryError",
+      "bind_turn",
+      "add_candidate",
+      "mark_candidate_reviewed",
+      "consume_candidate",
+      "memory_pressure"
+    ]
+  },
+  "slice": "slice_1",
+  "status": "pass",
+  "verifier": "verify_phase_04_working_memory"
+}

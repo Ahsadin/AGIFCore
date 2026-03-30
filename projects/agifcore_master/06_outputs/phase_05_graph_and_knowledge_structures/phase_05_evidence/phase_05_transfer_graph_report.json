@@ -1,0 +1,400 @@
+{
+  "anchors": {
+    "abstained_transfer": {
+      "authority_review_ref": null,
+      "baseline_support_score": 0.2,
+      "conflict_status": "clear",
+      "created_at": "2026-03-30T19:56:17+00:00",
+      "decision": "abstained",
+      "decision_reason": "transfer_quality_below_abstain_floor",
+      "explicit_transfer_approval": false,
+      "materialized_transfer_id": null,
+      "metadata": {},
+      "provenance": {
+        "created_at": "2026-03-30T19:56:17+00:00",
+        "entity_id": "transfer-3",
+        "entity_kind": "transfer",
+        "inherited_from": [],
+        "links": [
+          {
+            "metadata": {},
+            "ref_id": "semantic-entry-10",
+            "ref_kind": "semantic_entry",
+            "role": "source_memory",
+            "source_path": "phase4/semantic"
+          },
+          {
+            "metadata": {},
+            "ref_id": "memory-review-31",
+            "ref_kind": "review",
+            "role": "review",
+            "source_path": "phase4/review"
+          }
+        ],
+        "origin_kind": "constructed",
+        "provenance_hash": "3abbf5893387a1bc194c55c86c6f0c919b41e57be08bd314e24516a8dc4fd596"
+      },
+      "quality_score": 0.395,
+      "requested_policy_requirements": [
+        "route"
+      ],
+      "source_domain": "finance_document_workflows",
+      "source_graph": "descriptor",
+      "source_id": "desc-3",
+      "source_policy_requirements": [
+        "route"
+      ],
+      "target_domain": "finance_document_workflows",
+      "target_graph": "descriptor",
+      "target_id": "desc-target-3",
+      "target_support_score": 0.1,
+      "transfer_id": "transfer-3",
+      "trust_band": "experimental"
+    },
+    "active_transfer_ids": [
+      "transfer-1",
+      "transfer-5"
+    ],
+    "approved_transfer": {
+      "authority_review_ref": null,
+      "baseline_support_score": 0.82,
+      "conflict_status": "clear",
+      "created_at": "2026-03-30T19:56:17+00:00",
+      "decision": "approved",
+      "decision_reason": "approved",
+      "explicit_transfer_approval": false,
+      "materialized_transfer_id": "materialized::transfer-1",
+      "metadata": {},
+      "provenance": {
+        "created_at": "2026-03-30T19:56:17+00:00",
+        "entity_id": "transfer-1",
+        "entity_kind": "transfer",
+        "inherited_from": [],
+        "links": [
+          {
+            "metadata": {},
+            "ref_id": "semantic-entry-9",
+            "ref_kind": "semantic_entry",
+            "role": "source_memory",
+            "source_path": "phase4/semantic"
+          },
+          {
+            "metadata": {},
+            "ref_id": "memory-review-30",
+            "ref_kind": "review",
+            "role": "review",
+            "source_path": "phase4/review"
+          },
+          {
+            "metadata": {},
+            "ref_id": "rollback-1",
+            "ref_kind": "rollback_ref",
+            "role": "rollback",
+            "source_path": "phase2/rollback"
+          }
+        ],
+        "origin_kind": "constructed",
+        "provenance_hash": "5b077fe65d047fd6222a43c91bc6fab4418b0b207c7fd1f88b494cb642513a6f"
+      },
+      "quality_score": 0.872,
+      "requested_policy_requirements": [
+        "route"
+      ],
+      "source_domain": "finance_document_workflows",
+      "source_graph": "descriptor",
+      "source_id": "desc-1",
+      "source_policy_requirements": [
+        "route"
+      ],
+      "target_domain": "finance_document_workflows",
+      "target_graph": "descriptor",
+      "target_id": "desc-target-1",
+      "target_support_score": 0.76,
+      "transfer_id": "transfer-1",
+      "trust_band": "policy"
+    },
+    "blocked_transfer": {
+      "authority_review_ref": null,
+      "baseline_support_score": 0.7,
+      "conflict_status": "blocked",
+      "created_at": "2026-03-30T19:56:17+00:00",
+      "decision": "blocked",
+      "decision_reason": "all_candidates_blocked",
+      "explicit_transfer_approval": false,
+      "materialized_transfer_id": null,
+      "metadata": {},
+      "provenance": {
+        "created_at": "2026-03-30T19:56:17+00:00",
+        "entity_id": "transfer-4",
+        "entity_kind": "transfer",
+        "inherited_from": [],
+        "links": [
+          {
+            "metadata": {},
+            "ref_id": "semantic-entry-9",
+            "ref_kind": "semantic_entry",
+            "role": "source_memory",
+            "source_path": "phase4/semantic"
+          },
+          {
+            "metadata": {},
+            "ref_id": "memory-review-30",
+            "ref_kind": "review",
+            "role": "review",
+            "source_path": "phase4/review"
+          },
+          {
+            "metadata": {},
+            "ref_id": "rollback-1",
+            "ref_kind": "rollback_ref",
+            "role": "rollback",
+            "source_path": "phase2/rollback"
+          }
+        ],
+        "origin_kind": "constructed",
+        "provenance_hash": "faa8f99a084e6cf40c41db4406477ec8f27626da707b885f48af3a07e1bab422"
+      },
+      "quality_score": 0.754,
+      "requested_policy_requirements": [
+        "route"
+      ],
+      "source_domain": "finance_document_workflows",
+      "source_graph": "descriptor",
+      "source_id": "desc-4",
+      "source_policy_requirements": [
+        "route"
+      ],
+      "target_domain": "finance_document_workflows",
+      "target_graph": "descriptor",
+      "target_id": "desc-target-4",
+      "target_support_score": 0.6,
+      "transfer_id": "transfer-4",
+      "trust_band": "bounded_local"
+    },
+    "cross_domain_approved_transfer": {
+      "authority_review_ref": "authority-review-5",
+      "baseline_support_score": 0.9,
+      "conflict_status": "clear",
+      "created_at": "2026-03-30T19:56:17+00:00",
+      "decision": "approved",
+      "decision_reason": "approved",
+      "explicit_transfer_approval": true,
+      "materialized_transfer_id": "materialized::transfer-5",
+      "metadata": {},
+      "provenance": {
+        "created_at": "2026-03-30T19:56:17+00:00",
+        "entity_id": "transfer-5",
+        "entity_kind": "transfer",
+        "inherited_from": [],
+        "links": [
+          {
+            "metadata": {},
+            "ref_id": "semantic-entry-9",
+            "ref_kind": "semantic_entry",
+            "role": "source_memory",
+            "source_path": "phase4/semantic"
+          },
+          {
+            "metadata": {},
+            "ref_id": "memory-review-30",
+            "ref_kind": "review",
+            "role": "review",
+            "source_path": "phase4/review"
+          },
+          {
+            "metadata": {},
+            "ref_id": "rollback-1",
+            "ref_kind": "rollback_ref",
+            "role": "rollback",
+            "source_path": "phase2/rollback"
+          }
+        ],
+        "origin_kind": "constructed",
+        "provenance_hash": "3908401cf12835c0ca9ace52df9af1d3c3e5744544af2891391bf90974a92c89"
+      },
+      "quality_score": 0.896,
+      "requested_policy_requirements": [
+        "route"
+      ],
+      "source_domain": "finance_document_workflows",
+      "source_graph": "descriptor",
+      "source_id": "desc-5",
+      "source_policy_requirements": [
+        "route"
+      ],
+      "target_domain": "claims_case_handling",
+      "target_graph": "descriptor",
+      "target_id": "desc-target-5",
+      "target_support_score": 0.84,
+      "transfer_id": "transfer-5",
+      "trust_band": "policy"
+    },
+    "denied_transfer": {
+      "authority_review_ref": null,
+      "baseline_support_score": 0.8,
+      "conflict_status": "clear",
+      "created_at": "2026-03-30T19:56:17+00:00",
+      "decision": "denied",
+      "decision_reason": "missing_explicit_transfer_approval",
+      "explicit_transfer_approval": false,
+      "materialized_transfer_id": null,
+      "metadata": {},
+      "provenance": {
+        "created_at": "2026-03-30T19:56:17+00:00",
+        "entity_id": "transfer-2",
+        "entity_kind": "transfer",
+        "inherited_from": [],
+        "links": [
+          {
+            "metadata": {},
+            "ref_id": "semantic-entry-9",
+            "ref_kind": "semantic_entry",
+            "role": "source_memory",
+            "source_path": "phase4/semantic"
+          },
+          {
+            "metadata": {},
+            "ref_id": "memory-review-30",
+            "ref_kind": "review",
+            "role": "review",
+            "source_path": "phase4/review"
+          },
+          {
+            "metadata": {},
+            "ref_id": "rollback-1",
+            "ref_kind": "rollback_ref",
+            "role": "rollback",
+            "source_path": "phase2/rollback"
+          }
+        ],
+        "origin_kind": "constructed",
+        "provenance_hash": "997cf413470bbbf50f039a280c1779466cb5a43adc894df48ced4c9d637ad3f1"
+      },
+      "quality_score": 0.7915,
+      "requested_policy_requirements": [
+        "route"
+      ],
+      "source_domain": "finance_document_workflows",
+      "source_graph": "descriptor",
+      "source_id": "desc-2",
+      "source_policy_requirements": [
+        "route"
+      ],
+      "target_domain": "claims_case_handling",
+      "target_graph": "descriptor",
+      "target_id": "desc-target-2",
+      "target_support_score": 0.75,
+      "transfer_id": "transfer-2",
+      "trust_band": "bounded_local"
+    },
+    "missing_authority_ref_transfer": {
+      "authority_review_ref": null,
+      "baseline_support_score": 0.88,
+      "conflict_status": "clear",
+      "created_at": "2026-03-30T19:56:17+00:00",
+      "decision": "denied",
+      "decision_reason": "missing_authority_review_ref",
+      "explicit_transfer_approval": true,
+      "materialized_transfer_id": null,
+      "metadata": {},
+      "provenance": {
+        "created_at": "2026-03-30T19:56:17+00:00",
+        "entity_id": "transfer-6",
+        "entity_kind": "transfer",
+        "inherited_from": [],
+        "links": [
+          {
+            "metadata": {},
+            "ref_id": "semantic-entry-9",
+            "ref_kind": "semantic_entry",
+            "role": "source_memory",
+            "source_path": "phase4/semantic"
+          },
+          {
+            "metadata": {},
+            "ref_id": "memory-review-30",
+            "ref_kind": "review",
+            "role": "review",
+            "source_path": "phase4/review"
+          },
+          {
+            "metadata": {},
+            "ref_id": "rollback-1",
+            "ref_kind": "rollback_ref",
+            "role": "rollback",
+            "source_path": "phase2/rollback"
+          }
+        ],
+        "origin_kind": "constructed",
+        "provenance_hash": "fcb9ecd2aa9c44a9c698c9a1e5a16f5b1a486c53d29ca4156132b0b2ba4f37f6"
+      },
+      "quality_score": 0.8915,
+      "requested_policy_requirements": [
+        "route"
+      ],
+      "source_domain": "finance_document_workflows",
+      "source_graph": "descriptor",
+      "source_id": "desc-6",
+      "source_policy_requirements": [
+        "route"
+      ],
+      "target_domain": "claims_case_handling",
+      "target_graph": "descriptor",
+      "target_id": "desc-target-6",
+      "target_support_score": 0.83,
+      "transfer_id": "transfer-6",
+      "trust_band": "policy"
+    }
+  },
+  "assertions": [
+    {
+      "id": "transfer-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "same-domain-transfer-approval-supported",
+      "result": "pass"
+    },
+    {
+      "id": "cross-domain-explicit-approval-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "cross-domain-authority-review-ref-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "low-quality-transfer-abstains",
+      "result": "pass"
+    },
+    {
+      "id": "retired-source-transfer-blocked",
+      "result": "pass"
+    },
+    {
+      "id": "transfer-load-state-roundtrip-clean",
+      "result": "pass"
+    },
+    {
+      "id": "cross-domain-authority-review-retained",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_05_GRAPH_AND_KNOWLEDGE_STRUCTURES.md",
+    "projects/agifcore_master/03_design/GRAPH_STACK_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/__init__.py",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/transfer_graph.py",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/conflict_rules.py"
+  ],
+  "notes": [
+    "transfer stays governed and read-only",
+    "no approval implied"
+  ],
+  "outputs": {
+    "report": "projects/agifcore_master/06_outputs/phase_05_graph_and_knowledge_structures/phase_05_evidence/phase_05_transfer_graph_report.json"
+  },
+  "phase": "5",
+  "status": "pass",
+  "verifier": "verify_phase_05_transfer_graph"
+}

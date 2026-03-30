@@ -1,0 +1,49 @@
+{
+  "anchors": {
+    "link_count": 4,
+    "provenance_hash": "59f15d23e9dd61252e3325a3c6050cdbf546024c57743655613a54f8464f7f3b",
+    "score": 0.95
+  },
+  "assertions": [
+    {
+      "id": "provenance-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "required-roles-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "provenance-score-reflects-review-and-rollback",
+      "result": "pass"
+    },
+    {
+      "id": "provenance-fanout-ceiling-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "provenance-hash-tampering-blocked",
+      "result": "pass"
+    },
+    {
+      "id": "provenance-roundtrip-clean",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_05_GRAPH_AND_KNOWLEDGE_STRUCTURES.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/__init__.py",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/provenance_links.py"
+  ],
+  "notes": [
+    "provenance links are enforced structures, not labels",
+    "no approval implied"
+  ],
+  "outputs": {
+    "report": "projects/agifcore_master/06_outputs/phase_05_graph_and_knowledge_structures/phase_05_evidence/phase_05_provenance_links_report.json"
+  },
+  "phase": "5",
+  "status": "pass",
+  "verifier": "verify_phase_05_provenance_links"
+}

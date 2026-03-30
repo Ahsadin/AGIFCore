@@ -1,0 +1,183 @@
+{
+  "anchors": {
+    "active_descriptor_ids": [
+      "desc-3"
+    ],
+    "edge": {
+      "created_at": "2026-03-30T19:56:16+00:00",
+      "edge_id": "edge-1",
+      "provenance": {
+        "created_at": "2026-03-30T19:56:16+00:00",
+        "entity_id": "edge-1",
+        "entity_kind": "edge",
+        "inherited_from": [],
+        "links": [
+          {
+            "metadata": {},
+            "ref_id": "memory-review-2",
+            "ref_kind": "review",
+            "role": "review",
+            "source_path": "phase4/review"
+          }
+        ],
+        "origin_kind": "constructed",
+        "provenance_hash": "2615e49559d54c9be14ea9bba2e144ce84d69d3ba7b4c7260600443575f97851"
+      },
+      "relation": "supports",
+      "source_descriptor_id": "desc-1",
+      "target_descriptor_id": "desc-2",
+      "weight": 0.8
+    },
+    "retired_descriptor": {
+      "alias_tags": [
+        "invoice",
+        "extract"
+      ],
+      "concept_tags": [
+        "extraction"
+      ],
+      "created_at": "2026-03-30T19:56:16+00:00",
+      "descriptor_id": "desc-1",
+      "descriptor_type": "workflow_pattern",
+      "domain_tags": [
+        "finance_document_workflows"
+      ],
+      "label": "Invoice extraction",
+      "metadata": {},
+      "policy_requirements": [
+        "route"
+      ],
+      "provenance": {
+        "created_at": "2026-03-30T19:56:16+00:00",
+        "entity_id": "desc-1",
+        "entity_kind": "descriptor",
+        "inherited_from": [
+          "agif_fabric_v1"
+        ],
+        "links": [
+          {
+            "metadata": {},
+            "ref_id": "semantic-entry-1",
+            "ref_kind": "semantic_entry",
+            "role": "source_memory",
+            "source_path": "phase4/semantic"
+          },
+          {
+            "metadata": {},
+            "ref_id": "memory-review-1",
+            "ref_kind": "review",
+            "role": "review",
+            "source_path": "phase4/review"
+          }
+        ],
+        "origin_kind": "inherited",
+        "provenance_hash": "c00dee091c9e56981e99d39a6e0c68394bf7c089ed5f84ccc77152203419d1d1"
+      },
+      "retirement_ref": "retirement-1",
+      "status": "retired",
+      "superseded_by": null,
+      "support_refs": [
+        "support://desc-1"
+      ],
+      "trust_band": "policy",
+      "updated_at": "2026-03-30T19:56:16+00:00"
+    },
+    "superseded_descriptor": {
+      "alias_tags": [
+        "invoice",
+        "normalize"
+      ],
+      "concept_tags": [
+        "normalization"
+      ],
+      "created_at": "2026-03-30T19:56:16+00:00",
+      "descriptor_id": "desc-2",
+      "descriptor_type": "workflow_pattern",
+      "domain_tags": [
+        "finance_document_workflows"
+      ],
+      "label": "Invoice normalization",
+      "metadata": {},
+      "policy_requirements": [
+        "route"
+      ],
+      "provenance": {
+        "created_at": "2026-03-30T19:56:16+00:00",
+        "entity_id": "desc-2",
+        "entity_kind": "descriptor",
+        "inherited_from": [],
+        "links": [
+          {
+            "metadata": {},
+            "ref_id": "semantic-entry-1",
+            "ref_kind": "semantic_entry",
+            "role": "source_memory",
+            "source_path": "phase4/semantic"
+          },
+          {
+            "metadata": {},
+            "ref_id": "memory-review-1",
+            "ref_kind": "review",
+            "role": "review",
+            "source_path": "phase4/review"
+          }
+        ],
+        "origin_kind": "constructed",
+        "provenance_hash": "2234773c188314427a6ca5232b9bcc397ce3a582fd2476a8648283fb0bbf47ed"
+      },
+      "retirement_ref": null,
+      "status": "superseded",
+      "superseded_by": "desc-3",
+      "support_refs": [
+        "support://desc-2"
+      ],
+      "trust_band": "bounded_local",
+      "updated_at": "2026-03-30T19:56:16+00:00"
+    }
+  },
+  "assertions": [
+    {
+      "id": "descriptor-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "descriptor-edge-relations-supported",
+      "result": "pass"
+    },
+    {
+      "id": "descriptor-retirement-visible",
+      "result": "pass"
+    },
+    {
+      "id": "descriptor-supersession-visible",
+      "result": "pass"
+    },
+    {
+      "id": "descriptor-provenance-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "descriptor-load-state-roundtrip-clean",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_05_GRAPH_AND_KNOWLEDGE_STRUCTURES.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/__init__.py",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/descriptor_graph.py",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/provenance_links.py",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/supersession_rules.py"
+  ],
+  "notes": [
+    "descriptor graph stays distinct from transfer approval logic",
+    "no approval implied"
+  ],
+  "outputs": {
+    "report": "projects/agifcore_master/06_outputs/phase_05_graph_and_knowledge_structures/phase_05_evidence/phase_05_descriptor_graph_report.json"
+  },
+  "phase": "5",
+  "status": "pass",
+  "verifier": "verify_phase_05_descriptor_graph"
+}

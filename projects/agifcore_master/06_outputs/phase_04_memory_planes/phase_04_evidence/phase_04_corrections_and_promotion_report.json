@@ -1,0 +1,119 @@
+{
+  "anchors": {
+    "correction_result": {
+      "applied_at": "2026-03-30T18:42:47+00:00",
+      "correction_id": "correction-0001",
+      "replacement_id": "semantic-correction-00000001",
+      "replay_id": "phase4-memory-update-00000001",
+      "rollback_ref": "rollback-00000001",
+      "target_id": "semantic-entry-00000001",
+      "target_plane": "semantic"
+    },
+    "episodic_recent_window": [
+      {
+        "content_refs": [],
+        "conversation_id": "conv-phase4-slice2",
+        "correction_markers": [
+          {
+            "corrected_at": "2026-03-30T18:42:47+00:00",
+            "correction_id": "correction-0001",
+            "reason": "refine semantic abstraction",
+            "replacement_event_id": "semantic-correction-00000001"
+          }
+        ],
+        "correction_status": "corrected",
+        "created_at": "2026-03-30T18:42:47+00:00",
+        "event_id": "event-0001",
+        "event_summary": "first semantic abstraction was promoted",
+        "event_type": "semantic_candidate_promoted",
+        "provenance_refs": [
+          "turn://conv-phase4-slice2/turn-0001"
+        ],
+        "turn_id": "turn-0001"
+      }
+    ],
+    "procedural_active_procedure_ids": [
+      "procedure-entry-00000002"
+    ],
+    "procedural_promotion": {
+      "created_id": "procedure-entry-00000002",
+      "promoted_at": "2026-03-30T18:42:47+00:00",
+      "promotion_id": "phase4-promotion-00000002",
+      "review_ref": "memory-review-00000003",
+      "source_candidate_id": "candidate-procedural",
+      "target_plane": "procedural"
+    },
+    "semantic_active_entry_ids": [
+      "semantic-correction-00000001"
+    ],
+    "semantic_promotion": {
+      "created_id": "semantic-entry-00000001",
+      "promoted_at": "2026-03-30T18:42:47+00:00",
+      "promotion_id": "phase4-promotion-00000001",
+      "review_ref": "memory-review-00000002",
+      "source_candidate_id": "candidate-semantic-approved",
+      "target_plane": "semantic"
+    }
+  },
+  "assertions": [
+    {
+      "id": "promotion-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "pending-review-promotion-blocked",
+      "result": "pass"
+    },
+    {
+      "id": "approved-review-promotion-routes-correctly",
+      "result": "pass"
+    },
+    {
+      "id": "semantic-correction-is-rollback-safe",
+      "result": "pass"
+    },
+    {
+      "id": "episodic-correction-marker-preserved",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_04_MEMORY_PLANES.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/__init__.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/working_memory.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/episodic_memory.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/continuity_memory.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/memory_review.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/rollback_safe_updates.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/semantic_memory.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/procedural_memory.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/promotion_pipeline.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/correction_handling.py"
+  ],
+  "notes": [
+    "promotion remains review-gated",
+    "correction remains explicit, rollback-safe, and semantic-state visible",
+    "no approval implied"
+  ],
+  "outputs": {
+    "report": "projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_evidence/phase_04_corrections_and_promotion_report.json"
+  },
+  "phase": "4",
+  "runtime_symbols": {
+    "correction_handling": [
+      "CorrectionHandler",
+      "CorrectionHandlingError",
+      "apply_correction"
+    ],
+    "promotion_pipeline": [
+      "PromotionPipeline",
+      "PromotionPipelineError",
+      "promote_review_candidate"
+    ]
+  },
+  "slice": "slice_2",
+  "status": "pass",
+  "verifier": "verify_phase_04_corrections_and_promotion"
+}

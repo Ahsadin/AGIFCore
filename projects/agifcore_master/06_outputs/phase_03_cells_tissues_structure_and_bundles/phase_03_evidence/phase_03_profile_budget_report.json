@@ -1,0 +1,134 @@
+{
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_03_CELLS_TISSUES_STRUCTURE_AND_BUNDLES.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/02_requirements/DEPLOYMENT_PROFILES.md",
+    "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_cell_contracts_report.json",
+    "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_activation_and_trust_report.json",
+    "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_validation_report.json",
+    "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/profile_budget_rules.py"
+  ],
+  "notes": [
+    "laptop, mobile, and builder budget behavior is exercised directly against the runtime API when the runtime file exists",
+    "budget ceilings are verified at and beyond the boundary",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_profile_budget_report.json"
+  },
+  "phase": "Phase 3",
+  "results": [
+    {
+      "case_id": "laptop-budget-happy-path",
+      "expected_pass": true,
+      "message": "passed",
+      "passed": true,
+      "target": "profile_budget_rules"
+    },
+    {
+      "case_id": "laptop-budget-ceiling-breach",
+      "expected_pass": false,
+      "message": "failed as expected: budget ceiling exceeded",
+      "passed": true,
+      "target": "profile_budget_rules"
+    },
+    {
+      "case_id": "mobile-budget-happy-path",
+      "expected_pass": true,
+      "message": "passed",
+      "passed": true,
+      "target": "profile_budget_rules"
+    },
+    {
+      "case_id": "mobile-budget-ceiling-breach",
+      "expected_pass": false,
+      "message": "failed as expected: budget ceiling exceeded",
+      "passed": true,
+      "target": "profile_budget_rules"
+    },
+    {
+      "case_id": "builder-budget-happy-path",
+      "expected_pass": true,
+      "message": "passed",
+      "passed": true,
+      "target": "profile_budget_rules"
+    },
+    {
+      "case_id": "builder-active-cell-ceiling-breach",
+      "expected_pass": false,
+      "message": "failed as expected: budget ceiling exceeded",
+      "passed": true,
+      "target": "profile_budget_rules"
+    },
+    {
+      "case_id": "builder-tissue-ceiling-breach",
+      "expected_pass": false,
+      "message": "failed as expected: budget ceiling exceeded",
+      "passed": true,
+      "target": "profile_budget_rules"
+    },
+    {
+      "case_id": "builder-bundle-payload-ceiling-breach",
+      "expected_pass": false,
+      "message": "failed as expected: budget ceiling exceeded",
+      "passed": true,
+      "target": "profile_budget_rules"
+    }
+  ],
+  "runtime_exports": {
+    "modules": {
+      "profile_budget_rules": [
+        "Any",
+        "BUILDER_ACTIVE_CELL_CEILING",
+        "MAX_MANIFEST_SIZE_BYTES",
+        "Mapping",
+        "PHASE3_BUNDLE_PAYLOAD_CEILING_BYTES",
+        "PHASE3_DORMANT_BLUEPRINT_CEILING",
+        "PHASE3_PROFILE_ACTIVE_CELL_CEILINGS",
+        "PHASE3_TISSUE_CEILING",
+        "PROFILE_ACTIVE_CELL_CEILINGS",
+        "PROFILE_NAMES",
+        "Phase3StructureError",
+        "ProfileBudgetRule",
+        "REQUIRED_PROFILE_BUDGET_CONTEXT_FIELDS",
+        "REQUIRED_PROFILE_BUDGET_FIELDS",
+        "SPLIT_PRESSURE_MEMBER_COUNT",
+        "annotations",
+        "dataclass",
+        "default_profile_budget_payload",
+        "evaluate_profile_budget",
+        "require_mapping",
+        "require_non_empty_str",
+        "require_non_negative_int",
+        "require_profile_name",
+        "validate_profile_budget_context",
+        "validate_profile_budget_payload"
+      ]
+    },
+    "profile_ceiling_helpers": {
+      "builder": 64,
+      "bundle_payload": 8388608,
+      "laptop": 32,
+      "mobile": 8,
+      "tissue": 12
+    }
+  },
+  "runtime_imports": [
+    "profile_budget_rules"
+  ],
+  "runtime_modules_available": true,
+  "slice": "slice_3",
+  "status": "pass",
+  "summary": {
+    "expected_failures_verified": true,
+    "expected_pass_cases": 3,
+    "expected_succeeded": true,
+    "overall_pass": true,
+    "passed_cases": 8,
+    "total_cases": 8
+  },
+  "verification": "profile_budgets"
+}
