@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agifcore.phase_03.tissue_manifest.schema.json",
+  "title": "AGIFCore Phase 3 Slice 1 TissueManifest",
+  "type": "object",
+  "required": [
+    "tissue_id",
+    "tissue_name",
+    "allowed_role_families",
+    "member_cell_ids",
+    "routing_targets",
+    "policy_envelope"
+  ],
+  "properties": {
+    "tissue_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tissue_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "allowed_role_families": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "member_cell_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "maxItems": 16
+    },
+    "routing_targets": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "maxItems": 8
+    },
+    "policy_envelope": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}
