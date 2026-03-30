@@ -487,7 +487,7 @@ def build_pass_report() -> dict[str, Any]:
         )
     )
 
-    default_policy = default_trust_band_policy(standard_band)
+    default_policy = default_trust_band_policy(standard_band.band_name)
     recommended_band = trust_band_for_score(0.8)
     runtime_exports["policy_helpers"] = {
         "default_policy_type": type(default_policy).__name__,
@@ -519,13 +519,16 @@ def build_pass_report() -> dict[str, Any]:
             "blocked-trust-band-fails",
             "active_dormant_control",
             False,
-            lambda: evaluate_activation_readiness(
-                policy=activation_policy,
-                lifecycle_state="dormant",
-                need_score=0.8,
-                estimated_cost=0.5,
-                active_cell_count=16,
-                trust_band=blocked_band,
+            lambda: _expected_blocked_output(
+                evaluate_activation_readiness(
+                    policy=activation_policy,
+                    lifecycle_state="dormant",
+                    need_score=0.8,
+                    estimated_cost=0.5,
+                    active_cell_count=16,
+                    trust_band=blocked_band,
+                ),
+                "blocked trust band readiness",
             ),
         )
     )
@@ -535,13 +538,16 @@ def build_pass_report() -> dict[str, Any]:
             "active-cell-ceiling-breach-fails",
             "active_dormant_control",
             False,
-            lambda: evaluate_activation_readiness(
-                policy=activation_policy,
-                lifecycle_state="dormant",
-                need_score=0.8,
-                estimated_cost=0.5,
-                active_cell_count=32,
-                trust_band=standard_band,
+            lambda: _expected_blocked_output(
+                evaluate_activation_readiness(
+                    policy=activation_policy,
+                    lifecycle_state="dormant",
+                    need_score=0.8,
+                    estimated_cost=0.5,
+                    active_cell_count=32,
+                    trust_band=standard_band,
+                ),
+                "active cell ceiling breach",
             ),
         )
     )
@@ -551,9 +557,12 @@ def build_pass_report() -> dict[str, Any]:
             "dormant-blueprint-ceiling-breach-fails",
             "active_dormant_control",
             False,
-            lambda: evaluate_dormant_pressure(
-                dormant_blueprint_count=129,
-                lifecycle_state="dormant",
+            lambda: _expected_blocked_output(
+                evaluate_dormant_pressure(
+                    dormant_blueprint_count=129,
+                    lifecycle_state="dormant",
+                ),
+                "dormant blueprint ceiling breach",
             ),
         )
     )
@@ -579,7 +588,6 @@ def build_pass_report() -> dict[str, Any]:
             True,
             lambda: _expected_ready_output(
                 activation_policy.evaluate_activation(
-                    policy=activation_policy,
                     lifecycle_state="dormant",
                     need_score=0.8,
                     estimated_cost=0.5,
