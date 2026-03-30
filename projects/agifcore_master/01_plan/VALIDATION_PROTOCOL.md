@@ -2,13 +2,13 @@
 
 ## Purpose
 
-This file defines the Phase 1 validation and closure protocol for AGIFCore.
+This file defines the AGIFCore phase validation and closure protocol.
 
-Phase 1 may not be treated as earned unless the full closure chain below exists and the user has explicitly approved the phase review package.
+No phase may be treated as earned unless the full closure chain below exists and the user has explicitly approved the phase review package.
 
-## Phase 1 closure requirements
+## Phase closure requirements
 
-Every Phase 1 closeout must include all of the following:
+Every phase closeout must include all of the following:
 
 1. automated verification
 2. a user-facing demo
@@ -29,7 +29,7 @@ Allowed user verdicts:
 
 ## Closure records
 
-Phase 1 closure must be backed by these records, with no substitution by summary text:
+Phase closure must be backed by these records, with no substitution by summary text:
 
 - task card from `projects/agifcore_master/00_admin/TASK_CARD_TEMPLATE.md`
 - audit report from `projects/agifcore_master/00_admin/AUDIT_REPORT_TEMPLATE.md`
@@ -62,7 +62,7 @@ The closure order is fixed:
 
 The validation package must be inspectable by a human and must separate the following surfaces:
 
-- the authored Phase 1 artifacts
+- the authored phase artifacts
 - the audit report
 - the Governor verification record
 - the demo path
@@ -78,8 +78,8 @@ The Governor verification pass must independently confirm all of the following:
 - the files exist on disk
 - the checks were rerun directly
 - the demo path is inspectable
-- the Phase 1 gate language is truthful
-- the frozen Phase 1 baseline was not mutated outside the permitted scope
+- the phase gate language is truthful
+- the approved phase baseline was not mutated outside the permitted scope
 
 The Anti-Shortcut Auditor must independently confirm all of the following:
 
@@ -96,7 +96,7 @@ The Anti-Shortcut Auditor must independently confirm all of the following:
 - No agent may approve its own work.
 - A later user verdict may be `approved_with_blockers`, but only `approved` earns the phase.
 
-## Phase 1 demo and review handoff
+## Phase demo and review handoff
 
 The final user review request must be issued only after:
 
@@ -115,7 +115,8 @@ The user review request must clearly state:
 ## Cross-References
 
 - `projects/agifcore_master/01_plan/MASTER_PLAN.md`
-- `projects/agifcore_master/01_plan/PHASE_01_CONSTITUTION_AND_FULL_SYSTEM_BLUEPRINT.md`
+- `projects/agifcore_master/01_plan/PHASE_INDEX.md`
+- `projects/agifcore_master/01_plan/PHASE_GATE_CHECKLIST.md`
 - `projects/agifcore_master/00_admin/TASK_CARD_TEMPLATE.md`
 - `projects/agifcore_master/00_admin/AUDIT_REPORT_TEMPLATE.md`
 - `projects/agifcore_master/00_admin/GOVERNOR_VERIFICATION_RECORD_TEMPLATE.md`
