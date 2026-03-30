@@ -68,3 +68,7 @@
 - Materialized `01_plan/PHASE_03_CELLS_TISSUES_STRUCTURE_AND_BUNDLES.md` as the approved Phase 3 planning baseline for execution start.
 - Added `00_admin/codex_threads/handoffs/PHASE_03_PLAN_FREEZE_HANDOFF.md` and `00_admin/codex_threads/handoffs/PHASE_03_EXECUTION_START_BRIEF.md`.
 - Recorded that the Phase 3 planning baseline is frozen for execution start while Phase 3 remains `open` and Phase 4 has not started.
+- Materialized `01_plan/PHASE_04_MEMORY_PLANES.md` as the approved Phase 4 planning baseline for execution start.
+- Added the Phase 4 planning task-card set under `00_admin/codex_threads/tasks/phase_04/`.
+- Added `00_admin/codex_threads/handoffs/PHASE_04_PLAN_FREEZE_HANDOFF.md` and `00_admin/codex_threads/handoffs/PHASE_04_EXECUTION_START_BRIEF.md`.
+- Recorded that the Phase 4 planning baseline is frozen for execution start while Phase 4 remains `open` and Phase 5 has not started.
