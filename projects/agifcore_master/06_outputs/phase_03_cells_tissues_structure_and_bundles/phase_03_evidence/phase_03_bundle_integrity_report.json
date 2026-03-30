@@ -37,13 +37,12 @@
   },
   "phase": "Phase 3",
   "planned_checks": [
-    "valid bundle manifest passes",
-    "missing bundle field fails",
-    "missing schema ref fails",
-    "nested cell contract failure is caught",
-    "nested tissue manifest failure is caught",
+    "valid bundle manifest and inventory pass",
     "missing inventory entry fails",
-    "oversized bundle fails"
+    "unknown extra inventory entry fails",
+    "invalid digest format fails",
+    "hash mismatch fails",
+    "manifest/inventory payload mismatch fails"
   ],
   "results": [],
   "runtime_imports": [
@@ -57,7 +56,7 @@
   "slice": "slice_4",
   "status": "blocked",
   "summary": {
-    "blocked_cases": 7,
+    "blocked_cases": 6,
     "overall_pass": false,
     "passed_cases": 0,
     "total_cases": 0

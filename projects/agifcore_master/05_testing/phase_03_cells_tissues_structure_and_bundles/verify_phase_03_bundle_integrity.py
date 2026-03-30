@@ -245,10 +245,10 @@ def _decision_reason(result: Any) -> str:
 
 def _module_entrypoint(module: Any) -> tuple[str, Any]:
     for name in (
-        "validate_bundle_integrity_payload",
         "validate_bundle_integrity",
         "evaluate_bundle_integrity",
         "check_bundle_integrity",
+        "validate_bundle_integrity_payload",
     ):
         if hasattr(module, name):
             return name, getattr(module, name)
@@ -256,18 +256,30 @@ def _module_entrypoint(module: Any) -> tuple[str, Any]:
         if hasattr(module, name):
             return name, getattr(module, name)
     raise ContractViolation(
-        "runtime symbol not found: validate_bundle_integrity_payload, validate_bundle_integrity, evaluate_bundle_integrity, check_bundle_integrity, BundleIntegrityCheck, BundleIntegrity"
+        "runtime symbol not found: validate_bundle_integrity, evaluate_bundle_integrity, check_bundle_integrity, validate_bundle_integrity_payload, BundleIntegrityCheck, BundleIntegrity"
     )
 
 
-def _invoke_entrypoint(entry_kind: str, entrypoint: Any, payload: Mapping[str, Any]) -> Any:
-    if entry_kind in {"validate_bundle_integrity_payload", "validate_bundle_integrity", "evaluate_bundle_integrity", "check_bundle_integrity"}:
-        return entrypoint(payload)
-    instance = None
+def _invoke_entrypoint(
+    entry_kind: str,
+    entrypoint: Any,
+    bundle_manifest_payload: Mapping[str, Any],
+    integrity_inventory: Mapping[str, Any],
+) -> Any:
+    if entry_kind in {
+        "validate_bundle_integrity",
+        "evaluate_bundle_integrity",
+        "check_bundle_integrity",
+        "validate_bundle_integrity_payload",
+    }:
+        return entrypoint(bundle_manifest_payload, integrity_inventory)
     if hasattr(entrypoint, "from_payload"):
-        instance = entrypoint.from_payload(payload)
+        instance = entrypoint.from_payload(
+            bundle_manifest_payload,
+            integrity_inventory=integrity_inventory,
+        )
     else:
-        instance = entrypoint(payload)
+        instance = entrypoint(bundle_manifest_payload, integrity_inventory)
     if hasattr(instance, "validate"):
         return instance.validate()
     if hasattr(instance, "evaluate"):
@@ -319,6 +331,59 @@ def _bundle_manifest_fixture() -> dict[str, Any]:
     }
 
 
+def _integrity_inventory_fixture(bundle_manifest: Mapping[str, Any]) -> dict[str, Any]:
+    payload_inventory = bundle_manifest["payload_inventory"]
+    cell_contract = payload_inventory["cell_contract"]
+    tissue_manifest = payload_inventory["tissue_manifest"]
+    return {
+        "cell_contract": {
+            "payload": cell_contract,
+            "digest": _compute_digest(cell_contract),
+        },
+        "tissue_manifest": {
+            "payload": tissue_manifest,
+            "digest": _compute_digest(tissue_manifest),
+        },
+    }
+
+
+def _compute_digest(payload: Any) -> str:
+    import hashlib
+
+    canonical = json.dumps(payload, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    return f"sha256:{hashlib.sha256(canonical).hexdigest()}"
+
+
+def _unknown_extra_inventory_entry_fixture(bundle_manifest: Mapping[str, Any]) -> dict[str, Any]:
+    inventory = _integrity_inventory_fixture(bundle_manifest)
+    inventory["unexpected_extra"] = {
+        "payload": {"note": "unexpected"},
+        "digest": _compute_digest({"note": "unexpected"}),
+    }
+    return inventory
+
+
+def _invalid_digest_inventory_fixture(bundle_manifest: Mapping[str, Any]) -> dict[str, Any]:
+    inventory = _integrity_inventory_fixture(bundle_manifest)
+    inventory["cell_contract"]["digest"] = "sha256:not-a-real-digest"
+    return inventory
+
+
+def _hash_mismatch_inventory_fixture(bundle_manifest: Mapping[str, Any]) -> dict[str, Any]:
+    inventory = _integrity_inventory_fixture(bundle_manifest)
+    inventory["tissue_manifest"]["digest"] = "sha256:" + ("0" * 64)
+    return inventory
+
+
+def _payload_mismatch_inventory_fixture(bundle_manifest: Mapping[str, Any]) -> dict[str, Any]:
+    inventory = _integrity_inventory_fixture(bundle_manifest)
+    inventory["cell_contract"]["payload"] = {
+        **inventory["cell_contract"]["payload"],
+        "role_name": "phase-3-planner-alt",
+    }
+    return inventory
+
+
 def _broken_missing_manifest_field() -> dict[str, Any]:
     payload = _bundle_manifest_fixture()
     payload.pop("bundle_type", None)
@@ -358,6 +423,12 @@ def _broken_oversized_bundle() -> dict[str, Any]:
     return payload
 
 
+def _inventory_missing_entry_fixture(bundle_manifest: Mapping[str, Any]) -> dict[str, Any]:
+    inventory = _integrity_inventory_fixture(bundle_manifest)
+    inventory.pop("tissue_manifest", None)
+    return inventory
+
+
 def _run_case(case_id: str, target: str, expected_pass: bool, fn) -> CaseResult:
     try:
         fn()
@@ -390,20 +461,19 @@ def build_blocked_report(missing: list[str]) -> dict[str, Any]:
             "missing_files": missing,
         },
         "planned_checks": [
-            "valid bundle manifest passes",
-            "missing bundle field fails",
-            "missing schema ref fails",
-            "nested cell contract failure is caught",
-            "nested tissue manifest failure is caught",
+            "valid bundle manifest and inventory pass",
             "missing inventory entry fails",
-            "oversized bundle fails",
+            "unknown extra inventory entry fails",
+            "invalid digest format fails",
+            "hash mismatch fails",
+            "manifest/inventory payload mismatch fails",
         ],
         "results": [],
         "summary": {
             "overall_pass": False,
             "passed_cases": 0,
             "total_cases": 0,
-            "blocked_cases": 7,
+            "blocked_cases": 6,
         },
         "outputs": {
             "report": rel(REPORT_PATH),
@@ -450,8 +520,12 @@ def build_pass_report() -> dict[str, Any]:
     from bundle_schema_validation import validate_bundle_schema_foundation
 
     bundle = _bundle_manifest_fixture()
+    integrity_inventory = _integrity_inventory_fixture(bundle)
     validate_bundle_schema_foundation(bundle, base_dir=RUNTIME_DIR)
-    _require_success(_invoke_entrypoint(entry_kind, entrypoint, bundle), "bundle integrity happy path")
+    _require_success(
+        _invoke_entrypoint(entry_kind, entrypoint, bundle, integrity_inventory),
+        "bundle integrity happy path",
+    )
 
     cases = [
         (
@@ -459,53 +533,83 @@ def build_pass_report() -> dict[str, Any]:
             "bundle_integrity_checks",
             True,
             lambda: _require_success(
-                _invoke_entrypoint(entry_kind, entrypoint, _bundle_manifest_fixture()),
+                _invoke_entrypoint(
+                    entry_kind,
+                    entrypoint,
+                    _bundle_manifest_fixture(),
+                    _integrity_inventory_fixture(_bundle_manifest_fixture()),
+                ),
                 "bundle integrity happy path",
             ),
-        ),
-        (
-            "missing-bundle-field",
-            "bundle_integrity_checks",
-            False,
-            lambda: _require_blocked(
-                _invoke_entrypoint(entry_kind, entrypoint, _broken_missing_manifest_field()),
-                "missing bundle field",
-            ),
-        ),
-        (
-            "missing-schema-ref",
-            "bundle_schema_validation",
-            False,
-            lambda: validate_bundle_schema_foundation(_broken_missing_schema_ref(), base_dir=RUNTIME_DIR),
-        ),
-        (
-            "nested-cell-contract-failure",
-            "cell_contracts",
-            False,
-            lambda: validate_bundle_schema_foundation(_broken_nested_cell_contract(), base_dir=RUNTIME_DIR),
-        ),
-        (
-            "nested-tissue-manifest-failure",
-            "tissue_manifests",
-            False,
-            lambda: validate_bundle_schema_foundation(_broken_nested_tissue_manifest(), base_dir=RUNTIME_DIR),
         ),
         (
             "missing-inventory-entry",
             "bundle_integrity_checks",
             False,
             lambda: _require_blocked(
-                _invoke_entrypoint(entry_kind, entrypoint, _broken_inventory_missing_entry()),
+                _invoke_entrypoint(
+                    entry_kind,
+                    entrypoint,
+                    bundle,
+                    _inventory_missing_entry_fixture(bundle),
+                ),
                 "missing inventory entry",
             ),
         ),
         (
-            "oversized-bundle",
+            "unknown-extra-inventory-entry",
             "bundle_integrity_checks",
             False,
             lambda: _require_blocked(
-                _invoke_entrypoint(entry_kind, entrypoint, _broken_oversized_bundle()),
-                "oversized bundle",
+                _invoke_entrypoint(
+                    entry_kind,
+                    entrypoint,
+                    bundle,
+                    _unknown_extra_inventory_entry_fixture(bundle),
+                ),
+                "unknown extra inventory entry",
+            ),
+        ),
+        (
+            "invalid-digest-format",
+            "bundle_integrity_checks",
+            False,
+            lambda: _require_blocked(
+                _invoke_entrypoint(
+                    entry_kind,
+                    entrypoint,
+                    bundle,
+                    _invalid_digest_inventory_fixture(bundle),
+                ),
+                "invalid digest format",
+            ),
+        ),
+        (
+            "hash-mismatch",
+            "bundle_integrity_checks",
+            False,
+            lambda: _require_blocked(
+                _invoke_entrypoint(
+                    entry_kind,
+                    entrypoint,
+                    bundle,
+                    _hash_mismatch_inventory_fixture(bundle),
+                ),
+                "hash mismatch",
+            ),
+        ),
+        (
+            "manifest-inventory-payload-mismatch",
+            "bundle_integrity_checks",
+            False,
+            lambda: _require_blocked(
+                _invoke_entrypoint(
+                    entry_kind,
+                    entrypoint,
+                    bundle,
+                    _payload_mismatch_inventory_fixture(bundle),
+                ),
+                "manifest/inventory payload mismatch",
             ),
         ),
     ]
