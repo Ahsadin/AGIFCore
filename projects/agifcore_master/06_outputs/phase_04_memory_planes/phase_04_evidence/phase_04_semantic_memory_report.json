@@ -9,7 +9,7 @@
       "correction_refs": [
         "corr-sem-0001"
       ],
-      "created_at": "2026-03-30T18:02:46+00:00",
+      "created_at": "2026-03-30T18:42:47+00:00",
       "entry_id": "semantic-0001",
       "graph_refs": [
         "concept-ref://memory/pressure"
@@ -27,7 +27,7 @@
       "supporting_refs": [
         "support://phase4/semantic/0001"
       ],
-      "updated_at": "2026-03-30T18:02:46+00:00"
+      "updated_at": "2026-03-30T18:42:47+00:00"
     }
   },
   "assertions": [
