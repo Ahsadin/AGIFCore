@@ -1,0 +1,114 @@
+{
+  "boundary_note": "workspace, registry, lifecycle, scheduler, replay, rollback, quarantine, and fail-closed are not part of slice 1",
+  "event_export": [
+    {
+      "event_id": "evt-538c14cb015d41649abbd50457a67549",
+      "event_type": "turn_admitted",
+      "occurred_at": "2026-03-30T09:58:28+00:00",
+      "payload": {
+        "admission_source": "slice_1_verifier"
+      },
+      "producer": "kernel_trace_verifier",
+      "response": null,
+      "trace_refs": {
+        "critic_trace_ref": "trace://critic/turn-0001",
+        "governance_trace_ref": "trace://governance/turn-0001",
+        "planner_trace_ref": "trace://planner/turn-0001",
+        "simulation_trace_ref": "trace://simulation/turn-0001"
+      },
+      "turn": {
+        "active_context_refs": [
+          "ctx://phase2/slice1"
+        ],
+        "conversation_id": "conv-phase2-slice1",
+        "discourse_mode": "explain",
+        "knowledge_gap_reason": "none",
+        "next_action": "answer",
+        "support_state": "grounded",
+        "turn_id": "turn-0001",
+        "user_intent": "verify slice-1 kernel trace substrate"
+      }
+    },
+    {
+      "event_id": "evt-0f89f4f9328e4043b3674453f2b6d773",
+      "event_type": "response_ready",
+      "occurred_at": "2026-03-30T09:58:28+00:00",
+      "payload": {
+        "render_surface": "local_desktop_ui"
+      },
+      "producer": "kernel_trace_verifier",
+      "response": {
+        "abstain_or_answer": "answer",
+        "final_answer_mode": "grounded_fact",
+        "memory_review_ref": "memory://review/phase2-slice1-turn-0001",
+        "response_text": "Slice 1 event fabric is present and trace-aligned."
+      },
+      "trace_refs": {
+        "critic_trace_ref": "trace://critic/turn-0001",
+        "governance_trace_ref": "trace://governance/turn-0001",
+        "planner_trace_ref": "trace://planner/turn-0001",
+        "simulation_trace_ref": "trace://simulation/turn-0001"
+      },
+      "turn": {
+        "active_context_refs": [
+          "ctx://phase2/slice1"
+        ],
+        "conversation_id": "conv-phase2-slice1",
+        "discourse_mode": "explain",
+        "knowledge_gap_reason": "none",
+        "next_action": "answer",
+        "support_state": "grounded",
+        "turn_id": "turn-0001",
+        "user_intent": "verify slice-1 kernel trace substrate"
+      }
+    }
+  ],
+  "handled_event_order": [
+    "turn_admitted",
+    "response_ready"
+  ],
+  "phase": "2",
+  "slice": "1",
+  "status": "pass",
+  "trace_event_count": 2,
+  "trace_export": [
+    {
+      "conversation_id": "conv-phase2-slice1",
+      "critic_trace_ref": "trace://critic/turn-0001",
+      "discourse_mode": "explain",
+      "event_id": "evt-538c14cb015d41649abbd50457a67549",
+      "event_type": "turn_admitted",
+      "final_answer_mode": null,
+      "governance_trace_ref": "trace://governance/turn-0001",
+      "knowledge_gap_reason": "none",
+      "next_action": "answer",
+      "occurred_at": "2026-03-30T09:58:28+00:00",
+      "payload_size_bytes": 755,
+      "planner_trace_ref": "trace://planner/turn-0001",
+      "producer": "kernel_trace_verifier",
+      "sequence": 1,
+      "simulation_trace_ref": "trace://simulation/turn-0001",
+      "support_state": "grounded",
+      "turn_id": "turn-0001"
+    },
+    {
+      "conversation_id": "conv-phase2-slice1",
+      "critic_trace_ref": "trace://critic/turn-0001",
+      "discourse_mode": "explain",
+      "event_id": "evt-0f89f4f9328e4043b3674453f2b6d773",
+      "event_type": "response_ready",
+      "final_answer_mode": "grounded_fact",
+      "governance_trace_ref": "trace://governance/turn-0001",
+      "knowledge_gap_reason": "none",
+      "next_action": "answer",
+      "occurred_at": "2026-03-30T09:58:28+00:00",
+      "payload_size_bytes": 954,
+      "planner_trace_ref": "trace://planner/turn-0001",
+      "producer": "kernel_trace_verifier",
+      "sequence": 2,
+      "simulation_trace_ref": "trace://simulation/turn-0001",
+      "support_state": "grounded",
+      "turn_id": "turn-0001"
+    }
+  ]
+}

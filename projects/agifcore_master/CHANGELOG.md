@@ -57,3 +57,8 @@
 - Materialized `01_plan/PHASE_02_FABRIC_KERNEL_AND_WORKSPACE.md` as the approved Phase 2 planning baseline for execution start.
 - Added `00_admin/codex_threads/handoffs/PHASE_02_PLAN_FREEZE_HANDOFF.md` and `00_admin/codex_threads/handoffs/PHASE_02_EXECUTION_START_BRIEF.md`.
 - Recorded that the Phase 2 planning baseline is frozen for execution start while Phase 2 remains `open` and Phase 3 has not started.
+- Completed the Phase 2 runtime package under `04_execution/phase_02_fabric_kernel_and_workspace/`, with paired verifiers under `05_testing/phase_02_fabric_kernel_and_workspace/` and evidence/demo outputs under `06_outputs/phase_02_fabric_kernel_and_workspace/`.
+- Added the Phase 2 task-card set under `00_admin/codex_threads/tasks/phase_02/`.
+- Added the Phase 2 audit, governor verification, validation request, and user verdict records under `00_admin/codex_threads/`.
+- Repaired the Phase 2 review bundle so the aggregate evidence manifest references all slice reports and the external review zip includes the full demo, evidence, runtime, and verifier surfaces.
+- Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 2 is now `approved`.

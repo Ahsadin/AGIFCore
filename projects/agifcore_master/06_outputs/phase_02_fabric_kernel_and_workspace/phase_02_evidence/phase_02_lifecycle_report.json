@@ -1,0 +1,70 @@
+{
+  "assertions": [
+    {
+      "id": "lifecycle-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "lifecycle-bootstrap-activate-hibernate-reactivate",
+      "result": "pass"
+    },
+    {
+      "id": "lifecycle-split-merge-quarantine-clear-retire",
+      "result": "pass"
+    },
+    {
+      "id": "lifecycle-history-summary-roundtrip",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/event_types.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/event_bus.py",
+    "projects/agifcore_master/01_plan/PHASE_02_FABRIC_KERNEL_AND_WORKSPACE.md",
+    "projects/agifcore_master/03_design/WORKSPACE_MODEL.md",
+    "projects/agifcore_master/03_design/GOVERNANCE_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/workspace_state.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/cell_registry.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/lifecycle_engine.py"
+  ],
+  "notes": [
+    "lifecycle must stay replay-safe, history-backed, and bounded",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_evidence/phase_02_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_02_fabric_kernel_and_workspace/phase_02_evidence/phase_02_lifecycle_report.json"
+  },
+  "phase": "2",
+  "runtime_symbols": {
+    "cell_registry": [
+      "active_cells",
+      "export_state",
+      "get_cell_record",
+      "list_cells",
+      "load_export",
+      "register_cell",
+      "set_quarantine",
+      "update_cell"
+    ],
+    "lifecycle_engine": [
+      "activate",
+      "bootstrap_cell",
+      "clear_quarantine",
+      "export_state",
+      "hibernate",
+      "history_export",
+      "load_export",
+      "merge",
+      "quarantine",
+      "reactivate",
+      "retire",
+      "split",
+      "state_digest",
+      "summary"
+    ]
+  },
+  "slice": "3",
+  "status": "pass",
+  "verifier": "verify_phase_02_lifecycle"
+}
