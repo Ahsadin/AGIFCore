@@ -1,7 +1,7 @@
 {
   "anchors": {
     "correction_result": {
-      "applied_at": "2026-03-30T17:41:44+00:00",
+      "applied_at": "2026-03-30T17:48:48+00:00",
       "correction_id": "correction-0001",
       "replacement_id": "semantic-correction-00000001",
       "replay_id": "phase4-memory-update-00000001",
@@ -15,14 +15,14 @@
         "conversation_id": "conv-phase4-slice2",
         "correction_markers": [
           {
-            "corrected_at": "2026-03-30T17:41:44+00:00",
+            "corrected_at": "2026-03-30T17:48:48+00:00",
             "correction_id": "correction-0001",
             "reason": "refine semantic abstraction",
             "replacement_event_id": "semantic-correction-00000001"
           }
         ],
         "correction_status": "corrected",
-        "created_at": "2026-03-30T17:41:44+00:00",
+        "created_at": "2026-03-30T17:48:48+00:00",
         "event_id": "event-0001",
         "event_summary": "first semantic abstraction was promoted",
         "event_type": "semantic_candidate_promoted",
@@ -37,7 +37,7 @@
     ],
     "procedural_promotion": {
       "created_id": "procedure-entry-00000002",
-      "promoted_at": "2026-03-30T17:41:44+00:00",
+      "promoted_at": "2026-03-30T17:48:48+00:00",
       "promotion_id": "phase4-promotion-00000002",
       "review_ref": "memory-review-00000003",
       "source_candidate_id": "candidate-procedural",
@@ -48,7 +48,7 @@
     ],
     "semantic_promotion": {
       "created_id": "semantic-entry-00000001",
-      "promoted_at": "2026-03-30T17:41:44+00:00",
+      "promoted_at": "2026-03-30T17:48:48+00:00",
       "promotion_id": "phase4-promotion-00000001",
       "review_ref": "memory-review-00000002",
       "source_candidate_id": "candidate-semantic-approved",
