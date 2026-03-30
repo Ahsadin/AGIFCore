@@ -69,21 +69,38 @@ class PromotionPipeline:
     def promote_review_candidate(
         self,
         *,
-        review_candidate: Mapping[str, Any],
+        review_ref: str,
+        review_queue: Any,
         source_candidate: Mapping[str, Any],
         semantic_store: SemanticMemoryStore | None = None,
         procedural_store: ProceduralMemoryStore | None = None,
         continuity_store: ContinuityMemoryStore | None = None,
     ) -> dict[str, Any]:
-        review = _require_mapping(review_candidate, "review_candidate")
+        normalized_review_ref = _require_non_empty_str(review_ref, "review_ref")
+        if not hasattr(review_queue, "export_state"):
+            raise PromotionPipelineError("review_queue must expose export_state()")
+        queue_state = _require_mapping(review_queue.export_state(), "review_queue_state")
+        queue_candidates = queue_state.get("candidates", [])
+        if not isinstance(queue_candidates, list):
+            raise PromotionPipelineError("review_queue export must contain a candidates list")
+        review: dict[str, Any] | None = None
+        for item in queue_candidates:
+            candidate_map = _require_mapping(item, "review_candidate")
+            if candidate_map.get("review_ref") == normalized_review_ref:
+                review = candidate_map
+                break
+        if review is None:
+            raise PromotionPipelineError(f"review_ref not found in review queue: {normalized_review_ref}")
         candidate = _require_mapping(source_candidate, "source_candidate")
         if _require_non_empty_str(review.get("status"), "status") != "approved":
             raise PromotionPipelineError("promotion requires an approved review candidate")
         target_plane = _require_non_empty_str(review.get("target_plane"), "target_plane")
-        review_ref = _require_non_empty_str(review.get("review_ref"), "review_ref")
+        review_ref = normalized_review_ref
         source_candidate_id = _require_non_empty_str(
             candidate.get("candidate_id"), "candidate_id"
         )
+        if _require_non_empty_str(review.get("candidate_id"), "candidate_id") != source_candidate_id:
+            raise PromotionPipelineError("review candidate and source candidate must reference the same candidate_id")
         payload = _require_mapping(candidate.get("payload", {}), "payload")
         provenance_refs = _require_str_list(
             candidate.get("provenance_refs", []), "provenance_refs"

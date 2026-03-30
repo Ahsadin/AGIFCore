@@ -188,56 +188,28 @@ class CorrectionHandler:
         )
         if applied.status != "applied":
             raise CorrectionHandlingError(applied.reason or "correction batch was rejected")
-
-        episodic_store.add_correction_marker(
-            event_id=event_id,
-            correction_id=normalized_correction_id,
-            reason=_require_non_empty_str(reason, "reason"),
-            replacement_event_id=replacement_id,
-        )
-        if normalized_target_plane == "semantic":
-            assert semantic_store is not None
-            original = semantic_store.entry_state(normalized_target_id)
-            semantic_store.mark_superseded(
-                entry_id=normalized_target_id,
-                superseded_by=replacement_id,
-                correction_ref=normalized_correction_id,
-            )
-            semantic_store.add_entry(
-                entry_id=replacement_id,
-                concept_type=original["concept_type"],
-                abstraction=_require_non_empty_str(
-                    payload.get("abstraction") or payload.get("summary"),
-                    "abstraction",
-                ),
-                provenance_refs=list(original["provenance_refs"]),
-                review_ref=original["review_ref"],
-                source_candidate_id=original["source_candidate_id"],
-                supporting_refs=list(original["supporting_refs"]),
-                graph_refs=list(original["graph_refs"]),
-                metadata={"correction_id": normalized_correction_id},
-            )
-        else:
-            assert continuity_store is not None
-            continuity_store.mark_superseded(
-                anchor_id=normalized_target_id,
-                superseded_by=replacement_id,
-                correction_ref=normalized_correction_id,
-            )
-            continuity_store.record_anchor(
-                anchor_id=replacement_id,
-                subject=_require_non_empty_str(payload.get("subject") or "self", "subject"),
-                continuity_kind=_require_non_empty_str(
-                    payload.get("continuity_kind") or "self_history",
-                    "continuity_kind",
-                ),
-                statement=_require_non_empty_str(
-                    payload.get("statement") or payload.get("summary"),
-                    "statement",
-                ),
-                provenance_refs=[normalized_target_id, event_id],
-                metadata={"correction_id": normalized_correction_id},
-            )
+        updated_state = deepcopy(applied.updated_state)
+        try:
+            episodic_store.load_state(updated_state["episodic"])
+            if normalized_target_plane == "semantic":
+                assert semantic_store is not None
+                semantic_store.load_state(updated_state["semantic"])
+            else:
+                assert continuity_store is not None
+                continuity_store.load_state(updated_state["continuity"])
+        except Exception as exc:  # noqa: BLE001 - restore is the governed fallback path.
+            restored = self.updater.restore_batch(rollback_ref=applied.rollback_ref)
+            restored_state = deepcopy(restored.updated_state)
+            episodic_store.load_state(restored_state["episodic"])
+            if normalized_target_plane == "semantic":
+                assert semantic_store is not None
+                semantic_store.load_state(restored_state["semantic"])
+            else:
+                assert continuity_store is not None
+                continuity_store.load_state(restored_state["continuity"])
+            raise CorrectionHandlingError(
+                f"correction load failed and rollback state was restored: {exc}"
+            ) from exc
 
         result = CorrectionResult(
             correction_id=normalized_correction_id,
