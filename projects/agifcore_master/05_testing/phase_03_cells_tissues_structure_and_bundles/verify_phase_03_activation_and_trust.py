@@ -36,55 +36,61 @@ PLAN_REFS = (
 
 TRUST_BAND_PASS_CANDIDATES: list[dict[str, Any]] = [
     {
-        "band_name": "trusted",
-        "scheduler_priority": 10,
-        "minimum_score": 0.85,
-        "fail_closed": True,
+        "band_name": "standard",
+        "allow_activation": True,
+        "max_scheduler_priority": 10,
+        "allow_split_merge": True,
+        "require_manual_review": False,
+        "policy_envelope": {"slice": "slice_2"},
     },
     {
-        "name": "trusted",
-        "scheduler_priority": 10,
-        "minimum_score": 0.85,
-        "fail_closed": True,
+        "band_name": "elevated",
+        "allow_activation": True,
+        "max_scheduler_priority": 15,
+        "allow_split_merge": True,
+        "require_manual_review": False,
+        "policy_envelope": {"slice": "slice_2"},
     },
     {
-        "trust_band_name": "trusted",
-        "scheduler_priority": 10,
-        "minimum_score": 0.85,
-        "fail_closed": True,
+        "band_name": "guarded",
+        "allow_activation": True,
+        "max_scheduler_priority": 8,
+        "allow_split_merge": False,
+        "require_manual_review": True,
+        "policy_envelope": {"slice": "slice_2"},
     },
 ]
 
 ACTIVATION_POLICY_PASS_CANDIDATES: list[dict[str, Any]] = [
     {
-        "policy_name": "phase-3-default",
-        "allowed_trust_bands": ["trusted"],
-        "minimum_trust_band": "trusted",
-        "minimum_score": 0.85,
-        "max_active_cells": 32,
-        "max_dormant_blueprints": 128,
-        "max_scheduler_cost": 1.0,
-        "fail_closed": True,
-    },
-    {
-        "name": "phase-3-default",
-        "allowed_trust_bands": ["trusted"],
-        "minimum_trust_band": "trusted",
-        "minimum_score": 0.85,
-        "max_active_cells": 32,
-        "max_dormant_blueprints": 128,
-        "max_scheduler_cost": 1.0,
-        "fail_closed": True,
+        "policy_id": "phase-3-default",
+        "cell_id": "cell-slice-2",
+        "tissue_id": "tissue-slice-2",
+        "profile": "laptop",
+        "minimum_need_score": 0.85,
+        "maximum_estimated_cost": 1.0,
+        "minimum_trust_band": "guarded",
+        "policy_envelope": {"max_active_cells": 32, "max_dormant_blueprints": 128},
     },
     {
         "policy_id": "phase-3-default",
-        "allowed_trust_bands": ["trusted"],
-        "minimum_trust_band": "trusted",
-        "minimum_score": 0.85,
-        "max_active_cells": 32,
-        "max_dormant_blueprints": 128,
-        "max_scheduler_cost": 1.0,
-        "fail_closed": True,
+        "cell_id": "cell-slice-2",
+        "tissue_id": "tissue-slice-2",
+        "profile": "mobile",
+        "minimum_need_score": 0.7,
+        "maximum_estimated_cost": 0.5,
+        "minimum_trust_band": "standard",
+        "policy_envelope": {"max_active_cells": 8, "max_dormant_blueprints": 32},
+    },
+    {
+        "policy_id": "phase-3-default",
+        "cell_id": "cell-slice-2",
+        "tissue_id": "tissue-slice-2",
+        "profile": "builder",
+        "minimum_need_score": 0.9,
+        "maximum_estimated_cost": 0.75,
+        "minimum_trust_band": "elevated",
+        "policy_envelope": {"max_active_cells": 24, "max_dormant_blueprints": 64},
     },
 ]
 
@@ -100,6 +106,7 @@ ACTIVATION_CONTEXT = {
     "scheduler_cost": 1.0,
     "cost": 1.0,
     "estimated_cost": 1.0,
+    "maximum_estimated_cost": 1.0,
     "active_cell_count": 16,
     "active_cells": 16,
     "dormant_blueprint_count": 32,
@@ -125,6 +132,7 @@ BLOCKING_CONTEXT = {
     "scheduler_cost": 3.5,
     "cost": 3.5,
     "estimated_cost": 3.5,
+    "maximum_estimated_cost": 0.5,
     "active_cell_count": 64,
     "active_cells": 64,
     "dormant_blueprint_count": 256,
@@ -139,7 +147,7 @@ BLOCKING_CONTEXT = {
 }
 
 TRUST_BAND_MINIMUM_CANDIDATES = (
-    "trusted",
+    "guarded",
     "minimum_trust_band",
     "minimum_band",
     "required_band",
@@ -370,61 +378,11 @@ def _from_payload(factory: Any, payload_candidates: list[dict[str, Any]]) -> Any
 
 
 def _trust_band_payload_candidates() -> list[dict[str, Any]]:
-    return [
-        {
-            "band_name": "trusted",
-            "scheduler_priority": 10,
-            "minimum_score": 0.85,
-            "fail_closed": True,
-        },
-        {
-            "name": "trusted",
-            "scheduler_priority": 10,
-            "minimum_score": 0.85,
-            "fail_closed": True,
-        },
-        {
-            "trust_band_name": "trusted",
-            "scheduler_priority": 10,
-            "minimum_score": 0.85,
-            "fail_closed": True,
-        },
-    ]
+    return list(TRUST_BAND_PASS_CANDIDATES)
 
 
 def _activation_policy_payload_candidates() -> list[dict[str, Any]]:
-    return [
-        {
-            "policy_name": "phase-3-default",
-            "allowed_trust_bands": ["trusted"],
-            "minimum_trust_band": "trusted",
-            "minimum_score": 0.85,
-            "max_active_cells": 32,
-            "max_dormant_blueprints": 128,
-            "max_scheduler_cost": 1.0,
-            "fail_closed": True,
-        },
-        {
-            "name": "phase-3-default",
-            "allowed_trust_bands": ["trusted"],
-            "minimum_trust_band": "trusted",
-            "minimum_score": 0.85,
-            "max_active_cells": 32,
-            "max_dormant_blueprints": 128,
-            "max_scheduler_cost": 1.0,
-            "fail_closed": True,
-        },
-        {
-            "policy_id": "phase-3-default",
-            "allowed_trust_bands": ["trusted"],
-            "minimum_trust_band": "trusted",
-            "minimum_score": 0.85,
-            "max_active_cells": 32,
-            "max_dormant_blueprints": 128,
-            "max_scheduler_cost": 1.0,
-            "fail_closed": True,
-        },
-    ]
+    return list(ACTIVATION_POLICY_PASS_CANDIDATES)
 
 
 def _build_context(*, blocked: bool = False) -> dict[str, Any]:
@@ -683,7 +641,19 @@ def build_pass_report() -> dict[str, Any]:
     blocked_context["activation_policy"] = activation_policy
     blocked_context["trust_band"] = trust_band
     blocked_context["band"] = trust_band
-    insufficient_band = trust_band_for_score(0.10)
+    insufficient_band = _from_payload(
+        TrustBand,
+        [
+            {
+                "band_name": "guarded",
+                "allow_activation": False,
+                "max_scheduler_priority": 10,
+                "allow_split_merge": False,
+                "require_manual_review": True,
+                "policy_envelope": {"minimum_trust_band": "guarded"},
+            }
+        ],
+    )
     blocked_context["blocked_trust_band"] = insufficient_band
     blocked_context["trust_band_policy"] = _call_with_context(
         default_trust_band_policy,
@@ -693,10 +663,12 @@ def build_pass_report() -> dict[str, Any]:
             "band": insufficient_band,
             "policy": activation_policy,
             "activation_policy": activation_policy,
-            "minimum_score": 0.95,
+            "minimum_trust_band": insufficient_band,
+            "minimum_band": insufficient_band,
+            "required_band": insufficient_band,
             "score": 0.10,
             "trust_score": 0.10,
-            "scheduler_priority": -1,
+            "scheduler_priority": 10,
         },
     )
 
@@ -713,11 +685,15 @@ def build_pass_report() -> dict[str, Any]:
                         "trust_band": insufficient_band,
                         "band": insufficient_band,
                         "active_cell_count": 8,
+                        "active_cells": 8,
                         "dormant_blueprint_count": 16,
+                        "dormant_blueprints": 16,
                         "scheduler_priority": 1,
                         "scheduler_cost": 0.5,
                         "cost": 0.5,
                         "estimated_cost": 0.5,
+                        "maximum_estimated_cost": 0.5,
+                        "minimum_trust_band": insufficient_band,
                     },
                 ),
                 "blocked trust band readiness",
@@ -732,13 +708,18 @@ def build_pass_report() -> dict[str, Any]:
             False,
             lambda: _expected_blocked_output(
                 _call_with_context(
-                    evaluate_dormant_pressure,
+                    evaluate_activation_readiness,
                     {
                         **blocked_context,
                         "active_cell_count": 128,
                         "active_cells": 128,
                         "dormant_blueprint_count": 16,
                         "dormant_blueprints": 16,
+                        "scheduler_priority": 10,
+                        "scheduler_cost": 0.5,
+                        "cost": 0.5,
+                        "estimated_cost": 0.5,
+                        "maximum_estimated_cost": 0.5,
                     },
                 ),
                 "active cell ceiling breach",
@@ -772,24 +753,18 @@ def build_pass_report() -> dict[str, Any]:
             "invalid-lifecycle-transition-request-fails",
             "active_dormant_control",
             False,
-            lambda: _expected_blocked_output(
-                _call_with_context(
-                    build_lifecycle_transition_request,
-                    {
-                        "policy": activation_policy,
-                        "activation_policy": activation_policy,
-                        "trust_band": insufficient_band,
-                        "band": insufficient_band,
-                        "current_state": "active",
-                        "source_state": "active",
-                        "target_state": "active",
-                        "requested_state": "active",
-                        "transition": "active_to_active",
-                        "reason": "invalid transition request",
-                        "cell_id": "cell-invalid-transition",
-                    },
-                ),
-                "invalid lifecycle transition request",
+            lambda: build_lifecycle_transition_request(
+                policy=activation_policy,
+                activation_policy=activation_policy,
+                trust_band=insufficient_band,
+                band=insufficient_band,
+                current_state="active",
+                source_state="active",
+                target_state="active",
+                requested_state="active",
+                transition="active_to_active",
+                reason="invalid transition request",
+                cell_id="cell-invalid-transition",
             ),
         )
     )
