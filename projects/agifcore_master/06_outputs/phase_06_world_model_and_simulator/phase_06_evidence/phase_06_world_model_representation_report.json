@@ -1,0 +1,190 @@
+{
+  "anchors": {
+    "descriptor_entity": {
+      "entity_hash": "aadf62c01f654940f21d87098740d9e7a2091e67b42f0e74e3c81c18746e98f0",
+      "entity_id": "world::descriptor::desc-1",
+      "entity_kind": "descriptor_support",
+      "label": "invoice extraction",
+      "metadata": {
+        "selected_support": true
+      },
+      "operators": [
+        {
+          "bounded_confidence": 0.7885,
+          "execution_enabled": false,
+          "operator_hash": "39921632842125ad0d46f4f4b3c2624930d858e4f2f07ce5de4f252003a1bf62",
+          "operator_id": "phase6.operator.e27ab6e475a4",
+          "operator_kind": "future_evaluation",
+          "reason_codes": [
+            "descriptor_review_only",
+            "phase5_descriptor_graph"
+          ],
+          "status": "ready_for_review"
+        }
+      ],
+      "provenance": {
+        "created_at": "2026-03-30T22:23:52+00:00",
+        "entity_id": "world::descriptor::desc-1",
+        "entity_kind": "world_entity",
+        "inherited_from": [
+          "agif_v2_master"
+        ],
+        "links": [
+          {
+            "metadata": {},
+            "ref_id": "desc-1",
+            "ref_kind": "descriptor_node",
+            "role": "graph",
+            "source_path": "phase5/descriptor_graph"
+          },
+          {
+            "metadata": {},
+            "ref_id": "review-1",
+            "ref_kind": "review",
+            "role": "review",
+            "source_path": "phase5/descriptor_graph"
+          },
+          {
+            "metadata": {},
+            "ref_id": "sem-1",
+            "ref_kind": "semantic_entry",
+            "role": "source_memory",
+            "source_path": "phase4/semantic_memory"
+          }
+        ],
+        "origin_kind": "constructed",
+        "provenance_hash": "71b2f425528ff6648d1dfa88115bbce3611de767fdcb6abdbbfdc73c69e6640e"
+      },
+      "replay_safe": true,
+      "source_refs": [
+        "desc-1",
+        "sem-1"
+      ],
+      "state_values": [
+        {
+          "field_name": "trust_band",
+          "numeric_value": null,
+          "state_hash": "9539677446ed0b9440ae678ce582f8a95cf0171f780c93956af87faa99a7a5d4",
+          "value_text": "reviewed",
+          "value_type": "label"
+        },
+        {
+          "field_name": "support_ref_count",
+          "numeric_value": 1,
+          "state_hash": "95c669050e22c4eed437ddcfd4b6a7e13ee3ab97e52e29da6410dbacea9539eb",
+          "value_text": "1",
+          "value_type": "count"
+        }
+      ],
+      "status": "review_only",
+      "target_domain": "finance_document_workflows",
+      "world_confidence": 0.7885
+    },
+    "entity_count": 28,
+    "phase4_interfaces": [
+      "semantic_memory.export_state",
+      "procedural_memory.export_state",
+      "continuity_memory.export_state",
+      "working_memory.memory_pressure"
+    ],
+    "phase5_interfaces": [
+      "descriptor_graph.export_state",
+      "skill_graph.export_state",
+      "concept_graph.export_state",
+      "transfer_graph.export_state",
+      "support_selection.read_only"
+    ],
+    "relation_count": 37,
+    "sample_relation": {
+      "provenance": {
+        "created_at": "2026-03-30T22:23:52+00:00",
+        "entity_id": "relation::world::target::finance_document_workflows::finance_document_workflows",
+        "entity_kind": "world_relation",
+        "inherited_from": [],
+        "links": [
+          {
+            "metadata": {},
+            "ref_id": "world::target::finance_document_workflows",
+            "ref_kind": "world_entity",
+            "role": "world_model",
+            "source_path": "phase6/world_model"
+          },
+          {
+            "metadata": {},
+            "ref_id": "finance_document_workflows",
+            "ref_kind": "target_domain_structure",
+            "role": "domain",
+            "source_path": "phase6/target_domains"
+          }
+        ],
+        "origin_kind": "constructed",
+        "provenance_hash": "b71e206fe25549bb4dc80ec440adf8b980892161f00d7ffc11f1f82593ca1584"
+      },
+      "reason_codes": [
+        "projects_to_target_domain"
+      ],
+      "relation_hash": "afbe52c5175e9f9ccf96bd76d0601e4e87da9824fb0625cb204f419c5f1a0dca",
+      "relation_id": "relation::world::target::finance_document_workflows::finance_document_workflows",
+      "relation_kind": "projects_to_target",
+      "relation_strength": 0.655,
+      "replay_safe": true,
+      "source_entity_id": "world::target::finance_document_workflows",
+      "target_entity_id": "world::target::finance_document_workflows"
+    }
+  },
+  "assertions": [
+    {
+      "id": "world-model-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "world-cells-relations-operators-separated",
+      "result": "pass"
+    },
+    {
+      "id": "phase4-phase5-provenance-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "execution-disabled-state-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "relation-strength-and-confidence-bounds-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "entity-ceiling-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "world-model-roundtrip-clean",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_06_WORLD_MODEL_AND_SIMULATOR.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/03_design/SIMULATOR_MODEL.md",
+    "projects/agifcore_master/03_design/CONVERSATION_MODEL.md",
+    "projects/agifcore_master/03_design/GRAPH_STACK_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_06_world_model_and_simulator/agifcore_phase6_world_simulator/entity_classes.py",
+    "projects/agifcore_master/04_execution/phase_06_world_model_and_simulator/agifcore_phase6_world_simulator/target_domains.py",
+    "projects/agifcore_master/04_execution/phase_06_world_model_and_simulator/agifcore_phase6_world_simulator/world_model.py",
+    "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_entity_classes_report.json"
+  ],
+  "notes": [
+    "world model stays read-only and consumes serialized upstream state only",
+    "Phase 6 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_world_model_representation_report.json"
+  },
+  "phase": "6",
+  "status": "pass",
+  "verifier": "verify_phase_06_world_model_representation"
+}

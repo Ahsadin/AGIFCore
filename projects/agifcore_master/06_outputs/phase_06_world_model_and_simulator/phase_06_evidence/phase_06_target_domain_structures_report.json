@@ -1,0 +1,227 @@
+{
+  "anchors": {
+    "domain_ids": [
+      "finance_document_workflows",
+      "pos_store_operations",
+      "procurement_work_order_processing",
+      "claims_case_handling",
+      "maintenance_diagnostics",
+      "building_home_infrastructure_events",
+      "planning_coordination_workflows",
+      "compliance_support_triage"
+    ],
+    "matched_domains": [
+      "finance_document_workflows",
+      "procurement_work_order_processing",
+      "maintenance_diagnostics",
+      "planning_coordination_workflows"
+    ],
+    "sample_domain": {
+      "descriptor_tokens": [
+        "invoice",
+        "ledger",
+        "approval"
+      ],
+      "domain_id": "finance_document_workflows",
+      "domain_name": "finance document workflows",
+      "minimum_signal_groups": 3,
+      "object_templates": [
+        "finance.queue",
+        "document.packet",
+        "invoice.record"
+      ],
+      "objects": [
+        {
+          "category": "finance",
+          "domain_id": "finance_document_workflows",
+          "label": "finance.queue",
+          "object_hash": "5889f5885211d528e95c2b2af0835730624d53eca010485765721554e29cee2a",
+          "object_id": "finance_document_workflows::finance.queue",
+          "provenance": {
+            "created_at": "2026-03-30T22:23:51+00:00",
+            "entity_id": "finance_document_workflows::finance.queue",
+            "entity_kind": "target_domain_object",
+            "inherited_from": [
+              "agif_fabric_v1",
+              "agif_v2_master"
+            ],
+            "links": [
+              {
+                "metadata": {},
+                "ref_id": "phase-06-target-domain-port",
+                "ref_kind": "target_domain_contract",
+                "role": "source",
+                "source_path": "agif_fabric_v1/intelligence/fabric/domain"
+              },
+              {
+                "metadata": {},
+                "ref_id": "phase-06-target-domain-review",
+                "ref_kind": "governor_review",
+                "role": "review",
+                "source_path": "projects/agifcore_master/01_plan/PHASE_06_WORLD_MODEL_AND_SIMULATOR.md"
+              }
+            ],
+            "origin_kind": "inherited",
+            "provenance_hash": "38640458417075350007819e6d9e3d5f216f545c58e0edc8b3bd5c0aa11ef773"
+          }
+        },
+        {
+          "category": "document",
+          "domain_id": "finance_document_workflows",
+          "label": "document.packet",
+          "object_hash": "5c06c728f0ba60276af85cced3e16e2477e5016a7db7abf9d0c53c5642fba317",
+          "object_id": "finance_document_workflows::document.packet",
+          "provenance": {
+            "created_at": "2026-03-30T22:23:51+00:00",
+            "entity_id": "finance_document_workflows::document.packet",
+            "entity_kind": "target_domain_object",
+            "inherited_from": [
+              "agif_fabric_v1",
+              "agif_v2_master"
+            ],
+            "links": [
+              {
+                "metadata": {},
+                "ref_id": "phase-06-target-domain-port",
+                "ref_kind": "target_domain_contract",
+                "role": "source",
+                "source_path": "agif_fabric_v1/intelligence/fabric/domain"
+              },
+              {
+                "metadata": {},
+                "ref_id": "phase-06-target-domain-review",
+                "ref_kind": "governor_review",
+                "role": "review",
+                "source_path": "projects/agifcore_master/01_plan/PHASE_06_WORLD_MODEL_AND_SIMULATOR.md"
+              }
+            ],
+            "origin_kind": "inherited",
+            "provenance_hash": "0d5da6243987c4b182a169dedaf565813d199514f9babf768f7bfcb4f67fa845"
+          }
+        },
+        {
+          "category": "invoice",
+          "domain_id": "finance_document_workflows",
+          "label": "invoice.record",
+          "object_hash": "dfbcc977958ea2ef903a26773dd60aed44b6a19c245d3dd0825b9aea41e103b7",
+          "object_id": "finance_document_workflows::invoice.record",
+          "provenance": {
+            "created_at": "2026-03-30T22:23:51+00:00",
+            "entity_id": "finance_document_workflows::invoice.record",
+            "entity_kind": "target_domain_object",
+            "inherited_from": [
+              "agif_fabric_v1",
+              "agif_v2_master"
+            ],
+            "links": [
+              {
+                "metadata": {},
+                "ref_id": "phase-06-target-domain-port",
+                "ref_kind": "target_domain_contract",
+                "role": "source",
+                "source_path": "agif_fabric_v1/intelligence/fabric/domain"
+              },
+              {
+                "metadata": {},
+                "ref_id": "phase-06-target-domain-review",
+                "ref_kind": "governor_review",
+                "role": "review",
+                "source_path": "projects/agifcore_master/01_plan/PHASE_06_WORLD_MODEL_AND_SIMULATOR.md"
+              }
+            ],
+            "origin_kind": "inherited",
+            "provenance_hash": "74aec2ef6f6c9b0693235f9f6047ce8839a727454bb1beb59744d2990968f958"
+          }
+        }
+      ],
+      "prefixes": [
+        "finance.",
+        "document.",
+        "invoice."
+      ],
+      "provenance": {
+        "created_at": "2026-03-30T22:23:51+00:00",
+        "entity_id": "finance_document_workflows",
+        "entity_kind": "target_domain_structure",
+        "inherited_from": [
+          "agif_fabric_v1",
+          "agif_v2_master"
+        ],
+        "links": [
+          {
+            "metadata": {},
+            "ref_id": "phase-06-target-domain-port",
+            "ref_kind": "target_domain_contract",
+            "role": "source",
+            "source_path": "agif_fabric_v1/intelligence/fabric/domain"
+          },
+          {
+            "metadata": {},
+            "ref_id": "phase-06-target-domain-review",
+            "ref_kind": "governor_review",
+            "role": "review",
+            "source_path": "projects/agifcore_master/01_plan/PHASE_06_WORLD_MODEL_AND_SIMULATOR.md"
+          }
+        ],
+        "origin_kind": "inherited",
+        "provenance_hash": "3be643661181609864e918def75510692c5f053a9636f40feb7184c4e6ba4d26"
+      },
+      "requires_target_match": true,
+      "structure_hash": "505e7c1dc12d5c752a196ad69dc398be2b59683504364ac2a886cbaf433c4150"
+    }
+  },
+  "assertions": [
+    {
+      "id": "target-domain-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "canonical-domain-registry-present",
+      "result": "pass"
+    },
+    {
+      "id": "prefix-and-tag-matching-supported",
+      "result": "pass"
+    },
+    {
+      "id": "target-domain-object-metadata-retained",
+      "result": "pass"
+    },
+    {
+      "id": "unregistered-domain-blocked",
+      "result": "pass"
+    },
+    {
+      "id": "target-domain-object-ceiling-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "target-domain-roundtrip-clean",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_06_WORLD_MODEL_AND_SIMULATOR.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/03_design/SIMULATOR_MODEL.md",
+    "projects/agifcore_master/03_design/CONVERSATION_MODEL.md",
+    "projects/agifcore_master/03_design/GRAPH_STACK_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_06_world_model_and_simulator/agifcore_phase6_world_simulator/entity_classes.py",
+    "projects/agifcore_master/04_execution/phase_06_world_model_and_simulator/agifcore_phase6_world_simulator/target_domains.py",
+    "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_entity_classes_report.json"
+  ],
+  "notes": [
+    "target-domain structures stay canonical and bounded",
+    "Phase 6 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_target_domain_structures_report.json"
+  },
+  "phase": "6",
+  "status": "pass",
+  "verifier": "verify_phase_06_target_domain_structures"
+}

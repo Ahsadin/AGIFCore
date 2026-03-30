@@ -1,0 +1,405 @@
+{
+  "anchors": {
+    "conflict_entry_count": 8,
+    "fault_entry_count": 8,
+    "forced_conflict_hold_or_abstain_count": 1,
+    "forced_fault_case_count": 1,
+    "forced_overload_non_clear_count": 1,
+    "forced_pressure_fail_closed_count": 1,
+    "instrumentation_metric_count": 6,
+    "instrumentation_record_count": 60,
+    "instrumentation_summary_count": 10,
+    "overall_usefulness_outcome": "qualified",
+    "overload_entry_count": 8,
+    "pressure_entry_count": 8,
+    "qualified_domain_count": 4,
+    "sample_conflict_entry": {
+      "conflict_entry_id": "conflict_entry::de3efc45ca24",
+      "entry_hash": "10c60dd8128930d3c5fddcd84c50c9527aa0b99166ef22749f511b9951fea929",
+      "fail_closed": false,
+      "outcome": "clear",
+      "provenance": {
+        "created_at": "2026-03-30T22:50:02+00:00",
+        "entity_id": "conflict_entry::de3efc45ca24",
+        "entity_kind": "conflict_entry",
+        "inherited_from": [],
+        "links": [
+          {
+            "metadata": {},
+            "ref_id": "simulation::ac2d1867801a",
+            "ref_kind": "what_if_simulation_entry",
+            "role": "simulation",
+            "source_path": "phase6/what_if_simulation"
+          },
+          {
+            "metadata": {},
+            "ref_id": "conflict_entry::de3efc45ca24",
+            "ref_kind": "conflict_lane_entry",
+            "role": "lane",
+            "source_path": "phase6/conflict_lanes"
+          }
+        ],
+        "origin_kind": "constructed",
+        "provenance_hash": "81df07fd3a72bd7542b289f43b912bca22446f4da1c21e8ace855b8e5305f862"
+      },
+      "results": [
+        {
+          "conflict_kind": "governed_transfer_world_conflict",
+          "conflict_result_id": "conflict_result::9762db7644cf",
+          "conflict_score": 0.7305,
+          "conflicting_domain": "finance_document_workflows",
+          "outcome": "clear",
+          "provenance": {
+            "created_at": "2026-03-30T22:50:02+00:00",
+            "entity_id": "conflict_result::9762db7644cf",
+            "entity_kind": "conflict_result",
+            "inherited_from": [],
+            "links": [
+              {
+                "metadata": {},
+                "ref_id": "transfer-1",
+                "ref_kind": "transfer_record",
+                "role": "transfer",
+                "source_path": "phase5/transfer_graph"
+              },
+              {
+                "metadata": {},
+                "ref_id": "simulation::ac2d1867801a",
+                "ref_kind": "what_if_simulation_entry",
+                "role": "simulation",
+                "source_path": "phase6/what_if_simulation"
+              },
+              {
+                "metadata": {},
+                "ref_id": "conflict_result::9762db7644cf",
+                "ref_kind": "conflict_result",
+                "role": "lane",
+                "source_path": "phase6/conflict_lanes"
+              }
+            ],
+            "origin_kind": "constructed",
+            "provenance_hash": "87f839064fa0416a4d67ef9ff98c576c3206c1b386db5922912f378c1dc36944"
+          },
+          "reason_codes": [
+            "no_conflict_detected"
+          ],
+          "result_hash": "86902eb624487db4ee374befae5d31020e698483fcad00c79b12b7272a42f809",
+          "source_simulation_entry_id": "simulation::ac2d1867801a",
+          "source_transfer_id": "transfer-1"
+        }
+      ],
+      "source_pressure_entry_id": "pressure_entry::de3efc45ca24",
+      "source_simulation_entry_id": "simulation::ac2d1867801a"
+    },
+    "sample_fault_entry": {
+      "entry_hash": "46db85ae799053144ab838c5077a4f297084397af5bc70b37bb633b2cf005d33",
+      "fail_closed": false,
+      "fault_cases": [],
+      "fault_entry_id": "fault::78a06879ae5e",
+      "outcome": "clear",
+      "provenance": {
+        "created_at": "2026-03-30T22:50:02+00:00",
+        "entity_id": "fault::78a06879ae5e",
+        "entity_kind": "fault_entry",
+        "inherited_from": [],
+        "links": [
+          {
+            "metadata": {},
+            "ref_id": "world::descriptor::desc-1",
+            "ref_kind": "world_entity",
+            "role": "world_model",
+            "source_path": "phase6/world_model"
+          },
+          {
+            "metadata": {},
+            "ref_id": "simulation::ac2d1867801a",
+            "ref_kind": "what_if_simulation_entry",
+            "role": "simulation",
+            "source_path": "phase6/what_if_simulation"
+          },
+          {
+            "metadata": {},
+            "ref_id": "fault::78a06879ae5e",
+            "ref_kind": "fault_lane_entry",
+            "role": "lane",
+            "source_path": "phase6/fault_lanes"
+          }
+        ],
+        "origin_kind": "constructed",
+        "provenance_hash": "d7350fdde7b986aad785d86d5b27d63a18aa80603da05971440c8ce4f2152501"
+      },
+      "reason_codes": [
+        "no_fault_overlay_needed"
+      ],
+      "source_entity_id": "world::descriptor::desc-1",
+      "source_simulation_entry_id": "simulation::ac2d1867801a"
+    },
+    "sample_instrumentation_record": {
+      "numeric_score": 0.8,
+      "provenance": {
+        "created_at": "2026-03-30T22:50:02+00:00",
+        "entity_id": "instrument_record::36eec416f6f6",
+        "entity_kind": "instrumentation_record",
+        "inherited_from": [],
+        "links": [
+          {
+            "metadata": {},
+            "ref_id": "world::target::finance_document_workflows",
+            "ref_kind": "world_entity",
+            "role": "world_model",
+            "source_path": "phase6/world_model"
+          },
+          {
+            "metadata": {},
+            "ref_id": "instrument_record::36eec416f6f6",
+            "ref_kind": "instrumentation_record",
+            "role": "instrumentation",
+            "source_path": "phase6/instrumentation"
+          }
+        ],
+        "origin_kind": "constructed",
+        "provenance_hash": "0f0ba72b142b573289c12117c188541af7691bfc6084b5ec573111cc7602edb9"
+      },
+      "reason_codes": [
+        "world_model_entity_recorded"
+      ],
+      "record_hash": "59f87a9ba1ca966f8ec8057b17bad601ec113d641bf72e1cca0438adb17f082e",
+      "record_id": "instrument_record::36eec416f6f6",
+      "record_kind": "world_entity",
+      "source_entry_id": "world::target::finance_document_workflows",
+      "status": "review_only"
+    },
+    "sample_overload_entry": {
+      "entry_hash": "5de651a4bfb7b18cb59244774da4efdd24d0748542e471ff4fce354f28be076d",
+      "outcome": "clear",
+      "overload_entry_id": "overload_entry::de3efc45ca24",
+      "provenance": {
+        "created_at": "2026-03-30T22:50:02+00:00",
+        "entity_id": "overload_entry::de3efc45ca24",
+        "entity_kind": "overload_entry",
+        "inherited_from": [],
+        "links": [
+          {
+            "metadata": {},
+            "ref_id": "pressure_entry::de3efc45ca24",
+            "ref_kind": "pressure_lane_entry",
+            "role": "lane",
+            "source_path": "phase6/pressure_lanes"
+          },
+          {
+            "metadata": {},
+            "ref_id": "overload_entry::de3efc45ca24",
+            "ref_kind": "overload_lane_entry",
+            "role": "lane",
+            "source_path": "phase6/overload_lanes"
+          }
+        ],
+        "origin_kind": "constructed",
+        "provenance_hash": "2c3f29b97d81357cd93e48ff6221c2819e0c3423812879aa3a2d63b8288df982"
+      },
+      "results": [
+        {
+          "conflict_score": 0.7305,
+          "load_score": 0.394284,
+          "outcome": "clear",
+          "overload_result_id": "overload_result::5cad55b6c3b2",
+          "provenance": {
+            "created_at": "2026-03-30T22:50:02+00:00",
+            "entity_id": "overload_result::5cad55b6c3b2",
+            "entity_kind": "overload_result",
+            "inherited_from": [],
+            "links": [
+              {
+                "metadata": {},
+                "ref_id": "pressure_entry::de3efc45ca24",
+                "ref_kind": "pressure_lane_entry",
+                "role": "lane",
+                "source_path": "phase6/pressure_lanes"
+              },
+              {
+                "metadata": {},
+                "ref_id": "overload_result::5cad55b6c3b2",
+                "ref_kind": "overload_result",
+                "role": "lane",
+                "source_path": "phase6/overload_lanes"
+              }
+            ],
+            "origin_kind": "constructed",
+            "provenance_hash": "73fa3cfe2aca1ca6c2dafcc439bce44569feb541881c4245a57c8f6ac1b27cc6"
+          },
+          "reason_codes": [
+            "load_score_within_bounds"
+          ],
+          "result_hash": "5fa603b7fd2e27e5689a65c1290e2edd224850f9e368d09207d81cfcaaf95858",
+          "threshold": 0.72
+        }
+      ],
+      "source_conflict_entry_id": "conflict_entry::de3efc45ca24",
+      "source_pressure_entry_id": "pressure_entry::de3efc45ca24"
+    },
+    "sample_pressure_entry": {
+      "entry_hash": "2413619d2b2d9e16e85ca1c914c1e39b163781545e7a89a74f0ca46a70667674",
+      "outcome": "clear",
+      "pressure_entry_id": "pressure_entry::de3efc45ca24",
+      "provenance": {
+        "created_at": "2026-03-30T22:50:02+00:00",
+        "entity_id": "pressure_entry::de3efc45ca24",
+        "entity_kind": "pressure_entry",
+        "inherited_from": [],
+        "links": [
+          {
+            "metadata": {},
+            "ref_id": "simulation::ac2d1867801a",
+            "ref_kind": "what_if_simulation_entry",
+            "role": "simulation",
+            "source_path": "phase6/what_if_simulation"
+          },
+          {
+            "metadata": {},
+            "ref_id": "pressure_entry::de3efc45ca24",
+            "ref_kind": "pressure_lane_entry",
+            "role": "lane",
+            "source_path": "phase6/pressure_lanes"
+          }
+        ],
+        "origin_kind": "constructed",
+        "provenance_hash": "2a3829026da5a529fd71654b0bdbc31639745281a32b8333d626435f3febd15b"
+      },
+      "scenarios": [
+        {
+          "pressure_scenario_id": "pressure::d6012257e18e",
+          "pressure_score": 0.213245,
+          "provenance": {
+            "created_at": "2026-03-30T22:50:02+00:00",
+            "entity_id": "pressure::d6012257e18e",
+            "entity_kind": "pressure_scenario",
+            "inherited_from": [],
+            "links": [
+              {
+                "metadata": {},
+                "ref_id": "simulation::ac2d1867801a",
+                "ref_kind": "what_if_simulation_entry",
+                "role": "simulation",
+                "source_path": "phase6/what_if_simulation"
+              },
+              {
+                "metadata": {},
+                "ref_id": "phase4-working-memory",
+                "ref_kind": "working_memory_state",
+                "role": "working_memory",
+                "source_path": "phase4/working_memory"
+              },
+              {
+                "metadata": {},
+                "ref_id": "pressure::d6012257e18e",
+                "ref_kind": "pressure_scenario",
+                "role": "lane",
+                "source_path": "phase6/pressure_lanes"
+              }
+            ],
+            "origin_kind": "constructed",
+            "provenance_hash": "e3501c486d892475aea94100a60c258004c4521e0fd3088228504f3b11a650a8"
+          },
+          "reason_codes": [
+            "pressure_below_threshold"
+          ],
+          "scenario_hash": "9f2006544cee1520090a32500df1db570420e24e581da4b9fe20fda415b0c306",
+          "scenario_kind": "clear_pressure_lane",
+          "target_domain": "finance_document_workflows"
+        }
+      ],
+      "source_fault_entry_id": "fault::78a06879ae5e",
+      "source_simulation_entry_id": "simulation::ac2d1867801a",
+      "working_memory_utilization": 0.0009
+    },
+    "sample_usefulness_domain_score": {
+      "domain_id": "finance_document_workflows",
+      "domain_name": "finance document workflows",
+      "evidence_inputs": 8,
+      "outcome": "qualified",
+      "provenance": {
+        "created_at": "2026-03-30T22:50:02+00:00",
+        "entity_id": "usefulness::42b002468a62",
+        "entity_kind": "usefulness_domain_score",
+        "inherited_from": [],
+        "links": [
+          {
+            "metadata": {},
+            "ref_id": "finance_document_workflows",
+            "ref_kind": "target_domain_structure",
+            "role": "domain",
+            "source_path": "phase6/target_domains"
+          },
+          {
+            "metadata": {},
+            "ref_id": "99ada233e37cb29376ca156a65c280f3d70d820979036d8daf7a984216ce1bc4",
+            "ref_kind": "world_model_snapshot",
+            "role": "world_model",
+            "source_path": "phase6/world_model"
+          },
+          {
+            "metadata": {},
+            "ref_id": "66e5f61ac328db3669461eb402dbad1aa8a01d91b8ec4336d9894788f03acbeb",
+            "ref_kind": "candidate_future_snapshot",
+            "role": "future",
+            "source_path": "phase6/candidate_futures"
+          },
+          {
+            "metadata": {},
+            "ref_id": "e4c01d1f2fc2e8a335623c32d78c220e3da7a3fa1ad4dc40e59c1882e5fe62c5",
+            "ref_kind": "what_if_simulation_snapshot",
+            "role": "simulation",
+            "source_path": "phase6/what_if_simulation"
+          },
+          {
+            "metadata": {},
+            "ref_id": "6822a9e8414a112740cbc89e42f33549a95cdbde55c8f28c9562583bdb3e0c96",
+            "ref_kind": "overload_lane_snapshot",
+            "role": "lane",
+            "source_path": "phase6/overload_lanes"
+          },
+          {
+            "metadata": {},
+            "ref_id": "usefulness::42b002468a62",
+            "ref_kind": "usefulness_domain_score",
+            "role": "instrumentation",
+            "source_path": "phase6/usefulness_scoring"
+          }
+        ],
+        "origin_kind": "constructed",
+        "provenance_hash": "e22f7d0f641bfcba717db09abf0679a8b1ddd45fadc21fcf31e602988c53fa84"
+      },
+      "reason_codes": [
+        "minimum_signal_groups_met",
+        "weighted_score_qualified"
+      ],
+      "score_hash": "67d79b8ca880b9dfb961d5d34fd762a72a371179db6153d2e3a07d5a4ac17030",
+      "weighted_score": 1.0
+    }
+  },
+  "demo_id": "phase_06_stress_conflict_demo",
+  "evidence_paths": {
+    "instrumentation": "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_instrumentation_report.json",
+    "lane_chain": "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_fault_pressure_overload_conflict_report.json",
+    "manifest": "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_evidence_manifest.json",
+    "usefulness": "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_usefulness_scoring_report.json"
+  },
+  "manifest_status": "phase_6_verifier_family_pass",
+  "notes": [
+    "This demo is generated from a real Phase 6 fixture chain.",
+    "The forced degraded path proves fault, pressure, conflict, and overload reactions.",
+    "Instrumentation remains machine-readable and evidence-linked.",
+    "Usefulness scoring remains evidence-bound.",
+    "No approval is implied by this demo export."
+  ],
+  "phase": "6",
+  "phase_remains_open": true,
+  "review_order": [
+    "projects/agifcore_master/01_plan/PHASE_06_WORLD_MODEL_AND_SIMULATOR.md",
+    "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_fault_pressure_overload_conflict_report.json",
+    "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_instrumentation_report.json",
+    "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_usefulness_scoring_report.json"
+  ],
+  "runnable_command": "python3 projects/agifcore_master/05_testing/phase_06_world_model_and_simulator/run_phase_06_stress_conflict_demo.py",
+  "status": "pass"
+}

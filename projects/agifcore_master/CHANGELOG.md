@@ -86,3 +86,13 @@
 - Repaired the exported Phase 5 review bundle so the extracted verifier family can rediscover the bundle root through `projects/agifcore_master/PROJECT_README.md`.
 - Recorded the explicit Phase 5 user verdict in `00_admin/codex_threads/handoffs/PHASE_05_USER_VERDICT.md`.
 - Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 5 is now `approved`.
+
+## 2026-03-31
+
+- Materialized `01_plan/PHASE_06_WORLD_MODEL_AND_SIMULATOR.md` and the Phase 6 task-card set under `00_admin/codex_threads/tasks/phase_06/`.
+- Completed the Phase 6 runtime package under `04_execution/phase_06_world_model_and_simulator/`, with paired verifiers under `05_testing/phase_06_world_model_and_simulator/` and evidence/demo outputs under `06_outputs/phase_06_world_model_and_simulator/`.
+- Added the Phase 6 execution-start brief, audit report, Governor verification record, and validation request under `00_admin/codex_threads/`.
+- Added runnable Phase 6 demo scripts under `05_testing/phase_06_world_model_and_simulator/` and machine-readable demo JSON outputs under `06_outputs/phase_06_world_model_and_simulator/phase_06_demo_bundle/`.
+- Recorded the explicit Phase 6 user verdict in `00_admin/codex_threads/handoffs/PHASE_06_USER_VERDICT.md`.
+- Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 6 is now `approved`.
+- Logged the earned Phase 6 approval state in `DECISIONS.md` while keeping Phase 7 not started and ready for a separate planning run.

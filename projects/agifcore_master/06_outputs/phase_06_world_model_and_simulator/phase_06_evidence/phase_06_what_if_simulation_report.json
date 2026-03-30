@@ -1,0 +1,148 @@
+{
+  "anchors": {
+    "baseline_fail_closed_count": 0,
+    "entry_count": 8,
+    "forced_fail_closed_count": 1,
+    "limited_branch_depth_fail_closed_count": 4,
+    "sample_entry": {
+      "branch_depth": 1,
+      "confidence": 0.786755,
+      "considered_relation_ids": [
+        "focus::world::descriptor::desc-1",
+        "relation::world::descriptor::desc-1::finance_document_workflows"
+      ],
+      "entry_hash": "2fd1eca6e13f364eadec9a6a8642ee28481ff994336496f5be72d7bf1bf9f812",
+      "fail_closed": false,
+      "future_id": "future::f411d74d32b6",
+      "outcome": "review_only_projected",
+      "provenance": {
+        "created_at": "2026-03-30T22:23:52+00:00",
+        "entity_id": "simulation::ac2d1867801a",
+        "entity_kind": "simulation_entry",
+        "inherited_from": [],
+        "links": [
+          {
+            "metadata": {},
+            "ref_id": "world::descriptor::desc-1",
+            "ref_kind": "world_entity",
+            "role": "world_model",
+            "source_path": "phase6/world_model"
+          },
+          {
+            "metadata": {},
+            "ref_id": "future::f411d74d32b6",
+            "ref_kind": "candidate_future",
+            "role": "future",
+            "source_path": "phase6/candidate_futures"
+          },
+          {
+            "metadata": {},
+            "ref_id": "simulation::ac2d1867801a",
+            "ref_kind": "what_if_simulation_entry",
+            "role": "simulation",
+            "source_path": "phase6/what_if_simulation"
+          }
+        ],
+        "origin_kind": "constructed",
+        "provenance_hash": "920c67d6cd20606c554dfb009a40a26b2289eeeeb9294ad5bae433c84b26c635"
+      },
+      "reason_codes": [
+        "candidate_future_ready",
+        "review_only_execution_disabled"
+      ],
+      "simulation_entry_id": "simulation::ac2d1867801a",
+      "source_entity_id": "world::descriptor::desc-1",
+      "target_domain": "finance_document_workflows",
+      "trace_steps": [
+        {
+          "decision": "review_only_projection",
+          "detail": "Selected candidate future future::f411d74d32b6",
+          "step_hash": "bbbc540400a42b69779468ffae928a4fd319061805f78548d38729cfe5ca8fbf",
+          "step_id": "trace::efdc9b1a69da",
+          "step_kind": "candidate_future_selected",
+          "supporting_refs": [
+            "future::f411d74d32b6",
+            "world::descriptor::desc-1"
+          ]
+        },
+        {
+          "decision": "relation_grounded",
+          "detail": "Checked 2 relation(s) for world::descriptor::desc-1",
+          "step_hash": "67ad2c64267f54e0aab59f006c31ec4e772eb1ff1760c33b60f313d200d67f90",
+          "step_id": "trace::640821bd5b59",
+          "step_kind": "relation_set_checked",
+          "supporting_refs": [
+            "focus::world::descriptor::desc-1",
+            "relation::world::descriptor::desc-1::finance_document_workflows"
+          ]
+        },
+        {
+          "decision": "projected_outcome_retained",
+          "detail": "Simulation outcome review_only_projected",
+          "step_hash": "177b49c4a83c42f83953878fb0b4f0dc68b2093ede581bc96587a3d2111386ae",
+          "step_id": "trace::de3af01dd97c",
+          "step_kind": "simulation_decision",
+          "supporting_refs": [
+            "relation::world::descriptor::desc-1::finance_document_workflows",
+            "finance_document_workflows"
+          ]
+        }
+      ]
+    }
+  },
+  "assertions": [
+    {
+      "id": "what-if-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "deterministic-causal-evaluation-supported",
+      "result": "pass"
+    },
+    {
+      "id": "simulation-trace-linked-to-input-branches",
+      "result": "pass"
+    },
+    {
+      "id": "insufficient-evidence-abstains",
+      "result": "pass"
+    },
+    {
+      "id": "branch-depth-ceiling-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "simulation-stays-read-only",
+      "result": "pass"
+    },
+    {
+      "id": "what-if-roundtrip-clean",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_06_WORLD_MODEL_AND_SIMULATOR.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/03_design/SIMULATOR_MODEL.md",
+    "projects/agifcore_master/03_design/CONVERSATION_MODEL.md",
+    "projects/agifcore_master/03_design/GRAPH_STACK_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_06_world_model_and_simulator/agifcore_phase6_world_simulator/entity_classes.py",
+    "projects/agifcore_master/04_execution/phase_06_world_model_and_simulator/agifcore_phase6_world_simulator/candidate_futures.py",
+    "projects/agifcore_master/04_execution/phase_06_world_model_and_simulator/agifcore_phase6_world_simulator/what_if_simulation.py",
+    "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_candidate_futures_report.json"
+  ],
+  "notes": [
+    "what-if simulation stays deterministic, traced, and execution-disabled",
+    "Phase 6 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_what_if_simulation_report.json"
+  },
+  "phase": "6",
+  "status": "pass",
+  "verifier": "verify_phase_06_what_if_simulation"
+}

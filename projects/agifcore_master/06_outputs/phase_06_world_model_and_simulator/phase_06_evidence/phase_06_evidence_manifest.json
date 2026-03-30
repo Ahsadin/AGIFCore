@@ -1,0 +1,57 @@
+{
+  "available_report_count": 8,
+  "invalid_reports": [],
+  "missing_reports": [],
+  "notes": [
+    "this manifest tracks machine-readable verifier outputs only",
+    "Phase 6 remains open",
+    "manifest is rebuilt from actual report files on disk",
+    "no approval implied"
+  ],
+  "phase": "6",
+  "phase_remains_open": true,
+  "reports": [
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_entity_classes_report.json",
+      "report_id": "entity_classes",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_target_domain_structures_report.json",
+      "report_id": "target_domain_structures",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_world_model_representation_report.json",
+      "report_id": "world_model_representation",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_candidate_futures_report.json",
+      "report_id": "candidate_futures",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_what_if_simulation_report.json",
+      "report_id": "what_if_simulation",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_fault_pressure_overload_conflict_report.json",
+      "report_id": "fault_pressure_overload_conflict",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_instrumentation_report.json",
+      "report_id": "instrumentation",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_usefulness_scoring_report.json",
+      "report_id": "usefulness_scoring",
+      "status": "pass"
+    }
+  ],
+  "required_report_count": 8,
+  "status": "phase_6_verifier_family_pass"
+}

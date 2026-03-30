@@ -1,0 +1,128 @@
+{
+  "anchors": {
+    "conflict_outcomes": [
+      "clear",
+      "hold",
+      "blocked",
+      "abstain"
+    ],
+    "instrumentation_record_kinds": [
+      "world_entity",
+      "future",
+      "simulation",
+      "fault",
+      "pressure",
+      "conflict",
+      "overload"
+    ],
+    "metric_value_types": [
+      "count",
+      "score",
+      "flag",
+      "text"
+    ],
+    "sample_state_value": {
+      "field_name": "trust_band",
+      "numeric_value": null,
+      "state_hash": "9539677446ed0b9440ae678ce582f8a95cf0171f780c93956af87faa99a7a5d4",
+      "value_text": "reviewed",
+      "value_type": "label"
+    },
+    "sample_world_operator": {
+      "bounded_confidence": 0.8,
+      "execution_enabled": false,
+      "operator_hash": "c98f4bb02873f79e738abd2f66f8ca325631d9562bc8e31b5a959305ffc86db4",
+      "operator_id": "phase6.operator.3c60d0285e94",
+      "operator_kind": "future_evaluation",
+      "reason_codes": [
+        "phase6_contract_smoke"
+      ],
+      "status": "ready_for_review"
+    },
+    "simulation_outcomes": [
+      "review_only_projected",
+      "hold_projected",
+      "abstain"
+    ],
+    "usefulness_outcomes": [
+      "qualified",
+      "insufficient"
+    ],
+    "world_entity_kinds": [
+      "descriptor_support",
+      "concept_support",
+      "procedural_skill",
+      "transfer_projection",
+      "target_domain_object",
+      "review_signal"
+    ],
+    "world_operator_kinds": [
+      "target_projection",
+      "future_evaluation",
+      "fault_review",
+      "pressure_review",
+      "conflict_review",
+      "overload_review"
+    ],
+    "world_relation_kinds": [
+      "projects_to_target",
+      "supported_by_memory",
+      "enables_future",
+      "conflicts_with",
+      "focuses_on"
+    ]
+  },
+  "assertions": [
+    {
+      "id": "entity-classes-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "entity-kind-enums-defined",
+      "result": "pass"
+    },
+    {
+      "id": "relation-kind-enums-defined",
+      "result": "pass"
+    },
+    {
+      "id": "lane-status-enums-defined",
+      "result": "pass"
+    },
+    {
+      "id": "simulation-and-instrumentation-types-defined",
+      "result": "pass"
+    },
+    {
+      "id": "serialization-roundtrip-clean",
+      "result": "pass"
+    },
+    {
+      "id": "invalid-status-values-blocked",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_06_WORLD_MODEL_AND_SIMULATOR.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/03_design/SIMULATOR_MODEL.md",
+    "projects/agifcore_master/03_design/CONVERSATION_MODEL.md",
+    "projects/agifcore_master/03_design/GRAPH_STACK_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_06_world_model_and_simulator/agifcore_phase6_world_simulator/__init__.py",
+    "projects/agifcore_master/04_execution/phase_06_world_model_and_simulator/agifcore_phase6_world_simulator/entity_classes.py"
+  ],
+  "notes": [
+    "entity classes define the typed Phase 6 contract surface",
+    "Phase 6 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_entity_classes_report.json"
+  },
+  "phase": "6",
+  "status": "pass",
+  "verifier": "verify_phase_06_entity_classes"
+}

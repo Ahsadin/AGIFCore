@@ -1,0 +1,191 @@
+{
+  "anchors": {
+    "coverage_summary": {
+      "covered_record_ids": [
+        "instrument_record::0c616bf201b9",
+        "instrument_record::0dca39ade994",
+        "instrument_record::0ddfa7ae4bba",
+        "instrument_record::248c37d7f489",
+        "instrument_record::2a4c35de437f",
+        "instrument_record::2c05e80f44e1",
+        "instrument_record::3161707dd8a9",
+        "instrument_record::31cc98ae3158",
+        "instrument_record::32b82a5efcef",
+        "instrument_record::338bb2959866",
+        "instrument_record::36eec416f6f6",
+        "instrument_record::397795829cc1",
+        "instrument_record::3cd31cdfa6f3",
+        "instrument_record::3e61b0d36ec6",
+        "instrument_record::42aaa3679ec9",
+        "instrument_record::4a3c11b13208",
+        "instrument_record::4c135554e161",
+        "instrument_record::4cffc2b09cd5",
+        "instrument_record::4d3ba14189fa",
+        "instrument_record::5593e78d2407",
+        "instrument_record::59e57197f8a4",
+        "instrument_record::5b644a5b8989",
+        "instrument_record::5df6c7e5ec1e",
+        "instrument_record::641796eb599d",
+        "instrument_record::67d1108391c6",
+        "instrument_record::6a3f2894aeaf",
+        "instrument_record::6b5986cd71ec",
+        "instrument_record::7071daa9bd02",
+        "instrument_record::76f51b86ddd7",
+        "instrument_record::7788369501e9",
+        "instrument_record::79dcee4bfc44",
+        "instrument_record::810e07703b14",
+        "instrument_record::85b4fe4f635c",
+        "instrument_record::868ac675c5e0",
+        "instrument_record::8be63ece49b2",
+        "instrument_record::8e7df114ccc4",
+        "instrument_record::9311a8bb3bdf",
+        "instrument_record::93137e1de505",
+        "instrument_record::a684b9665311",
+        "instrument_record::aa203bb20c4e",
+        "instrument_record::abab8e6a453a",
+        "instrument_record::ac04d93dfc85",
+        "instrument_record::adb8abe4425d",
+        "instrument_record::b3e339e3ae5e",
+        "instrument_record::b3fbcea7ccd4",
+        "instrument_record::b5c5d112862c",
+        "instrument_record::bd9058c4b3fa",
+        "instrument_record::be269aed4cc9",
+        "instrument_record::c77f88ef9cee",
+        "instrument_record::c95ebf35b3a9",
+        "instrument_record::cc71c5579e71",
+        "instrument_record::cf68ca7ef234",
+        "instrument_record::d1d421faa3ef",
+        "instrument_record::d7c4d345feba",
+        "instrument_record::dd53ea59691c",
+        "instrument_record::e274e4512b59",
+        "instrument_record::ea391729c8ad",
+        "instrument_record::eb7c3c5caad7",
+        "instrument_record::f361181aa57a",
+        "instrument_record::f5c67436782b"
+      ],
+      "metric_ids": [
+        "instrument_metric::314c330e31d9",
+        "instrument_metric::34f562cdb377",
+        "instrument_metric::39608197017d",
+        "instrument_metric::8b809d6e88ae",
+        "instrument_metric::d01d5e459575",
+        "instrument_metric::dc3cdb3ccb30"
+      ],
+      "provenance": {
+        "created_at": "2026-03-30T22:23:52+00:00",
+        "entity_id": "instrument_summary::ce9542d7b9f6",
+        "entity_kind": "instrumentation_summary",
+        "inherited_from": [],
+        "links": [
+          {
+            "metadata": {},
+            "ref_id": "instrument_summary::ce9542d7b9f6",
+            "ref_kind": "instrumentation_summary",
+            "role": "instrumentation",
+            "source_path": "phase6/instrumentation"
+          }
+        ],
+        "origin_kind": "constructed",
+        "provenance_hash": "b7924242f3e7fceab38ae8c87422cac41fdd1449b6aff7a02bdbc2e8a5087adf"
+      },
+      "status": "complete",
+      "summary_hash": "52b849f056d06071b578fffe5d28289c53c04d7a755dda31cdeefe4f17db2e64",
+      "summary_id": "instrument_summary::ce9542d7b9f6",
+      "summary_kind": "coverage"
+    },
+    "metric_count": 6,
+    "record_count": 60,
+    "sample_record": {
+      "numeric_score": 0.8,
+      "provenance": {
+        "created_at": "2026-03-30T22:23:52+00:00",
+        "entity_id": "instrument_record::36eec416f6f6",
+        "entity_kind": "instrumentation_record",
+        "inherited_from": [],
+        "links": [
+          {
+            "metadata": {},
+            "ref_id": "world::target::finance_document_workflows",
+            "ref_kind": "world_entity",
+            "role": "world_model",
+            "source_path": "phase6/world_model"
+          },
+          {
+            "metadata": {},
+            "ref_id": "instrument_record::36eec416f6f6",
+            "ref_kind": "instrumentation_record",
+            "role": "instrumentation",
+            "source_path": "phase6/instrumentation"
+          }
+        ],
+        "origin_kind": "constructed",
+        "provenance_hash": "0f0ba72b142b573289c12117c188541af7691bfc6084b5ec573111cc7602edb9"
+      },
+      "reason_codes": [
+        "world_model_entity_recorded"
+      ],
+      "record_hash": "59f87a9ba1ca966f8ec8057b17bad601ec113d641bf72e1cca0438adb17f082e",
+      "record_id": "instrument_record::36eec416f6f6",
+      "record_kind": "world_entity",
+      "source_entry_id": "world::target::finance_document_workflows",
+      "status": "review_only"
+    },
+    "summary_count": 10
+  },
+  "assertions": [
+    {
+      "id": "instrumentation-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "per-run-events-recorded",
+      "result": "pass"
+    },
+    {
+      "id": "coverage-summary-derived-from-events",
+      "result": "pass"
+    },
+    {
+      "id": "trace-and-provenance-links-retained",
+      "result": "pass"
+    },
+    {
+      "id": "instrumentation-event-ceiling-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "summary-mismatch-blocked",
+      "result": "pass"
+    },
+    {
+      "id": "instrumentation-roundtrip-clean",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_06_WORLD_MODEL_AND_SIMULATOR.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/03_design/SIMULATOR_MODEL.md",
+    "projects/agifcore_master/03_design/CONVERSATION_MODEL.md",
+    "projects/agifcore_master/03_design/GRAPH_STACK_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_06_world_model_and_simulator/agifcore_phase6_world_simulator/instrumentation.py",
+    "projects/agifcore_master/04_execution/phase_06_world_model_and_simulator/agifcore_phase6_world_simulator/overload_lanes.py",
+    "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_world_model_representation_report.json",
+    "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_what_if_simulation_report.json",
+    "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_fault_pressure_overload_conflict_report.json"
+  ],
+  "notes": [
+    "instrumentation derives machine-readable coverage from actual runtime outputs",
+    "Phase 6 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_06_world_model_and_simulator/phase_06_evidence/phase_06_instrumentation_report.json"
+  },
+  "phase": "6",
+  "status": "pass",
+  "verifier": "verify_phase_06_instrumentation"
+}

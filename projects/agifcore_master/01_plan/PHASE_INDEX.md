@@ -16,7 +16,7 @@ Phase order may not be rearranged by execution convenience.
 | 3 | cells, tissues, structure, and bundles | define and later build the cell and tissue composition layer plus bundle structure | `approved` |
 | 4 | memory planes | define and later build reviewed memory planes, lifecycle controls, and pressure handling | `approved` |
 | 5 | graph and knowledge structures | define and later build the descriptor, skill, concept, and transfer graph stack | `approved` |
-| 6 | world model and simulator | define and later build simulation and world-model boundaries | `open` |
+| 6 | world model and simulator | define and later build simulation and world-model boundaries | `approved` |
 | 7 | conversation core | define and later build governed conversation and trace-aware answer flow | `open` |
 | 8 | science and world awareness | define and later build scientific method, falsification, and world-facing reasoning support | `open` |
 | 9 | rich expression and composition | define and later build higher-order composition and expressive response capabilities | `open` |
