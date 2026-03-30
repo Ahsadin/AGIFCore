@@ -1,0 +1,156 @@
+{
+  "anchors": {
+    "active_skill_ids": [
+      "skill-2"
+    ],
+    "grounding_edge_id": "skill-edge-1",
+    "replacement_skill": {
+      "allowed_target_domains": [
+        "finance_document_workflows"
+      ],
+      "constraints": [
+        "reviewed support only"
+      ],
+      "created_at": "2026-03-30T19:56:17+00:00",
+      "descriptor_refs": [
+        "desc-2"
+      ],
+      "metadata": {},
+      "objective": "Normalize extracted invoice fields",
+      "policy_requirements": [
+        "route"
+      ],
+      "postconditions": [
+        "fields normalized"
+      ],
+      "preconditions": [
+        "fields extracted"
+      ],
+      "provenance": {
+        "created_at": "2026-03-30T19:56:17+00:00",
+        "entity_id": "skill-2",
+        "entity_kind": "skill",
+        "inherited_from": [],
+        "links": [
+          {
+            "metadata": {},
+            "ref_id": "procedure-entry-1",
+            "ref_kind": "procedure_entry",
+            "role": "source_memory",
+            "source_path": "phase4/procedural"
+          },
+          {
+            "metadata": {},
+            "ref_id": "memory-review-10",
+            "ref_kind": "review",
+            "role": "review",
+            "source_path": "phase4/review"
+          }
+        ],
+        "origin_kind": "constructed",
+        "provenance_hash": "ccbaaaf0694131f79f33c375a0e5b9479a9e69d8d5007f5001d523f1f76c0e39"
+      },
+      "retirement_ref": null,
+      "skill_id": "skill-2",
+      "skill_name": "Normalize invoice fields",
+      "status": "active",
+      "superseded_by": null,
+      "trust_band": "reviewed",
+      "updated_at": "2026-03-30T19:56:17+00:00"
+    },
+    "superseded_skill": {
+      "allowed_target_domains": [
+        "finance_document_workflows"
+      ],
+      "constraints": [
+        "no external model",
+        "reviewed support only"
+      ],
+      "created_at": "2026-03-30T19:56:17+00:00",
+      "descriptor_refs": [
+        "desc-1",
+        "desc-2"
+      ],
+      "metadata": {},
+      "objective": "Extract reviewed invoice fields from a bounded local document",
+      "policy_requirements": [
+        "route"
+      ],
+      "postconditions": [
+        "fields extracted"
+      ],
+      "preconditions": [
+        "document available"
+      ],
+      "provenance": {
+        "created_at": "2026-03-30T19:56:17+00:00",
+        "entity_id": "skill-1",
+        "entity_kind": "skill",
+        "inherited_from": [],
+        "links": [
+          {
+            "metadata": {},
+            "ref_id": "procedure-entry-1",
+            "ref_kind": "procedure_entry",
+            "role": "source_memory",
+            "source_path": "phase4/procedural"
+          },
+          {
+            "metadata": {},
+            "ref_id": "memory-review-10",
+            "ref_kind": "review",
+            "role": "review",
+            "source_path": "phase4/review"
+          }
+        ],
+        "origin_kind": "constructed",
+        "provenance_hash": "a8edd4fed6bfae545e8e7d15053dfb4fcb2697f753e65e38acc8f0a4e5aa7cc1"
+      },
+      "retirement_ref": null,
+      "skill_id": "skill-1",
+      "skill_name": "Extract invoice fields",
+      "status": "superseded",
+      "superseded_by": "skill-2",
+      "trust_band": "bounded_local",
+      "updated_at": "2026-03-30T19:56:17+00:00"
+    }
+  },
+  "assertions": [
+    {
+      "id": "skill-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "skill-grounding-edges-supported",
+      "result": "pass"
+    },
+    {
+      "id": "skill-supersession-supported",
+      "result": "pass"
+    },
+    {
+      "id": "skill-provenance-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "skill-load-state-roundtrip-clean",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_05_GRAPH_AND_KNOWLEDGE_STRUCTURES.md",
+    "projects/agifcore_master/03_design/SKILL_GRAPH_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/__init__.py",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/skill_graph.py"
+  ],
+  "notes": [
+    "skill graph stays procedural and non-automatic",
+    "no approval implied"
+  ],
+  "outputs": {
+    "report": "projects/agifcore_master/06_outputs/phase_05_graph_and_knowledge_structures/phase_05_evidence/phase_05_skill_graph_report.json"
+  },
+  "phase": "5",
+  "status": "pass",
+  "verifier": "verify_phase_05_skill_graph"
+}
