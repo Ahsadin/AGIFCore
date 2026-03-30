@@ -4,7 +4,7 @@
       "abstraction": "Compressed semantic summary for bounded retention review.",
       "concept_type": "compressed_abstraction",
       "correction_refs": [],
-      "created_at": "2026-03-30T18:00:22+00:00",
+      "created_at": "2026-03-30T18:00:52+00:00",
       "entry_id": "semantic-compression-00000001",
       "graph_refs": [
         "concept-ref://memory/pressure",
@@ -31,10 +31,10 @@
         "support://phase4/semantic/b",
         "support://phase4/semantic/compression-summary"
       ],
-      "updated_at": "2026-03-30T18:00:22+00:00"
+      "updated_at": "2026-03-30T18:00:52+00:00"
     },
     "compression_result": {
-      "compressed_at": "2026-03-30T18:00:22+00:00",
+      "compressed_at": "2026-03-30T18:00:52+00:00",
       "compression_id": "phase4-compression-00000001",
       "created_id": "semantic-compression-00000001",
       "review_ref": "memory-review-00000002",
@@ -52,7 +52,7 @@
         "conversation_id": "conv-phase4-slice3",
         "correction_markers": [],
         "correction_status": "original",
-        "created_at": "2026-03-30T18:00:22+00:00",
+        "created_at": "2026-03-30T18:00:52+00:00",
         "event_id": "event-0003",
         "event_summary": "Recent episodic note that remains active.",
         "event_type": "memory_observation",
@@ -69,7 +69,7 @@
         "conversation_id": "conv-phase4-slice3",
         "correction_markers": [],
         "correction_status": "original",
-        "created_at": "2026-03-30T18:00:22+00:00",
+        "created_at": "2026-03-30T18:00:52+00:00",
         "event_id": "event-summary-0001",
         "event_summary": "Two older episodic observations were compressed into one retained summary anchor.",
         "event_type": "episodic_forgetting_summary",
@@ -83,7 +83,7 @@
     ],
     "forgetting_result": {
       "forgetting_id": "phase4-forgetting-00000001",
-      "forgotten_at": "2026-03-30T18:00:22+00:00",
+      "forgotten_at": "2026-03-30T18:00:52+00:00",
       "forgotten_event_ids": [
         "event-0001",
         "event-0002"
@@ -100,7 +100,7 @@
         "no execution side effects",
         "keep provenance attached"
       ],
-      "created_at": "2026-03-30T18:00:22+00:00",
+      "created_at": "2026-03-30T18:00:52+00:00",
       "graph_refs": [
         "skill-ref://memory/review-note"
       ],
@@ -128,10 +128,10 @@
         "extract stable summary",
         "attach provenance"
       ],
-      "updated_at": "2026-03-30T18:00:22+00:00"
+      "updated_at": "2026-03-30T18:00:52+00:00"
     },
     "retirement_result": {
-      "retired_at": "2026-03-30T18:00:22+00:00",
+      "retired_at": "2026-03-30T18:00:52+00:00",
       "retirement_id": "phase4-retirement-00000001",
       "retirement_ref": "retire://phase4/phase4-retirement-00000001",
       "review_ref": "memory-review-00000004",
