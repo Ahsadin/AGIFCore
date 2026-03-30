@@ -72,3 +72,7 @@
 - Added the Phase 4 planning task-card set under `00_admin/codex_threads/tasks/phase_04/`.
 - Added `00_admin/codex_threads/handoffs/PHASE_04_PLAN_FREEZE_HANDOFF.md` and `00_admin/codex_threads/handoffs/PHASE_04_EXECUTION_START_BRIEF.md`.
 - Recorded that the Phase 4 planning baseline is frozen for execution start while Phase 4 remains `open` and Phase 5 has not started.
+- Completed the full Phase 4 runtime package under `04_execution/phase_04_memory_planes/`, with paired verifiers under `05_testing/phase_04_memory_planes/` and evidence/demo outputs under `06_outputs/phase_04_memory_planes/`.
+- Added the Phase 4 audit, governor verification, validation request, and user verdict records under `00_admin/codex_threads/`.
+- Repaired the standalone Phase 4 review package so the exported verifier reruns work from a repo-shaped bundle and the validation protocol wording is phase-neutral.
+- Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 4 is now `approved`.
