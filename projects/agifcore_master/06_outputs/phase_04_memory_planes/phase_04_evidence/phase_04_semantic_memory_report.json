@@ -1,0 +1,85 @@
+{
+  "anchors": {
+    "active_entry_ids": [],
+    "entry_id": "semantic-0001",
+    "exported_entry_count": 1,
+    "superseded_entry": {
+      "abstraction": "A reviewed abstraction about bounded memory pressure.",
+      "concept_type": "theory_fragment",
+      "correction_refs": [
+        "corr-sem-0001"
+      ],
+      "created_at": "2026-03-30T17:35:46+00:00",
+      "entry_id": "semantic-0001",
+      "graph_refs": [
+        "concept-ref://memory/pressure"
+      ],
+      "metadata": {
+        "confidence": "high"
+      },
+      "provenance_refs": [
+        "trace://phase4/semantic/0001"
+      ],
+      "review_ref": "memory-review-00000011",
+      "source_candidate_id": "candidate-0001",
+      "status": "superseded",
+      "superseded_by": "semantic-0002",
+      "supporting_refs": [
+        "support://phase4/semantic/0001"
+      ],
+      "updated_at": "2026-03-30T17:35:46+00:00"
+    }
+  },
+  "assertions": [
+    {
+      "id": "semantic-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "reviewed-abstraction-only",
+      "result": "pass"
+    },
+    {
+      "id": "supersession-supported",
+      "result": "pass"
+    },
+    {
+      "id": "raw-transcript-leakage-blocked",
+      "result": "pass"
+    },
+    {
+      "id": "load-state-roundtrip-clean",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_04_MEMORY_PLANES.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/__init__.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/semantic_memory.py"
+  ],
+  "notes": [
+    "semantic memory stores reviewed abstractions only",
+    "graph refs remain plain references, not graph implementation",
+    "no approval implied"
+  ],
+  "outputs": {
+    "report": "projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_evidence/phase_04_semantic_memory_report.json"
+  },
+  "phase": "4",
+  "runtime_symbols": {
+    "semantic_memory": [
+      "SemanticMemoryStore",
+      "SemanticMemoryEntry",
+      "SemanticMemoryError",
+      "add_entry",
+      "mark_superseded",
+      "active_entry_ids",
+      "load_state"
+    ]
+  },
+  "slice": "slice_2",
+  "status": "pass",
+  "verifier": "verify_phase_04_semantic_memory"
+}
