@@ -76,3 +76,6 @@
 - Added the Phase 4 audit, governor verification, validation request, and user verdict records under `00_admin/codex_threads/`.
 - Repaired the standalone Phase 4 review package so the exported verifier reruns work from a repo-shaped bundle and the validation protocol wording is phase-neutral.
 - Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 4 is now `approved`.
+- Materialized `01_plan/PHASE_05_GRAPH_AND_KNOWLEDGE_STRUCTURES.md` as the approved Phase 5 planning baseline for execution start.
+- Added `00_admin/codex_threads/handoffs/PHASE_05_PLAN_FREEZE_HANDOFF.md` and `00_admin/codex_threads/handoffs/PHASE_05_EXECUTION_START_BRIEF.md`.
+- Recorded that the Phase 5 planning baseline is frozen for execution start while Phase 5 remains `open` and Phase 6 has not started.
