@@ -1,0 +1,167 @@
+{
+  "anchors": {
+    "blocked_result": {
+      "blocked_candidate_ids": [
+        "descriptor::oversized-00",
+        "descriptor::oversized-01",
+        "descriptor::oversized-02",
+        "descriptor::oversized-03",
+        "descriptor::oversized-04",
+        "descriptor::oversized-05",
+        "descriptor::oversized-06",
+        "descriptor::oversized-07",
+        "descriptor::oversized-08",
+        "descriptor::oversized-09",
+        "descriptor::oversized-10",
+        "descriptor::oversized-11",
+        "descriptor::oversized-12",
+        "descriptor::oversized-13",
+        "descriptor::oversized-14",
+        "descriptor::oversized-15",
+        "descriptor::oversized-16",
+        "descriptor::oversized-17",
+        "descriptor::oversized-18",
+        "descriptor::oversized-19",
+        "descriptor::oversized-20",
+        "descriptor::oversized-21",
+        "descriptor::oversized-22",
+        "descriptor::oversized-23",
+        "descriptor::oversized-24",
+        "skill::skill-1",
+        "concept::concept-1"
+      ],
+      "evaluated_candidate_count": 27,
+      "generated_at": "2026-03-30T19:56:17+00:00",
+      "query_id": "query-2",
+      "ranked_candidates": [],
+      "reason": "candidate_limit_exceeded",
+      "selected_candidate_ids": [],
+      "status": "blocked"
+    },
+    "missing_policy_result": {
+      "blocked_candidate_ids": [
+        "descriptor::desc-1",
+        "skill::skill-1",
+        "concept::concept-1"
+      ],
+      "evaluated_candidate_count": 3,
+      "generated_at": "2026-03-30T19:56:17+00:00",
+      "query_id": "query-3",
+      "ranked_candidates": [],
+      "reason": "no_candidate_passed_filters",
+      "selected_candidate_ids": [],
+      "status": "abstained"
+    },
+    "selected_result": {
+      "blocked_candidate_ids": [],
+      "evaluated_candidate_count": 3,
+      "generated_at": "2026-03-30T19:56:17+00:00",
+      "query_id": "query-1",
+      "ranked_candidates": [
+        {
+          "candidate_id": "descriptor::desc-1",
+          "entity_id": "desc-1",
+          "graph_layer": "descriptor",
+          "label": "Invoice extraction",
+          "matched_terms": [
+            "extraction",
+            "invoice"
+          ],
+          "metadata": {},
+          "policy_requirements": [
+            "route"
+          ],
+          "provenance_score": 0.5,
+          "selection_score": 0.818333,
+          "status": "active",
+          "trust_band": "policy",
+          "trust_score": 0.95,
+          "utility_score": 0.866667
+        },
+        {
+          "candidate_id": "concept::concept-1",
+          "entity_id": "concept-1",
+          "graph_layer": "concept",
+          "label": "Invoices share stable field structure",
+          "matched_terms": [
+            "invoice",
+            "structure"
+          ],
+          "metadata": {},
+          "policy_requirements": [
+            "route"
+          ],
+          "provenance_score": 0.5,
+          "selection_score": 0.649334,
+          "status": "active",
+          "trust_band": "reviewed",
+          "trust_score": 0.72,
+          "utility_score": 0.666667
+        },
+        {
+          "candidate_id": "skill::skill-1",
+          "entity_id": "skill-1",
+          "graph_layer": "skill",
+          "label": "Extract invoice fields",
+          "matched_terms": [
+            "invoice"
+          ],
+          "metadata": {},
+          "policy_requirements": [
+            "route"
+          ],
+          "provenance_score": 0.5,
+          "selection_score": 0.594666,
+          "status": "active",
+          "trust_band": "bounded_local",
+          "trust_score": 0.76,
+          "utility_score": 0.533333
+        }
+      ],
+      "reason": "governed_support_selected",
+      "selected_candidate_ids": [
+        "descriptor::desc-1",
+        "concept::concept-1",
+        "skill::skill-1"
+      ],
+      "status": "selected"
+    }
+  },
+  "assertions": [
+    {
+      "id": "graph-grounded-selection-supported",
+      "result": "pass"
+    },
+    {
+      "id": "trust-and-provenance-bounded-selection-supported",
+      "result": "pass"
+    },
+    {
+      "id": "candidate-ceiling-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "policy-filtering-enforced",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_05_GRAPH_AND_KNOWLEDGE_STRUCTURES.md",
+    "projects/agifcore_master/03_design/GRAPH_STACK_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/descriptor_graph.py",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/skill_graph.py",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/concept_graph.py",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/support_selection.py"
+  ],
+  "notes": [
+    "selection stays graph-grounded, bounded, and honest",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_05_graph_and_knowledge_structures/phase_05_evidence/phase_05_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_05_graph_and_knowledge_structures/phase_05_evidence/phase_05_support_selection_report.json"
+  },
+  "phase": "5",
+  "status": "pass",
+  "verifier": "verify_phase_05_support_selection"
+}

@@ -1,0 +1,145 @@
+{
+  "anchors": {
+    "active_concept_ids": [
+      "concept-1",
+      "concept-3"
+    ],
+    "edge_id": "concept-edge-1",
+    "replacement_concept": {
+      "concept_id": "concept-3",
+      "concept_type": "abstraction",
+      "created_at": "2026-03-30T19:56:16+00:00",
+      "descriptor_refs": [
+        "desc-3"
+      ],
+      "metadata": {},
+      "policy_requirements": [
+        "route"
+      ],
+      "provenance": {
+        "created_at": "2026-03-30T19:56:16+00:00",
+        "entity_id": "concept-3",
+        "entity_kind": "concept",
+        "inherited_from": [],
+        "links": [
+          {
+            "metadata": {},
+            "ref_id": "semantic-entry-7",
+            "ref_kind": "semantic_entry",
+            "role": "source_memory",
+            "source_path": "phase4/semantic"
+          },
+          {
+            "metadata": {},
+            "ref_id": "memory-review-21",
+            "ref_kind": "review",
+            "role": "review",
+            "source_path": "phase4/review"
+          }
+        ],
+        "origin_kind": "constructed",
+        "provenance_hash": "b9626ab7ac8864f8fe259f713bd59b7d7ebb792567486e86e9dacee7902c333e"
+      },
+      "retirement_ref": null,
+      "statement": "Invoice workflows separate extraction and correction",
+      "status": "active",
+      "superseded_by": null,
+      "tags": [
+        "invoice",
+        "correction"
+      ],
+      "theory_fragments": [
+        "correction layering"
+      ],
+      "trust_band": "bounded_local",
+      "updated_at": "2026-03-30T19:56:16+00:00"
+    },
+    "superseded_concept": {
+      "concept_id": "concept-2",
+      "concept_type": "abstraction",
+      "created_at": "2026-03-30T19:56:16+00:00",
+      "descriptor_refs": [
+        "desc-2"
+      ],
+      "metadata": {},
+      "policy_requirements": [
+        "route"
+      ],
+      "provenance": {
+        "created_at": "2026-03-30T19:56:16+00:00",
+        "entity_id": "concept-2",
+        "entity_kind": "concept",
+        "inherited_from": [],
+        "links": [
+          {
+            "metadata": {},
+            "ref_id": "semantic-entry-7",
+            "ref_kind": "semantic_entry",
+            "role": "source_memory",
+            "source_path": "phase4/semantic"
+          },
+          {
+            "metadata": {},
+            "ref_id": "memory-review-21",
+            "ref_kind": "review",
+            "role": "review",
+            "source_path": "phase4/review"
+          }
+        ],
+        "origin_kind": "constructed",
+        "provenance_hash": "8f8a733fa8506f6652d34e09c628321a03229e13bd87cf99c1d469f40893213d"
+      },
+      "retirement_ref": null,
+      "statement": "Invoice workflows separate extraction from normalization",
+      "status": "superseded",
+      "superseded_by": "concept-3",
+      "tags": [
+        "invoice",
+        "normalization"
+      ],
+      "theory_fragments": [
+        "procedure layering"
+      ],
+      "trust_band": "bounded_local",
+      "updated_at": "2026-03-30T19:56:16+00:00"
+    }
+  },
+  "assertions": [
+    {
+      "id": "concept-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "concept-relations-supported",
+      "result": "pass"
+    },
+    {
+      "id": "concept-supersession-supported",
+      "result": "pass"
+    },
+    {
+      "id": "concept-provenance-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "concept-load-state-roundtrip-clean",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_05_GRAPH_AND_KNOWLEDGE_STRUCTURES.md",
+    "projects/agifcore_master/03_design/GRAPH_STACK_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/__init__.py",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/concept_graph.py"
+  ],
+  "notes": [
+    "concept graph stays abstraction-only and separate from procedural reuse",
+    "no approval implied"
+  ],
+  "outputs": {
+    "report": "projects/agifcore_master/06_outputs/phase_05_graph_and_knowledge_structures/phase_05_evidence/phase_05_concept_graph_report.json"
+  },
+  "phase": "5",
+  "status": "pass",
+  "verifier": "verify_phase_05_concept_graph"
+}

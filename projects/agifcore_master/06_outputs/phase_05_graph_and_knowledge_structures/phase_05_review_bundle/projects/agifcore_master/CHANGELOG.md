@@ -83,6 +83,3 @@
 - Added the Phase 5 task-card set, audit report, merge handoff, Governor verification record, and validation request under `00_admin/codex_threads/`.
 - Added a standalone Phase 5 review bundle under `06_outputs/phase_05_graph_and_knowledge_structures/phase_05_review_bundle/` and prepared a zip-ready review package for user inspection.
 - Rebuilt the Phase 5 review bundle so it preserves exact repo-root-relative paths under `projects/agifcore_master/` and includes the missing plan, protocol, design, runtime, verifier, evidence, and demo surfaces.
-- Repaired the exported Phase 5 review bundle so the extracted verifier family can rediscover the bundle root through `projects/agifcore_master/PROJECT_README.md`.
-- Recorded the explicit Phase 5 user verdict in `00_admin/codex_threads/handoffs/PHASE_05_USER_VERDICT.md`.
-- Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 5 is now `approved`.
