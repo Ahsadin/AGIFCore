@@ -6,6 +6,8 @@ This note covers the requested Phase 3 Slice 3 boundary check for:
 
 - `split_merge_rules.py`
 - `profile_budget_rules.py`
+- `verify_phase_03_split_merge.py`
+- `verify_phase_03_profile_budgets.py`
 
 Reference surfaces reviewed before writing this note:
 
@@ -18,123 +20,136 @@ Reference surfaces reviewed before writing this note:
 - approved Phase 2 `workspace_state.py`
 - `P3-NOTE-ACL-01_PHASE_3_SLICE_1_BOUNDARY_NOTES.md`
 - `P3-NOTE-ACL-02_PHASE_3_SLICE_2_BOUNDARY_NOTES.md`
-- current Phase 3 Slice 1 and Slice 2 runtime files present in this worktree
+- KPL Slice 3 runtime:
+  - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-KPL-03/projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/split_merge_rules.py`
+  - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-KPL-03/projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/profile_budget_rules.py`
+- TRL Slice 3 verifiers:
+  - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-03/projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_split_merge.py`
+  - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-03/projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_profile_budgets.py`
 
 ## Inspection result
 
-Current status is `provisional and blocking for runtime verdict`.
+Current status is `runtime pass with verifier blocker`.
 
-This worktree contains the integrated Slice 1 and Slice 2 runtime surfaces, but it does not contain `split_merge_rules.py` or `profile_budget_rules.py`. Because the target Slice 3 runtime files are not present here yet, a real post-build runtime boundary pass is blocked. What can be recorded now is the binding boundary those files must satisfy when they arrive.
+The actual Slice 3 runtime code now exists in the KPL lane and was inspected directly. It stays inside the approved Phase 3 structural boundary and remains subordinate to the approved Phase 2 lifecycle and scheduler substrate.
+
+The blocker is now verifier alignment, not runtime boundary drift. The TRL verifier files are still written as blocked-state placeholders and do not yet reflect the real Slice 3 runtime now on disk in the KPL lane.
 
 ## Boundary verdict
 
-Verdict: `provisional/blocking`
+Verdict: `blocking`
 
 Reason:
 
-- the required Slice 3 runtime surfaces are not on disk in this lane
-- no Slice 3 verifier surface is present in this lane for these modules
-- a runtime-safe verdict would be false confidence without direct file inspection
+- the Slice 3 runtime itself is boundary-safe for the requested checks
+- the Slice 3 verifier surfaces are not aligned to the runtime intent and still hard-code blocked behavior
+- because verifier alignment was part of the requested check, Slice 3 cannot receive an unqualified pass from this boundary note
 
-## Checks completed now
+## Requested checks and findings
 
-1. Phase 2 lifecycle ownership remains below Slice 3
+1. No second lifecycle state machine
    - `pass`
-   - The approved Phase 2 lifecycle owner is still `LifecycleEngine`.
-   - Phase 2 already owns the explicit lifecycle verbs `activate`, `hibernate`, `reactivate`, `quarantine`, `clear_quarantine`, `retire`, `split`, and `merge`.
-   - The approved registry state family is already frozen in `cell_registry.py`:
-     - `seed`
-     - `dormant`
-     - `active`
-     - `split_pending`
-     - `consolidating`
-     - `quarantined`
-     - `retired`
-   - Slice 3 may shape rules, proposals, and validation around those states and verbs, but it may not create a second state machine or directly replace Phase 2 lifecycle ownership.
+   - `split_merge_rules.py` does not import `LifecycleEngine`, `CellRegistry`, or `workspace_state`.
+   - It uses only structural state validation helpers:
+     - split parent must be `active`
+     - merge participants must be `active` or `dormant`
+   - It does not introduce any new lifecycle states.
+   - It does not keep transition history, mutate records, or recreate Phase 2 verbs such as bootstrap, quarantine, clear_quarantine, retire, split, or merge.
 
-2. Phase 2 scheduler ownership remains below Slice 3
+2. `split_merge_rules` shapes requests and does not mutate registry or lifecycle directly
    - `pass`
-   - The approved Phase 2 scheduler still owns queue depth, task ordering, enqueue and dispatch, payload-size checks, and latency metrics.
-   - `profile_budget_rules.py`, when integrated, may constrain scheduler inputs or profile ceilings, but it may not recreate queue logic, dispatch logic, heap ordering, or scheduler metrics.
+   - The module builds `SplitProposal` and `MergeProposal` objects from payloads.
+   - The exported decision from `evaluate_split_proposal()` and `evaluate_merge_proposal()` is a policy result with:
+     - `allowed`
+     - `reason`
+     - `lifecycle_input`
+     - `lineage_ledger_entry`
+   - For split, `lifecycle_input` contains only:
+     - `parent_cell_id`
+     - child `cell_id` and `role_family`
+     - `reason`
+     - `actor`
+   - For merge, `lifecycle_input` contains only:
+     - `survivor_cell_id`
+     - `merged_cell_id`
+     - `reason`
+     - `actor`
+   - No call to `register_cell`, `update_cell`, `split`, `merge`, `retire`, or any registry/lifecycle mutation surface appears in the module.
 
-3. No hidden Slice 3 runtime logic was found in the integrated Slice 1 and Slice 2 files present here
+3. `profile_budget_rules` stays structural and is not a scheduler implementation
    - `pass`
-   - Slice 1 stays structural only.
-   - Slice 2 already states that it does not import `profile_budget_rules`.
-   - Slice 2 uses visible ceiling constants only:
-     - mobile active cells `8`
-     - laptop active cells `32`
-     - tissues `12`
-     - dormant blueprints `128`
-   - That means the missing Slice 3 modules are not already silently embedded in the currently integrated Slice 1 and Slice 2 runtime surfaces.
+   - `profile_budget_rules.py` does not import `Scheduler`.
+   - It defines bounded profile-budget payload validation, default payload construction, context validation, and `ProfileBudgetRule.evaluate()`.
+   - It evaluates counts and byte ceilings only:
+     - `active_cell_count`
+     - `tissue_count`
+     - `largest_tissue_member_count`
+     - `dormant_blueprint_count`
+     - `manifest_size_bytes`
+     - `bundle_payload_size_bytes`
+   - It does not enqueue tasks, dispatch tasks, order queues, measure latency, or implement heap logic.
 
-4. Phase 4 exclusion is still explicit
+4. No Phase 4 logic
    - `pass`
-   - Phase 4 in `PHASE_INDEX.md` remains the separate `memory planes` phase.
-   - `PHASE_02_FABRIC_KERNEL_AND_WORKSPACE.md` allows only bounded memory-hook references and explicitly forbids semantic memory, procedural memory, reviewed long-term memory, promotion, compression, forgetting, retirement logic for memory, graph persistence, and memory-plane-specific algorithms.
-   - `split_merge_rules.py` and `profile_budget_rules.py` therefore must not contain:
-     - memory-plane storage policy
-     - reviewed-memory promotion or retention logic
-     - deduplication, supersession, compression, forgetting, or memory GC
-     - graph persistence or conversation behavior
+   - Neither runtime module imports memory-plane code, graph code, simulator code, or conversation code.
+   - No semantic memory, procedural memory, reviewed-memory policy, retention policy, deduplication, supersession, compression, forgetting, memory GC, or graph persistence logic appears in these files.
+   - The only use of the word `retired` in Slice 3 context is the merge lineage output field `retired_cell_id`, which is still referring to the already approved Phase 2 cell lifecycle outcome, not Phase 4 memory retirement.
 
-## Binding boundary rules for Slice 3 runtime when integrated
+5. Builder profile handling is explicit and bounded
+   - `pass`
+   - `profile_budget_rules.py` defines:
+     - `PROFILE_NAMES = ("mobile", "laptop", "builder")`
+     - `BUILDER_ACTIVE_CELL_CEILING = 64`
+   - Builder is explicit rather than hidden.
+   - `64` stays within the master-plan hard ceiling for laptop-builder scale and does not exceed the frozen `1024` logical-cell program ceiling.
+   - The module keeps builder under the same Phase 3 structural ceilings for:
+     - tissues
+     - dormant blueprints
+     - manifest size
+     - bundle payload size
+   - This is bounded structural handling, not an open-ended scale escape hatch.
 
-1. `split_merge_rules.py` must stay policy-bound to Phase 2 lifecycle.
-   - It may validate whether a requested split or merge is structurally allowed.
-   - It may shape a proposal or request payload for Phase 2 execution.
-   - It may read current lifecycle state names that already exist in Phase 2.
-   - It may not mutate registry state directly.
-   - It may not maintain a second lifecycle history.
-   - It may not add new lifecycle states beyond the approved Phase 2 state family.
-   - It may not reimplement `LifecycleEngine.split()` or `LifecycleEngine.merge()`.
+6. Verifier surfaces are aligned to runtime intent
+   - `block`
+   - `verify_phase_03_split_merge.py` is still a blocked-state verifier.
+   - Even when the runtime file exists, its `main()` path still writes `build_blocked_report(...)`, prints `BLOCKED`, and returns exit code `1`.
+   - It does not execute the planned split/merge cases against the real runtime.
+   - `verify_phase_03_profile_budgets.py` is also still blocked-state oriented.
+   - It can exercise some Slice 2 supporting runtime behavior, but it still reports `status: "blocked"`, forces `runtime_modules_available` to `False`, and keeps builder-specific checks in `blocked_checks`.
+   - Its notes still say builder remains blocked until `profile_budget_rules` exists, but the runtime file now does exist in the KPL lane.
+   - This means the verifier layer is behind the runtime and does not yet prove the actual Slice 3 behavior it is supposed to validate.
 
-2. `profile_budget_rules.py` must stay policy-bound to Phase 2 scheduler and Phase 3 ceilings.
-   - It may define profile ceilings and structural guardrails for mobile, laptop, and later builder use.
-   - It may validate active-cell counts, tissue counts, tissue fanout, or split-pressure thresholds against the approved Phase 3 envelope.
-   - It may cap scheduler inputs such as allowed priority or estimated cost envelopes.
-   - It may not enqueue tasks.
-   - It may not dispatch tasks.
-   - It may not implement heap ordering, queue storage, or latency measurement.
-   - It may not widen Phase 3 ceilings silently.
+## Supporting observations
 
-3. Slice 3 must remain above Phase 2 and below Phase 4.
-   - allowed: structural policy, rule validation, proposal shaping, and profile-bound structural checks
-   - forbidden: memory review policy, long-term retention, graph mutation, simulator logic, conversation behavior, or product-runtime logic
+- `split_merge_rules.py` correctly keeps trust-band enforcement at the policy layer through `allow_split_merge` and `require_manual_review`.
+- Split pressure stays bounded by `SPLIT_PRESSURE_MEMBER_COUNT`, and oversized split pressure returns manual-review blocking instead of silent expansion.
+- `profile_budget_rules.py` reuses the existing Phase 3 ceilings from Slice 2 constants for mobile, laptop, tissue, and dormant-blueprint bounds, then adds explicit builder handling rather than hiding it elsewhere.
+- The runtime modules are proposal and ceiling surfaces, not execution engines.
 
-4. Cell retirement wording must stay precise.
-   - Cell lifecycle retirement already exists in Phase 2 and can be referenced as a lifecycle outcome.
-   - Memory retirement remains Phase 4 scope and must not be smuggled into Slice 3 under split/merge or profile-budget wording.
+## Concrete blocker
 
-## Required post-integration checks
+The blocker is not runtime boundary drift. The blocker is verifier mismatch.
 
-When `split_merge_rules.py` and `profile_budget_rules.py` are integrated into this lane, rerun this boundary pass and confirm all of the following directly from code:
+Exact verifier problems found:
 
-1. imports and call sites
-   - confirm whether the modules import `LifecycleEngine`, `CellRegistry`, or `Scheduler`
-   - if they do, confirm usage is read-only, validation-only, or request-shaping only
-   - block if they mutate registry state, own transition history, or dispatch scheduler work directly
+1. `verify_phase_03_split_merge.py`
+   - still assumes the slice is blocked
+   - contains planned checks only, not executed runtime cases
+   - returns `1` in both the missing-runtime and runtime-present paths
+   - keeps notes that say the runtime file is absent even though it now exists in the KPL lane
 
-2. lifecycle-state handling
-   - confirm the modules use only approved Phase 2 lifecycle state names
-   - block if new structural-only states are invented
-
-3. split/merge implementation boundary
-   - confirm `split_merge_rules.py` does not recreate child registration, survivor retirement, or lineage mutation already owned by Phase 2 lifecycle execution
-
-4. budget boundary
-   - confirm `profile_budget_rules.py` uses the approved Phase 3 ceilings and does not silently widen them
-   - confirm any builder-profile handling is explicit, bounded, and still inside master-plan ceilings
-
-5. Phase 4 exclusion
-   - confirm neither module imports memory-plane code or introduces memory lifecycle algorithms under structural names
+2. `verify_phase_03_profile_budgets.py`
+   - still emits `status: "blocked"` even in the runtime-present path
+   - still forces `runtime_modules_available` to `False`
+   - still treats builder profile checks as unavailable because the runtime file is supposedly absent
+   - therefore does not align with the real runtime intent now implemented in `profile_budget_rules.py`
 
 ## Conclusion
 
-Slice 3 cannot receive a runtime `pass` yet in this lane because the target runtime files are absent.
+Slice 3 runtime now passes the requested boundary checks.
 
-The current note is still useful because it records a concrete blocking condition and the exact contract that `split_merge_rules.py` and `profile_budget_rules.py` must satisfy after integration.
+Slice 3 as a whole remains blocked from a clean boundary close because the verifier surfaces are not aligned to the runtime they are supposed to validate. The next repair should be on the TRL verifier side, not in the KPL runtime.
 
 ## No approval implied
 
-This note does not approve Slice 3, Phase 3, or any later phase. It records a provisional and blocking boundary result until the actual Slice 3 runtime surfaces are present for direct inspection.
+This note does not approve Slice 3, Phase 3, or any later phase. It records a code-backed runtime pass with a concrete verifier blocker that must be repaired before Slice 3 can claim a clean boundary close.
