@@ -1,0 +1,164 @@
+{
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_03_CELLS_TISSUES_STRUCTURE_AND_BUNDLES.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_cell_contracts_report.json",
+    "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_activation_and_trust_report.json",
+    "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_validation_report.json",
+    "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_profile_budget_report.json",
+    "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_split_merge_report.json",
+    "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/cell_contracts.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/tissue_manifests.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/schemas/phase_03_cell_contract.schema.json",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/schemas/phase_03_tissue_manifest.schema.json"
+  ],
+  "notes": [
+    "slice-4 tissue orchestration is exercised directly against the runtime API",
+    "the verifier resolves runtime modules from the repo-relative execution path",
+    "reports are generated from executed case checks, not summary prose",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_tissue_orchestration_report.json"
+  },
+  "phase": "Phase 3",
+  "results": [
+    {
+      "case_id": "cell-contract-pass",
+      "expected_pass": true,
+      "message": "passed",
+      "passed": true,
+      "target": "cell_contracts"
+    },
+    {
+      "case_id": "tissue-manifest-pass",
+      "expected_pass": true,
+      "message": "passed",
+      "passed": true,
+      "target": "tissue_manifests"
+    },
+    {
+      "case_id": "split-review-threshold-exposed",
+      "expected_pass": true,
+      "message": "passed",
+      "passed": true,
+      "target": "tissue_manifests"
+    },
+    {
+      "case_id": "missing-contract-field",
+      "expected_pass": false,
+      "message": "failed as expected: missing required cell contract field: bundle_ref",
+      "passed": true,
+      "target": "cell_contracts"
+    },
+    {
+      "case_id": "duplicate-tissue-member",
+      "expected_pass": false,
+      "message": "failed as expected: member_cell_ids contains duplicate entries",
+      "passed": true,
+      "target": "tissue_manifests"
+    },
+    {
+      "case_id": "role-family-mismatch",
+      "expected_pass": false,
+      "message": "failed as expected: member cell cell-router has disallowed role_family: router",
+      "passed": true,
+      "target": "tissue_manifests"
+    },
+    {
+      "case_id": "fanout-breach",
+      "expected_pass": false,
+      "message": "failed as expected: tissue manifest exceeds max tissue membership fanout",
+      "passed": true,
+      "target": "tissue_manifests"
+    }
+  ],
+  "runtime_exports": {
+    "cell_contract": {
+      "fields": [
+        "allowed_tissues",
+        "bundle_ref",
+        "cell_id",
+        "merge_policy",
+        "policy_envelope",
+        "role_family",
+        "role_name",
+        "split_policy",
+        "trust_profile"
+      ],
+      "type": "CellContract"
+    },
+    "modules": {
+      "cell_contracts": [
+        "Any",
+        "CellContract",
+        "MAX_MANIFEST_SIZE_BYTES",
+        "Mapping",
+        "Phase3StructureError",
+        "REQUIRED_CELL_CONTRACT_FIELDS",
+        "annotations",
+        "canonical_size_bytes",
+        "dataclass",
+        "json",
+        "require_mapping",
+        "require_non_empty_str",
+        "require_unique_string_list",
+        "validate_cell_contract_payload"
+      ],
+      "tissue_manifests": [
+        "Any",
+        "MAX_MANIFEST_SIZE_BYTES",
+        "MAX_ROUTING_TARGETS",
+        "MAX_TISSUE_MEMBERS",
+        "Mapping",
+        "Phase3StructureError",
+        "REQUIRED_TISSUE_MANIFEST_FIELDS",
+        "SPLIT_PRESSURE_MEMBER_COUNT",
+        "TissueManifest",
+        "annotations",
+        "canonical_size_bytes",
+        "dataclass",
+        "require_mapping",
+        "require_non_empty_str",
+        "require_unique_string_list",
+        "validate_tissue_manifest_payload"
+      ]
+    },
+    "thresholds": {
+      "max_manifest_size_bytes": 65536,
+      "max_routing_targets": 8,
+      "max_tissue_members": 16,
+      "split_review_threshold": 8
+    },
+    "tissue_manifest": {
+      "fields": [
+        "allowed_role_families",
+        "member_cell_ids",
+        "policy_envelope",
+        "routing_targets",
+        "tissue_id",
+        "tissue_name"
+      ],
+      "type": "TissueManifest"
+    }
+  },
+  "runtime_imports": [
+    "cell_contracts",
+    "tissue_manifests"
+  ],
+  "runtime_modules_available": true,
+  "slice": "slice_4",
+  "status": "pass",
+  "summary": {
+    "expected_failures_verified": true,
+    "expected_pass_cases": 3,
+    "expected_succeeded": true,
+    "overall_pass": true,
+    "passed_cases": 7,
+    "total_cases": 7
+  },
+  "verification": "tissue_orchestration"
+}
