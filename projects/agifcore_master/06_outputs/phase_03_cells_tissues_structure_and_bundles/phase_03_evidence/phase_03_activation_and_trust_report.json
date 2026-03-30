@@ -27,12 +27,16 @@
   },
   "phase": "Phase 3",
   "planned_checks": [
-    "activation-policy-surface-importable",
-    "trust-band-surface-importable",
-    "active-dormant-control-surface-importable",
-    "activation-policy-rejects-missing-required-fields",
-    "trust-band-rejects-invalid-rank-and-band-id",
-    "active-dormant-control-rejects-empty-state-lists"
+    "valid trust band payload passes",
+    "invalid trust band name fails",
+    "negative scheduler priority fails",
+    "valid activation policy payload passes",
+    "missing required activation policy field fails",
+    "dormant-to-active readiness passes for allowed trust band and within profile/cost limits",
+    "blocked or insufficient trust band fails",
+    "active cell ceiling breach fails",
+    "dormant blueprint ceiling breach fails",
+    "invalid lifecycle transition request fails"
   ],
   "results": [],
   "runtime_imports": [
@@ -44,7 +48,7 @@
   "slice": "slice_2",
   "status": "blocked",
   "summary": {
-    "blocked_cases": 3,
+    "blocked_cases": 10,
     "overall_pass": false,
     "passed_cases": 0,
     "total_cases": 0

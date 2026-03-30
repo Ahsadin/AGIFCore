@@ -1,9 +1,10 @@
 from __future__ import annotations
 
 import importlib
+import inspect
 import json
 import sys
-from dataclasses import asdict, dataclass, is_dataclass
+from dataclasses import dataclass, is_dataclass, asdict
 from pathlib import Path
 from typing import Any, Mapping
 
@@ -27,22 +28,122 @@ RUNTIME_FILES = (
     "active_dormant_control.py",
 )
 
-EXPECTED_PUBLIC_HINTS = {
-    "activation_policies": ("activation", "policy"),
-    "trust_bands": ("trust", "band"),
-    "active_dormant_control": ("active", "dormant", "control"),
-}
-
-EXPECTED_SURFACE_KEYS = {
-    "activation_policies": ("policy_id", "rules", "fail_closed"),
-    "trust_bands": ("band_id", "rank", "fail_closed"),
-    "active_dormant_control": ("control_id", "active_states", "dormant_states", "profile_scope"),
-}
-
 PLAN_REFS = (
     "projects/agifcore_master/01_plan/PHASE_03_CELLS_TISSUES_STRUCTURE_AND_BUNDLES.md",
     "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
     "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+)
+
+TRUST_BAND_PASS_CANDIDATES: list[dict[str, Any]] = [
+    {
+        "band_name": "trusted",
+        "scheduler_priority": 10,
+        "minimum_score": 0.85,
+        "fail_closed": True,
+    },
+    {
+        "name": "trusted",
+        "scheduler_priority": 10,
+        "minimum_score": 0.85,
+        "fail_closed": True,
+    },
+    {
+        "trust_band_name": "trusted",
+        "scheduler_priority": 10,
+        "minimum_score": 0.85,
+        "fail_closed": True,
+    },
+]
+
+ACTIVATION_POLICY_PASS_CANDIDATES: list[dict[str, Any]] = [
+    {
+        "policy_name": "phase-3-default",
+        "allowed_trust_bands": ["trusted"],
+        "minimum_trust_band": "trusted",
+        "minimum_score": 0.85,
+        "max_active_cells": 32,
+        "max_dormant_blueprints": 128,
+        "max_scheduler_cost": 1.0,
+        "fail_closed": True,
+    },
+    {
+        "name": "phase-3-default",
+        "allowed_trust_bands": ["trusted"],
+        "minimum_trust_band": "trusted",
+        "minimum_score": 0.85,
+        "max_active_cells": 32,
+        "max_dormant_blueprints": 128,
+        "max_scheduler_cost": 1.0,
+        "fail_closed": True,
+    },
+    {
+        "policy_id": "phase-3-default",
+        "allowed_trust_bands": ["trusted"],
+        "minimum_trust_band": "trusted",
+        "minimum_score": 0.85,
+        "max_active_cells": 32,
+        "max_dormant_blueprints": 128,
+        "max_scheduler_cost": 1.0,
+        "fail_closed": True,
+    },
+]
+
+ACTIVATION_CONTEXT = {
+    "policy": None,
+    "activation_policy": None,
+    "trust_band": None,
+    "band": None,
+    "profile": "laptop",
+    "profile_name": "laptop",
+    "scheduler_profile": "laptop",
+    "scheduler_priority": 10,
+    "scheduler_cost": 1.0,
+    "cost": 1.0,
+    "estimated_cost": 1.0,
+    "active_cell_count": 16,
+    "active_cells": 16,
+    "dormant_blueprint_count": 32,
+    "dormant_blueprints": 32,
+    "current_state": "dormant",
+    "source_state": "dormant",
+    "target_state": "active",
+    "requested_state": "active",
+    "transition": "dormant_to_active",
+    "reason": "slice 2 verifier",
+    "cell_id": "cell-slice-2",
+}
+
+BLOCKING_CONTEXT = {
+    "policy": None,
+    "activation_policy": None,
+    "trust_band": None,
+    "band": None,
+    "profile": "mobile",
+    "profile_name": "mobile",
+    "scheduler_profile": "mobile",
+    "scheduler_priority": -1,
+    "scheduler_cost": 3.5,
+    "cost": 3.5,
+    "estimated_cost": 3.5,
+    "active_cell_count": 64,
+    "active_cells": 64,
+    "dormant_blueprint_count": 256,
+    "dormant_blueprints": 256,
+    "current_state": "active",
+    "source_state": "active",
+    "target_state": "active",
+    "requested_state": "active",
+    "transition": "active_to_active",
+    "reason": "invalid slice 2 verifier",
+    "cell_id": "cell-blocked",
+}
+
+TRUST_BAND_MINIMUM_CANDIDATES = (
+    "trusted",
+    "minimum_trust_band",
+    "minimum_band",
+    "required_band",
+    "minimum_band_name",
 )
 
 
@@ -104,12 +205,12 @@ def dump_json(path: Path, payload: Mapping[str, Any]) -> None:
     path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
-def canonical_size_bytes(payload: Mapping[str, Any]) -> int:
-    return len(json.dumps(payload, sort_keys=True).encode("utf-8"))
-
-
 def missing_files(paths: list[Path]) -> list[str]:
     return [rel(path) for path in paths if not path.exists()]
+
+
+def canonical_size_bytes(payload: Mapping[str, Any]) -> int:
+    return len(json.dumps(payload, sort_keys=True).encode("utf-8"))
 
 
 def _require_non_empty_str(value: Any, field_name: str) -> None:
@@ -128,6 +229,13 @@ def _coerce_mapping(value: Any, field_name: str) -> Mapping[str, Any]:
         return value
     if is_dataclass(value) and not isinstance(value, type):
         return asdict(value)
+    for attr_name in ("to_payload", "to_dict", "model_dump"):
+        if hasattr(value, attr_name):
+            candidate = getattr(value, attr_name)()
+            if isinstance(candidate, Mapping):
+                return candidate
+    if hasattr(value, "__dict__") and getattr(value, "__dict__"):
+        return dict(value.__dict__)
     raise ContractViolation(f"{field_name} must be a mapping or dataclass instance")
 
 
@@ -146,79 +254,63 @@ def _require_str_list(value: Any, field_name: str) -> list[str]:
     return result
 
 
+def _call_with_context(fn: Any, context: Mapping[str, Any]) -> Any:
+    signature = inspect.signature(fn)
+    kwargs: dict[str, Any] = {}
+    for name, parameter in signature.parameters.items():
+        if name in context:
+            kwargs[name] = context[name]
+        elif parameter.default is inspect._empty and parameter.kind in {
+            inspect.Parameter.POSITIONAL_OR_KEYWORD,
+            inspect.Parameter.KEYWORD_ONLY,
+        }:
+            raise ContractViolation(f"missing required runtime argument: {name}")
+    try:
+        return fn(**kwargs)
+    except TypeError:
+        if len(kwargs) == 1:
+            return fn(*kwargs.values())
+        raise
+
+
+def _decision_value(result: Any) -> bool:
+    if isinstance(result, bool):
+        return result
+    if isinstance(result, Mapping):
+        for key in ("allowed", "ready", "approved", "passed", "success", "ok"):
+            if key in result:
+                return bool(result[key])
+        status = result.get("status")
+        if isinstance(status, str):
+            status_lower = status.lower()
+            if status_lower in {"allowed", "ready", "approved", "pass", "passed", "success", "ok"}:
+                return True
+            if status_lower in {"blocked", "denied", "failed", "fail", "rejected"}:
+                return False
+    for attr in ("allowed", "ready", "approved", "passed", "success", "ok"):
+        if hasattr(result, attr):
+            return bool(getattr(result, attr))
+    if hasattr(result, "status"):
+        status = getattr(result, "status")
+        if isinstance(status, str):
+            status_lower = status.lower()
+            if status_lower in {"allowed", "ready", "approved", "pass", "passed", "success", "ok"}:
+                return True
+            if status_lower in {"blocked", "denied", "failed", "fail", "rejected"}:
+                return False
+    return bool(result)
+
+
+def _require_decision(result: Any, *, should_pass: bool, context: str) -> None:
+    decision = _decision_value(result)
+    if should_pass and not decision:
+        raise ContractViolation(f"{context} returned a blocked decision")
+    if not should_pass and decision:
+        raise ContractViolation(f"{context} unexpectedly allowed the invalid case")
+
+
 def _module_public_names(module: Any) -> list[str]:
     return [name for name in dir(module) if not name.startswith("_")]
-
-
-def _pick_surface_object(module: Any, module_name: str) -> tuple[str, Any]:
-    public_names = _module_public_names(module)
-    hints = EXPECTED_PUBLIC_HINTS[module_name]
-    preferred_names = [
-        name
-        for name in getattr(module, "__all__", [])
-        if name in public_names
-    ]
-    preferred_names.extend(
-        name
-        for name in public_names
-        if any(hint in name.lower() for hint in hints)
-    )
-    preferred_names.extend(
-        name
-        for name in public_names
-        if name.isupper()
-    )
-
-    seen: set[str] = set()
-    for name in preferred_names:
-        if name in seen:
-            continue
-        seen.add(name)
-        value = getattr(module, name)
-        if isinstance(value, Mapping) or (is_dataclass(value) and not isinstance(value, type)):
-            return name, value
-    raise ContractViolation(
-        f"{module_name} did not expose an inspectable policy surface"
-    )
-
-
-def validate_activation_policy(policy: Mapping[str, Any]) -> None:
-    for field in EXPECTED_SURFACE_KEYS["activation_policies"]:
-        if field not in policy:
-            raise ContractViolation(f"missing required activation policy field: {field}")
-    _require_non_empty_str(policy["policy_id"], "policy_id")
-    _require_mapping(policy["rules"], "rules")
-    if not isinstance(policy["fail_closed"], bool):
-        raise ContractViolation("fail_closed must be a boolean")
-    if canonical_size_bytes(dict(policy)) > 64 * 1024:
-        raise ContractViolation("activation policy exceeds max manifest size")
-
-
-def validate_trust_band(trust_band: Mapping[str, Any]) -> None:
-    for field in EXPECTED_SURFACE_KEYS["trust_bands"]:
-        if field not in trust_band:
-            raise ContractViolation(f"missing required trust band field: {field}")
-    _require_non_empty_str(trust_band["band_id"], "band_id")
-    if not isinstance(trust_band["rank"], int) or trust_band["rank"] < 0:
-        raise ContractViolation("rank must be a non-negative integer")
-    if not isinstance(trust_band["fail_closed"], bool):
-        raise ContractViolation("fail_closed must be a boolean")
-    if canonical_size_bytes(dict(trust_band)) > 64 * 1024:
-        raise ContractViolation("trust band exceeds max manifest size")
-
-
-def validate_active_dormant_control(control: Mapping[str, Any]) -> None:
-    for field in EXPECTED_SURFACE_KEYS["active_dormant_control"]:
-        if field not in control:
-            raise ContractViolation(f"missing required active/dormant control field: {field}")
-    _require_non_empty_str(control["control_id"], "control_id")
-    _require_str_list(control["active_states"], "active_states")
-    _require_str_list(control["dormant_states"], "dormant_states")
-    _require_non_empty_str(control["profile_scope"], "profile_scope")
-    if not isinstance(control["fail_closed"], bool):
-        raise ContractViolation("fail_closed must be a boolean")
-    if canonical_size_bytes(dict(control)) > 64 * 1024:
-        raise ContractViolation("active/dormant control exceeds max manifest size")
 
 
 def import_runtime_module(module_name: str) -> Any | None:
@@ -232,16 +324,120 @@ def runtime_modules_available() -> bool:
     return all(import_runtime_module(module_name) is not None for module_name in RUNTIME_IMPORTS)
 
 
-def run_case(case_id: str, target: str, expected_pass: bool, fn) -> CaseResult:
-    try:
-        fn()
-    except Exception as exc:  # noqa: BLE001 - surfaced in the report.
-        if expected_pass:
-            return CaseResult(case_id, target, expected_pass, False, f"unexpected failure: {exc}")
-        return CaseResult(case_id, target, expected_pass, True, f"failed as expected: {exc}")
-    if expected_pass:
-        return CaseResult(case_id, target, expected_pass, True, "passed")
-    return CaseResult(case_id, target, expected_pass, False, "unexpected pass")
+def load_runtime_api() -> dict[str, Any]:
+    modules = {module_name: import_runtime_module(module_name) for module_name in RUNTIME_IMPORTS}
+    if any(module is None for module in modules.values()):
+        missing = [name for name, module in modules.items() if module is None]
+        raise ContractViolation(f"runtime module failed to import: {', '.join(missing)}")
+
+    def find_symbol(symbol: str) -> Any:
+        for module in modules.values():
+            if hasattr(module, symbol):
+                return getattr(module, symbol)
+        raise ContractViolation(f"runtime symbol not found: {symbol}")
+
+    return {
+        "modules": modules,
+        "ActivationPolicy": find_symbol("ActivationPolicy"),
+        "TrustBand": find_symbol("TrustBand"),
+        "default_trust_band_policy": find_symbol("default_trust_band_policy"),
+        "trust_band_for_score": find_symbol("trust_band_for_score"),
+        "evaluate_activation_readiness": find_symbol("evaluate_activation_readiness"),
+        "evaluate_dormant_pressure": find_symbol("evaluate_dormant_pressure"),
+        "build_lifecycle_transition_request": find_symbol("build_lifecycle_transition_request"),
+    }
+
+
+def _candidate_payloads(base_candidates: list[dict[str, Any]], *, invalid_key: str | None = None) -> list[dict[str, Any]]:
+    payloads: list[dict[str, Any]] = []
+    for candidate in base_candidates:
+        payloads.append(candidate)
+        if invalid_key is not None and invalid_key in candidate:
+            broken = dict(candidate)
+            broken.pop(invalid_key, None)
+            payloads.append(broken)
+    return payloads
+
+
+def _from_payload(factory: Any, payload_candidates: list[dict[str, Any]]) -> Any:
+    last_error: Exception | None = None
+    for payload in payload_candidates:
+        try:
+            return factory.from_payload(payload)
+        except Exception as exc:  # noqa: BLE001 - expected while probing real runtime shape.
+            last_error = exc
+    raise ContractViolation(f"no candidate payload was accepted: {last_error}")
+
+
+def _trust_band_payload_candidates() -> list[dict[str, Any]]:
+    return [
+        {
+            "band_name": "trusted",
+            "scheduler_priority": 10,
+            "minimum_score": 0.85,
+            "fail_closed": True,
+        },
+        {
+            "name": "trusted",
+            "scheduler_priority": 10,
+            "minimum_score": 0.85,
+            "fail_closed": True,
+        },
+        {
+            "trust_band_name": "trusted",
+            "scheduler_priority": 10,
+            "minimum_score": 0.85,
+            "fail_closed": True,
+        },
+    ]
+
+
+def _activation_policy_payload_candidates() -> list[dict[str, Any]]:
+    return [
+        {
+            "policy_name": "phase-3-default",
+            "allowed_trust_bands": ["trusted"],
+            "minimum_trust_band": "trusted",
+            "minimum_score": 0.85,
+            "max_active_cells": 32,
+            "max_dormant_blueprints": 128,
+            "max_scheduler_cost": 1.0,
+            "fail_closed": True,
+        },
+        {
+            "name": "phase-3-default",
+            "allowed_trust_bands": ["trusted"],
+            "minimum_trust_band": "trusted",
+            "minimum_score": 0.85,
+            "max_active_cells": 32,
+            "max_dormant_blueprints": 128,
+            "max_scheduler_cost": 1.0,
+            "fail_closed": True,
+        },
+        {
+            "policy_id": "phase-3-default",
+            "allowed_trust_bands": ["trusted"],
+            "minimum_trust_band": "trusted",
+            "minimum_score": 0.85,
+            "max_active_cells": 32,
+            "max_dormant_blueprints": 128,
+            "max_scheduler_cost": 1.0,
+            "fail_closed": True,
+        },
+    ]
+
+
+def _build_context(*, blocked: bool = False) -> dict[str, Any]:
+    context = dict(BLOCKING_CONTEXT if blocked else ACTIVATION_CONTEXT)
+    return context
+
+
+def _expected_ready_output(result: Any) -> None:
+    _require_decision(result, should_pass=True, context="activation readiness")
+
+
+def _expected_blocked_output(result: Any, context: str) -> None:
+    _require_decision(result, should_pass=False, context=context)
 
 
 def build_blocked_report(missing: list[str]) -> dict[str, Any]:
@@ -262,19 +458,23 @@ def build_blocked_report(missing: list[str]) -> dict[str, Any]:
             "missing_files": missing,
         },
         "planned_checks": [
-            "activation-policy-surface-importable",
-            "trust-band-surface-importable",
-            "active-dormant-control-surface-importable",
-            "activation-policy-rejects-missing-required-fields",
-            "trust-band-rejects-invalid-rank-and-band-id",
-            "active-dormant-control-rejects-empty-state-lists",
+            "valid trust band payload passes",
+            "invalid trust band name fails",
+            "negative scheduler priority fails",
+            "valid activation policy payload passes",
+            "missing required activation policy field fails",
+            "dormant-to-active readiness passes for allowed trust band and within profile/cost limits",
+            "blocked or insufficient trust band fails",
+            "active cell ceiling breach fails",
+            "dormant blueprint ceiling breach fails",
+            "invalid lifecycle transition request fails",
         ],
         "results": [],
         "summary": {
             "overall_pass": False,
             "passed_cases": 0,
             "total_cases": 0,
-            "blocked_cases": 3,
+            "blocked_cases": 10,
         },
         "outputs": {
             "report": rel(REPORT_PATH),
@@ -289,81 +489,343 @@ def build_blocked_report(missing: list[str]) -> dict[str, Any]:
 
 
 def build_pass_report() -> dict[str, Any]:
-    modules = {module_name: import_runtime_module(module_name) for module_name in RUNTIME_IMPORTS}
-    cases: list[CaseResult] = []
-    runtime_exports: dict[str, Any] = {}
+    api = load_runtime_api()
+    ActivationPolicy = api["ActivationPolicy"]
+    TrustBand = api["TrustBand"]
+    default_trust_band_policy = api["default_trust_band_policy"]
+    trust_band_for_score = api["trust_band_for_score"]
+    evaluate_activation_readiness = api["evaluate_activation_readiness"]
+    evaluate_dormant_pressure = api["evaluate_dormant_pressure"]
+    build_lifecycle_transition_request = api["build_lifecycle_transition_request"]
 
-    for module_name, module in modules.items():
-        if module is None:
-            raise ContractViolation(f"runtime module failed to import: {module_name}")
-        surface_name, surface_value = _pick_surface_object(module, module_name)
-        surface = _coerce_mapping(surface_value, f"{module_name}.{surface_name}")
-        runtime_exports[module_name] = {
-            "surface_name": surface_name,
-            "public_names": _module_public_names(module),
-            "surface_keys": sorted(surface.keys()),
+    cases: list[CaseResult] = []
+    runtime_exports: dict[str, Any] = {
+        "modules": {
+            name: _module_public_names(module)
+            for name, module in api["modules"].items()
         }
-        if module_name == "activation_policies":
-            validate_activation_policy(surface)
-            cases.append(
-                run_case(
-                    "activation-policy-pass",
-                    "activation_policies",
-                    True,
-                    lambda: validate_activation_policy(surface),
-                )
-            )
-            cases.append(
-                run_case(
-                    "activation-policy-missing-field",
-                    "activation_policies",
-                    False,
-                    lambda: validate_activation_policy(
+    }
+
+    trust_band = _from_payload(TrustBand, _trust_band_payload_candidates())
+    runtime_exports["trust_band"] = {
+        "type": type(trust_band).__name__,
+        "fields": sorted(_coerce_mapping(trust_band, "trust_band").keys()),
+    }
+
+    activation_policy = _from_payload(ActivationPolicy, _activation_policy_payload_candidates())
+    runtime_exports["activation_policy"] = {
+        "type": type(activation_policy).__name__,
+        "fields": sorted(_coerce_mapping(activation_policy, "activation_policy").keys()),
+    }
+
+    if not hasattr(trust_band, "enforce_activation"):
+        raise ContractViolation("TrustBand.enforce_activation is missing")
+    if not hasattr(trust_band, "enforce_minimum_band"):
+        raise ContractViolation("TrustBand.enforce_minimum_band is missing")
+    if not hasattr(activation_policy, "evaluate_activation"):
+        raise ContractViolation("ActivationPolicy.evaluate_activation is missing")
+
+    cases.append(
+        run_case(
+            "trust-band-pass",
+            "trust_bands",
+            True,
+            lambda: None if _from_payload(TrustBand, _trust_band_payload_candidates()) else None,
+        )
+    )
+
+    cases.append(
+        run_case(
+            "trust-band-invalid-name",
+            "trust_bands",
+            False,
+            lambda: _from_payload(
+                TrustBand,
+                _candidate_payloads(
+                    [
                         {
-                            **surface,
-                            "rules": {k: v for k, v in surface["rules"].items() if k != "fail_closed"},
+                            "band_name": "",
+                            "scheduler_priority": 10,
+                            "minimum_score": 0.85,
+                            "fail_closed": True,
                         }
-                    ),
+                    ],
+                ),
+            ),
+        )
+    )
+
+    cases.append(
+        run_case(
+            "trust-band-negative-scheduler-priority",
+            "trust_bands",
+            False,
+            lambda: _from_payload(
+                TrustBand,
+                _candidate_payloads(
+                    [
+                        {
+                            "band_name": "trusted",
+                            "scheduler_priority": -1,
+                            "minimum_score": 0.85,
+                            "fail_closed": True,
+                        }
+                    ],
+                ),
+            ),
+        )
+    )
+
+    cases.append(
+        run_case(
+            "trust-band-enforce-activation-pass",
+            "trust_bands",
+            True,
+            lambda: trust_band.enforce_activation(),
+        )
+    )
+
+    cases.append(
+        run_case(
+            "trust-band-enforce-activation-fails",
+            "trust_bands",
+            False,
+            lambda: _call_with_context(
+                insufficient_band.enforce_activation,
+                {
+                    "trust_band": insufficient_band,
+                    "band": insufficient_band,
+                    "minimum_band": trust_band,
+                    "required_band": trust_band,
+                    "minimum_score": 0.95,
+                    "score": 0.10,
+                },
+            ),
+        )
+    )
+
+    cases.append(
+        run_case(
+            "activation-policy-pass",
+            "activation_policies",
+            True,
+            lambda: None if _from_payload(ActivationPolicy, _activation_policy_payload_candidates()) else None,
+        )
+    )
+
+    cases.append(
+        run_case(
+            "activation-policy-missing-field",
+            "activation_policies",
+            False,
+            lambda: _from_payload(
+                ActivationPolicy,
+                _candidate_payloads(
+                    [
+                        {
+                            "policy_name": "phase-3-default",
+                            "minimum_trust_band": "trusted",
+                            "minimum_score": 0.85,
+                            "max_active_cells": 32,
+                            "max_dormant_blueprints": 128,
+                            "max_scheduler_cost": 1.0,
+                            "fail_closed": True,
+                        }
+                    ],
+                ),
+            ),
+        )
+    )
+
+    readiness_context = _build_context(blocked=False)
+    readiness_context["policy"] = activation_policy
+    readiness_context["activation_policy"] = activation_policy
+    readiness_context["trust_band"] = trust_band
+    readiness_context["band"] = trust_band
+    readiness_context["trust_band_policy"] = _call_with_context(
+        default_trust_band_policy,
+        {
+            **readiness_context,
+            "trust_band": trust_band,
+            "band": trust_band,
+            "policy": activation_policy,
+            "activation_policy": activation_policy,
+            "minimum_score": 0.95,
+            "score": 0.95,
+            "trust_score": 0.95,
+            "scheduler_priority": 10,
+        },
+    )
+    readiness_context["recommended_band"] = _call_with_context(
+        trust_band_for_score,
+        {
+            "score": 0.95,
+            "trust_score": 0.95,
+            "minimum_score": 0.95,
+        },
+    )
+    readiness_result = _call_with_context(evaluate_activation_readiness, readiness_context)
+    _expected_ready_output(readiness_result)
+
+    cases.append(
+        run_case(
+            "dormant-to-active-readiness-pass",
+            "active_dormant_control",
+            True,
+            lambda: _expected_ready_output(
+                _call_with_context(evaluate_activation_readiness, readiness_context)
+            ),
+        )
+    )
+
+    blocked_context = _build_context(blocked=True)
+    blocked_context["policy"] = activation_policy
+    blocked_context["activation_policy"] = activation_policy
+    blocked_context["trust_band"] = trust_band
+    blocked_context["band"] = trust_band
+    insufficient_band = trust_band_for_score(0.10)
+    blocked_context["blocked_trust_band"] = insufficient_band
+    blocked_context["trust_band_policy"] = _call_with_context(
+        default_trust_band_policy,
+        {
+            **blocked_context,
+            "trust_band": insufficient_band,
+            "band": insufficient_band,
+            "policy": activation_policy,
+            "activation_policy": activation_policy,
+            "minimum_score": 0.95,
+            "score": 0.10,
+            "trust_score": 0.10,
+            "scheduler_priority": -1,
+        },
+    )
+
+    cases.append(
+        run_case(
+            "blocked-trust-band-fails",
+            "active_dormant_control",
+            False,
+            lambda: _expected_blocked_output(
+                _call_with_context(
+                    evaluate_activation_readiness,
+                    {
+                        **blocked_context,
+                        "trust_band": insufficient_band,
+                        "band": insufficient_band,
+                        "active_cell_count": 8,
+                        "dormant_blueprint_count": 16,
+                        "scheduler_priority": 1,
+                        "scheduler_cost": 0.5,
+                        "cost": 0.5,
+                        "estimated_cost": 0.5,
+                    },
+                ),
+                "blocked trust band readiness",
+            ),
+        )
+    )
+
+    cases.append(
+        run_case(
+            "active-cell-ceiling-breach-fails",
+            "active_dormant_control",
+            False,
+            lambda: _expected_blocked_output(
+                _call_with_context(
+                    evaluate_dormant_pressure,
+                    {
+                        **blocked_context,
+                        "active_cell_count": 128,
+                        "active_cells": 128,
+                        "dormant_blueprint_count": 16,
+                        "dormant_blueprints": 16,
+                    },
+                ),
+                "active cell ceiling breach",
+            ),
+        )
+    )
+
+    cases.append(
+        run_case(
+            "dormant-blueprint-ceiling-breach-fails",
+            "active_dormant_control",
+            False,
+            lambda: _expected_blocked_output(
+                _call_with_context(
+                    evaluate_dormant_pressure,
+                    {
+                        **blocked_context,
+                        "active_cell_count": 16,
+                        "active_cells": 16,
+                        "dormant_blueprint_count": 512,
+                        "dormant_blueprints": 512,
+                    },
+                ),
+                "dormant blueprint ceiling breach",
+            ),
+        )
+    )
+
+    cases.append(
+        run_case(
+            "invalid-lifecycle-transition-request-fails",
+            "active_dormant_control",
+            False,
+            lambda: _expected_blocked_output(
+                _call_with_context(
+                    build_lifecycle_transition_request,
+                    {
+                        "policy": activation_policy,
+                        "activation_policy": activation_policy,
+                        "trust_band": insufficient_band,
+                        "band": insufficient_band,
+                        "current_state": "active",
+                        "source_state": "active",
+                        "target_state": "active",
+                        "requested_state": "active",
+                        "transition": "active_to_active",
+                        "reason": "invalid transition request",
+                        "cell_id": "cell-invalid-transition",
+                    },
+                ),
+                "invalid lifecycle transition request",
+            ),
+        )
+    )
+
+    # Exercise the policy object directly as well, since the runtime API exposes it.
+    activation_evaluation = _call_with_context(
+        activation_policy.evaluate_activation,
+        {
+            **readiness_context,
+            "policy": activation_policy,
+            "activation_policy": activation_policy,
+            "trust_band": trust_band,
+            "band": trust_band,
+        },
+    )
+    _expected_ready_output(activation_evaluation)
+
+    cases.append(
+        run_case(
+            "activation-policy-direct-evaluation-pass",
+            "activation_policies",
+            True,
+            lambda: _expected_ready_output(
+                _call_with_context(
+                    activation_policy.evaluate_activation,
+                    {
+                        **readiness_context,
+                        "policy": activation_policy,
+                        "activation_policy": activation_policy,
+                        "trust_band": trust_band,
+                        "band": trust_band,
+                    },
                 )
-            )
-        elif module_name == "trust_bands":
-            validate_trust_band(surface)
-            cases.append(
-                run_case(
-                    "trust-band-pass",
-                    "trust_bands",
-                    True,
-                    lambda: validate_trust_band(surface),
-                )
-            )
-            cases.append(
-                run_case(
-                    "trust-band-invalid-rank",
-                    "trust_bands",
-                    False,
-                    lambda: validate_trust_band({**surface, "rank": -1}),
-                )
-            )
-        elif module_name == "active_dormant_control":
-            validate_active_dormant_control(surface)
-            cases.append(
-                run_case(
-                    "active-dormant-control-pass",
-                    "active_dormant_control",
-                    True,
-                    lambda: validate_active_dormant_control(surface),
-                )
-            )
-            cases.append(
-                run_case(
-                    "active-dormant-control-empty-state-lists",
-                    "active_dormant_control",
-                    False,
-                    lambda: validate_active_dormant_control(
-                        {**surface, "active_states": [], "dormant_states": []}
-                    ),
-                )
-            )
+            ),
+        )
+    )
 
     if not cases:
         raise ContractViolation("no activation/trust cases were executed")
@@ -435,6 +897,18 @@ def build_manifest() -> dict[str, Any]:
         "slice": SLICE_ID,
         "status": "slice_2_blocked" if not runtime_files_exist else "slice_2_ready",
     }
+
+
+def run_case(case_id: str, target: str, expected_pass: bool, fn) -> CaseResult:
+    try:
+        fn()
+    except Exception as exc:  # noqa: BLE001 - surfaced in the report.
+        if expected_pass:
+            return CaseResult(case_id, target, expected_pass, False, f"unexpected failure: {exc}")
+        return CaseResult(case_id, target, expected_pass, True, f"failed as expected: {exc}")
+    if expected_pass:
+        return CaseResult(case_id, target, expected_pass, True, "passed")
+    return CaseResult(case_id, target, expected_pass, False, "unexpected pass")
 
 
 def main() -> int:
