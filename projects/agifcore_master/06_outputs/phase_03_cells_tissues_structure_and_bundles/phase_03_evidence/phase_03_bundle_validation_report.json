@@ -3,7 +3,7 @@
   "notes": [
     "slice-1 only",
     "bundle validation checks manifest structure and nested payloads",
-    "later Governor runs can resolve runtime modules with PYTHONPATH pointed at the KPL runtime worktree"
+    "verifier resolves runtime modules from the repo-relative execution path"
   ],
   "phase": "Phase 3",
   "results": [
@@ -56,7 +56,7 @@
     "cell_contracts",
     "tissue_manifests"
   ],
-  "runtime_modules_available": true,
+  "runtime_modules_available": false,
   "slice": "slice_1",
   "summary": {
     "expected_failures_verified": true,

@@ -2,7 +2,7 @@
 
 Phase 3 remains open. This is slice 1 only.
 
-Governor can rerun the same verifier later with `PYTHONPATH` pointed at the KPL runtime worktree.
+Governor can rerun the same verifier later without external `PYTHONPATH` wiring.
 
 ## Review
 
@@ -14,6 +14,7 @@ Governor can rerun the same verifier later with `PYTHONPATH` pointed at the KPL 
 - the bundle report shows a valid pass case
 - the bundle report shows fail-closed cases for missing fields, bad shape, missing schema refs, and invalid nested payloads
 - the evidence manifest references the actual report files on disk
+- the verifier resolves the runtime directory from the repo layout directly
 - nothing claims Phase 3 is closed
 
 ## Failure Looks Like

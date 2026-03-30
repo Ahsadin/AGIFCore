@@ -2,7 +2,7 @@
 
 Phase 3 remains open. This demo package covers slice 1 only.
 
-Governor can rerun the same verifiers later with `PYTHONPATH` pointed at the KPL runtime worktree.
+Governor can rerun the same verifiers later without external `PYTHONPATH` wiring.
 
 ## Inspect
 
@@ -17,7 +17,7 @@ Governor can rerun the same verifiers later with `PYTHONPATH` pointed at the KPL
 - the bundle-validation verifier ran on slice-1 fixtures
 - the evidence manifest was rebuilt from actual report files
 - Phase 3 remains open
-- later Governor runs can resolve the runtime modules from `PYTHONPATH`
+- later Governor runs resolve the runtime modules from the repo layout directly
 
 ## Report Status
 

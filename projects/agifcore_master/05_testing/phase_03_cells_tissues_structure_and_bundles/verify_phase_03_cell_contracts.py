@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib
 import json
+import sys
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Mapping
@@ -60,6 +61,15 @@ RUNTIME_DIR = PROJECT_ROOT / EXECUTION_ROOT_NAME / "phase_03_cells_tissues_struc
 
 class ContractViolation(ValueError):
     pass
+
+
+def ensure_runtime_import_path() -> None:
+    runtime_path = str(RUNTIME_DIR)
+    if runtime_path not in sys.path:
+        sys.path.insert(0, runtime_path)
+
+
+ensure_runtime_import_path()
 
 
 def load_runtime_module(module_name: str) -> Any | None:
@@ -331,7 +341,7 @@ def build_contract_report() -> dict[str, Any]:
         },
         "notes": [
             "slice-1 only",
-            "later Governor runs can resolve runtime modules with PYTHONPATH pointed at the KPL runtime worktree",
+            "verifier resolves runtime modules from the repo-relative execution path",
             "reports are generated from executed case checks, not summary prose",
         ],
     }
@@ -377,7 +387,7 @@ def write_demo_index(contract_report_exists: bool, bundle_report_exists: bool) -
 
 Phase 3 remains open. This demo package covers slice 1 only.
 
-Governor can rerun the same verifiers later with `PYTHONPATH` pointed at the KPL runtime worktree.
+Governor can rerun the same verifiers later without external `PYTHONPATH` wiring.
 
 ## Inspect
 
@@ -392,7 +402,7 @@ Governor can rerun the same verifiers later with `PYTHONPATH` pointed at the KPL
 - the bundle-validation verifier ran on slice-1 fixtures
 - the evidence manifest was rebuilt from actual report files
 - Phase 3 remains open
-- later Governor runs can resolve the runtime modules from `PYTHONPATH`
+- later Governor runs resolve the runtime modules from the repo layout directly
 
 ## Report Availability
 

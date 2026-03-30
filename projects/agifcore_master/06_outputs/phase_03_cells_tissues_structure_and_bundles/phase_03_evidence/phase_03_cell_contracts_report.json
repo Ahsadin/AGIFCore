@@ -4,7 +4,7 @@
   "max_tissue_members": 16,
   "notes": [
     "slice-1 only",
-    "later Governor runs can resolve runtime modules with PYTHONPATH pointed at the KPL runtime worktree",
+    "verifier resolves runtime modules from the repo-relative execution path",
     "reports are generated from executed case checks, not summary prose"
   ],
   "phase": "Phase 3",
@@ -65,7 +65,7 @@
     "bundle_manifest",
     "bundle_schema_validation"
   ],
-  "runtime_modules_available": true,
+  "runtime_modules_available": false,
   "slice": "slice_1",
   "summary": {
     "expected_failures_verified": true,

@@ -1,9 +1,36 @@
 from __future__ import annotations
 
 import json
+import sys
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Mapping
+
+
+def _find_repo_root() -> Path:
+    here = Path(__file__).resolve()
+    for candidate in [here.parent, *here.parents]:
+        if (candidate / "projects" / "agifcore_master" / "PROJECT_README.md").exists():
+            return candidate
+    raise RuntimeError("unable to locate repo root from verifier path")
+
+
+def _ensure_runtime_import_path() -> None:
+    repo_root = _find_repo_root()
+    runtime_dir = (
+        repo_root
+        / "projects"
+        / "agifcore_master"
+        / "04_execution"
+        / "phase_03_cells_tissues_structure_and_bundles"
+        / "agifcore_phase3_structure"
+    )
+    runtime_path = str(runtime_dir)
+    if runtime_path not in sys.path:
+        sys.path.insert(0, runtime_path)
+
+
+_ensure_runtime_import_path()
 
 from verify_phase_03_cell_contracts import (
     DEMO_DIR,
@@ -247,7 +274,7 @@ def build_bundle_report() -> dict[str, Any]:
         "notes": [
             "slice-1 only",
             "bundle validation checks manifest structure and nested payloads",
-            "later Governor runs can resolve runtime modules with PYTHONPATH pointed at the KPL runtime worktree",
+            "verifier resolves runtime modules from the repo-relative execution path",
         ],
     }
 
@@ -257,7 +284,7 @@ def write_demo_docs(contract_report: Mapping[str, Any], bundle_report: Mapping[s
 
 Phase 3 remains open. This demo package covers slice 1 only.
 
-Governor can rerun the same verifiers later with `PYTHONPATH` pointed at the KPL runtime worktree.
+Governor can rerun the same verifiers later without external `PYTHONPATH` wiring.
 
 ## Inspect
 
@@ -272,7 +299,7 @@ Governor can rerun the same verifiers later with `PYTHONPATH` pointed at the KPL
 - the bundle-validation verifier ran on slice-1 fixtures
 - the evidence manifest was rebuilt from actual report files
 - Phase 3 remains open
-- later Governor runs can resolve the runtime modules from `PYTHONPATH`
+- later Governor runs resolve the runtime modules from the repo layout directly
 
 ## Report Status
 
@@ -283,7 +310,7 @@ Governor can rerun the same verifiers later with `PYTHONPATH` pointed at the KPL
 
 Phase 3 remains open. This is slice 1 only.
 
-Governor can rerun the same verifier later with `PYTHONPATH` pointed at the KPL runtime worktree.
+Governor can rerun the same verifier later without external `PYTHONPATH` wiring.
 
 ## Review
 
@@ -295,6 +322,7 @@ Governor can rerun the same verifier later with `PYTHONPATH` pointed at the KPL 
 - the bundle report shows a valid pass case
 - the bundle report shows fail-closed cases for missing fields, bad shape, missing schema refs, and invalid nested payloads
 - the evidence manifest references the actual report files on disk
+- the verifier resolves the runtime directory from the repo layout directly
 - nothing claims Phase 3 is closed
 
 ## Failure Looks Like
