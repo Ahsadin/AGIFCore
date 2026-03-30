@@ -13,7 +13,7 @@ Phase order may not be rearranged by execution convenience.
 | 0 | AGIFCore reset and source freeze | establish the project scaffold, historical archival boundary, source-freeze boundary, and truthful starting gate | `approved` |
 | 1 | constitution and full-system blueprint | freeze the constitution-facing rules, inheritance map, architecture framing, proof domains, and closure protocol before runtime work | `approved` |
 | 2 | fabric kernel and workspace | define and later build the governed workspace and fabric kernel substrate | `approved` |
-| 3 | cells, tissues, structure, and bundles | define and later build the cell and tissue composition layer plus bundle structure | `open` |
+| 3 | cells, tissues, structure, and bundles | define and later build the cell and tissue composition layer plus bundle structure | `approved` |
 | 4 | memory planes | define and later build reviewed memory planes, lifecycle controls, and pressure handling | `open` |
 | 5 | graph and knowledge structures | define and later build the descriptor, skill, concept, and transfer graph stack | `open` |
 | 6 | world model and simulator | define and later build simulation and world-model boundaries | `open` |
