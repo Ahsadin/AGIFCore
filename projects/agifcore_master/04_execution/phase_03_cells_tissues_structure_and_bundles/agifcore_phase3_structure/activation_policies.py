@@ -146,6 +146,11 @@ class ActivationPolicy:
         trust_band_name = (
             trust_band.band_name if isinstance(trust_band, TrustBand) else trust_band
         )
+        if isinstance(trust_band, TrustBand) and not trust_band.allow_activation:
+            return {
+                "allow": False,
+                "reason": "trust band blocks activation",
+            }
         if not trust_band_at_least(
             trust_band_name, minimum_band=self.minimum_trust_band
         ):
