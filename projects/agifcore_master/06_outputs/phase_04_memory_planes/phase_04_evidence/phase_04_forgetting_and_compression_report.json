@@ -1,0 +1,202 @@
+{
+  "anchors": {
+    "compressed_summary": {
+      "abstraction": "Compressed semantic summary for bounded retention review.",
+      "concept_type": "compressed_abstraction",
+      "correction_refs": [],
+      "created_at": "2026-03-30T17:55:02+00:00",
+      "entry_id": "semantic-compression-00000001",
+      "graph_refs": [
+        "concept-ref://memory/pressure",
+        "concept-ref://memory/review",
+        "concept-ref://memory/compression"
+      ],
+      "metadata": {
+        "compressed_entry_ids": [
+          "semantic-0001",
+          "semantic-0002"
+        ],
+        "compression_id": "phase4-compression-00000001"
+      },
+      "provenance_refs": [
+        "trace://phase4/semantic/a",
+        "trace://phase4/semantic/b"
+      ],
+      "review_ref": "memory-review-00000002",
+      "source_candidate_id": "compression-approved-0001",
+      "status": "active",
+      "superseded_by": null,
+      "supporting_refs": [
+        "support://phase4/semantic/a",
+        "support://phase4/semantic/b",
+        "support://phase4/semantic/compression-summary"
+      ],
+      "updated_at": "2026-03-30T17:55:02+00:00"
+    },
+    "compression_result": {
+      "compressed_at": "2026-03-30T17:55:02+00:00",
+      "compression_id": "phase4-compression-00000001",
+      "created_id": "semantic-compression-00000001",
+      "review_ref": "memory-review-00000002",
+      "source_ids": [
+        "semantic-0001",
+        "semantic-0002"
+      ],
+      "state_bytes_after": 2216,
+      "state_bytes_before": 1295,
+      "target_plane": "semantic"
+    },
+    "episodic_recent_window": [
+      {
+        "content_refs": [],
+        "conversation_id": "conv-phase4-slice3",
+        "correction_markers": [],
+        "correction_status": "original",
+        "created_at": "2026-03-30T17:55:02+00:00",
+        "event_id": "event-0003",
+        "event_summary": "Recent episodic note that remains active.",
+        "event_type": "memory_observation",
+        "provenance_refs": [
+          "trace://phase4/episodic/3"
+        ],
+        "turn_id": "turn-0003"
+      },
+      {
+        "content_refs": [
+          "forgotten://event-0001",
+          "forgotten://event-0002"
+        ],
+        "conversation_id": "conv-phase4-slice3",
+        "correction_markers": [],
+        "correction_status": "original",
+        "created_at": "2026-03-30T17:55:02+00:00",
+        "event_id": "event-summary-0001",
+        "event_summary": "Two older episodic observations were compressed into one retained summary anchor.",
+        "event_type": "episodic_forgetting_summary",
+        "provenance_refs": [
+          "trace://phase4/episodic/1",
+          "trace://phase4/episodic/2",
+          "trace://phase4/episodic/summary"
+        ],
+        "turn_id": "turn-0004"
+      }
+    ],
+    "forgetting_result": {
+      "forgetting_id": "phase4-forgetting-00000001",
+      "forgotten_at": "2026-03-30T17:55:02+00:00",
+      "forgotten_event_ids": [
+        "event-0001",
+        "event-0002"
+      ],
+      "replay_id": "phase4-memory-update-00000001",
+      "review_ref": "memory-review-00000003",
+      "rollback_ref": "rollback-00000001",
+      "state_bytes_after": 1019,
+      "state_bytes_before": 1220,
+      "summary_event_id": "event-summary-0001"
+    },
+    "procedural_state": {
+      "constraints": [
+        "no execution side effects",
+        "keep provenance attached"
+      ],
+      "created_at": "2026-03-30T17:55:02+00:00",
+      "graph_refs": [
+        "skill-ref://memory/review-note"
+      ],
+      "metadata": {
+        "risk_band": "bounded"
+      },
+      "objective": "Summarize a reviewed memory note safely.",
+      "postconditions": [
+        "summary artifact exists"
+      ],
+      "preconditions": [
+        "reviewed note exists"
+      ],
+      "procedure_id": "procedure-0001",
+      "procedure_name": "review_memory_note",
+      "provenance_refs": [
+        "trace://phase4/procedural/0001"
+      ],
+      "retirement_ref": "retire://phase4/phase4-retirement-00000001",
+      "review_ref": "memory-review-prev-0003",
+      "source_candidate_id": "candidate-prev-0003",
+      "status": "retired",
+      "steps": [
+        "read reviewed note",
+        "extract stable summary",
+        "attach provenance"
+      ],
+      "updated_at": "2026-03-30T17:55:02+00:00"
+    },
+    "retirement_result": {
+      "retired_at": "2026-03-30T17:55:02+00:00",
+      "retirement_id": "phase4-retirement-00000001",
+      "retirement_ref": "retire://phase4/phase4-retirement-00000001",
+      "review_ref": "memory-review-00000004",
+      "target_id": "procedure-0001",
+      "target_plane": "procedural"
+    },
+    "semantic_active_entry_ids": [
+      "semantic-compression-00000001"
+    ]
+  },
+  "assertions": [
+    {
+      "id": "compression-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "pending-compression-review-blocked",
+      "result": "pass"
+    },
+    {
+      "id": "semantic-compression-retains-one-summary-anchor",
+      "result": "pass"
+    },
+    {
+      "id": "episodic-forgetting-uses-rollback-safe-update",
+      "result": "pass"
+    },
+    {
+      "id": "procedural-retirement-removes-active-entry",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_04_MEMORY_PLANES.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/__init__.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/compression_pipeline.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/forgetting_retirement.py"
+  ],
+  "notes": [
+    "compression leaves one retained semantic summary anchor and supersedes the source entries",
+    "forgetting removes selected episodic events only through a rollback-safe batch with a retained summary event",
+    "retirement explicitly removes the reviewed procedure from the active set",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_evidence/phase_04_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_evidence/phase_04_forgetting_and_compression_report.json"
+  },
+  "phase": "4",
+  "runtime_symbols": {
+    "compression_pipeline": [
+      "CompressionPipeline",
+      "CompressionPipelineError",
+      "compress_semantic_entries"
+    ],
+    "forgetting_retirement": [
+      "ForgettingRetirementManager",
+      "ForgettingRetirementError",
+      "forget_episodic_events",
+      "retire_procedure"
+    ]
+  },
+  "slice": "slice_3",
+  "status": "pass",
+  "verifier": "verify_phase_04_forgetting_and_compression"
+}
