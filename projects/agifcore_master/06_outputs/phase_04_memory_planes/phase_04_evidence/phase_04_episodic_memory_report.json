@@ -13,14 +13,14 @@
         "conversation_id": "conv-phase4-slice1-episodic",
         "correction_markers": [
           {
-            "corrected_at": "2026-03-30T17:22:05+00:00",
+            "corrected_at": "2026-03-30T17:56:51+00:00",
             "correction_id": "correction-0001",
             "reason": "replace initial summary with reviewed summary",
             "replacement_event_id": "event-0002"
           }
         ],
         "correction_status": "corrected",
-        "created_at": "2026-03-30T17:22:05+00:00",
+        "created_at": "2026-03-30T17:56:51+00:00",
         "event_id": "event-0001",
         "event_summary": "turn entered bounded memory",
         "event_type": "turn_admitted",
@@ -36,7 +36,7 @@
         "conversation_id": "conv-phase4-slice1-episodic",
         "correction_markers": [],
         "correction_status": "original",
-        "created_at": "2026-03-30T17:22:05+00:00",
+        "created_at": "2026-03-30T17:56:51+00:00",
         "event_id": "event-0002",
         "event_summary": "response anchored for replay",
         "event_type": "response_ready",
