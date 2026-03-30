@@ -1,0 +1,72 @@
+{
+  "anchors": {
+    "active_anchor_ids": [
+      "anchor-0002"
+    ],
+    "anchor_ids": [
+      "anchor-0001",
+      "anchor-0002"
+    ],
+    "exported_anchor_count": 2
+  },
+  "assertions": [
+    {
+      "id": "continuity-memory-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "self-history-anchor-recorded",
+      "result": "pass"
+    },
+    {
+      "id": "supersession-marker-applied",
+      "result": "pass"
+    },
+    {
+      "id": "duplicate-anchor-blocked",
+      "result": "pass"
+    },
+    {
+      "id": "load-state-roundtrip-clean",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_04_MEMORY_PLANES.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/05_testing/phase_02_fabric_kernel_and_workspace/verify_phase_02_workspace_state.py",
+    "projects/agifcore_master/05_testing/phase_02_fabric_kernel_and_workspace/verify_phase_02_replay.py",
+    "projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_activation_and_trust.py",
+    "projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_bundle_integrity.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/__init__.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/working_memory.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/episodic_memory.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/continuity_memory.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/memory_review.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/rollback_safe_updates.py"
+  ],
+  "notes": [
+    "continuity memory preserves durable self-history anchors",
+    "supersession remains explicit and reversible",
+    "no approval implied"
+  ],
+  "outputs": {
+    "report": "projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_evidence/phase_04_continuity_memory_report.json"
+  },
+  "phase": "4",
+  "runtime_symbols": {
+    "continuity_memory": [
+      "ContinuityMemoryStore",
+      "ContinuityAnchor",
+      "ContinuityMemoryError",
+      "record_anchor",
+      "mark_superseded",
+      "active_anchor_ids",
+      "load_state"
+    ]
+  },
+  "slice": "slice_1",
+  "status": "pass",
+  "verifier": "verify_phase_04_continuity_memory"
+}

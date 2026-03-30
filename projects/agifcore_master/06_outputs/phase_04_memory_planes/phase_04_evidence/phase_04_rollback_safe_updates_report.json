@@ -1,0 +1,221 @@
+{
+  "anchors": {
+    "applied": {
+      "label": "phase4-memory-apply",
+      "reason": null,
+      "replay_id": "phase4-memory-update-00000001",
+      "rollback_ref": "rollback-00000001",
+      "state_hash": "513c256205e8512dfa02cbf7160e9913d573cd269275ed7037b809a13c29fa1b",
+      "status": "applied",
+      "updated_state": {
+        "episodic": {
+          "correction_status": "corrected",
+          "event_ids": [
+            "event-0001"
+          ]
+        },
+        "working": {
+          "payload": {
+            "draft": false,
+            "summary": "applied"
+          },
+          "turn_ref": "turn://conv-phase4-slice1-rollback/turn-0001"
+        }
+      }
+    },
+    "explicit_reject": {
+      "label": "phase4-memory-apply",
+      "reason": "manual rollback after inspection",
+      "replay_id": "phase4-memory-update-00000003",
+      "rollback_ref": "rollback-00000001",
+      "state_hash": "513c256205e8512dfa02cbf7160e9913d573cd269275ed7037b809a13c29fa1b",
+      "status": "rejected",
+      "updated_state": {
+        "episodic": {
+          "correction_status": "original",
+          "event_ids": [
+            "event-0001"
+          ]
+        },
+        "working": {
+          "payload": {
+            "draft": true,
+            "summary": "initial"
+          },
+          "turn_ref": "turn://conv-phase4-slice1-rollback/turn-0001"
+        }
+      }
+    },
+    "rejected": {
+      "label": "phase4-memory-reject",
+      "reason": "reject this batch",
+      "replay_id": null,
+      "rollback_ref": "rollback-00000002",
+      "state_hash": "513c256205e8512dfa02cbf7160e9913d573cd269275ed7037b809a13c29fa1b",
+      "status": "rejected",
+      "updated_state": {
+        "episodic": {
+          "correction_status": "original",
+          "event_ids": [
+            "event-0001"
+          ]
+        },
+        "working": {
+          "payload": {
+            "draft": true,
+            "summary": "initial"
+          },
+          "turn_ref": "turn://conv-phase4-slice1-rollback/turn-0001"
+        }
+      }
+    },
+    "replay_export": {
+      "max_ledger_bytes": 536870912,
+      "record_count": 3,
+      "records": [
+        {
+          "conversation_id": "conv-phase4-slice1-rollback",
+          "event_ids": [
+            "event-0001"
+          ],
+          "recorded_at": "2026-03-30T17:17:03+00:00",
+          "replay_id": "phase4-memory-update-00000001",
+          "state_anchor_hash": "124959cebb16d30af22854b503fe89901681f926300592c355a03deb5cc0d2b8",
+          "trace_anchor_hash": "3b56899ec5d6f9fe41df2275267df16724fc80a5362b1341b10561ab495aa285",
+          "turn_id": "turn-0001"
+        },
+        {
+          "conversation_id": "conv-phase4-slice1-rollback",
+          "event_ids": [
+            "event-0001"
+          ],
+          "recorded_at": "2026-03-30T17:17:03+00:00",
+          "replay_id": "phase4-memory-update-00000002",
+          "state_anchor_hash": "513c256205e8512dfa02cbf7160e9913d573cd269275ed7037b809a13c29fa1b",
+          "trace_anchor_hash": "5829e9e460639034e340506b2f55e948b4f851dd4cdfcd8081f4681ed030b48b",
+          "turn_id": "turn-0001"
+        },
+        {
+          "conversation_id": "conv-phase4-slice1-rollback",
+          "event_ids": [
+            "event-0001"
+          ],
+          "recorded_at": "2026-03-30T17:17:03+00:00",
+          "replay_id": "phase4-memory-update-00000003",
+          "state_anchor_hash": "513c256205e8512dfa02cbf7160e9913d573cd269275ed7037b809a13c29fa1b",
+          "trace_anchor_hash": "82bb5f01af15f340e6312c5c20af42b7b6fb898bbd823ca9be5f9dad0ff3d507",
+          "turn_id": "turn-0001"
+        }
+      ]
+    },
+    "restored": {
+      "label": "phase4-memory-apply",
+      "reason": null,
+      "replay_id": "phase4-memory-update-00000002",
+      "rollback_ref": "rollback-00000001",
+      "state_hash": "513c256205e8512dfa02cbf7160e9913d573cd269275ed7037b809a13c29fa1b",
+      "status": "restored",
+      "updated_state": {
+        "episodic": {
+          "correction_status": "original",
+          "event_ids": [
+            "event-0001"
+          ]
+        },
+        "working": {
+          "payload": {
+            "draft": true,
+            "summary": "initial"
+          },
+          "turn_ref": "turn://conv-phase4-slice1-rollback/turn-0001"
+        }
+      }
+    },
+    "rollback_snapshot": {
+      "max_snapshot_count": 8,
+      "max_total_bytes": 1073741824,
+      "snapshot_count": 2,
+      "snapshots": [
+        {
+          "created_at": "2026-03-30T17:17:03+00:00",
+          "label": "phase4-memory-apply",
+          "rollback_ref": "rollback-00000001",
+          "size_bytes": 187,
+          "state_hash": "513c256205e8512dfa02cbf7160e9913d573cd269275ed7037b809a13c29fa1b"
+        },
+        {
+          "created_at": "2026-03-30T17:17:03+00:00",
+          "label": "phase4-memory-reject",
+          "rollback_ref": "rollback-00000002",
+          "size_bytes": 187,
+          "state_hash": "513c256205e8512dfa02cbf7160e9913d573cd269275ed7037b809a13c29fa1b"
+        }
+      ],
+      "total_bytes": 374
+    }
+  },
+  "assertions": [
+    {
+      "id": "rollback-safe-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "apply-batch-records-replay-and-snapshot",
+      "result": "pass"
+    },
+    {
+      "id": "restore-batch-restores-original-state",
+      "result": "pass"
+    },
+    {
+      "id": "reject-batch-rejects-and-restores",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_04_MEMORY_PLANES.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/05_testing/phase_02_fabric_kernel_and_workspace/verify_phase_02_workspace_state.py",
+    "projects/agifcore_master/05_testing/phase_02_fabric_kernel_and_workspace/verify_phase_02_replay.py",
+    "projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_activation_and_trust.py",
+    "projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_bundle_integrity.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/rollback_controller.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/replay_ledger.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/event_types.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/__init__.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/working_memory.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/episodic_memory.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/continuity_memory.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/memory_review.py",
+    "projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/rollback_safe_updates.py"
+  ],
+  "notes": [
+    "rollback-safe updates must go through Phase 2 rollback and replay anchors",
+    "apply, restore, and reject are all explicit runtime behaviors",
+    "no approval implied"
+  ],
+  "outputs": {
+    "report": "projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_evidence/phase_04_rollback_safe_updates_report.json"
+  },
+  "phase": "4",
+  "runtime_symbols": {
+    "phase2_substrate": [
+      "RollbackController",
+      "ReplayLedger"
+    ],
+    "rollback_safe_updates": [
+      "RollbackSafeUpdater",
+      "RollbackSafeUpdateError",
+      "UpdateBatchResult",
+      "apply_batch",
+      "restore_batch",
+      "reject_batch",
+      "rollback_snapshot_export",
+      "replay_export"
+    ]
+  },
+  "slice": "slice_1",
+  "status": "pass",
+  "verifier": "verify_phase_04_rollback_safe_updates"
+}
