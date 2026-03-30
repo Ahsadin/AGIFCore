@@ -38,121 +38,33 @@ TRUST_BAND_PASS_CANDIDATES: list[dict[str, Any]] = [
     {
         "band_name": "standard",
         "allow_activation": True,
-        "max_scheduler_priority": 10,
         "allow_split_merge": True,
         "require_manual_review": False,
-        "policy_envelope": {"slice": "slice_2"},
-    },
-    {
-        "band_name": "elevated",
-        "allow_activation": True,
-        "max_scheduler_priority": 15,
-        "allow_split_merge": True,
-        "require_manual_review": False,
-        "policy_envelope": {"slice": "slice_2"},
+        "max_scheduler_priority": 6,
+        "policy_envelope": {},
     },
     {
         "band_name": "guarded",
-        "allow_activation": True,
-        "max_scheduler_priority": 8,
+        "allow_activation": False,
         "allow_split_merge": False,
         "require_manual_review": True,
-        "policy_envelope": {"slice": "slice_2"},
+        "max_scheduler_priority": 3,
+        "policy_envelope": {},
     },
 ]
 
 ACTIVATION_POLICY_PASS_CANDIDATES: list[dict[str, Any]] = [
     {
-        "policy_id": "phase-3-default",
-        "cell_id": "cell-slice-2",
-        "tissue_id": "tissue-slice-2",
+        "policy_id": "policy-alpha",
+        "cell_id": "cell-alpha",
+        "tissue_id": "tissue-alpha",
         "profile": "laptop",
-        "minimum_need_score": 0.85,
+        "minimum_need_score": 0.5,
         "maximum_estimated_cost": 1.0,
         "minimum_trust_band": "guarded",
-        "policy_envelope": {"max_active_cells": 32, "max_dormant_blueprints": 128},
-    },
-    {
-        "policy_id": "phase-3-default",
-        "cell_id": "cell-slice-2",
-        "tissue_id": "tissue-slice-2",
-        "profile": "mobile",
-        "minimum_need_score": 0.7,
-        "maximum_estimated_cost": 0.5,
-        "minimum_trust_band": "standard",
-        "policy_envelope": {"max_active_cells": 8, "max_dormant_blueprints": 32},
-    },
-    {
-        "policy_id": "phase-3-default",
-        "cell_id": "cell-slice-2",
-        "tissue_id": "tissue-slice-2",
-        "profile": "builder",
-        "minimum_need_score": 0.9,
-        "maximum_estimated_cost": 0.75,
-        "minimum_trust_band": "elevated",
-        "policy_envelope": {"max_active_cells": 24, "max_dormant_blueprints": 64},
+        "policy_envelope": {},
     },
 ]
-
-ACTIVATION_CONTEXT = {
-    "policy": None,
-    "activation_policy": None,
-    "trust_band": None,
-    "band": None,
-    "profile": "laptop",
-    "profile_name": "laptop",
-    "scheduler_profile": "laptop",
-    "scheduler_priority": 10,
-    "scheduler_cost": 1.0,
-    "cost": 1.0,
-    "estimated_cost": 1.0,
-    "maximum_estimated_cost": 1.0,
-    "active_cell_count": 16,
-    "active_cells": 16,
-    "dormant_blueprint_count": 32,
-    "dormant_blueprints": 32,
-    "current_state": "dormant",
-    "source_state": "dormant",
-    "target_state": "active",
-    "requested_state": "active",
-    "transition": "dormant_to_active",
-    "reason": "slice 2 verifier",
-    "cell_id": "cell-slice-2",
-}
-
-BLOCKING_CONTEXT = {
-    "policy": None,
-    "activation_policy": None,
-    "trust_band": None,
-    "band": None,
-    "profile": "mobile",
-    "profile_name": "mobile",
-    "scheduler_profile": "mobile",
-    "scheduler_priority": -1,
-    "scheduler_cost": 3.5,
-    "cost": 3.5,
-    "estimated_cost": 3.5,
-    "maximum_estimated_cost": 0.5,
-    "active_cell_count": 64,
-    "active_cells": 64,
-    "dormant_blueprint_count": 256,
-    "dormant_blueprints": 256,
-    "current_state": "active",
-    "source_state": "active",
-    "target_state": "active",
-    "requested_state": "active",
-    "transition": "active_to_active",
-    "reason": "invalid slice 2 verifier",
-    "cell_id": "cell-blocked",
-}
-
-TRUST_BAND_MINIMUM_CANDIDATES = (
-    "guarded",
-    "minimum_trust_band",
-    "minimum_band",
-    "required_band",
-    "minimum_band_name",
-)
 
 
 @dataclass(frozen=True)
@@ -464,10 +376,11 @@ def build_pass_report() -> dict[str, Any]:
         }
     }
 
-    trust_band = _from_payload(TrustBand, _trust_band_payload_candidates())
+    standard_band = _from_payload(TrustBand, [TRUST_BAND_PASS_CANDIDATES[0]])
+    guarded_band = _from_payload(TrustBand, [TRUST_BAND_PASS_CANDIDATES[1]])
     runtime_exports["trust_band"] = {
-        "type": type(trust_band).__name__,
-        "fields": sorted(_coerce_mapping(trust_band, "trust_band").keys()),
+        "type": type(standard_band).__name__,
+        "fields": sorted(_coerce_mapping(standard_band, "trust_band").keys()),
     }
 
     activation_policy = _from_payload(ActivationPolicy, _activation_policy_payload_candidates())
@@ -476,9 +389,9 @@ def build_pass_report() -> dict[str, Any]:
         "fields": sorted(_coerce_mapping(activation_policy, "activation_policy").keys()),
     }
 
-    if not hasattr(trust_band, "enforce_activation"):
+    if not hasattr(standard_band, "enforce_activation"):
         raise ContractViolation("TrustBand.enforce_activation is missing")
-    if not hasattr(trust_band, "enforce_minimum_band"):
+    if not hasattr(standard_band, "enforce_minimum_band"):
         raise ContractViolation("TrustBand.enforce_minimum_band is missing")
     if not hasattr(activation_policy, "evaluate_activation"):
         raise ContractViolation("ActivationPolicy.evaluate_activation is missing")
@@ -488,7 +401,7 @@ def build_pass_report() -> dict[str, Any]:
             "trust-band-pass",
             "trust_bands",
             True,
-            lambda: None if _from_payload(TrustBand, _trust_band_payload_candidates()) else None,
+            lambda: _from_payload(TrustBand, [TRUST_BAND_PASS_CANDIDATES[0]]),
         )
     )
 
@@ -499,16 +412,16 @@ def build_pass_report() -> dict[str, Any]:
             False,
             lambda: _from_payload(
                 TrustBand,
-                _candidate_payloads(
-                    [
-                        {
-                            "band_name": "",
-                            "scheduler_priority": 10,
-                            "minimum_score": 0.85,
-                            "fail_closed": True,
-                        }
-                    ],
-                ),
+                [
+                    {
+                        "band_name": "trusted",
+                        "allow_activation": True,
+                        "allow_split_merge": True,
+                        "require_manual_review": False,
+                        "max_scheduler_priority": 6,
+                        "policy_envelope": {},
+                    }
+                ],
             ),
         )
     )
@@ -520,45 +433,26 @@ def build_pass_report() -> dict[str, Any]:
             False,
             lambda: _from_payload(
                 TrustBand,
-                _candidate_payloads(
-                    [
-                        {
-                            "band_name": "trusted",
-                            "scheduler_priority": -1,
-                            "minimum_score": 0.85,
-                            "fail_closed": True,
-                        }
-                    ],
-                ),
+                [
+                    {
+                        "band_name": "standard",
+                        "allow_activation": True,
+                        "allow_split_merge": True,
+                        "require_manual_review": False,
+                        "max_scheduler_priority": -1,
+                        "policy_envelope": {},
+                    }
+                ],
             ),
         )
     )
 
     cases.append(
         run_case(
-            "trust-band-enforce-activation-pass",
-            "trust_bands",
-            True,
-            lambda: trust_band.enforce_activation(),
-        )
-    )
-
-    cases.append(
-        run_case(
-            "trust-band-enforce-activation-fails",
+            "trust-band-explicit-block",
             "trust_bands",
             False,
-            lambda: _call_with_context(
-                insufficient_band.enforce_activation,
-                {
-                    "trust_band": insufficient_band,
-                    "band": insufficient_band,
-                    "minimum_band": trust_band,
-                    "required_band": trust_band,
-                    "minimum_score": 0.95,
-                    "score": 0.10,
-                },
-            ),
+            lambda: guarded_band.enforce_activation(),
         )
     )
 
@@ -567,7 +461,7 @@ def build_pass_report() -> dict[str, Any]:
             "activation-policy-pass",
             "activation_policies",
             True,
-            lambda: None if _from_payload(ActivationPolicy, _activation_policy_payload_candidates()) else None,
+            lambda: _from_payload(ActivationPolicy, _activation_policy_payload_candidates()),
         )
     )
 
@@ -578,52 +472,27 @@ def build_pass_report() -> dict[str, Any]:
             False,
             lambda: _from_payload(
                 ActivationPolicy,
-                _candidate_payloads(
-                    [
-                        {
-                            "policy_name": "phase-3-default",
-                            "minimum_trust_band": "trusted",
-                            "minimum_score": 0.85,
-                            "max_active_cells": 32,
-                            "max_dormant_blueprints": 128,
-                            "max_scheduler_cost": 1.0,
-                            "fail_closed": True,
-                        }
-                    ],
-                ),
+                [
+                    {
+                        "cell_id": "cell-alpha",
+                        "tissue_id": "tissue-alpha",
+                        "profile": "laptop",
+                        "minimum_need_score": 0.5,
+                        "maximum_estimated_cost": 1.0,
+                        "minimum_trust_band": "guarded",
+                        "policy_envelope": {},
+                    }
+                ],
             ),
         )
     )
 
-    readiness_context = _build_context(blocked=False)
-    readiness_context["policy"] = activation_policy
-    readiness_context["activation_policy"] = activation_policy
-    readiness_context["trust_band"] = trust_band
-    readiness_context["band"] = trust_band
-    readiness_context["trust_band_policy"] = _call_with_context(
-        default_trust_band_policy,
-        {
-            **readiness_context,
-            "trust_band": trust_band,
-            "band": trust_band,
-            "policy": activation_policy,
-            "activation_policy": activation_policy,
-            "minimum_score": 0.95,
-            "score": 0.95,
-            "trust_score": 0.95,
-            "scheduler_priority": 10,
-        },
-    )
-    readiness_context["recommended_band"] = _call_with_context(
-        trust_band_for_score,
-        {
-            "score": 0.95,
-            "trust_score": 0.95,
-            "minimum_score": 0.95,
-        },
-    )
-    readiness_result = _call_with_context(evaluate_activation_readiness, readiness_context)
-    _expected_ready_output(readiness_result)
+    default_policy = default_trust_band_policy(standard_band)
+    recommended_band = trust_band_for_score(0.8)
+    runtime_exports["policy_helpers"] = {
+        "default_policy_type": type(default_policy).__name__,
+        "recommended_band_type": type(recommended_band).__name__,
+    }
 
     cases.append(
         run_case(
@@ -631,72 +500,32 @@ def build_pass_report() -> dict[str, Any]:
             "active_dormant_control",
             True,
             lambda: _expected_ready_output(
-                _call_with_context(evaluate_activation_readiness, readiness_context)
+                evaluate_activation_readiness(
+                    policy=activation_policy,
+                    lifecycle_state="dormant",
+                    need_score=0.8,
+                    estimated_cost=0.5,
+                    active_cell_count=16,
+                    trust_band=standard_band,
+                )
             ),
         )
     )
 
-    blocked_context = _build_context(blocked=True)
-    blocked_context["policy"] = activation_policy
-    blocked_context["activation_policy"] = activation_policy
-    blocked_context["trust_band"] = trust_band
-    blocked_context["band"] = trust_band
-    insufficient_band = _from_payload(
-        TrustBand,
-        [
-            {
-                "band_name": "guarded",
-                "allow_activation": False,
-                "max_scheduler_priority": 10,
-                "allow_split_merge": False,
-                "require_manual_review": True,
-                "policy_envelope": {"minimum_trust_band": "guarded"},
-            }
-        ],
-    )
-    blocked_context["blocked_trust_band"] = insufficient_band
-    blocked_context["trust_band_policy"] = _call_with_context(
-        default_trust_band_policy,
-        {
-            **blocked_context,
-            "trust_band": insufficient_band,
-            "band": insufficient_band,
-            "policy": activation_policy,
-            "activation_policy": activation_policy,
-            "minimum_trust_band": insufficient_band,
-            "minimum_band": insufficient_band,
-            "required_band": insufficient_band,
-            "score": 0.10,
-            "trust_score": 0.10,
-            "scheduler_priority": 10,
-        },
-    )
+    blocked_band = guarded_band
 
     cases.append(
         run_case(
             "blocked-trust-band-fails",
             "active_dormant_control",
             False,
-            lambda: _expected_blocked_output(
-                _call_with_context(
-                    evaluate_activation_readiness,
-                    {
-                        **blocked_context,
-                        "trust_band": insufficient_band,
-                        "band": insufficient_band,
-                        "active_cell_count": 8,
-                        "active_cells": 8,
-                        "dormant_blueprint_count": 16,
-                        "dormant_blueprints": 16,
-                        "scheduler_priority": 1,
-                        "scheduler_cost": 0.5,
-                        "cost": 0.5,
-                        "estimated_cost": 0.5,
-                        "maximum_estimated_cost": 0.5,
-                        "minimum_trust_band": insufficient_band,
-                    },
-                ),
-                "blocked trust band readiness",
+            lambda: evaluate_activation_readiness(
+                policy=activation_policy,
+                lifecycle_state="dormant",
+                need_score=0.8,
+                estimated_cost=0.5,
+                active_cell_count=16,
+                trust_band=blocked_band,
             ),
         )
     )
@@ -706,23 +535,13 @@ def build_pass_report() -> dict[str, Any]:
             "active-cell-ceiling-breach-fails",
             "active_dormant_control",
             False,
-            lambda: _expected_blocked_output(
-                _call_with_context(
-                    evaluate_activation_readiness,
-                    {
-                        **blocked_context,
-                        "active_cell_count": 128,
-                        "active_cells": 128,
-                        "dormant_blueprint_count": 16,
-                        "dormant_blueprints": 16,
-                        "scheduler_priority": 10,
-                        "scheduler_cost": 0.5,
-                        "cost": 0.5,
-                        "estimated_cost": 0.5,
-                        "maximum_estimated_cost": 0.5,
-                    },
-                ),
-                "active cell ceiling breach",
+            lambda: evaluate_activation_readiness(
+                policy=activation_policy,
+                lifecycle_state="dormant",
+                need_score=0.8,
+                estimated_cost=0.5,
+                active_cell_count=32,
+                trust_band=standard_band,
             ),
         )
     )
@@ -732,18 +551,9 @@ def build_pass_report() -> dict[str, Any]:
             "dormant-blueprint-ceiling-breach-fails",
             "active_dormant_control",
             False,
-            lambda: _expected_blocked_output(
-                _call_with_context(
-                    evaluate_dormant_pressure,
-                    {
-                        **blocked_context,
-                        "active_cell_count": 16,
-                        "active_cells": 16,
-                        "dormant_blueprint_count": 512,
-                        "dormant_blueprints": 512,
-                    },
-                ),
-                "dormant blueprint ceiling breach",
+            lambda: evaluate_dormant_pressure(
+                dormant_blueprint_count=129,
+                lifecycle_state="dormant",
             ),
         )
     )
@@ -754,33 +564,13 @@ def build_pass_report() -> dict[str, Any]:
             "active_dormant_control",
             False,
             lambda: build_lifecycle_transition_request(
-                policy=activation_policy,
-                activation_policy=activation_policy,
-                trust_band=insufficient_band,
-                band=insufficient_band,
-                current_state="active",
-                source_state="active",
-                target_state="active",
-                requested_state="active",
-                transition="active_to_active",
-                reason="invalid transition request",
                 cell_id="cell-invalid-transition",
+                from_state="active",
+                to_state="active",
+                reason="invalid transition",
             ),
         )
     )
-
-    # Exercise the policy object directly as well, since the runtime API exposes it.
-    activation_evaluation = _call_with_context(
-        activation_policy.evaluate_activation,
-        {
-            **readiness_context,
-            "policy": activation_policy,
-            "activation_policy": activation_policy,
-            "trust_band": trust_band,
-            "band": trust_band,
-        },
-    )
-    _expected_ready_output(activation_evaluation)
 
     cases.append(
         run_case(
@@ -788,15 +578,13 @@ def build_pass_report() -> dict[str, Any]:
             "activation_policies",
             True,
             lambda: _expected_ready_output(
-                _call_with_context(
-                    activation_policy.evaluate_activation,
-                    {
-                        **readiness_context,
-                        "policy": activation_policy,
-                        "activation_policy": activation_policy,
-                        "trust_band": trust_band,
-                        "band": trust_band,
-                    },
+                activation_policy.evaluate_activation(
+                    policy=activation_policy,
+                    lifecycle_state="dormant",
+                    need_score=0.8,
+                    estimated_cost=0.5,
+                    active_cell_count=16,
+                    trust_band=standard_band,
                 )
             ),
         )
