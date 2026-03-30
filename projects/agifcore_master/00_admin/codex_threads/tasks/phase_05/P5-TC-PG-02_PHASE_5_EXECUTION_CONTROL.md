@@ -44,7 +44,6 @@
   - `projects/agifcore_master/00_admin/codex_threads/tasks/phase_05/P5-TC-PG-02_PHASE_5_EXECUTION_CONTROL.md`
   - `projects/agifcore_master/00_admin/codex_threads/handoffs/PHASE_05_EXECUTION_START_BRIEF.md`
   - `projects/agifcore_master/00_admin/codex_threads/handoffs/PHASE_05_GOVERNOR_VERIFICATION_RECORD.md`
-  - `projects/agifcore_master/00_admin/codex_threads/handoffs/PHASE_05_VALIDATION_REQUEST.md`
 - Forbidden Files:
   - `projects/agifcore_master/01_plan/MASTER_PLAN.md`
   - any `projects/agifcore_master/04_execution/*`
