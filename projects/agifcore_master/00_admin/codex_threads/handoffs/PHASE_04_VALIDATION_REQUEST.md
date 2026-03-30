@@ -5,26 +5,26 @@ Phase 4 is ready for user review, but it remains open. No approval is implied by
 Please inspect these files in this order:
 
 1. Review context and rules
-   - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P4-TC-VA-02/projects/agifcore_master/00_admin/codex_threads/tasks/phase_04/P4-TC-VA-02_PHASE_4_FINAL_VALIDATION_REQUEST.md`
-   - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P4-TC-VA-02/projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md`
-   - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P4-TC-VA-02/projects/agifcore_master/01_plan/PHASE_04_MEMORY_PLANES.md`
+   - `projects/agifcore_master/00_admin/codex_threads/tasks/phase_04/P4-TC-VA-02_PHASE_4_FINAL_VALIDATION_REQUEST.md`
+   - `projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md`
+   - `projects/agifcore_master/01_plan/PHASE_04_MEMORY_PLANES.md`
 
 2. Independent checks already completed
-   - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P4-TC-ASA-05/projects/agifcore_master/00_admin/codex_threads/tasks/phase_04/P4-AUDIT-06_PHASE_4_FINAL_PACKAGE_REAUDIT_REPORT.md`
-   - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P4-TC-VA-02/projects/agifcore_master/00_admin/codex_threads/handoffs/PHASE_04_GOVERNOR_VERIFICATION_RECORD.md`
+   - `projects/agifcore_master/00_admin/codex_threads/tasks/phase_04/P4-AUDIT-06_PHASE_4_FINAL_PACKAGE_REAUDIT_REPORT.md`
+   - `projects/agifcore_master/00_admin/codex_threads/handoffs/PHASE_04_GOVERNOR_VERIFICATION_RECORD.md`
 
 3. User-facing demo bundle
-   - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P4-TC-REL-02/projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_demo_bundle/phase_04_demo_index.md`
-   - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P4-TC-REL-02/projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_demo_bundle/phase_04_memory_carry_forward_demo.md`
-   - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P4-TC-REL-02/projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_demo_bundle/phase_04_correction_demo.md`
-   - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P4-TC-REL-02/projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_demo_bundle/phase_04_forgetting_compression_demo.md`
+   - `projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_demo_bundle/phase_04_demo_index.md`
+   - `projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_demo_bundle/phase_04_memory_carry_forward_demo.md`
+   - `projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_demo_bundle/phase_04_correction_demo.md`
+   - `projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_demo_bundle/phase_04_forgetting_compression_demo.md`
 
 4. Evidence package behind the demos
-   - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P4-TC-MA-04/projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_evidence/phase_04_evidence_manifest.json`
+   - `projects/agifcore_master/06_outputs/phase_04_memory_planes/phase_04_evidence/phase_04_evidence_manifest.json`
 
 5. Optional deep inspection surfaces
-   - runtime: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P4-TC-MA-04/projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/`
-   - testing: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P4-TC-MA-04/projects/agifcore_master/05_testing/phase_04_memory_planes/`
+   - runtime: `projects/agifcore_master/04_execution/phase_04_memory_planes/agifcore_phase4_memory/`
+   - testing: `projects/agifcore_master/05_testing/phase_04_memory_planes/`
 
 What good looks like:
 
