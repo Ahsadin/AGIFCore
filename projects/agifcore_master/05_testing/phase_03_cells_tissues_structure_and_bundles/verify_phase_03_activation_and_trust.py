@@ -306,8 +306,9 @@ def _expected_ready_output(result: Any) -> None:
     _require_decision(result, should_pass=True, context="activation readiness")
 
 
-def _expected_blocked_output(result: Any, context: str) -> None:
+def _expected_blocked_output(result: Any, context: str) -> Any:
     _require_decision(result, should_pass=False, context=context)
+    return result
 
 
 def build_blocked_report(missing: list[str]) -> dict[str, Any]:
@@ -672,13 +673,15 @@ def build_manifest() -> dict[str, Any]:
 
 def run_case(case_id: str, target: str, expected_pass: bool, fn) -> CaseResult:
     try:
-        fn()
+        result = fn()
     except Exception as exc:  # noqa: BLE001 - surfaced in the report.
         if expected_pass:
             return CaseResult(case_id, target, expected_pass, False, f"unexpected failure: {exc}")
         return CaseResult(case_id, target, expected_pass, True, f"failed as expected: {exc}")
     if expected_pass:
         return CaseResult(case_id, target, expected_pass, True, "passed")
+    if _decision_value(result) is False:
+        return CaseResult(case_id, target, expected_pass, True, "failed as expected: blocked decision")
     return CaseResult(case_id, target, expected_pass, False, "unexpected pass")
 
 
@@ -695,9 +698,13 @@ def main() -> int:
     report = build_pass_report()
     dump_json(REPORT_PATH, report)
     dump_json(MANIFEST_PATH, build_manifest())
-    print("phase_3 slice_2 activation/trust verifier: PASS")
+    if bool(report.get("summary", {}).get("overall_pass")):
+        print("phase_3 slice_2 activation/trust verifier: PASS")
+        print(json.dumps(report, indent=2, sort_keys=True))
+        return 0
+    print("phase_3 slice_2 activation/trust verifier: FAIL")
     print(json.dumps(report, indent=2, sort_keys=True))
-    return 0
+    return 1
 
 
 if __name__ == "__main__":
