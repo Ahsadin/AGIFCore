@@ -136,7 +136,14 @@ def build_pass_report() -> dict[str, object]:
         support_refs=["ctx://phase4/slice2"],
     )
     working.add_candidate(
-        candidate_id="candidate-semantic",
+        candidate_id="candidate-semantic-pending",
+        candidate_kind="theory_fragment",
+        target_plane="semantic",
+        payload={"summary": "pending semantic abstraction", "supporting_refs": ["support://phase4/semantic/pending"]},
+        provenance_refs=[turn_ref],
+    )
+    working.add_candidate(
+        candidate_id="candidate-semantic-approved",
         candidate_kind="theory_fragment",
         target_plane="semantic",
         payload={"summary": "semantic abstraction", "supporting_refs": ["support://phase4/semantic"]},
@@ -159,16 +166,16 @@ def build_pass_report() -> dict[str, object]:
 
     review = MemoryReviewQueue()
     pending_review_ref = review.submit_candidate(
-        candidate_id="candidate-semantic",
+        candidate_id="candidate-semantic-pending",
         source_plane="working",
         target_plane="semantic",
         candidate_kind="theory_fragment",
         proposed_tier="hot",
-        payload={"summary": "semantic abstraction"},
+        payload={"summary": "pending semantic abstraction"},
         provenance_refs=[turn_ref],
     )
     semantic_review_ref = review.submit_candidate(
-        candidate_id="candidate-semantic",
+        candidate_id="candidate-semantic-approved",
         source_plane="working",
         target_plane="semantic",
         candidate_kind="theory_fragment",
@@ -205,33 +212,24 @@ def build_pass_report() -> dict[str, object]:
 
     try:
         promotion.promote_review_candidate(
-            review_candidate={
-                "review_ref": pending_review_ref,
-                "target_plane": "semantic",
-                "status": "pending",
-            },
-            source_candidate=working.consume_candidate("candidate-semantic"),
+            review_ref=pending_review_ref,
+            review_queue=review,
+            source_candidate=working.consume_candidate("candidate-semantic-pending"),
             semantic_store=semantic,
         )
         pending_blocked = False
     except PromotionPipelineError:
         pending_blocked = True
 
-    # Recreate the semantic candidate because the negative check consumed it.
-    working.add_candidate(
-        candidate_id="candidate-semantic-approved",
-        candidate_kind="theory_fragment",
-        target_plane="semantic",
-        payload={"summary": "semantic abstraction", "supporting_refs": ["support://phase4/semantic"]},
-        provenance_refs=[turn_ref],
-    )
     semantic_promotion = promotion.promote_review_candidate(
-        review_candidate=review.approved_candidates(target_plane="semantic")[0],
+        review_ref=semantic_review_ref,
+        review_queue=review,
         source_candidate=working.consume_candidate("candidate-semantic-approved"),
         semantic_store=semantic,
     )
     procedural_promotion = promotion.promote_review_candidate(
-        review_candidate=review.approved_candidates(target_plane="procedural")[0],
+        review_ref=procedural_review_ref,
+        review_queue=review,
         source_candidate=working.consume_candidate("candidate-procedural"),
         procedural_store=procedural,
     )
