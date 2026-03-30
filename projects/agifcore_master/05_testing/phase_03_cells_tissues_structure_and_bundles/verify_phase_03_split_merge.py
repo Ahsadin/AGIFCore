@@ -116,6 +116,28 @@ def supporting_modules_available() -> bool:
     return all(import_runtime_module(module_name) is not None for module_name in SUPPORTING_IMPORTS)
 
 
+def _manifest_status_from_reports() -> tuple[str, bool]:
+    report_paths = sorted(EVIDENCE_DIR.glob("*_report.json"))
+    if not report_paths:
+        return "slice_3_blocked", False
+
+    all_pass = True
+    for report_path in report_paths:
+        payload = json.loads(report_path.read_text(encoding="utf-8"))
+        overall_pass = payload.get("overall_pass")
+        if overall_pass is None:
+            summary = payload.get("summary")
+            if isinstance(summary, Mapping):
+                overall_pass = summary.get("overall_pass")
+        if overall_pass is None and isinstance(payload.get("status"), str):
+            overall_pass = payload["status"] == "pass"
+        all_pass = all_pass and bool(overall_pass)
+
+    if runtime_modules_available() and all_pass:
+        return "slice_3_ready", True
+    return "slice_3_blocked", False
+
+
 def refresh_evidence_manifest() -> dict[str, Any]:
     reports: list[dict[str, Any]] = []
     for report_path in sorted(EVIDENCE_DIR.glob("*_report.json")):
@@ -135,22 +157,151 @@ def refresh_evidence_manifest() -> dict[str, Any]:
             }
         )
 
+    status, manifest_ready = _manifest_status_from_reports()
     manifest = {
         "phase": PHASE_LABEL,
         "phase_remains_open": True,
         "reports": reports,
         "runtime_modules_available": runtime_modules_available(),
         "slice": SLICE_ID,
-        "status": "slice_3_blocked" if not runtime_modules_available() else "slice_3_ready",
+        "status": status,
         "notes": [
             "evidence manifest is rebuilt from actual report files on disk",
             "slice 1 evidence remains present and real",
             "slice 2 evidence remains present and real",
-            "slice 3 split/merge runtime is absent in this lane, so the slice remains blocked rather than faked",
+            "slice 3 split/merge runtime is absent in this lane unless the runtime files are present in the configured worktree",
+            f"manifest readiness derived from real report files: {str(manifest_ready).lower()}",
         ],
     }
     dump_json(MANIFEST_PATH, manifest)
     return manifest
+
+
+def _runtime_api() -> dict[str, Any]:
+    modules = {module_name: import_runtime_module(module_name) for module_name in (*RUNTIME_IMPORTS, *SUPPORTING_IMPORTS)}
+    if any(module is None for module in modules.values()):
+        missing = [name for name, module in modules.items() if module is None]
+        raise ContractViolation(f"runtime import failed: {', '.join(missing)}")
+
+    split_merge_rules = modules["split_merge_rules"]
+    trust_bands = modules["trust_bands"]
+    tissue_manifests = modules["tissue_manifests"]
+    cell_contracts = modules["cell_contracts"]
+
+    return {
+        "modules": modules,
+        "SplitProposal": getattr(split_merge_rules, "SplitProposal"),
+        "MergeProposal": getattr(split_merge_rules, "MergeProposal"),
+        "evaluate_split_proposal": getattr(split_merge_rules, "evaluate_split_proposal"),
+        "evaluate_merge_proposal": getattr(split_merge_rules, "evaluate_merge_proposal"),
+        "TrustBand": getattr(trust_bands, "TrustBand"),
+        "default_trust_band_policy": getattr(trust_bands, "default_trust_band_policy"),
+        "validate_tissue_manifest_payload": getattr(tissue_manifests, "validate_tissue_manifest_payload"),
+        "validate_cell_contract_payload": getattr(cell_contracts, "validate_cell_contract_payload"),
+    }
+
+
+def _decision_allowed(result: Any) -> bool:
+    if isinstance(result, Mapping):
+        return bool(result.get("allowed"))
+    return bool(getattr(result, "allowed", False))
+
+
+def _decision_reason(result: Any) -> str:
+    if isinstance(result, Mapping):
+        return str(result.get("reason", ""))
+    return str(getattr(result, "reason", ""))
+
+
+def _require_allowed(result: Any, *, context: str) -> Any:
+    if not _decision_allowed(result):
+        raise ContractViolation(f"{context} blocked: {_decision_reason(result)}")
+    return result
+
+
+def _require_blocked(result: Any, *, context: str) -> Any:
+    if _decision_allowed(result):
+        raise ContractViolation(f"{context} unexpectedly allowed")
+    return result
+
+
+def _module_public_names(module: Any) -> list[str]:
+    return [name for name in dir(module) if not name.startswith("_")]
+
+
+def _cell_contract_payload(
+    *,
+    cell_id: str,
+    bundle_ref: str,
+    role_family: str,
+    role_name: str,
+    allowed_tissues: list[str],
+    lineage_id: str,
+) -> dict[str, Any]:
+    return {
+        "cell_id": cell_id,
+        "bundle_ref": bundle_ref,
+        "role_family": role_family,
+        "role_name": role_name,
+        "allowed_tissues": allowed_tissues,
+        "split_policy": {"mode": "governed"},
+        "merge_policy": {"mode": "governed"},
+        "trust_profile": {"lineage_id": lineage_id},
+        "policy_envelope": {"lineage_id": lineage_id},
+    }
+
+
+def _tissue_manifest_payload(*, tissue_id: str, member_cell_ids: list[str], allowed_role_families: list[str]) -> dict[str, Any]:
+    return {
+        "tissue_id": tissue_id,
+        "tissue_name": "Structural Tissue",
+        "allowed_role_families": allowed_role_families,
+        "member_cell_ids": member_cell_ids,
+        "routing_targets": ["bundle-validation"],
+        "policy_envelope": {"tissue_id": tissue_id},
+    }
+
+
+def _split_parent_record(*, cell_id: str, lineage_id: str, role_family: str, lifecycle_state: str = "active") -> dict[str, Any]:
+    return {
+        "cell_id": cell_id,
+        "lineage_id": lineage_id,
+        "role_family": role_family,
+        "lifecycle_state": lifecycle_state,
+    }
+
+
+def _merge_record(*, cell_id: str, lineage_id: str, role_family: str, lifecycle_state: str = "dormant") -> dict[str, Any]:
+    return {
+        "cell_id": cell_id,
+        "lineage_id": lineage_id,
+        "role_family": role_family,
+        "lifecycle_state": lifecycle_state,
+    }
+
+
+def _split_proposal_payload(*, proposal_id: str, parent_cell_id: str, lineage_id: str, child_specs: list[dict[str, Any]], reason: str) -> dict[str, Any]:
+    return {
+        "proposal_id": proposal_id,
+        "parent_cell_id": parent_cell_id,
+        "lineage_id": lineage_id,
+        "child_specs": child_specs,
+        "reason": reason,
+        "actor": "kernel",
+        "policy_envelope": {"lineage_id": lineage_id},
+    }
+
+
+def _merge_proposal_payload(*, proposal_id: str, survivor_cell_id: str, merged_cell_id: str, lineage_id: str, reason: str) -> dict[str, Any]:
+    return {
+        "proposal_id": proposal_id,
+        "survivor_cell_id": survivor_cell_id,
+        "merged_cell_id": merged_cell_id,
+        "lineage_id": lineage_id,
+        "reason": reason,
+        "actor": "kernel",
+        "policy_envelope": {"lineage_id": lineage_id},
+    }
 
 
 def build_blocked_report(missing: list[str]) -> dict[str, Any]:
@@ -227,6 +378,332 @@ def build_blocked_report(missing: list[str]) -> dict[str, Any]:
     }
 
 
+def build_pass_report() -> dict[str, Any]:
+    api = _runtime_api()
+    SplitProposal = api["SplitProposal"]
+    MergeProposal = api["MergeProposal"]
+    evaluate_split_proposal = api["evaluate_split_proposal"]
+    evaluate_merge_proposal = api["evaluate_merge_proposal"]
+    TrustBand = api["TrustBand"]
+    default_trust_band_policy = api["default_trust_band_policy"]
+    validate_tissue_manifest_payload = api["validate_tissue_manifest_payload"]
+    validate_cell_contract_payload = api["validate_cell_contract_payload"]
+    modules = api["modules"]
+
+    standard_band = TrustBand.from_payload(default_trust_band_policy("standard"))
+    guarded_band = TrustBand.from_payload(default_trust_band_policy("guarded"))
+
+    lineage_id = "lineage-structural-001"
+    tissue_id = "tissue-structural"
+    parent_contract = _cell_contract_payload(
+        cell_id="cell-parent",
+        bundle_ref="bundle-structural",
+        role_family="planner",
+        role_name="phase-3-planner",
+        allowed_tissues=[tissue_id],
+        lineage_id=lineage_id,
+    )
+    child_contract_ok = _cell_contract_payload(
+        cell_id="cell-child-a",
+        bundle_ref="bundle-structural",
+        role_family="planner",
+        role_name="phase-3-planner-child",
+        allowed_tissues=[tissue_id],
+        lineage_id=lineage_id,
+    )
+    child_contract_bad = _cell_contract_payload(
+        cell_id="cell-child-bad",
+        bundle_ref="bundle-structural",
+        role_family="router",
+        role_name="phase-3-router-child",
+        allowed_tissues=[tissue_id],
+        lineage_id=lineage_id,
+    )
+    tissue_manifest_ok = _tissue_manifest_payload(
+        tissue_id=tissue_id,
+        member_cell_ids=["cell-parent", "cell-child-a"],
+        allowed_role_families=["planner"],
+    )
+    tissue_manifest_bad = _tissue_manifest_payload(
+        tissue_id=tissue_id,
+        member_cell_ids=["cell-parent", "cell-child-bad"],
+        allowed_role_families=["planner"],
+    )
+
+    validate_cell_contract_payload(parent_contract)
+    validate_cell_contract_payload(child_contract_ok)
+    validate_tissue_manifest_payload(
+        tissue_manifest_ok,
+        cell_contracts_by_id={
+            parent_contract["cell_id"]: parent_contract,
+            child_contract_ok["cell_id"]: child_contract_ok,
+        },
+    )
+
+    cases = [
+        (
+            "split-happy-path-preserves-lineage",
+            "split_merge_rules",
+            True,
+            lambda: _require_allowed(
+                evaluate_split_proposal(
+                    proposal=SplitProposal.from_payload(
+                        _split_proposal_payload(
+                            proposal_id="split-001",
+                            parent_cell_id=parent_contract["cell_id"],
+                            lineage_id=lineage_id,
+                            child_specs=[
+                                {"cell_id": "cell-child-a", "role_family": "planner", "policy_envelope": {}},
+                                {"cell_id": "cell-child-b", "role_family": "planner", "policy_envelope": {}},
+                            ],
+                            reason="split because lineage capacity is bounded",
+                        )
+                    ),
+                    parent_record=_split_parent_record(
+                        cell_id=parent_contract["cell_id"],
+                        lineage_id=lineage_id,
+                        role_family="planner",
+                    ),
+                    trust_band=standard_band,
+                    tissue_member_count_before_split=8,
+                ),
+                context="split happy path",
+            ),
+        ),
+        (
+            "split-lineage-conflict-fails",
+            "split_merge_rules",
+            False,
+            lambda: _require_blocked(
+                evaluate_split_proposal(
+                    proposal=SplitProposal.from_payload(
+                        _split_proposal_payload(
+                            proposal_id="split-002",
+                            parent_cell_id=parent_contract["cell_id"],
+                            lineage_id="lineage-wrong",
+                            child_specs=[
+                                {"cell_id": "cell-child-a", "role_family": "planner", "policy_envelope": {}},
+                                {"cell_id": "cell-child-b", "role_family": "planner", "policy_envelope": {}},
+                            ],
+                            reason="split with wrong lineage",
+                        )
+                    ),
+                    parent_record=_split_parent_record(
+                        cell_id=parent_contract["cell_id"],
+                        lineage_id=lineage_id,
+                        role_family="planner",
+                    ),
+                    trust_band=standard_band,
+                ),
+                context="split lineage conflict",
+            ),
+        ),
+        (
+            "split-role-family-tissue-mismatch-fails",
+            "tissue_manifests",
+            False,
+            lambda: validate_tissue_manifest_payload(
+                tissue_manifest_bad,
+                cell_contracts_by_id={
+                    parent_contract["cell_id"]: parent_contract,
+                    child_contract_bad["cell_id"]: child_contract_bad,
+                },
+            ),
+        ),
+        (
+            "split-policy-bounds-breach-fails-closed",
+            "split_merge_rules",
+            False,
+            lambda: _require_blocked(
+                evaluate_split_proposal(
+                    proposal=SplitProposal.from_payload(
+                        _split_proposal_payload(
+                            proposal_id="split-003",
+                            parent_cell_id=parent_contract["cell_id"],
+                            lineage_id=lineage_id,
+                            child_specs=[
+                                {"cell_id": "cell-child-a", "role_family": "planner", "policy_envelope": {}},
+                                {"cell_id": "cell-child-b", "role_family": "planner", "policy_envelope": {}},
+                            ],
+                            reason="split pressure should fail closed",
+                        )
+                    ),
+                    parent_record=_split_parent_record(
+                        cell_id=parent_contract["cell_id"],
+                        lineage_id=lineage_id,
+                        role_family="planner",
+                    ),
+                    trust_band=guarded_band,
+                    tissue_member_count_before_split=9,
+                ),
+                context="split policy bounds breach",
+            ),
+        ),
+        (
+            "merge-happy-path-preserves-survivor-lineage",
+            "split_merge_rules",
+            True,
+            lambda: _require_allowed(
+                evaluate_merge_proposal(
+                    proposal=MergeProposal.from_payload(
+                        _merge_proposal_payload(
+                            proposal_id="merge-001",
+                            survivor_cell_id="cell-survivor",
+                            merged_cell_id="cell-merged",
+                            lineage_id=lineage_id,
+                            reason="merge after split stabilization",
+                        )
+                    ),
+                    survivor_record=_merge_record(
+                        cell_id="cell-survivor",
+                        lineage_id=lineage_id,
+                        role_family="planner",
+                        lifecycle_state="active",
+                    ),
+                    merged_record=_merge_record(
+                        cell_id="cell-merged",
+                        lineage_id=lineage_id,
+                        role_family="planner",
+                        lifecycle_state="dormant",
+                    ),
+                    trust_band=standard_band,
+                ),
+                context="merge happy path",
+            ),
+        ),
+        (
+            "merge-lineage-conflict-fails",
+            "split_merge_rules",
+            False,
+            lambda: _require_blocked(
+                evaluate_merge_proposal(
+                    proposal=MergeProposal.from_payload(
+                        _merge_proposal_payload(
+                            proposal_id="merge-002",
+                            survivor_cell_id="cell-survivor",
+                            merged_cell_id="cell-merged",
+                            lineage_id="lineage-wrong",
+                            reason="merge with lineage conflict",
+                        )
+                    ),
+                    survivor_record=_merge_record(
+                        cell_id="cell-survivor",
+                        lineage_id=lineage_id,
+                        role_family="planner",
+                        lifecycle_state="active",
+                    ),
+                    merged_record=_merge_record(
+                        cell_id="cell-merged",
+                        lineage_id="lineage-wrong",
+                        role_family="planner",
+                        lifecycle_state="dormant",
+                    ),
+                    trust_band=standard_band,
+                ),
+                context="merge lineage conflict",
+            ),
+        ),
+        (
+            "merge-role-family-mismatch-fails",
+            "split_merge_rules",
+            False,
+            lambda: _require_blocked(
+                evaluate_merge_proposal(
+                    proposal=MergeProposal.from_payload(
+                        _merge_proposal_payload(
+                            proposal_id="merge-003",
+                            survivor_cell_id="cell-survivor",
+                            merged_cell_id="cell-merged",
+                            lineage_id=lineage_id,
+                            reason="merge with role family conflict",
+                        )
+                    ),
+                    survivor_record=_merge_record(
+                        cell_id="cell-survivor",
+                        lineage_id=lineage_id,
+                        role_family="planner",
+                        lifecycle_state="active",
+                    ),
+                    merged_record=_merge_record(
+                        cell_id="cell-merged",
+                        lineage_id=lineage_id,
+                        role_family="router",
+                        lifecycle_state="dormant",
+                    ),
+                    trust_band=standard_band,
+                ),
+                context="merge role-family mismatch",
+            ),
+        ),
+    ]
+
+    results = [run_case(*case) for case in cases]
+    passed_count = sum(1 for item in results if item.passed)
+    expected_pass_count = sum(1 for item in results if item.expected_pass)
+    all_expected_succeeded = all(item.passed for item in results if item.expected_pass)
+    all_expected_failures_failed = all(item.passed for item in results if not item.expected_pass)
+    overall_pass = all_expected_succeeded and all_expected_failures_failed
+
+    return {
+        "phase": PHASE_LABEL,
+        "slice": SLICE_ID,
+        "verification": VERIFICATION_NAME,
+        "status": "pass" if overall_pass else "fail",
+        "runtime_modules_available": True,
+        "supporting_modules_available": True,
+        "runtime_imports": list(RUNTIME_IMPORTS),
+        "supporting_imports": list(SUPPORTING_IMPORTS),
+        "checked_files": [
+            *PLAN_REFS,
+            *SUPPORTING_EVIDENCE_REFS,
+            *[rel(RUNTIME_DIR / filename) for filename in RUNTIME_FILES],
+        ],
+        "results": [item.to_dict() for item in results],
+        "runtime_exports": {
+            "modules": {name: _module_public_names(module) for name, module in modules.items()},
+            "trust_band": {
+                "standard_type": type(standard_band).__name__,
+                "guarded_type": type(guarded_band).__name__,
+            },
+            "fixtures": {
+                "lineage_id": lineage_id,
+                "tissue_id": tissue_id,
+            },
+        },
+        "summary": {
+            "overall_pass": overall_pass,
+            "expected_pass_cases": expected_pass_count,
+            "expected_succeeded": all_expected_succeeded,
+            "expected_failures_verified": all_expected_failures_failed,
+            "passed_cases": passed_count,
+            "total_cases": len(results),
+        },
+        "outputs": {
+            "report": rel(REPORT_PATH),
+            "manifest": rel(MANIFEST_PATH),
+        },
+        "notes": [
+            "split/merge checks are case-driven and use the actual runtime API when the runtime file exists",
+            "lineage, role-family/tissue compatibility, and policy bounds are exercised explicitly",
+            "no approval implied",
+        ],
+    }
+
+
+def run_case(case_id: str, target: str, expected_pass: bool, fn) -> CaseResult:
+    try:
+        result = fn()
+    except Exception as exc:  # noqa: BLE001 - surfaced in the report.
+        if expected_pass:
+            return CaseResult(case_id, target, expected_pass, False, f"unexpected failure: {exc}")
+        return CaseResult(case_id, target, expected_pass, True, f"failed as expected: {exc}")
+    if expected_pass:
+        return CaseResult(case_id, target, expected_pass, True, "passed")
+    if _decision_allowed(result):
+        return CaseResult(case_id, target, expected_pass, False, "unexpected pass")
+    return CaseResult(case_id, target, expected_pass, True, f"failed as expected: {_decision_reason(result)}")
+
+
 def main() -> int:
     runtime_missing = missing_files([RUNTIME_DIR / filename for filename in RUNTIME_FILES])
     if runtime_missing:
@@ -237,12 +714,47 @@ def main() -> int:
         print(json.dumps(report, indent=2, sort_keys=True))
         return 1
 
-    report = build_blocked_report(runtime_missing)
+    try:
+        report = build_pass_report()
+    except Exception as exc:  # noqa: BLE001 - surfaced in the report.
+        report = {
+            "phase": PHASE_LABEL,
+            "slice": SLICE_ID,
+            "verification": VERIFICATION_NAME,
+            "status": "fail",
+            "runtime_modules_available": True,
+            "supporting_modules_available": supporting_modules_available(),
+            "runtime_imports": list(RUNTIME_IMPORTS),
+            "supporting_imports": list(SUPPORTING_IMPORTS),
+            "checked_files": [
+                *PLAN_REFS,
+                *SUPPORTING_EVIDENCE_REFS,
+                *[rel(RUNTIME_DIR / filename) for filename in RUNTIME_FILES],
+            ],
+            "blocker": {
+                "kind": "runtime_execution_error",
+                "message": str(exc),
+            },
+            "summary": {
+                "overall_pass": False,
+                "passed_cases": 0,
+                "total_cases": 0,
+            },
+            "outputs": {
+                "report": rel(REPORT_PATH),
+                "manifest": rel(MANIFEST_PATH),
+            },
+            "notes": [
+                "runtime files were present but real case execution failed",
+                "no approval implied",
+            ],
+        }
+
     dump_json(REPORT_PATH, report)
     refresh_evidence_manifest()
-    print("phase_3 slice_3 split/merge verifier: BLOCKED")
+    print("phase_3 slice_3 split/merge verifier: PASS" if report.get("summary", {}).get("overall_pass") else "phase_3 slice_3 split/merge verifier: FAIL")
     print(json.dumps(report, indent=2, sort_keys=True))
-    return 1
+    return 0 if report.get("summary", {}).get("overall_pass") else 1
 
 
 if __name__ == "__main__":

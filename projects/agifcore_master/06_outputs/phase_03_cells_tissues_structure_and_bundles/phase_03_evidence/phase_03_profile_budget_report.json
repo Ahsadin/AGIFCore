@@ -1,23 +1,4 @@
 {
-  "blocked_checks": [
-    {
-      "case_id": "builder-profile-budget-surface-missing",
-      "reason": "profile_budget_rules.py is not on disk yet",
-      "target": "profile_budget_rules"
-    },
-    {
-      "case_id": "builder-ceiling-failure-case-unavailable",
-      "reason": "builder profile ceiling behavior cannot be exercised until the runtime file exists",
-      "target": "profile_budget_rules"
-    }
-  ],
-  "blocker": {
-    "kind": "missing_runtime_dependencies",
-    "message": "Phase 3 slice 3 profile budget runtime module is not on disk yet.",
-    "missing_files": [
-      "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/profile_budget_rules.py"
-    ]
-  },
   "checked_files": [
     "projects/agifcore_master/01_plan/PHASE_03_CELLS_TISSUES_STRUCTURE_AND_BUNDLES.md",
     "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
@@ -30,10 +11,9 @@
     "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/profile_budget_rules.py"
   ],
   "notes": [
-    "laptop and mobile ceiling behavior was verified against the present runtime",
-    "builder remains blocked until the planned profile-budget surface exists",
-    "the verifier stays repo-relative and does not rely on external PYTHONPATH wiring",
-    "no integrated success is claimed because the owned runtime file is absent"
+    "laptop, mobile, and builder budget behavior is exercised directly against the runtime API when the runtime file exists",
+    "budget ceilings are verified at and beyond the boundary",
+    "no approval implied"
   ],
   "outputs": {
     "manifest": "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json",
@@ -42,144 +22,113 @@
   "phase": "Phase 3",
   "results": [
     {
-      "case_id": "laptop-activation-within-ceiling",
+      "case_id": "laptop-budget-happy-path",
       "expected_pass": true,
       "message": "passed",
       "passed": true,
-      "target": "activation_policies"
+      "target": "profile_budget_rules"
     },
     {
-      "case_id": "laptop-activation-ceiling-breach",
+      "case_id": "laptop-budget-ceiling-breach",
       "expected_pass": false,
-      "message": "failed as expected: active cell ceiling reached for profile",
+      "message": "failed as expected: budget ceiling exceeded",
       "passed": true,
-      "target": "activation_policies"
+      "target": "profile_budget_rules"
     },
     {
-      "case_id": "mobile-activation-within-ceiling",
+      "case_id": "mobile-budget-happy-path",
       "expected_pass": true,
       "message": "passed",
       "passed": true,
-      "target": "activation_policies"
+      "target": "profile_budget_rules"
     },
     {
-      "case_id": "mobile-activation-ceiling-breach",
+      "case_id": "mobile-budget-ceiling-breach",
       "expected_pass": false,
-      "message": "failed as expected: active cell ceiling reached for profile",
+      "message": "failed as expected: budget ceiling exceeded",
       "passed": true,
-      "target": "activation_policies"
+      "target": "profile_budget_rules"
     },
     {
-      "case_id": "dormant-pressure-within-ceiling",
+      "case_id": "builder-budget-happy-path",
       "expected_pass": true,
       "message": "passed",
       "passed": true,
-      "target": "active_dormant_control"
+      "target": "profile_budget_rules"
     },
     {
-      "case_id": "dormant-pressure-ceiling-breach",
+      "case_id": "builder-active-cell-ceiling-breach",
       "expected_pass": false,
-      "message": "failed as expected: dormant blueprint ceiling exceeded",
+      "message": "failed as expected: budget ceiling exceeded",
       "passed": true,
-      "target": "active_dormant_control"
+      "target": "profile_budget_rules"
+    },
+    {
+      "case_id": "builder-tissue-ceiling-breach",
+      "expected_pass": false,
+      "message": "failed as expected: budget ceiling exceeded",
+      "passed": true,
+      "target": "profile_budget_rules"
+    },
+    {
+      "case_id": "builder-bundle-payload-ceiling-breach",
+      "expected_pass": false,
+      "message": "failed as expected: budget ceiling exceeded",
+      "passed": true,
+      "target": "profile_budget_rules"
     }
   ],
   "runtime_exports": {
     "modules": {
-      "activation_policies": [
-        "ActivationPolicy",
+      "profile_budget_rules": [
         "Any",
+        "BUILDER_ACTIVE_CELL_CEILING",
+        "MAX_MANIFEST_SIZE_BYTES",
         "Mapping",
+        "PHASE3_BUNDLE_PAYLOAD_CEILING_BYTES",
         "PHASE3_DORMANT_BLUEPRINT_CEILING",
         "PHASE3_PROFILE_ACTIVE_CELL_CEILINGS",
         "PHASE3_TISSUE_CEILING",
+        "PROFILE_ACTIVE_CELL_CEILINGS",
+        "PROFILE_NAMES",
         "Phase3StructureError",
-        "REQUIRED_ACTIVATION_POLICY_FIELDS",
-        "TrustBand",
+        "ProfileBudgetRule",
+        "REQUIRED_PROFILE_BUDGET_CONTEXT_FIELDS",
+        "REQUIRED_PROFILE_BUDGET_FIELDS",
+        "SPLIT_PRESSURE_MEMBER_COUNT",
         "annotations",
         "dataclass",
-        "normalize_trust_band_name",
-        "profile_active_cell_ceiling",
-        "require_float",
+        "default_profile_budget_payload",
+        "evaluate_profile_budget",
         "require_mapping",
-        "require_non_empty_str",
-        "require_non_negative_float",
-        "require_profile_name",
-        "trust_band_at_least",
-        "validate_activation_policy_payload"
-      ],
-      "active_dormant_control": [
-        "ActivationPolicy",
-        "ActiveDormantDecision",
-        "Any",
-        "Mapping",
-        "PHASE2_LIFECYCLE_STATES",
-        "PHASE3_DORMANT_BLUEPRINT_CEILING",
-        "Phase3StructureError",
-        "TrustBand",
-        "annotations",
-        "build_lifecycle_transition_request",
-        "dataclass",
-        "evaluate_activation_readiness",
-        "evaluate_dormant_pressure",
         "require_non_empty_str",
         "require_non_negative_int",
         "require_profile_name",
-        "validate_phase2_lifecycle_state",
-        "validate_profile_context"
-      ],
-      "trust_bands": [
-        "Any",
-        "Mapping",
-        "Phase3StructureError",
-        "REQUIRED_TRUST_BAND_FIELDS",
-        "TRUST_BAND_ORDER",
-        "TRUST_BAND_RANK",
-        "TRUST_SCORE_BAND_TABLE",
-        "TrustBand",
-        "annotations",
-        "dataclass",
-        "default_trust_band_policy",
-        "normalize_trust_band_name",
-        "normalize_trust_score",
-        "require_bool",
-        "require_int",
-        "require_mapping",
-        "require_non_empty_str",
-        "trust_band_at_least",
-        "trust_band_for_score",
-        "validate_trust_band_payload"
+        "validate_profile_budget_context",
+        "validate_profile_budget_payload"
       ]
     },
     "profile_ceiling_helpers": {
-      "builder": "blocked_until_profile_budget_rules_exists",
+      "builder": 64,
+      "bundle_payload": 8388608,
       "laptop": 32,
-      "mobile": 8
+      "mobile": 8,
+      "tissue": 12
     }
   },
   "runtime_imports": [
-    "profile_budget_rules",
-    "activation_policies",
-    "active_dormant_control",
-    "trust_bands"
+    "profile_budget_rules"
   ],
-  "runtime_modules_available": false,
+  "runtime_modules_available": true,
   "slice": "slice_3",
-  "status": "blocked",
+  "status": "pass",
   "summary": {
-    "blocked_cases": 2,
     "expected_failures_verified": true,
-    "expected_pass_cases": 4,
+    "expected_pass_cases": 3,
     "expected_succeeded": true,
-    "overall_pass": false,
-    "passed_cases": 6,
+    "overall_pass": true,
+    "passed_cases": 8,
     "total_cases": 8
   },
-  "supporting_imports": [
-    "activation_policies",
-    "active_dormant_control",
-    "trust_bands"
-  ],
-  "supporting_modules_available": true,
   "verification": "profile_budgets"
 }

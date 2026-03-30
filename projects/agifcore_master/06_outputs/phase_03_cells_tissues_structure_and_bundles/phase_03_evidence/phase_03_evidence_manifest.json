@@ -3,7 +3,8 @@
     "evidence manifest is rebuilt from actual report files on disk",
     "slice 1 evidence remains present and real",
     "slice 2 evidence remains present and real",
-    "slice 3 split/merge and profile-budget runtime files are absent in this lane, so the slice remains blocked rather than faked"
+    "slice 3 profile-budget runtime is absent in this lane unless the runtime files are present in the configured worktree",
+    "manifest readiness derived from real report files: true"
   ],
   "phase": "Phase 3",
   "phase_remains_open": true,
@@ -24,17 +25,17 @@
       "report_id": "cell_contracts"
     },
     {
-      "overall_pass": false,
+      "overall_pass": true,
       "path": "/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-03/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_profile_budget_report.json",
       "report_id": "profile_budget"
     },
     {
-      "overall_pass": false,
+      "overall_pass": true,
       "path": "/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-03/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_split_merge_report.json",
       "report_id": "split_merge"
     }
   ],
-  "runtime_modules_available": false,
+  "runtime_modules_available": true,
   "slice": "slice_3",
-  "status": "slice_3_blocked"
+  "status": "slice_3_ready"
 }
