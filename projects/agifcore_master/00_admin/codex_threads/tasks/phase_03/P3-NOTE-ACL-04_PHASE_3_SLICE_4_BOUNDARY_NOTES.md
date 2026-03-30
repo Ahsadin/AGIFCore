@@ -6,7 +6,7 @@
 - Role: `Architecture & Contract Lead`
 - Branch: `codex/tc-p3-tc-acl-04-phase-3-slice-4-boundary-check`
 - Worktree: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-ACL-04`
-- Verdict: `blocking`
+- Verdict: `boundary_safe_with_cross_lane_integration_gap`
 
 ## Goal
 
@@ -15,83 +15,103 @@
 - confirm that tissue orchestration verification stays structural and Phase-3-only
 - confirm there is no Phase 4 leakage
 
-## What Was Read
+## Inspection Basis
 
-- `projects/agifcore_master/01_plan/PHASE_03_CELLS_TISSUES_STRUCTURE_AND_BUNDLES.md`
-- `projects/agifcore_master/01_plan/TRACE_CONTRACT.md`
-- `projects/agifcore_master/03_design/BUNDLE_INTEGRITY_MODEL.md`
-- `projects/agifcore_master/03_design/PRODUCT_RUNTIME_MODEL.md`
-- current Phase 3 structural runtime already present in this worktree:
-  - `projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/bundle_manifest.py`
-  - `projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/bundle_schema_validation.py`
-  - `projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/tissue_manifests.py`
-- current Phase 3 verifiers already present in this worktree:
-  - `projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_bundle_validation.py`
-  - `projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_cell_contracts.py`
+- planning and design references:
+  - `projects/agifcore_master/01_plan/PHASE_03_CELLS_TISSUES_STRUCTURE_AND_BUNDLES.md`
+  - `projects/agifcore_master/01_plan/TRACE_CONTRACT.md`
+  - `projects/agifcore_master/03_design/BUNDLE_INTEGRITY_MODEL.md`
+  - `projects/agifcore_master/03_design/PRODUCT_RUNTIME_MODEL.md`
+- direct runtime inspection from KPL lane commit `5055a96722e0c8ad0026aa071c971659e87201e1`:
+  - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-KPL-04/projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/bundle_integrity_checks.py`
+- direct verifier and evidence inspection from TRL lane commit `c5cfbe0aff9027bacc045f207c1327e48c5890bd`:
+  - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-04/projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_tissue_orchestration.py`
+  - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-04/projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_bundle_integrity.py`
+  - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-04/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_tissue_orchestration_report.json`
+  - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-04/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_integrity_report.json`
+  - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-04/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json`
 
 ## Findings
 
-### 1. `bundle_integrity_checks` separation cannot be cleared because the runtime file is missing
+### 1. Bundle integrity is separate from bundle schema validation at the code boundary
 
-- The task card requires `projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/bundle_integrity_checks.py`.
-- That file is not present in this worktree.
-- `bundle_schema_validation.py` exists and currently validates schema references, schema JSON loading, bundle manifest shape, and linked cell/tissue payload shape.
-- Because the dedicated integrity module is missing, this lane cannot prove that integrity logic is separate from schema validation instead of being omitted or collapsed into another module.
+- `bundle_integrity_checks.py` is a distinct runtime module, not folded into `bundle_schema_validation.py`.
+- The integrity runtime imports `validate_bundle_manifest_payload` from `bundle_manifest.py`, but it does not collapse integrity into schema loading.
+- The integrity runtime performs integrity-specific work:
+  - canonical payload byte generation
+  - SHA-256 digest computation
+  - digest-format validation
+  - manifest-to-inventory entry matching
+  - payload equality checks between manifest inventory and integrity inventory
+  - digest mismatch failure
+- `bundle_schema_validation.py` remains focused on:
+  - schema reference resolution
+  - schema JSON loading
+  - bundle manifest shape validation
+  - nested cell and tissue payload shape validation
+- The TRL bundle-integrity verifier also preserves that split in its planned checks:
+  - schema-ref and nested payload failures route through `validate_bundle_schema_foundation`
+  - integrity-specific cases route through `bundle_integrity_checks`
 
-### 2. No sandbox substitution can be cleared only provisionally
+### 2. Sandbox execution is not used as a substitute for integrity
 
-- `BUNDLE_INTEGRITY_MODEL.md` is explicit: sandboxing may isolate execution, but sandboxing does not replace integrity checks.
-- `PRODUCT_RUNTIME_MODEL.md` keeps correctness separate from later runtime packaging concerns.
-- In the current Phase 3 structural runtime files that were reviewed, there is no visible sandbox import or execution handoff.
-- That is not enough to clear the boundary.
-- The dedicated integrity runtime is missing, so this lane cannot verify the required fail-closed ordering of:
-  - integrity check before execution
-  - integrity check outside sandbox substitution
-  - integrity check as its own structural concern
+- In the inspected Slice 4 runtime and verifier code, there is no sandbox import, no sandbox entrypoint, and no execution-isolation handoff.
+- The integrity runtime is a structural pre-execution checker over manifest and inventory payloads.
+- That matches the design rule in `BUNDLE_INTEGRITY_MODEL.md`: sandboxing may isolate execution later, but it does not replace integrity checks.
+- I found no code path that delegates integrity truth to sandbox execution.
 
-### 3. Tissue orchestration verification cannot be cleared because the verifier file is missing
+### 3. Tissue orchestration verification stays structural and Phase-3-only
 
-- The task card requires `projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_tissue_orchestration.py`.
-- That file is not present in this worktree.
-- `tissue_manifests.py` does stay structural on its face:
-  - membership fanout is bounded
-  - routing targets are bounded
-  - role-family membership is checked against cell contracts
-  - the module docstring explicitly says no memory or graph logic is allowed there
-- Even with those good signs, the boundary check is still blocked because the required verifier that would prove orchestration stays structural and Phase-3-only does not exist in this lane.
+- `verify_phase_03_tissue_orchestration.py` imports only `cell_contracts` and `tissue_manifests` from the Phase 3 structural runtime.
+- Its runtime file list is limited to:
+  - `cell_contracts.py`
+  - `tissue_manifests.py`
+  - Phase 3 structural schemas
+- Its exercised checks stay structural:
+  - valid cell contract
+  - valid tissue manifest
+  - split-review threshold exposure
+  - missing contract field failure
+  - duplicate member failure
+  - role-family mismatch failure
+  - tissue fanout breach failure
+- The generated tissue orchestration report is a real executed report with status `pass`.
+- Nothing in this verifier reaches into memory planes, graph persistence, sandbox execution, or product-runtime behavior.
 
-### 4. No Phase 4 leakage is only partially inspectable from the currently present files
+### 4. No Phase 4 leakage is visible in the inspected Slice 4 package
 
-- The reviewed structural runtime files do not show direct memory-plane or graph-persistence wiring.
-- `tissue_manifests.py` explicitly states that memory and graph logic are not allowed there.
-- That is helpful but incomplete.
-- Without the missing Slice 4 runtime and verifier files, this lane cannot verify whether later orchestration checks or integrity logic smuggle in:
-  - Phase 4 memory-plane assumptions
-  - sandbox execution privileges standing in for integrity truth
-  - hidden builder-only correctness behavior
+- I did not find references to Phase 4 memory surfaces, graph surfaces, builder privilege, cloud correctness, or sandbox substitution in:
+  - `bundle_integrity_checks.py`
+  - `verify_phase_03_tissue_orchestration.py`
+  - `verify_phase_03_bundle_integrity.py`
+- The Slice 4 runtime and verifier surfaces stay inside Phase 3 structural concerns:
+  - bundle manifest and payload inventory integrity
+  - cell and tissue structure validation
+  - orchestration fanout and membership constraints
+- This is boundary-safe for the requested Phase 3 scope.
 
-## Exact Missing Checks That Block Clearance
+### 5. Cross-lane execution is still honestly blocked, but not for a boundary reason
 
-- Missing runtime file:
-  - `projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/bundle_integrity_checks.py`
-- Missing verifier files:
-  - `projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_tissue_orchestration.py`
-  - `projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_bundle_integrity.py`
-- Missing evidence outputs named by the task card:
-  - `projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_tissue_orchestration_report.json`
-  - `projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_integrity_report.json`
+- The TRL lane’s `phase_03_bundle_integrity_report.json` is honestly `blocked`.
+- That report says the runtime file was missing in the TRL lane at the time it ran, and the evidence manifest stays blocked for the same reason.
+- Direct code inspection also shows a cross-lane hookup gap:
+  - KPL runtime exports `validate_bundle_integrity(bundle_manifest_payload, integrity_inventory)`
+  - the TRL verifier’s generic single-payload entrypoint caller invokes the selected runtime entrypoint with one payload object
+- That means the current runtime/verifier pair is not yet directly executable together without a follow-up integration fix.
+- This is a real integration seam issue, but it is not a sandbox substitution issue, not a schema/integrity collapse issue, and not Phase 4 leakage.
 
-## Minimum Checks Required Before This Boundary Can Be Cleared
+## Assessment
 
-- `bundle_integrity_checks.py` must exist as a separate module from `bundle_schema_validation.py`.
-- The integrity module must fail closed on integrity-specific conditions and must not depend on sandbox execution as a substitute for integrity truth.
-- `verify_phase_03_bundle_integrity.py` must exist and prove that integrity checks stay separate from schema validation and separate from sandbox execution.
-- `verify_phase_03_tissue_orchestration.py` must exist and prove that orchestration checks stay structural, Phase-3-only, and free of Phase 4 logic.
-- The two required evidence reports must exist and reflect those checks directly.
+- `bundle_integrity_checks` stays separate from `bundle_schema_validation`: `yes`
+- integrity is separate from sandbox execution: `yes`
+- tissue orchestration verification stays structural and Phase-3-only: `yes`
+- no Phase 4 leakage found in inspected Slice 4 code: `yes`
+- TRL bundle-integrity evidence remains blocked: `yes`, but the blocker is a lane/integration condition, not a boundary violation
 
 ## Final Verdict
 
-- `blocked`
-- Reason:
-  - Slice 4 cannot be truthfully cleared in this lane because the named Slice 4 runtime, verifier, and evidence surfaces are not present.
-  - Current files provide only partial structural signals, not the exact checks needed to clear the boundary.
+- `boundary-safe at the code level`
+- clarification:
+  - Slice 4 is boundary-safe for the requested Architecture & Contract review.
+  - The TRL bundle-integrity report remains honestly blocked because the runtime file was not present in that lane when the verifier ran, and the current runtime/verifier seam also needs a narrow integration fix before cross-lane execution can pass.
+  - That integration gap does not change the boundary conclusion: no schema/integrity collapse, no sandbox substitution, and no Phase 4 leakage were found in the inspected Slice 4 code.
