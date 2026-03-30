@@ -1,7 +1,7 @@
 {
   "notes": [
     "evidence manifest is rebuilt from actual report files on disk",
-    "slice 2 is blocked until the phase-3 activation and trust runtime exists",
+    "slice 2 runtime is present and the activation/trust report is current",
     "slice 1 evidence remains present and real"
   ],
   "phase": "Phase 3",

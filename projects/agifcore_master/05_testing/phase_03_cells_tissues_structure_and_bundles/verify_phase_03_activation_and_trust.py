@@ -656,10 +656,16 @@ def build_manifest() -> dict[str, Any]:
             }
         )
     runtime_files_exist = all((RUNTIME_DIR / filename).exists() for filename in RUNTIME_FILES)
+    status = "slice_2_ready" if runtime_files_exist else "slice_2_blocked"
+    readiness_note = (
+        "slice 2 runtime is present and the activation/trust report is current"
+        if runtime_files_exist
+        else "slice 2 is blocked until the phase-3 activation and trust runtime exists"
+    )
     return {
         "notes": [
             "evidence manifest is rebuilt from actual report files on disk",
-            "slice 2 is blocked until the phase-3 activation and trust runtime exists",
+            readiness_note,
             "slice 1 evidence remains present and real",
         ],
         "phase": PHASE_LABEL,
@@ -667,7 +673,7 @@ def build_manifest() -> dict[str, Any]:
         "reports": reports,
         "runtime_modules_available": runtime_files_exist,
         "slice": SLICE_ID,
-        "status": "slice_2_blocked" if not runtime_files_exist else "slice_2_ready",
+        "status": status,
     }
 
 
