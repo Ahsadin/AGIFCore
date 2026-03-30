@@ -1,0 +1,53 @@
+{
+  "blocker": {
+    "kind": "missing_runtime_dependencies",
+    "message": "Phase 3 slice 2 activation/trust runtime modules are not on disk yet.",
+    "missing_files": [
+      "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/activation_policies.py",
+      "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/trust_bands.py",
+      "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/active_dormant_control.py"
+    ]
+  },
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_03_CELLS_TISSUES_STRUCTURE_AND_BUNDLES.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/activation_policies.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/trust_bands.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/active_dormant_control.py"
+  ],
+  "notes": [
+    "no runtime checks were executed because the phase-3 slice-2 modules are absent",
+    "report is intentionally blocked instead of pretending the verifier passed",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_activation_and_trust_report.json"
+  },
+  "phase": "Phase 3",
+  "planned_checks": [
+    "activation-policy-surface-importable",
+    "trust-band-surface-importable",
+    "active-dormant-control-surface-importable",
+    "activation-policy-rejects-missing-required-fields",
+    "trust-band-rejects-invalid-rank-and-band-id",
+    "active-dormant-control-rejects-empty-state-lists"
+  ],
+  "results": [],
+  "runtime_imports": [
+    "activation_policies",
+    "trust_bands",
+    "active_dormant_control"
+  ],
+  "runtime_modules_available": false,
+  "slice": "slice_2",
+  "status": "blocked",
+  "summary": {
+    "blocked_cases": 3,
+    "overall_pass": false,
+    "passed_cases": 0,
+    "total_cases": 0
+  },
+  "verification": "activation_and_trust"
+}
