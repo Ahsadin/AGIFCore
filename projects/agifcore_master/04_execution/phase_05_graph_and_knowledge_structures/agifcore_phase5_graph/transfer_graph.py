@@ -124,6 +124,12 @@ class TransferGraphStore:
         normalized_id = require_non_empty_str(transfer_id, "transfer_id")
         if normalized_id in self._records:
             raise TransferGraphError(f"duplicate transfer_id: {normalized_id}")
+        normalized_authority_review_ref: str | None = None
+        if authority_review_ref is not None:
+            normalized_authority_review_ref = require_non_empty_str(
+                authority_review_ref,
+                "authority_review_ref",
+            )
         try:
             provenance = build_provenance_bundle(
                 entity_kind="transfer",
@@ -180,6 +186,9 @@ class TransferGraphStore:
         elif cross_domain and not explicit_transfer_approval:
             decision = "denied"
             reason = "missing_explicit_transfer_approval"
+        elif cross_domain and normalized_authority_review_ref is None:
+            decision = "denied"
+            reason = "missing_authority_review_ref"
         elif cross_domain and prov_score < CROSS_DOMAIN_PROVENANCE_FLOOR:
             decision = "denied"
             reason = "cross_domain_provenance_below_floor"
@@ -208,7 +217,7 @@ class TransferGraphStore:
             decision=decision,
             decision_reason=reason,
             conflict_status=conflict.status,
-            authority_review_ref=authority_review_ref,
+            authority_review_ref=normalized_authority_review_ref,
             created_at=utc_timestamp(),
             materialized_transfer_id=materialized_transfer_id,
             metadata=require_mapping(metadata or {}, "metadata"),
@@ -255,6 +264,13 @@ class TransferGraphStore:
         self._order = []
         for record_payload in payload_map.get("records", []):
             record_map = require_mapping(record_payload, "record")
+            authority_review_ref = record_map.get("authority_review_ref")
+            normalized_authority_review_ref: str | None = None
+            if authority_review_ref is not None:
+                normalized_authority_review_ref = require_non_empty_str(
+                    authority_review_ref,
+                    "authority_review_ref",
+                )
             record = TransferRecord(
                 transfer_id=require_non_empty_str(record_map.get("transfer_id"), "transfer_id"),
                 source_graph=require_non_empty_str(record_map.get("source_graph"), "source_graph"),
@@ -280,11 +296,15 @@ class TransferGraphStore:
                 decision=require_non_empty_str(record_map.get("decision"), "decision"),
                 decision_reason=require_non_empty_str(record_map.get("decision_reason"), "decision_reason"),
                 conflict_status=require_non_empty_str(record_map.get("conflict_status"), "conflict_status"),
-                authority_review_ref=record_map.get("authority_review_ref"),
+                authority_review_ref=normalized_authority_review_ref,
                 created_at=require_non_empty_str(record_map.get("created_at"), "created_at"),
                 materialized_transfer_id=record_map.get("materialized_transfer_id"),
                 metadata=require_mapping(record_map.get("metadata", {}), "metadata"),
             )
+            cross_domain = record.source_domain != record.target_domain
+            if cross_domain and record.explicit_transfer_approval and record.decision == "approved":
+                if record.authority_review_ref is None:
+                    raise TransferGraphError("approved cross-domain transfer missing authority_review_ref")
             self._records[record.transfer_id] = record
             self._order.append(record.transfer_id)
         self._ensure_size()

@@ -185,7 +185,10 @@ def bundle_from_dict(payload: Mapping[str, Any]) -> ProvenanceBundle:
         bundle.created_at = require_non_empty_str(created_at, "created_at")
     provenance_hash = payload_map.get("provenance_hash")
     if provenance_hash is not None:
-        bundle.provenance_hash = require_non_empty_str(provenance_hash, "provenance_hash")
+        normalized_hash = require_non_empty_str(provenance_hash, "provenance_hash")
+        if normalized_hash != bundle.provenance_hash:
+            raise ProvenanceLinksError("provenance_hash does not match canonical bundle payload")
+        bundle.provenance_hash = normalized_hash
     return bundle
 
 

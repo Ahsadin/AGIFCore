@@ -70,7 +70,7 @@ class SupersessionLedger:
         self._records.append(record)
         self._successor_by_predecessor[record.predecessor_id] = record.successor_id
         self._record_by_predecessor[record.predecessor_id] = record
-        if len(self.predecessor_chain(record.predecessor_id)) > self.max_chain_length:
+        if self._max_chain_hops() > self.max_chain_length:
             self._records.pop()
             self._successor_by_predecessor.pop(record.predecessor_id, None)
             self._record_by_predecessor.pop(record.predecessor_id, None)
@@ -99,9 +99,17 @@ class SupersessionLedger:
         while current in self._successor_by_predecessor:
             current = self._successor_by_predecessor[current]
             chain.append(current)
-            if len(chain) > self.max_chain_length:
+            if len(chain) - 1 > self.max_chain_length:
                 break
         return chain
+
+    def _chain_hops(self, entity_id: str) -> int:
+        return len(self.predecessor_chain(entity_id)) - 1
+
+    def _max_chain_hops(self) -> int:
+        if not self._successor_by_predecessor:
+            return 0
+        return max(self._chain_hops(entity_id) for entity_id in self._successor_by_predecessor)
 
     def export_state(self) -> dict[str, Any]:
         return {
