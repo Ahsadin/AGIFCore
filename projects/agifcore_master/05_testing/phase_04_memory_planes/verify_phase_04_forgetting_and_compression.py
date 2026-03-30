@@ -404,7 +404,7 @@ def build_evidence_manifest() -> dict[str, object]:
         "invalid_reports": invalid,
         "notes": [
             "this manifest tracks machine-readable verifier outputs only",
-            "final integrated rerun and final package audit are still required before user review",
+            "final audit, governor verification, and validation remain separate review gates outside this manifest",
             "no approval implied",
         ],
     }
