@@ -1,29 +1,40 @@
 {
   "notes": [
     "evidence manifest is rebuilt from actual report files on disk",
-    "slice 2 runtime is present and the activation/trust report is current",
-    "slice 1 evidence remains present and real"
+    "slice 1 evidence remains present and real",
+    "slice 2 evidence remains present and real",
+    "slice 3 split/merge and profile-budget runtime files are absent in this lane, so the slice remains blocked rather than faked"
   ],
   "phase": "Phase 3",
   "phase_remains_open": true,
   "reports": [
     {
       "overall_pass": true,
-      "path": "/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-MA-02/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_activation_and_trust_report.json",
+      "path": "/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-03/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_activation_and_trust_report.json",
       "report_id": "activation_and_trust"
     },
     {
       "overall_pass": true,
-      "path": "/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-MA-02/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_validation_report.json",
+      "path": "/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-03/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_validation_report.json",
       "report_id": "bundle_validation"
     },
     {
       "overall_pass": true,
-      "path": "/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-MA-02/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_cell_contracts_report.json",
+      "path": "/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-03/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_cell_contracts_report.json",
       "report_id": "cell_contracts"
+    },
+    {
+      "overall_pass": false,
+      "path": "/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-03/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_profile_budget_report.json",
+      "report_id": "profile_budget"
+    },
+    {
+      "overall_pass": false,
+      "path": "/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-03/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_split_merge_report.json",
+      "report_id": "split_merge"
     }
   ],
-  "runtime_modules_available": true,
-  "slice": "slice_2",
-  "status": "slice_2_ready"
+  "runtime_modules_available": false,
+  "slice": "slice_3",
+  "status": "slice_3_blocked"
 }
