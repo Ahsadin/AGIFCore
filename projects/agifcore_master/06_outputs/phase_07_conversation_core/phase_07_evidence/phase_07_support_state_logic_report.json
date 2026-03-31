@@ -1,0 +1,166 @@
+{
+  "anchors": {
+    "fresh_information_resolution": {
+      "blocked_refs": [
+        "skill::skill-2",
+        "skill::skill-3",
+        "skill::skill-4"
+      ],
+      "conversation_id": "conv-1",
+      "critic_trace_ref": "critic::9f0bcfe5bc46",
+      "evidence_refs": [
+        "claims_case_handling",
+        "descriptor::desc-1",
+        "descriptor::desc-2",
+        "descriptor::desc-3",
+        "descriptor::desc-4",
+        "finance_document_workflows",
+        "memory-review-00000001",
+        "planning_coordination_workflows",
+        "pos_store_operations",
+        "simulation::ac2d1867801a",
+        "skill::skill-1"
+      ],
+      "governance_trace_ref": "governance::d3ffcf49ee3c",
+      "knowledge_gap_reason": "needs_fresh_information",
+      "memory_review_ref": "memory-review-00000001",
+      "next_action": "search_external",
+      "reason_codes": [
+        "fresh_external_information_required"
+      ],
+      "resolution_hash": "8a8a034831f80d166115e644d8e2cd9625bb424b8ba73860e174ab90f8880997",
+      "schema": "agifcore.phase_07.support_state_logic.v1",
+      "selected_domain_ids": [
+        "finance_document_workflows",
+        "claims_case_handling",
+        "planning_coordination_workflows",
+        "pos_store_operations"
+      ],
+      "simulation_trace_ref": "simulation::ac2d1867801a",
+      "support_state": "search_needed",
+      "turn_id": "turn-1"
+    },
+    "grounded_resolution": {
+      "blocked_refs": [
+        "skill::skill-2",
+        "skill::skill-3",
+        "skill::skill-4"
+      ],
+      "conversation_id": "conv-1",
+      "critic_trace_ref": "critic::20d6001acc01",
+      "evidence_refs": [
+        "descriptor::desc-1",
+        "descriptor::desc-2",
+        "descriptor::desc-3",
+        "descriptor::desc-4",
+        "finance_document_workflows",
+        "memory-review-00000001",
+        "simulation::ac2d1867801a",
+        "skill::skill-1"
+      ],
+      "governance_trace_ref": "governance::80b81a8b497a",
+      "knowledge_gap_reason": "none",
+      "memory_review_ref": "memory-review-00000001",
+      "next_action": "answer",
+      "reason_codes": [
+        "qualified_phase6_usefulness"
+      ],
+      "resolution_hash": "f0276a4f50b5a1838c42ca24a6dad3094b16943a13464bc3c6bd87c504bfd43a",
+      "schema": "agifcore.phase_07.support_state_logic.v1",
+      "selected_domain_ids": [
+        "finance_document_workflows"
+      ],
+      "simulation_trace_ref": "simulation::ac2d1867801a",
+      "support_state": "grounded",
+      "turn_id": "turn-1"
+    },
+    "self_knowledge_resolution": {
+      "blocked_refs": [
+        "skill::skill-2",
+        "skill::skill-3",
+        "skill::skill-4"
+      ],
+      "conversation_id": "conv-1",
+      "critic_trace_ref": "critic::3fe796cf7c22",
+      "evidence_refs": [
+        "claims_case_handling",
+        "descriptor::desc-1",
+        "descriptor::desc-2",
+        "descriptor::desc-3",
+        "descriptor::desc-4",
+        "finance_document_workflows",
+        "memory-review-00000001",
+        "planning_coordination_workflows",
+        "pos_store_operations",
+        "simulation::ac2d1867801a",
+        "skill::skill-1"
+      ],
+      "governance_trace_ref": "governance::80b81a8b497a",
+      "knowledge_gap_reason": "none",
+      "memory_review_ref": "memory-review-00000001",
+      "next_action": "answer",
+      "reason_codes": [
+        "self_knowledge_supported_by_continuity"
+      ],
+      "resolution_hash": "e0f36a058636eccb910f88221ac7e776960f71d90f16cd82cf84c6ee963a8811",
+      "schema": "agifcore.phase_07.support_state_logic.v1",
+      "selected_domain_ids": [
+        "finance_document_workflows",
+        "claims_case_handling",
+        "planning_coordination_workflows",
+        "pos_store_operations"
+      ],
+      "simulation_trace_ref": "simulation::ac2d1867801a",
+      "support_state": "grounded",
+      "turn_id": "turn-1"
+    }
+  },
+  "assertions": [
+    {
+      "id": "support-state-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "grounded-answer-route-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "self-knowledge-route-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "fresh-information-route-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "support-state-evidence-refs-present",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_07_CONVERSATION_CORE.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/03_design/CONVERSATION_MODEL.md",
+    "projects/agifcore_master/03_design/GOVERNANCE_MODEL.md",
+    "projects/agifcore_master/03_design/MEMORY_MODEL.md",
+    "projects/agifcore_master/03_design/GRAPH_STACK_MODEL.md",
+    "projects/agifcore_master/03_design/SIMULATOR_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/contracts.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/support_state_logic.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/conversation_turn.py"
+  ],
+  "notes": [
+    "support-state routing remains read-only and evidence-bound",
+    "Phase 7 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_support_state_logic_report.json"
+  },
+  "phase": "7",
+  "status": "pass",
+  "verifier": "verify_phase_07_support_state_logic"
+}

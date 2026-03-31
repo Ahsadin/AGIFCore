@@ -1,0 +1,206 @@
+{
+  "anchors": {
+    "answer_contract": {
+      "abstain_or_answer": "answer",
+      "active_context_refs": [
+        "phase7/demo",
+        "turn://conv-1/turn-1"
+      ],
+      "contract_hash": "cc90e1a165ce12302264d20370a17482811da6c2a70a0ba5205182bf9109ab27",
+      "conversation_id": "conv-1",
+      "critic_trace_ref": "critic::3fe796cf7c22",
+      "discourse_mode": "self_knowledge",
+      "evidence_refs": [
+        "claims_case_handling",
+        "descriptor::desc-1",
+        "descriptor::desc-2",
+        "descriptor::desc-3",
+        "descriptor::desc-4",
+        "finance_document_workflows",
+        "memory-review-00000001",
+        "phase7-self-capability-1",
+        "phase7-self-limit-1",
+        "planning_coordination_workflows",
+        "pos_store_operations",
+        "simulation::ac2d1867801a",
+        "skill::skill-1"
+      ],
+      "final_answer_mode": "grounded_fact",
+      "governance_trace_ref": "governance::80b81a8b497a",
+      "knowledge_gap_reason": "none",
+      "memory_review_ref": "memory-review-00000001",
+      "next_action": "answer",
+      "planner_trace_ref": "planner::0277f897d2da",
+      "response_text": "From this local AGIFCore state: I can answer only from this local AGIFCore workspace and the approved Phase 4 to 6 exports. I do not perform live external search inside Phase 7.",
+      "schema": "agifcore.phase_07.answer_contract.v1",
+      "simulation_trace_ref": "simulation::ac2d1867801a",
+      "support_state": "grounded",
+      "turn_id": "turn-1",
+      "user_intent": "self_knowledge_question"
+    },
+    "guardrail_result": {
+      "fallback_action": "answer",
+      "guardrail_hash": "8235ec5b9cd32f9907cc14d6571fd9db3047831936b39f8d43f4349863db2438",
+      "output_text": "From this local AGIFCore state: I can answer only from this local AGIFCore workspace and the approved Phase 4 to 6 exports. I do not perform live external search inside Phase 7.",
+      "schema": "agifcore.phase_07.anti_generic_filler.v1",
+      "status": "pass",
+      "violations": []
+    },
+    "interpretation": {
+      "ambiguous_request": true,
+      "comparison_requested": false,
+      "conversation_id": "conv-1",
+      "correction_hint": false,
+      "discourse_mode_hint": "self_knowledge",
+      "extracted_terms": [
+        "what",
+        "can",
+        "you",
+        "do",
+        "in",
+        "this",
+        "agifcore",
+        "repo"
+      ],
+      "interpretation_hash": "2f6ec764adaca5414ca4e20524088594452a889c3f91063fc604002c23eb6549",
+      "live_current_requested": false,
+      "local_artifact_requested": false,
+      "question_category": "self_knowledge",
+      "raw_text_hash": "0d63931299e3b13b497dfdd4f3f60e1ed761b4f3d1a0fad742baa48bdd871bf5",
+      "repeated_fact_hint": false,
+      "schema": "agifcore.phase_07.question_interpretation.v1",
+      "self_knowledge_requested": true,
+      "signal_notes": [
+        "ambiguous_reference_detected",
+        "self_knowledge_topic_detected"
+      ],
+      "target_domain_hint": null,
+      "token_count": 8,
+      "turn_id": "turn-1",
+      "user_intent": "self_knowledge_question"
+    },
+    "response_surface": {
+      "cited_evidence_refs": [
+        "phase7-self-capability-1",
+        "memory-review-00000001",
+        "phase7-self-limit-1"
+      ],
+      "final_answer_mode": "grounded_fact",
+      "response_hash": "311d3d32b3cd87c3f056378fd2f1dd1626e60db1f252776ba2601f001d7688d8",
+      "response_id": "response::f6b2b8c820d2",
+      "response_text": "From this local AGIFCore state: I can answer only from this local AGIFCore workspace and the approved Phase 4 to 6 exports. I do not perform live external search inside Phase 7."
+    },
+    "self_knowledge": {
+      "schema": "agifcore.phase_07.self_knowledge_surface.v1",
+      "snapshot_hash": "c57e9b6caa9ea8ae6cd87ac3f9af2aafdbe39fa14712d42c4c4aed66c308d141",
+      "statement_count": 2,
+      "statements": [
+        {
+          "anchor_refs": [
+            "phase7-self-capability-1",
+            "memory-review-00000001"
+          ],
+          "statement": "I can answer only from this local AGIFCore workspace and the approved Phase 4 to 6 exports.",
+          "statement_hash": "b5bee7f4a0d19da88745ace6310a3a6eb245685ef3f1c1b49e285d653c77a898",
+          "statement_id": "self-knowledge::661a08937350",
+          "statement_kind": "self_capability"
+        },
+        {
+          "anchor_refs": [
+            "phase7-self-limit-1",
+            "memory-review-00000001"
+          ],
+          "statement": "I do not perform live external search inside Phase 7.",
+          "statement_hash": "e3ebdaea17f5310514f2b2b91d44a1c7551c1029c153585df16fa00facec3379",
+          "statement_id": "self-knowledge::d610c6584089",
+          "statement_kind": "self_limit"
+        }
+      ]
+    },
+    "support_resolution": {
+      "blocked_refs": [
+        "skill::skill-2",
+        "skill::skill-3",
+        "skill::skill-4"
+      ],
+      "conversation_id": "conv-1",
+      "critic_trace_ref": "critic::3fe796cf7c22",
+      "evidence_refs": [
+        "claims_case_handling",
+        "descriptor::desc-1",
+        "descriptor::desc-2",
+        "descriptor::desc-3",
+        "descriptor::desc-4",
+        "finance_document_workflows",
+        "memory-review-00000001",
+        "planning_coordination_workflows",
+        "pos_store_operations",
+        "simulation::ac2d1867801a",
+        "skill::skill-1"
+      ],
+      "governance_trace_ref": "governance::80b81a8b497a",
+      "knowledge_gap_reason": "none",
+      "memory_review_ref": "memory-review-00000001",
+      "next_action": "answer",
+      "reason_codes": [
+        "self_knowledge_supported_by_continuity"
+      ],
+      "resolution_hash": "e0f36a058636eccb910f88221ac7e776960f71d90f16cd82cf84c6ee963a8811",
+      "schema": "agifcore.phase_07.support_state_logic.v1",
+      "selected_domain_ids": [
+        "finance_document_workflows",
+        "claims_case_handling",
+        "planning_coordination_workflows",
+        "pos_store_operations"
+      ],
+      "simulation_trace_ref": "simulation::ac2d1867801a",
+      "support_state": "grounded",
+      "turn_id": "turn-1"
+    },
+    "utterance_plan": {
+      "branch_count": 2,
+      "constraint_slots": [
+        "no_unsupported_self_assertion"
+      ],
+      "discourse_mode": "self_knowledge",
+      "plan_hash": "cbb146f0e16e8fe6b15d6185fb59daf3848692a7ba28f461db592367ea866f58",
+      "plan_id": "plan::4c1692c52ccd",
+      "planner_trace_ref": "planner::0277f897d2da",
+      "response_sections": [
+        "self_knowledge",
+        "limits"
+      ],
+      "schema": "agifcore.phase_07.utterance_plan.v1",
+      "sentence_obligations": [
+        "cite_continuity_backed_self_knowledge",
+        "state_limit_if_present"
+      ]
+    }
+  },
+  "demo_id": "phase_07_self_knowledge_demo",
+  "evidence_paths": {
+    "answer_contract": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_answer_contract_report.json",
+    "anti_generic_filler": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_anti_generic_filler_report.json",
+    "manifest": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_evidence_manifest.json",
+    "self_knowledge_surface": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_self_knowledge_surface_report.json",
+    "utterance_planner_and_surface_realizer": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_utterance_planner_and_surface_realizer_report.json"
+  },
+  "manifest_status": "phase_7_verifier_family_pass",
+  "notes": [
+    "This demo exposes only continuity-backed self-knowledge.",
+    "The response keeps local limits explicit instead of inventing unsupported self-assertion.",
+    "No approval is implied by this demo export."
+  ],
+  "phase": "7",
+  "phase_remains_open": true,
+  "prompt": "what can you do in this agifcore repo?",
+  "review_order": [
+    "projects/agifcore_master/01_plan/PHASE_07_CONVERSATION_CORE.md",
+    "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_self_knowledge_surface_report.json",
+    "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_utterance_planner_and_surface_realizer_report.json",
+    "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_answer_contract_report.json",
+    "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_anti_generic_filler_report.json"
+  ],
+  "runnable_command": "python3 projects/agifcore_master/05_testing/phase_07_conversation_core/run_phase_07_self_knowledge_demo.py",
+  "status": "pass"
+}

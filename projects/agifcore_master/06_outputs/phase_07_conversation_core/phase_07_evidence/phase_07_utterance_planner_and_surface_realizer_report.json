@@ -1,0 +1,154 @@
+{
+  "anchors": {
+    "clarification_plan": {
+      "branch_count": 1,
+      "constraint_slots": [
+        "no_generic_filler",
+        "max_two_questions"
+      ],
+      "discourse_mode": "clarify",
+      "plan_hash": "ff1b67ebedcb32150548cafc12c446eb86b3883c5235881f22793140dbf4b24d",
+      "plan_id": "plan::8212cfec1b45",
+      "planner_trace_ref": "planner::71caf0b6600f",
+      "response_sections": [
+        "clarification"
+      ],
+      "schema": "agifcore.phase_07.utterance_plan.v1",
+      "sentence_obligations": [
+        "ask_one_specific_question",
+        "state_missing_variable"
+      ]
+    },
+    "clarification_response": {
+      "cited_evidence_refs": [
+        "clarify::dfe40d894ddb"
+      ],
+      "final_answer_mode": "clarify",
+      "response_hash": "3c8331c9f809dd691d960fc1ff047cae851faea237a546e22d665000d6c3a858",
+      "response_id": "response::18d7c1ac771e",
+      "response_text": "I can answer this, but I need one detail first: which local workflow, file, or domain do you mean?"
+    },
+    "grounded_plan": {
+      "branch_count": 1,
+      "constraint_slots": [
+        "no_live_execution",
+        "no_rich_expression"
+      ],
+      "discourse_mode": "status",
+      "plan_hash": "8101eabec7d047a25829dda31298268fc9d6d906c7e3e360e7bd54233e0eaf7a",
+      "plan_id": "plan::f5fcc11d38b2",
+      "planner_trace_ref": "planner::c5fc462dd304",
+      "response_sections": [
+        "answer",
+        "evidence",
+        "next_step"
+      ],
+      "schema": "agifcore.phase_07.utterance_plan.v1",
+      "sentence_obligations": [
+        "state_local_scope",
+        "preserve_support_state"
+      ]
+    },
+    "grounded_response": {
+      "cited_evidence_refs": [
+        "descriptor::desc-1",
+        "descriptor::desc-2",
+        "descriptor::desc-3",
+        "descriptor::desc-4",
+        "finance_document_workflows"
+      ],
+      "final_answer_mode": "grounded_fact",
+      "response_hash": "fb8a3922e702c9b4f39821258ff443a44f4e47f1ac96a3f7b253cf3502bf198d",
+      "response_id": "response::626e1f7ebf61",
+      "response_text": "From the local AGIFCore evidence, this maps to finance_document_workflows. The support is review-only and execution-disabled, so I can explain the current local state but not run it."
+    },
+    "self_knowledge_plan": {
+      "branch_count": 2,
+      "constraint_slots": [
+        "no_unsupported_self_assertion"
+      ],
+      "discourse_mode": "self_knowledge",
+      "plan_hash": "cbb146f0e16e8fe6b15d6185fb59daf3848692a7ba28f461db592367ea866f58",
+      "plan_id": "plan::4c1692c52ccd",
+      "planner_trace_ref": "planner::0277f897d2da",
+      "response_sections": [
+        "self_knowledge",
+        "limits"
+      ],
+      "schema": "agifcore.phase_07.utterance_plan.v1",
+      "sentence_obligations": [
+        "cite_continuity_backed_self_knowledge",
+        "state_limit_if_present"
+      ]
+    },
+    "self_knowledge_response": {
+      "cited_evidence_refs": [
+        "phase7-self-capability-1",
+        "memory-review-00000001",
+        "phase7-self-limit-1"
+      ],
+      "final_answer_mode": "grounded_fact",
+      "response_hash": "311d3d32b3cd87c3f056378fd2f1dd1626e60db1f252776ba2601f001d7688d8",
+      "response_id": "response::f6b2b8c820d2",
+      "response_text": "From this local AGIFCore state: I can answer only from this local AGIFCore workspace and the approved Phase 4 to 6 exports. I do not perform live external search inside Phase 7."
+    }
+  },
+  "assertions": [
+    {
+      "id": "utterance-planner-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "surface-realizer-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "clarify-plan-remains-separate",
+      "result": "pass"
+    },
+    {
+      "id": "self-knowledge-plan-remains-separate",
+      "result": "pass"
+    },
+    {
+      "id": "response-text-stays-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "final-surface-matches-guardrail-output",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_07_CONVERSATION_CORE.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/03_design/CONVERSATION_MODEL.md",
+    "projects/agifcore_master/03_design/GOVERNANCE_MODEL.md",
+    "projects/agifcore_master/03_design/MEMORY_MODEL.md",
+    "projects/agifcore_master/03_design/GRAPH_STACK_MODEL.md",
+    "projects/agifcore_master/03_design/SIMULATOR_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/contracts.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/utterance_planner.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/surface_realizer.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/conversation_turn.py",
+    "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_raw_text_intake_report.json",
+    "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_question_interpretation_report.json",
+    "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_support_state_logic_report.json",
+    "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_self_knowledge_surface_report.json",
+    "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_clarification_report.json"
+  ],
+  "notes": [
+    "utterance planning remains structural and surface realization remains bounded",
+    "Phase 7 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_utterance_planner_and_surface_realizer_report.json"
+  },
+  "phase": "7",
+  "status": "pass",
+  "verifier": "verify_phase_07_utterance_planner_and_surface_realizer"
+}

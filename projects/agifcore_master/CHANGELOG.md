@@ -96,3 +96,10 @@
 - Recorded the explicit Phase 6 user verdict in `00_admin/codex_threads/handoffs/PHASE_06_USER_VERDICT.md`.
 - Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 6 is now `approved`.
 - Logged the earned Phase 6 approval state in `DECISIONS.md` while keeping Phase 7 not started and ready for a separate planning run.
+- Materialized `01_plan/PHASE_07_CONVERSATION_CORE.md`, the Phase 7 execution-start brief, and the Phase 7 execution task-card set under `00_admin/codex_threads/tasks/phase_07/`.
+- Completed the Phase 7 runtime package under `04_execution/phase_07_conversation_core/`, with paired verifiers under `05_testing/phase_07_conversation_core/` and evidence/demo outputs under `06_outputs/phase_07_conversation_core/`.
+- Added runnable Phase 7 demo scripts under `05_testing/phase_07_conversation_core/` and machine-readable demo JSON outputs plus review markdown under `06_outputs/phase_07_conversation_core/phase_07_demo_bundle/`.
+- Rebuilt the Phase 7 evidence manifest from actual report files so the verifier family now reports `phase_7_verifier_family_pass` while Phase 7 still remains `open`.
+- Added the Phase 7 audit report, Governor verification record, validation request, user verdict, and closeout task-card surfaces under `00_admin/codex_threads/`.
+- Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 7 is now `approved`.
+- Logged the earned Phase 7 approval state in `DECISIONS.md` while keeping Phase 8 not started and ready for a separate run.

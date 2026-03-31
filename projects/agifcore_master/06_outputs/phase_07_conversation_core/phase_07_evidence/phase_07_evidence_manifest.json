@@ -1,0 +1,57 @@
+{
+  "available_report_count": 8,
+  "invalid_reports": [],
+  "missing_reports": [],
+  "notes": [
+    "this manifest tracks machine-readable verifier outputs only",
+    "Phase 7 remains open",
+    "manifest is rebuilt from actual report files on disk",
+    "no approval implied"
+  ],
+  "phase": "7",
+  "phase_remains_open": true,
+  "reports": [
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_raw_text_intake_report.json",
+      "report_id": "raw_text_intake",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_question_interpretation_report.json",
+      "report_id": "question_interpretation",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_support_state_logic_report.json",
+      "report_id": "support_state_logic",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_self_knowledge_surface_report.json",
+      "report_id": "self_knowledge_surface",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_clarification_report.json",
+      "report_id": "clarification",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_utterance_planner_and_surface_realizer_report.json",
+      "report_id": "utterance_planner_and_surface_realizer",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_answer_contract_report.json",
+      "report_id": "answer_contract",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_anti_generic_filler_report.json",
+      "report_id": "anti_generic_filler",
+      "status": "pass"
+    }
+  ],
+  "required_report_count": 8,
+  "status": "phase_7_verifier_family_pass"
+}

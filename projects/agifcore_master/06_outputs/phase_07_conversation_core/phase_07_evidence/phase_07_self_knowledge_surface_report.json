@@ -1,0 +1,71 @@
+{
+  "anchors": {
+    "self_knowledge_snapshot": {
+      "schema": "agifcore.phase_07.self_knowledge_surface.v1",
+      "snapshot_hash": "c57e9b6caa9ea8ae6cd87ac3f9af2aafdbe39fa14712d42c4c4aed66c308d141",
+      "statement_count": 2,
+      "statements": [
+        {
+          "anchor_refs": [
+            "phase7-self-capability-1",
+            "memory-review-00000001"
+          ],
+          "statement": "I can answer only from this local AGIFCore workspace and the approved Phase 4 to 6 exports.",
+          "statement_hash": "b5bee7f4a0d19da88745ace6310a3a6eb245685ef3f1c1b49e285d653c77a898",
+          "statement_id": "self-knowledge::661a08937350",
+          "statement_kind": "self_capability"
+        },
+        {
+          "anchor_refs": [
+            "phase7-self-limit-1",
+            "memory-review-00000001"
+          ],
+          "statement": "I do not perform live external search inside Phase 7.",
+          "statement_hash": "e3ebdaea17f5310514f2b2b91d44a1c7551c1029c153585df16fa00facec3379",
+          "statement_id": "self-knowledge::d610c6584089",
+          "statement_kind": "self_limit"
+        }
+      ]
+    }
+  },
+  "assertions": [
+    {
+      "id": "self-knowledge-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "continuity-anchors-required",
+      "result": "pass"
+    },
+    {
+      "id": "unsupported-self-assertion-blocked",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_07_CONVERSATION_CORE.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/03_design/CONVERSATION_MODEL.md",
+    "projects/agifcore_master/03_design/GOVERNANCE_MODEL.md",
+    "projects/agifcore_master/03_design/MEMORY_MODEL.md",
+    "projects/agifcore_master/03_design/GRAPH_STACK_MODEL.md",
+    "projects/agifcore_master/03_design/SIMULATOR_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/contracts.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/self_knowledge_surface.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/conversation_turn.py"
+  ],
+  "notes": [
+    "self-knowledge remains continuity-backed and local-only",
+    "Phase 7 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_self_knowledge_surface_report.json"
+  },
+  "phase": "7",
+  "status": "pass",
+  "verifier": "verify_phase_07_self_knowledge_surface"
+}

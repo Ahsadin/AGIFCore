@@ -1,0 +1,108 @@
+{
+  "anchors": {
+    "grounded_guardrail_result": {
+      "fallback_action": "answer",
+      "guardrail_hash": "5cd2e855e7f29d479e52e8902792d8d0ed4b533bd026d1bb989ac06b1fa33312",
+      "output_text": "From the local AGIFCore evidence, this maps to finance_document_workflows. The support is review-only and execution-disabled, so I can explain the current local state but not run it.",
+      "schema": "agifcore.phase_07.anti_generic_filler.v1",
+      "status": "pass",
+      "violations": []
+    },
+    "search_fallback_result": {
+      "fallback_action": "search_external",
+      "guardrail_hash": "8dd7521ac4f409f47a0aa69fa3e8bbd11f559ef9f3da108b77f44f47154fc472",
+      "output_text": "I can't answer that honestly from local AGIFCore state because it needs fresh external information. The correct next step is search_external.",
+      "schema": "agifcore.phase_07.anti_generic_filler.v1",
+      "status": "fallback_applied",
+      "violations": [
+        {
+          "detail": "response starts with a generic framing phrase",
+          "reason_code": "generic_opener_detected",
+          "violation_hash": "559810220c83e2146acde4075362c9350acf1eeabf969de7d6a3506db5c09090",
+          "violation_id": "violation::559810220c83"
+        },
+        {
+          "detail": "non-answer route did not preserve an explicit limit",
+          "reason_code": "missing_honest_limit_language",
+          "violation_hash": "cc55106a1318c1690e732aa37f46e9acacad8011efefebb1f2d59c1c9981e915",
+          "violation_id": "violation::cc55106a1318"
+        }
+      ]
+    },
+    "self_knowledge_fallback_result": {
+      "fallback_action": "answer",
+      "guardrail_hash": "cbab23cc2fcb128d782d353c9be33d1b707cb1b4a25ebc57e244cd9eb5e719b2",
+      "output_text": "From this local AGIFCore state: I can answer only from this local AGIFCore workspace and the approved Phase 4 to 6 exports. I do not perform live external search inside Phase 7.",
+      "schema": "agifcore.phase_07.anti_generic_filler.v1",
+      "status": "fallback_applied",
+      "violations": [
+        {
+          "detail": "self-knowledge output used unsupported self-assertion language",
+          "reason_code": "unsupported_self_assertion",
+          "violation_hash": "6eac918cde2cd114d5ddc0c7faaba366dfb0d4eca1cdbc6f6efac9ceab71a186",
+          "violation_id": "violation::6eac918cde2c"
+        },
+        {
+          "detail": "answer text does not echo any question-specific terms",
+          "reason_code": "missing_question_specific_terms",
+          "violation_hash": "36e615f8c362ee588a96d0d5b42cf7b9a9dc8229400e7a462a1fc1335cd94d28",
+          "violation_id": "violation::36e615f8c362"
+        }
+      ]
+    }
+  },
+  "assertions": [
+    {
+      "id": "anti-filler-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "normal-grounded-output-passes",
+      "result": "pass"
+    },
+    {
+      "id": "generic-search-needed-output-falls-back",
+      "result": "pass"
+    },
+    {
+      "id": "unsupported-self-knowledge-output-falls-back",
+      "result": "pass"
+    },
+    {
+      "id": "guardrail-results-remain-machine-checkable",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_07_CONVERSATION_CORE.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/03_design/CONVERSATION_MODEL.md",
+    "projects/agifcore_master/03_design/GOVERNANCE_MODEL.md",
+    "projects/agifcore_master/03_design/MEMORY_MODEL.md",
+    "projects/agifcore_master/03_design/GRAPH_STACK_MODEL.md",
+    "projects/agifcore_master/03_design/SIMULATOR_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/contracts.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/anti_generic_filler.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/conversation_turn.py",
+    "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_raw_text_intake_report.json",
+    "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_question_interpretation_report.json",
+    "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_support_state_logic_report.json",
+    "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_self_knowledge_surface_report.json",
+    "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_clarification_report.json",
+    "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_utterance_planner_and_surface_realizer_report.json"
+  ],
+  "notes": [
+    "anti-generic filler guardrails remain active constraints, not style advice",
+    "Phase 7 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_anti_generic_filler_report.json"
+  },
+  "phase": "7",
+  "status": "pass",
+  "verifier": "verify_phase_07_anti_generic_filler"
+}

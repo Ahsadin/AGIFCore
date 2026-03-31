@@ -1,0 +1,178 @@
+{
+  "anchors": {
+    "ambiguous_question": {
+      "ambiguous_request": true,
+      "comparison_requested": false,
+      "conversation_id": "conv-qi",
+      "correction_hint": false,
+      "discourse_mode_hint": "clarify",
+      "extracted_terms": [
+        "can",
+        "you",
+        "check",
+        "that",
+        "thing",
+        "again"
+      ],
+      "interpretation_hash": "13281d053e304f8a7186da26bf74988535357208b343048b2c102c5a624c1490",
+      "live_current_requested": false,
+      "local_artifact_requested": false,
+      "question_category": "ambiguous",
+      "raw_text_hash": "5f2dcc50c60e67d0b39cf82f3dccf3525844caa2b498f252220507192da43c59",
+      "repeated_fact_hint": true,
+      "schema": "agifcore.phase_07.question_interpretation.v1",
+      "self_knowledge_requested": false,
+      "signal_notes": [
+        "ambiguous_reference_detected",
+        "repeat_hint_detected"
+      ],
+      "target_domain_hint": null,
+      "token_count": 6,
+      "turn_id": "turn-qi-4",
+      "user_intent": "ambiguous_question"
+    },
+    "live_current_question": {
+      "ambiguous_request": false,
+      "comparison_requested": false,
+      "conversation_id": "conv-qi",
+      "correction_hint": false,
+      "discourse_mode_hint": "abstain",
+      "extracted_terms": [
+        "what",
+        "is",
+        "the",
+        "latest",
+        "weather",
+        "today"
+      ],
+      "interpretation_hash": "23894f641997b7fd680dd874c418f55758817123dbdcd94b42d04cf4958cc637",
+      "live_current_requested": true,
+      "local_artifact_requested": false,
+      "question_category": "live_current",
+      "raw_text_hash": "440295095837ee960d5c3d0154eff4363c7161eb7163585c3f88507967dabfde",
+      "repeated_fact_hint": false,
+      "schema": "agifcore.phase_07.question_interpretation.v1",
+      "self_knowledge_requested": false,
+      "signal_notes": [
+        "fresh_information_requested"
+      ],
+      "target_domain_hint": null,
+      "token_count": 6,
+      "turn_id": "turn-qi-3",
+      "user_intent": "current_world_question"
+    },
+    "messy_question": {
+      "ambiguous_request": false,
+      "comparison_requested": false,
+      "conversation_id": "conv-qi",
+      "correction_hint": false,
+      "discourse_mode_hint": "status",
+      "extracted_terms": [
+        "pls",
+        "explain",
+        "invoice",
+        "workflow",
+        "status",
+        "again"
+      ],
+      "interpretation_hash": "f238f930def405be9e92b2a8bbcbf614d8dc11a8d26ec4854edcc0f1ab81a8ca",
+      "live_current_requested": false,
+      "local_artifact_requested": false,
+      "question_category": "ordinary",
+      "raw_text_hash": "af2fe52891dbbd4f2e558aeb2cda1de9ff1af6f02a9bc9d55331b387a90bc114",
+      "repeated_fact_hint": true,
+      "schema": "agifcore.phase_07.question_interpretation.v1",
+      "self_knowledge_requested": false,
+      "signal_notes": [
+        "repeat_hint_detected",
+        "target_domain:finance_document_workflows"
+      ],
+      "target_domain_hint": "finance_document_workflows",
+      "token_count": 6,
+      "turn_id": "turn-qi-1",
+      "user_intent": "status_question"
+    },
+    "self_knowledge_question": {
+      "ambiguous_request": true,
+      "comparison_requested": false,
+      "conversation_id": "conv-qi",
+      "correction_hint": false,
+      "discourse_mode_hint": "self_knowledge",
+      "extracted_terms": [
+        "what",
+        "can",
+        "you",
+        "do",
+        "in",
+        "this",
+        "agifcore",
+        "repo"
+      ],
+      "interpretation_hash": "cac7be13455ba061ba5aa7291dcbc803ec6f42dd80a1ea57434f6ec1bb916b1c",
+      "live_current_requested": false,
+      "local_artifact_requested": false,
+      "question_category": "self_knowledge",
+      "raw_text_hash": "e91a8ffc78e53085c63e9572999ba2a2a9eaa2b9774437e0161d42227458324d",
+      "repeated_fact_hint": false,
+      "schema": "agifcore.phase_07.question_interpretation.v1",
+      "self_knowledge_requested": true,
+      "signal_notes": [
+        "ambiguous_reference_detected",
+        "self_knowledge_topic_detected"
+      ],
+      "target_domain_hint": null,
+      "token_count": 8,
+      "turn_id": "turn-qi-2",
+      "user_intent": "self_knowledge_question"
+    }
+  },
+  "assertions": [
+    {
+      "id": "question-interpretation-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "target-domain-cues-detected",
+      "result": "pass"
+    },
+    {
+      "id": "self-knowledge-cues-detected",
+      "result": "pass"
+    },
+    {
+      "id": "live-current-cues-detected",
+      "result": "pass"
+    },
+    {
+      "id": "ambiguous-request-cues-detected",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_07_CONVERSATION_CORE.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/03_design/CONVERSATION_MODEL.md",
+    "projects/agifcore_master/03_design/GOVERNANCE_MODEL.md",
+    "projects/agifcore_master/03_design/MEMORY_MODEL.md",
+    "projects/agifcore_master/03_design/GRAPH_STACK_MODEL.md",
+    "projects/agifcore_master/03_design/SIMULATOR_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/contracts.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/raw_text_intake.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/question_interpretation.py",
+    "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_raw_text_intake_report.json"
+  ],
+  "notes": [
+    "question interpretation stays separate from support-state routing",
+    "Phase 7 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_question_interpretation_report.json"
+  },
+  "phase": "7",
+  "status": "pass",
+  "verifier": "verify_phase_07_question_interpretation"
+}

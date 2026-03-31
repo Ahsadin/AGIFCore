@@ -1,0 +1,187 @@
+{
+  "anchors": {
+    "answer_contract": {
+      "abstain_or_answer": "answer",
+      "active_context_refs": [
+        "phase7/demo",
+        "turn://conv-1/turn-1"
+      ],
+      "contract_hash": "c04e9ddfe742d02924f42181f1f3ba586fe1c29f8624ebe55aeed152ffe4ecd0",
+      "conversation_id": "conv-1",
+      "critic_trace_ref": "critic::20d6001acc01",
+      "discourse_mode": "status",
+      "evidence_refs": [
+        "descriptor::desc-1",
+        "descriptor::desc-2",
+        "descriptor::desc-3",
+        "descriptor::desc-4",
+        "finance_document_workflows",
+        "memory-review-00000001",
+        "simulation::ac2d1867801a",
+        "skill::skill-1"
+      ],
+      "final_answer_mode": "grounded_fact",
+      "governance_trace_ref": "governance::80b81a8b497a",
+      "knowledge_gap_reason": "none",
+      "memory_review_ref": "memory-review-00000001",
+      "next_action": "answer",
+      "planner_trace_ref": "planner::c5fc462dd304",
+      "response_text": "From the local AGIFCore evidence, this maps to finance_document_workflows. The support is review-only and execution-disabled, so I can explain the current local state but not run it.",
+      "schema": "agifcore.phase_07.answer_contract.v1",
+      "simulation_trace_ref": "simulation::ac2d1867801a",
+      "support_state": "grounded",
+      "turn_id": "turn-1",
+      "user_intent": "status_question"
+    },
+    "guardrail_result": {
+      "fallback_action": "answer",
+      "guardrail_hash": "5cd2e855e7f29d479e52e8902792d8d0ed4b533bd026d1bb989ac06b1fa33312",
+      "output_text": "From the local AGIFCore evidence, this maps to finance_document_workflows. The support is review-only and execution-disabled, so I can explain the current local state but not run it.",
+      "schema": "agifcore.phase_07.anti_generic_filler.v1",
+      "status": "pass",
+      "violations": []
+    },
+    "intake": {
+      "active_context_refs": [
+        "phase7/demo",
+        "turn://conv-1/turn-1"
+      ],
+      "character_count": 43,
+      "contains_code_block": false,
+      "conversation_id": "conv-1",
+      "ends_with_question": true,
+      "intake_hash": "0caa660004442635beae24c23acacb7436602722b94d6049e6640eceac3663e8",
+      "normalized_text": "pls explain invoice workflow status again??",
+      "raw_text": "pls explain invoice workflow status again??",
+      "token_count": 6,
+      "turn_id": "turn-1"
+    },
+    "interpretation": {
+      "ambiguous_request": false,
+      "comparison_requested": false,
+      "conversation_id": "conv-1",
+      "correction_hint": false,
+      "discourse_mode_hint": "status",
+      "extracted_terms": [
+        "pls",
+        "explain",
+        "invoice",
+        "workflow",
+        "status",
+        "again"
+      ],
+      "interpretation_hash": "03741795c431423cea6a8a0f2ce3ae2e02dd7acb9fa5fcc35eb267266595611b",
+      "live_current_requested": false,
+      "local_artifact_requested": false,
+      "question_category": "ordinary",
+      "raw_text_hash": "0caa660004442635beae24c23acacb7436602722b94d6049e6640eceac3663e8",
+      "repeated_fact_hint": true,
+      "schema": "agifcore.phase_07.question_interpretation.v1",
+      "self_knowledge_requested": false,
+      "signal_notes": [
+        "repeat_hint_detected",
+        "target_domain:finance_document_workflows"
+      ],
+      "target_domain_hint": "finance_document_workflows",
+      "token_count": 6,
+      "turn_id": "turn-1",
+      "user_intent": "status_question"
+    },
+    "response_surface": {
+      "cited_evidence_refs": [
+        "descriptor::desc-1",
+        "descriptor::desc-2",
+        "descriptor::desc-3",
+        "descriptor::desc-4",
+        "finance_document_workflows"
+      ],
+      "final_answer_mode": "grounded_fact",
+      "response_hash": "fb8a3922e702c9b4f39821258ff443a44f4e47f1ac96a3f7b253cf3502bf198d",
+      "response_id": "response::626e1f7ebf61",
+      "response_text": "From the local AGIFCore evidence, this maps to finance_document_workflows. The support is review-only and execution-disabled, so I can explain the current local state but not run it."
+    },
+    "support_resolution": {
+      "blocked_refs": [
+        "skill::skill-2",
+        "skill::skill-3",
+        "skill::skill-4"
+      ],
+      "conversation_id": "conv-1",
+      "critic_trace_ref": "critic::20d6001acc01",
+      "evidence_refs": [
+        "descriptor::desc-1",
+        "descriptor::desc-2",
+        "descriptor::desc-3",
+        "descriptor::desc-4",
+        "finance_document_workflows",
+        "memory-review-00000001",
+        "simulation::ac2d1867801a",
+        "skill::skill-1"
+      ],
+      "governance_trace_ref": "governance::80b81a8b497a",
+      "knowledge_gap_reason": "none",
+      "memory_review_ref": "memory-review-00000001",
+      "next_action": "answer",
+      "reason_codes": [
+        "qualified_phase6_usefulness"
+      ],
+      "resolution_hash": "f0276a4f50b5a1838c42ca24a6dad3094b16943a13464bc3c6bd87c504bfd43a",
+      "schema": "agifcore.phase_07.support_state_logic.v1",
+      "selected_domain_ids": [
+        "finance_document_workflows"
+      ],
+      "simulation_trace_ref": "simulation::ac2d1867801a",
+      "support_state": "grounded",
+      "turn_id": "turn-1"
+    },
+    "utterance_plan": {
+      "branch_count": 1,
+      "constraint_slots": [
+        "no_live_execution",
+        "no_rich_expression"
+      ],
+      "discourse_mode": "status",
+      "plan_hash": "8101eabec7d047a25829dda31298268fc9d6d906c7e3e360e7bd54233e0eaf7a",
+      "plan_id": "plan::f5fcc11d38b2",
+      "planner_trace_ref": "planner::c5fc462dd304",
+      "response_sections": [
+        "answer",
+        "evidence",
+        "next_step"
+      ],
+      "schema": "agifcore.phase_07.utterance_plan.v1",
+      "sentence_obligations": [
+        "state_local_scope",
+        "preserve_support_state"
+      ]
+    }
+  },
+  "demo_id": "phase_07_messy_question_demo",
+  "evidence_paths": {
+    "answer_contract": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_answer_contract_report.json",
+    "anti_generic_filler": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_anti_generic_filler_report.json",
+    "manifest": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_evidence_manifest.json",
+    "question_interpretation": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_question_interpretation_report.json",
+    "support_state_logic": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_support_state_logic_report.json",
+    "utterance_planner_and_surface_realizer": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_utterance_planner_and_surface_realizer_report.json"
+  },
+  "manifest_status": "phase_7_verifier_family_pass",
+  "notes": [
+    "This demo is generated from a real Phase 7 conversation turn fixture.",
+    "The messy prompt is interpreted through bounded local-only cues.",
+    "The resulting answer remains tied to support-state, plan, and answer-contract outputs.",
+    "No approval is implied by this demo export."
+  ],
+  "phase": "7",
+  "phase_remains_open": true,
+  "prompt": "pls explain invoice workflow status again??",
+  "review_order": [
+    "projects/agifcore_master/01_plan/PHASE_07_CONVERSATION_CORE.md",
+    "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_question_interpretation_report.json",
+    "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_support_state_logic_report.json",
+    "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_utterance_planner_and_surface_realizer_report.json",
+    "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_answer_contract_report.json"
+  ],
+  "runnable_command": "python3 projects/agifcore_master/05_testing/phase_07_conversation_core/run_phase_07_messy_question_demo.py",
+  "status": "pass"
+}

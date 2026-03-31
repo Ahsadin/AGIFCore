@@ -1,0 +1,63 @@
+{
+  "anchors": {
+    "context_ref_count": 2,
+    "sample_intake": {
+      "active_context_refs": [
+        "phase7/test",
+        "turn://conv-intake/turn-intake"
+      ],
+      "character_count": 47,
+      "contains_code_block": false,
+      "conversation_id": "conv-intake",
+      "ends_with_question": true,
+      "intake_hash": "4c214a62c62e9c0da20d18a3c8057b28e0ae40417c7d3773cd4e2e3bff1feb1e",
+      "normalized_text": "Please explain the invoice workflow status?",
+      "raw_text": "  Please explain the invoice workflow status?  ",
+      "token_count": 6,
+      "turn_id": "turn-intake"
+    }
+  },
+  "assertions": [
+    {
+      "id": "intake-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "whitespace-normalization-stable",
+      "result": "pass"
+    },
+    {
+      "id": "question-and-code-signals-preserved",
+      "result": "pass"
+    },
+    {
+      "id": "input-ceiling-enforced",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_07_CONVERSATION_CORE.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/03_design/CONVERSATION_MODEL.md",
+    "projects/agifcore_master/03_design/GOVERNANCE_MODEL.md",
+    "projects/agifcore_master/03_design/MEMORY_MODEL.md",
+    "projects/agifcore_master/03_design/GRAPH_STACK_MODEL.md",
+    "projects/agifcore_master/03_design/SIMULATOR_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/contracts.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/raw_text_intake.py"
+  ],
+  "notes": [
+    "raw intake remains a read-only normalization step",
+    "Phase 7 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_raw_text_intake_report.json"
+  },
+  "phase": "7",
+  "status": "pass",
+  "verifier": "verify_phase_07_raw_text_intake"
+}

@@ -1,0 +1,117 @@
+{
+  "anchors": {
+    "clarification_request": {
+      "question_count": 1,
+      "questions": [
+        {
+          "missing_variables": [
+            "target_domain",
+            "referent"
+          ],
+          "question_hash": "fb5b0facd2f13b06ba5b17cf98a8e040f07aa59111d78c340d15f3b758b278d7",
+          "question_id": "clarify::dfe40d894ddb",
+          "question_text": "I can answer this, but I need one detail first: which local workflow, file, or domain do you mean?",
+          "reason_code": "ambiguous_request"
+        }
+      ],
+      "request_hash": "7ebd89047f7fd33062772281bb1940bfa21bf4ac25c7424de0d2ead27d9d8d8c",
+      "schema": "agifcore.phase_07.clarification.v1"
+    },
+    "response_surface": {
+      "cited_evidence_refs": [
+        "clarify::dfe40d894ddb"
+      ],
+      "final_answer_mode": "clarify",
+      "response_hash": "3c8331c9f809dd691d960fc1ff047cae851faea237a546e22d665000d6c3a858",
+      "response_id": "response::18d7c1ac771e",
+      "response_text": "I can answer this, but I need one detail first: which local workflow, file, or domain do you mean?"
+    },
+    "support_resolution": {
+      "blocked_refs": [
+        "skill::skill-2",
+        "skill::skill-3",
+        "skill::skill-4"
+      ],
+      "conversation_id": "conv-1",
+      "critic_trace_ref": "critic::ec10cf7514d0",
+      "evidence_refs": [
+        "claims_case_handling",
+        "descriptor::desc-1",
+        "descriptor::desc-2",
+        "descriptor::desc-3",
+        "descriptor::desc-4",
+        "finance_document_workflows",
+        "memory-review-00000001",
+        "planning_coordination_workflows",
+        "pos_store_operations",
+        "simulation::ac2d1867801a",
+        "skill::skill-1"
+      ],
+      "governance_trace_ref": "governance::e1644fb6dc47",
+      "knowledge_gap_reason": "ambiguous_request",
+      "memory_review_ref": "memory-review-00000001",
+      "next_action": "clarify",
+      "reason_codes": [
+        "clarification_required"
+      ],
+      "resolution_hash": "33edb5599d3180137febd06c8626916c960a1204902da3290ab92b522a1c39ff",
+      "schema": "agifcore.phase_07.support_state_logic.v1",
+      "selected_domain_ids": [
+        "finance_document_workflows",
+        "claims_case_handling",
+        "planning_coordination_workflows",
+        "pos_store_operations"
+      ],
+      "simulation_trace_ref": "simulation::ac2d1867801a",
+      "support_state": "unknown",
+      "turn_id": "turn-1"
+    }
+  },
+  "assertions": [
+    {
+      "id": "clarification-runtime-importable",
+      "result": "pass"
+    },
+    {
+      "id": "clarification-route-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "single-specific-question-enforced",
+      "result": "pass"
+    },
+    {
+      "id": "missing-variable-capture-enforced",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_07_CONVERSATION_CORE.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/03_design/CONVERSATION_MODEL.md",
+    "projects/agifcore_master/03_design/GOVERNANCE_MODEL.md",
+    "projects/agifcore_master/03_design/MEMORY_MODEL.md",
+    "projects/agifcore_master/03_design/GRAPH_STACK_MODEL.md",
+    "projects/agifcore_master/03_design/SIMULATOR_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/contracts.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/clarification.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/conversation_turn.py",
+    "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_raw_text_intake_report.json",
+    "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_question_interpretation_report.json",
+    "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_support_state_logic_report.json"
+  ],
+  "notes": [
+    "clarification stays bounded, specific, and distinct from abstain or answer",
+    "Phase 7 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_07_conversation_core/phase_07_evidence/phase_07_clarification_report.json"
+  },
+  "phase": "7",
+  "status": "pass",
+  "verifier": "verify_phase_07_clarification"
+}
