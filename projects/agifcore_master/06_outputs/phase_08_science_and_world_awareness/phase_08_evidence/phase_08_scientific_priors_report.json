@@ -1,0 +1,409 @@
+{
+  "anchors": {
+    "catalog": [
+      {
+        "causal_mechanism": "Sea-air exchange and evening cooling can change near-shore conditions.",
+        "cell_hash": "e385290c13cb8756725fafca21181726dea8f1a2d0202e41b5b44dc59e2f14c2",
+        "cell_id": "phase8.prior.custom.001",
+        "cue_terms": [
+          "coastal",
+          "humidity",
+          "sunset",
+          "shore",
+          "evening"
+        ],
+        "failure_case": "An inland front can overpower the coastal baseline.",
+        "family_name": "scientific_prior",
+        "hidden_variable_hints": [
+          "sea breeze",
+          "night cooling",
+          "water proximity"
+        ],
+        "plain_language_law": "Coastal conditions shift through local water, wind, and cooling cycles.",
+        "principle_id": "coastal_weather_baseline",
+        "provenance_refs": [
+          "projects/agifcore_master/00_admin/codex_threads/tasks/phase_08/P8-TC-TRL-04_PHASE_8_SLICE_01_VERIFIER_COMMON_AND_PRIORS.md",
+          "projects/agifcore_master/01_plan/PHASE_08_SCIENCE_AND_WORLD_AWARENESS.md",
+          "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/scientific_priors.py"
+        ],
+        "scope_limits": "Gives bounded directional guidance, not exact live readings.",
+        "seed_topic": "weather and climate",
+        "transfer_hint": "Check coast, time of day, and moisture before drawing conclusions.",
+        "variables": [
+          "coastal_proximity",
+          "humidity",
+          "sunset",
+          "wind_direction"
+        ],
+        "worked_example": "A shoreline block can stay muggy after sunset while inland air cools faster."
+      },
+      {
+        "causal_mechanism": "Observed values are filtered through sensor and sampling limits.",
+        "cell_hash": "70827b878ce7fd255fe4e7d86a8456d29a313922cd86d79ad13dee57d83cf948",
+        "cell_id": "phase8.prior.custom.002",
+        "cue_terms": [
+          "current",
+          "today",
+          "latest",
+          "exact",
+          "measure",
+          "uncertain"
+        ],
+        "failure_case": "A stale reading can look precise while being wrong.",
+        "family_name": "scientific_prior",
+        "hidden_variable_hints": [
+          "live reading",
+          "sampling limits",
+          "instrument drift"
+        ],
+        "plain_language_law": "Freshness and instrumentation limits control how much certainty is safe.",
+        "principle_id": "measurement_uncertainty",
+        "provenance_refs": [
+          "projects/agifcore_master/00_admin/codex_threads/tasks/phase_08/P8-TC-TRL-04_PHASE_8_SLICE_01_VERIFIER_COMMON_AND_PRIORS.md",
+          "projects/agifcore_master/01_plan/PHASE_08_SCIENCE_AND_WORLD_AWARENESS.md",
+          "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/scientific_priors.py"
+        ],
+        "scope_limits": "Required guardrail for weak or current-fact requests.",
+        "seed_topic": "measurement and uncertainty",
+        "transfer_hint": "Fail closed when the evidence is weak or freshness is unclear.",
+        "variables": [
+          "measurement_error",
+          "sampling_bias",
+          "missing_variables"
+        ],
+        "worked_example": "One outdated reading cannot prove the current state of a system."
+      },
+      {
+        "causal_mechanism": "Acceleration emerges from net force, not from local weather cues.",
+        "cell_hash": "36c5e9055ea1512186b6910b879d14dd2a35631c616ff74fa2498af07af1cb68",
+        "cell_id": "phase8.prior.custom.003",
+        "cue_terms": [
+          "orbit",
+          "momentum",
+          "satellite",
+          "trajectory",
+          "acceleration"
+        ],
+        "failure_case": "Weather and moisture questions do not need orbital mechanics.",
+        "family_name": "scientific_prior",
+        "hidden_variable_hints": [
+          "mass distribution",
+          "net force",
+          "slope"
+        ],
+        "plain_language_law": "Motion changes follow force balance and momentum exchange.",
+        "principle_id": "orbital_momentum",
+        "provenance_refs": [
+          "projects/agifcore_master/00_admin/codex_threads/tasks/phase_08/P8-TC-TRL-04_PHASE_8_SLICE_01_VERIFIER_COMMON_AND_PRIORS.md",
+          "projects/agifcore_master/01_plan/PHASE_08_SCIENCE_AND_WORLD_AWARENESS.md",
+          "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/scientific_priors.py"
+        ],
+        "scope_limits": "Useful for motion reasoning only.",
+        "seed_topic": "motion and force",
+        "transfer_hint": "Ignore this prior unless the request is about motion or forces.",
+        "variables": [
+          "momentum",
+          "mass",
+          "force",
+          "trajectory"
+        ],
+        "worked_example": "A satellite path bends because of orbital forces, not humidity."
+      }
+    ],
+    "selected_strong_priors": [
+      {
+        "cell_id": "phase8.prior.custom.001",
+        "matched_cue_terms": [
+          "coastal",
+          "humidity",
+          "sunset"
+        ],
+        "matched_hidden_variables": [],
+        "principle_id": "coastal_weather_baseline",
+        "provenance_refs": [
+          "projects/agifcore_master/00_admin/codex_threads/tasks/phase_08/P8-TC-TRL-04_PHASE_8_SLICE_01_VERIFIER_COMMON_AND_PRIORS.md",
+          "projects/agifcore_master/01_plan/PHASE_08_SCIENCE_AND_WORLD_AWARENESS.md",
+          "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/scientific_priors.py"
+        ],
+        "reason_codes": [
+          "cue_term_match",
+          "seed_topic_alignment"
+        ],
+        "relevance_score": 0.78,
+        "selection_hash": "a2479b1432924d313d04401e898fb8c0e38327f347b611da33c2bc705e1029d3",
+        "selection_id": "conv-priors::turn-priors-1::prior::01"
+      },
+      {
+        "cell_id": "phase8.prior.custom.002",
+        "matched_cue_terms": [
+          "current"
+        ],
+        "matched_hidden_variables": [],
+        "principle_id": "measurement_uncertainty",
+        "provenance_refs": [
+          "projects/agifcore_master/00_admin/codex_threads/tasks/phase_08/P8-TC-TRL-04_PHASE_8_SLICE_01_VERIFIER_COMMON_AND_PRIORS.md",
+          "projects/agifcore_master/01_plan/PHASE_08_SCIENCE_AND_WORLD_AWARENESS.md",
+          "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/scientific_priors.py"
+        ],
+        "reason_codes": [
+          "cue_term_match",
+          "seed_topic_alignment"
+        ],
+        "relevance_score": 0.46,
+        "selection_hash": "23929e0fa0cc08ba9fd81c782fd9da491792df2a3b801147af03b74d517f2fec",
+        "selection_id": "conv-priors::turn-priors-1::prior::02"
+      }
+    ],
+    "strong_request": {
+      "available_prior_count": 3,
+      "request_id": "conv-priors::turn-priors-1",
+      "schema": "agifcore.phase_08.scientific_priors.v1",
+      "selected_cells": [
+        {
+          "causal_mechanism": "Sea-air exchange and evening cooling can change near-shore conditions.",
+          "cell_hash": "e385290c13cb8756725fafca21181726dea8f1a2d0202e41b5b44dc59e2f14c2",
+          "cell_id": "phase8.prior.custom.001",
+          "cue_terms": [
+            "coastal",
+            "humidity",
+            "sunset",
+            "shore",
+            "evening"
+          ],
+          "failure_case": "An inland front can overpower the coastal baseline.",
+          "family_name": "scientific_prior",
+          "hidden_variable_hints": [
+            "sea breeze",
+            "night cooling",
+            "water proximity"
+          ],
+          "plain_language_law": "Coastal conditions shift through local water, wind, and cooling cycles.",
+          "principle_id": "coastal_weather_baseline",
+          "provenance_refs": [
+            "projects/agifcore_master/00_admin/codex_threads/tasks/phase_08/P8-TC-TRL-04_PHASE_8_SLICE_01_VERIFIER_COMMON_AND_PRIORS.md",
+            "projects/agifcore_master/01_plan/PHASE_08_SCIENCE_AND_WORLD_AWARENESS.md",
+            "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/scientific_priors.py"
+          ],
+          "scope_limits": "Gives bounded directional guidance, not exact live readings.",
+          "seed_topic": "weather and climate",
+          "transfer_hint": "Check coast, time of day, and moisture before drawing conclusions.",
+          "variables": [
+            "coastal_proximity",
+            "humidity",
+            "sunset",
+            "wind_direction"
+          ],
+          "worked_example": "A shoreline block can stay muggy after sunset while inland air cools faster."
+        },
+        {
+          "causal_mechanism": "Observed values are filtered through sensor and sampling limits.",
+          "cell_hash": "70827b878ce7fd255fe4e7d86a8456d29a313922cd86d79ad13dee57d83cf948",
+          "cell_id": "phase8.prior.custom.002",
+          "cue_terms": [
+            "current",
+            "today",
+            "latest",
+            "exact",
+            "measure",
+            "uncertain"
+          ],
+          "failure_case": "A stale reading can look precise while being wrong.",
+          "family_name": "scientific_prior",
+          "hidden_variable_hints": [
+            "live reading",
+            "sampling limits",
+            "instrument drift"
+          ],
+          "plain_language_law": "Freshness and instrumentation limits control how much certainty is safe.",
+          "principle_id": "measurement_uncertainty",
+          "provenance_refs": [
+            "projects/agifcore_master/00_admin/codex_threads/tasks/phase_08/P8-TC-TRL-04_PHASE_8_SLICE_01_VERIFIER_COMMON_AND_PRIORS.md",
+            "projects/agifcore_master/01_plan/PHASE_08_SCIENCE_AND_WORLD_AWARENESS.md",
+            "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/scientific_priors.py"
+          ],
+          "scope_limits": "Required guardrail for weak or current-fact requests.",
+          "seed_topic": "measurement and uncertainty",
+          "transfer_hint": "Fail closed when the evidence is weak or freshness is unclear.",
+          "variables": [
+            "measurement_error",
+            "sampling_bias",
+            "missing_variables"
+          ],
+          "worked_example": "One outdated reading cannot prove the current state of a system."
+        }
+      ],
+      "selected_prior_count": 2,
+      "selected_prior_ids": [
+        "phase8.prior.custom.001",
+        "phase8.prior.custom.002"
+      ],
+      "selected_priors": [
+        {
+          "cell_id": "phase8.prior.custom.001",
+          "matched_cue_terms": [
+            "coastal",
+            "humidity",
+            "sunset"
+          ],
+          "matched_hidden_variables": [],
+          "principle_id": "coastal_weather_baseline",
+          "provenance_refs": [
+            "projects/agifcore_master/00_admin/codex_threads/tasks/phase_08/P8-TC-TRL-04_PHASE_8_SLICE_01_VERIFIER_COMMON_AND_PRIORS.md",
+            "projects/agifcore_master/01_plan/PHASE_08_SCIENCE_AND_WORLD_AWARENESS.md",
+            "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/scientific_priors.py"
+          ],
+          "reason_codes": [
+            "cue_term_match",
+            "seed_topic_alignment"
+          ],
+          "relevance_score": 0.78,
+          "selection_hash": "a2479b1432924d313d04401e898fb8c0e38327f347b611da33c2bc705e1029d3",
+          "selection_id": "conv-priors::turn-priors-1::prior::01"
+        },
+        {
+          "cell_id": "phase8.prior.custom.002",
+          "matched_cue_terms": [
+            "current"
+          ],
+          "matched_hidden_variables": [],
+          "principle_id": "measurement_uncertainty",
+          "provenance_refs": [
+            "projects/agifcore_master/00_admin/codex_threads/tasks/phase_08/P8-TC-TRL-04_PHASE_8_SLICE_01_VERIFIER_COMMON_AND_PRIORS.md",
+            "projects/agifcore_master/01_plan/PHASE_08_SCIENCE_AND_WORLD_AWARENESS.md",
+            "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/scientific_priors.py"
+          ],
+          "reason_codes": [
+            "cue_term_match",
+            "seed_topic_alignment"
+          ],
+          "relevance_score": 0.46,
+          "selection_hash": "23929e0fa0cc08ba9fd81c782fd9da491792df2a3b801147af03b74d517f2fec",
+          "selection_id": "conv-priors::turn-priors-1::prior::02"
+        }
+      ],
+      "selection_notes": [
+        "prior_selection_complete"
+      ],
+      "snapshot_hash": "2f370c4058363b830460922c5ac048d42bc54220ac2755c33d61a6ded012be1e"
+    },
+    "weak_request": {
+      "available_prior_count": 3,
+      "request_id": "conv-priors::turn-priors-2",
+      "schema": "agifcore.phase_08.scientific_priors.v1",
+      "selected_cells": [
+        {
+          "causal_mechanism": "Observed values are filtered through sensor and sampling limits.",
+          "cell_hash": "70827b878ce7fd255fe4e7d86a8456d29a313922cd86d79ad13dee57d83cf948",
+          "cell_id": "phase8.prior.custom.002",
+          "cue_terms": [
+            "current",
+            "today",
+            "latest",
+            "exact",
+            "measure",
+            "uncertain"
+          ],
+          "failure_case": "A stale reading can look precise while being wrong.",
+          "family_name": "scientific_prior",
+          "hidden_variable_hints": [
+            "live reading",
+            "sampling limits",
+            "instrument drift"
+          ],
+          "plain_language_law": "Freshness and instrumentation limits control how much certainty is safe.",
+          "principle_id": "measurement_uncertainty",
+          "provenance_refs": [
+            "projects/agifcore_master/00_admin/codex_threads/tasks/phase_08/P8-TC-TRL-04_PHASE_8_SLICE_01_VERIFIER_COMMON_AND_PRIORS.md",
+            "projects/agifcore_master/01_plan/PHASE_08_SCIENCE_AND_WORLD_AWARENESS.md",
+            "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/scientific_priors.py"
+          ],
+          "scope_limits": "Required guardrail for weak or current-fact requests.",
+          "seed_topic": "measurement and uncertainty",
+          "transfer_hint": "Fail closed when the evidence is weak or freshness is unclear.",
+          "variables": [
+            "measurement_error",
+            "sampling_bias",
+            "missing_variables"
+          ],
+          "worked_example": "One outdated reading cannot prove the current state of a system."
+        }
+      ],
+      "selected_prior_count": 1,
+      "selected_prior_ids": [
+        "phase8.prior.custom.002"
+      ],
+      "selected_priors": [
+        {
+          "cell_id": "phase8.prior.custom.002",
+          "matched_cue_terms": [],
+          "matched_hidden_variables": [],
+          "principle_id": "measurement_uncertainty",
+          "provenance_refs": [
+            "projects/agifcore_master/00_admin/codex_threads/tasks/phase_08/P8-TC-TRL-04_PHASE_8_SLICE_01_VERIFIER_COMMON_AND_PRIORS.md",
+            "projects/agifcore_master/01_plan/PHASE_08_SCIENCE_AND_WORLD_AWARENESS.md",
+            "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/scientific_priors.py"
+          ],
+          "reason_codes": [
+            "uncertainty_guardrail_fallback"
+          ],
+          "relevance_score": 0.05,
+          "selection_hash": "cab623f401df48d541c90107bcfd5f80f0e983f2bec76b2bb770fa7385858e2d",
+          "selection_id": "conv-priors::turn-priors-2::prior::01"
+        }
+      ],
+      "selection_notes": [
+        "measurement_uncertainty_fallback_applied",
+        "no_prior_matched"
+      ],
+      "snapshot_hash": "0e21b73bed82f10cdc17dcfa95da5cf0bb6b1018abdf480a2126916be843b9ce"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "catalog-and-snapshot-contracts-validated",
+      "result": "pass"
+    },
+    {
+      "id": "relevant-and-ambiguous-priors-selected",
+      "result": "pass"
+    },
+    {
+      "id": "irrelevant-prior-not-selected",
+      "result": "pass"
+    },
+    {
+      "id": "weak-request-fails-closed",
+      "result": "pass"
+    },
+    {
+      "id": "provenance-refs-preserved",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_08_SCIENCE_AND_WORLD_AWARENESS.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/__init__.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/scientific_priors.py",
+    "projects/agifcore_master/05_testing/phase_08_science_and_world_awareness/_phase_08_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_08_science_and_world_awareness/verify_phase_08_scientific_priors.py"
+  ],
+  "notes": [
+    "priors selection stays bounded and fail-closed when the catalog evidence is weak",
+    "Phase 8 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_08_science_and_world_awareness/phase_08_evidence/phase_08_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_08_science_and_world_awareness/phase_08_evidence/phase_08_scientific_priors_report.json"
+  },
+  "phase": "8",
+  "status": "pass",
+  "verifier": "verify_phase_08_scientific_priors"
+}

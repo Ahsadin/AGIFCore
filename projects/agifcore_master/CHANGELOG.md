@@ -106,3 +106,7 @@
 - Froze the approved Phase 8 planning baseline for execution start in `01_plan/PHASE_08_SCIENCE_AND_WORLD_AWARENESS.md`.
 - Added `00_admin/codex_threads/handoffs/PHASE_08_PLAN_FREEZE_HANDOFF.md` and `00_admin/codex_threads/handoffs/PHASE_08_EXECUTION_START_BRIEF.md`.
 - Logged that the Phase 8 planning baseline is frozen for execution start while Phase 8 remains `open` and Phase 9 has not started.
+- Completed the full Phase 8 runtime package under `04_execution/phase_08_science_and_world_awareness/`, with paired verifiers under `05_testing/phase_08_science_and_world_awareness/` and evidence/demo outputs under `06_outputs/phase_08_science_and_world_awareness/`.
+- Added the Phase 8 internal execution slice task-card set, demo implementation task card, final audit task card, final validation task card, audit report, Governor verification record, validation request, and user verdict under `00_admin/codex_threads/`.
+- Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 8 is now `approved`.
+- Logged the earned Phase 8 approval state in `DECISIONS.md` while keeping Phase 9 not started and ready for a separate run.

@@ -1,0 +1,1373 @@
+{
+  "anchors": {
+    "strong_chain": {
+      "chain_id": "ccr::23c8f2fa970f",
+      "fail_closed": false,
+      "missing_variables": [],
+      "principle_refs": [
+        "measurement_uncertainty"
+      ],
+      "region_ref": "wrs::conv-ccr::turn-ccr-1::target::01",
+      "request_id": "conv-ccr::turn-ccr-1",
+      "schema": "agifcore.phase_08.causal_chain_reasoning.v1",
+      "simulation_refs": [
+        "sim::phase8::weather_climate::01"
+      ],
+      "snapshot_hash": "cf132b921957c849015a907a582bf4153cb362f706981811011b149ae9538d29",
+      "step_count": 7,
+      "steps": [
+        {
+          "evidence_refs": [
+            "eri::turn-ccr-1::01",
+            "287fafe933812d36b1e226f86ca52053ccece5048a2286a23626ce62ee646961"
+          ],
+          "fail_closed": false,
+          "missing_variables": [],
+          "principle_ref": null,
+          "reason_codes": [
+            "request_type:status_check",
+            "support_state_hint:grounded",
+            "live_current_requested"
+          ],
+          "region_ref": null,
+          "simulation_ref": null,
+          "statement": "Request frame targets 'boston today' as a status_check question.",
+          "step_hash": "7f8ae04bbaba3ece7fa1b620bdb959568b8d70635794a193432b02c0f94477f4",
+          "step_id": "ccr::conv-ccr::turn-ccr-1::01",
+          "step_index": 1,
+          "step_kind": "request_frame",
+          "usefulness_ref": null,
+          "world_entity_ref": null
+        },
+        {
+          "evidence_refs": [
+            "wrs::conv-ccr::turn-ccr-1::target::01",
+            "42f5df928fbcbf592d70e21d74627fc65cdd6a37b82748c9ad4324f8dfe8a0ef",
+            "eri::turn-ccr-1::01"
+          ],
+          "fail_closed": false,
+          "missing_variables": [],
+          "principle_ref": null,
+          "reason_codes": [
+            "target_domain_hint_match",
+            "descriptor_token_overlap",
+            "domain_name_overlap"
+          ],
+          "region_ref": "wrs::conv-ccr::turn-ccr-1::target::01",
+          "simulation_ref": null,
+          "statement": "Region context uses 'weather climate' (target_domain) with confidence 0.77.",
+          "step_hash": "e133f78952333b8d35c5de3b32cf5b66531839800d2b0bdf97d8211b05de20c2",
+          "step_id": "ccr::conv-ccr::turn-ccr-1::02",
+          "step_index": 2,
+          "step_kind": "region_context",
+          "usefulness_ref": null,
+          "world_entity_ref": null
+        },
+        {
+          "evidence_refs": [
+            "conv-ccr::turn-ccr-1::prior::01",
+            "04ee6e4482772ef971694d465c43bb745e90020bc9d70e58ab3daa0e1f4c829f",
+            "4780da8efb93a45691e3ffc439e857e313f076cd144ffd029b0e4b64f44b6017"
+          ],
+          "fail_closed": false,
+          "missing_variables": [
+            "missing live reading",
+            "sampling limits",
+            "instrument drift"
+          ],
+          "principle_ref": "measurement_uncertainty",
+          "reason_codes": [
+            "cue_term_match"
+          ],
+          "region_ref": null,
+          "simulation_ref": null,
+          "statement": "Applied principle 'measurement_uncertainty' with relevance 0.32.",
+          "step_hash": "e746e30dca4d82157b968f523cd140495519beb3ea50486364461c6824f6e992",
+          "step_id": "ccr::conv-ccr::turn-ccr-1::03",
+          "step_index": 3,
+          "step_kind": "prior_application",
+          "usefulness_ref": null,
+          "world_entity_ref": null
+        },
+        {
+          "evidence_refs": [
+            "phase6.world_model::world::target::weather_climate",
+            "weather_climate"
+          ],
+          "fail_closed": false,
+          "missing_variables": [],
+          "principle_ref": null,
+          "reason_codes": [
+            "world_entity_selected",
+            "world_confidence:0.80",
+            "target_domain:weather_climate"
+          ],
+          "region_ref": "wrs::conv-ccr::turn-ccr-1::target::01",
+          "simulation_ref": null,
+          "statement": "World support anchors on entity 'weather climate' with confidence 0.80.",
+          "step_hash": "1117194229d30a2d0c69e38430a10c9e004a0c2749823256dff7e5f9065d08ae",
+          "step_id": "ccr::conv-ccr::turn-ccr-1::04",
+          "step_index": 4,
+          "step_kind": "world_support",
+          "usefulness_ref": null,
+          "world_entity_ref": "world::target::weather_climate"
+        },
+        {
+          "evidence_refs": [
+            "sim::phase8::weather_climate::01",
+            "sim::snapshot::phase8",
+            "sim::future::01"
+          ],
+          "fail_closed": false,
+          "missing_variables": [],
+          "principle_ref": null,
+          "reason_codes": [
+            "simulation_outcome:stable_local_pattern",
+            "bounded_local_support"
+          ],
+          "region_ref": "wrs::conv-ccr::turn-ccr-1::target::01",
+          "simulation_ref": "sim::phase8::weather_climate::01",
+          "statement": "Simulation check returned 'stable_local_pattern' with confidence 0.84.",
+          "step_hash": "72cc2f13f39d48daf4d5497b80970d9b180878ca63286e6f793d578927e181d4",
+          "step_id": "ccr::conv-ccr::turn-ccr-1::05",
+          "step_index": 5,
+          "step_kind": "simulation_check",
+          "usefulness_ref": null,
+          "world_entity_ref": "world::target::weather_climate"
+        },
+        {
+          "evidence_refs": [
+            "phase6.usefulness::weather_climate",
+            "usefulness::snapshot::phase8"
+          ],
+          "fail_closed": false,
+          "missing_variables": [],
+          "principle_ref": null,
+          "reason_codes": [
+            "domain_outcome:qualified",
+            "overall_outcome:qualified",
+            "weighted_score:0.83"
+          ],
+          "region_ref": "wrs::conv-ccr::turn-ccr-1::target::01",
+          "simulation_ref": "sim::phase8::weather_climate::01",
+          "statement": "Usefulness domain 'weather_climate' is 'qualified' with weighted score 0.83.",
+          "step_hash": "5d23bd6e5c223d75592faa153a74e33dc4e92fb653f4f26fed069a9a99ba112c",
+          "step_id": "ccr::conv-ccr::turn-ccr-1::06",
+          "step_index": 6,
+          "step_kind": "usefulness_check",
+          "usefulness_ref": "phase6.usefulness::weather_climate",
+          "world_entity_ref": "world::target::weather_climate"
+        },
+        {
+          "evidence_refs": [
+            "4780da8efb93a45691e3ffc439e857e313f076cd144ffd029b0e4b64f44b6017",
+            "42f5df928fbcbf592d70e21d74627fc65cdd6a37b82748c9ad4324f8dfe8a0ef",
+            "sim::snapshot::phase8",
+            "usefulness::snapshot::phase8"
+          ],
+          "fail_closed": false,
+          "missing_variables": [],
+          "principle_ref": "measurement_uncertainty",
+          "reason_codes": [
+            "no_critical_missing_variables"
+          ],
+          "region_ref": "wrs::conv-ccr::turn-ccr-1::target::01",
+          "simulation_ref": "sim::phase8::weather_climate::01",
+          "statement": "Missing-variable check found no critical unresolved inputs in bounded evidence.",
+          "step_hash": "3d804ed49154b5e368bb736de3b4f6672511212e89080286266a829abe8b7839",
+          "step_id": "ccr::conv-ccr::turn-ccr-1::07",
+          "step_index": 7,
+          "step_kind": "missing_variable",
+          "usefulness_ref": "phase6.usefulness::weather_climate",
+          "world_entity_ref": "world::target::weather_climate"
+        }
+      ],
+      "usefulness_ref": "phase6.usefulness::weather_climate",
+      "weakest_link_reason": "none_detected",
+      "world_entity_refs": [
+        "world::target::weather_climate"
+      ]
+    },
+    "strong_inference": {
+      "candidate_count": 9,
+      "candidates": [
+        {
+          "ambiguous_request": false,
+          "candidate_hash": "7d5357fc2f07ebd65fb903027a5600a5cc89e17a436a738bf6fa4220cfb23301",
+          "candidate_id": "eri::turn-ccr-1::01",
+          "confidence": 0.85,
+          "entity_class": "physical_system",
+          "entity_label": "boston today",
+          "hidden_variable_cues": [
+            "sensor_freshness"
+          ],
+          "live_current_requested": true,
+          "matched_terms": [
+            "boston",
+            "today",
+            "weather",
+            "weather_climate",
+            "measurement_uncertainty"
+          ],
+          "reason_codes": [
+            "request_type:status_check",
+            "entity_class:physical_system",
+            "science_topic_cues_detected",
+            "hidden_variable_cues_detected",
+            "live_current_requested"
+          ],
+          "region_hint": null,
+          "request_type": "status_check",
+          "science_topic_cues": [
+            "weather_climate",
+            "measurement_uncertainty"
+          ],
+          "target_domain_hint": "weather_climate"
+        },
+        {
+          "ambiguous_request": false,
+          "candidate_hash": "65480d3a24e705f9ccd6b42a8074662e79882cb2021624acccb7a49ec336c697",
+          "candidate_id": "eri::turn-ccr-1::02",
+          "confidence": 0.85,
+          "entity_class": "physical_system",
+          "entity_label": "boston today",
+          "hidden_variable_cues": [
+            "sensor_freshness"
+          ],
+          "live_current_requested": true,
+          "matched_terms": [
+            "boston",
+            "today",
+            "weather",
+            "weather_climate",
+            "measurement_uncertainty"
+          ],
+          "reason_codes": [
+            "request_type:definition",
+            "entity_class:physical_system",
+            "science_topic_cues_detected",
+            "hidden_variable_cues_detected",
+            "live_current_requested"
+          ],
+          "region_hint": null,
+          "request_type": "definition",
+          "science_topic_cues": [
+            "weather_climate",
+            "measurement_uncertainty"
+          ],
+          "target_domain_hint": "weather_climate"
+        },
+        {
+          "ambiguous_request": false,
+          "candidate_hash": "5b89984945542630bb8ceee0197375edb2628ff363b9ec0f8e9ea1f5a0b39a77",
+          "candidate_id": "eri::turn-ccr-1::03",
+          "confidence": 0.85,
+          "entity_class": "physical_system",
+          "entity_label": "latest weather",
+          "hidden_variable_cues": [
+            "sensor_freshness"
+          ],
+          "live_current_requested": true,
+          "matched_terms": [
+            "latest",
+            "weather",
+            "boston",
+            "today",
+            "weather_climate",
+            "measurement_uncertainty"
+          ],
+          "reason_codes": [
+            "request_type:status_check",
+            "entity_class:physical_system",
+            "science_topic_cues_detected",
+            "hidden_variable_cues_detected",
+            "live_current_requested"
+          ],
+          "region_hint": null,
+          "request_type": "status_check",
+          "science_topic_cues": [
+            "weather_climate",
+            "measurement_uncertainty"
+          ],
+          "target_domain_hint": "weather_climate"
+        },
+        {
+          "ambiguous_request": false,
+          "candidate_hash": "4b4476bafe81f9d7a2eaf4ab34f60739834575c048dac790c1287736c362d87b",
+          "candidate_id": "eri::turn-ccr-1::04",
+          "confidence": 0.85,
+          "entity_class": "physical_system",
+          "entity_label": "latest weather",
+          "hidden_variable_cues": [
+            "sensor_freshness"
+          ],
+          "live_current_requested": true,
+          "matched_terms": [
+            "latest",
+            "weather",
+            "boston",
+            "today",
+            "weather_climate",
+            "measurement_uncertainty"
+          ],
+          "reason_codes": [
+            "request_type:definition",
+            "entity_class:physical_system",
+            "science_topic_cues_detected",
+            "hidden_variable_cues_detected",
+            "live_current_requested"
+          ],
+          "region_hint": null,
+          "request_type": "definition",
+          "science_topic_cues": [
+            "weather_climate",
+            "measurement_uncertainty"
+          ],
+          "target_domain_hint": "weather_climate"
+        },
+        {
+          "ambiguous_request": false,
+          "candidate_hash": "b4ac3b18678e365697b99281d34b828bd70ea27c94d59b7a61388a9de15a5e61",
+          "candidate_id": "eri::turn-ccr-1::05",
+          "confidence": 0.85,
+          "entity_class": "physical_system",
+          "entity_label": "weather boston",
+          "hidden_variable_cues": [
+            "sensor_freshness"
+          ],
+          "live_current_requested": true,
+          "matched_terms": [
+            "weather",
+            "boston",
+            "today",
+            "weather_climate",
+            "measurement_uncertainty"
+          ],
+          "reason_codes": [
+            "request_type:status_check",
+            "entity_class:physical_system",
+            "science_topic_cues_detected",
+            "hidden_variable_cues_detected",
+            "live_current_requested"
+          ],
+          "region_hint": null,
+          "request_type": "status_check",
+          "science_topic_cues": [
+            "weather_climate",
+            "measurement_uncertainty"
+          ],
+          "target_domain_hint": "weather_climate"
+        },
+        {
+          "ambiguous_request": false,
+          "candidate_hash": "c4e2b0cce4664347f24370227a8f6c7422dec0e3533d73e8aae6700560495756",
+          "candidate_id": "eri::turn-ccr-1::06",
+          "confidence": 0.85,
+          "entity_class": "physical_system",
+          "entity_label": "weather",
+          "hidden_variable_cues": [
+            "sensor_freshness"
+          ],
+          "live_current_requested": true,
+          "matched_terms": [
+            "weather",
+            "boston",
+            "today",
+            "weather_climate",
+            "measurement_uncertainty"
+          ],
+          "reason_codes": [
+            "request_type:status_check",
+            "entity_class:physical_system",
+            "science_topic_cues_detected",
+            "hidden_variable_cues_detected",
+            "live_current_requested"
+          ],
+          "region_hint": null,
+          "request_type": "status_check",
+          "science_topic_cues": [
+            "weather_climate",
+            "measurement_uncertainty"
+          ],
+          "target_domain_hint": "weather_climate"
+        },
+        {
+          "ambiguous_request": false,
+          "candidate_hash": "0d18e1434d867640155d2bb9c8b482797043a7511e591a306707948e669a17fd",
+          "candidate_id": "eri::turn-ccr-1::07",
+          "confidence": 0.85,
+          "entity_class": "physical_system",
+          "entity_label": "boston",
+          "hidden_variable_cues": [
+            "sensor_freshness"
+          ],
+          "live_current_requested": true,
+          "matched_terms": [
+            "boston",
+            "weather",
+            "today",
+            "weather_climate",
+            "measurement_uncertainty"
+          ],
+          "reason_codes": [
+            "request_type:status_check",
+            "entity_class:physical_system",
+            "science_topic_cues_detected",
+            "hidden_variable_cues_detected",
+            "live_current_requested"
+          ],
+          "region_hint": null,
+          "request_type": "status_check",
+          "science_topic_cues": [
+            "weather_climate",
+            "measurement_uncertainty"
+          ],
+          "target_domain_hint": "weather_climate"
+        },
+        {
+          "ambiguous_request": false,
+          "candidate_hash": "f1d58493dde950aabc3b935e702d54f1a87532099752868c59ccaac3fd9552d8",
+          "candidate_id": "eri::turn-ccr-1::08",
+          "confidence": 0.85,
+          "entity_class": "physical_system",
+          "entity_label": "today",
+          "hidden_variable_cues": [
+            "sensor_freshness"
+          ],
+          "live_current_requested": true,
+          "matched_terms": [
+            "today",
+            "weather",
+            "boston",
+            "weather_climate",
+            "measurement_uncertainty"
+          ],
+          "reason_codes": [
+            "request_type:status_check",
+            "entity_class:physical_system",
+            "science_topic_cues_detected",
+            "hidden_variable_cues_detected",
+            "live_current_requested"
+          ],
+          "region_hint": null,
+          "request_type": "status_check",
+          "science_topic_cues": [
+            "weather_climate",
+            "measurement_uncertainty"
+          ],
+          "target_domain_hint": "weather_climate"
+        },
+        {
+          "ambiguous_request": false,
+          "candidate_hash": "846d6109402eaebf80a91557818336dabc0bcd1c3fa3c90776bf9aeeaf6abd39",
+          "candidate_id": "eri::turn-ccr-1::09",
+          "confidence": 0.85,
+          "entity_class": "physical_system",
+          "entity_label": "weather climate",
+          "hidden_variable_cues": [
+            "sensor_freshness"
+          ],
+          "live_current_requested": true,
+          "matched_terms": [
+            "weather",
+            "climate",
+            "boston",
+            "today",
+            "weather_climate",
+            "measurement_uncertainty"
+          ],
+          "reason_codes": [
+            "request_type:status_check",
+            "entity_class:physical_system",
+            "science_topic_cues_detected",
+            "hidden_variable_cues_detected",
+            "live_current_requested"
+          ],
+          "region_hint": null,
+          "request_type": "status_check",
+          "science_topic_cues": [
+            "weather_climate",
+            "measurement_uncertainty"
+          ],
+          "target_domain_hint": "weather_climate"
+        }
+      ],
+      "conversation_id": "conv-ccr",
+      "extracted_terms": [
+        "weather",
+        "boston",
+        "today"
+      ],
+      "hidden_variable_cues": [
+        "sensor_freshness"
+      ],
+      "inference_hash": "287fafe933812d36b1e226f86ca52053ccece5048a2286a23626ce62ee646961",
+      "inference_notes": [
+        "live_current_requested_from_phase7",
+        "support_state_hint:grounded",
+        "knowledge_gap_reason_hint:none"
+      ],
+      "knowledge_gap_reason_hint": "none",
+      "normalized_text": "what is the latest weather in boston today?",
+      "raw_text_hash": "conv-ccr:turn-ccr-1:what is the latest weather in boston today?",
+      "schema": "agifcore.phase_08.entity_request_inference.v1",
+      "science_topic_cues": [
+        "weather_climate",
+        "measurement_uncertainty"
+      ],
+      "selected_candidate_id": "eri::turn-ccr-1::01",
+      "support_state_hint": "grounded",
+      "turn_id": "turn-ccr-1"
+    },
+    "strong_priors": {
+      "available_prior_count": 9,
+      "request_id": "conv-ccr::turn-ccr-1",
+      "schema": "agifcore.phase_08.scientific_priors.v1",
+      "selected_cells": [
+        {
+          "causal_mechanism": "Observed values are filtered through instrument and sampling limits.",
+          "cell_hash": "d50b1ef7c5eb74657714e36b9f2aa62f1d846d0f492f841431cf27cf36f5c8ed",
+          "cell_id": "phase8.prior.009",
+          "cue_terms": [
+            "current",
+            "latest",
+            "today",
+            "exact",
+            "measure",
+            "uncertain"
+          ],
+          "failure_case": "Sparse or stale observations can produce false confidence.",
+          "family_name": "scientific_prior",
+          "hidden_variable_hints": [
+            "missing live reading",
+            "sampling limits",
+            "instrument drift"
+          ],
+          "plain_language_law": "Any claim is bounded by measurement quality and missing variables.",
+          "principle_id": "measurement_uncertainty",
+          "provenance_refs": [
+            "projects/agifcore_master/01_plan/PHASE_08_SCIENCE_AND_WORLD_AWARENESS.md",
+            "projects/agifcore_master/01_plan/COMPONENT_CATALOG.md#CC-010",
+            "projects/agifcore_master/01_plan/COMPONENT_CATALOG.md#CC-021",
+            "agif_fabric_v2/projects/agif_v2_master/04_execution/phase_8c_governed_structural_growth/agif_phase8c_governed_structural_growth/contracts.py",
+            "agif_fabric_v2/projects/agif_v2_master/04_execution/phase_8c_governed_structural_growth/agif_phase8c_governed_structural_growth/runtime.py"
+          ],
+          "scope_limits": "Mandatory guardrail for live-current and exact-value requests.",
+          "seed_topic": "measurement and uncertainty",
+          "transfer_hint": "Raise uncertainty when freshness or instrumentation is weak.",
+          "variables": [
+            "measurement_error",
+            "sampling_bias",
+            "missing_variables"
+          ],
+          "worked_example": "A single stale reading cannot prove current local status."
+        },
+        {
+          "causal_mechanism": "Advection and moisture balance regulate heat and precipitation signals.",
+          "cell_hash": "3f7bc1ee5793727df034febdeb827e8e8d1d4aa0a0e6dc8bddf4359e2f9bb7c0",
+          "cell_id": "phase8.prior.003",
+          "cue_terms": [
+            "weather",
+            "climate",
+            "humid",
+            "humidity",
+            "wind",
+            "storm",
+            "rain"
+          ],
+          "failure_case": "Microclimates can invert broader regional expectations.",
+          "family_name": "scientific_prior",
+          "hidden_variable_hints": [
+            "wind direction",
+            "cloud cover",
+            "moisture source"
+          ],
+          "plain_language_law": "Wind, moisture, and cloud cover jointly shape local conditions.",
+          "principle_id": "weather_driver_interaction",
+          "provenance_refs": [
+            "projects/agifcore_master/01_plan/PHASE_08_SCIENCE_AND_WORLD_AWARENESS.md",
+            "projects/agifcore_master/01_plan/COMPONENT_CATALOG.md#CC-010",
+            "projects/agifcore_master/01_plan/COMPONENT_CATALOG.md#CC-021",
+            "agif_fabric_v2/projects/agif_v2_master/04_execution/phase_8c_governed_structural_growth/agif_phase8c_governed_structural_growth/contracts.py",
+            "agif_fabric_v2/projects/agif_v2_master/04_execution/phase_8c_governed_structural_growth/agif_phase8c_governed_structural_growth/runtime.py"
+          ],
+          "scope_limits": "Does not replace local sensors when current values are requested.",
+          "seed_topic": "weather and climate",
+          "transfer_hint": "Look for interacting drivers instead of a single-cause shortcut.",
+          "variables": [
+            "humidity",
+            "wind_speed",
+            "wind_direction",
+            "cloud_cover"
+          ],
+          "worked_example": "Onshore wind can cool one district while inland heat persists."
+        }
+      ],
+      "selected_prior_count": 2,
+      "selected_prior_ids": [
+        "phase8.prior.009",
+        "phase8.prior.003"
+      ],
+      "selected_priors": [
+        {
+          "cell_id": "phase8.prior.009",
+          "matched_cue_terms": [
+            "latest",
+            "today"
+          ],
+          "matched_hidden_variables": [],
+          "principle_id": "measurement_uncertainty",
+          "provenance_refs": [
+            "projects/agifcore_master/01_plan/PHASE_08_SCIENCE_AND_WORLD_AWARENESS.md",
+            "projects/agifcore_master/01_plan/COMPONENT_CATALOG.md#CC-010",
+            "projects/agifcore_master/01_plan/COMPONENT_CATALOG.md#CC-021",
+            "agif_fabric_v2/projects/agif_v2_master/04_execution/phase_8c_governed_structural_growth/agif_phase8c_governed_structural_growth/contracts.py",
+            "agif_fabric_v2/projects/agif_v2_master/04_execution/phase_8c_governed_structural_growth/agif_phase8c_governed_structural_growth/runtime.py"
+          ],
+          "reason_codes": [
+            "cue_term_match"
+          ],
+          "relevance_score": 0.32,
+          "selection_hash": "04ee6e4482772ef971694d465c43bb745e90020bc9d70e58ab3daa0e1f4c829f",
+          "selection_id": "conv-ccr::turn-ccr-1::prior::01"
+        },
+        {
+          "cell_id": "phase8.prior.003",
+          "matched_cue_terms": [
+            "weather"
+          ],
+          "matched_hidden_variables": [],
+          "principle_id": "weather_driver_interaction",
+          "provenance_refs": [
+            "projects/agifcore_master/01_plan/PHASE_08_SCIENCE_AND_WORLD_AWARENESS.md",
+            "projects/agifcore_master/01_plan/COMPONENT_CATALOG.md#CC-010",
+            "projects/agifcore_master/01_plan/COMPONENT_CATALOG.md#CC-021",
+            "agif_fabric_v2/projects/agif_v2_master/04_execution/phase_8c_governed_structural_growth/agif_phase8c_governed_structural_growth/contracts.py",
+            "agif_fabric_v2/projects/agif_v2_master/04_execution/phase_8c_governed_structural_growth/agif_phase8c_governed_structural_growth/runtime.py"
+          ],
+          "reason_codes": [
+            "cue_term_match",
+            "seed_topic_alignment"
+          ],
+          "relevance_score": 0.31,
+          "selection_hash": "24ff2b8c814f8c6e6c6d64ae4666c09f36e94da500bb2e150f325e1c98b2fefc",
+          "selection_id": "conv-ccr::turn-ccr-1::prior::02"
+        }
+      ],
+      "selection_notes": [
+        "prior_selection_complete"
+      ],
+      "snapshot_hash": "4780da8efb93a45691e3ffc439e857e313f076cd144ffd029b0e4b64f44b6017"
+    },
+    "strong_region": {
+      "candidate_count": 4,
+      "candidates": [
+        {
+          "candidate_hash": "9f28b45ebbbaaa602f1967837a916c118762fed99100429c4fb8cdb71ff60c05",
+          "confidence": 0.77,
+          "matched_terms": [
+            "weather"
+          ],
+          "reason_codes": [
+            "target_domain_hint_match",
+            "descriptor_token_overlap",
+            "domain_name_overlap"
+          ],
+          "region_id": "wrs::conv-ccr::turn-ccr-1::target::01",
+          "region_kind": "target_domain",
+          "region_label": "weather climate",
+          "supporting_refs": [
+            "phase6.target_domains::weather_climate",
+            "eri::turn-ccr-1::01"
+          ],
+          "target_domain": "weather_climate"
+        },
+        {
+          "candidate_hash": "0ff7518903fd012d229f42d8a1b7c05d9e05590fb1dd4541331fc5ada6ab3849",
+          "confidence": 0.66,
+          "matched_terms": [
+            "weather"
+          ],
+          "reason_codes": [
+            "world_entity_label_overlap",
+            "world_entity_target_domain_match",
+            "world_entity_confidence_support"
+          ],
+          "region_id": "wrs::conv-ccr::turn-ccr-1::entity::03",
+          "region_kind": "world_entity",
+          "region_label": "weather climate",
+          "supporting_refs": [
+            "phase6.world_model::world::target::weather_climate",
+            "eri::turn-ccr-1::01",
+            "weather_climate"
+          ],
+          "target_domain": "weather_climate"
+        },
+        {
+          "candidate_hash": "7a8d7e4a14beb50dc3ffd211d9301ad9cdf3ea925069534e13321952bf94381f",
+          "confidence": 0.644,
+          "matched_terms": [
+            "boston"
+          ],
+          "reason_codes": [
+            "world_entity_label_overlap",
+            "world_entity_target_domain_match",
+            "world_entity_confidence_support"
+          ],
+          "region_id": "wrs::conv-ccr::turn-ccr-1::entity::04",
+          "region_kind": "world_entity",
+          "region_label": "Boston",
+          "supporting_refs": [
+            "phase6.world_model::world::entity::boston",
+            "eri::turn-ccr-1::01",
+            "boston_src"
+          ],
+          "target_domain": "weather_climate"
+        },
+        {
+          "candidate_hash": "9002b11466eaa2d5e6667cfd6190308fb4e2b813b4803664d17c620e74031010",
+          "confidence": 0.64,
+          "matched_terms": [
+            "none"
+          ],
+          "reason_codes": [
+            "region_hint_from_inference",
+            "active_context_hint",
+            "target_domain_context_present"
+          ],
+          "region_id": "wrs::conv-ccr::turn-ccr-1::active::01",
+          "region_kind": "active_context",
+          "region_label": "none",
+          "supporting_refs": [
+            "eri::turn-ccr-1::01"
+          ],
+          "target_domain": "weather_climate"
+        }
+      ],
+      "reason_codes": [
+        "target_domain_hint_available",
+        "region_hint_available",
+        "live_current_requested_from_inference",
+        "safe_region_selected"
+      ],
+      "request_id": "conv-ccr::turn-ccr-1",
+      "schema": "agifcore.phase_08.world_region_selection.v1",
+      "selected_region_id": "wrs::conv-ccr::turn-ccr-1::target::01",
+      "snapshot_hash": "42f5df928fbcbf592d70e21d74627fc65cdd6a37b82748c9ad4324f8dfe8a0ef",
+      "unresolved": false
+    },
+    "weak_chain": {
+      "chain_id": "ccr::0f3ea068cf85",
+      "fail_closed": true,
+      "missing_variables": [
+        "fresh local measurement"
+      ],
+      "principle_refs": [
+        "weather_driver_interaction"
+      ],
+      "region_ref": "wrs::conv-ccr::turn-ccr-2::target::01",
+      "request_id": "conv-ccr::turn-ccr-2",
+      "schema": "agifcore.phase_08.causal_chain_reasoning.v1",
+      "simulation_refs": [
+        "sim::phase8::weather_climate::01"
+      ],
+      "snapshot_hash": "aab5c30600486626c66a61ddb84a0cb684785a21d889472d436c676cf054ed23",
+      "step_count": 7,
+      "steps": [
+        {
+          "evidence_refs": [
+            "eri::turn-ccr-2::01",
+            "7f9a2ff218073c293f3959d6d0a6a9b3a78c928e09980db5063636480fb38b8c"
+          ],
+          "fail_closed": true,
+          "missing_variables": [
+            "fresh local measurement"
+          ],
+          "principle_ref": null,
+          "reason_codes": [
+            "request_type:unknown",
+            "support_state_hint:search_needed",
+            "needs_fresh_information"
+          ],
+          "region_ref": null,
+          "simulation_ref": null,
+          "statement": "Request frame targets 'tell about' as a unknown question.",
+          "step_hash": "6e5b3908aa2a7d811fa7bfe99f57ffd27ce68a2281797dffd53d6097d5397905",
+          "step_id": "ccr::conv-ccr::turn-ccr-2::01",
+          "step_index": 1,
+          "step_kind": "request_frame",
+          "usefulness_ref": null,
+          "world_entity_ref": null
+        },
+        {
+          "evidence_refs": [
+            "wrs::conv-ccr::turn-ccr-2::target::01",
+            "01b92001330d4622d2852e631ebc3beea457274c39d32c7371b6b5bb51c89a32",
+            "eri::turn-ccr-2::01"
+          ],
+          "fail_closed": false,
+          "missing_variables": [],
+          "principle_ref": null,
+          "reason_codes": [
+            "target_domain_hint_match",
+            "descriptor_token_overlap",
+            "domain_name_overlap"
+          ],
+          "region_ref": "wrs::conv-ccr::turn-ccr-2::target::01",
+          "simulation_ref": null,
+          "statement": "Region context uses 'weather climate' (target_domain) with confidence 0.77.",
+          "step_hash": "45f0c76d7f18a2dd9c4f801eff58ad65f40ba161f2e46f1d875c69d7934b209d",
+          "step_id": "ccr::conv-ccr::turn-ccr-2::02",
+          "step_index": 2,
+          "step_kind": "region_context",
+          "usefulness_ref": null,
+          "world_entity_ref": null
+        },
+        {
+          "evidence_refs": [
+            "conv-ccr::turn-ccr-2::prior::01",
+            "554ca090f45922d9199a204e4270c2348d7b85739ad4a41c4302356bc52ff4d8",
+            "a2a7b89a4cc799ba251d5d2dc48fca5bab44bca386efd09666f6cd9203d295d8"
+          ],
+          "fail_closed": false,
+          "missing_variables": [
+            "wind direction",
+            "cloud cover",
+            "moisture source"
+          ],
+          "principle_ref": "weather_driver_interaction",
+          "reason_codes": [
+            "cue_term_match",
+            "seed_topic_alignment"
+          ],
+          "region_ref": null,
+          "simulation_ref": null,
+          "statement": "Applied principle 'weather_driver_interaction' with relevance 0.31.",
+          "step_hash": "8cb0751f6d7ef9f969d78b08c5f7d4d7d93b7896b4bbed7230366a91824a1ad4",
+          "step_id": "ccr::conv-ccr::turn-ccr-2::03",
+          "step_index": 3,
+          "step_kind": "prior_application",
+          "usefulness_ref": null,
+          "world_entity_ref": null
+        },
+        {
+          "evidence_refs": [
+            "phase6.world_model::world::target::weather_climate",
+            "weather_climate"
+          ],
+          "fail_closed": false,
+          "missing_variables": [],
+          "principle_ref": null,
+          "reason_codes": [
+            "world_entity_selected",
+            "world_confidence:0.80",
+            "target_domain:weather_climate"
+          ],
+          "region_ref": "wrs::conv-ccr::turn-ccr-2::target::01",
+          "simulation_ref": null,
+          "statement": "World support anchors on entity 'weather climate' with confidence 0.80.",
+          "step_hash": "39f741f9c8b7eaec78cf3bb5e8dc81778acc383cfb43f4692d784fadab4c733a",
+          "step_id": "ccr::conv-ccr::turn-ccr-2::04",
+          "step_index": 4,
+          "step_kind": "world_support",
+          "usefulness_ref": null,
+          "world_entity_ref": "world::target::weather_climate"
+        },
+        {
+          "evidence_refs": [
+            "sim::phase8::weather_climate::01",
+            "sim::snapshot::phase8",
+            "sim::future::01"
+          ],
+          "fail_closed": false,
+          "missing_variables": [],
+          "principle_ref": null,
+          "reason_codes": [
+            "simulation_outcome:bounded_context_only",
+            "bounded_local_support"
+          ],
+          "region_ref": "wrs::conv-ccr::turn-ccr-2::target::01",
+          "simulation_ref": "sim::phase8::weather_climate::01",
+          "statement": "Simulation check returned 'bounded_context_only' with confidence 0.72.",
+          "step_hash": "f98831f7e453608ba74f55b3591a68e1c63cc8211d3bffe02d3e330b3751c8cc",
+          "step_id": "ccr::conv-ccr::turn-ccr-2::05",
+          "step_index": 5,
+          "step_kind": "simulation_check",
+          "usefulness_ref": null,
+          "world_entity_ref": "world::target::weather_climate"
+        },
+        {
+          "evidence_refs": [
+            "phase6.usefulness::weather_climate",
+            "usefulness::snapshot::phase8"
+          ],
+          "fail_closed": false,
+          "missing_variables": [],
+          "principle_ref": null,
+          "reason_codes": [
+            "domain_outcome:qualified",
+            "overall_outcome:qualified",
+            "weighted_score:0.79"
+          ],
+          "region_ref": "wrs::conv-ccr::turn-ccr-2::target::01",
+          "simulation_ref": "sim::phase8::weather_climate::01",
+          "statement": "Usefulness domain 'weather_climate' is 'qualified' with weighted score 0.79.",
+          "step_hash": "3e0e5dc5f3d1e697166bba990420e8b45d344880a85d4fe18268730402994ebc",
+          "step_id": "ccr::conv-ccr::turn-ccr-2::06",
+          "step_index": 6,
+          "step_kind": "usefulness_check",
+          "usefulness_ref": "phase6.usefulness::weather_climate",
+          "world_entity_ref": "world::target::weather_climate"
+        },
+        {
+          "evidence_refs": [
+            "a2a7b89a4cc799ba251d5d2dc48fca5bab44bca386efd09666f6cd9203d295d8",
+            "01b92001330d4622d2852e631ebc3beea457274c39d32c7371b6b5bb51c89a32",
+            "sim::snapshot::phase8",
+            "usefulness::snapshot::phase8"
+          ],
+          "fail_closed": true,
+          "missing_variables": [
+            "fresh local measurement"
+          ],
+          "principle_ref": "weather_driver_interaction",
+          "reason_codes": [
+            "missing_variables_present"
+          ],
+          "region_ref": "wrs::conv-ccr::turn-ccr-2::target::01",
+          "simulation_ref": "sim::phase8::weather_climate::01",
+          "statement": "Missing-variable check identified unresolved inputs.",
+          "step_hash": "3726a950ec7cf557bee4bbe2ba3517e3589693a479e114dd7b114a9defabf936",
+          "step_id": "ccr::conv-ccr::turn-ccr-2::07",
+          "step_index": 7,
+          "step_kind": "missing_variable",
+          "usefulness_ref": "phase6.usefulness::weather_climate",
+          "world_entity_ref": "world::target::weather_climate"
+        }
+      ],
+      "usefulness_ref": "phase6.usefulness::weather_climate",
+      "weakest_link_reason": "needs_fresh_information",
+      "world_entity_refs": [
+        "world::target::weather_climate"
+      ]
+    },
+    "weak_inference": {
+      "candidate_count": 6,
+      "candidates": [
+        {
+          "ambiguous_request": false,
+          "candidate_hash": "849388d4c4521488ddff4108c8aae003b3bbf665d40f5647d43119d1ad75f2e7",
+          "candidate_id": "eri::turn-ccr-2::01",
+          "confidence": 0.55,
+          "entity_class": "physical_system",
+          "entity_label": "tell about",
+          "hidden_variable_cues": [],
+          "live_current_requested": false,
+          "matched_terms": [
+            "tell",
+            "about",
+            "boston",
+            "weather",
+            "weather_climate"
+          ],
+          "reason_codes": [
+            "entity_class:physical_system",
+            "science_topic_cues_detected",
+            "support_state_hint:search_needed"
+          ],
+          "region_hint": null,
+          "request_type": "unknown",
+          "science_topic_cues": [
+            "weather_climate"
+          ],
+          "target_domain_hint": "weather_climate"
+        },
+        {
+          "ambiguous_request": false,
+          "candidate_hash": "6ba20267510c9ca1d4402fdc1d05ef860cd50f8d14355f50a84e33d3d331ab11",
+          "candidate_id": "eri::turn-ccr-2::02",
+          "confidence": 0.55,
+          "entity_class": "physical_system",
+          "entity_label": "about boston",
+          "hidden_variable_cues": [],
+          "live_current_requested": false,
+          "matched_terms": [
+            "about",
+            "boston",
+            "weather",
+            "weather_climate"
+          ],
+          "reason_codes": [
+            "entity_class:physical_system",
+            "science_topic_cues_detected",
+            "support_state_hint:search_needed"
+          ],
+          "region_hint": null,
+          "request_type": "unknown",
+          "science_topic_cues": [
+            "weather_climate"
+          ],
+          "target_domain_hint": "weather_climate"
+        },
+        {
+          "ambiguous_request": false,
+          "candidate_hash": "4538422617216f2f81668c8494c8275d9dbbaed87a9b3d4c8431c57e670d9c15",
+          "candidate_id": "eri::turn-ccr-2::03",
+          "confidence": 0.55,
+          "entity_class": "physical_system",
+          "entity_label": "boston weather",
+          "hidden_variable_cues": [],
+          "live_current_requested": false,
+          "matched_terms": [
+            "boston",
+            "weather",
+            "weather_climate"
+          ],
+          "reason_codes": [
+            "entity_class:physical_system",
+            "science_topic_cues_detected",
+            "support_state_hint:search_needed"
+          ],
+          "region_hint": null,
+          "request_type": "unknown",
+          "science_topic_cues": [
+            "weather_climate"
+          ],
+          "target_domain_hint": "weather_climate"
+        },
+        {
+          "ambiguous_request": false,
+          "candidate_hash": "45c82cfc392ff6a36fee82ff363c4e0157b529e01993b2d926113b462fa1ace3",
+          "candidate_id": "eri::turn-ccr-2::04",
+          "confidence": 0.55,
+          "entity_class": "physical_system",
+          "entity_label": "boston",
+          "hidden_variable_cues": [],
+          "live_current_requested": false,
+          "matched_terms": [
+            "boston",
+            "weather",
+            "weather_climate"
+          ],
+          "reason_codes": [
+            "entity_class:physical_system",
+            "science_topic_cues_detected",
+            "support_state_hint:search_needed"
+          ],
+          "region_hint": null,
+          "request_type": "unknown",
+          "science_topic_cues": [
+            "weather_climate"
+          ],
+          "target_domain_hint": "weather_climate"
+        },
+        {
+          "ambiguous_request": false,
+          "candidate_hash": "1e25218fafaf543d82b52d2a6e32c667885a71b84c7af4514d0f3b15a4b206ba",
+          "candidate_id": "eri::turn-ccr-2::05",
+          "confidence": 0.55,
+          "entity_class": "physical_system",
+          "entity_label": "weather",
+          "hidden_variable_cues": [],
+          "live_current_requested": false,
+          "matched_terms": [
+            "weather",
+            "boston",
+            "weather_climate"
+          ],
+          "reason_codes": [
+            "entity_class:physical_system",
+            "science_topic_cues_detected",
+            "support_state_hint:search_needed"
+          ],
+          "region_hint": null,
+          "request_type": "unknown",
+          "science_topic_cues": [
+            "weather_climate"
+          ],
+          "target_domain_hint": "weather_climate"
+        },
+        {
+          "ambiguous_request": false,
+          "candidate_hash": "bbbae857c6733dd15f522295c90febace7eb8c93c37e0d1578f0301d1d327606",
+          "candidate_id": "eri::turn-ccr-2::06",
+          "confidence": 0.55,
+          "entity_class": "physical_system",
+          "entity_label": "weather climate",
+          "hidden_variable_cues": [],
+          "live_current_requested": false,
+          "matched_terms": [
+            "weather",
+            "climate",
+            "boston",
+            "weather_climate"
+          ],
+          "reason_codes": [
+            "entity_class:physical_system",
+            "science_topic_cues_detected",
+            "support_state_hint:search_needed"
+          ],
+          "region_hint": null,
+          "request_type": "unknown",
+          "science_topic_cues": [
+            "weather_climate"
+          ],
+          "target_domain_hint": "weather_climate"
+        }
+      ],
+      "conversation_id": "conv-ccr",
+      "extracted_terms": [
+        "boston",
+        "weather"
+      ],
+      "hidden_variable_cues": [],
+      "inference_hash": "7f9a2ff218073c293f3959d6d0a6a9b3a78c928e09980db5063636480fb38b8c",
+      "inference_notes": [
+        "fresh_information_honesty_preserved",
+        "support_state_hint:search_needed",
+        "knowledge_gap_reason_hint:needs_fresh_information"
+      ],
+      "knowledge_gap_reason_hint": "needs_fresh_information",
+      "normalized_text": "tell me about boston weather.",
+      "raw_text_hash": "conv-ccr:turn-ccr-2:tell me about boston weather.",
+      "schema": "agifcore.phase_08.entity_request_inference.v1",
+      "science_topic_cues": [
+        "weather_climate"
+      ],
+      "selected_candidate_id": "eri::turn-ccr-2::01",
+      "support_state_hint": "search_needed",
+      "turn_id": "turn-ccr-2"
+    },
+    "weak_priors": {
+      "available_prior_count": 9,
+      "request_id": "conv-ccr::turn-ccr-2",
+      "schema": "agifcore.phase_08.scientific_priors.v1",
+      "selected_cells": [
+        {
+          "causal_mechanism": "Advection and moisture balance regulate heat and precipitation signals.",
+          "cell_hash": "3f7bc1ee5793727df034febdeb827e8e8d1d4aa0a0e6dc8bddf4359e2f9bb7c0",
+          "cell_id": "phase8.prior.003",
+          "cue_terms": [
+            "weather",
+            "climate",
+            "humid",
+            "humidity",
+            "wind",
+            "storm",
+            "rain"
+          ],
+          "failure_case": "Microclimates can invert broader regional expectations.",
+          "family_name": "scientific_prior",
+          "hidden_variable_hints": [
+            "wind direction",
+            "cloud cover",
+            "moisture source"
+          ],
+          "plain_language_law": "Wind, moisture, and cloud cover jointly shape local conditions.",
+          "principle_id": "weather_driver_interaction",
+          "provenance_refs": [
+            "projects/agifcore_master/01_plan/PHASE_08_SCIENCE_AND_WORLD_AWARENESS.md",
+            "projects/agifcore_master/01_plan/COMPONENT_CATALOG.md#CC-010",
+            "projects/agifcore_master/01_plan/COMPONENT_CATALOG.md#CC-021",
+            "agif_fabric_v2/projects/agif_v2_master/04_execution/phase_8c_governed_structural_growth/agif_phase8c_governed_structural_growth/contracts.py",
+            "agif_fabric_v2/projects/agif_v2_master/04_execution/phase_8c_governed_structural_growth/agif_phase8c_governed_structural_growth/runtime.py"
+          ],
+          "scope_limits": "Does not replace local sensors when current values are requested.",
+          "seed_topic": "weather and climate",
+          "transfer_hint": "Look for interacting drivers instead of a single-cause shortcut.",
+          "variables": [
+            "humidity",
+            "wind_speed",
+            "wind_direction",
+            "cloud_cover"
+          ],
+          "worked_example": "Onshore wind can cool one district while inland heat persists."
+        }
+      ],
+      "selected_prior_count": 1,
+      "selected_prior_ids": [
+        "phase8.prior.003"
+      ],
+      "selected_priors": [
+        {
+          "cell_id": "phase8.prior.003",
+          "matched_cue_terms": [
+            "weather"
+          ],
+          "matched_hidden_variables": [],
+          "principle_id": "weather_driver_interaction",
+          "provenance_refs": [
+            "projects/agifcore_master/01_plan/PHASE_08_SCIENCE_AND_WORLD_AWARENESS.md",
+            "projects/agifcore_master/01_plan/COMPONENT_CATALOG.md#CC-010",
+            "projects/agifcore_master/01_plan/COMPONENT_CATALOG.md#CC-021",
+            "agif_fabric_v2/projects/agif_v2_master/04_execution/phase_8c_governed_structural_growth/agif_phase8c_governed_structural_growth/contracts.py",
+            "agif_fabric_v2/projects/agif_v2_master/04_execution/phase_8c_governed_structural_growth/agif_phase8c_governed_structural_growth/runtime.py"
+          ],
+          "reason_codes": [
+            "cue_term_match",
+            "seed_topic_alignment"
+          ],
+          "relevance_score": 0.31,
+          "selection_hash": "554ca090f45922d9199a204e4270c2348d7b85739ad4a41c4302356bc52ff4d8",
+          "selection_id": "conv-ccr::turn-ccr-2::prior::01"
+        }
+      ],
+      "selection_notes": [
+        "prior_selection_complete"
+      ],
+      "snapshot_hash": "a2a7b89a4cc799ba251d5d2dc48fca5bab44bca386efd09666f6cd9203d295d8"
+    },
+    "weak_region": {
+      "candidate_count": 4,
+      "candidates": [
+        {
+          "candidate_hash": "e69f4995623aa8f3f01ebcd524bb610f0277e015d9b490c6baa233f6786e2fff",
+          "confidence": 0.77,
+          "matched_terms": [
+            "weather"
+          ],
+          "reason_codes": [
+            "target_domain_hint_match",
+            "descriptor_token_overlap",
+            "domain_name_overlap"
+          ],
+          "region_id": "wrs::conv-ccr::turn-ccr-2::target::01",
+          "region_kind": "target_domain",
+          "region_label": "weather climate",
+          "supporting_refs": [
+            "phase6.target_domains::weather_climate",
+            "eri::turn-ccr-2::01"
+          ],
+          "target_domain": "weather_climate"
+        },
+        {
+          "candidate_hash": "5ce9c1b0f1ef0982705e24a7d1949999d61994031d7b61dd5caaa71f8d4463da",
+          "confidence": 0.66,
+          "matched_terms": [
+            "weather"
+          ],
+          "reason_codes": [
+            "world_entity_label_overlap",
+            "world_entity_target_domain_match",
+            "world_entity_confidence_support"
+          ],
+          "region_id": "wrs::conv-ccr::turn-ccr-2::entity::03",
+          "region_kind": "world_entity",
+          "region_label": "weather climate",
+          "supporting_refs": [
+            "phase6.world_model::world::target::weather_climate",
+            "eri::turn-ccr-2::01",
+            "weather_climate"
+          ],
+          "target_domain": "weather_climate"
+        },
+        {
+          "candidate_hash": "669cf8d34496006297d70d89839e393ec4d37126fbf0fcabd2ddb0f362599d57",
+          "confidence": 0.644,
+          "matched_terms": [
+            "boston"
+          ],
+          "reason_codes": [
+            "world_entity_label_overlap",
+            "world_entity_target_domain_match",
+            "world_entity_confidence_support"
+          ],
+          "region_id": "wrs::conv-ccr::turn-ccr-2::entity::04",
+          "region_kind": "world_entity",
+          "region_label": "Boston",
+          "supporting_refs": [
+            "phase6.world_model::world::entity::boston",
+            "eri::turn-ccr-2::01",
+            "boston_src"
+          ],
+          "target_domain": "weather_climate"
+        },
+        {
+          "candidate_hash": "9592f99a2c5c2d6fe53178d17948039097deab75340a52bdafbe159fa325e943",
+          "confidence": 0.64,
+          "matched_terms": [
+            "none"
+          ],
+          "reason_codes": [
+            "region_hint_from_inference",
+            "active_context_hint",
+            "target_domain_context_present"
+          ],
+          "region_id": "wrs::conv-ccr::turn-ccr-2::active::01",
+          "region_kind": "active_context",
+          "region_label": "none",
+          "supporting_refs": [
+            "eri::turn-ccr-2::01"
+          ],
+          "target_domain": "weather_climate"
+        }
+      ],
+      "reason_codes": [
+        "target_domain_hint_available",
+        "region_hint_available",
+        "support_state_hint:search_needed",
+        "safe_region_selected"
+      ],
+      "request_id": "conv-ccr::turn-ccr-2",
+      "schema": "agifcore.phase_08.world_region_selection.v1",
+      "selected_region_id": "wrs::conv-ccr::turn-ccr-2::target::01",
+      "snapshot_hash": "01b92001330d4622d2852e631ebc3beea457274c39d32c7371b6b5bb51c89a32",
+      "unresolved": false
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "strong-chain-builds-seven-steps",
+      "result": "pass"
+    },
+    {
+      "id": "strong-chain-stays-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "strong-chain-preserves-region-and-prior-anchors",
+      "result": "pass"
+    },
+    {
+      "id": "weak-chain-fails-closed-on-freshness-gap",
+      "result": "pass"
+    },
+    {
+      "id": "weak-chain-preserves-missing-variable",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_08_SCIENCE_AND_WORLD_AWARENESS.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/__init__.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/scientific_priors.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/entity_request_inference.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/world_region_selection.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/causal_chain_reasoning.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/bounded_current_world_reasoning.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/visible_reasoning_summaries.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_reflection.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/05_testing/phase_08_science_and_world_awareness/_phase_08_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_08_science_and_world_awareness/verify_phase_08_causal_chain_reasoning.py"
+  ],
+  "notes": [
+    "causal chain reasoning stays bounded and fail-closed when freshness evidence is weak",
+    "Phase 8 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_08_science_and_world_awareness/phase_08_evidence/phase_08_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_08_science_and_world_awareness/phase_08_evidence/phase_08_causal_chain_reasoning_report.json"
+  },
+  "phase": "8",
+  "status": "pass",
+  "verifier": "verify_phase_08_causal_chain_reasoning"
+}

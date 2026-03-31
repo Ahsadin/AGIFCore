@@ -1,0 +1,52 @@
+{
+  "available_report_count": 7,
+  "invalid_reports": [],
+  "missing_reports": [],
+  "notes": [
+    "this manifest tracks machine-readable verifier outputs only",
+    "Phase 8 remains open",
+    "manifest is rebuilt from actual report files on disk",
+    "no approval implied"
+  ],
+  "phase": "8",
+  "phase_remains_open": true,
+  "reports": [
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_08_science_and_world_awareness/phase_08_evidence/phase_08_scientific_priors_report.json",
+      "report_id": "scientific_priors",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_08_science_and_world_awareness/phase_08_evidence/phase_08_entity_request_inference_report.json",
+      "report_id": "entity_request_inference",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_08_science_and_world_awareness/phase_08_evidence/phase_08_world_region_selection_report.json",
+      "report_id": "world_region_selection",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_08_science_and_world_awareness/phase_08_evidence/phase_08_causal_chain_reasoning_report.json",
+      "report_id": "causal_chain_reasoning",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_08_science_and_world_awareness/phase_08_evidence/phase_08_bounded_current_world_reasoning_report.json",
+      "report_id": "bounded_current_world_reasoning",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_08_science_and_world_awareness/phase_08_evidence/phase_08_visible_reasoning_summaries_report.json",
+      "report_id": "visible_reasoning_summaries",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_08_science_and_world_awareness/phase_08_evidence/phase_08_science_reflection_report.json",
+      "report_id": "science_reflection",
+      "status": "pass"
+    }
+  ],
+  "required_report_count": 7,
+  "status": "phase_8_verifier_family_pass"
+}
