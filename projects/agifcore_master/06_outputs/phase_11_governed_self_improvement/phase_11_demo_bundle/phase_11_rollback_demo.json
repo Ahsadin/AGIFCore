@@ -1,0 +1,114 @@
+{
+  "demo_id": "rollback",
+  "evidence_reports": [
+    "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_before_after_measurement_report.json",
+    "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_adoption_or_rejection_pipeline_report.json",
+    "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_rollback_proof_report.json",
+    "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_evidence_manifest.json"
+  ],
+  "notes": [
+    "review-only rollback demo",
+    "Phase 11 remains open",
+    "no approval implied"
+  ],
+  "original_prompt": "These signals contradict each other. Compare them and show where the answer could break.",
+  "phase": "11",
+  "phase11_outputs": {
+    "adoption_or_rejection_pipeline": {
+      "conversation_id": "conv-p10-contradiction",
+      "decision_count": 2,
+      "decisions": [
+        {
+          "decision": "adopted",
+          "decision_hash": "96aefc35faf59af2a31dfd4c08cb85469ebc48abcd675be9047b63bcb840f638",
+          "decision_id": "decision::phase11_proposal::85d913641a4b",
+          "proposal_id": "phase11_proposal::85d913641a4b",
+          "reason": "candidate improved bounded metrics and rollback is available",
+          "rollback_required": true,
+          "supporting_refs": [
+            "measurement::phase11_proposal::85d913641a4b",
+            "rollback::phase11_proposal::85d913641a4b",
+            "weak_answer_diagnosis::7ca0eacd5389"
+          ]
+        },
+        {
+          "decision": "rejected",
+          "decision_hash": "1afc0b8b011b4eb3ed0fb4d33f72eefb8f52f14025851406d3c56301058a21c4",
+          "decision_id": "decision::phase11_proposal::3549ec1bd2c8",
+          "proposal_id": "phase11_proposal::3549ec1bd2c8",
+          "reason": "candidate did not clear the bounded adoption gate",
+          "rollback_required": false,
+          "supporting_refs": [
+            "measurement::phase11_proposal::3549ec1bd2c8",
+            "rollback::phase11_proposal::3549ec1bd2c8",
+            "weak_answer_diagnosis::7ca0eacd5389"
+          ]
+        }
+      ],
+      "schema": "agifcore.phase_11.adoption_or_rejection_pipeline.v1",
+      "snapshot_hash": "c266a97846706ff4a33c079963ebbe181d6f4bbc97ded4d3d5f0cf5e6fa55fd4",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "before_after_measurement": {
+      "conversation_id": "conv-p10-contradiction",
+      "measurements": [
+        {
+          "adopted_metric": 0.7,
+          "baseline_metric": 0.56,
+          "improvement": 0.14,
+          "measurement_hash": "5595964948a8faa353b619f9444a9a4083e99a25782e020cbcbaa50def731271",
+          "measurement_id": "measurement::phase11_proposal::85d913641a4b",
+          "pass_threshold_met": true,
+          "proposal_id": "phase11_proposal::85d913641a4b",
+          "rollback_metric": 0.56,
+          "supporting_refs": [
+            "shadow_eval::phase11_proposal::85d913641a4b",
+            "experiment::phase11_proposal::85d913641a4b",
+            "held_out::phase11_proposal::85d913641a4b",
+            "meta_observer::51986fa94cb9"
+          ]
+        },
+        {
+          "adopted_metric": 0.74,
+          "baseline_metric": 0.56,
+          "improvement": 0.18,
+          "measurement_hash": "e6613be54e577e9b269dfa026dcda539c976ef75bc5ff524504af0d24a83fa8f",
+          "measurement_id": "measurement::phase11_proposal::3549ec1bd2c8",
+          "pass_threshold_met": true,
+          "proposal_id": "phase11_proposal::3549ec1bd2c8",
+          "rollback_metric": 0.56,
+          "supporting_refs": [
+            "shadow_eval::phase11_proposal::3549ec1bd2c8",
+            "experiment::phase11_proposal::3549ec1bd2c8",
+            "held_out::phase11_proposal::3549ec1bd2c8",
+            "meta_observer::51986fa94cb9"
+          ]
+        }
+      ],
+      "pair_count": 2,
+      "schema": "agifcore.phase_11.before_after_measurement.v1",
+      "snapshot_hash": "827d29b9ccdf07bd284c7ee49f8b54c4b033977db37a8579452e00a7f812e09b",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "rollback_proof": {
+      "conversation_id": "conv-p10-contradiction",
+      "rollback_count": 1,
+      "rollbacks": [
+        {
+          "adopted_metric": 0.7,
+          "baseline_metric": 0.56,
+          "proof_note": "same-pack baseline was restored after the bounded rollback step",
+          "proposal_id": "phase11_proposal::85d913641a4b",
+          "restored_metric": 0.56,
+          "rollback_hash": "1c78af2bc988aa29c5b6c789ace88c731bf58fb04ca013983852f5d5501be8e2",
+          "rollback_id": "rollback::phase11_proposal::85d913641a4b",
+          "roundtrip_preserved": true
+        }
+      ],
+      "schema": "agifcore.phase_11.rollback_proof.v1",
+      "snapshot_hash": "fb506fc3bfacbc7f1df3b6c510a4bb9c9101f9ff854244a2fddeed3b959e30fd",
+      "turn_id": "turn-p10-contradiction"
+    }
+  },
+  "status": "open"
+}

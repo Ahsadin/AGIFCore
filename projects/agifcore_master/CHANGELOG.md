@@ -125,3 +125,13 @@
 - Rebuilt the Phase 10 standalone review bundle and repaired the missing support-file and dependency-file surfaces in the exported package.
 - Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 10 is now `approved`.
 - Logged the earned Phase 10 approval state in `DECISIONS.md` while keeping Phase 11 not started and ready for a separate run.
+
+## 2026-04-01
+
+- Tightened `.codex/agents/phase_builder.toml` so the reusable build-pod agent setup explicitly covers `Meta & Growth Pod Lead`.
+- Materialized `01_plan/PHASE_11_GOVERNED_SELF_IMPROVEMENT.md` and the Phase 11 planning task-card set under `00_admin/codex_threads/tasks/phase_11/`.
+- Completed the full Phase 11 runtime package under `04_execution/phase_11_governed_self_improvement/`, with paired verifiers and demo runners under `05_testing/phase_11_governed_self_improvement/` and evidence/demo outputs under `06_outputs/phase_11_governed_self_improvement/`.
+- Added the Phase 11 final audit report, danger-zone audit report, Governor verification record, validation request, user verdict, and closeout task-card surfaces under `00_admin/codex_threads/`.
+- Exported the standalone Phase 11 review bundle for user inspection.
+- Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 11 is now `approved`.
+- Logged the earned Phase 11 approval state in `DECISIONS.md` while keeping Phase 12 not started and ready for a separate run.

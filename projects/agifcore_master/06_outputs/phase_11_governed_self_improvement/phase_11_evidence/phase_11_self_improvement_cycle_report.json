@@ -1,0 +1,545 @@
+{
+  "anchors": {
+    "contradiction_case": {
+      "adoption_or_rejection_pipeline": {
+        "conversation_id": "conv-p10-contradiction",
+        "decision_count": 2,
+        "decisions": [
+          {
+            "decision": "adopted",
+            "decision_hash": "96aefc35faf59af2a31dfd4c08cb85469ebc48abcd675be9047b63bcb840f638",
+            "decision_id": "decision::phase11_proposal::85d913641a4b",
+            "proposal_id": "phase11_proposal::85d913641a4b",
+            "reason": "candidate improved bounded metrics and rollback is available",
+            "rollback_required": true,
+            "supporting_refs": [
+              "measurement::phase11_proposal::85d913641a4b",
+              "rollback::phase11_proposal::85d913641a4b",
+              "weak_answer_diagnosis::7ca0eacd5389"
+            ]
+          },
+          {
+            "decision": "rejected",
+            "decision_hash": "1afc0b8b011b4eb3ed0fb4d33f72eefb8f52f14025851406d3c56301058a21c4",
+            "decision_id": "decision::phase11_proposal::3549ec1bd2c8",
+            "proposal_id": "phase11_proposal::3549ec1bd2c8",
+            "reason": "candidate did not clear the bounded adoption gate",
+            "rollback_required": false,
+            "supporting_refs": [
+              "measurement::phase11_proposal::3549ec1bd2c8",
+              "rollback::phase11_proposal::3549ec1bd2c8",
+              "weak_answer_diagnosis::7ca0eacd5389"
+            ]
+          }
+        ],
+        "schema": "agifcore.phase_11.adoption_or_rejection_pipeline.v1",
+        "snapshot_hash": "c266a97846706ff4a33c079963ebbe181d6f4bbc97ded4d3d5f0cf5e6fa55fd4",
+        "turn_id": "turn-p10-contradiction"
+      },
+      "before_after_measurement": {
+        "conversation_id": "conv-p10-contradiction",
+        "measurements": [
+          {
+            "adopted_metric": 0.7,
+            "baseline_metric": 0.56,
+            "improvement": 0.14,
+            "measurement_hash": "5595964948a8faa353b619f9444a9a4083e99a25782e020cbcbaa50def731271",
+            "measurement_id": "measurement::phase11_proposal::85d913641a4b",
+            "pass_threshold_met": true,
+            "proposal_id": "phase11_proposal::85d913641a4b",
+            "rollback_metric": 0.56,
+            "supporting_refs": [
+              "shadow_eval::phase11_proposal::85d913641a4b",
+              "experiment::phase11_proposal::85d913641a4b",
+              "held_out::phase11_proposal::85d913641a4b",
+              "meta_observer::51986fa94cb9"
+            ]
+          },
+          {
+            "adopted_metric": 0.74,
+            "baseline_metric": 0.56,
+            "improvement": 0.18,
+            "measurement_hash": "e6613be54e577e9b269dfa026dcda539c976ef75bc5ff524504af0d24a83fa8f",
+            "measurement_id": "measurement::phase11_proposal::3549ec1bd2c8",
+            "pass_threshold_met": true,
+            "proposal_id": "phase11_proposal::3549ec1bd2c8",
+            "rollback_metric": 0.56,
+            "supporting_refs": [
+              "shadow_eval::phase11_proposal::3549ec1bd2c8",
+              "experiment::phase11_proposal::3549ec1bd2c8",
+              "held_out::phase11_proposal::3549ec1bd2c8",
+              "meta_observer::51986fa94cb9"
+            ]
+          }
+        ],
+        "pair_count": 2,
+        "schema": "agifcore.phase_11.before_after_measurement.v1",
+        "snapshot_hash": "827d29b9ccdf07bd284c7ee49f8b54c4b033977db37a8579452e00a7f812e09b",
+        "turn_id": "turn-p10-contradiction"
+      },
+      "conversation_id": "conv-p10-contradiction",
+      "idle_reflection": {
+        "conversation_id": "conv-p10-contradiction",
+        "deferred_item_ids": [],
+        "processed_item_ids": [
+          "offline_reflection_item::59b7b340a7cf",
+          "offline_reflection_item::f18e48092f7c",
+          "offline_reflection_item::efb28a92cd45",
+          "offline_reflection_item::00caff697577",
+          "offline_reflection_item::0310e6c1426c"
+        ],
+        "ran": true,
+        "schema": "agifcore.phase_11.idle_reflection.v1",
+        "snapshot_hash": "19af13f0494ba56e60c9adf81f4845c1d5f0d25de5d52032b5a21dee6463c771",
+        "stop_reason": "bounded_idle_cycle_complete",
+        "turn_id": "turn-p10-contradiction"
+      },
+      "offline_reflection_and_consolidation": {
+        "consolidated_focuses": [
+          "clarify or measure the uncertainty-driving variable",
+          "re-check the cited support and fall back if the contradiction holds",
+          "keep the uncertainty visible and avoid precision theater",
+          "recheck support before stronger claims",
+          "Monitor whether the next redirect reduces uncertainty without upgrading support by language alone.",
+          "Redirect targets selected: contradiction_probe."
+        ],
+        "conversation_id": "conv-p10-contradiction",
+        "deferred_items": [],
+        "item_count": 5,
+        "items": [
+          {
+            "bounded_next_step": "clarify or measure the uncertainty-driving variable",
+            "item_hash": "59b7b340a7cf9dfac91ba6e3d8edea6be37ee0dab3b07c167a00499c842225ec",
+            "item_id": "offline_reflection_item::59b7b340a7cf",
+            "problem_statement": "Visible uncertainty still points to at least one unresolved variable.",
+            "proposed_focus": "clarify or measure the uncertainty-driving variable",
+            "source_kind": "missing_variable",
+            "source_ref": "phase8.summary.ref.001",
+            "supporting_refs": [
+              "phase8.summary.ref.001",
+              "phase8.summary.ref.002",
+              "84739b2c42b16a086303dbb52b1ee5296b43a721a79d3bca649809f81653fede",
+              "weak_answer_diagnosis::9654ec95d6a1"
+            ]
+          },
+          {
+            "bounded_next_step": "re-check the cited support and fall back if the contradiction holds",
+            "item_hash": "f18e48092f7c33d5ce46a7c9759b0486cd3334b91107d138553b8fb4b95f7747",
+            "item_id": "offline_reflection_item::f18e48092f7c",
+            "problem_statement": "Science reflection already exposes a contradiction-oriented signal.",
+            "proposed_focus": "re-check the cited support and fall back if the contradiction holds",
+            "source_kind": "contradiction_risk",
+            "source_ref": "phase8.summary.ref.001",
+            "supporting_refs": [
+              "phase8.summary.ref.001",
+              "phase8.summary.ref.002",
+              "84739b2c42b16a086303dbb52b1ee5296b43a721a79d3bca649809f81653fede",
+              "weak_answer_diagnosis::d838bcead16a"
+            ]
+          },
+          {
+            "bounded_next_step": "keep the uncertainty visible and avoid precision theater",
+            "item_hash": "efb28a92cd450cd4a1b0e60f10dd90e392988092df41cd16e9fd1dc4b0a00c87",
+            "item_id": "offline_reflection_item::efb28a92cd45",
+            "problem_statement": "The answer is bounded and useful, but it still rides on inferred support instead of fully grounded support.",
+            "proposed_focus": "keep the uncertainty visible and avoid precision theater",
+            "source_kind": "support_thin",
+            "source_ref": "phase8.summary.ref.001",
+            "supporting_refs": [
+              "phase8.summary.ref.001",
+              "phase8.summary.ref.002",
+              "weak_answer_diagnosis::b8b959b45f9d"
+            ]
+          },
+          {
+            "bounded_next_step": "clarify or measure the uncertainty-driving variable",
+            "item_hash": "00caff697577667ab03c8f7704b71f6dda02f8ec9ab43296a065ae70965a2655",
+            "item_id": "offline_reflection_item::00caff697577",
+            "problem_statement": "clarify or measure the uncertainty-driving variable",
+            "proposed_focus": "clarify or measure the uncertainty-driving variable",
+            "source_kind": "missing_need",
+            "source_ref": "phase10_missing_need::00caff697577",
+            "supporting_refs": [
+              "clarify or measure the uncertainty-driving variable"
+            ]
+          },
+          {
+            "bounded_next_step": "recheck support before stronger claims",
+            "item_hash": "0310e6c1426c3b4e4f08c2bf66e6e45dea7768cef2beb0aeb4024f6e272600e8",
+            "item_id": "offline_reflection_item::0310e6c1426c",
+            "problem_statement": "A hidden variable or contradiction-sensitive condition may explain the current weak answer.",
+            "proposed_focus": "recheck support before stronger claims",
+            "source_kind": "theory_fragment",
+            "source_ref": "theory_fragment::a3ed0f3c7ccf",
+            "supporting_refs": [
+              "theory_fragment::a3ed0f3c7ccf",
+              "A conflicting local reading could reverse the current explanation."
+            ]
+          }
+        ],
+        "schema": "agifcore.phase_11.offline_reflection_and_consolidation.v1",
+        "snapshot_hash": "7f036facb4175780fec41fdd3e802def2a00792ce0113e44255b49e017053330",
+        "turn_id": "turn-p10-contradiction"
+      },
+      "overlay_contract": {
+        "adopted_proposal_ids": [
+          "phase11_proposal::85d913641a4b"
+        ],
+        "contract_hash": "eb038e69a7f2815fc99d1d7434dbfaf885bca4de072875c975a90cca87f59944",
+        "conversation_id": "conv-p10-contradiction",
+        "evidence_refs": [
+          "phase8.summary.ref.001",
+          "phase8.summary.ref.002",
+          "84739b2c42b16a086303dbb52b1ee5296b43a721a79d3bca649809f81653fede",
+          "4cf0213cbe82acf4d8587c6b380b51eb4df286b0ae1c635099d230fd40930070",
+          "86ea18bdab9d6783ca832fee5e5fb87530460776980a04517cb6f1971872f156",
+          "21ac664c6c3dbdc112394976b10ae87c5ef24954a29f0f171076d41b5cc4260c",
+          "9bee10cfd1fb4599da833a1465376a907e7fd8dd86261f20e58eabf55be34319",
+          "f84e9c4bfb5414dddb4ade3191ffcfe5a75a1bee0fb835dc9b381ea2e23e087b",
+          "measurement::phase11_proposal::85d913641a4b",
+          "measurement::phase11_proposal::3549ec1bd2c8",
+          "decision::phase11_proposal::85d913641a4b",
+          "decision::phase11_proposal::3549ec1bd2c8",
+          "monitoring::phase11_proposal::85d913641a4b",
+          "rollback::phase11_proposal::85d913641a4b"
+        ],
+        "held_proposal_ids": [],
+        "inquiry_refs": [],
+        "monitoring_refs": [
+          "monitoring::phase11_proposal::85d913641a4b"
+        ],
+        "phase10_interfaces": [
+          "agifcore.phase_10.meta_cognition_turn.v1",
+          "agifcore.phase_10.overlay_contract.v1"
+        ],
+        "read_only_phase10_refs": [
+          "self_model::bf9c904c4761",
+          "meta_observer::51986fa94cb9",
+          "strategy_journal::341942aad13a",
+          "skeptic::4383ef6b7df8",
+          "surprise::880d6e453e4b",
+          "weak_answer_diagnosis::7ca0eacd5389",
+          "theory_fragment::a3ed0f3c7ccf",
+          "attention_redirect::457506b401a9"
+        ],
+        "rejected_proposal_ids": [
+          "phase11_proposal::3549ec1bd2c8"
+        ],
+        "rollback_refs": [
+          "rollback::phase11_proposal::85d913641a4b"
+        ],
+        "schema": "agifcore.phase_11.overlay_contract.v1",
+        "support_state": "inferred",
+        "turn_id": "turn-p10-contradiction"
+      },
+      "phase10_turn_hash": "65825b11909614ca0ba60296584ccb1f3cd23d009786d993414a4bbe2769ebaf",
+      "post_adoption_monitoring": {
+        "conversation_id": "conv-p10-contradiction",
+        "items": [
+          {
+            "current_status": "active",
+            "escalation_action": "rollback if the adopted metric falls back to baseline or lower",
+            "monitoring_hash": "885d3ddafbdde12c37487a7d5f20934a8d1e022589167a38fe1b5ac906c6cc19",
+            "monitoring_id": "monitoring::phase11_proposal::85d913641a4b",
+            "monitoring_window": "3 governed cycles",
+            "proposal_id": "phase11_proposal::85d913641a4b",
+            "supporting_refs": [
+              "decision::phase11_proposal::85d913641a4b",
+              "measurement::phase11_proposal::85d913641a4b"
+            ],
+            "trigger_threshold": "drop below baseline or lose rollback fidelity"
+          }
+        ],
+        "monitoring_count": 1,
+        "schema": "agifcore.phase_11.post_adoption_monitoring.v1",
+        "snapshot_hash": "eb592654a8dfbb93f2c3e12aa634ac7ab8316d553dc12ce986dcedf86160f629",
+        "turn_id": "turn-p10-contradiction"
+      },
+      "proposal_generation": {
+        "conversation_id": "conv-p10-contradiction",
+        "proposal_count": 3,
+        "proposals": [
+          {
+            "evidence_needed": "clarify or measure the uncertainty-driving variable",
+            "expected_gain": "reduce uncertainty by checking the missing variable",
+            "falsifier": "A conflicting local reading could reverse the current explanation.",
+            "proposal_hash": "de88b34814679f6004e9907d218b740afc5b20a5a85f0f0fa5deff05407d2fdb",
+            "proposal_id": "phase11_proposal::85d913641a4b",
+            "proposal_kind": "clarify_missing_variable",
+            "rationale": "Use missing_variable as a bounded improvement target without mutating Phase 10 truth.",
+            "rollback_target": "rollback::phase11_proposal::85d913641a4b",
+            "supporting_refs": [
+              "phase8.summary.ref.001",
+              "phase8.summary.ref.002",
+              "84739b2c42b16a086303dbb52b1ee5296b43a721a79d3bca649809f81653fede",
+              "weak_answer_diagnosis::9654ec95d6a1",
+              "theory_fragment::a3ed0f3c7ccf",
+              "weak_answer_diagnosis::7ca0eacd5389"
+            ],
+            "target_module": "self_experiment_lab"
+          },
+          {
+            "evidence_needed": "re-check the cited support and fall back if the contradiction holds",
+            "expected_gain": "improve contradiction handling while preserving support honesty",
+            "falsifier": "A conflicting local reading could reverse the current explanation.",
+            "proposal_hash": "16ca81cc103bcc38b71032de2203d2ef80333d1d2450e16b5c5e3ae4e0b52e77",
+            "proposal_id": "phase11_proposal::3549ec1bd2c8",
+            "proposal_kind": "contradiction_probe",
+            "rationale": "Use contradiction_risk as a bounded improvement target without mutating Phase 10 truth.",
+            "rollback_target": "rollback::phase11_proposal::3549ec1bd2c8",
+            "supporting_refs": [
+              "phase8.summary.ref.001",
+              "phase8.summary.ref.002",
+              "84739b2c42b16a086303dbb52b1ee5296b43a721a79d3bca649809f81653fede",
+              "weak_answer_diagnosis::d838bcead16a",
+              "theory_fragment::a3ed0f3c7ccf",
+              "weak_answer_diagnosis::7ca0eacd5389"
+            ],
+            "target_module": "shadow_evaluation"
+          },
+          {
+            "evidence_needed": "keep the uncertainty visible and avoid precision theater",
+            "expected_gain": "tighten support-state handling before confidence changes",
+            "falsifier": "A conflicting local reading could reverse the current explanation.",
+            "proposal_hash": "564153123bfef6699cc3f709f0038c6a40342c97cf32fe3e5995834b3374ce91",
+            "proposal_id": "phase11_proposal::6122603d6d6d",
+            "proposal_kind": "support_recheck",
+            "rationale": "Use support_thin as a bounded improvement target without mutating Phase 10 truth.",
+            "rollback_target": "rollback::phase11_proposal::6122603d6d6d",
+            "supporting_refs": [
+              "phase8.summary.ref.001",
+              "phase8.summary.ref.002",
+              "weak_answer_diagnosis::b8b959b45f9d",
+              "theory_fragment::a3ed0f3c7ccf",
+              "weak_answer_diagnosis::7ca0eacd5389"
+            ],
+            "target_module": "offline_reflection_and_consolidation"
+          }
+        ],
+        "schema": "agifcore.phase_11.proposal_generation.v1",
+        "snapshot_hash": "4616f066f4caef550f06a5501b0590ef22939ed8c06f24b292eb79f0e4d9631a",
+        "stop_reason": "proposal_budget_reached",
+        "turn_id": "turn-p10-contradiction"
+      },
+      "rollback_proof": {
+        "conversation_id": "conv-p10-contradiction",
+        "rollback_count": 1,
+        "rollbacks": [
+          {
+            "adopted_metric": 0.7,
+            "baseline_metric": 0.56,
+            "proof_note": "same-pack baseline was restored after the bounded rollback step",
+            "proposal_id": "phase11_proposal::85d913641a4b",
+            "restored_metric": 0.56,
+            "rollback_hash": "1c78af2bc988aa29c5b6c789ace88c731bf58fb04ca013983852f5d5501be8e2",
+            "rollback_id": "rollback::phase11_proposal::85d913641a4b",
+            "roundtrip_preserved": true
+          }
+        ],
+        "schema": "agifcore.phase_11.rollback_proof.v1",
+        "snapshot_hash": "fb506fc3bfacbc7f1df3b6c510a4bb9c9101f9ff854244a2fddeed3b959e30fd",
+        "turn_id": "turn-p10-contradiction"
+      },
+      "schema": "agifcore.phase_11.self_improvement_cycle.v1",
+      "self_experiment_lab": {
+        "conversation_id": "conv-p10-contradiction",
+        "experiment_count": 2,
+        "experiments": [
+          {
+            "baseline_score": 0.56,
+            "candidate_score": 0.7,
+            "delta": 0.14,
+            "experiment_hash": "12c34fa304a9c52c5694d9d90306a1580af6dfdd8572a59ae559f24921d4b06a",
+            "experiment_id": "experiment::phase11_proposal::85d913641a4b",
+            "held_out_pack_ref": "held_out::phase11_proposal::85d913641a4b",
+            "proposal_id": "phase11_proposal::85d913641a4b",
+            "regressions": [],
+            "safe_to_continue": true,
+            "verdict": "improves"
+          },
+          {
+            "baseline_score": 0.56,
+            "candidate_score": 0.74,
+            "delta": 0.18,
+            "experiment_hash": "75b7f3b6ec6b9bfc78c79d5cf54fc5568344535c8230a58e7668b368a635b935",
+            "experiment_id": "experiment::phase11_proposal::3549ec1bd2c8",
+            "held_out_pack_ref": "held_out::phase11_proposal::3549ec1bd2c8",
+            "proposal_id": "phase11_proposal::3549ec1bd2c8",
+            "regressions": [],
+            "safe_to_continue": true,
+            "verdict": "improves"
+          }
+        ],
+        "schema": "agifcore.phase_11.self_experiment_lab.v1",
+        "snapshot_hash": "e53dacf37edfc163772d5bb0b36a04114b83ffa4108077bed3a045522ea701e0",
+        "turn_id": "turn-p10-contradiction"
+      },
+      "self_initiated_inquiry_engine": {
+        "conversation_id": "conv-p10-contradiction",
+        "inquiries": [],
+        "inquiry_count": 0,
+        "schema": "agifcore.phase_11.self_initiated_inquiry_engine.v1",
+        "snapshot_hash": "6dc571a6d72a90aecce846b0112578a45829828f80cdffc4839945014faeea20",
+        "turn_id": "turn-p10-contradiction"
+      },
+      "shadow_evaluation": {
+        "conversation_id": "conv-p10-contradiction",
+        "evaluation_count": 2,
+        "evaluations": [
+          {
+            "baseline_score": 0.56,
+            "candidate_score": 0.7,
+            "delta": 0.14,
+            "evaluation_hash": "373d2f9e49b2ea88ea52c5b155a4d7735f2c49d8552a6472444b7d07648ba579",
+            "evaluation_id": "shadow_eval::phase11_proposal::85d913641a4b",
+            "proposal_id": "phase11_proposal::85d913641a4b",
+            "ready_for_measurement": true,
+            "regressions": [],
+            "supporting_refs": [
+              "experiment::phase11_proposal::85d913641a4b",
+              "held_out::phase11_proposal::85d913641a4b",
+              "meta_observer::51986fa94cb9"
+            ],
+            "uncertainty_notes": [
+              "A conflicting local reading could reverse the current explanation.",
+              "A hidden microclimate factor could break the comparison."
+            ]
+          },
+          {
+            "baseline_score": 0.56,
+            "candidate_score": 0.74,
+            "delta": 0.18,
+            "evaluation_hash": "6d0962ea215051381ee68a1aca7933b8f77c7ca4e991d5086ab9682c4cbbe48b",
+            "evaluation_id": "shadow_eval::phase11_proposal::3549ec1bd2c8",
+            "proposal_id": "phase11_proposal::3549ec1bd2c8",
+            "ready_for_measurement": true,
+            "regressions": [],
+            "supporting_refs": [
+              "experiment::phase11_proposal::3549ec1bd2c8",
+              "held_out::phase11_proposal::3549ec1bd2c8",
+              "meta_observer::51986fa94cb9"
+            ],
+            "uncertainty_notes": [
+              "A conflicting local reading could reverse the current explanation.",
+              "A hidden microclimate factor could break the comparison."
+            ]
+          }
+        ],
+        "schema": "agifcore.phase_11.shadow_evaluation.v1",
+        "snapshot_hash": "1d7fc3900b0961128e5ca266bdbb52a10bb76b77cf85da13f020a564aa18b6b4",
+        "turn_id": "turn-p10-contradiction"
+      },
+      "snapshot_hash": "c31c355fdc53ddbeb0f6d899badfa9935b772e975ac04f7f991eac5d47e96239",
+      "thought_episodes": {
+        "conversation_id": "conv-p10-contradiction",
+        "episode_count": 3,
+        "episodes": [
+          {
+            "episode_hash": "b198e65a9fdf716e1691401dcd124b0c7b9ea44ac54455d9abdf30d9401366d4",
+            "episode_id": "episode::phase11_proposal::85d913641a4b",
+            "episode_note": "Bounded proposal phase11_proposal::85d913641a4b stays tied to missing_variable without promoting it to runtime truth.",
+            "falsifier": "A conflicting local reading could reverse the current explanation.",
+            "proposal_id": "phase11_proposal::85d913641a4b",
+            "trace_refs": [
+              "offline_reflection_item::59b7b340a7cf",
+              "phase8.summary.ref.001",
+              "strategy_journal::341942aad13a",
+              "weak_answer_diagnosis::7ca0eacd5389"
+            ]
+          },
+          {
+            "episode_hash": "d006f2792f4b6a62078960597e0c2bd0ab6c3e6475715da1043689564e19d872",
+            "episode_id": "episode::phase11_proposal::3549ec1bd2c8",
+            "episode_note": "Bounded proposal phase11_proposal::3549ec1bd2c8 stays tied to contradiction_risk without promoting it to runtime truth.",
+            "falsifier": "A conflicting local reading could reverse the current explanation.",
+            "proposal_id": "phase11_proposal::3549ec1bd2c8",
+            "trace_refs": [
+              "offline_reflection_item::f18e48092f7c",
+              "phase8.summary.ref.001",
+              "strategy_journal::341942aad13a",
+              "weak_answer_diagnosis::7ca0eacd5389"
+            ]
+          },
+          {
+            "episode_hash": "125c68e5587194b1a4c1736ff42b5854485ef133832dbfccb8ba1cc1c802a0c5",
+            "episode_id": "episode::phase11_proposal::6122603d6d6d",
+            "episode_note": "Bounded proposal phase11_proposal::6122603d6d6d stays tied to support_thin without promoting it to runtime truth.",
+            "falsifier": "A conflicting local reading could reverse the current explanation.",
+            "proposal_id": "phase11_proposal::6122603d6d6d",
+            "trace_refs": [
+              "offline_reflection_item::efb28a92cd45",
+              "phase8.summary.ref.001",
+              "strategy_journal::341942aad13a",
+              "weak_answer_diagnosis::7ca0eacd5389"
+            ]
+          }
+        ],
+        "schema": "agifcore.phase_11.thought_episodes.v1",
+        "snapshot_hash": "b862e807e3e3138363a1bf3980f34859540b448e2e0446dca6d23755ffc67f53",
+        "turn_id": "turn-p10-contradiction"
+      },
+      "turn_id": "turn-p10-contradiction"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "cycle-schema-correct",
+      "result": "pass"
+    },
+    {
+      "id": "phase10-refs-remain-read-only",
+      "result": "pass"
+    },
+    {
+      "id": "overlay-evidence-refs-present",
+      "result": "pass"
+    },
+    {
+      "id": "cycle-size-stays-bounded",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_11_GOVERNED_SELF_IMPROVEMENT.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/rich_expression_turn.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/contracts.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/offline_reflection_and_consolidation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/idle_reflection.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/proposal_generation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_experiment_lab.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/shadow_evaluation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/before_after_measurement.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/adoption_or_rejection_pipeline.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/post_adoption_monitoring.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/rollback_proof.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/thought_episodes.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_initiated_inquiry_engine.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_improvement_cycle.py",
+    "projects/agifcore_master/05_testing/phase_11_governed_self_improvement/_phase_11_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_11_governed_self_improvement/verify_phase_11_self_improvement_cycle.py"
+  ],
+  "notes": [
+    "the cycle coordinator stays thin and keeps Phase 10 references read-only",
+    "Phase 11 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_self_improvement_cycle_report.json"
+  },
+  "phase": "11",
+  "status": "pass",
+  "verifier": "verify_phase_11_self_improvement_cycle"
+}

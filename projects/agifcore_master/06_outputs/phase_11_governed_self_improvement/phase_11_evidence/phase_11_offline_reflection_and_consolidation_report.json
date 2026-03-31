@@ -1,0 +1,238 @@
+{
+  "anchors": {
+    "contradiction_case": {
+      "consolidated_focuses": [
+        "clarify or measure the uncertainty-driving variable",
+        "re-check the cited support and fall back if the contradiction holds",
+        "keep the uncertainty visible and avoid precision theater",
+        "recheck support before stronger claims",
+        "Monitor whether the next redirect reduces uncertainty without upgrading support by language alone.",
+        "Redirect targets selected: contradiction_probe."
+      ],
+      "conversation_id": "conv-p10-contradiction",
+      "deferred_items": [],
+      "item_count": 5,
+      "items": [
+        {
+          "bounded_next_step": "clarify or measure the uncertainty-driving variable",
+          "item_hash": "59b7b340a7cf9dfac91ba6e3d8edea6be37ee0dab3b07c167a00499c842225ec",
+          "item_id": "offline_reflection_item::59b7b340a7cf",
+          "problem_statement": "Visible uncertainty still points to at least one unresolved variable.",
+          "proposed_focus": "clarify or measure the uncertainty-driving variable",
+          "source_kind": "missing_variable",
+          "source_ref": "phase8.summary.ref.001",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "84739b2c42b16a086303dbb52b1ee5296b43a721a79d3bca649809f81653fede",
+            "weak_answer_diagnosis::9654ec95d6a1"
+          ]
+        },
+        {
+          "bounded_next_step": "re-check the cited support and fall back if the contradiction holds",
+          "item_hash": "f18e48092f7c33d5ce46a7c9759b0486cd3334b91107d138553b8fb4b95f7747",
+          "item_id": "offline_reflection_item::f18e48092f7c",
+          "problem_statement": "Science reflection already exposes a contradiction-oriented signal.",
+          "proposed_focus": "re-check the cited support and fall back if the contradiction holds",
+          "source_kind": "contradiction_risk",
+          "source_ref": "phase8.summary.ref.001",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "84739b2c42b16a086303dbb52b1ee5296b43a721a79d3bca649809f81653fede",
+            "weak_answer_diagnosis::d838bcead16a"
+          ]
+        },
+        {
+          "bounded_next_step": "keep the uncertainty visible and avoid precision theater",
+          "item_hash": "efb28a92cd450cd4a1b0e60f10dd90e392988092df41cd16e9fd1dc4b0a00c87",
+          "item_id": "offline_reflection_item::efb28a92cd45",
+          "problem_statement": "The answer is bounded and useful, but it still rides on inferred support instead of fully grounded support.",
+          "proposed_focus": "keep the uncertainty visible and avoid precision theater",
+          "source_kind": "support_thin",
+          "source_ref": "phase8.summary.ref.001",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "weak_answer_diagnosis::b8b959b45f9d"
+          ]
+        },
+        {
+          "bounded_next_step": "clarify or measure the uncertainty-driving variable",
+          "item_hash": "00caff697577667ab03c8f7704b71f6dda02f8ec9ab43296a065ae70965a2655",
+          "item_id": "offline_reflection_item::00caff697577",
+          "problem_statement": "clarify or measure the uncertainty-driving variable",
+          "proposed_focus": "clarify or measure the uncertainty-driving variable",
+          "source_kind": "missing_need",
+          "source_ref": "phase10_missing_need::00caff697577",
+          "supporting_refs": [
+            "clarify or measure the uncertainty-driving variable"
+          ]
+        },
+        {
+          "bounded_next_step": "recheck support before stronger claims",
+          "item_hash": "0310e6c1426c3b4e4f08c2bf66e6e45dea7768cef2beb0aeb4024f6e272600e8",
+          "item_id": "offline_reflection_item::0310e6c1426c",
+          "problem_statement": "A hidden variable or contradiction-sensitive condition may explain the current weak answer.",
+          "proposed_focus": "recheck support before stronger claims",
+          "source_kind": "theory_fragment",
+          "source_ref": "theory_fragment::a3ed0f3c7ccf",
+          "supporting_refs": [
+            "theory_fragment::a3ed0f3c7ccf",
+            "A conflicting local reading could reverse the current explanation."
+          ]
+        }
+      ],
+      "schema": "agifcore.phase_11.offline_reflection_and_consolidation.v1",
+      "snapshot_hash": "7f036facb4175780fec41fdd3e802def2a00792ce0113e44255b49e017053330",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "weak_case": {
+      "consolidated_focuses": [
+        "obtain the missing local evidence before upgrading confidence",
+        "clarify or measure the uncertainty-driving variable",
+        "reframe the explanation around expected state, actual state, and first visible failure",
+        "missing local evidence before stronger claims",
+        "Monitor whether the next redirect reduces uncertainty without upgrading support by language alone.",
+        "Redirect targets selected: support_state, rich_expression."
+      ],
+      "conversation_id": "conv-p10-weak",
+      "deferred_items": [],
+      "item_count": 5,
+      "items": [
+        {
+          "bounded_next_step": "obtain the missing local evidence before upgrading confidence",
+          "item_hash": "cff95bb892cf3cb86a12eb2f0440f1546c05b3a988053bde6f79fafb99f3bbb5",
+          "item_id": "offline_reflection_item::cff95bb892cf",
+          "problem_statement": "The answer cannot be stronger because the lower-phase support state is not grounded.",
+          "proposed_focus": "obtain the missing local evidence before upgrading confidence",
+          "source_kind": "weak_support",
+          "source_ref": "phase8.summary.ref.001",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+            "weak_answer_diagnosis::ef91041826d2"
+          ]
+        },
+        {
+          "bounded_next_step": "clarify or measure the uncertainty-driving variable",
+          "item_hash": "c4bca1892a48b55f73207c069d52654fdf30964aed7733365324d08c82d5c754",
+          "item_id": "offline_reflection_item::c4bca1892a48",
+          "problem_statement": "Visible uncertainty still points to at least one unresolved variable.",
+          "proposed_focus": "clarify or measure the uncertainty-driving variable",
+          "source_kind": "missing_variable",
+          "source_ref": "phase8.summary.ref.001",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+            "weak_answer_diagnosis::65a916449756"
+          ]
+        },
+        {
+          "bounded_next_step": "reframe the explanation around expected state, actual state, and first visible failure",
+          "item_hash": "5fd590923929a02dcf8ccb561fa88a6478f73989632930f21d75acc0b6e08126",
+          "item_id": "offline_reflection_item::5fd590923929",
+          "problem_statement": "The current answer shape is too weak to name an exact fault honestly.",
+          "proposed_focus": "reframe the explanation around expected state, actual state, and first visible failure",
+          "source_kind": "vague_explanation",
+          "source_ref": "phase8.summary.ref.001",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "weak_answer_diagnosis::00c1ad7a7c45"
+          ]
+        },
+        {
+          "bounded_next_step": "missing local evidence before stronger claims",
+          "item_hash": "9cdd5abbd8dc54c7e952e95d7693abb443deecbeb7f7d869c39d401cb93fe6a8",
+          "item_id": "offline_reflection_item::9cdd5abbd8dc",
+          "problem_statement": "missing local evidence before stronger claims",
+          "proposed_focus": "missing local evidence before stronger claims",
+          "source_kind": "missing_need",
+          "source_ref": "phase10_missing_need::9cdd5abbd8dc",
+          "supporting_refs": [
+            "missing local evidence before stronger claims"
+          ]
+        },
+        {
+          "bounded_next_step": "clarify or measure the uncertainty-driving variable",
+          "item_hash": "36db44b1541871dcb9d45750bf72b2d59603698285355b8cff301701cbdda7c1",
+          "item_id": "offline_reflection_item::36db44b15418",
+          "problem_statement": "clarify or measure the uncertainty-driving variable",
+          "proposed_focus": "clarify or measure the uncertainty-driving variable",
+          "source_kind": "missing_need",
+          "source_ref": "phase10_missing_need::36db44b15418",
+          "supporting_refs": [
+            "clarify or measure the uncertainty-driving variable"
+          ]
+        }
+      ],
+      "schema": "agifcore.phase_11.offline_reflection_and_consolidation.v1",
+      "snapshot_hash": "349f12b755c2efb1c80345efaebfabb0a17ae280f4e08d60e829c3027fdc7953",
+      "turn_id": "turn-p10-weak"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "reflection-items-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "reflection-items-trace-linked",
+      "result": "pass"
+    },
+    {
+      "id": "consolidated-focuses-present",
+      "result": "pass"
+    },
+    {
+      "id": "phase10-inputs-remain-read-only",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_11_GOVERNED_SELF_IMPROVEMENT.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/rich_expression_turn.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/contracts.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/offline_reflection_and_consolidation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/idle_reflection.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/proposal_generation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_experiment_lab.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/shadow_evaluation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/before_after_measurement.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/adoption_or_rejection_pipeline.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/post_adoption_monitoring.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/rollback_proof.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/thought_episodes.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_initiated_inquiry_engine.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_improvement_cycle.py",
+    "projects/agifcore_master/05_testing/phase_11_governed_self_improvement/_phase_11_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_11_governed_self_improvement/verify_phase_11_offline_reflection_and_consolidation.py"
+  ],
+  "notes": [
+    "offline reflection stays bounded, trace-linked, and read-only over Phase 10 inputs",
+    "Phase 11 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_offline_reflection_and_consolidation_report.json"
+  },
+  "phase": "11",
+  "status": "pass",
+  "verifier": "verify_phase_11_offline_reflection_and_consolidation"
+}

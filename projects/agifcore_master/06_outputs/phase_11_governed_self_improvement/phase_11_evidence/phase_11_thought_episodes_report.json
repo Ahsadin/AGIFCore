@@ -1,0 +1,113 @@
+{
+  "anchors": {
+    "contradiction_case": {
+      "conversation_id": "conv-p10-contradiction",
+      "episode_count": 3,
+      "episodes": [
+        {
+          "episode_hash": "b198e65a9fdf716e1691401dcd124b0c7b9ea44ac54455d9abdf30d9401366d4",
+          "episode_id": "episode::phase11_proposal::85d913641a4b",
+          "episode_note": "Bounded proposal phase11_proposal::85d913641a4b stays tied to missing_variable without promoting it to runtime truth.",
+          "falsifier": "A conflicting local reading could reverse the current explanation.",
+          "proposal_id": "phase11_proposal::85d913641a4b",
+          "trace_refs": [
+            "offline_reflection_item::59b7b340a7cf",
+            "phase8.summary.ref.001",
+            "strategy_journal::341942aad13a",
+            "weak_answer_diagnosis::7ca0eacd5389"
+          ]
+        },
+        {
+          "episode_hash": "d006f2792f4b6a62078960597e0c2bd0ab6c3e6475715da1043689564e19d872",
+          "episode_id": "episode::phase11_proposal::3549ec1bd2c8",
+          "episode_note": "Bounded proposal phase11_proposal::3549ec1bd2c8 stays tied to contradiction_risk without promoting it to runtime truth.",
+          "falsifier": "A conflicting local reading could reverse the current explanation.",
+          "proposal_id": "phase11_proposal::3549ec1bd2c8",
+          "trace_refs": [
+            "offline_reflection_item::f18e48092f7c",
+            "phase8.summary.ref.001",
+            "strategy_journal::341942aad13a",
+            "weak_answer_diagnosis::7ca0eacd5389"
+          ]
+        },
+        {
+          "episode_hash": "125c68e5587194b1a4c1736ff42b5854485ef133832dbfccb8ba1cc1c802a0c5",
+          "episode_id": "episode::phase11_proposal::6122603d6d6d",
+          "episode_note": "Bounded proposal phase11_proposal::6122603d6d6d stays tied to support_thin without promoting it to runtime truth.",
+          "falsifier": "A conflicting local reading could reverse the current explanation.",
+          "proposal_id": "phase11_proposal::6122603d6d6d",
+          "trace_refs": [
+            "offline_reflection_item::efb28a92cd45",
+            "phase8.summary.ref.001",
+            "strategy_journal::341942aad13a",
+            "weak_answer_diagnosis::7ca0eacd5389"
+          ]
+        }
+      ],
+      "schema": "agifcore.phase_11.thought_episodes.v1",
+      "snapshot_hash": "b862e807e3e3138363a1bf3980f34859540b448e2e0446dca6d23755ffc67f53",
+      "turn_id": "turn-p10-contradiction"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "episode-count-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "proposal-linkage-present",
+      "result": "pass"
+    },
+    {
+      "id": "trace-refs-present",
+      "result": "pass"
+    },
+    {
+      "id": "phase10-inputs-remain-read-only",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_11_GOVERNED_SELF_IMPROVEMENT.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/rich_expression_turn.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/contracts.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/offline_reflection_and_consolidation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/idle_reflection.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/proposal_generation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_experiment_lab.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/shadow_evaluation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/before_after_measurement.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/adoption_or_rejection_pipeline.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/post_adoption_monitoring.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/rollback_proof.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/thought_episodes.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_initiated_inquiry_engine.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_improvement_cycle.py",
+    "projects/agifcore_master/05_testing/phase_11_governed_self_improvement/_phase_11_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_11_governed_self_improvement/verify_phase_11_thought_episodes.py"
+  ],
+  "notes": [
+    "thought episodes stay compact, trace-linked, and subordinate to governed proposals",
+    "Phase 11 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_thought_episodes_report.json"
+  },
+  "phase": "11",
+  "status": "pass",
+  "verifier": "verify_phase_11_thought_episodes"
+}

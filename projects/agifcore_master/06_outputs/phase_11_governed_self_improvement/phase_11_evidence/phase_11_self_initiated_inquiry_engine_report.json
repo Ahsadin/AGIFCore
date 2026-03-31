@@ -1,0 +1,95 @@
+{
+  "anchors": {
+    "contradiction_case": {
+      "conversation_id": "conv-p10-contradiction",
+      "inquiries": [],
+      "inquiry_count": 0,
+      "schema": "agifcore.phase_11.self_initiated_inquiry_engine.v1",
+      "snapshot_hash": "6dc571a6d72a90aecce846b0112578a45829828f80cdffc4839945014faeea20",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "weak_case": {
+      "conversation_id": "conv-p10-weak",
+      "inquiries": [
+        {
+          "allowed_local_inputs": [
+            "meta_observer::80e48682c6ef",
+            "weak_answer_diagnosis::9b56ed826747",
+            "strategy_journal::a39c7f7e13e6"
+          ],
+          "budget_limit": "1 inquiry per cycle, local inputs only",
+          "goal": "missing local evidence before stronger claims",
+          "inquiry_hash": "d1657daaa896d41f553b7b1e01f5467fb623f2533d24cf6426bdb231080485df",
+          "inquiry_id": "inquiry::d1657daaa896",
+          "stop_condition": "stop when the missing need is clarified or the cycle ends",
+          "trigger_kind": "missing_need"
+        }
+      ],
+      "inquiry_count": 1,
+      "schema": "agifcore.phase_11.self_initiated_inquiry_engine.v1",
+      "snapshot_hash": "006fd8d16e10afcf5f5098021c134487653f37f673d9d7a64dd36127fb4c1979",
+      "turn_id": "turn-p10-weak"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "weak-case-opens-one-bounded-inquiry",
+      "result": "pass"
+    },
+    {
+      "id": "contradiction-case-does-not-open-inquiry-by-default",
+      "result": "pass"
+    },
+    {
+      "id": "allowed-local-inputs-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "phase10-inputs-remain-read-only",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_11_GOVERNED_SELF_IMPROVEMENT.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/rich_expression_turn.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/contracts.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/offline_reflection_and_consolidation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/idle_reflection.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/proposal_generation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_experiment_lab.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/shadow_evaluation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/before_after_measurement.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/adoption_or_rejection_pipeline.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/post_adoption_monitoring.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/rollback_proof.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/thought_episodes.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_initiated_inquiry_engine.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_improvement_cycle.py",
+    "projects/agifcore_master/05_testing/phase_11_governed_self_improvement/_phase_11_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_11_governed_self_improvement/verify_phase_11_self_initiated_inquiry_engine.py"
+  ],
+  "notes": [
+    "self-initiated inquiry stays bounded, local, and single-shot per cycle",
+    "Phase 11 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_self_initiated_inquiry_engine_report.json"
+  },
+  "phase": "11",
+  "status": "pass",
+  "verifier": "verify_phase_11_self_initiated_inquiry_engine"
+}

@@ -1,0 +1,81 @@
+{
+  "anchors": {
+    "weak_case": {
+      "conversation_id": "conv-p10-weak",
+      "deferred_item_ids": [],
+      "processed_item_ids": [
+        "offline_reflection_item::cff95bb892cf",
+        "offline_reflection_item::c4bca1892a48",
+        "offline_reflection_item::5fd590923929",
+        "offline_reflection_item::9cdd5abbd8dc",
+        "offline_reflection_item::36db44b15418"
+      ],
+      "ran": true,
+      "schema": "agifcore.phase_11.idle_reflection.v1",
+      "snapshot_hash": "0e250c9c39283653561bbdd3c02a4d56dd675eab8df6655e3879a18d4bbff18f",
+      "stop_reason": "bounded_idle_cycle_complete",
+      "turn_id": "turn-p10-weak"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "idle-cycle-runs-when-items-exist",
+      "result": "pass"
+    },
+    {
+      "id": "processed-item-count-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "idle-stop-reason-present",
+      "result": "pass"
+    },
+    {
+      "id": "phase10-inputs-remain-read-only",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_11_GOVERNED_SELF_IMPROVEMENT.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/rich_expression_turn.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/contracts.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/offline_reflection_and_consolidation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/idle_reflection.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/proposal_generation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_experiment_lab.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/shadow_evaluation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/before_after_measurement.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/adoption_or_rejection_pipeline.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/post_adoption_monitoring.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/rollback_proof.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/thought_episodes.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_initiated_inquiry_engine.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_improvement_cycle.py",
+    "projects/agifcore_master/05_testing/phase_11_governed_self_improvement/_phase_11_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_11_governed_self_improvement/verify_phase_11_idle_reflection.py"
+  ],
+  "notes": [
+    "idle reflection stays explicit and bounded instead of becoming always-on autonomy",
+    "Phase 11 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_idle_reflection_report.json"
+  },
+  "phase": "11",
+  "status": "pass",
+  "verifier": "verify_phase_11_idle_reflection"
+}

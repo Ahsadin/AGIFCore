@@ -1,0 +1,92 @@
+{
+  "anchors": {
+    "contradiction_case": {
+      "conversation_id": "conv-p10-contradiction",
+      "rollback_count": 1,
+      "rollbacks": [
+        {
+          "adopted_metric": 0.7,
+          "baseline_metric": 0.56,
+          "proof_note": "same-pack baseline was restored after the bounded rollback step",
+          "proposal_id": "phase11_proposal::85d913641a4b",
+          "restored_metric": 0.56,
+          "rollback_hash": "1c78af2bc988aa29c5b6c789ace88c731bf58fb04ca013983852f5d5501be8e2",
+          "rollback_id": "rollback::phase11_proposal::85d913641a4b",
+          "roundtrip_preserved": true
+        }
+      ],
+      "schema": "agifcore.phase_11.rollback_proof.v1",
+      "snapshot_hash": "fb506fc3bfacbc7f1df3b6c510a4bb9c9101f9ff854244a2fddeed3b959e30fd",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "weak_case": {
+      "conversation_id": "conv-p10-weak",
+      "rollback_count": 0,
+      "rollbacks": [],
+      "schema": "agifcore.phase_11.rollback_proof.v1",
+      "snapshot_hash": "9b95b18044729be8cb39d3708a907b33d9695354e5f2f19a943a965d108e6f71",
+      "turn_id": "turn-p10-weak"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "contradiction-case-produces-rollback-proof",
+      "result": "pass"
+    },
+    {
+      "id": "rollback-roundtrip-preserves-baseline",
+      "result": "pass"
+    },
+    {
+      "id": "weak-case-produces-no-rollback-proof",
+      "result": "pass"
+    },
+    {
+      "id": "phase10-inputs-remain-read-only",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_11_GOVERNED_SELF_IMPROVEMENT.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/rich_expression_turn.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/contracts.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/offline_reflection_and_consolidation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/idle_reflection.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/proposal_generation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_experiment_lab.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/shadow_evaluation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/before_after_measurement.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/adoption_or_rejection_pipeline.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/post_adoption_monitoring.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/rollback_proof.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/thought_episodes.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_initiated_inquiry_engine.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_improvement_cycle.py",
+    "projects/agifcore_master/05_testing/phase_11_governed_self_improvement/_phase_11_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_11_governed_self_improvement/verify_phase_11_rollback_proof.py"
+  ],
+  "notes": [
+    "rollback proof stays same-pack and machine-checkable instead of claim-only",
+    "Phase 11 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_rollback_proof_report.json"
+  },
+  "phase": "11",
+  "status": "pass",
+  "verifier": "verify_phase_11_rollback_proof"
+}

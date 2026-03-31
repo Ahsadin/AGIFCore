@@ -1,0 +1,77 @@
+{
+  "available_report_count": 12,
+  "invalid_reports": [],
+  "missing_reports": [],
+  "notes": [
+    "this manifest tracks machine-readable verifier outputs only",
+    "Phase 11 remains open",
+    "manifest is rebuilt from actual report files on disk",
+    "no approval implied"
+  ],
+  "phase": "11",
+  "phase_remains_open": true,
+  "reports": [
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_offline_reflection_and_consolidation_report.json",
+      "report_id": "offline_reflection_and_consolidation",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_idle_reflection_report.json",
+      "report_id": "idle_reflection",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_proposal_generation_report.json",
+      "report_id": "proposal_generation",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_self_experiment_lab_report.json",
+      "report_id": "self_experiment_lab",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_shadow_evaluation_report.json",
+      "report_id": "shadow_evaluation",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_before_after_measurement_report.json",
+      "report_id": "before_after_measurement",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_adoption_or_rejection_pipeline_report.json",
+      "report_id": "adoption_or_rejection_pipeline",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_post_adoption_monitoring_report.json",
+      "report_id": "post_adoption_monitoring",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_rollback_proof_report.json",
+      "report_id": "rollback_proof",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_thought_episodes_report.json",
+      "report_id": "thought_episodes",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_self_initiated_inquiry_engine_report.json",
+      "report_id": "self_initiated_inquiry_engine",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_self_improvement_cycle_report.json",
+      "report_id": "self_improvement_cycle",
+      "status": "pass"
+    }
+  ],
+  "required_report_count": 12,
+  "status": "phase_11_verifier_family_pass"
+}

@@ -1,0 +1,154 @@
+{
+  "demo_id": "bounded_self_initiated_inquiry",
+  "evidence_reports": [
+    "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_idle_reflection_report.json",
+    "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_offline_reflection_and_consolidation_report.json",
+    "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_self_initiated_inquiry_engine_report.json",
+    "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_evidence_manifest.json"
+  ],
+  "notes": [
+    "review-only bounded inquiry demo",
+    "Phase 11 remains open",
+    "no approval implied"
+  ],
+  "original_prompt": "Why was this weak and what should be checked first?",
+  "phase": "11",
+  "phase10_inputs": {
+    "missing_needs": [
+      "missing local evidence before stronger claims",
+      "clarify or measure the uncertainty-driving variable"
+    ],
+    "redirect_refs": [
+      "attention_redirect::30b84eb19b01",
+      "attention_redirect::2afb4070bc1e"
+    ],
+    "support_state": "search_needed"
+  },
+  "phase11_outputs": {
+    "idle_reflection": {
+      "conversation_id": "conv-p10-weak",
+      "deferred_item_ids": [],
+      "processed_item_ids": [
+        "offline_reflection_item::cff95bb892cf",
+        "offline_reflection_item::c4bca1892a48",
+        "offline_reflection_item::5fd590923929",
+        "offline_reflection_item::9cdd5abbd8dc",
+        "offline_reflection_item::36db44b15418"
+      ],
+      "ran": true,
+      "schema": "agifcore.phase_11.idle_reflection.v1",
+      "snapshot_hash": "0e250c9c39283653561bbdd3c02a4d56dd675eab8df6655e3879a18d4bbff18f",
+      "stop_reason": "bounded_idle_cycle_complete",
+      "turn_id": "turn-p10-weak"
+    },
+    "offline_reflection_and_consolidation": {
+      "consolidated_focuses": [
+        "obtain the missing local evidence before upgrading confidence",
+        "clarify or measure the uncertainty-driving variable",
+        "reframe the explanation around expected state, actual state, and first visible failure",
+        "missing local evidence before stronger claims",
+        "Monitor whether the next redirect reduces uncertainty without upgrading support by language alone.",
+        "Redirect targets selected: support_state, rich_expression."
+      ],
+      "conversation_id": "conv-p10-weak",
+      "deferred_items": [],
+      "item_count": 5,
+      "items": [
+        {
+          "bounded_next_step": "obtain the missing local evidence before upgrading confidence",
+          "item_hash": "cff95bb892cf3cb86a12eb2f0440f1546c05b3a988053bde6f79fafb99f3bbb5",
+          "item_id": "offline_reflection_item::cff95bb892cf",
+          "problem_statement": "The answer cannot be stronger because the lower-phase support state is not grounded.",
+          "proposed_focus": "obtain the missing local evidence before upgrading confidence",
+          "source_kind": "weak_support",
+          "source_ref": "phase8.summary.ref.001",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+            "weak_answer_diagnosis::ef91041826d2"
+          ]
+        },
+        {
+          "bounded_next_step": "clarify or measure the uncertainty-driving variable",
+          "item_hash": "c4bca1892a48b55f73207c069d52654fdf30964aed7733365324d08c82d5c754",
+          "item_id": "offline_reflection_item::c4bca1892a48",
+          "problem_statement": "Visible uncertainty still points to at least one unresolved variable.",
+          "proposed_focus": "clarify or measure the uncertainty-driving variable",
+          "source_kind": "missing_variable",
+          "source_ref": "phase8.summary.ref.001",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+            "weak_answer_diagnosis::65a916449756"
+          ]
+        },
+        {
+          "bounded_next_step": "reframe the explanation around expected state, actual state, and first visible failure",
+          "item_hash": "5fd590923929a02dcf8ccb561fa88a6478f73989632930f21d75acc0b6e08126",
+          "item_id": "offline_reflection_item::5fd590923929",
+          "problem_statement": "The current answer shape is too weak to name an exact fault honestly.",
+          "proposed_focus": "reframe the explanation around expected state, actual state, and first visible failure",
+          "source_kind": "vague_explanation",
+          "source_ref": "phase8.summary.ref.001",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "weak_answer_diagnosis::00c1ad7a7c45"
+          ]
+        },
+        {
+          "bounded_next_step": "missing local evidence before stronger claims",
+          "item_hash": "9cdd5abbd8dc54c7e952e95d7693abb443deecbeb7f7d869c39d401cb93fe6a8",
+          "item_id": "offline_reflection_item::9cdd5abbd8dc",
+          "problem_statement": "missing local evidence before stronger claims",
+          "proposed_focus": "missing local evidence before stronger claims",
+          "source_kind": "missing_need",
+          "source_ref": "phase10_missing_need::9cdd5abbd8dc",
+          "supporting_refs": [
+            "missing local evidence before stronger claims"
+          ]
+        },
+        {
+          "bounded_next_step": "clarify or measure the uncertainty-driving variable",
+          "item_hash": "36db44b1541871dcb9d45750bf72b2d59603698285355b8cff301701cbdda7c1",
+          "item_id": "offline_reflection_item::36db44b15418",
+          "problem_statement": "clarify or measure the uncertainty-driving variable",
+          "proposed_focus": "clarify or measure the uncertainty-driving variable",
+          "source_kind": "missing_need",
+          "source_ref": "phase10_missing_need::36db44b15418",
+          "supporting_refs": [
+            "clarify or measure the uncertainty-driving variable"
+          ]
+        }
+      ],
+      "schema": "agifcore.phase_11.offline_reflection_and_consolidation.v1",
+      "snapshot_hash": "349f12b755c2efb1c80345efaebfabb0a17ae280f4e08d60e829c3027fdc7953",
+      "turn_id": "turn-p10-weak"
+    },
+    "self_initiated_inquiry_engine": {
+      "conversation_id": "conv-p10-weak",
+      "inquiries": [
+        {
+          "allowed_local_inputs": [
+            "meta_observer::80e48682c6ef",
+            "weak_answer_diagnosis::9b56ed826747",
+            "strategy_journal::a39c7f7e13e6"
+          ],
+          "budget_limit": "1 inquiry per cycle, local inputs only",
+          "goal": "missing local evidence before stronger claims",
+          "inquiry_hash": "d1657daaa896d41f553b7b1e01f5467fb623f2533d24cf6426bdb231080485df",
+          "inquiry_id": "inquiry::d1657daaa896",
+          "stop_condition": "stop when the missing need is clarified or the cycle ends",
+          "trigger_kind": "missing_need"
+        }
+      ],
+      "inquiry_count": 1,
+      "schema": "agifcore.phase_11.self_initiated_inquiry_engine.v1",
+      "snapshot_hash": "006fd8d16e10afcf5f5098021c134487653f37f673d9d7a64dd36127fb4c1979",
+      "turn_id": "turn-p10-weak"
+    }
+  },
+  "status": "open"
+}

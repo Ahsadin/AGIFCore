@@ -1,0 +1,135 @@
+{
+  "anchors": {
+    "contradiction_case": {
+      "conversation_id": "conv-p10-contradiction",
+      "decision_count": 2,
+      "decisions": [
+        {
+          "decision": "adopted",
+          "decision_hash": "96aefc35faf59af2a31dfd4c08cb85469ebc48abcd675be9047b63bcb840f638",
+          "decision_id": "decision::phase11_proposal::85d913641a4b",
+          "proposal_id": "phase11_proposal::85d913641a4b",
+          "reason": "candidate improved bounded metrics and rollback is available",
+          "rollback_required": true,
+          "supporting_refs": [
+            "measurement::phase11_proposal::85d913641a4b",
+            "rollback::phase11_proposal::85d913641a4b",
+            "weak_answer_diagnosis::7ca0eacd5389"
+          ]
+        },
+        {
+          "decision": "rejected",
+          "decision_hash": "1afc0b8b011b4eb3ed0fb4d33f72eefb8f52f14025851406d3c56301058a21c4",
+          "decision_id": "decision::phase11_proposal::3549ec1bd2c8",
+          "proposal_id": "phase11_proposal::3549ec1bd2c8",
+          "reason": "candidate did not clear the bounded adoption gate",
+          "rollback_required": false,
+          "supporting_refs": [
+            "measurement::phase11_proposal::3549ec1bd2c8",
+            "rollback::phase11_proposal::3549ec1bd2c8",
+            "weak_answer_diagnosis::7ca0eacd5389"
+          ]
+        }
+      ],
+      "schema": "agifcore.phase_11.adoption_or_rejection_pipeline.v1",
+      "snapshot_hash": "c266a97846706ff4a33c079963ebbe181d6f4bbc97ded4d3d5f0cf5e6fa55fd4",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "weak_case": {
+      "conversation_id": "conv-p10-weak",
+      "decision_count": 2,
+      "decisions": [
+        {
+          "decision": "held",
+          "decision_hash": "27b45fc5bd4e25b753347e126dedf267ecbebaa4e19e698ee6630c0557e549b9",
+          "decision_id": "decision::phase11_proposal::f93c8ce20e8b",
+          "proposal_id": "phase11_proposal::f93c8ce20e8b",
+          "reason": "support remains unresolved, so the candidate stays governed but not adopted",
+          "rollback_required": false,
+          "supporting_refs": [
+            "measurement::phase11_proposal::f93c8ce20e8b",
+            "rollback::phase11_proposal::f93c8ce20e8b",
+            "weak_answer_diagnosis::9b56ed826747"
+          ]
+        },
+        {
+          "decision": "held",
+          "decision_hash": "38bcddde787b36681ed63e3656b19e7cf036146c3558c5a2695c884511cdd437",
+          "decision_id": "decision::phase11_proposal::07ad3e8b431f",
+          "proposal_id": "phase11_proposal::07ad3e8b431f",
+          "reason": "support remains unresolved, so the candidate stays governed but not adopted",
+          "rollback_required": false,
+          "supporting_refs": [
+            "measurement::phase11_proposal::07ad3e8b431f",
+            "rollback::phase11_proposal::07ad3e8b431f",
+            "weak_answer_diagnosis::9b56ed826747"
+          ]
+        }
+      ],
+      "schema": "agifcore.phase_11.adoption_or_rejection_pipeline.v1",
+      "snapshot_hash": "084fc3773d5362863917bc892dc08088132b92592e83541b2e56856b80fff736",
+      "turn_id": "turn-p10-weak"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "contradiction-case-adopts-one-bounded-candidate",
+      "result": "pass"
+    },
+    {
+      "id": "weak-case-does-not-self-approve",
+      "result": "pass"
+    },
+    {
+      "id": "decision-reasons-present",
+      "result": "pass"
+    },
+    {
+      "id": "phase10-inputs-remain-read-only",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_11_GOVERNED_SELF_IMPROVEMENT.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/rich_expression_turn.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/contracts.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/offline_reflection_and_consolidation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/idle_reflection.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/proposal_generation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_experiment_lab.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/shadow_evaluation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/before_after_measurement.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/adoption_or_rejection_pipeline.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/post_adoption_monitoring.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/rollback_proof.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/thought_episodes.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_initiated_inquiry_engine.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_improvement_cycle.py",
+    "projects/agifcore_master/05_testing/phase_11_governed_self_improvement/_phase_11_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_11_governed_self_improvement/verify_phase_11_adoption_or_rejection_pipeline.py"
+  ],
+  "notes": [
+    "adoption stays explicit, governed, and evidence-linked instead of implicit self-approval",
+    "Phase 11 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_adoption_or_rejection_pipeline_report.json"
+  },
+  "phase": "11",
+  "status": "pass",
+  "verifier": "verify_phase_11_adoption_or_rejection_pipeline"
+}

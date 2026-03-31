@@ -1,0 +1,147 @@
+{
+  "anchors": {
+    "contradiction_case": {
+      "conversation_id": "conv-p10-contradiction",
+      "measurements": [
+        {
+          "adopted_metric": 0.7,
+          "baseline_metric": 0.56,
+          "improvement": 0.14,
+          "measurement_hash": "5595964948a8faa353b619f9444a9a4083e99a25782e020cbcbaa50def731271",
+          "measurement_id": "measurement::phase11_proposal::85d913641a4b",
+          "pass_threshold_met": true,
+          "proposal_id": "phase11_proposal::85d913641a4b",
+          "rollback_metric": 0.56,
+          "supporting_refs": [
+            "shadow_eval::phase11_proposal::85d913641a4b",
+            "experiment::phase11_proposal::85d913641a4b",
+            "held_out::phase11_proposal::85d913641a4b",
+            "meta_observer::51986fa94cb9"
+          ]
+        },
+        {
+          "adopted_metric": 0.74,
+          "baseline_metric": 0.56,
+          "improvement": 0.18,
+          "measurement_hash": "e6613be54e577e9b269dfa026dcda539c976ef75bc5ff524504af0d24a83fa8f",
+          "measurement_id": "measurement::phase11_proposal::3549ec1bd2c8",
+          "pass_threshold_met": true,
+          "proposal_id": "phase11_proposal::3549ec1bd2c8",
+          "rollback_metric": 0.56,
+          "supporting_refs": [
+            "shadow_eval::phase11_proposal::3549ec1bd2c8",
+            "experiment::phase11_proposal::3549ec1bd2c8",
+            "held_out::phase11_proposal::3549ec1bd2c8",
+            "meta_observer::51986fa94cb9"
+          ]
+        }
+      ],
+      "pair_count": 2,
+      "schema": "agifcore.phase_11.before_after_measurement.v1",
+      "snapshot_hash": "827d29b9ccdf07bd284c7ee49f8b54c4b033977db37a8579452e00a7f812e09b",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "weak_case": {
+      "conversation_id": "conv-p10-weak",
+      "measurements": [
+        {
+          "adopted_metric": 0.44,
+          "baseline_metric": 0.41,
+          "improvement": 0.03,
+          "measurement_hash": "25041b6bba1a06a1c3407bceab482fdf7df4d3d2a0444f9849c625673b61dddb",
+          "measurement_id": "measurement::phase11_proposal::f93c8ce20e8b",
+          "pass_threshold_met": false,
+          "proposal_id": "phase11_proposal::f93c8ce20e8b",
+          "rollback_metric": 0.41,
+          "supporting_refs": [
+            "shadow_eval::phase11_proposal::f93c8ce20e8b",
+            "experiment::phase11_proposal::f93c8ce20e8b",
+            "held_out::phase11_proposal::f93c8ce20e8b",
+            "meta_observer::80e48682c6ef"
+          ]
+        },
+        {
+          "adopted_metric": 0.46,
+          "baseline_metric": 0.41,
+          "improvement": 0.05,
+          "measurement_hash": "5005d4aa5c24575a6f9747a6cf02345c0b17c3e5032dff6b492b168538da82b7",
+          "measurement_id": "measurement::phase11_proposal::07ad3e8b431f",
+          "pass_threshold_met": false,
+          "proposal_id": "phase11_proposal::07ad3e8b431f",
+          "rollback_metric": 0.41,
+          "supporting_refs": [
+            "shadow_eval::phase11_proposal::07ad3e8b431f",
+            "experiment::phase11_proposal::07ad3e8b431f",
+            "held_out::phase11_proposal::07ad3e8b431f",
+            "meta_observer::80e48682c6ef"
+          ]
+        }
+      ],
+      "pair_count": 2,
+      "schema": "agifcore.phase_11.before_after_measurement.v1",
+      "snapshot_hash": "69e98b9a6fc0cef51596ccdb3c0ef0ae613872ab55e34c644f62daf57b871729",
+      "turn_id": "turn-p10-weak"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "measurement-pair-count-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "rollback-metric-preserves-baseline",
+      "result": "pass"
+    },
+    {
+      "id": "pass-threshold-applies",
+      "result": "pass"
+    },
+    {
+      "id": "phase10-inputs-remain-read-only",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_11_GOVERNED_SELF_IMPROVEMENT.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/rich_expression_turn.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/contracts.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/offline_reflection_and_consolidation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/idle_reflection.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/proposal_generation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_experiment_lab.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/shadow_evaluation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/before_after_measurement.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/adoption_or_rejection_pipeline.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/post_adoption_monitoring.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/rollback_proof.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/thought_episodes.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_initiated_inquiry_engine.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_improvement_cycle.py",
+    "projects/agifcore_master/05_testing/phase_11_governed_self_improvement/_phase_11_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_11_governed_self_improvement/verify_phase_11_before_after_measurement.py"
+  ],
+  "notes": [
+    "before/after measurement stays machine-readable and rollback-linked",
+    "Phase 11 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_before_after_measurement_report.json"
+  },
+  "phase": "11",
+  "status": "pass",
+  "verifier": "verify_phase_11_before_after_measurement"
+}

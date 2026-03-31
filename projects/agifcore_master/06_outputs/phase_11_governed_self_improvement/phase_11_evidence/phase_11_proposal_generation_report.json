@@ -1,0 +1,194 @@
+{
+  "anchors": {
+    "contradiction_case": {
+      "conversation_id": "conv-p10-contradiction",
+      "proposal_count": 3,
+      "proposals": [
+        {
+          "evidence_needed": "clarify or measure the uncertainty-driving variable",
+          "expected_gain": "reduce uncertainty by checking the missing variable",
+          "falsifier": "A conflicting local reading could reverse the current explanation.",
+          "proposal_hash": "de88b34814679f6004e9907d218b740afc5b20a5a85f0f0fa5deff05407d2fdb",
+          "proposal_id": "phase11_proposal::85d913641a4b",
+          "proposal_kind": "clarify_missing_variable",
+          "rationale": "Use missing_variable as a bounded improvement target without mutating Phase 10 truth.",
+          "rollback_target": "rollback::phase11_proposal::85d913641a4b",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "84739b2c42b16a086303dbb52b1ee5296b43a721a79d3bca649809f81653fede",
+            "weak_answer_diagnosis::9654ec95d6a1",
+            "theory_fragment::a3ed0f3c7ccf",
+            "weak_answer_diagnosis::7ca0eacd5389"
+          ],
+          "target_module": "self_experiment_lab"
+        },
+        {
+          "evidence_needed": "re-check the cited support and fall back if the contradiction holds",
+          "expected_gain": "improve contradiction handling while preserving support honesty",
+          "falsifier": "A conflicting local reading could reverse the current explanation.",
+          "proposal_hash": "16ca81cc103bcc38b71032de2203d2ef80333d1d2450e16b5c5e3ae4e0b52e77",
+          "proposal_id": "phase11_proposal::3549ec1bd2c8",
+          "proposal_kind": "contradiction_probe",
+          "rationale": "Use contradiction_risk as a bounded improvement target without mutating Phase 10 truth.",
+          "rollback_target": "rollback::phase11_proposal::3549ec1bd2c8",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "84739b2c42b16a086303dbb52b1ee5296b43a721a79d3bca649809f81653fede",
+            "weak_answer_diagnosis::d838bcead16a",
+            "theory_fragment::a3ed0f3c7ccf",
+            "weak_answer_diagnosis::7ca0eacd5389"
+          ],
+          "target_module": "shadow_evaluation"
+        },
+        {
+          "evidence_needed": "keep the uncertainty visible and avoid precision theater",
+          "expected_gain": "tighten support-state handling before confidence changes",
+          "falsifier": "A conflicting local reading could reverse the current explanation.",
+          "proposal_hash": "564153123bfef6699cc3f709f0038c6a40342c97cf32fe3e5995834b3374ce91",
+          "proposal_id": "phase11_proposal::6122603d6d6d",
+          "proposal_kind": "support_recheck",
+          "rationale": "Use support_thin as a bounded improvement target without mutating Phase 10 truth.",
+          "rollback_target": "rollback::phase11_proposal::6122603d6d6d",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "weak_answer_diagnosis::b8b959b45f9d",
+            "theory_fragment::a3ed0f3c7ccf",
+            "weak_answer_diagnosis::7ca0eacd5389"
+          ],
+          "target_module": "offline_reflection_and_consolidation"
+        }
+      ],
+      "schema": "agifcore.phase_11.proposal_generation.v1",
+      "snapshot_hash": "4616f066f4caef550f06a5501b0590ef22939ed8c06f24b292eb79f0e4d9631a",
+      "stop_reason": "proposal_budget_reached",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "weak_case": {
+      "conversation_id": "conv-p10-weak",
+      "proposal_count": 3,
+      "proposals": [
+        {
+          "evidence_needed": "obtain the missing local evidence before upgrading confidence",
+          "expected_gain": "tighten support-state handling before confidence changes",
+          "falsifier": "The answer cannot be stronger because the lower-phase support state is not grounded.",
+          "proposal_hash": "87d9cefa4de797c87973c854a508463b52689737f0da86938f7f96317e8f06cb",
+          "proposal_id": "phase11_proposal::f93c8ce20e8b",
+          "proposal_kind": "support_recheck",
+          "rationale": "Use weak_support as a bounded improvement target without mutating Phase 10 truth.",
+          "rollback_target": "rollback::phase11_proposal::f93c8ce20e8b",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+            "weak_answer_diagnosis::ef91041826d2",
+            "weak_answer_diagnosis::9b56ed826747"
+          ],
+          "target_module": "offline_reflection_and_consolidation"
+        },
+        {
+          "evidence_needed": "clarify or measure the uncertainty-driving variable",
+          "expected_gain": "reduce uncertainty by checking the missing variable",
+          "falsifier": "Visible uncertainty still points to at least one unresolved variable.",
+          "proposal_hash": "95cd269a340086363c61c202b2ac626e633ce8fb646368158a81fb07f4cb7ef5",
+          "proposal_id": "phase11_proposal::07ad3e8b431f",
+          "proposal_kind": "clarify_missing_variable",
+          "rationale": "Use missing_variable as a bounded improvement target without mutating Phase 10 truth.",
+          "rollback_target": "rollback::phase11_proposal::07ad3e8b431f",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+            "weak_answer_diagnosis::65a916449756",
+            "weak_answer_diagnosis::9b56ed826747"
+          ],
+          "target_module": "self_experiment_lab"
+        },
+        {
+          "evidence_needed": "reframe the explanation around expected state, actual state, and first visible failure",
+          "expected_gain": "reshape the explanation without pretending stronger support",
+          "falsifier": "The current answer shape is too weak to name an exact fault honestly.",
+          "proposal_hash": "2f97000d45ac47cbe103e4ad551c1ef172651b14603200dfe61117cd5719d6ad",
+          "proposal_id": "phase11_proposal::bb388049dafd",
+          "proposal_kind": "explanation_reframe",
+          "rationale": "Use vague_explanation as a bounded improvement target without mutating Phase 10 truth.",
+          "rollback_target": "rollback::phase11_proposal::bb388049dafd",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "weak_answer_diagnosis::00c1ad7a7c45",
+            "weak_answer_diagnosis::9b56ed826747"
+          ],
+          "target_module": "proposal_generation"
+        }
+      ],
+      "schema": "agifcore.phase_11.proposal_generation.v1",
+      "snapshot_hash": "d620ce6173eee83f14fceecc42cc676f71af579413c84f5c128d7bb880e9cc65",
+      "stop_reason": "proposal_budget_reached",
+      "turn_id": "turn-p10-weak"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "proposal-count-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "proposal-fields-present",
+      "result": "pass"
+    },
+    {
+      "id": "rollback-targets-present",
+      "result": "pass"
+    },
+    {
+      "id": "phase10-inputs-remain-read-only",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_11_GOVERNED_SELF_IMPROVEMENT.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/rich_expression_turn.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/contracts.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/offline_reflection_and_consolidation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/idle_reflection.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/proposal_generation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_experiment_lab.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/shadow_evaluation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/before_after_measurement.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/adoption_or_rejection_pipeline.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/post_adoption_monitoring.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/rollback_proof.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/thought_episodes.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_initiated_inquiry_engine.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_improvement_cycle.py",
+    "projects/agifcore_master/05_testing/phase_11_governed_self_improvement/_phase_11_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_11_governed_self_improvement/verify_phase_11_proposal_generation.py"
+  ],
+  "notes": [
+    "proposal generation emits typed, bounded proposals rather than labels only",
+    "Phase 11 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_proposal_generation_report.json"
+  },
+  "phase": "11",
+  "status": "pass",
+  "verifier": "verify_phase_11_proposal_generation"
+}

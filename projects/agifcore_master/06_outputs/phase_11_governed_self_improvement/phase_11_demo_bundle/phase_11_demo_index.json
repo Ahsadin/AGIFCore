@@ -1,0 +1,15 @@
+{
+  "notes": [
+    "summary only",
+    "Phase 11 remains open",
+    "no approval implied"
+  ],
+  "phase": "11",
+  "scenario_files": [
+    "phase_11_self_improvement_demo.json",
+    "phase_11_rollback_demo.json",
+    "phase_11_bounded_self_initiated_inquiry_demo.json"
+  ],
+  "status": "open",
+  "supporting_evidence_manifest": "phase_11_evidence_manifest.json"
+}

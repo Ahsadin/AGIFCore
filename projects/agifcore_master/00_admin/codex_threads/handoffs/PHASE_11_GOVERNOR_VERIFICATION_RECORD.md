@@ -1,0 +1,46 @@
+# Phase 11 Governor Verification Record
+
+- Verification date: `2026-03-31`
+- Verifier: `Program Governor`
+- Scope verified directly:
+  - `projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/`
+  - `projects/agifcore_master/05_testing/phase_11_governed_self_improvement/`
+  - `projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/`
+- Commands run directly:
+  - `python3 -m compileall projects/agifcore_master/04_execution/phase_11_governed_self_improvement projects/agifcore_master/05_testing/phase_11_governed_self_improvement`
+  - all 12 `verify_phase_11_*` scripts under `projects/agifcore_master/05_testing/phase_11_governed_self_improvement/`
+  - all 3 demo runners:
+    - `run_phase_11_self_improvement_demo.py`
+    - `run_phase_11_rollback_demo.py`
+    - `run_phase_11_bounded_self_initiated_inquiry_demo.py`
+  - direct `SelfImprovementCycleEngine.run_cycle(...)` smoke pass on both `weak` and `contradiction` scenarios
+- Direct results:
+  - runtime imports and compile pass succeeded
+  - the evidence manifest at `projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_evidence_manifest.json` reports `phase_11_verifier_family_pass`
+  - the demo bundle contains:
+    - `phase_11_self_improvement_demo.md`
+    - `phase_11_rollback_demo.md`
+    - `phase_11_bounded_self_initiated_inquiry_demo.md`
+    - `phase_11_demo_index.md`
+  - direct cycle smoke summary:
+    - weak scenario:
+      - schema `agifcore.phase_11.self_improvement_cycle.v1`
+      - support state `search_needed`
+      - proposal count `3`
+      - adopted proposal count `0`
+      - inquiry count `1`
+      - rollback count `0`
+    - contradiction scenario:
+      - schema `agifcore.phase_11.self_improvement_cycle.v1`
+      - support state `inferred`
+      - proposal count `3`
+      - adopted proposal count `1`
+      - inquiry count `0`
+      - rollback count `1`
+- Governor judgment:
+  - the Phase 11 execution package is inspectable and review-ready
+  - the package stayed inside governed self-improvement boundaries
+  - user review is still required before any approval or closeout action
+- Truth note:
+  - Phase 11 remains `open`
+  - no approval is implied by this record

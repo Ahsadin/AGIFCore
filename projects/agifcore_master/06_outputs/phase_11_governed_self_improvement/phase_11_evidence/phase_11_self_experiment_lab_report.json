@@ -1,0 +1,136 @@
+{
+  "anchors": {
+    "contradiction_case": {
+      "conversation_id": "conv-p10-contradiction",
+      "experiment_count": 2,
+      "experiments": [
+        {
+          "baseline_score": 0.56,
+          "candidate_score": 0.7,
+          "delta": 0.14,
+          "experiment_hash": "12c34fa304a9c52c5694d9d90306a1580af6dfdd8572a59ae559f24921d4b06a",
+          "experiment_id": "experiment::phase11_proposal::85d913641a4b",
+          "held_out_pack_ref": "held_out::phase11_proposal::85d913641a4b",
+          "proposal_id": "phase11_proposal::85d913641a4b",
+          "regressions": [],
+          "safe_to_continue": true,
+          "verdict": "improves"
+        },
+        {
+          "baseline_score": 0.56,
+          "candidate_score": 0.74,
+          "delta": 0.18,
+          "experiment_hash": "75b7f3b6ec6b9bfc78c79d5cf54fc5568344535c8230a58e7668b368a635b935",
+          "experiment_id": "experiment::phase11_proposal::3549ec1bd2c8",
+          "held_out_pack_ref": "held_out::phase11_proposal::3549ec1bd2c8",
+          "proposal_id": "phase11_proposal::3549ec1bd2c8",
+          "regressions": [],
+          "safe_to_continue": true,
+          "verdict": "improves"
+        }
+      ],
+      "schema": "agifcore.phase_11.self_experiment_lab.v1",
+      "snapshot_hash": "e53dacf37edfc163772d5bb0b36a04114b83ffa4108077bed3a045522ea701e0",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "weak_case": {
+      "conversation_id": "conv-p10-weak",
+      "experiment_count": 2,
+      "experiments": [
+        {
+          "baseline_score": 0.41,
+          "candidate_score": 0.44,
+          "delta": 0.03,
+          "experiment_hash": "64ecd72894815053f47ac46bd0217bc8d40a656b7cf82839fc0c91759d878f4c",
+          "experiment_id": "experiment::phase11_proposal::f93c8ce20e8b",
+          "held_out_pack_ref": "held_out::phase11_proposal::f93c8ce20e8b",
+          "proposal_id": "phase11_proposal::f93c8ce20e8b",
+          "regressions": [
+            "support state still blocks direct adoption",
+            "candidate still depends on a future support refresh"
+          ],
+          "safe_to_continue": false,
+          "verdict": "blocked"
+        },
+        {
+          "baseline_score": 0.41,
+          "candidate_score": 0.46,
+          "delta": 0.05,
+          "experiment_hash": "922ba5ed02ffff01ca795f94f7c1ba2b0a22f7794574227f4f9743a76557bcbd",
+          "experiment_id": "experiment::phase11_proposal::07ad3e8b431f",
+          "held_out_pack_ref": "held_out::phase11_proposal::07ad3e8b431f",
+          "proposal_id": "phase11_proposal::07ad3e8b431f",
+          "regressions": [
+            "support state still blocks direct adoption"
+          ],
+          "safe_to_continue": true,
+          "verdict": "improves"
+        }
+      ],
+      "schema": "agifcore.phase_11.self_experiment_lab.v1",
+      "snapshot_hash": "e3ea576fe06ac26306dce8d5d6338796ed4f19c1683c2b823e046a3e51f647cc",
+      "turn_id": "turn-p10-weak"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "experiment-count-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "candidate-baseline-comparison-present",
+      "result": "pass"
+    },
+    {
+      "id": "held-out-pack-refs-present",
+      "result": "pass"
+    },
+    {
+      "id": "phase10-inputs-remain-read-only",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_11_GOVERNED_SELF_IMPROVEMENT.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/rich_expression_turn.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/contracts.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/offline_reflection_and_consolidation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/idle_reflection.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/proposal_generation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_experiment_lab.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/shadow_evaluation.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/before_after_measurement.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/adoption_or_rejection_pipeline.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/post_adoption_monitoring.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/rollback_proof.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/thought_episodes.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_initiated_inquiry_engine.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_improvement_cycle.py",
+    "projects/agifcore_master/05_testing/phase_11_governed_self_improvement/_phase_11_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_11_governed_self_improvement/verify_phase_11_self_experiment_lab.py"
+  ],
+  "notes": [
+    "self experiments stay sandboxed and replayable instead of mutating live truth",
+    "Phase 11 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_self_experiment_lab_report.json"
+  },
+  "phase": "11",
+  "status": "pass",
+  "verifier": "verify_phase_11_self_experiment_lab"
+}
