@@ -1,0 +1,110 @@
+{
+  "anchors": {
+    "contradiction_case": {
+      "event_count": 1,
+      "events": [
+        {
+          "detected_boundary_failure": false,
+          "detected_contradiction": true,
+          "detected_missing_variable": true,
+          "detected_weak_causal_chain": false,
+          "detected_wrong_prior_choice": false,
+          "event_id": "surprise_event::354a3d9c9ef3",
+          "record_hash": "354a3d9c9ef317869bb172d2b45c388be4cb1113796ee3015ba8a7f31c96cb9d",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002"
+          ],
+          "trigger_reason": "contradiction signal reached the surprise engine",
+          "triggered_action": "theory_fragment_candidate"
+        }
+      ],
+      "schema": "agifcore.phase_10.surprise_engine.v1",
+      "snapshot_hash": "51f95321a4d66a41ef8f99c6cfe3043e00d02d1ca2a1db1cb2909c2614a2c00b",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "weak_case": {
+      "event_count": 1,
+      "events": [
+        {
+          "detected_boundary_failure": true,
+          "detected_contradiction": false,
+          "detected_missing_variable": true,
+          "detected_weak_causal_chain": false,
+          "detected_wrong_prior_choice": false,
+          "event_id": "surprise_event::435acc5141e6",
+          "record_hash": "435acc5141e6252fda3d8f24e65cc527d61bcc36a1ff9663c2b17bc3989c63d1",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002"
+          ],
+          "trigger_reason": "bounded anomaly signal reached the surprise engine",
+          "triggered_action": "recheck_support"
+        }
+      ],
+      "schema": "agifcore.phase_10.surprise_engine.v1",
+      "snapshot_hash": "31fa3cc15bab63dae5c898b78233fb39f391983075149a17e95e3c4d2a83e2db",
+      "turn_id": "turn-p10-weak"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "surprise-event-count-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "weak-case-recheck-signal-visible",
+      "result": "pass"
+    },
+    {
+      "id": "contradiction-case-fragment-signal-visible",
+      "result": "pass"
+    },
+    {
+      "id": "inputs-remain-read-only",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_10_META_COGNITION_AND_CRITIQUE.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/contracts.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/self_knowledge_surface.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/rich_expression_turn.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/self_model.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_layer.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/attention_redirect.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_observer.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/skeptic_counterexample.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/strategy_journal.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/thinker_tissue.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/surprise_engine.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/theory_fragments.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/weak_answer_diagnosis.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/05_testing/phase_10_meta_cognition_and_critique/_phase_10_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_10_meta_cognition_and_critique/verify_phase_10_surprise_engine.py"
+  ],
+  "notes": [
+    "surprise engine emits typed bounded actions instead of hidden retry loops",
+    "Phase 10 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_surprise_engine_report.json"
+  },
+  "phase": "10",
+  "status": "pass",
+  "verifier": "verify_phase_10_surprise_engine"
+}

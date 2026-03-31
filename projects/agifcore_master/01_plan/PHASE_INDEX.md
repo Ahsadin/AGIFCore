@@ -20,7 +20,7 @@ Phase order may not be rearranged by execution convenience.
 | 7 | conversation core | define and later build governed conversation and trace-aware answer flow | `approved` |
 | 8 | science and world awareness | define and later build scientific method, falsification, and world-facing reasoning support | `approved` |
 | 9 | rich expression and composition | define and later build higher-order composition and expressive response capabilities | `approved` |
-| 10 | meta-cognition and critique | define and later build critique, self-check, and failure-detection layers | `open` |
+| 10 | meta-cognition and critique | define and later build critique, self-check, and failure-detection layers | `approved` |
 | 11 | governed self-improvement | define and later build tightly governed improvement loops without hidden autonomy | `open` |
 | 12 | structural growth | define and later build controlled growth of fabric, tissues, and transfer structures | `open` |
 | 13 | product runtime and UX | define and later build the user-facing runtime, runner, gateway, and UX split | `open` |

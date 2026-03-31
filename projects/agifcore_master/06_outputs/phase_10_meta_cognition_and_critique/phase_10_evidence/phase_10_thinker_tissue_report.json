@@ -1,0 +1,140 @@
+{
+  "anchors": {
+    "contradiction_case": {
+      "item_count": 6,
+      "records": [
+        {
+          "asked_what_is_missing": [
+            "clarify or measure the uncertainty-driving variable",
+            "A conflicting local reading could reverse the current explanation.",
+            "measurement_uncertainty"
+          ],
+          "bounded_proposals": [
+            "recheck support before stronger claims",
+            "preserve uncertainty in the public explanation",
+            "stop if contradiction survives the re-check"
+          ],
+          "governance_mode": "bounded_meta_cognition",
+          "record_hash": "d0565f220d1261eac9ec85b6f00b837d3251a74fe4f2bc24cc2de11f81f05cd3",
+          "record_id": "thinker_tissue::d0565f220d12",
+          "watched_failures": [
+            "Multiple uncertainty statements remain active in the lower-phase summary.",
+            "Science reflection already contains a contradiction-oriented signal.",
+            "The current answer stays bounded but still needs critique before it can be trusted further.",
+            "At least one missing or unverified variable remains visible."
+          ],
+          "watched_repeated_uncertainty": [
+            "A conflicting local reading could reverse the current explanation.",
+            "A hidden microclimate factor could break the comparison."
+          ],
+          "watched_weak_answers": [
+            "missing_variable",
+            "contradiction_risk",
+            "support_thin"
+          ]
+        }
+      ],
+      "schema": "agifcore.phase_10.thinker_tissue.v1",
+      "snapshot_hash": "0364a784c9c44898e62dea7aa047d8e77044b6582d6a795ddfb2a29f97d347a9",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "weak_case": {
+      "item_count": 6,
+      "records": [
+        {
+          "asked_what_is_missing": [
+            "missing local evidence before stronger claims",
+            "clarify or measure the uncertainty-driving variable",
+            "No fresh local measurement is present yet."
+          ],
+          "bounded_proposals": [
+            "recheck support before stronger claims",
+            "preserve uncertainty in the public explanation",
+            "stop if contradiction survives the re-check"
+          ],
+          "governance_mode": "bounded_meta_cognition",
+          "record_hash": "84d17d9cd966f4fbb971b5e43ab9dfa062aa3b21c8efa5231f48bc45c31904bc",
+          "record_id": "thinker_tissue::84d17d9cd966",
+          "watched_failures": [
+            "Current support-state blocks a stronger claim.",
+            "Multiple uncertainty statements remain active in the lower-phase summary.",
+            "The current answer stays bounded but still needs critique before it can be trusted further.",
+            "At least one missing or unverified variable remains visible."
+          ],
+          "watched_repeated_uncertainty": [
+            "No fresh local measurement is present yet.",
+            "A stale sensor could be hiding the real variable."
+          ],
+          "watched_weak_answers": [
+            "weak_support",
+            "missing_variable",
+            "vague_explanation"
+          ]
+        }
+      ],
+      "schema": "agifcore.phase_10.thinker_tissue.v1",
+      "snapshot_hash": "52b5e4f8ae107391923b2e1599d100666081a943135435ec5956b4553d7ad15a",
+      "turn_id": "turn-p10-weak"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "thinker-tissue-item-count-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "bounded-proposals-visible",
+      "result": "pass"
+    },
+    {
+      "id": "governance-mode-visible",
+      "result": "pass"
+    },
+    {
+      "id": "inputs-remain-read-only",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_10_META_COGNITION_AND_CRITIQUE.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/contracts.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/self_knowledge_surface.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/rich_expression_turn.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/self_model.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_layer.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/attention_redirect.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_observer.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/skeptic_counterexample.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/strategy_journal.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/thinker_tissue.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/surprise_engine.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/theory_fragments.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/weak_answer_diagnosis.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/05_testing/phase_10_meta_cognition_and_critique/_phase_10_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_10_meta_cognition_and_critique/verify_phase_10_thinker_tissue.py"
+  ],
+  "notes": [
+    "thinker tissue stays governed and proposal-bounded rather than acting like an unrestricted deliberation loop",
+    "Phase 10 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_thinker_tissue_report.json"
+  },
+  "phase": "10",
+  "status": "pass",
+  "verifier": "verify_phase_10_thinker_tissue"
+}

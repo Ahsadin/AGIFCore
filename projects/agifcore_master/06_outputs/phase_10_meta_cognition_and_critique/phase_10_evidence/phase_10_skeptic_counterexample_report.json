@@ -1,0 +1,119 @@
+{
+  "anchors": {
+    "contradiction_case": {
+      "branch_count": 2,
+      "branches": [
+        {
+          "branch_id": "skeptic_branch::0519fe7f22ac",
+          "changed_answer_after_skeptic": false,
+          "forced_fallback": false,
+          "record_hash": "0519fe7f22acbff980a766cd01ec15e517441fdd8be625e97aad4ecba46f41b2",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002"
+          ],
+          "what_could_make_this_wrong": "A hidden variable or fresher local evidence could break the current answer.",
+          "what_counterexample_weakens_the_theory": "A recent observation that contradicts the bounded explanation would weaken it immediately.",
+          "what_variable_could_flip_the_answer": "A conflicting local reading could reverse the current explanation."
+        },
+        {
+          "branch_id": "skeptic_branch::7653130bfc19",
+          "changed_answer_after_skeptic": false,
+          "forced_fallback": false,
+          "record_hash": "7653130bfc19487fddd972788ebedbf2cb88a527f71c00781df4d84ffc9ff2b4",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002"
+          ],
+          "what_could_make_this_wrong": "The current principle choice may fit only part of the situation.",
+          "what_counterexample_weakens_the_theory": "A case where the same input leads to the opposite outcome would weaken the chosen explanation.",
+          "what_variable_could_flip_the_answer": "measurement_uncertainty"
+        }
+      ],
+      "schema": "agifcore.phase_10.skeptic_counterexample.v1",
+      "snapshot_hash": "68d349f24fdb9001b177c55fe7c4c0e3f56468f74c9061a66e48d11e3310bd3d",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "weak_case": {
+      "branch_count": 1,
+      "branches": [
+        {
+          "branch_id": "skeptic_branch::a2b57ff6def1",
+          "changed_answer_after_skeptic": true,
+          "forced_fallback": true,
+          "record_hash": "a2b57ff6def1aee293ec89402ba1bb5119545c559e6cf23fa3809f2a7e84344d",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002"
+          ],
+          "what_could_make_this_wrong": "A hidden variable or fresher local evidence could break the current answer.",
+          "what_counterexample_weakens_the_theory": "A recent observation that contradicts the bounded explanation would weaken it immediately.",
+          "what_variable_could_flip_the_answer": "No fresh local measurement is present yet."
+        }
+      ],
+      "schema": "agifcore.phase_10.skeptic_counterexample.v1",
+      "snapshot_hash": "555b605088e7f2dd51352192a8a5ed80f553f77e25d78b0c1b5d057e089fe765",
+      "turn_id": "turn-p10-weak"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "skeptic-branch-count-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "weak-case-fallback-surface-visible",
+      "result": "pass"
+    },
+    {
+      "id": "contradiction-case-counterexample-surface-visible",
+      "result": "pass"
+    },
+    {
+      "id": "inputs-remain-read-only",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_10_META_COGNITION_AND_CRITIQUE.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/contracts.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/self_knowledge_surface.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/rich_expression_turn.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/self_model.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_layer.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/attention_redirect.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_observer.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/skeptic_counterexample.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/strategy_journal.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/thinker_tissue.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/surprise_engine.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/theory_fragments.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/weak_answer_diagnosis.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/05_testing/phase_10_meta_cognition_and_critique/_phase_10_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_10_meta_cognition_and_critique/verify_phase_10_skeptic_counterexample.py"
+  ],
+  "notes": [
+    "skeptic output stays bounded and records whether it changed the answer or forced fallback",
+    "Phase 10 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_skeptic_counterexample_report.json"
+  },
+  "phase": "10",
+  "status": "pass",
+  "verifier": "verify_phase_10_skeptic_counterexample"
+}

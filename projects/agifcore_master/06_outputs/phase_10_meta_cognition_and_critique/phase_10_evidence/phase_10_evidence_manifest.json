@@ -1,0 +1,67 @@
+{
+  "available_report_count": 10,
+  "invalid_reports": [],
+  "missing_reports": [],
+  "notes": [
+    "this manifest tracks machine-readable verifier outputs only",
+    "Phase 10 remains open",
+    "manifest is rebuilt from actual report files on disk",
+    "no approval implied"
+  ],
+  "phase": "10",
+  "phase_remains_open": true,
+  "reports": [
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_self_model_report.json",
+      "report_id": "self_model",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_meta_cognition_layer_report.json",
+      "report_id": "meta_cognition_layer",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_attention_redirect_report.json",
+      "report_id": "attention_redirect",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_meta_cognition_observer_report.json",
+      "report_id": "meta_cognition_observer",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_skeptic_counterexample_report.json",
+      "report_id": "skeptic_counterexample",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_strategy_journal_report.json",
+      "report_id": "strategy_journal",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_thinker_tissue_report.json",
+      "report_id": "thinker_tissue",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_surprise_engine_report.json",
+      "report_id": "surprise_engine",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_theory_fragments_report.json",
+      "report_id": "theory_fragments",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_weak_answer_diagnosis_report.json",
+      "report_id": "weak_answer_diagnosis",
+      "status": "pass"
+    }
+  ],
+  "required_report_count": 10,
+  "status": "phase_10_verifier_family_pass"
+}

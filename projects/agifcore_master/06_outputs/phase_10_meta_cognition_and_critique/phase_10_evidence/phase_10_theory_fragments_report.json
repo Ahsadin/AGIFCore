@@ -1,0 +1,88 @@
+{
+  "anchors": {
+    "contradiction_case": {
+      "fragment_count": 1,
+      "fragments": [
+        {
+          "falsifier": "A conflicting local reading could reverse the current explanation.",
+          "fragment_id": "theory_fragment::a3ed0f3c7ccf",
+          "fragment_label": "bounded_candidate_fragment",
+          "fragment_statement": "A hidden variable or contradiction-sensitive condition may explain the current weak answer.",
+          "next_verification_step": "recheck support before stronger claims",
+          "record_hash": "a3ed0f3c7ccfda12ef742ea693618b50a3933a277ffb3be4e50fd77ade8bd577",
+          "source_answer_id": "f84e9c4bfb5414dddb4ade3191ffcfe5a75a1bee0fb835dc9b381ea2e23e087b"
+        }
+      ],
+      "schema": "agifcore.phase_10.theory_fragments.v1",
+      "snapshot_hash": "bf55ba3b20c283d9485cf5888464da9f2c99ef2e8f5c5fc6dcbd8fa40e473eca",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "weak_case": {
+      "fragment_count": 0,
+      "fragments": [],
+      "schema": "agifcore.phase_10.theory_fragments.v1",
+      "snapshot_hash": "20933153855affd461a622efa9f1a30b4aa192ba154b84419320636086aeb934",
+      "turn_id": "turn-p10-weak"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "theory-fragment-count-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "contradiction-fragment-created",
+      "result": "pass"
+    },
+    {
+      "id": "falsifier-and-next-step-visible",
+      "result": "pass"
+    },
+    {
+      "id": "inputs-remain-read-only",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_10_META_COGNITION_AND_CRITIQUE.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/contracts.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/self_knowledge_surface.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/rich_expression_turn.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/self_model.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_layer.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/attention_redirect.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_observer.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/skeptic_counterexample.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/strategy_journal.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/thinker_tissue.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/surprise_engine.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/theory_fragments.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/weak_answer_diagnosis.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/05_testing/phase_10_meta_cognition_and_critique/_phase_10_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_10_meta_cognition_and_critique/verify_phase_10_theory_fragments.py"
+  ],
+  "notes": [
+    "theory fragments stay provisional and require explicit falsifiers and next checks",
+    "Phase 10 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_theory_fragments_report.json"
+  },
+  "phase": "10",
+  "status": "pass",
+  "verifier": "verify_phase_10_theory_fragments"
+}

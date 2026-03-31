@@ -1,0 +1,210 @@
+{
+  "anchors": {
+    "contradiction_case": {
+      "meta_cognition_layer": {
+        "active_modules": [
+          "self_model",
+          "meta_cognition_observer",
+          "attention_redirect",
+          "skeptic_counterexample",
+          "strategy_journal",
+          "thinker_tissue",
+          "surprise_engine",
+          "theory_fragments",
+          "weak_answer_diagnosis"
+        ],
+        "outcome_notes": [
+          "selected_outcome=clarify",
+          "support_state=inferred",
+          "Phase 10 stays read-only over Phase 7, 8, and 9 snapshots."
+        ],
+        "redirect_required": true,
+        "schema": "agifcore.phase_10.meta_cognition_layer.v1",
+        "selected_outcome": "clarify",
+        "snapshot_hash": "9ea6c07bdce79037056c58c6d0af63a1eb4f4c1c6be7462b727b35c7408f03d1",
+        "turn_id": "turn-p10-contradiction"
+      },
+      "overlay_contract": {
+        "contract_hash": "faefb16d0ef410c23edb8def338bd64b3527b0b5dd3e7abfe06e9d5fd9b19064",
+        "conversation_id": "conv-p10-contradiction",
+        "diagnosis_ref": "weak_answer_diagnosis::7ca0eacd5389",
+        "evidence_refs": [
+          "phase8.summary.ref.001",
+          "phase8.summary.ref.002",
+          "84739b2c42b16a086303dbb52b1ee5296b43a721a79d3bca649809f81653fede",
+          "4cf0213cbe82acf4d8587c6b380b51eb4df286b0ae1c635099d230fd40930070",
+          "86ea18bdab9d6783ca832fee5e5fb87530460776980a04517cb6f1971872f156",
+          "21ac664c6c3dbdc112394976b10ae87c5ef24954a29f0f171076d41b5cc4260c",
+          "9bee10cfd1fb4599da833a1465376a907e7fd8dd86261f20e58eabf55be34319",
+          "f84e9c4bfb5414dddb4ade3191ffcfe5a75a1bee0fb835dc9b381ea2e23e087b"
+        ],
+        "observer_ref": "meta_observer::51986fa94cb9",
+        "phase7_interfaces": [
+          "agifcore.phase_07.answer_contract.v1",
+          "agifcore.phase_07.self_knowledge_surface.v1",
+          "agifcore.phase_07.support_state_logic.v1"
+        ],
+        "phase8_interfaces": [
+          "agifcore.phase_08.science_world_turn.v1",
+          "agifcore.phase_08.visible_reasoning_summaries.v1",
+          "agifcore.phase_08.science_reflection.v1"
+        ],
+        "phase9_interfaces": [
+          "agifcore.phase_09.rich_expression_turn.v1",
+          "agifcore.phase_09.overlay_contract.v1"
+        ],
+        "public_explanation": "A missing variable or ambiguity remains, so the next safe move is a bounded clarification.",
+        "redirect_refs": [
+          "attention_redirect::457506b401a9"
+        ],
+        "schema": "agifcore.phase_10.overlay_contract.v1",
+        "selected_outcome": "clarify",
+        "self_model_ref": "self_model::bf9c904c4761",
+        "skeptic_ref": "skeptic::4383ef6b7df8",
+        "strategy_journal_ref": "strategy_journal::341942aad13a",
+        "support_honesty_preserved": true,
+        "support_state": "inferred",
+        "surprise_ref": "surprise::880d6e453e4b",
+        "theory_fragment_refs": [
+          "theory_fragment::a3ed0f3c7ccf"
+        ],
+        "turn_id": "turn-p10-contradiction",
+        "upstream_consolidation_trace_ref": "consolidation_trace::77d531f90c9e",
+        "upstream_reorganization_trace_ref": null,
+        "upstream_revision_trace_ref": null
+      }
+    },
+    "weak_case": {
+      "meta_cognition_layer": {
+        "active_modules": [
+          "self_model",
+          "meta_cognition_observer",
+          "attention_redirect",
+          "skeptic_counterexample",
+          "strategy_journal",
+          "thinker_tissue",
+          "surprise_engine",
+          "weak_answer_diagnosis"
+        ],
+        "outcome_notes": [
+          "selected_outcome=recheck_support",
+          "support_state=search_needed",
+          "Phase 10 stays read-only over Phase 7, 8, and 9 snapshots."
+        ],
+        "redirect_required": true,
+        "schema": "agifcore.phase_10.meta_cognition_layer.v1",
+        "selected_outcome": "recheck_support",
+        "snapshot_hash": "1583b236e3d6774ed1258698b71beb917c0f2fb56b69faabcc7f0bdf1ebd238b",
+        "turn_id": "turn-p10-weak"
+      },
+      "overlay_contract": {
+        "contract_hash": "af3b5024eece430c01420476e9da9747c288a99e8b292866cb44db1420dac679",
+        "conversation_id": "conv-p10-weak",
+        "diagnosis_ref": "weak_answer_diagnosis::9b56ed826747",
+        "evidence_refs": [
+          "phase8.summary.ref.001",
+          "phase8.summary.ref.002",
+          "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+          "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797",
+          "e8386a01375de8b82858e0e81748c9d5e02bdac3a9cef8a808316099b5d132d9",
+          "86e4c43144503e72da9429fc68abd2c34a2cbf7067527496bb73c669121147cf",
+          "2ff7d18c8932c3abafb1bf08dfa681f882a07a590381d3203bd61b4b99413595",
+          "f065456200aded7dc74db12d3526eff162ec5d08ee8924f3e9bcc929fd888efb"
+        ],
+        "observer_ref": "meta_observer::80e48682c6ef",
+        "phase7_interfaces": [
+          "agifcore.phase_07.answer_contract.v1",
+          "agifcore.phase_07.self_knowledge_surface.v1",
+          "agifcore.phase_07.support_state_logic.v1"
+        ],
+        "phase8_interfaces": [
+          "agifcore.phase_08.science_world_turn.v1",
+          "agifcore.phase_08.visible_reasoning_summaries.v1",
+          "agifcore.phase_08.science_reflection.v1"
+        ],
+        "phase9_interfaces": [
+          "agifcore.phase_09.rich_expression_turn.v1",
+          "agifcore.phase_09.overlay_contract.v1"
+        ],
+        "public_explanation": "The answer is bounded but weak because support is incomplete, so the next safe move is to re-check support.",
+        "redirect_refs": [
+          "attention_redirect::30b84eb19b01",
+          "attention_redirect::2afb4070bc1e"
+        ],
+        "schema": "agifcore.phase_10.overlay_contract.v1",
+        "selected_outcome": "recheck_support",
+        "self_model_ref": "self_model::8b2b3db44440",
+        "skeptic_ref": "skeptic::5d11aa5a2796",
+        "strategy_journal_ref": "strategy_journal::a39c7f7e13e6",
+        "support_honesty_preserved": true,
+        "support_state": "search_needed",
+        "surprise_ref": "surprise::df2eb69ba9cb",
+        "theory_fragment_refs": [],
+        "turn_id": "turn-p10-weak",
+        "upstream_consolidation_trace_ref": "consolidation_trace::da253d201fe8",
+        "upstream_reorganization_trace_ref": null,
+        "upstream_revision_trace_ref": null
+      }
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "selected-outcomes-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "active-modules-visible",
+      "result": "pass"
+    },
+    {
+      "id": "overlay-contract-read-only-interfaces-visible",
+      "result": "pass"
+    },
+    {
+      "id": "inputs-remain-read-only",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_10_META_COGNITION_AND_CRITIQUE.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/contracts.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/self_knowledge_surface.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/rich_expression_turn.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/self_model.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_layer.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/attention_redirect.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_observer.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/skeptic_counterexample.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/strategy_journal.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/thinker_tissue.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/surprise_engine.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/theory_fragments.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/weak_answer_diagnosis.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/05_testing/phase_10_meta_cognition_and_critique/_phase_10_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_10_meta_cognition_and_critique/verify_phase_10_meta_cognition_layer.py"
+  ],
+  "notes": [
+    "the thin coordinator stays above Phase 7, 8, and 9 surfaces and does not take over response ownership",
+    "Phase 10 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_meta_cognition_layer_report.json"
+  },
+  "phase": "10",
+  "status": "pass",
+  "verifier": "verify_phase_10_meta_cognition_layer"
+}

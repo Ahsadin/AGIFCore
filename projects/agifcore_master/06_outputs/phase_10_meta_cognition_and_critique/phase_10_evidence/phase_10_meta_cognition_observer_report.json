@@ -1,0 +1,165 @@
+{
+  "anchors": {
+    "contradiction_case": {
+      "missing_needs": [
+        "clarify or measure the uncertainty-driving variable"
+      ],
+      "observation_count": 4,
+      "observations": [
+        {
+          "detail": "Multiple uncertainty statements remain active in the lower-phase summary.",
+          "kind": "repeated_uncertainty",
+          "observation_hash": "9e5774beabe0fe8fc68042a513a5b597fa76090cabb54672a86dc35b520aa51c",
+          "observation_id": "meta_observation::9e5774beabe0",
+          "severity": 0.78,
+          "source_ref": "84739b2c42b16a086303dbb52b1ee5296b43a721a79d3bca649809f81653fede"
+        },
+        {
+          "detail": "Science reflection already contains a contradiction-oriented signal.",
+          "kind": "contradiction_signal",
+          "observation_hash": "0794ca94dd1d827bf8e65fdbd683fc51648cc39d012f55d5ab178491cd45bad2",
+          "observation_id": "meta_observation::0794ca94dd1d",
+          "severity": 0.88,
+          "source_ref": "a98b839c0d4f607826e1000180058fbfb9ce04f71ed2bb4650612f0e9f4503f6"
+        },
+        {
+          "detail": "The current answer stays bounded but still needs critique before it can be trusted further.",
+          "kind": "weak_answer_signal",
+          "observation_hash": "d48701801933458bb6d3943a1c3ef216f3f6af7873a7c9f99d1a72e7c129fe81",
+          "observation_id": "meta_observation::d48701801933",
+          "severity": 0.73,
+          "source_ref": "bbed812fba7337762ee26266bb7abb0128658457918d6ca4513c5ec64d1ed76c"
+        },
+        {
+          "detail": "At least one missing or unverified variable remains visible.",
+          "kind": "missing_need",
+          "observation_hash": "51eef231d09df5d7d3d9522090ec327bf993b3f29b2d1e49c248aeecc62a661b",
+          "observation_id": "meta_observation::51eef231d09d",
+          "severity": 0.7,
+          "source_ref": "84739b2c42b16a086303dbb52b1ee5296b43a721a79d3bca649809f81653fede"
+        }
+      ],
+      "repeated_uncertainty_signals": [
+        "A conflicting local reading could reverse the current explanation.",
+        "A hidden microclimate factor could break the comparison."
+      ],
+      "schema": "agifcore.phase_10.meta_cognition_observer.v1",
+      "snapshot_hash": "0838b93200c6b7577c035bb82ebb058298c08b4f0b9c5c07ec866689bc45ab8a",
+      "turn_id": "turn-p10-contradiction",
+      "weak_answer_flags": [
+        "contradiction_signal_detected"
+      ]
+    },
+    "weak_case": {
+      "missing_needs": [
+        "missing local evidence before stronger claims",
+        "clarify or measure the uncertainty-driving variable"
+      ],
+      "observation_count": 4,
+      "observations": [
+        {
+          "detail": "Current support-state blocks a stronger claim.",
+          "kind": "support_gap",
+          "observation_hash": "c59171932b3c755071c8668d73959f718d154142f8f71e6b4bb0c009554f1272",
+          "observation_id": "meta_observation::c59171932b3c",
+          "severity": 0.92,
+          "source_ref": "86e4c43144503e72da9429fc68abd2c34a2cbf7067527496bb73c669121147cf"
+        },
+        {
+          "detail": "Multiple uncertainty statements remain active in the lower-phase summary.",
+          "kind": "repeated_uncertainty",
+          "observation_hash": "d35599029e6a3cbf0b2fa1f8c6edd29e65715d0bea97d636ecd313fef0138666",
+          "observation_id": "meta_observation::d35599029e6a",
+          "severity": 0.78,
+          "source_ref": "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534"
+        },
+        {
+          "detail": "The current answer stays bounded but still needs critique before it can be trusted further.",
+          "kind": "weak_answer_signal",
+          "observation_hash": "6911a835845a72ac638479f2a9aa5dabb9f4d768026f25b4b0d2bb116df16804",
+          "observation_id": "meta_observation::6911a835845a",
+          "severity": 0.73,
+          "source_ref": "9d56e6dcef307ba792fb4806435a8d88e3dd2e8cce459622453734447c3e40fd"
+        },
+        {
+          "detail": "At least one missing or unverified variable remains visible.",
+          "kind": "missing_need",
+          "observation_hash": "1a960a9372a497abf3b08c2af7659bc70348a81e65c29396dad38db9fc4957db",
+          "observation_id": "meta_observation::1a960a9372a4",
+          "severity": 0.7,
+          "source_ref": "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534"
+        }
+      ],
+      "repeated_uncertainty_signals": [
+        "No fresh local measurement is present yet.",
+        "A stale sensor could be hiding the real variable."
+      ],
+      "schema": "agifcore.phase_10.meta_cognition_observer.v1",
+      "snapshot_hash": "868b6f19b05764628e396d0dce7cd0b285a92be644da1a1afbea7d2c35ded9aa",
+      "turn_id": "turn-p10-weak",
+      "weak_answer_flags": [
+        "support_state_not_grounded"
+      ]
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "observation-count-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "support-and-contradiction-signals-visible",
+      "result": "pass"
+    },
+    {
+      "id": "observer-refs-and-severity-present",
+      "result": "pass"
+    },
+    {
+      "id": "inputs-remain-read-only",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_10_META_COGNITION_AND_CRITIQUE.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/contracts.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/self_knowledge_surface.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/rich_expression_turn.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/self_model.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_layer.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/attention_redirect.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_observer.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/skeptic_counterexample.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/strategy_journal.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/thinker_tissue.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/surprise_engine.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/theory_fragments.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/weak_answer_diagnosis.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/05_testing/phase_10_meta_cognition_and_critique/_phase_10_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_10_meta_cognition_and_critique/verify_phase_10_meta_cognition_observer.py"
+  ],
+  "notes": [
+    "observer remains observational and does not rewrite lower-phase state",
+    "Phase 10 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_meta_cognition_observer_report.json"
+  },
+  "phase": "10",
+  "status": "pass",
+  "verifier": "verify_phase_10_meta_cognition_observer"
+}

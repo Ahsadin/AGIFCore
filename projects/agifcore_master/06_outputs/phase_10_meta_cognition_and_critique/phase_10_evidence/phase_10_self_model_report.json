@@ -1,0 +1,169 @@
+{
+  "anchors": {
+    "contradiction_case": {
+      "self_model": {
+        "record_count": 1,
+        "records": [
+          {
+            "anchor_refs": [
+              "continuity::turn-p10-contradiction::limits",
+              "continuity.provenance.self_limit",
+              "continuity::turn-p10-contradiction::phase_status",
+              "continuity.provenance.phase10_boundary"
+            ],
+            "answer_mode": "derived_explanation",
+            "confidence_band": "moderate",
+            "confidence_reason": "current lower-phase support is inferred but bounded",
+            "infers": [
+              "current rich-expression lane=comparison",
+              "current answer mode=derived_explanation"
+            ],
+            "knows": [
+              "AGIFCore can report only what is supported by local traces and current governed state.",
+              "Phase 10 critique can diagnose weakness, but it may not self-improve or self-reorganize."
+            ],
+            "record_hash": "79897d69a53acaffbbdd4f05e2fcb1a6af6066e7516ee8e32f696b1ee213dd56",
+            "record_id": "self_model_record::79897d69a53a",
+            "unknowns": [
+              "A conflicting local reading could reverse the current explanation.",
+              "A hidden microclimate factor could break the comparison."
+            ],
+            "what_would_verify": [
+              "re-run contradiction and support checks against current evidence refs"
+            ]
+          }
+        ],
+        "schema": "agifcore.phase_10.self_model.v1",
+        "snapshot_hash": "73d765cada6f0b2215bb4390b42466a4562cd6a90e60334b5745963d29ecd53a",
+        "turn_id": "turn-p10-contradiction"
+      },
+      "support_state": "inferred"
+    },
+    "weak_case": {
+      "self_model": {
+        "record_count": 2,
+        "records": [
+          {
+            "anchor_refs": [
+              "continuity::turn-p10-weak::limits",
+              "continuity.provenance.self_limit",
+              "continuity::turn-p10-weak::phase_status",
+              "continuity.provenance.phase10_boundary"
+            ],
+            "answer_mode": "search_needed",
+            "confidence_band": "low",
+            "confidence_reason": "current lower-phase support remains incomplete",
+            "infers": [
+              "current rich-expression lane=synthesis",
+              "current answer mode=search_needed"
+            ],
+            "knows": [
+              "AGIFCore can report only what is supported by local traces and current governed state.",
+              "Phase 10 critique can diagnose weakness, but it may not self-improve or self-reorganize."
+            ],
+            "record_hash": "9b01163a7d669db434f5b264d6e7ff7cb3fc14c3c72cab7374ffa895edddb605",
+            "record_id": "self_model_record::9b01163a7d66",
+            "unknowns": [
+              "No fresh local measurement is present yet.",
+              "A stale sensor could be hiding the real variable."
+            ],
+            "what_would_verify": [
+              "recheck the cited evidence trail if contradiction appears",
+              "obtain the missing local evidence before upgrading support"
+            ]
+          },
+          {
+            "anchor_refs": [
+              "continuity::turn-p10-weak::limits",
+              "continuity.provenance.self_limit",
+              "continuity::turn-p10-weak::phase_status",
+              "continuity.provenance.phase10_boundary"
+            ],
+            "answer_mode": "search_needed",
+            "confidence_band": "low",
+            "confidence_reason": "support-state honesty prevents exact fault claims",
+            "infers": [
+              "weak-answer diagnosis is expected to stay bounded"
+            ],
+            "knows": [
+              "current answer honesty boundary remains active"
+            ],
+            "record_hash": "73f65d7858e0f72c760ad781789075003673c188c951e17cbfc7d9757dbb9215",
+            "record_id": "self_model_record::73f65d7858e0",
+            "unknowns": [
+              "No fresh local measurement is present yet.",
+              "A stale sensor could be hiding the real variable."
+            ],
+            "what_would_verify": [
+              "capture the missing local signal before treating this as grounded"
+            ]
+          }
+        ],
+        "schema": "agifcore.phase_10.self_model.v1",
+        "snapshot_hash": "9859f636d11544dc811fa7543f7d4f97691e8ed3e0560c044c8c5baedbb7c674",
+        "turn_id": "turn-p10-weak"
+      },
+      "support_state": "search_needed"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "self-model-record-count-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "self-model-fields-present",
+      "result": "pass"
+    },
+    {
+      "id": "self-model-confidence-bands-track-support",
+      "result": "pass"
+    },
+    {
+      "id": "inputs-remain-read-only",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_10_META_COGNITION_AND_CRITIQUE.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/contracts.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/self_knowledge_surface.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/rich_expression_turn.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/self_model.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_layer.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/attention_redirect.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_observer.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/skeptic_counterexample.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/strategy_journal.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/thinker_tissue.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/surprise_engine.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/theory_fragments.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/weak_answer_diagnosis.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/05_testing/phase_10_meta_cognition_and_critique/_phase_10_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_10_meta_cognition_and_critique/verify_phase_10_self_model.py"
+  ],
+  "notes": [
+    "self model remains bounded, trace-linked, and evidence-derived rather than self-assertive",
+    "Phase 10 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_self_model_report.json"
+  },
+  "phase": "10",
+  "status": "pass",
+  "verifier": "verify_phase_10_self_model"
+}

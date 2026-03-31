@@ -1,0 +1,248 @@
+{
+  "demo_id": "why_was_this_weak",
+  "evidence_reports": [
+    "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_self_model_report.json",
+    "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_meta_cognition_layer_report.json",
+    "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_meta_cognition_observer_report.json",
+    "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_attention_redirect_report.json",
+    "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_strategy_journal_report.json",
+    "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_weak_answer_diagnosis_report.json",
+    "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_evidence_manifest.json"
+  ],
+  "notes": [
+    "review-only demo surface",
+    "Phase 10 remains open",
+    "no approval implied"
+  ],
+  "original_prompt": "Why was this weak and what should be checked first?",
+  "phase": "10",
+  "phase10_outputs": {
+    "diagnosis": {
+      "item_count": 3,
+      "items": [
+        {
+          "diagnosis_hash": "ef91041826d2a8b1d04ae965b3483f5cb5f14b89286ee6f9ef88b7e703db3a97",
+          "diagnosis_id": "weak_answer_diagnosis::ef91041826d2",
+          "kind": "weak_support",
+          "missing_support_or_signal": "support_state remains search_needed or unknown",
+          "next_step": "obtain the missing local evidence before upgrading confidence",
+          "support_honesty_preserved": true,
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534"
+          ],
+          "why_weak": "The answer cannot be stronger because the lower-phase support state is not grounded."
+        },
+        {
+          "diagnosis_hash": "65a916449756151e0769703d22c3b61946e7a44d2e77bdcb4393f9862b44cecb",
+          "diagnosis_id": "weak_answer_diagnosis::65a916449756",
+          "kind": "missing_variable",
+          "missing_support_or_signal": "No fresh local measurement is present yet.",
+          "next_step": "clarify or measure the uncertainty-driving variable",
+          "support_honesty_preserved": true,
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534"
+          ],
+          "why_weak": "Visible uncertainty still points to at least one unresolved variable."
+        },
+        {
+          "diagnosis_hash": "00c1ad7a7c45819f231928b10b062fdf6936650842f297ecb2e8ad8ab8284bd1",
+          "diagnosis_id": "weak_answer_diagnosis::00c1ad7a7c45",
+          "kind": "vague_explanation",
+          "missing_support_or_signal": "final_answer_mode=search_needed",
+          "next_step": "reframe the explanation around expected state, actual state, and first visible failure",
+          "support_honesty_preserved": true,
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002"
+          ],
+          "why_weak": "The current answer shape is too weak to name an exact fault honestly."
+        }
+      ],
+      "schema": "agifcore.phase_10.weak_answer_diagnosis.v1",
+      "snapshot_hash": "0d405469742ac8acba73e602d813e8ec376b62b4f4ba681bb698360248cf0b29",
+      "summary": "The answer is weak because support is incomplete or contradicted, so the next safe move is bounded re-checking.",
+      "turn_id": "turn-p10-weak"
+    },
+    "observer": {
+      "missing_needs": [
+        "missing local evidence before stronger claims",
+        "clarify or measure the uncertainty-driving variable"
+      ],
+      "observation_count": 4,
+      "observations": [
+        {
+          "detail": "Current support-state blocks a stronger claim.",
+          "kind": "support_gap",
+          "observation_hash": "c59171932b3c755071c8668d73959f718d154142f8f71e6b4bb0c009554f1272",
+          "observation_id": "meta_observation::c59171932b3c",
+          "severity": 0.92,
+          "source_ref": "86e4c43144503e72da9429fc68abd2c34a2cbf7067527496bb73c669121147cf"
+        },
+        {
+          "detail": "Multiple uncertainty statements remain active in the lower-phase summary.",
+          "kind": "repeated_uncertainty",
+          "observation_hash": "d35599029e6a3cbf0b2fa1f8c6edd29e65715d0bea97d636ecd313fef0138666",
+          "observation_id": "meta_observation::d35599029e6a",
+          "severity": 0.78,
+          "source_ref": "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534"
+        },
+        {
+          "detail": "The current answer stays bounded but still needs critique before it can be trusted further.",
+          "kind": "weak_answer_signal",
+          "observation_hash": "6911a835845a72ac638479f2a9aa5dabb9f4d768026f25b4b0d2bb116df16804",
+          "observation_id": "meta_observation::6911a835845a",
+          "severity": 0.73,
+          "source_ref": "9d56e6dcef307ba792fb4806435a8d88e3dd2e8cce459622453734447c3e40fd"
+        },
+        {
+          "detail": "At least one missing or unverified variable remains visible.",
+          "kind": "missing_need",
+          "observation_hash": "1a960a9372a497abf3b08c2af7659bc70348a81e65c29396dad38db9fc4957db",
+          "observation_id": "meta_observation::1a960a9372a4",
+          "severity": 0.7,
+          "source_ref": "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534"
+        }
+      ],
+      "repeated_uncertainty_signals": [
+        "No fresh local measurement is present yet.",
+        "A stale sensor could be hiding the real variable."
+      ],
+      "schema": "agifcore.phase_10.meta_cognition_observer.v1",
+      "snapshot_hash": "868b6f19b05764628e396d0dce7cd0b285a92be644da1a1afbea7d2c35ded9aa",
+      "turn_id": "turn-p10-weak",
+      "weak_answer_flags": [
+        "support_state_not_grounded"
+      ]
+    },
+    "public_explanation": "The answer is bounded but weak because support is incomplete, so the next safe move is to re-check support.",
+    "redirect": {
+      "redirect_count": 2,
+      "redirects": [
+        {
+          "priority": 1,
+          "reason": "support-state honesty requires a bounded evidence re-check before stronger claims",
+          "redirect_hash": "30b84eb19b01b3644f26997c12a71e182182c4d2355e70d765ecf7af0da26e7f",
+          "redirect_id": "attention_redirect::30b84eb19b01",
+          "target_kind": "support_state",
+          "target_ref": "86e4c43144503e72da9429fc68abd2c34a2cbf7067527496bb73c669121147cf"
+        },
+        {
+          "priority": 2,
+          "reason": "rich-expression output should be re-checked against the weak-answer diagnosis",
+          "redirect_hash": "2afb4070bc1efa79af5e4013ff74d28a7a3d91c15021f32f68fd4ce4bc3a7fcf",
+          "redirect_id": "attention_redirect::2afb4070bc1e",
+          "target_kind": "rich_expression",
+          "target_ref": "f065456200aded7dc74db12d3526eff162ec5d08ee8924f3e9bcc929fd888efb"
+        }
+      ],
+      "schema": "agifcore.phase_10.attention_redirect.v1",
+      "snapshot_hash": "098071936b196062b3a78f6179a7a736438af433a5438b0a40e2cf40431ba47e",
+      "stop_reason": "bounded_redirects_emitted",
+      "turn_id": "turn-p10-weak"
+    },
+    "selected_outcome": "recheck_support",
+    "strategy_journal": {
+      "entries": [
+        {
+          "entry_hash": "c583c9561aebe3d29d44b19707c8e6d4e72c825226180ccf0c76aca7662ae49f",
+          "entry_id": "strategy_journal::c583c9561aeb",
+          "failed": [
+            "weak_support",
+            "missing_variable",
+            "vague_explanation"
+          ],
+          "hidden_variables_seen": [
+            "stale_measurement"
+          ],
+          "monitoring_note": "Monitor whether the next redirect reduces uncertainty without upgrading support by language alone.",
+          "priors_used": [
+            "critic.prior.weather"
+          ],
+          "question_types_that_still_break": [
+            "weak_diagnosis_request"
+          ],
+          "reasoning_path": "phase_10_meta_cognition_turn",
+          "worked": [
+            "support-state honesty stayed visible",
+            "diagnosis remained bounded"
+          ]
+        },
+        {
+          "entry_hash": "5513688908fab66556d3711d626a80633de5a391b5087e0b28cc49a7b59b5fa3",
+          "entry_id": "strategy_journal::5513688908fa",
+          "failed": [
+            "no fresh support yet"
+          ],
+          "hidden_variables_seen": [
+            "stale_measurement"
+          ],
+          "monitoring_note": "Redirect targets selected: support_state, rich_expression.",
+          "priors_used": [
+            "critic.prior.weather"
+          ],
+          "question_types_that_still_break": [
+            "under-specified contradiction"
+          ],
+          "reasoning_path": "bounded_redirect_followup",
+          "worked": [
+            "bounded redirect target chosen"
+          ]
+        }
+      ],
+      "entry_count": 2,
+      "schema": "agifcore.phase_10.strategy_journal.v1",
+      "snapshot_hash": "c24985f6ed813acc474e0e4e46c4a3f6e4f87d480207a004f7069e34a63d7e8b",
+      "turn_id": "turn-p10-weak"
+    },
+    "trace_refs": {
+      "diagnosis_ref": "weak_answer_diagnosis::9b56ed826747",
+      "observer_ref": "meta_observer::80e48682c6ef",
+      "redirect_refs": [
+        "attention_redirect::30b84eb19b01",
+        "attention_redirect::2afb4070bc1e"
+      ],
+      "self_model_ref": "self_model::8b2b3db44440",
+      "strategy_journal_ref": "strategy_journal::a39c7f7e13e6"
+    }
+  },
+  "phase7_inputs": {
+    "final_answer_mode": "search_needed",
+    "knowledge_gap_reason": "missing_local_evidence",
+    "next_action": "clarify",
+    "support_state": "search_needed"
+  },
+  "phase8_inputs": {
+    "science_reflection_records": [
+      {
+        "increases_uncertainty": true,
+        "kind": "support_gap",
+        "next_verification_step": "Check the freshest local measurement.",
+        "note": "Fresh local evidence is still missing.",
+        "record_hash": "5348f83fa07d8711520a9da759dd67b01549c37e654faceb828c069257245102",
+        "record_id": "reflection::turn-p10-weak::support_gap",
+        "source_ref": "phase8.summary.ref.001"
+      }
+    ],
+    "uncertainty": [
+      "No fresh local measurement is present yet.",
+      "A stale sensor could be hiding the real variable."
+    ],
+    "what_would_verify": [
+      "Check the freshest local measurement.",
+      "Compare the contradictory signal against the cited evidence trail."
+    ]
+  },
+  "phase9_inputs": {
+    "public_response_text": "Support is currently limited; this remains a bounded, non-upgraded expression. Bounded synthesis combines 4 inputs while preserving support_state=search_needed. Uncertainty level remains high with 3 surfaced conflict(s). No fresh local measurement is present yet. A stale sensor could be hiding the real variable.",
+    "selected_lane": "synthesis",
+    "uncertainty_statements": [
+      "No fresh local measurement is present yet.",
+      "A stale sensor could be hiding the real variable."
+    ]
+  },
+  "status": "open"
+}

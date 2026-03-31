@@ -1,0 +1,14 @@
+{
+  "notes": [
+    "summary only",
+    "Phase 10 remains open",
+    "no approval implied"
+  ],
+  "phase": "10",
+  "scenario_files": [
+    "phase_10_why_was_this_weak_demo.json",
+    "phase_10_contradiction_demo.json"
+  ],
+  "status": "open",
+  "supporting_evidence_manifest": "phase_10_evidence_manifest.json"
+}

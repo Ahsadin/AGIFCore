@@ -1,0 +1,236 @@
+{
+  "demo_id": "contradiction",
+  "evidence_reports": [
+    "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_meta_cognition_layer_report.json",
+    "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_skeptic_counterexample_report.json",
+    "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_surprise_engine_report.json",
+    "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_theory_fragments_report.json",
+    "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_weak_answer_diagnosis_report.json",
+    "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_evidence_manifest.json"
+  ],
+  "notes": [
+    "review-only contradiction demo",
+    "Phase 10 remains open",
+    "no approval implied"
+  ],
+  "original_prompt": "These signals contradict each other. Compare them and show where the answer could break.",
+  "phase": "10",
+  "phase10_outputs": {
+    "public_explanation": "A missing variable or ambiguity remains, so the next safe move is a bounded clarification.",
+    "selected_outcome": "clarify",
+    "skeptic_counterexample": {
+      "branch_count": 2,
+      "branches": [
+        {
+          "branch_id": "skeptic_branch::0519fe7f22ac",
+          "changed_answer_after_skeptic": false,
+          "forced_fallback": false,
+          "record_hash": "0519fe7f22acbff980a766cd01ec15e517441fdd8be625e97aad4ecba46f41b2",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002"
+          ],
+          "what_could_make_this_wrong": "A hidden variable or fresher local evidence could break the current answer.",
+          "what_counterexample_weakens_the_theory": "A recent observation that contradicts the bounded explanation would weaken it immediately.",
+          "what_variable_could_flip_the_answer": "A conflicting local reading could reverse the current explanation."
+        },
+        {
+          "branch_id": "skeptic_branch::7653130bfc19",
+          "changed_answer_after_skeptic": false,
+          "forced_fallback": false,
+          "record_hash": "7653130bfc19487fddd972788ebedbf2cb88a527f71c00781df4d84ffc9ff2b4",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002"
+          ],
+          "what_could_make_this_wrong": "The current principle choice may fit only part of the situation.",
+          "what_counterexample_weakens_the_theory": "A case where the same input leads to the opposite outcome would weaken the chosen explanation.",
+          "what_variable_could_flip_the_answer": "measurement_uncertainty"
+        }
+      ],
+      "schema": "agifcore.phase_10.skeptic_counterexample.v1",
+      "snapshot_hash": "68d349f24fdb9001b177c55fe7c4c0e3f56468f74c9061a66e48d11e3310bd3d",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "surprise_engine": {
+      "event_count": 1,
+      "events": [
+        {
+          "detected_boundary_failure": false,
+          "detected_contradiction": true,
+          "detected_missing_variable": true,
+          "detected_weak_causal_chain": false,
+          "detected_wrong_prior_choice": false,
+          "event_id": "surprise_event::354a3d9c9ef3",
+          "record_hash": "354a3d9c9ef317869bb172d2b45c388be4cb1113796ee3015ba8a7f31c96cb9d",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002"
+          ],
+          "trigger_reason": "contradiction signal reached the surprise engine",
+          "triggered_action": "theory_fragment_candidate"
+        }
+      ],
+      "schema": "agifcore.phase_10.surprise_engine.v1",
+      "snapshot_hash": "51f95321a4d66a41ef8f99c6cfe3043e00d02d1ca2a1db1cb2909c2614a2c00b",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "theory_fragments": {
+      "fragment_count": 1,
+      "fragments": [
+        {
+          "falsifier": "A conflicting local reading could reverse the current explanation.",
+          "fragment_id": "theory_fragment::a3ed0f3c7ccf",
+          "fragment_label": "bounded_candidate_fragment",
+          "fragment_statement": "A hidden variable or contradiction-sensitive condition may explain the current weak answer.",
+          "next_verification_step": "recheck support before stronger claims",
+          "record_hash": "a3ed0f3c7ccfda12ef742ea693618b50a3933a277ffb3be4e50fd77ade8bd577",
+          "source_answer_id": "f84e9c4bfb5414dddb4ade3191ffcfe5a75a1bee0fb835dc9b381ea2e23e087b"
+        }
+      ],
+      "schema": "agifcore.phase_10.theory_fragments.v1",
+      "snapshot_hash": "bf55ba3b20c283d9485cf5888464da9f2c99ef2e8f5c5fc6dcbd8fa40e473eca",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "trace_refs": {
+      "diagnosis_ref": "weak_answer_diagnosis::7ca0eacd5389",
+      "skeptic_ref": "skeptic::4383ef6b7df8",
+      "surprise_ref": "surprise::880d6e453e4b",
+      "theory_fragment_refs": [
+        "theory_fragment::a3ed0f3c7ccf"
+      ]
+    },
+    "weak_answer_diagnosis": {
+      "item_count": 3,
+      "items": [
+        {
+          "diagnosis_hash": "9654ec95d6a1f0fd8f97121a7740d63eaa7b7e0583848af540868cfad8bf7c16",
+          "diagnosis_id": "weak_answer_diagnosis::9654ec95d6a1",
+          "kind": "missing_variable",
+          "missing_support_or_signal": "A conflicting local reading could reverse the current explanation.",
+          "next_step": "clarify or measure the uncertainty-driving variable",
+          "support_honesty_preserved": true,
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "84739b2c42b16a086303dbb52b1ee5296b43a721a79d3bca649809f81653fede"
+          ],
+          "why_weak": "Visible uncertainty still points to at least one unresolved variable."
+        },
+        {
+          "diagnosis_hash": "d838bcead16af0126fbf3410b3bd4cf15d60b577032c8b380e1a54e9cf0be1cf",
+          "diagnosis_id": "weak_answer_diagnosis::d838bcead16a",
+          "kind": "contradiction_risk",
+          "missing_support_or_signal": "contradiction signal in science_reflection",
+          "next_step": "re-check the cited support and fall back if the contradiction holds",
+          "support_honesty_preserved": true,
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "84739b2c42b16a086303dbb52b1ee5296b43a721a79d3bca649809f81653fede"
+          ],
+          "why_weak": "Science reflection already exposes a contradiction-oriented signal."
+        },
+        {
+          "diagnosis_hash": "b8b959b45f9d094c05a604640e5534c7638ea29dba18c5501dd4e627bfae9873",
+          "diagnosis_id": "weak_answer_diagnosis::b8b959b45f9d",
+          "kind": "support_thin",
+          "missing_support_or_signal": "support_state is inferred",
+          "next_step": "keep the uncertainty visible and avoid precision theater",
+          "support_honesty_preserved": true,
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002"
+          ],
+          "why_weak": "The answer is bounded and useful, but it still rides on inferred support instead of fully grounded support."
+        }
+      ],
+      "schema": "agifcore.phase_10.weak_answer_diagnosis.v1",
+      "snapshot_hash": "f6de0cf0fbde820965898a9e8f7d8812114e91aa86c11bed2cf63d3e4745a08b",
+      "summary": "The answer is weak because support is incomplete or contradicted, so the next safe move is bounded re-checking.",
+      "turn_id": "turn-p10-contradiction"
+    }
+  },
+  "phase7_inputs": {
+    "final_answer_mode": "derived_explanation",
+    "knowledge_gap_reason": "none",
+    "next_action": "answer",
+    "support_state": "inferred"
+  },
+  "phase8_inputs": {
+    "science_reflection_records": [
+      {
+        "increases_uncertainty": true,
+        "kind": "contradiction_signal",
+        "next_verification_step": "Re-check the cited support before claiming a stable comparison.",
+        "note": "Two visible cues point in different directions.",
+        "record_hash": "184ca95c0722b7795333a7eecd41eec18121e501b3fb3a5c1684ad7450229f3e",
+        "record_id": "reflection::turn-p10-contradiction::contradiction",
+        "source_ref": "phase8.summary.ref.002"
+      }
+    ],
+    "uncertainty": [
+      "A conflicting local reading could reverse the current explanation.",
+      "A hidden microclimate factor could break the comparison."
+    ]
+  },
+  "phase9_inputs": {
+    "comparison_axes": [
+      {
+        "asymmetry_note": "Both sides inherit the same support-state honesty boundary (inferred).",
+        "axis_hash": "e27e4720a05448cd25a63390802272e6eeced6a53ebe3a9aa915172078a76348",
+        "axis_id": "comparison_axis::e27e4720a054",
+        "axis_label": "Support State",
+        "confidence": 0.82,
+        "left_value": "local weather reasoning: inferred",
+        "right_value": "context_entity: inferred",
+        "supporting_refs": [
+          "phase8.summary.ref.001",
+          "phase8.summary.ref.002"
+        ]
+      },
+      {
+        "asymmetry_note": "Known anchors and inferred claims should never be merged into one certainty bucket.",
+        "axis_hash": "13ac6be5e8661f01f8a711195d1b81ac18c3934b9b7eed7b72a76c325f34f917",
+        "axis_id": "comparison_axis::13ac6be5e866",
+        "axis_label": "Known vs Inferred Coverage",
+        "confidence": 0.84,
+        "left_value": "known=2",
+        "right_value": "inferred=1",
+        "supporting_refs": [
+          "phase8.summary.ref.001",
+          "phase8.summary.ref.002"
+        ]
+      },
+      {
+        "asymmetry_note": "If uncertainty exists, comparison should preserve it instead of smoothing language.",
+        "axis_hash": "feda07eb9a64405ad7d2a49e8cf6f446a029d2dc85b07a0fcef58b1cb14e287a",
+        "axis_id": "comparison_axis::feda07eb9a64",
+        "axis_label": "Uncertainty Exposure",
+        "confidence": 0.78,
+        "left_value": "uncertainty_band=moderate",
+        "right_value": "uncertainty_items=2",
+        "supporting_refs": [
+          "phase8.summary.ref.001",
+          "phase8.summary.ref.002"
+        ]
+      },
+      {
+        "asymmetry_note": "Comparison intent is valid only when the knowledge gap is made explicit.",
+        "axis_hash": "fe8153d7ce542b4f225c76720f67acbe29bc6a3f5e34fab235b6b797ac9c1403",
+        "axis_id": "comparison_axis::fe8153d7ce54",
+        "axis_label": "Intent Alignment",
+        "confidence": 0.73,
+        "left_value": "comparison_requested=True",
+        "right_value": "knowledge_gap=none",
+        "supporting_refs": [
+          "phase8.summary.ref.001",
+          "phase8.summary.ref.002"
+        ]
+      }
+    ],
+    "public_response_text": "Support State => local weather reasoning: inferred vs context_entity: inferred | Known vs Inferred Coverage => known=2 vs inferred=1 | Uncertainty Exposure => uncertainty_band=moderate vs uncertainty_items=2 A conflicting local reading could reverse the current explanation. A hidden microclimate factor could break the comparison.",
+    "selected_lane": "comparison"
+  },
+  "status": "open"
+}

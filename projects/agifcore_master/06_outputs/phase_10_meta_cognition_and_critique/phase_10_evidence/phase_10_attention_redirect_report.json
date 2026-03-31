@@ -1,0 +1,106 @@
+{
+  "anchors": {
+    "contradiction_case": {
+      "redirect_count": 1,
+      "redirects": [
+        {
+          "priority": 2,
+          "reason": "contradiction-oriented diagnosis needs a bounded contradiction probe",
+          "redirect_hash": "457506b401a940ca463a60c56086b811abcd1730df36118f1da02582da3b4292",
+          "redirect_id": "attention_redirect::457506b401a9",
+          "target_kind": "contradiction_probe",
+          "target_ref": "bbed812fba7337762ee26266bb7abb0128658457918d6ca4513c5ec64d1ed76c"
+        }
+      ],
+      "schema": "agifcore.phase_10.attention_redirect.v1",
+      "snapshot_hash": "5a674ad35d3a6c89bce27d5ecc4b5bfad318e41b50b02faf0514e9dcd968bda7",
+      "stop_reason": "bounded_redirects_emitted",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "weak_case": {
+      "redirect_count": 2,
+      "redirects": [
+        {
+          "priority": 1,
+          "reason": "support-state honesty requires a bounded evidence re-check before stronger claims",
+          "redirect_hash": "30b84eb19b01b3644f26997c12a71e182182c4d2355e70d765ecf7af0da26e7f",
+          "redirect_id": "attention_redirect::30b84eb19b01",
+          "target_kind": "support_state",
+          "target_ref": "86e4c43144503e72da9429fc68abd2c34a2cbf7067527496bb73c669121147cf"
+        },
+        {
+          "priority": 2,
+          "reason": "rich-expression output should be re-checked against the weak-answer diagnosis",
+          "redirect_hash": "2afb4070bc1efa79af5e4013ff74d28a7a3d91c15021f32f68fd4ce4bc3a7fcf",
+          "redirect_id": "attention_redirect::2afb4070bc1e",
+          "target_kind": "rich_expression",
+          "target_ref": "f065456200aded7dc74db12d3526eff162ec5d08ee8924f3e9bcc929fd888efb"
+        }
+      ],
+      "schema": "agifcore.phase_10.attention_redirect.v1",
+      "snapshot_hash": "098071936b196062b3a78f6179a7a736438af433a5438b0a40e2cf40431ba47e",
+      "stop_reason": "bounded_redirects_emitted",
+      "turn_id": "turn-p10-weak"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "redirect-count-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "support-gap-redirect-emitted",
+      "result": "pass"
+    },
+    {
+      "id": "contradiction-probe-redirect-emitted",
+      "result": "pass"
+    },
+    {
+      "id": "inputs-remain-read-only",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_10_META_COGNITION_AND_CRITIQUE.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/contracts.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/self_knowledge_surface.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/rich_expression_turn.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/self_model.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_layer.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/attention_redirect.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_observer.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/skeptic_counterexample.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/strategy_journal.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/thinker_tissue.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/surprise_engine.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/theory_fragments.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/weak_answer_diagnosis.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/05_testing/phase_10_meta_cognition_and_critique/_phase_10_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_10_meta_cognition_and_critique/verify_phase_10_attention_redirect.py"
+  ],
+  "notes": [
+    "attention redirect stays bounded and tied to existing lower-phase refs",
+    "Phase 10 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_attention_redirect_report.json"
+  },
+  "phase": "10",
+  "status": "pass",
+  "verifier": "verify_phase_10_attention_redirect"
+}

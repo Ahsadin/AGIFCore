@@ -1,0 +1,170 @@
+{
+  "anchors": {
+    "contradiction_case": {
+      "entries": [
+        {
+          "entry_hash": "eb4f06845c4899bca51555519f417f5f0c2969eeb6bbcb788d502ed4276b7fb5",
+          "entry_id": "strategy_journal::eb4f06845c48",
+          "failed": [
+            "missing_variable",
+            "contradiction_risk",
+            "support_thin"
+          ],
+          "hidden_variables_seen": [
+            "microclimate"
+          ],
+          "monitoring_note": "Monitor whether the next redirect reduces uncertainty without upgrading support by language alone.",
+          "priors_used": [
+            "critic.prior.weather"
+          ],
+          "question_types_that_still_break": [
+            "contradiction_sensitive_case"
+          ],
+          "reasoning_path": "phase_10_meta_cognition_turn",
+          "worked": [
+            "support-state honesty stayed visible",
+            "diagnosis remained bounded"
+          ]
+        },
+        {
+          "entry_hash": "cee1d05904e3379e5310aa5f6c2e026af5c13202813d8af5b8fd1a3ca1b60cf4",
+          "entry_id": "strategy_journal::cee1d05904e3",
+          "failed": [
+            "no failure escalation"
+          ],
+          "hidden_variables_seen": [
+            "microclimate"
+          ],
+          "monitoring_note": "Redirect targets selected: contradiction_probe.",
+          "priors_used": [
+            "critic.prior.weather"
+          ],
+          "question_types_that_still_break": [
+            "under-specified contradiction"
+          ],
+          "reasoning_path": "bounded_redirect_followup",
+          "worked": [
+            "bounded redirect target chosen"
+          ]
+        }
+      ],
+      "entry_count": 2,
+      "schema": "agifcore.phase_10.strategy_journal.v1",
+      "snapshot_hash": "1d69ccf68ec72b454643159f6f49631f7fdcd8702d7deb898a9cfe9e9d73cb24",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "weak_case": {
+      "entries": [
+        {
+          "entry_hash": "c583c9561aebe3d29d44b19707c8e6d4e72c825226180ccf0c76aca7662ae49f",
+          "entry_id": "strategy_journal::c583c9561aeb",
+          "failed": [
+            "weak_support",
+            "missing_variable",
+            "vague_explanation"
+          ],
+          "hidden_variables_seen": [
+            "stale_measurement"
+          ],
+          "monitoring_note": "Monitor whether the next redirect reduces uncertainty without upgrading support by language alone.",
+          "priors_used": [
+            "critic.prior.weather"
+          ],
+          "question_types_that_still_break": [
+            "weak_diagnosis_request"
+          ],
+          "reasoning_path": "phase_10_meta_cognition_turn",
+          "worked": [
+            "support-state honesty stayed visible",
+            "diagnosis remained bounded"
+          ]
+        },
+        {
+          "entry_hash": "5513688908fab66556d3711d626a80633de5a391b5087e0b28cc49a7b59b5fa3",
+          "entry_id": "strategy_journal::5513688908fa",
+          "failed": [
+            "no fresh support yet"
+          ],
+          "hidden_variables_seen": [
+            "stale_measurement"
+          ],
+          "monitoring_note": "Redirect targets selected: support_state, rich_expression.",
+          "priors_used": [
+            "critic.prior.weather"
+          ],
+          "question_types_that_still_break": [
+            "under-specified contradiction"
+          ],
+          "reasoning_path": "bounded_redirect_followup",
+          "worked": [
+            "bounded redirect target chosen"
+          ]
+        }
+      ],
+      "entry_count": 2,
+      "schema": "agifcore.phase_10.strategy_journal.v1",
+      "snapshot_hash": "c24985f6ed813acc474e0e4e46c4a3f6e4f87d480207a004f7069e34a63d7e8b",
+      "turn_id": "turn-p10-weak"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "journal-entry-count-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "worked-failed-monitor-fields-visible",
+      "result": "pass"
+    },
+    {
+      "id": "priors-and-hidden-variables-visible",
+      "result": "pass"
+    },
+    {
+      "id": "inputs-remain-read-only",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_10_META_COGNITION_AND_CRITIQUE.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/contracts.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/self_knowledge_surface.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/rich_expression_turn.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/self_model.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_layer.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/attention_redirect.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_observer.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/skeptic_counterexample.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/strategy_journal.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/thinker_tissue.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/surprise_engine.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/theory_fragments.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/weak_answer_diagnosis.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/05_testing/phase_10_meta_cognition_and_critique/_phase_10_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_10_meta_cognition_and_critique/verify_phase_10_strategy_journal.py"
+  ],
+  "notes": [
+    "strategy journal records bounded operational lessons without turning into self-improvement",
+    "Phase 10 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_strategy_journal_report.json"
+  },
+  "phase": "10",
+  "status": "pass",
+  "verifier": "verify_phase_10_strategy_journal"
+}

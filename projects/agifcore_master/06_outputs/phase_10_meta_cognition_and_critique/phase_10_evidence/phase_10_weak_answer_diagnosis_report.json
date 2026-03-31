@@ -1,0 +1,164 @@
+{
+  "anchors": {
+    "contradiction_case": {
+      "item_count": 3,
+      "items": [
+        {
+          "diagnosis_hash": "9654ec95d6a1f0fd8f97121a7740d63eaa7b7e0583848af540868cfad8bf7c16",
+          "diagnosis_id": "weak_answer_diagnosis::9654ec95d6a1",
+          "kind": "missing_variable",
+          "missing_support_or_signal": "A conflicting local reading could reverse the current explanation.",
+          "next_step": "clarify or measure the uncertainty-driving variable",
+          "support_honesty_preserved": true,
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "84739b2c42b16a086303dbb52b1ee5296b43a721a79d3bca649809f81653fede"
+          ],
+          "why_weak": "Visible uncertainty still points to at least one unresolved variable."
+        },
+        {
+          "diagnosis_hash": "d838bcead16af0126fbf3410b3bd4cf15d60b577032c8b380e1a54e9cf0be1cf",
+          "diagnosis_id": "weak_answer_diagnosis::d838bcead16a",
+          "kind": "contradiction_risk",
+          "missing_support_or_signal": "contradiction signal in science_reflection",
+          "next_step": "re-check the cited support and fall back if the contradiction holds",
+          "support_honesty_preserved": true,
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "84739b2c42b16a086303dbb52b1ee5296b43a721a79d3bca649809f81653fede"
+          ],
+          "why_weak": "Science reflection already exposes a contradiction-oriented signal."
+        },
+        {
+          "diagnosis_hash": "b8b959b45f9d094c05a604640e5534c7638ea29dba18c5501dd4e627bfae9873",
+          "diagnosis_id": "weak_answer_diagnosis::b8b959b45f9d",
+          "kind": "support_thin",
+          "missing_support_or_signal": "support_state is inferred",
+          "next_step": "keep the uncertainty visible and avoid precision theater",
+          "support_honesty_preserved": true,
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002"
+          ],
+          "why_weak": "The answer is bounded and useful, but it still rides on inferred support instead of fully grounded support."
+        }
+      ],
+      "schema": "agifcore.phase_10.weak_answer_diagnosis.v1",
+      "snapshot_hash": "f6de0cf0fbde820965898a9e8f7d8812114e91aa86c11bed2cf63d3e4745a08b",
+      "summary": "The answer is weak because support is incomplete or contradicted, so the next safe move is bounded re-checking.",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "weak_case": {
+      "item_count": 3,
+      "items": [
+        {
+          "diagnosis_hash": "ef91041826d2a8b1d04ae965b3483f5cb5f14b89286ee6f9ef88b7e703db3a97",
+          "diagnosis_id": "weak_answer_diagnosis::ef91041826d2",
+          "kind": "weak_support",
+          "missing_support_or_signal": "support_state remains search_needed or unknown",
+          "next_step": "obtain the missing local evidence before upgrading confidence",
+          "support_honesty_preserved": true,
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534"
+          ],
+          "why_weak": "The answer cannot be stronger because the lower-phase support state is not grounded."
+        },
+        {
+          "diagnosis_hash": "65a916449756151e0769703d22c3b61946e7a44d2e77bdcb4393f9862b44cecb",
+          "diagnosis_id": "weak_answer_diagnosis::65a916449756",
+          "kind": "missing_variable",
+          "missing_support_or_signal": "No fresh local measurement is present yet.",
+          "next_step": "clarify or measure the uncertainty-driving variable",
+          "support_honesty_preserved": true,
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534"
+          ],
+          "why_weak": "Visible uncertainty still points to at least one unresolved variable."
+        },
+        {
+          "diagnosis_hash": "00c1ad7a7c45819f231928b10b062fdf6936650842f297ecb2e8ad8ab8284bd1",
+          "diagnosis_id": "weak_answer_diagnosis::00c1ad7a7c45",
+          "kind": "vague_explanation",
+          "missing_support_or_signal": "final_answer_mode=search_needed",
+          "next_step": "reframe the explanation around expected state, actual state, and first visible failure",
+          "support_honesty_preserved": true,
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002"
+          ],
+          "why_weak": "The current answer shape is too weak to name an exact fault honestly."
+        }
+      ],
+      "schema": "agifcore.phase_10.weak_answer_diagnosis.v1",
+      "snapshot_hash": "0d405469742ac8acba73e602d813e8ec376b62b4f4ba681bb698360248cf0b29",
+      "summary": "The answer is weak because support is incomplete or contradicted, so the next safe move is bounded re-checking.",
+      "turn_id": "turn-p10-weak"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "diagnosis-item-count-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "weak-case-diagnosis-kinds-visible",
+      "result": "pass"
+    },
+    {
+      "id": "contradiction-case-diagnosis-kinds-visible",
+      "result": "pass"
+    },
+    {
+      "id": "inputs-remain-read-only",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_10_META_COGNITION_AND_CRITIQUE.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/contracts.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/self_knowledge_surface.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/rich_expression_turn.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/self_model.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_layer.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/attention_redirect.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_observer.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/skeptic_counterexample.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/strategy_journal.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/thinker_tissue.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/surprise_engine.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/theory_fragments.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/weak_answer_diagnosis.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/05_testing/phase_10_meta_cognition_and_critique/_phase_10_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_10_meta_cognition_and_critique/verify_phase_10_weak_answer_diagnosis.py"
+  ],
+  "notes": [
+    "weak-answer diagnosis stays typed, support-honest, and bounded",
+    "Phase 10 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_weak_answer_diagnosis_report.json"
+  },
+  "phase": "10",
+  "status": "pass",
+  "verifier": "verify_phase_10_weak_answer_diagnosis"
+}
