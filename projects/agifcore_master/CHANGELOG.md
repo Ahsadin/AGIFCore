@@ -103,3 +103,6 @@
 - Added the Phase 7 audit report, Governor verification record, validation request, user verdict, and closeout task-card surfaces under `00_admin/codex_threads/`.
 - Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 7 is now `approved`.
 - Logged the earned Phase 7 approval state in `DECISIONS.md` while keeping Phase 8 not started and ready for a separate run.
+- Froze the approved Phase 8 planning baseline for execution start in `01_plan/PHASE_08_SCIENCE_AND_WORLD_AWARENESS.md`.
+- Added `00_admin/codex_threads/handoffs/PHASE_08_PLAN_FREEZE_HANDOFF.md` and `00_admin/codex_threads/handoffs/PHASE_08_EXECUTION_START_BRIEF.md`.
+- Logged that the Phase 8 planning baseline is frozen for execution start while Phase 8 remains `open` and Phase 9 has not started.
