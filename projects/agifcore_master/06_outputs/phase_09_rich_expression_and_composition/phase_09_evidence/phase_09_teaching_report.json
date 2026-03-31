@@ -1,0 +1,428 @@
+{
+  "anchors": {
+    "grounded_case": {
+      "fixture": {
+        "intake": {
+          "active_context_refs": [],
+          "character_count": 63,
+          "contains_code_block": false,
+          "conversation_id": "conv-p9-teach",
+          "ends_with_question": false,
+          "intake_hash": "30894778aebc9054ce2130bbc84f61115006bd92288d234540dde96e36cc5726",
+          "normalized_text": "please teach this in simple terms and include how to verify it.",
+          "raw_text": "Please teach this in simple terms and include how to verify it.",
+          "schema": "agifcore.phase_07.raw_text_intake.v1",
+          "token_count": 12,
+          "turn_id": "turn-p9-teach-01"
+        },
+        "interpretation": {
+          "ambiguous_request": false,
+          "comparison_requested": false,
+          "conversation_id": "conv-p9-teach",
+          "correction_hint": false,
+          "discourse_mode_hint": "teach",
+          "extracted_terms": [
+            "teach",
+            "simple",
+            "verify"
+          ],
+          "interpretation_hash": "d6010dfee96fb70e93bac8a3954aebce819618f2f45a56d6d9ef706e8563cfbb",
+          "live_current_requested": false,
+          "local_artifact_requested": false,
+          "question_category": "ordinary",
+          "raw_text_hash": "30894778aebc9054ce2130bbc84f61115006bd92288d234540dde96e36cc5726",
+          "repeated_fact_hint": false,
+          "schema": "agifcore.phase_07.question_interpretation.v1",
+          "self_knowledge_requested": false,
+          "signal_notes": [
+            "education-focused request"
+          ],
+          "target_domain_hint": "weather_climate",
+          "token_count": 5,
+          "turn_id": "turn-p9-teach-01",
+          "user_intent": "teach this in simple terms"
+        },
+        "summary": {
+          "causal_chain_ref": "chain::teach::001",
+          "character_count": 237,
+          "evidence_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002"
+          ],
+          "live_measurement_required": false,
+          "principle_refs": [
+            "measurement_uncertainty",
+            "coastal_weather_baseline"
+          ],
+          "request_id": "turn-p9-teach-01",
+          "schema": "agifcore.phase_08.visible_reasoning_summaries.v1",
+          "summary_hash": "2c955cbf325f51aee399c10accccb4fadfea1020e2e6525619ffcce8c6d737df",
+          "uncertainty": [
+            "No live sensor reading is included in this turn."
+          ],
+          "uncertainty_band": "moderate",
+          "what_is_inferred": [
+            "A shoreline request should stay bounded to local evidence."
+          ],
+          "what_is_known": [
+            "Coastal air cools more slowly after sunset.",
+            "Humidity can remain elevated near water."
+          ],
+          "what_would_verify": [
+            "Check a fresh local weather station reading."
+          ]
+        },
+        "support": {
+          "blocked_refs": [],
+          "conversation_id": "conv-p9-teach",
+          "critic_trace_ref": "critic_trace::af9b79024267",
+          "evidence_refs": [
+            "phase7.support.ref.001"
+          ],
+          "governance_trace_ref": "governance_trace::af9b79024267",
+          "knowledge_gap_reason": "none",
+          "memory_review_ref": "memory_review::a75b116fe13f",
+          "next_action": "answer",
+          "reason_codes": [
+            "bounded_local_support"
+          ],
+          "resolution_hash": "a4f20eeb315aa61f7abde1c1b0b833e07fa02b84fea5621580d9d964295314de",
+          "schema": "agifcore.phase_07.support_state_logic.v1",
+          "selected_domain_ids": [
+            "weather_climate"
+          ],
+          "simulation_trace_ref": "simulation_trace::af9b79024267",
+          "support_state": "grounded",
+          "turn_id": "turn-p9-teach-01"
+        }
+      },
+      "snapshot": {
+        "lane_notes": [
+          "Teaching lane remains read-only over Phase 7 and Phase 8 snapshots.",
+          "Teaching lane does not upgrade support-state honesty.",
+          "Teaching lane keeps uncertainty and verification steps visible."
+        ],
+        "prerequisite_notes": [
+          "discourse_mode_hint=teach",
+          "support_state=grounded",
+          "uncertainty_band=moderate"
+        ],
+        "schema": "agifcore.phase_09.teaching.v1",
+        "section_count": 4,
+        "sections": [
+          {
+            "key_points": [
+              "Coastal air cools more slowly after sunset.",
+              "Humidity can remain elevated near water."
+            ],
+            "misconception_hint": "Known anchors are not the same as complete certainty.",
+            "objective": "Start from what is directly supported in bounded local state.",
+            "section_hash": "0a2c12de61227cadbddfc4e93fc35d226a8bba22ecac4666eb5e96c90aea01f3",
+            "section_id": "teach_section::0a2c12de6122",
+            "supporting_refs": [
+              "phase8.summary.ref.001",
+              "phase8.summary.ref.002"
+            ],
+            "title": "Known Scope",
+            "verify_prompt": "Which known anchors are you relying on first?"
+          },
+          {
+            "key_points": [
+              "A shoreline request should stay bounded to local evidence."
+            ],
+            "misconception_hint": "Inference quality depends on explicit support and declared uncertainty.",
+            "objective": "Separate inferred points from direct anchors.",
+            "section_hash": "048b1124032b0d3602773bb6d5a5672f6f8703304972c51ff8036f627e2e70ff",
+            "section_id": "teach_section::048b1124032b",
+            "supporting_refs": [
+              "phase8.summary.ref.001",
+              "phase8.summary.ref.002"
+            ],
+            "title": "Derived Understanding",
+            "verify_prompt": "Which inference would fail first if a missing variable changed?"
+          },
+          {
+            "key_points": [
+              "No live sensor reading is included in this turn."
+            ],
+            "misconception_hint": "Fluent wording cannot upgrade weak support.",
+            "objective": "Preserve uncertainty instead of smoothing it away.",
+            "section_hash": "75332bb0f3d8fb08f7917424f0f0b7dd89b568eaea31d19be2899f9ea7d2a3d4",
+            "section_id": "teach_section::75332bb0f3d8",
+            "supporting_refs": [
+              "phase8.summary.ref.001",
+              "phase8.summary.ref.002"
+            ],
+            "title": "Uncertainty and Limits",
+            "verify_prompt": "Which uncertainty item blocks a stronger claim?"
+          },
+          {
+            "key_points": [
+              "Check a fresh local weather station reading."
+            ],
+            "misconception_hint": "Verification steps are required before raising confidence bands.",
+            "objective": "Show concrete next checks needed for stronger confidence.",
+            "section_hash": "b7684ea67c9c94a6f30158cb73891cdfd1f367173ab3226ce91e141e55ef2edb",
+            "section_id": "teach_section::b7684ea67c9c",
+            "supporting_refs": [
+              "phase8.summary.ref.001",
+              "phase8.summary.ref.002"
+            ],
+            "title": "Verification Path",
+            "verify_prompt": "What single verification step should happen first?"
+          }
+        ],
+        "snapshot_hash": "dc9d9dfb9072f82d93f9b4701c2e6b4bbcc3e688c23c604f1a4e4f8fd7118b1f",
+        "turn_id": "turn-p9-teach-01"
+      }
+    },
+    "search_needed_case": {
+      "fixture": {
+        "intake": {
+          "active_context_refs": [],
+          "character_count": 63,
+          "contains_code_block": false,
+          "conversation_id": "conv-p9-teach",
+          "ends_with_question": false,
+          "intake_hash": "aaa0e098f7dd1277d194130e3d2eca6dc6709f009fa8c1f8f9b15fb39c2f8662",
+          "normalized_text": "please teach this in simple terms and include how to verify it.",
+          "raw_text": "Please teach this in simple terms and include how to verify it.",
+          "schema": "agifcore.phase_07.raw_text_intake.v1",
+          "token_count": 12,
+          "turn_id": "turn-p9-teach-02"
+        },
+        "interpretation": {
+          "ambiguous_request": false,
+          "comparison_requested": false,
+          "conversation_id": "conv-p9-teach",
+          "correction_hint": false,
+          "discourse_mode_hint": "teach",
+          "extracted_terms": [
+            "teach",
+            "simple",
+            "verify"
+          ],
+          "interpretation_hash": "88dd6783b88e009d0e654700e05210a880f8e1b6b17214f525e2602d3d48b281",
+          "live_current_requested": false,
+          "local_artifact_requested": false,
+          "question_category": "ordinary",
+          "raw_text_hash": "aaa0e098f7dd1277d194130e3d2eca6dc6709f009fa8c1f8f9b15fb39c2f8662",
+          "repeated_fact_hint": false,
+          "schema": "agifcore.phase_07.question_interpretation.v1",
+          "self_knowledge_requested": false,
+          "signal_notes": [
+            "education-focused request"
+          ],
+          "target_domain_hint": "weather_climate",
+          "token_count": 5,
+          "turn_id": "turn-p9-teach-02",
+          "user_intent": "teach this in simple terms"
+        },
+        "summary": {
+          "causal_chain_ref": "chain::teach::001",
+          "character_count": 237,
+          "evidence_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002"
+          ],
+          "live_measurement_required": false,
+          "principle_refs": [
+            "measurement_uncertainty",
+            "coastal_weather_baseline"
+          ],
+          "request_id": "turn-p9-teach-02",
+          "schema": "agifcore.phase_08.visible_reasoning_summaries.v1",
+          "summary_hash": "9d59120e8592c6d33361b940aa1c180ede44bccb1de8e36ec687b59f9dcdb6c6",
+          "uncertainty": [
+            "No live sensor reading is included in this turn."
+          ],
+          "uncertainty_band": "moderate",
+          "what_is_inferred": [
+            "A shoreline request should stay bounded to local evidence."
+          ],
+          "what_is_known": [
+            "Coastal air cools more slowly after sunset.",
+            "Humidity can remain elevated near water."
+          ],
+          "what_would_verify": [
+            "Check a fresh local weather station reading."
+          ]
+        },
+        "support": {
+          "blocked_refs": [],
+          "conversation_id": "conv-p9-teach",
+          "critic_trace_ref": "critic_trace::c50c30911d20",
+          "evidence_refs": [
+            "phase7.support.ref.001"
+          ],
+          "governance_trace_ref": "governance_trace::c50c30911d20",
+          "knowledge_gap_reason": "missing_local_evidence",
+          "memory_review_ref": "memory_review::23cc6bcb2ae2",
+          "next_action": "clarify",
+          "reason_codes": [
+            "bounded_local_support"
+          ],
+          "resolution_hash": "215b7327c68062c9d0ed46c4bee826958b01f1eb7526d3d26adbf710aea81d2f",
+          "schema": "agifcore.phase_07.support_state_logic.v1",
+          "selected_domain_ids": [
+            "weather_climate"
+          ],
+          "simulation_trace_ref": "simulation_trace::c50c30911d20",
+          "support_state": "search_needed",
+          "turn_id": "turn-p9-teach-02"
+        }
+      },
+      "snapshot": {
+        "lane_notes": [
+          "Teaching lane remains read-only over Phase 7 and Phase 8 snapshots.",
+          "Teaching lane does not upgrade support-state honesty.",
+          "Teaching lane keeps uncertainty and verification steps visible."
+        ],
+        "prerequisite_notes": [
+          "discourse_mode_hint=teach",
+          "support_state=search_needed",
+          "uncertainty_band=moderate"
+        ],
+        "schema": "agifcore.phase_09.teaching.v1",
+        "section_count": 5,
+        "sections": [
+          {
+            "key_points": [
+              "Coastal air cools more slowly after sunset.",
+              "Humidity can remain elevated near water."
+            ],
+            "misconception_hint": "Known anchors are not the same as complete certainty.",
+            "objective": "Start from what is directly supported in bounded local state.",
+            "section_hash": "0a2c12de61227cadbddfc4e93fc35d226a8bba22ecac4666eb5e96c90aea01f3",
+            "section_id": "teach_section::0a2c12de6122",
+            "supporting_refs": [
+              "phase8.summary.ref.001",
+              "phase8.summary.ref.002"
+            ],
+            "title": "Known Scope",
+            "verify_prompt": "Which known anchors are you relying on first?"
+          },
+          {
+            "key_points": [
+              "A shoreline request should stay bounded to local evidence."
+            ],
+            "misconception_hint": "Inference quality depends on explicit support and declared uncertainty.",
+            "objective": "Separate inferred points from direct anchors.",
+            "section_hash": "048b1124032b0d3602773bb6d5a5672f6f8703304972c51ff8036f627e2e70ff",
+            "section_id": "teach_section::048b1124032b",
+            "supporting_refs": [
+              "phase8.summary.ref.001",
+              "phase8.summary.ref.002"
+            ],
+            "title": "Derived Understanding",
+            "verify_prompt": "Which inference would fail first if a missing variable changed?"
+          },
+          {
+            "key_points": [
+              "No live sensor reading is included in this turn."
+            ],
+            "misconception_hint": "Fluent wording cannot upgrade weak support.",
+            "objective": "Preserve uncertainty instead of smoothing it away.",
+            "section_hash": "75332bb0f3d8fb08f7917424f0f0b7dd89b568eaea31d19be2899f9ea7d2a3d4",
+            "section_id": "teach_section::75332bb0f3d8",
+            "supporting_refs": [
+              "phase8.summary.ref.001",
+              "phase8.summary.ref.002"
+            ],
+            "title": "Uncertainty and Limits",
+            "verify_prompt": "Which uncertainty item blocks a stronger claim?"
+          },
+          {
+            "key_points": [
+              "Check a fresh local weather station reading."
+            ],
+            "misconception_hint": "Verification steps are required before raising confidence bands.",
+            "objective": "Show concrete next checks needed for stronger confidence.",
+            "section_hash": "b7684ea67c9c94a6f30158cb73891cdfd1f367173ab3226ce91e141e55ef2edb",
+            "section_id": "teach_section::b7684ea67c9c",
+            "supporting_refs": [
+              "phase8.summary.ref.001",
+              "phase8.summary.ref.002"
+            ],
+            "title": "Verification Path",
+            "verify_prompt": "What single verification step should happen first?"
+          },
+          {
+            "key_points": [
+              "Current support state does not allow a fully grounded answer.",
+              "Do not replace missing support with stylistic confidence."
+            ],
+            "misconception_hint": "A polished explanation does not remove the need for fresh support.",
+            "objective": "Keep the non-answer boundary explicit when support is insufficient.",
+            "section_hash": "a4774dd2a6559911d8acab18ae6263f322fc9c3126dd8d6c49458847c94604d8",
+            "section_id": "teach_section::a4774dd2a655",
+            "supporting_refs": [
+              "phase8.summary.ref.001",
+              "phase8.summary.ref.002"
+            ],
+            "title": "Honesty Boundary",
+            "verify_prompt": "What evidence is missing before this can be treated as grounded?"
+          }
+        ],
+        "snapshot_hash": "584aa4ff3a1692df86f3932618fe865a4dc94ec2d9c993092141eaa60bbbbae5",
+        "turn_id": "turn-p9-teach-02"
+      }
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "teaching-sections-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "teaching-honesty-boundary-emitted",
+      "result": "pass"
+    },
+    {
+      "id": "inputs-remain-read-only",
+      "result": "pass"
+    },
+    {
+      "id": "lane-notes-present",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_09_RICH_EXPRESSION_AND_COMPOSITION.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/contracts.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/answer_contract.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/teaching.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/comparison.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/planning.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/synthesis.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/analogy.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/concept_composition.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/cross_domain_composition.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/audience_aware_explanation_quality.py",
+    "projects/agifcore_master/05_testing/phase_09_rich_expression_and_composition/_phase_09_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_09_rich_expression_and_composition/verify_phase_09_teaching.py"
+  ],
+  "notes": [
+    "teaching lane keeps uncertainty and verification steps visible",
+    "rich_expression_turn.py is present; lane tests still call engines directly",
+    "Phase 9 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_teaching_report.json"
+  },
+  "phase": "9",
+  "status": "pass",
+  "verifier": "verify_phase_09_teaching"
+}

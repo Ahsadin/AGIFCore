@@ -1,0 +1,685 @@
+{
+  "anchors": {
+    "grounded_case": {
+      "fixture": {
+        "inference": {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "ambiguous_request": false,
+              "candidate_hash": "db7e28e0744d7f62cf420a82f51e552c0809026fa7f10192643dd905a8a61ad9",
+              "candidate_id": "cand-comp",
+              "confidence": 0.88,
+              "entity_class": "process",
+              "entity_label": "weather_climate",
+              "hidden_variable_cues": [
+                "gradient"
+              ],
+              "live_current_requested": false,
+              "matched_terms": [
+                "weather",
+                "climate"
+              ],
+              "reason_codes": [
+                "explicit_topic_cue"
+              ],
+              "region_hint": null,
+              "request_type": "science_explanation",
+              "science_topic_cues": [
+                "weather_climate"
+              ],
+              "target_domain_hint": "weather_climate"
+            }
+          ],
+          "conversation_id": "conv-p9-comp",
+          "extracted_terms": [
+            "compose",
+            "concepts",
+            "bounded"
+          ],
+          "hidden_variable_cues": [
+            "gradient",
+            "measurement"
+          ],
+          "inference_hash": "fc57f706a0a0f54c7c18ae79f623dd84140fa0762ceecc322f6b612de5e653c3",
+          "inference_notes": [
+            "concept composition input is bounded"
+          ],
+          "knowledge_gap_reason_hint": "none",
+          "normalized_text": "compose the supported concepts into a bounded composite view",
+          "raw_text_hash": "raw_text::7e74a5a719eb",
+          "schema": "agifcore.phase_08.entity_request_inference.v1",
+          "science_topic_cues": [
+            "weather_climate",
+            "humidity",
+            "sunset"
+          ],
+          "selected_candidate_id": "cand-comp",
+          "support_state_hint": "grounded",
+          "turn_id": "turn-p9-comp-01"
+        },
+        "intake": {
+          "active_context_refs": [],
+          "character_count": 61,
+          "contains_code_block": false,
+          "conversation_id": "conv-p9-comp",
+          "ends_with_question": false,
+          "intake_hash": "75e47285572e8712970d0413db008c6470d9d816f8da9b20d5e3d53fb7bbef39",
+          "normalized_text": "compose the supported concepts into a bounded composite view.",
+          "raw_text": "Compose the supported concepts into a bounded composite view.",
+          "schema": "agifcore.phase_07.raw_text_intake.v1",
+          "token_count": 9,
+          "turn_id": "turn-p9-comp-01"
+        },
+        "priors": {
+          "available_prior_count": 2,
+          "request_id": "turn-p9-comp-01",
+          "schema": "agifcore.phase_08.scientific_priors.v1",
+          "selected_cells": [
+            {
+              "causal_mechanism": "Observed values are filtered through sensor and sampling limits.",
+              "cell_hash": "d74a7bd6ae8c8ffa86837d51a9fca3a05ce88cea7babe28cc1b4dc8a12d9ec12",
+              "cell_id": "cell-prior-001",
+              "cue_terms": [
+                "current",
+                "exact",
+                "uncertain"
+              ],
+              "failure_case": "A stale reading can look precise while being wrong.",
+              "family_name": "scientific_prior",
+              "hidden_variable_hints": [
+                "live reading",
+                "sampling limits"
+              ],
+              "plain_language_law": "Freshness and instrumentation limits control how much certainty is safe.",
+              "principle_id": "measurement_uncertainty",
+              "provenance_refs": [
+                "phase1.provenance.ref.001"
+              ],
+              "scope_limits": "Required guardrail for weak or current-fact requests.",
+              "seed_topic": "measurement and uncertainty",
+              "transfer_hint": "Fail closed when the evidence is weak or freshness is unclear.",
+              "variables": [
+                "measurement_error",
+                "missing_variables"
+              ],
+              "worked_example": "One outdated reading cannot prove the current state of a system."
+            },
+            {
+              "causal_mechanism": "Sea-air exchange and evening cooling can change near-shore conditions.",
+              "cell_hash": "3bc24b1a20c312497c36b8436f6390904a4ffc7ba7ff47eb5d1322d4aa1e3390",
+              "cell_id": "cell-prior-002",
+              "cue_terms": [
+                "coastal",
+                "humidity",
+                "sunset"
+              ],
+              "failure_case": "An inland front can overpower the coastal baseline.",
+              "family_name": "scientific_prior",
+              "hidden_variable_hints": [
+                "sea breeze",
+                "night cooling"
+              ],
+              "plain_language_law": "Coastal conditions shift through local water, wind, and cooling cycles.",
+              "principle_id": "coastal_weather_baseline",
+              "provenance_refs": [
+                "phase1.provenance.ref.002"
+              ],
+              "scope_limits": "Gives bounded directional guidance, not exact live readings.",
+              "seed_topic": "weather and climate",
+              "transfer_hint": "Check coast, time of day, and moisture before drawing conclusions.",
+              "variables": [
+                "coastal_proximity",
+                "humidity",
+                "sunset"
+              ],
+              "worked_example": "A shoreline block can stay muggy after sunset while inland air cools faster."
+            }
+          ],
+          "selected_prior_count": 2,
+          "selected_prior_ids": [
+            "cell-prior-001",
+            "cell-prior-002"
+          ],
+          "selected_priors": [
+            {
+              "cell_id": "cell-prior-001",
+              "matched_cue_terms": [
+                "current",
+                "uncertain"
+              ],
+              "matched_hidden_variables": [
+                "live reading"
+              ],
+              "principle_id": "measurement_uncertainty",
+              "provenance_refs": [
+                "phase1.provenance.ref.001"
+              ],
+              "reason_codes": [
+                "measurements_need_freshness"
+              ],
+              "relevance_score": 0.91,
+              "selection_hash": "e282954f5c3d8f5483e6413f2c4e15a606034322277448df397d4bb9993f597a",
+              "selection_id": "sel-prior-001"
+            },
+            {
+              "cell_id": "cell-prior-002",
+              "matched_cue_terms": [
+                "coastal",
+                "humidity"
+              ],
+              "matched_hidden_variables": [
+                "sea breeze"
+              ],
+              "principle_id": "coastal_weather_baseline",
+              "provenance_refs": [
+                "phase1.provenance.ref.002"
+              ],
+              "reason_codes": [
+                "coastal_conditions"
+              ],
+              "relevance_score": 0.83,
+              "selection_hash": "426b9f13f9de7e1a3cfb4dfcaf8f13fa502bc2ca6cfd94ef83219ef32939ac32",
+              "selection_id": "sel-prior-002"
+            }
+          ],
+          "selection_notes": [
+            "prior selection stays bounded and traceable"
+          ],
+          "snapshot_hash": "d0ea0f4de16b754237bf49b90c5cfda4e12c5b1f3008ad3763034d4ab6165289"
+        },
+        "summary": {
+          "causal_chain_ref": "chain::comp::001",
+          "character_count": 193,
+          "evidence_refs": [
+            "phase8.summary.ref.050",
+            "phase8.summary.ref.051"
+          ],
+          "live_measurement_required": false,
+          "principle_refs": [
+            "measurement_uncertainty",
+            "coastal_weather_baseline"
+          ],
+          "request_id": "turn-p9-comp-01",
+          "schema": "agifcore.phase_08.visible_reasoning_summaries.v1",
+          "summary_hash": "6b85ad8fc9efd80e629908c91c250512d55ef9980f669438b067e8effe44af20",
+          "uncertainty": [
+            "No live field measurement is included."
+          ],
+          "uncertainty_band": "moderate",
+          "what_is_inferred": [
+            "The composite view should stay trace-linked."
+          ],
+          "what_is_known": [
+            "Two governed concepts can be combined safely."
+          ],
+          "what_would_verify": [
+            "Confirm the selected concepts before widening the composition."
+          ]
+        },
+        "support": {
+          "blocked_refs": [],
+          "conversation_id": "conv-p9-comp",
+          "critic_trace_ref": "critic_trace::be126cfeb34b",
+          "evidence_refs": [
+            "phase7.support.ref.050"
+          ],
+          "governance_trace_ref": "governance_trace::be126cfeb34b",
+          "knowledge_gap_reason": "none",
+          "memory_review_ref": "memory_review::eee8b5e6a556",
+          "next_action": "answer",
+          "reason_codes": [
+            "bounded_local_support"
+          ],
+          "resolution_hash": "6089a80e39c26752a338846ecdf1c8d2c5c8646ccf23b06e762b6178ac978a59",
+          "schema": "agifcore.phase_07.support_state_logic.v1",
+          "selected_domain_ids": [
+            "weather_climate"
+          ],
+          "simulation_trace_ref": "simulation_trace::be126cfeb34b",
+          "support_state": "grounded",
+          "turn_id": "turn-p9-comp-01"
+        }
+      },
+      "snapshot": {
+        "composed_view": "Composite view built from 5 bounded concept element(s) under support_state=grounded.",
+        "concept_composition_ref": "concept_composition::6f79e8c666be",
+        "element_count": 5,
+        "elements": [
+          {
+            "concept_label": "cell-prior-001",
+            "confidence": 0.82,
+            "element_hash": "fcc4aebf14985f5fe9f57e51b78c8965b0e7a346a543e5d966cf896bf3a6e9fd",
+            "element_id": "concept_element::fcc4aebf1498",
+            "role_in_composition": "governing_principle",
+            "supporting_refs": [
+              "phase8.summary.ref.050",
+              "phase8.summary.ref.051"
+            ]
+          },
+          {
+            "concept_label": "cell-prior-002",
+            "confidence": 0.82,
+            "element_hash": "5ffd75c2e3007c8215e3e606f908aee205e5ac764ce77657ab7638b322725e1b",
+            "element_id": "concept_element::5ffd75c2e300",
+            "role_in_composition": "governing_principle",
+            "supporting_refs": [
+              "phase8.summary.ref.050",
+              "phase8.summary.ref.051"
+            ]
+          },
+          {
+            "concept_label": "weather_climate",
+            "confidence": 0.66,
+            "element_hash": "19a441a7dbfaf0f30ed9bfb6315544822241762759c70847f55bb08f2e3bd14a",
+            "element_id": "concept_element::19a441a7dbfa",
+            "role_in_composition": "context_modifier",
+            "supporting_refs": [
+              "phase8.summary.ref.050",
+              "phase8.summary.ref.051"
+            ]
+          },
+          {
+            "concept_label": "humidity",
+            "confidence": 0.66,
+            "element_hash": "c9e784ef2093ba8ee737739822bd8f3e4118e59d2ff315e15c61fc884fff8f24",
+            "element_id": "concept_element::c9e784ef2093",
+            "role_in_composition": "context_modifier",
+            "supporting_refs": [
+              "phase8.summary.ref.050",
+              "phase8.summary.ref.051"
+            ]
+          },
+          {
+            "concept_label": "sunset",
+            "confidence": 0.66,
+            "element_hash": "3a0f1767b9e2b0e9b0c1d6d58482482062b81987061bf503e8e563cc29085b30",
+            "element_id": "concept_element::3a0f1767b9e2",
+            "role_in_composition": "context_modifier",
+            "supporting_refs": [
+              "phase8.summary.ref.050",
+              "phase8.summary.ref.051"
+            ]
+          }
+        ],
+        "fail_closed": false,
+        "lane_notes": [
+          "Concept composition lane preserves explicit composition inputs.",
+          "Concept composition lane is bounded and read-only over upstream support."
+        ],
+        "schema": "agifcore.phase_09.concept_composition.v1",
+        "snapshot_hash": "6ab97026357b4590971f72e4ab885c87813479184aa745f68108b37fb3e8f828",
+        "turn_id": "turn-p9-comp-01"
+      }
+    },
+    "weak_case": {
+      "fixture": {
+        "inference": {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "ambiguous_request": false,
+              "candidate_hash": "db7e28e0744d7f62cf420a82f51e552c0809026fa7f10192643dd905a8a61ad9",
+              "candidate_id": "cand-comp",
+              "confidence": 0.88,
+              "entity_class": "process",
+              "entity_label": "weather_climate",
+              "hidden_variable_cues": [
+                "gradient"
+              ],
+              "live_current_requested": false,
+              "matched_terms": [
+                "weather",
+                "climate"
+              ],
+              "reason_codes": [
+                "explicit_topic_cue"
+              ],
+              "region_hint": null,
+              "request_type": "science_explanation",
+              "science_topic_cues": [
+                "weather_climate"
+              ],
+              "target_domain_hint": "weather_climate"
+            }
+          ],
+          "conversation_id": "conv-p9-comp",
+          "extracted_terms": [
+            "compose",
+            "concepts",
+            "bounded"
+          ],
+          "hidden_variable_cues": [
+            "gradient",
+            "measurement"
+          ],
+          "inference_hash": "d6aa64692a7105911372e0a519e3f18fe3426c3e78eb86a1ea3023751fdb6566",
+          "inference_notes": [
+            "concept composition input is bounded"
+          ],
+          "knowledge_gap_reason_hint": "missing_local_evidence",
+          "normalized_text": "compose the supported concepts into a bounded composite view",
+          "raw_text_hash": "raw_text::4cb10547bb18",
+          "schema": "agifcore.phase_08.entity_request_inference.v1",
+          "science_topic_cues": [
+            "weather_climate",
+            "humidity",
+            "sunset"
+          ],
+          "selected_candidate_id": "cand-comp",
+          "support_state_hint": "unknown",
+          "turn_id": "turn-p9-comp-02"
+        },
+        "intake": {
+          "active_context_refs": [],
+          "character_count": 61,
+          "contains_code_block": false,
+          "conversation_id": "conv-p9-comp",
+          "ends_with_question": false,
+          "intake_hash": "8e4cfbb70d6272a669d7b799f7c3084aea99640ba86adce0be54e6f1f7743b5f",
+          "normalized_text": "compose the supported concepts into a bounded composite view.",
+          "raw_text": "Compose the supported concepts into a bounded composite view.",
+          "schema": "agifcore.phase_07.raw_text_intake.v1",
+          "token_count": 9,
+          "turn_id": "turn-p9-comp-02"
+        },
+        "priors": {
+          "available_prior_count": 2,
+          "request_id": "turn-p9-comp-02",
+          "schema": "agifcore.phase_08.scientific_priors.v1",
+          "selected_cells": [
+            {
+              "causal_mechanism": "Observed values are filtered through sensor and sampling limits.",
+              "cell_hash": "d74a7bd6ae8c8ffa86837d51a9fca3a05ce88cea7babe28cc1b4dc8a12d9ec12",
+              "cell_id": "cell-prior-001",
+              "cue_terms": [
+                "current",
+                "exact",
+                "uncertain"
+              ],
+              "failure_case": "A stale reading can look precise while being wrong.",
+              "family_name": "scientific_prior",
+              "hidden_variable_hints": [
+                "live reading",
+                "sampling limits"
+              ],
+              "plain_language_law": "Freshness and instrumentation limits control how much certainty is safe.",
+              "principle_id": "measurement_uncertainty",
+              "provenance_refs": [
+                "phase1.provenance.ref.001"
+              ],
+              "scope_limits": "Required guardrail for weak or current-fact requests.",
+              "seed_topic": "measurement and uncertainty",
+              "transfer_hint": "Fail closed when the evidence is weak or freshness is unclear.",
+              "variables": [
+                "measurement_error",
+                "missing_variables"
+              ],
+              "worked_example": "One outdated reading cannot prove the current state of a system."
+            },
+            {
+              "causal_mechanism": "Sea-air exchange and evening cooling can change near-shore conditions.",
+              "cell_hash": "3bc24b1a20c312497c36b8436f6390904a4ffc7ba7ff47eb5d1322d4aa1e3390",
+              "cell_id": "cell-prior-002",
+              "cue_terms": [
+                "coastal",
+                "humidity",
+                "sunset"
+              ],
+              "failure_case": "An inland front can overpower the coastal baseline.",
+              "family_name": "scientific_prior",
+              "hidden_variable_hints": [
+                "sea breeze",
+                "night cooling"
+              ],
+              "plain_language_law": "Coastal conditions shift through local water, wind, and cooling cycles.",
+              "principle_id": "coastal_weather_baseline",
+              "provenance_refs": [
+                "phase1.provenance.ref.002"
+              ],
+              "scope_limits": "Gives bounded directional guidance, not exact live readings.",
+              "seed_topic": "weather and climate",
+              "transfer_hint": "Check coast, time of day, and moisture before drawing conclusions.",
+              "variables": [
+                "coastal_proximity",
+                "humidity",
+                "sunset"
+              ],
+              "worked_example": "A shoreline block can stay muggy after sunset while inland air cools faster."
+            }
+          ],
+          "selected_prior_count": 2,
+          "selected_prior_ids": [
+            "cell-prior-001",
+            "cell-prior-002"
+          ],
+          "selected_priors": [
+            {
+              "cell_id": "cell-prior-001",
+              "matched_cue_terms": [
+                "current",
+                "uncertain"
+              ],
+              "matched_hidden_variables": [
+                "live reading"
+              ],
+              "principle_id": "measurement_uncertainty",
+              "provenance_refs": [
+                "phase1.provenance.ref.001"
+              ],
+              "reason_codes": [
+                "measurements_need_freshness"
+              ],
+              "relevance_score": 0.91,
+              "selection_hash": "e282954f5c3d8f5483e6413f2c4e15a606034322277448df397d4bb9993f597a",
+              "selection_id": "sel-prior-001"
+            },
+            {
+              "cell_id": "cell-prior-002",
+              "matched_cue_terms": [
+                "coastal",
+                "humidity"
+              ],
+              "matched_hidden_variables": [
+                "sea breeze"
+              ],
+              "principle_id": "coastal_weather_baseline",
+              "provenance_refs": [
+                "phase1.provenance.ref.002"
+              ],
+              "reason_codes": [
+                "coastal_conditions"
+              ],
+              "relevance_score": 0.83,
+              "selection_hash": "426b9f13f9de7e1a3cfb4dfcaf8f13fa502bc2ca6cfd94ef83219ef32939ac32",
+              "selection_id": "sel-prior-002"
+            }
+          ],
+          "selection_notes": [
+            "prior selection stays bounded and traceable"
+          ],
+          "snapshot_hash": "b3a4f8bfa4424f8ee0858e6cfac969452180bb78fda847c9e0631a7b639645ff"
+        },
+        "summary": {
+          "causal_chain_ref": "chain::comp::001",
+          "character_count": 193,
+          "evidence_refs": [
+            "phase8.summary.ref.050",
+            "phase8.summary.ref.051"
+          ],
+          "live_measurement_required": false,
+          "principle_refs": [
+            "measurement_uncertainty",
+            "coastal_weather_baseline"
+          ],
+          "request_id": "turn-p9-comp-02",
+          "schema": "agifcore.phase_08.visible_reasoning_summaries.v1",
+          "summary_hash": "d7ea8a1c3eb7048b7a7777d5c72dfb6005cfca20517cd147b8e7d262a32e076b",
+          "uncertainty": [
+            "No live field measurement is included."
+          ],
+          "uncertainty_band": "moderate",
+          "what_is_inferred": [
+            "The composite view should stay trace-linked."
+          ],
+          "what_is_known": [
+            "Two governed concepts can be combined safely."
+          ],
+          "what_would_verify": [
+            "Confirm the selected concepts before widening the composition."
+          ]
+        },
+        "support": {
+          "blocked_refs": [],
+          "conversation_id": "conv-p9-comp",
+          "critic_trace_ref": "critic_trace::4cfc188bb065",
+          "evidence_refs": [
+            "phase7.support.ref.050"
+          ],
+          "governance_trace_ref": "governance_trace::4cfc188bb065",
+          "knowledge_gap_reason": "missing_local_evidence",
+          "memory_review_ref": "memory_review::4a2882a5ebad",
+          "next_action": "clarify",
+          "reason_codes": [
+            "bounded_local_support"
+          ],
+          "resolution_hash": "c4be625234ae35f1167037f2e3087faa67f56c60db501ae8de0ae2f15adba6a2",
+          "schema": "agifcore.phase_07.support_state_logic.v1",
+          "selected_domain_ids": [
+            "weather_climate"
+          ],
+          "simulation_trace_ref": "simulation_trace::4cfc188bb065",
+          "support_state": "unknown",
+          "turn_id": "turn-p9-comp-02"
+        }
+      },
+      "snapshot": {
+        "composed_view": "Composite view built from 5 bounded concept element(s) under support_state=unknown. Output remains constrained because support is not fully grounded.",
+        "concept_composition_ref": "concept_composition::bbb73ccb0bca",
+        "element_count": 5,
+        "elements": [
+          {
+            "concept_label": "cell-prior-001",
+            "confidence": 0.61,
+            "element_hash": "b248ed51c2640485e32c9eaf5ec831f6cee57dc6061b8d882678302756684902",
+            "element_id": "concept_element::b248ed51c264",
+            "role_in_composition": "governing_principle",
+            "supporting_refs": [
+              "phase8.summary.ref.050",
+              "phase8.summary.ref.051"
+            ]
+          },
+          {
+            "concept_label": "cell-prior-002",
+            "confidence": 0.61,
+            "element_hash": "1f7986378d7dcac7b8218d4e8ab51c9946739398612ffea9fbd3132e5e398a72",
+            "element_id": "concept_element::1f7986378d7d",
+            "role_in_composition": "governing_principle",
+            "supporting_refs": [
+              "phase8.summary.ref.050",
+              "phase8.summary.ref.051"
+            ]
+          },
+          {
+            "concept_label": "weather_climate",
+            "confidence": 0.66,
+            "element_hash": "19a441a7dbfaf0f30ed9bfb6315544822241762759c70847f55bb08f2e3bd14a",
+            "element_id": "concept_element::19a441a7dbfa",
+            "role_in_composition": "context_modifier",
+            "supporting_refs": [
+              "phase8.summary.ref.050",
+              "phase8.summary.ref.051"
+            ]
+          },
+          {
+            "concept_label": "humidity",
+            "confidence": 0.66,
+            "element_hash": "c9e784ef2093ba8ee737739822bd8f3e4118e59d2ff315e15c61fc884fff8f24",
+            "element_id": "concept_element::c9e784ef2093",
+            "role_in_composition": "context_modifier",
+            "supporting_refs": [
+              "phase8.summary.ref.050",
+              "phase8.summary.ref.051"
+            ]
+          },
+          {
+            "concept_label": "sunset",
+            "confidence": 0.66,
+            "element_hash": "3a0f1767b9e2b0e9b0c1d6d58482482062b81987061bf503e8e563cc29085b30",
+            "element_id": "concept_element::3a0f1767b9e2",
+            "role_in_composition": "context_modifier",
+            "supporting_refs": [
+              "phase8.summary.ref.050",
+              "phase8.summary.ref.051"
+            ]
+          }
+        ],
+        "fail_closed": true,
+        "lane_notes": [
+          "Concept composition lane preserves explicit composition inputs.",
+          "Concept composition lane is bounded and read-only over upstream support.",
+          "Support-state boundary forces conservative composition."
+        ],
+        "schema": "agifcore.phase_09.concept_composition.v1",
+        "snapshot_hash": "bd44c9c4317f0774a8919b9be752a0e1687711eb813aeb38ea6e44b12243c12a",
+        "turn_id": "turn-p9-comp-02"
+      }
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "concept-elements-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "concept-composition-ref-present",
+      "result": "pass"
+    },
+    {
+      "id": "fail-closed-on-weak-support",
+      "result": "pass"
+    },
+    {
+      "id": "inputs-remain-read-only",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_09_RICH_EXPRESSION_AND_COMPOSITION.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/contracts.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/answer_contract.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/teaching.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/comparison.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/planning.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/synthesis.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/analogy.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/concept_composition.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/cross_domain_composition.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/audience_aware_explanation_quality.py",
+    "projects/agifcore_master/05_testing/phase_09_rich_expression_and_composition/_phase_09_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_09_rich_expression_and_composition/verify_phase_09_concept_composition.py"
+  ],
+  "notes": [
+    "concept composition stays bounded and carries its own trace ref",
+    "rich_expression_turn.py is present; lane tests still call engines directly",
+    "Phase 9 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_concept_composition_report.json"
+  },
+  "phase": "9",
+  "status": "pass",
+  "verifier": "verify_phase_09_concept_composition"
+}

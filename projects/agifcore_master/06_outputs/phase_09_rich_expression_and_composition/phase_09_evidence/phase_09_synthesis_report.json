@@ -1,0 +1,238 @@
+{
+  "anchors": {
+    "fixture": {
+      "bounded": {
+        "bounded_local_support_refs": [
+          "phase8.boundary.ref.030"
+        ],
+        "decision": "bounded_local_support",
+        "evidence_input_count": 1,
+        "evidence_refs": [
+          "phase8.boundary.ref.030"
+        ],
+        "exact_current_fact_allowed": false,
+        "live_current_requested": false,
+        "live_measurement_required": false,
+        "needs_fresh_information": false,
+        "reason_codes": [
+          "bounded_local_support"
+        ],
+        "request_id": "turn-p9-synth-01",
+        "schema": "agifcore.phase_08.bounded_current_world_reasoning.v1",
+        "snapshot_hash": "ff160a0ed1465df8a804732f7af0a758914cdec1a174ac58303bcf22ef234a77"
+      },
+      "intake": {
+        "active_context_refs": [],
+        "character_count": 63,
+        "contains_code_block": false,
+        "conversation_id": "conv-p9-synth",
+        "ends_with_question": false,
+        "intake_hash": "f525d5ea92e5419699759cd8cd7cc833d6724bb50b79da16db6f1a6bb9b526bb",
+        "normalized_text": "synthesize the supported points without hiding the uncertainty.",
+        "raw_text": "Synthesize the supported points without hiding the uncertainty.",
+        "schema": "agifcore.phase_07.raw_text_intake.v1",
+        "token_count": 8,
+        "turn_id": "turn-p9-synth-01"
+      },
+      "interpretation": {
+        "ambiguous_request": false,
+        "comparison_requested": false,
+        "conversation_id": "conv-p9-synth",
+        "correction_hint": false,
+        "discourse_mode_hint": "synthesize",
+        "extracted_terms": [
+          "synthesize",
+          "supported",
+          "uncertainty"
+        ],
+        "interpretation_hash": "b8101768c6b97ba68e4428b9653f5063e047dad4f6614e893bfa28324399853c",
+        "live_current_requested": false,
+        "local_artifact_requested": false,
+        "question_category": "ordinary",
+        "raw_text_hash": "f525d5ea92e5419699759cd8cd7cc833d6724bb50b79da16db6f1a6bb9b526bb",
+        "repeated_fact_hint": false,
+        "schema": "agifcore.phase_07.question_interpretation.v1",
+        "self_knowledge_requested": false,
+        "signal_notes": [
+          "bounded synthesis request"
+        ],
+        "target_domain_hint": "weather_climate",
+        "token_count": 4,
+        "turn_id": "turn-p9-synth-01",
+        "user_intent": "synthesize the supported points"
+      },
+      "reflection": {
+        "record_count": 1,
+        "records": [
+          {
+            "increases_uncertainty": true,
+            "kind": "falsifier",
+            "next_verification_step": "Name the missing variable before generalizing.",
+            "note": "A missing variable could alter the synthesis.",
+            "record_hash": "f9bfa121c8b977d0ce37bc3d747d04795207760a8c3f771f35e134e46ecd273f",
+            "record_id": "reflect::turn-p9-synth-01::01",
+            "source_ref": "phase8.summary.ref.030"
+          }
+        ],
+        "reflection_hash": "902a237629534479c3a2f9120b3b7de5308353ce6db372b29d390c0fbd32311c",
+        "request_id": "turn-p9-synth-01",
+        "schema": "agifcore.phase_08.science_reflection.v1",
+        "uncertainty_should_increase": false
+      },
+      "summary": {
+        "causal_chain_ref": "chain::synth::001",
+        "character_count": 171,
+        "evidence_refs": [
+          "phase8.summary.ref.030",
+          "phase8.summary.ref.031"
+        ],
+        "live_measurement_required": false,
+        "principle_refs": [
+          "measurement_uncertainty"
+        ],
+        "request_id": "turn-p9-synth-01",
+        "schema": "agifcore.phase_08.visible_reasoning_summaries.v1",
+        "summary_hash": "eb7a9f9ae8624f289d69b49391db0409f1cd9abf7aa55b83a7a5d578d33143a9",
+        "uncertainty": [
+          "One missing variable still blocks a stronger claim."
+        ],
+        "uncertainty_band": "moderate",
+        "what_is_inferred": [
+          "The synthesis should preserve uncertainty."
+        ],
+        "what_is_known": [
+          "Local support exists for a bounded synthesis."
+        ],
+        "what_would_verify": [
+          "Acquire the missing variable."
+        ]
+      },
+      "support": {
+        "blocked_refs": [],
+        "conversation_id": "conv-p9-synth",
+        "critic_trace_ref": "critic_trace::48a36ce44655",
+        "evidence_refs": [
+          "phase7.support.ref.030"
+        ],
+        "governance_trace_ref": "governance_trace::48a36ce44655",
+        "knowledge_gap_reason": "none",
+        "memory_review_ref": "memory_review::da3e63328fae",
+        "next_action": "answer",
+        "reason_codes": [
+          "bounded_local_support"
+        ],
+        "resolution_hash": "22afdc0b9260fd4f6ce5126b52807750ac0266622299922514bbb080dcd0bb25",
+        "schema": "agifcore.phase_07.support_state_logic.v1",
+        "selected_domain_ids": [
+          "weather_climate"
+        ],
+        "simulation_trace_ref": "simulation_trace::48a36ce44655",
+        "support_state": "grounded",
+        "turn_id": "turn-p9-synth-01"
+      }
+    },
+    "snapshot": {
+      "input_count": 3,
+      "inputs": [
+        {
+          "input_hash": "7f6dfb281715fea2eb8e2c07d591229ba7403f613a98f5ccc61479950da14ad4",
+          "input_id": "synthesis_input::7f6dfb281715",
+          "input_kind": "known_anchor",
+          "summary": "Local support exists for a bounded synthesis.",
+          "support_ref": "phase8.summary.ref.030",
+          "uncertainty_note": null
+        },
+        {
+          "input_hash": "6ec1239ef880d077444c753aa49c68cfb058b61e953277795246993a3b2941bd",
+          "input_id": "synthesis_input::6ec1239ef880",
+          "input_kind": "inference",
+          "summary": "The synthesis should preserve uncertainty.",
+          "support_ref": "phase8.summary.ref.031",
+          "uncertainty_note": "Inference depends on bounded support and may weaken if missing variables change."
+        },
+        {
+          "input_hash": "e3773c2f424477b282fb7594801e4f4f4dc5375dd7232ce4ca0cefbbb4e65eec",
+          "input_id": "synthesis_input::e3773c2f4244",
+          "input_kind": "reflection",
+          "summary": "A missing variable could alter the synthesis.",
+          "support_ref": "phase8.summary.ref.030",
+          "uncertainty_note": "Reflection suggests uncertainty increase."
+        }
+      ],
+      "lane_notes": [
+        "Synthesis lane is read-only over Phase 8 outputs.",
+        "Synthesis lane preserves declared uncertainty instead of smoothing it away.",
+        "Synthesis lane never upgrades support state."
+      ],
+      "merged_summary": "Bounded synthesis combines 3 inputs while preserving support_state=grounded. Uncertainty level remains moderate with 2 surfaced conflict(s).",
+      "missing_support": [
+        "No additional missing-support blocker declared for this support state."
+      ],
+      "preserves_support_honesty": true,
+      "schema": "agifcore.phase_09.synthesis.v1",
+      "snapshot_hash": "a2cee1703837f2ef3f12422b102f56487fdf1c399fb6b6e8ee390ebbbec70059",
+      "turn_id": "turn-p9-synth-01",
+      "uncertainty_level": "moderate",
+      "unresolved_conflicts": [
+        "One missing variable still blocks a stronger claim.",
+        "A missing variable could alter the synthesis."
+      ]
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "synthesis-inputs-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "support-honesty-preserved",
+      "result": "pass"
+    },
+    {
+      "id": "uncertainty-surfaced",
+      "result": "pass"
+    },
+    {
+      "id": "inputs-remain-read-only",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_09_RICH_EXPRESSION_AND_COMPOSITION.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/contracts.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/answer_contract.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/teaching.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/comparison.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/planning.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/synthesis.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/analogy.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/concept_composition.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/cross_domain_composition.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/audience_aware_explanation_quality.py",
+    "projects/agifcore_master/05_testing/phase_09_rich_expression_and_composition/_phase_09_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_09_rich_expression_and_composition/verify_phase_09_synthesis.py"
+  ],
+  "notes": [
+    "synthesis lane preserves declared uncertainty instead of smoothing it away",
+    "rich_expression_turn.py is present; lane tests still call engines directly",
+    "Phase 9 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_synthesis_report.json"
+  },
+  "phase": "9",
+  "status": "pass",
+  "verifier": "verify_phase_09_synthesis"
+}

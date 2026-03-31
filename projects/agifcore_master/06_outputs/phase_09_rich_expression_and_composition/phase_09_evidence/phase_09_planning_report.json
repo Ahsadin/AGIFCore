@@ -1,0 +1,239 @@
+{
+  "anchors": {
+    "fixture": {
+      "bounded": {
+        "bounded_local_support_refs": [
+          "phase8.boundary.ref.020"
+        ],
+        "decision": "needs_fresh_information",
+        "evidence_input_count": 2,
+        "evidence_refs": [
+          "phase8.boundary.ref.020",
+          "phase8.boundary.ref.021"
+        ],
+        "exact_current_fact_allowed": false,
+        "live_current_requested": true,
+        "live_measurement_required": true,
+        "needs_fresh_information": true,
+        "reason_codes": [
+          "fresh_measurement_required"
+        ],
+        "request_id": "turn-p9-plan-01",
+        "schema": "agifcore.phase_08.bounded_current_world_reasoning.v1",
+        "snapshot_hash": "594e6a9d6ea94a583f566c65f55219bf37f7bf504b46d596a9310677c4752580"
+      },
+      "intake": {
+        "active_context_refs": [],
+        "character_count": 63,
+        "contains_code_block": false,
+        "conversation_id": "conv-p9-plan",
+        "ends_with_question": false,
+        "intake_hash": "afa71d5ec4ce049ff1f0b939c9d97e01dbf6934f59ee7f3f2531e9121ca8efcc",
+        "normalized_text": "plan the next checks carefully and stop if evidence is missing.",
+        "raw_text": "Plan the next checks carefully and stop if evidence is missing.",
+        "schema": "agifcore.phase_07.raw_text_intake.v1",
+        "token_count": 11,
+        "turn_id": "turn-p9-plan-01"
+      },
+      "reflection": {
+        "record_count": 1,
+        "records": [
+          {
+            "increases_uncertainty": true,
+            "kind": "falsifier",
+            "next_verification_step": "List the missing variable explicitly.",
+            "note": "Missing variable could change the next step.",
+            "record_hash": "19bed0bc8e2b0c72ebc6b2c2ee6c2d3708e6b4a0080874eba899033e2414d5ae",
+            "record_id": "reflect::turn-p9-plan-01::01",
+            "source_ref": "phase8.summary.ref.020"
+          }
+        ],
+        "reflection_hash": "6708880ecbb53bb3f3ad1048284af1cf94d817d0d27e7cc5287be3904e88c71d",
+        "request_id": "turn-p9-plan-01",
+        "schema": "agifcore.phase_08.science_reflection.v1",
+        "uncertainty_should_increase": true
+      },
+      "summary": {
+        "causal_chain_ref": "chain::plan::001",
+        "character_count": 216,
+        "evidence_refs": [
+          "phase8.summary.ref.020"
+        ],
+        "live_measurement_required": true,
+        "principle_refs": [
+          "measurement_uncertainty"
+        ],
+        "request_id": "turn-p9-plan-01",
+        "schema": "agifcore.phase_08.visible_reasoning_summaries.v1",
+        "summary_hash": "00dcdcc592b979c8edc4685454e0cb39ed55ad89c9ac5c95642c806979baead9",
+        "uncertainty": [
+          "Fresh data is required before stronger claims."
+        ],
+        "uncertainty_band": "high",
+        "what_is_inferred": [
+          "The next step should preserve stop points."
+        ],
+        "what_is_known": [
+          "A bounded answer exists only if evidence remains local."
+        ],
+        "what_would_verify": [
+          "Obtain a new measurement before answering.",
+          "List any missing variables."
+        ]
+      },
+      "support": {
+        "blocked_refs": [],
+        "conversation_id": "conv-p9-plan",
+        "critic_trace_ref": "critic_trace::703d94451250",
+        "evidence_refs": [
+          "phase7.support.ref.020"
+        ],
+        "governance_trace_ref": "governance_trace::703d94451250",
+        "knowledge_gap_reason": "needs_fresh_information",
+        "memory_review_ref": "memory_review::f48a2459d2dc",
+        "next_action": "search_external",
+        "reason_codes": [
+          "bounded_local_support"
+        ],
+        "resolution_hash": "b97889796a3f0a9b3d189b695fdf97d7e9def4dd40948ec9137ab51b7679b8ad",
+        "schema": "agifcore.phase_07.support_state_logic.v1",
+        "selected_domain_ids": [
+          "weather_climate"
+        ],
+        "simulation_trace_ref": "simulation_trace::703d94451250",
+        "support_state": "search_needed",
+        "turn_id": "turn-p9-plan-01"
+      }
+    },
+    "snapshot": {
+      "lane_notes": [
+        "support_state=search_needed",
+        "current_world_decision=needs_fresh_information",
+        "uncertainty_items=1",
+        "Planning lane outputs bounded steps only; it does not execute actions."
+      ],
+      "schema": "agifcore.phase_09.planning.v1",
+      "snapshot_hash": "7d3459f500d82b44468b68163586cad94e6d02d212540ed0a7810661bb8c4e21",
+      "step_count": 4,
+      "steps": [
+        {
+          "action": "Obtain a new measurement before answering.",
+          "caution_note": "Do not treat this as executed automatically.",
+          "dependency_refs": [
+            "phase8.summary.ref.020"
+          ],
+          "step_hash": "d768f07ad41e9bd66f136323518aafb3e6e883c621af5037816046e0d4edf97d",
+          "step_id": "planning_step::d768f07ad41e",
+          "step_index": 1,
+          "stop_if_unsure": true,
+          "supporting_refs": [
+            "phase8.summary.ref.020"
+          ],
+          "verification_hint": "Confirm this step preserves the declared support-state boundary."
+        },
+        {
+          "action": "List any missing variables.",
+          "caution_note": "Do not treat this as executed automatically.",
+          "dependency_refs": [
+            "phase8.summary.ref.020"
+          ],
+          "step_hash": "3d47f666337729ea36c345b8459fdb02766cb6fd43ab34cb659bde4b791d9ed5",
+          "step_id": "planning_step::3d47f6663377",
+          "step_index": 2,
+          "stop_if_unsure": true,
+          "supporting_refs": [
+            "phase8.summary.ref.020"
+          ],
+          "verification_hint": "Confirm this step preserves the declared support-state boundary."
+        },
+        {
+          "action": "List the missing variable explicitly.",
+          "caution_note": null,
+          "dependency_refs": [
+            "phase8.summary.ref.020"
+          ],
+          "step_hash": "4e4f96a1582ddac4c4bf2bac88de78d7506b776f469496ed4fe7dd07b0369648",
+          "step_id": "planning_step::4e4f96a1582d",
+          "step_index": 3,
+          "stop_if_unsure": true,
+          "supporting_refs": [
+            "phase8.summary.ref.020"
+          ],
+          "verification_hint": "Reflection note: Missing variable could change the next step."
+        },
+        {
+          "action": "Obtain a fresh live measurement before asserting current status.",
+          "caution_note": "Fail closed if fresh measurement cannot be obtained.",
+          "dependency_refs": [
+            "phase8.summary.ref.020"
+          ],
+          "step_hash": "080dc175f9adc2922dee4afb2f60d1b3e89ce397dd4ed0e97f047ddc4ea6c271",
+          "step_id": "planning_step::080dc175f9ad",
+          "step_index": 4,
+          "stop_if_unsure": true,
+          "supporting_refs": [
+            "phase8.summary.ref.020"
+          ],
+          "verification_hint": "bounded_current_world_decision=needs_fresh_information"
+        }
+      ],
+      "turn_id": "turn-p9-plan-01"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "planning-steps-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "stop-if-unsure-preserved",
+      "result": "pass"
+    },
+    {
+      "id": "fresh-measurement-step-added",
+      "result": "pass"
+    },
+    {
+      "id": "inputs-remain-read-only",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_09_RICH_EXPRESSION_AND_COMPOSITION.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/contracts.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/answer_contract.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/teaching.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/comparison.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/planning.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/synthesis.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/analogy.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/concept_composition.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/cross_domain_composition.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/audience_aware_explanation_quality.py",
+    "projects/agifcore_master/05_testing/phase_09_rich_expression_and_composition/_phase_09_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_09_rich_expression_and_composition/verify_phase_09_planning.py"
+  ],
+  "notes": [
+    "planning lane outputs bounded steps only; it does not execute actions",
+    "rich_expression_turn.py is present; lane tests still call engines directly",
+    "Phase 9 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_planning_report.json"
+  },
+  "phase": "9",
+  "status": "pass",
+  "verifier": "verify_phase_09_planning"
+}

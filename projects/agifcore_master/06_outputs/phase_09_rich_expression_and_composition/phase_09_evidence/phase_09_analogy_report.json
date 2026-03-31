@@ -1,0 +1,213 @@
+{
+  "anchors": {
+    "fixture": {
+      "inference": {
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "ambiguous_request": false,
+            "candidate_hash": "d11c7cbb0caa489d078d3e524e9dfe12dc47f689d2ab94e5d537ad5808d0b63c",
+            "candidate_id": "cand-analogy",
+            "confidence": 0.9,
+            "entity_class": "process",
+            "entity_label": "thermodynamics",
+            "hidden_variable_cues": [
+              "gradient"
+            ],
+            "live_current_requested": false,
+            "matched_terms": [
+              "thermodynamics"
+            ],
+            "reason_codes": [
+              "explicit_topic_cue"
+            ],
+            "region_hint": null,
+            "request_type": "science_explanation",
+            "science_topic_cues": [
+              "thermodynamics"
+            ],
+            "target_domain_hint": "weather_climate"
+          }
+        ],
+        "conversation_id": "conv-p9-analogy",
+        "extracted_terms": [
+          "analogy",
+          "thermodynamics"
+        ],
+        "hidden_variable_cues": [
+          "gradient"
+        ],
+        "inference_hash": "7efa6167e715ac3a7f860709072880c1ffb55b51c72992f739f920317ddd02d1",
+        "inference_notes": [
+          "analogy candidate set is bounded"
+        ],
+        "knowledge_gap_reason_hint": "none",
+        "normalized_text": "use one bounded analogy about thermodynamics",
+        "raw_text_hash": "raw_text::de86c5722511",
+        "schema": "agifcore.phase_08.entity_request_inference.v1",
+        "science_topic_cues": [
+          "thermodynamics"
+        ],
+        "selected_candidate_id": "cand-analogy",
+        "support_state_hint": "grounded",
+        "turn_id": "turn-p9-analogy-01"
+      },
+      "intake": {
+        "active_context_refs": [],
+        "character_count": 68,
+        "contains_code_block": false,
+        "conversation_id": "conv-p9-analogy",
+        "ends_with_question": false,
+        "intake_hash": "47c1e6147ccb85f5b883a895e0e428f15713d6d9d4389231a728709be9941978",
+        "normalized_text": "use one bounded analogy, show where it breaks, and do not overclaim.",
+        "raw_text": "Use one bounded analogy, show where it breaks, and do not overclaim.",
+        "schema": "agifcore.phase_07.raw_text_intake.v1",
+        "token_count": 12,
+        "turn_id": "turn-p9-analogy-01"
+      },
+      "summary": {
+        "causal_chain_ref": "chain::analogy::001",
+        "character_count": 194,
+        "evidence_refs": [
+          "phase8.summary.ref.040",
+          "phase8.summary.ref.041"
+        ],
+        "live_measurement_required": false,
+        "principle_refs": [
+          "measurement_uncertainty"
+        ],
+        "request_id": "turn-p9-analogy-01",
+        "schema": "agifcore.phase_08.visible_reasoning_summaries.v1",
+        "summary_hash": "dfb56db2776c018803a52e75cb340704568f55ead300fdbee372202d5f0a0459",
+        "uncertainty": [
+          "The metaphor breaks when the systems differ materially."
+        ],
+        "uncertainty_band": "moderate",
+        "what_is_inferred": [
+          "The analogy should not be mistaken for proof."
+        ],
+        "what_is_known": [
+          "A bounded structural mapping can help explanation."
+        ],
+        "what_would_verify": [
+          "Check the underlying mechanism directly."
+        ]
+      },
+      "support": {
+        "blocked_refs": [],
+        "conversation_id": "conv-p9-analogy",
+        "critic_trace_ref": "critic_trace::b1c66038e397",
+        "evidence_refs": [
+          "phase7.support.ref.040"
+        ],
+        "governance_trace_ref": "governance_trace::b1c66038e397",
+        "knowledge_gap_reason": "none",
+        "memory_review_ref": "memory_review::0a58fe7901a8",
+        "next_action": "answer",
+        "reason_codes": [
+          "bounded_local_support"
+        ],
+        "resolution_hash": "03a866a4364bbc6cca2af543f311294a8eafb38a70b4e90502ed28c2c256efa8",
+        "schema": "agifcore.phase_07.support_state_logic.v1",
+        "selected_domain_ids": [
+          "weather_climate"
+        ],
+        "simulation_trace_ref": "simulation_trace::b1c66038e397",
+        "support_state": "grounded",
+        "turn_id": "turn-p9-analogy-01"
+      }
+    },
+    "snapshot": {
+      "analogy_count": 1,
+      "analogy_mode": "structural",
+      "analogy_trace_ref": "analogy_trace::5af9a7210c8b",
+      "lane_notes": [
+        "Analogy lane includes explicit source-target mappings.",
+        "Analogy lane always includes break limits.",
+        "Analogy lane does not use metaphor as proof."
+      ],
+      "mappings": [
+        {
+          "break_limit": "The analogy breaks when material-specific thermal properties dominate behavior.",
+          "confidence": 0.74,
+          "mapping_hash": "ba60fc72dbd02714f7edabdb9ee2cd7f012e03be8dcf706b501332b2be0fb2c3",
+          "mapping_id": "analogy_mapping::ba60fc72dbd0",
+          "source_point": "Heat moving through materials",
+          "supporting_refs": [
+            "phase8.summary.ref.040",
+            "phase8.summary.ref.041"
+          ],
+          "target_point": "Water flowing downhill in a channel",
+          "why_it_helps": "Both follow a gradient-driven transfer pattern."
+        }
+      ],
+      "schema": "agifcore.phase_09.analogy.v1",
+      "snapshot_hash": "01868cdfed472d744970cd10d102409a612d0994b956717b8fccd3aa2434aed9",
+      "source_domain_ref": "domain::thermodynamics",
+      "support_refs": [
+        "phase8.summary.ref.040",
+        "phase8.summary.ref.041",
+        "chain::analogy::001",
+        "dfb56db2776c018803a52e75cb340704568f55ead300fdbee372202d5f0a0459"
+      ],
+      "target_domain_ref": "domain::bounded_everyday_structure",
+      "turn_id": "turn-p9-analogy-01"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "analogy-count-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "analogy-trace-ref-present",
+      "result": "pass"
+    },
+    {
+      "id": "break-limits-and-support-refs-present",
+      "result": "pass"
+    },
+    {
+      "id": "inputs-remain-read-only",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_09_RICH_EXPRESSION_AND_COMPOSITION.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/contracts.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/answer_contract.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/teaching.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/comparison.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/planning.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/synthesis.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/analogy.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/concept_composition.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/cross_domain_composition.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/audience_aware_explanation_quality.py",
+    "projects/agifcore_master/05_testing/phase_09_rich_expression_and_composition/_phase_09_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_09_rich_expression_and_composition/verify_phase_09_analogy.py"
+  ],
+  "notes": [
+    "analogy lane is illustrative only and never treats metaphor as proof",
+    "rich_expression_turn.py is present; lane tests still call engines directly",
+    "Phase 9 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_analogy_report.json"
+  },
+  "phase": "9",
+  "status": "pass",
+  "verifier": "verify_phase_09_analogy"
+}

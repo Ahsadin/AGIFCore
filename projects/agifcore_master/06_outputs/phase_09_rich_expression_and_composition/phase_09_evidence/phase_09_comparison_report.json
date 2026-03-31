@@ -1,0 +1,297 @@
+{
+  "anchors": {
+    "fixture": {
+      "inference": {
+        "candidate_count": 2,
+        "candidates": [
+          {
+            "ambiguous_request": false,
+            "candidate_hash": "9ce1d1145615b32e66eb33515db5089d87e5b777e6d31a2179be0a8d1fd67798",
+            "candidate_id": "cand-coast",
+            "confidence": 0.92,
+            "entity_class": "place",
+            "entity_label": "coast",
+            "hidden_variable_cues": [
+              "humidity"
+            ],
+            "live_current_requested": false,
+            "matched_terms": [
+              "coastal"
+            ],
+            "reason_codes": [
+              "explicit_request_target"
+            ],
+            "region_hint": "coast",
+            "request_type": "comparison",
+            "science_topic_cues": [
+              "weather_climate"
+            ],
+            "target_domain_hint": "weather_climate"
+          },
+          {
+            "ambiguous_request": false,
+            "candidate_hash": "a98d533ebe6078d315eb29545dc41603fa90f2567cbc2d6ad223bab2de907a5f",
+            "candidate_id": "cand-inland",
+            "confidence": 0.88,
+            "entity_class": "place",
+            "entity_label": "inland",
+            "hidden_variable_cues": [
+              "temperature"
+            ],
+            "live_current_requested": false,
+            "matched_terms": [
+              "inland"
+            ],
+            "reason_codes": [
+              "explicit_request_target"
+            ],
+            "region_hint": "inland",
+            "request_type": "comparison",
+            "science_topic_cues": [
+              "weather_climate"
+            ],
+            "target_domain_hint": "weather_climate"
+          }
+        ],
+        "conversation_id": "conv-p9-compare",
+        "extracted_terms": [
+          "coastal",
+          "inland",
+          "compare"
+        ],
+        "hidden_variable_cues": [
+          "wind",
+          "humidity"
+        ],
+        "inference_hash": "6eb76c26d7597ca40140f685aab90649dae51b744c16d81440a9bb56b43de078",
+        "inference_notes": [
+          "comparison candidate set is bounded"
+        ],
+        "knowledge_gap_reason_hint": "none",
+        "normalized_text": "compare the coastal and inland cases with clear axes",
+        "raw_text_hash": "raw_text::c5cc5e94b62f",
+        "schema": "agifcore.phase_08.entity_request_inference.v1",
+        "science_topic_cues": [
+          "weather_climate",
+          "coast",
+          "inland"
+        ],
+        "selected_candidate_id": "cand-coast",
+        "support_state_hint": "grounded",
+        "turn_id": "turn-p9-compare-01"
+      },
+      "intake": {
+        "active_context_refs": [],
+        "character_count": 53,
+        "contains_code_block": false,
+        "conversation_id": "conv-p9-compare",
+        "ends_with_question": false,
+        "intake_hash": "69f5b60ed90d91cccda425777b4266f58bb2475b729b668abf81ead6c4b1142e",
+        "normalized_text": "compare the coastal and inland cases with clear axes.",
+        "raw_text": "Compare the coastal and inland cases with clear axes.",
+        "schema": "agifcore.phase_07.raw_text_intake.v1",
+        "token_count": 9,
+        "turn_id": "turn-p9-compare-01"
+      },
+      "interpretation": {
+        "ambiguous_request": false,
+        "comparison_requested": true,
+        "conversation_id": "conv-p9-compare",
+        "correction_hint": false,
+        "discourse_mode_hint": "compare",
+        "extracted_terms": [
+          "coastal",
+          "inland",
+          "compare"
+        ],
+        "interpretation_hash": "961d318dd3f7cccb3286475ae06e6761a93437d8563379914daf1b9f159961a2",
+        "live_current_requested": false,
+        "local_artifact_requested": false,
+        "question_category": "ordinary",
+        "raw_text_hash": "69f5b60ed90d91cccda425777b4266f58bb2475b729b668abf81ead6c4b1142e",
+        "repeated_fact_hint": false,
+        "schema": "agifcore.phase_07.question_interpretation.v1",
+        "self_knowledge_requested": false,
+        "signal_notes": [
+          "bounded comparison request"
+        ],
+        "target_domain_hint": "weather_climate",
+        "token_count": 6,
+        "turn_id": "turn-p9-compare-01",
+        "user_intent": "compare the coastal and inland cases"
+      },
+      "summary": {
+        "causal_chain_ref": "chain::compare::001",
+        "character_count": 194,
+        "evidence_refs": [
+          "phase8.summary.ref.010",
+          "phase8.summary.ref.011"
+        ],
+        "live_measurement_required": false,
+        "principle_refs": [
+          "measurement_uncertainty"
+        ],
+        "request_id": "turn-p9-compare-01",
+        "schema": "agifcore.phase_08.visible_reasoning_summaries.v1",
+        "summary_hash": "e2c83345358bd3be0c50acb6c95d3a3a50a5757bcebecfe6e7bd3a7477bdb23c",
+        "uncertainty": [
+          "No live field measurement is included."
+        ],
+        "uncertainty_band": "moderate",
+        "what_is_inferred": [
+          "Each side may differ in humidity and cooling rate."
+        ],
+        "what_is_known": [
+          "Both places can be described with bounded local evidence."
+        ],
+        "what_would_verify": [
+          "Check a fresh station reading for each place."
+        ]
+      },
+      "support": {
+        "blocked_refs": [],
+        "conversation_id": "conv-p9-compare",
+        "critic_trace_ref": "critic_trace::4109a84115af",
+        "evidence_refs": [
+          "phase7.support.ref.010"
+        ],
+        "governance_trace_ref": "governance_trace::4109a84115af",
+        "knowledge_gap_reason": "none",
+        "memory_review_ref": "memory_review::32493a5e0acd",
+        "next_action": "answer",
+        "reason_codes": [
+          "bounded_local_support"
+        ],
+        "resolution_hash": "b66423fe41da6a65d4c3e8d961a8464c70bea3c7da7be3eaf74009e36d9b6bb5",
+        "schema": "agifcore.phase_07.support_state_logic.v1",
+        "selected_domain_ids": [
+          "weather_climate"
+        ],
+        "simulation_trace_ref": "simulation_trace::4109a84115af",
+        "support_state": "grounded",
+        "turn_id": "turn-p9-compare-01"
+      }
+    },
+    "snapshot": {
+      "axes": [
+        {
+          "asymmetry_note": "Both sides inherit the same support-state honesty boundary (grounded).",
+          "axis_hash": "c903c563c2f957b3a52d583cbd18a730abf0a3d98f0eac20a9ab327c44451cbd",
+          "axis_id": "comparison_axis::c903c563c2f9",
+          "axis_label": "Support State",
+          "confidence": 0.82,
+          "left_value": "coast: grounded",
+          "right_value": "inland: grounded",
+          "supporting_refs": [
+            "phase8.summary.ref.010",
+            "phase8.summary.ref.011"
+          ]
+        },
+        {
+          "asymmetry_note": "Known anchors and inferred claims should never be merged into one certainty bucket.",
+          "axis_hash": "bbd2dcab4509d3e642837c73d7a3547a6a3d905463a2e2fd3433d42311dbca23",
+          "axis_id": "comparison_axis::bbd2dcab4509",
+          "axis_label": "Known vs Inferred Coverage",
+          "confidence": 0.84,
+          "left_value": "known=1",
+          "right_value": "inferred=1",
+          "supporting_refs": [
+            "phase8.summary.ref.010",
+            "phase8.summary.ref.011"
+          ]
+        },
+        {
+          "asymmetry_note": "If uncertainty exists, comparison should preserve it instead of smoothing language.",
+          "axis_hash": "83e230e459d4517e6508d1a40e2e9fcff12e0e315e3bd143be4f96e2eabd733a",
+          "axis_id": "comparison_axis::83e230e459d4",
+          "axis_label": "Uncertainty Exposure",
+          "confidence": 0.78,
+          "left_value": "uncertainty_band=moderate",
+          "right_value": "uncertainty_items=1",
+          "supporting_refs": [
+            "phase8.summary.ref.010",
+            "phase8.summary.ref.011"
+          ]
+        },
+        {
+          "asymmetry_note": "Comparison intent is valid only when the knowledge gap is made explicit.",
+          "axis_hash": "2da79ff9ca1e951ba8d687b50b367b012b57cc4262c7bdcebec31ce7d9409c47",
+          "axis_id": "comparison_axis::2da79ff9ca1e",
+          "axis_label": "Intent Alignment",
+          "confidence": 0.73,
+          "left_value": "comparison_requested=True",
+          "right_value": "knowledge_gap=none",
+          "supporting_refs": [
+            "phase8.summary.ref.010",
+            "phase8.summary.ref.011"
+          ]
+        }
+      ],
+      "axis_count": 4,
+      "lane_notes": [
+        "Comparison lane uses explicit axes with declared asymmetry.",
+        "Comparison lane remains read-only over support and reasoning snapshots.",
+        "Comparison lane does not upgrade support confidence."
+      ],
+      "schema": "agifcore.phase_09.comparison.v1",
+      "snapshot_hash": "ff0811499119ecad5417b6d31cc55e059d558cd9deb43383b70000194e7abe44",
+      "turn_id": "turn-p9-compare-01"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "comparison-axes-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "comparison-intent-respected",
+      "result": "pass"
+    },
+    {
+      "id": "inputs-remain-read-only",
+      "result": "pass"
+    },
+    {
+      "id": "supporting-refs-present",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_09_RICH_EXPRESSION_AND_COMPOSITION.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/contracts.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/answer_contract.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/teaching.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/comparison.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/planning.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/synthesis.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/analogy.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/concept_composition.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/cross_domain_composition.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/audience_aware_explanation_quality.py",
+    "projects/agifcore_master/05_testing/phase_09_rich_expression_and_composition/_phase_09_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_09_rich_expression_and_composition/verify_phase_09_comparison.py"
+  ],
+  "notes": [
+    "comparison lane keeps asymmetry explicit and bounded",
+    "rich_expression_turn.py is present; lane tests still call engines directly",
+    "Phase 9 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_comparison_report.json"
+  },
+  "phase": "9",
+  "status": "pass",
+  "verifier": "verify_phase_09_comparison"
+}

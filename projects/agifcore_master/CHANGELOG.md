@@ -110,3 +110,11 @@
 - Added the Phase 8 internal execution slice task-card set, demo implementation task card, final audit task card, final validation task card, audit report, Governor verification record, validation request, and user verdict under `00_admin/codex_threads/`.
 - Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 8 is now `approved`.
 - Logged the earned Phase 8 approval state in `DECISIONS.md` while keeping Phase 9 not started and ready for a separate run.
+- Added the repo-local Phase 9 custom-agent setup under `.codex/config.toml` and `.codex/agents/`.
+- Materialized `01_plan/PHASE_09_RICH_EXPRESSION_AND_COMPOSITION.md` and the Phase 9 planning task-card set under `00_admin/codex_threads/tasks/phase_09/`.
+- Added `00_admin/codex_threads/handoffs/PHASE_09_PLAN_FREEZE_HANDOFF.md` and `00_admin/codex_threads/handoffs/PHASE_09_EXECUTION_START_BRIEF.md`.
+- Recorded that the Phase 9 planning baseline is frozen for execution start while Phase 9 remains `open` and Phase 10 has not started.
+- Completed the full Phase 9 runtime package under `04_execution/phase_09_rich_expression_and_composition/`, with paired verifiers under `05_testing/phase_09_rich_expression_and_composition/` and evidence/demo outputs under `06_outputs/phase_09_rich_expression_and_composition/`.
+- Added the Phase 9 execution task-card set expansion, final audit report, Governor verification record, validation request, user verdict, and closeout task-card surfaces under `00_admin/codex_threads/`.
+- Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 9 is now `approved`.
+- Logged the earned Phase 9 approval state in `DECISIONS.md` while keeping Phase 10 not started and ready for a separate run.

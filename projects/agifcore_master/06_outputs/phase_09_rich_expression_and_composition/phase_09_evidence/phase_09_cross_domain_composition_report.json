@@ -1,0 +1,607 @@
+{
+  "anchors": {
+    "exact_case": {
+      "fixture": [
+        {
+          "ambiguous_request": false,
+          "comparison_requested": true,
+          "conversation_id": "conv-p9-cross",
+          "correction_hint": false,
+          "discourse_mode_hint": "compare",
+          "extracted_terms": [
+            "bridge",
+            "domains"
+          ],
+          "interpretation_hash": "4ba6f783e60c312099e05aa3dfc5f625067152e859ac5a77f191b14b748d9205",
+          "live_current_requested": false,
+          "local_artifact_requested": false,
+          "question_category": "ordinary",
+          "raw_text_hash": "6abe1b153f047d16c6b2c9764d04b6a560a4566daae507bd5e52dafc5e2e9278",
+          "repeated_fact_hint": false,
+          "schema": "agifcore.phase_07.question_interpretation.v1",
+          "self_knowledge_requested": false,
+          "signal_notes": [
+            "cross-domain request"
+          ],
+          "target_domain_hint": "weather_climate",
+          "token_count": 4,
+          "turn_id": "turn-p9-cross-01",
+          "user_intent": "bridge exactly two domains"
+        },
+        {
+          "blocked_refs": [],
+          "conversation_id": "conv-p9-cross",
+          "critic_trace_ref": "critic_trace::fef5ae8c6013",
+          "evidence_refs": [
+            "phase7.support.ref.060"
+          ],
+          "governance_trace_ref": "governance_trace::fef5ae8c6013",
+          "knowledge_gap_reason": "none",
+          "memory_review_ref": "memory_review::d4144a35bdfb",
+          "next_action": "answer",
+          "reason_codes": [
+            "bounded_local_support"
+          ],
+          "resolution_hash": "e262fc6914dea790b043850fc5725a7d956a6f2373c768e532cad31ec3be62d5",
+          "schema": "agifcore.phase_07.support_state_logic.v1",
+          "selected_domain_ids": [
+            "weather_climate",
+            "place_region_context"
+          ],
+          "simulation_trace_ref": "simulation_trace::fef5ae8c6013",
+          "support_state": "grounded",
+          "turn_id": "turn-p9-cross-01"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "ambiguous_request": false,
+              "candidate_hash": "53960e3db6a912737a6972ce72c825e50a80e194bdbdc3a0e29d19b511e33fe2",
+              "candidate_id": "cand-cross-001",
+              "confidence": 0.9,
+              "entity_class": "process",
+              "entity_label": "weather_climate",
+              "hidden_variable_cues": [
+                "shared pattern"
+              ],
+              "live_current_requested": false,
+              "matched_terms": [
+                "weather",
+                "climate"
+              ],
+              "reason_codes": [
+                "explicit_topic_cue"
+              ],
+              "region_hint": null,
+              "request_type": "comparison",
+              "science_topic_cues": [
+                "weather_climate"
+              ],
+              "target_domain_hint": "weather_climate"
+            },
+            {
+              "ambiguous_request": false,
+              "candidate_hash": "dea4962a63c1377baf38a32855c6b7e35dfbbcbf79ee3afb7ae7e59f07dbe4ea",
+              "candidate_id": "cand-cross-002",
+              "confidence": 0.87,
+              "entity_class": "place",
+              "entity_label": "place_region_context",
+              "hidden_variable_cues": [
+                "shared pattern"
+              ],
+              "live_current_requested": false,
+              "matched_terms": [
+                "place",
+                "region"
+              ],
+              "reason_codes": [
+                "explicit_topic_cue"
+              ],
+              "region_hint": null,
+              "request_type": "comparison",
+              "science_topic_cues": [
+                "place_region_context"
+              ],
+              "target_domain_hint": "place_region_context"
+            }
+          ],
+          "conversation_id": "conv-p9-cross",
+          "extracted_terms": [
+            "bridge",
+            "domains",
+            "fail closed"
+          ],
+          "hidden_variable_cues": [
+            "shared pattern"
+          ],
+          "inference_hash": "211e9cc827e3c288c01dc90d22192c23db5027f9ba6f3fc810389dafcb074a27",
+          "inference_notes": [
+            "cross-domain candidate set is bounded"
+          ],
+          "knowledge_gap_reason_hint": "none",
+          "normalized_text": "bridge exactly two domains and fail closed if a third appears",
+          "raw_text_hash": "raw_text::34177244e6c3",
+          "schema": "agifcore.phase_08.entity_request_inference.v1",
+          "science_topic_cues": [
+            "weather_climate",
+            "place_region_context",
+            "engineering_systems"
+          ],
+          "selected_candidate_id": "cand-cross-001",
+          "support_state_hint": "grounded",
+          "turn_id": "turn-p9-cross-01"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "candidate_hash": "f878b3c329297ffdd795d9931fc99a6ceae5e10b650af1b9c7c5487336d990df",
+              "confidence": 0.9,
+              "matched_terms": [
+                "weather",
+                "climate"
+              ],
+              "reason_codes": [
+                "domain_anchor"
+              ],
+              "region_id": "region-weather",
+              "region_kind": "target_domain",
+              "region_label": "weather zone",
+              "supporting_refs": [
+                "phase8.region.ref.001"
+              ],
+              "target_domain": "weather_climate"
+            },
+            {
+              "candidate_hash": "b1c474826fbc2f4a343f240f81331d2c65e52b120caee4890f61099b5c6a1237",
+              "confidence": 0.88,
+              "matched_terms": [
+                "place",
+                "region"
+              ],
+              "reason_codes": [
+                "domain_anchor"
+              ],
+              "region_id": "region-place",
+              "region_kind": "target_domain",
+              "region_label": "place zone",
+              "supporting_refs": [
+                "phase8.region.ref.002"
+              ],
+              "target_domain": "place_region_context"
+            }
+          ],
+          "reason_codes": [
+            "bounded_region_choice"
+          ],
+          "request_id": "turn-p9-cross-01",
+          "schema": "agifcore.phase_08.world_region_selection.v1",
+          "selected_region_id": "region-weather",
+          "snapshot_hash": "e781bb155350e1608476eafd1b88f54c35befc9e95fb9e8e2c20c2e42247da1c",
+          "unresolved": false
+        },
+        {
+          "composed_view": "Composite view for turn-p9-cross-01 with 2 elements.",
+          "concept_composition_ref": "concept_composition::2b34c3d89b7c",
+          "element_count": 2,
+          "elements": [
+            {
+              "concept_label": "weather_climate",
+              "confidence": 0.86,
+              "element_hash": "a05a7e13955b85b48cfafd2fca046e95652e530a195ac24f5eaabaa2e53f8999",
+              "element_id": "concept_element::c8348ae07fe3",
+              "role_in_composition": "governing_principle",
+              "supporting_refs": [
+                "phase8.summary.ref.060"
+              ]
+            },
+            {
+              "concept_label": "place_region_context",
+              "confidence": 0.72,
+              "element_hash": "b797e13d4df1a1a2c7e6f252354b234ff47ce0a88cdf6d04e3fd8cf36d6b917c",
+              "element_id": "concept_element::301421e43f61",
+              "role_in_composition": "context_modifier",
+              "supporting_refs": [
+                "phase8.summary.ref.061"
+              ]
+            }
+          ],
+          "fail_closed": false,
+          "lane_notes": [
+            "Concept composition fixture stays bounded for cross-domain composition tests.",
+            "The fixture preserves an explicit concept_composition_ref."
+          ],
+          "schema": "agifcore.phase_09.concept_composition.v1",
+          "snapshot_hash": "d533ff418d966f769ad6561d9f6b0bce41f43f06a26fd7634899ee47c1822724",
+          "turn_id": "turn-p9-cross-01"
+        }
+      ],
+      "snapshot": {
+        "boundary_notes": [
+          "Cross-domain composition defaults to exactly two domains.",
+          "Cross-domain composition remains fail-closed on insufficient support.",
+          "Cross-domain composition reuses concept_composition_ref for lineage continuity."
+        ],
+        "composition_kind": "cross_domain",
+        "concept_composition_ref": "concept_composition::2b34c3d89b7c",
+        "domain_refs": [
+          "weather_climate",
+          "place_region_context"
+        ],
+        "element_count": 2,
+        "elements": [
+          {
+            "confidence": 0.7,
+            "element_hash": "be030c00b8cee5df1f64e78c5aff4f3cf650a2c05a1f19a52104e383353d5fa4",
+            "element_id": "cross_domain_element::be030c00b8ce",
+            "label": "weather_climate",
+            "note": "Mapped via role=governing_principle.",
+            "source_domain": "weather_climate",
+            "target_domain": "place_region_context"
+          },
+          {
+            "confidence": 0.7,
+            "element_hash": "dc6273dda23d39961976b28e261e45cb2b86e3aa1990c01c53f2789e5484da49",
+            "element_id": "cross_domain_element::dc6273dda23d",
+            "label": "place_region_context",
+            "note": "Mapped via role=context_modifier.",
+            "source_domain": "weather_climate",
+            "target_domain": "place_region_context"
+          }
+        ],
+        "fail_closed": false,
+        "lane_notes": [
+          "support_state=grounded",
+          "fail_closed=False",
+          "No multi-domain widening is allowed without re-planning."
+        ],
+        "reason_codes": [
+          "domain_count_bounded_to_two"
+        ],
+        "schema": "agifcore.phase_09.cross_domain_composition.v1",
+        "shared_pattern": "Cross-domain pattern between weather_climate and place_region_context using 2 bounded pattern element(s).",
+        "snapshot_hash": "3eb43e4d91fadb25500ab6bc3c88b8c2ece2a75ae134326d4f1f06aa8de3a430",
+        "turn_id": "turn-p9-cross-01"
+      }
+    },
+    "over_limit_case": {
+      "fixture": [
+        {
+          "ambiguous_request": false,
+          "comparison_requested": true,
+          "conversation_id": "conv-p9-cross",
+          "correction_hint": false,
+          "discourse_mode_hint": "compare",
+          "extracted_terms": [
+            "bridge",
+            "domains"
+          ],
+          "interpretation_hash": "6905bd46b4f8321ed5641bc9f39b823cb7e30dcc6f3f37107489f655d598fbb0",
+          "live_current_requested": false,
+          "local_artifact_requested": false,
+          "question_category": "ordinary",
+          "raw_text_hash": "a8e85c6ae24eb6f9e59776a1dc0cf158845a13fcb4d40124b26f563bf1867fa3",
+          "repeated_fact_hint": false,
+          "schema": "agifcore.phase_07.question_interpretation.v1",
+          "self_knowledge_requested": false,
+          "signal_notes": [
+            "cross-domain request"
+          ],
+          "target_domain_hint": "weather_climate",
+          "token_count": 4,
+          "turn_id": "turn-p9-cross-02",
+          "user_intent": "bridge exactly two domains"
+        },
+        {
+          "blocked_refs": [],
+          "conversation_id": "conv-p9-cross",
+          "critic_trace_ref": "critic_trace::8180f07227f5",
+          "evidence_refs": [
+            "phase7.support.ref.060"
+          ],
+          "governance_trace_ref": "governance_trace::8180f07227f5",
+          "knowledge_gap_reason": "none",
+          "memory_review_ref": "memory_review::77c3b9bc30bf",
+          "next_action": "answer",
+          "reason_codes": [
+            "bounded_local_support"
+          ],
+          "resolution_hash": "8c9b053881c79917d19407429eab2621721818b24839082b0b0a983f7c9f5864",
+          "schema": "agifcore.phase_07.support_state_logic.v1",
+          "selected_domain_ids": [
+            "weather_climate",
+            "place_region_context"
+          ],
+          "simulation_trace_ref": "simulation_trace::8180f07227f5",
+          "support_state": "grounded",
+          "turn_id": "turn-p9-cross-02"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "ambiguous_request": false,
+              "candidate_hash": "53960e3db6a912737a6972ce72c825e50a80e194bdbdc3a0e29d19b511e33fe2",
+              "candidate_id": "cand-cross-001",
+              "confidence": 0.9,
+              "entity_class": "process",
+              "entity_label": "weather_climate",
+              "hidden_variable_cues": [
+                "shared pattern"
+              ],
+              "live_current_requested": false,
+              "matched_terms": [
+                "weather",
+                "climate"
+              ],
+              "reason_codes": [
+                "explicit_topic_cue"
+              ],
+              "region_hint": null,
+              "request_type": "comparison",
+              "science_topic_cues": [
+                "weather_climate"
+              ],
+              "target_domain_hint": "weather_climate"
+            },
+            {
+              "ambiguous_request": false,
+              "candidate_hash": "dea4962a63c1377baf38a32855c6b7e35dfbbcbf79ee3afb7ae7e59f07dbe4ea",
+              "candidate_id": "cand-cross-002",
+              "confidence": 0.87,
+              "entity_class": "place",
+              "entity_label": "place_region_context",
+              "hidden_variable_cues": [
+                "shared pattern"
+              ],
+              "live_current_requested": false,
+              "matched_terms": [
+                "place",
+                "region"
+              ],
+              "reason_codes": [
+                "explicit_topic_cue"
+              ],
+              "region_hint": null,
+              "request_type": "comparison",
+              "science_topic_cues": [
+                "place_region_context"
+              ],
+              "target_domain_hint": "place_region_context"
+            }
+          ],
+          "conversation_id": "conv-p9-cross",
+          "extracted_terms": [
+            "bridge",
+            "domains",
+            "fail closed"
+          ],
+          "hidden_variable_cues": [
+            "shared pattern"
+          ],
+          "inference_hash": "84d02105f1d5336bb6b002db5194ee94f520838dc5f7796c39f880b3a1930ada",
+          "inference_notes": [
+            "cross-domain candidate set is bounded"
+          ],
+          "knowledge_gap_reason_hint": "none",
+          "normalized_text": "bridge exactly two domains and fail closed if a third appears",
+          "raw_text_hash": "raw_text::af1661e35315",
+          "schema": "agifcore.phase_08.entity_request_inference.v1",
+          "science_topic_cues": [
+            "weather_climate",
+            "place_region_context",
+            "engineering_systems"
+          ],
+          "selected_candidate_id": "cand-cross-001",
+          "support_state_hint": "grounded",
+          "turn_id": "turn-p9-cross-02"
+        },
+        {
+          "candidate_count": 3,
+          "candidates": [
+            {
+              "candidate_hash": "f878b3c329297ffdd795d9931fc99a6ceae5e10b650af1b9c7c5487336d990df",
+              "confidence": 0.9,
+              "matched_terms": [
+                "weather",
+                "climate"
+              ],
+              "reason_codes": [
+                "domain_anchor"
+              ],
+              "region_id": "region-weather",
+              "region_kind": "target_domain",
+              "region_label": "weather zone",
+              "supporting_refs": [
+                "phase8.region.ref.001"
+              ],
+              "target_domain": "weather_climate"
+            },
+            {
+              "candidate_hash": "b1c474826fbc2f4a343f240f81331d2c65e52b120caee4890f61099b5c6a1237",
+              "confidence": 0.88,
+              "matched_terms": [
+                "place",
+                "region"
+              ],
+              "reason_codes": [
+                "domain_anchor"
+              ],
+              "region_id": "region-place",
+              "region_kind": "target_domain",
+              "region_label": "place zone",
+              "supporting_refs": [
+                "phase8.region.ref.002"
+              ],
+              "target_domain": "place_region_context"
+            },
+            {
+              "candidate_hash": "fc7348d119d17629f03c804474c383e810fa7a00248f18e3e08a8a9d50f0b0da",
+              "confidence": 0.4,
+              "matched_terms": [
+                "engineer"
+              ],
+              "reason_codes": [
+                "extra_domain_probe"
+              ],
+              "region_id": "region-extra",
+              "region_kind": "inferred_context",
+              "region_label": "extra zone",
+              "supporting_refs": [
+                "phase8.region.ref.003"
+              ],
+              "target_domain": "engineering_systems"
+            }
+          ],
+          "reason_codes": [
+            "bounded_region_choice"
+          ],
+          "request_id": "turn-p9-cross-02",
+          "schema": "agifcore.phase_08.world_region_selection.v1",
+          "selected_region_id": "region-weather",
+          "snapshot_hash": "dd4e81b7eb71833de65d49e144fbdaec714583b9ef4d9b47a874263602251b59",
+          "unresolved": false
+        },
+        {
+          "composed_view": "Composite view for turn-p9-cross-02 with 2 elements.",
+          "concept_composition_ref": "concept_composition::893ca54beaa0",
+          "element_count": 2,
+          "elements": [
+            {
+              "concept_label": "weather_climate",
+              "confidence": 0.86,
+              "element_hash": "a05a7e13955b85b48cfafd2fca046e95652e530a195ac24f5eaabaa2e53f8999",
+              "element_id": "concept_element::db76867774b6",
+              "role_in_composition": "governing_principle",
+              "supporting_refs": [
+                "phase8.summary.ref.060"
+              ]
+            },
+            {
+              "concept_label": "place_region_context",
+              "confidence": 0.72,
+              "element_hash": "b797e13d4df1a1a2c7e6f252354b234ff47ce0a88cdf6d04e3fd8cf36d6b917c",
+              "element_id": "concept_element::4a82032c5409",
+              "role_in_composition": "context_modifier",
+              "supporting_refs": [
+                "phase8.summary.ref.061"
+              ]
+            }
+          ],
+          "fail_closed": false,
+          "lane_notes": [
+            "Concept composition fixture stays bounded for cross-domain composition tests.",
+            "The fixture preserves an explicit concept_composition_ref."
+          ],
+          "schema": "agifcore.phase_09.concept_composition.v1",
+          "snapshot_hash": "55970530c1be1565f753a5af818609e28587ad401b8d19c4714a8d45e0119f81",
+          "turn_id": "turn-p9-cross-02"
+        }
+      ],
+      "snapshot": {
+        "boundary_notes": [
+          "Cross-domain composition defaults to exactly two domains.",
+          "Cross-domain composition remains fail-closed on insufficient support.",
+          "Cross-domain composition reuses concept_composition_ref for lineage continuity."
+        ],
+        "composition_kind": "cross_domain",
+        "concept_composition_ref": "concept_composition::893ca54beaa0",
+        "domain_refs": [
+          "weather_climate",
+          "place_region_context"
+        ],
+        "element_count": 2,
+        "elements": [
+          {
+            "confidence": 0.7,
+            "element_hash": "be030c00b8cee5df1f64e78c5aff4f3cf650a2c05a1f19a52104e383353d5fa4",
+            "element_id": "cross_domain_element::be030c00b8ce",
+            "label": "weather_climate",
+            "note": "Mapped via role=governing_principle.",
+            "source_domain": "weather_climate",
+            "target_domain": "place_region_context"
+          },
+          {
+            "confidence": 0.7,
+            "element_hash": "dc6273dda23d39961976b28e261e45cb2b86e3aa1990c01c53f2789e5484da49",
+            "element_id": "cross_domain_element::dc6273dda23d",
+            "label": "place_region_context",
+            "note": "Mapped via role=context_modifier.",
+            "source_domain": "weather_climate",
+            "target_domain": "place_region_context"
+          }
+        ],
+        "fail_closed": false,
+        "lane_notes": [
+          "support_state=grounded",
+          "fail_closed=False",
+          "No multi-domain widening is allowed without re-planning."
+        ],
+        "reason_codes": [
+          "domain_count_bounded_to_two"
+        ],
+        "schema": "agifcore.phase_09.cross_domain_composition.v1",
+        "shared_pattern": "Cross-domain pattern between weather_climate and place_region_context using 2 bounded pattern element(s).",
+        "snapshot_hash": "4e396171538c7743406f9edc90642a10d60f379fbd399421e28caf425130ef7b",
+        "turn_id": "turn-p9-cross-02"
+      }
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "exactly-two-domains-kept",
+      "result": "pass"
+    },
+    {
+      "id": "over-limit-domains-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "concept-composition-ref-preserved",
+      "result": "pass"
+    },
+    {
+      "id": "inputs-remain-read-only",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_09_RICH_EXPRESSION_AND_COMPOSITION.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/contracts.py",
+    "projects/agifcore_master/04_execution/phase_07_conversation_core/agifcore_phase7_conversation/answer_contract.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/contracts.py",
+    "projects/agifcore_master/04_execution/phase_08_science_and_world_awareness/agifcore_phase8_science_world_awareness/science_world_turn.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/contracts.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/teaching.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/comparison.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/planning.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/synthesis.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/analogy.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/concept_composition.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/cross_domain_composition.py",
+    "projects/agifcore_master/04_execution/phase_09_rich_expression_and_composition/agifcore_phase9_rich_expression/audience_aware_explanation_quality.py",
+    "projects/agifcore_master/05_testing/phase_09_rich_expression_and_composition/_phase_09_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_09_rich_expression_and_composition/verify_phase_09_cross_domain_composition.py"
+  ],
+  "notes": [
+    "cross-domain composition defaults to exactly two domains and fail-closes on under-support",
+    "rich_expression_turn.py is present; lane tests still call engines directly",
+    "Phase 9 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_cross_domain_composition_report.json"
+  },
+  "phase": "9",
+  "status": "pass",
+  "verifier": "verify_phase_09_cross_domain_composition"
+}

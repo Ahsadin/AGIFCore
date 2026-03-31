@@ -1,0 +1,58 @@
+{
+  "available_report_count": 8,
+  "invalid_reports": [],
+  "missing_reports": [],
+  "notes": [
+    "this manifest tracks machine-readable verifier outputs only",
+    "Phase 9 remains open",
+    "manifest is rebuilt from actual report files on disk",
+    "no approval implied",
+    "rich_expression_turn.py is present; lane tests still call engines directly"
+  ],
+  "phase": "9",
+  "phase_remains_open": true,
+  "reports": [
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_teaching_report.json",
+      "report_id": "teaching",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_comparison_report.json",
+      "report_id": "comparison",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_planning_report.json",
+      "report_id": "planning",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_synthesis_report.json",
+      "report_id": "synthesis",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_analogy_report.json",
+      "report_id": "analogy",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_concept_composition_report.json",
+      "report_id": "concept_composition",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_cross_domain_composition_report.json",
+      "report_id": "cross_domain_composition",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_audience_aware_explanation_quality_report.json",
+      "report_id": "audience_aware_explanation_quality",
+      "status": "pass"
+    }
+  ],
+  "required_report_count": 8,
+  "status": "phase_9_verifier_family_pass"
+}

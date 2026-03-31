@@ -1,0 +1,74 @@
+{
+  "phase": "9",
+  "status": "open",
+  "scenario": "rich_expression_demo",
+  "inspection_points": [
+    {
+      "lane": "teaching",
+      "evidence_report": "phase_09_teaching_report.json",
+      "verifier_assertions": [
+        "teaching-sections-bounded",
+        "teaching-honesty-boundary-emitted"
+      ]
+    },
+    {
+      "lane": "comparison",
+      "evidence_report": "phase_09_comparison_report.json",
+      "verifier_assertions": [
+        "comparison-axes-bounded",
+        "comparison-intent-respected"
+      ]
+    },
+    {
+      "lane": "planning",
+      "evidence_report": "phase_09_planning_report.json",
+      "verifier_assertions": [
+        "planning-steps-bounded",
+        "stop-if-unsure-preserved",
+        "fresh-measurement-step-added"
+      ]
+    },
+    {
+      "lane": "synthesis",
+      "evidence_report": "phase_09_synthesis_report.json",
+      "verifier_assertions": [
+        "synthesis-inputs-bounded",
+        "support-honesty-preserved",
+        "uncertainty-surfaced"
+      ]
+    },
+    {
+      "lane": "analogy",
+      "evidence_report": "phase_09_analogy_report.json",
+      "verifier_assertions": [
+        "analogy-count-bounded",
+        "analogy-trace-ref-present",
+        "break-limits-and-support-refs-present"
+      ]
+    },
+    {
+      "lane": "concept_composition",
+      "evidence_report": "phase_09_concept_composition_report.json",
+      "verifier_assertions": [
+        "concept-elements-bounded",
+        "concept-composition-ref-present",
+        "fail-closed-on-weak-support"
+      ]
+    },
+    {
+      "lane": "cross_domain_composition",
+      "evidence_report": "phase_09_cross_domain_composition_report.json",
+      "verifier_assertions": [
+        "exactly-two-domains-kept",
+        "over-limit-domains-bounded",
+        "concept-composition-ref-preserved"
+      ]
+    }
+  ],
+  "supporting_evidence_manifest": "phase_09_evidence_manifest.json",
+  "notes": [
+    "summary only",
+    "Phase 9 remains open",
+    "no approval implied"
+  ]
+}

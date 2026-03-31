@@ -1,0 +1,35 @@
+{
+  "phase": "9",
+  "status": "open",
+  "bundle_type": "review_only",
+  "demo_scenarios": [
+    {
+      "id": "rich_expression_demo",
+      "path": "phase_09_rich_expression_demo.md",
+      "supporting_report_paths": [
+        "phase_09_teaching_report.json",
+        "phase_09_comparison_report.json",
+        "phase_09_planning_report.json",
+        "phase_09_synthesis_report.json",
+        "phase_09_analogy_report.json",
+        "phase_09_concept_composition_report.json",
+        "phase_09_cross_domain_composition_report.json"
+      ]
+    },
+    {
+      "id": "non_generic_chat_quality_demo",
+      "path": "phase_09_non_generic_chat_quality_demo.md",
+      "supporting_report_paths": [
+        "phase_09_audience_aware_explanation_quality_report.json",
+        "phase_09_teaching_report.json",
+        "phase_09_comparison_report.json"
+      ]
+    }
+  ],
+  "evidence_manifest": "phase_09_evidence_manifest.json",
+  "notes": [
+    "Phase 9 remains open",
+    "review only",
+    "no approval implied"
+  ]
+}

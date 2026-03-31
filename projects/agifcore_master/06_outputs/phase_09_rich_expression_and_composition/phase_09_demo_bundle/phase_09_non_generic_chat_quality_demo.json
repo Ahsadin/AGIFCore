@@ -1,0 +1,45 @@
+{
+  "phase": "9",
+  "status": "open",
+  "scenario": "non_generic_chat_quality_demo",
+  "inspection_points": [
+    {
+      "case": "novice",
+      "evidence_report": "phase_09_audience_aware_explanation_quality_report.json",
+      "verifier_assertions": [
+        "audience-profile-selected",
+        "terminology-and-brevity-bounded",
+        "uncertainty-and-caution-preserved"
+      ],
+      "observed_values": {
+        "audience_profile": "novice",
+        "terminology_density": "low",
+        "brevity_level": "balanced",
+        "uncertainty_preserved": true,
+        "caution_preserved": true
+      }
+    },
+    {
+      "case": "technical",
+      "evidence_report": "phase_09_audience_aware_explanation_quality_report.json",
+      "verifier_assertions": [
+        "audience-profile-selected",
+        "terminology-and-brevity-bounded",
+        "uncertainty-and-caution-preserved"
+      ],
+      "observed_values": {
+        "audience_profile": "technical",
+        "terminology_density": "high",
+        "brevity_level": "detailed",
+        "uncertainty_preserved": true,
+        "caution_preserved": false
+      }
+    }
+  ],
+  "supporting_evidence_manifest": "phase_09_evidence_manifest.json",
+  "notes": [
+    "summary only",
+    "Phase 9 remains open",
+    "no approval implied"
+  ]
+}

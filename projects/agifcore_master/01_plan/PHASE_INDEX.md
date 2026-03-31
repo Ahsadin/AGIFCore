@@ -19,7 +19,7 @@ Phase order may not be rearranged by execution convenience.
 | 6 | world model and simulator | define and later build simulation and world-model boundaries | `approved` |
 | 7 | conversation core | define and later build governed conversation and trace-aware answer flow | `approved` |
 | 8 | science and world awareness | define and later build scientific method, falsification, and world-facing reasoning support | `approved` |
-| 9 | rich expression and composition | define and later build higher-order composition and expressive response capabilities | `open` |
+| 9 | rich expression and composition | define and later build higher-order composition and expressive response capabilities | `approved` |
 | 10 | meta-cognition and critique | define and later build critique, self-check, and failure-detection layers | `open` |
 | 11 | governed self-improvement | define and later build tightly governed improvement loops without hidden autonomy | `open` |
 | 12 | structural growth | define and later build controlled growth of fabric, tissues, and transfer structures | `open` |
