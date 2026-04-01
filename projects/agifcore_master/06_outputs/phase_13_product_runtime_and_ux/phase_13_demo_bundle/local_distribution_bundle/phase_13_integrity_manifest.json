@@ -1,0 +1,13 @@
+{
+  "artifact_hashes": {
+    "INSTALL_LOCAL.md": "df5bf05fd4046fd54cc39d483fdd8f8fee2f15bb50076389b1ecb3b08734324f",
+    "launch_phase_13_local_desktop_ui.sh": "49a7763492608f1e914e0da641199d35e8bcd83fd4f0330c33076458745afd99",
+    "launch_phase_13_local_gateway.sh": "425af3aa0b548eea96693f2cde70d6a425fdead3f808d5c6e99cd15d7308120d",
+    "launch_phase_13_local_runner.sh": "22eb9a1c87117c9a0fdd6a083351d366045760daa03a6fd453e71f7500137074"
+  },
+  "integrity_hash": "f904f2426f9c8bc3efbf72b5310d7041f406913d9a5156bdbd98c192b47f87e4",
+  "policy_hash": "ec7f9f6e4656f6c9319df98688e02853e9f69e8384a450fc28e1d48269b57a9c",
+  "public_release_blocked": true,
+  "session_id": "phase13_session::ff1815e1d727",
+  "shell_snapshot_hash": "84bc09e2fbcdead1ffe755f4a06070e4e4ec39b8a7820833b68abd20aaf9e659"
+}

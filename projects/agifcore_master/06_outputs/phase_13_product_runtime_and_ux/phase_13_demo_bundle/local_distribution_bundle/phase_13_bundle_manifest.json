@@ -1,0 +1,15 @@
+{
+  "artifacts": [
+    "phase_13_bundle_manifest.json",
+    "phase_13_integrity_manifest.json",
+    "INSTALL_LOCAL.md",
+    "launch_phase_13_local_runner.sh",
+    "launch_phase_13_local_gateway.sh",
+    "launch_phase_13_local_desktop_ui.sh"
+  ],
+  "bundle_name": "agifcore_phase13_local_bundle_phase13_session::ff1815e1d727",
+  "public_release_blocked": true,
+  "runtime_entrypoint": "agifcore_phase13_product_runtime.product_runtime_shell.ProductRuntimeShell",
+  "scope": "local_distribution_only",
+  "session_id": "phase13_session::ff1815e1d727"
+}

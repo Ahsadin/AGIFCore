@@ -1,0 +1,15 @@
+{
+  "notes": [
+    "summary only",
+    "Phase 13 remains open",
+    "no approval implied"
+  ],
+  "phase": "13",
+  "scenario_files": [
+    "phase_13_end_to_end_product_demo.json",
+    "phase_13_fail_closed_ux_demo.json",
+    "phase_13_installer_distribution_demo.json"
+  ],
+  "status": "open",
+  "supporting_evidence_manifest": "phase_13_evidence_manifest.json"
+}

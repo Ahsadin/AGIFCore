@@ -1,0 +1,98 @@
+{
+  "anchors": {
+    "safe_shutdown": {
+      "blocked_surfaces_after_shutdown": [
+        "session_open",
+        "conversation_turn",
+        "state_export",
+        "trace_export",
+        "memory_review_export",
+        "safe_shutdown",
+        "task_submit",
+        "policy_update"
+      ],
+      "conversation_id": "conv-p10-weak",
+      "dropped_work_detected": false,
+      "flush_complete": true,
+      "memory_review_export_hash": "a2d31910f16f441d6f86aea504d0b3fa733a5e83da3c31081e174da6e6c24fb8",
+      "receipt_hash": "27da6327665a99af75dd69b3b08f924c7306e00f04143542b03c9dc12b49b1aa",
+      "rollback_refs": [],
+      "schema": "agifcore.phase_13.safe_shutdown.v1",
+      "session_id": "phase13_session::ff1815e1d727",
+      "shutdown_requested_at": "2026-04-01T11:32:52+00:00",
+      "shutdown_status": "safe_stopped",
+      "state_export_hash": "4ae7a3808145dabcfd4349fb412b89bb86230a117c02189e18af701bfe874241",
+      "trace_export_hash": "91789512065be744fb8384a773038698a111e4212097553508403c20bb2885eb",
+      "turn_id": "turn-p10-weak"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "shutdown-schema-correct",
+      "result": "pass"
+    },
+    {
+      "id": "flush-complete",
+      "result": "pass"
+    },
+    {
+      "id": "blocked-surfaces-listed-after-shutdown",
+      "result": "pass"
+    },
+    {
+      "id": "rollback-refs-linked",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_13_PRODUCT_RUNTIME_AND_UX.md",
+    "projects/agifcore_master/01_plan/PHASE_12_STRUCTURAL_GROWTH.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/03_design/PRODUCT_RUNTIME_MODEL.md",
+    "projects/agifcore_master/03_design/BUNDLE_INTEGRITY_MODEL.md",
+    "projects/agifcore_master/03_design/DEPLOYMENT_MODEL.md",
+    "projects/agifcore_master/03_design/SANDBOX_MODEL.md",
+    "projects/agifcore_master/03_design/PUBLIC_RELEASE_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/workspace_state.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/event_bus.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/replay_ledger.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_improvement_cycle.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/structural_growth_cycle.py",
+    "projects/agifcore_master/05_testing/phase_12_structural_growth/_phase_12_verifier_common.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/contracts.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/embeddable_runtime_api.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/local_runner.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/local_gateway.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/desktop_ui.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/state_export.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/trace_export.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/memory_review_export.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/safe_shutdown.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/fail_closed_ux.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/installer_distribution.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/product_runtime_shell.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/__init__.py",
+    "projects/agifcore_master/05_testing/phase_13_product_runtime_and_ux/_phase_13_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_13_product_runtime_and_ux/verify_phase_13_safe_shutdown.py"
+  ],
+  "notes": [
+    "safe shutdown emits a receipt and preserves rollback anchors instead of hiding stop behavior",
+    "Phase 13 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_evidence/phase_13_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_evidence/phase_13_safe_shutdown_report.json"
+  },
+  "phase": "13",
+  "status": "pass",
+  "verifier": "verify_phase_13_safe_shutdown"
+}

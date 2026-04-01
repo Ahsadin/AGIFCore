@@ -1,0 +1,356 @@
+{
+  "anchors": {
+    "blocked_policy_mismatch": {
+      "envelope": {
+        "allowed": false,
+        "allowlisted_routes": [
+          "/api/session-open",
+          "/api/conversation-turn",
+          "/api/state-export",
+          "/api/trace-export",
+          "/api/memory-review-export",
+          "/api/safe-shutdown",
+          "/api/task-submit",
+          "/api/policy-update",
+          "/api/fail-closed-help",
+          "/api/installer-status"
+        ],
+        "deny_reason": "policy_hash_mismatch",
+        "envelope_hash": "d18f2a4ede635275f4b704d426034612e11a32849b11528fd319b869d34327b3",
+        "method": "POST",
+        "occurred_at": "2026-04-01T11:32:52+00:00",
+        "payload_size_bytes": 25,
+        "policy_hash": "bad-policy-hash",
+        "request_count": 4,
+        "request_id": "e9ca73af59150c22",
+        "requested_surface": "conversation_turn",
+        "route": "/api/conversation-turn",
+        "schema": "agifcore.phase_13.gateway_envelope.v1",
+        "session_id": "phase13_session::ff1815e1d727"
+      },
+      "policy_hash": "ec7f9f6e4656f6c9319df98688e02853e9f69e8384a450fc28e1d48269b57a9c",
+      "response": {
+        "evidence_refs": [
+          "phase8.summary.ref.001",
+          "phase8.summary.ref.002",
+          "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+          "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797",
+          "e8386a01375de8b82858e0e81748c9d5e02bdac3a9cef8a808316099b5d132d9",
+          "86e4c43144503e72da9429fc68abd2c34a2cbf7067527496bb73c669121147cf",
+          "2ff7d18c8932c3abafb1bf08dfa681f882a07a590381d3203bd61b4b99413595",
+          "f065456200aded7dc74db12d3526eff162ec5d08ee8924f3e9bcc929fd888efb",
+          "measurement::phase11_proposal::f93c8ce20e8b",
+          "measurement::phase11_proposal::07ad3e8b431f",
+          "decision::phase11_proposal::f93c8ce20e8b",
+          "decision::phase11_proposal::07ad3e8b431f"
+        ],
+        "headline": "Gateway Policy",
+        "next_steps": [
+          "refresh session_open",
+          "retry with the returned policy hash"
+        ],
+        "reason_code": "policy_hash_mismatch",
+        "schema": "agifcore.phase_13.fail_closed_ux.v1",
+        "state_hash": "21fc191cbb629c0f8651f8d9e624c98e49a70e6f13490e547264369e4507b134",
+        "state_id": "fail_closed::gateway_policy::policy_hash_mismatch",
+        "surface_name": "gateway_policy",
+        "transfer_execution_enabled": false,
+        "user_guidance": "The request policy hash does not match the live shell policy, so the gateway fails closed."
+      },
+      "route": "/api/conversation-turn",
+      "schema": "agifcore.phase_13.gateway_response.v1",
+      "status": "blocked",
+      "surface_name": "conversation_turn"
+    },
+    "blocked_reserved_surface": {
+      "envelope": {
+        "allowed": false,
+        "allowlisted_routes": [
+          "/api/session-open",
+          "/api/conversation-turn",
+          "/api/state-export",
+          "/api/trace-export",
+          "/api/memory-review-export",
+          "/api/safe-shutdown",
+          "/api/task-submit",
+          "/api/policy-update",
+          "/api/fail-closed-help",
+          "/api/installer-status"
+        ],
+        "deny_reason": "reserved_surface_fail_closed",
+        "envelope_hash": "b8c159f010173f9f04826fabef2479a71cc9e005c0f7efaa1855108aa8b3b6f4",
+        "method": "POST",
+        "occurred_at": "2026-04-01T11:32:52+00:00",
+        "payload_size_bytes": 19,
+        "policy_hash": "ec7f9f6e4656f6c9319df98688e02853e9f69e8384a450fc28e1d48269b57a9c",
+        "request_count": 2,
+        "request_id": "91af9b89e56a875c",
+        "requested_surface": "task_submit",
+        "route": "/api/task-submit",
+        "schema": "agifcore.phase_13.gateway_envelope.v1",
+        "session_id": "phase13_session::ff1815e1d727"
+      },
+      "policy_hash": "ec7f9f6e4656f6c9319df98688e02853e9f69e8384a450fc28e1d48269b57a9c",
+      "response": {
+        "evidence_refs": [
+          "phase8.summary.ref.001",
+          "phase8.summary.ref.002",
+          "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+          "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797",
+          "e8386a01375de8b82858e0e81748c9d5e02bdac3a9cef8a808316099b5d132d9",
+          "86e4c43144503e72da9429fc68abd2c34a2cbf7067527496bb73c669121147cf",
+          "2ff7d18c8932c3abafb1bf08dfa681f882a07a590381d3203bd61b4b99413595",
+          "f065456200aded7dc74db12d3526eff162ec5d08ee8924f3e9bcc929fd888efb",
+          "measurement::phase11_proposal::f93c8ce20e8b",
+          "measurement::phase11_proposal::07ad3e8b431f",
+          "decision::phase11_proposal::f93c8ce20e8b",
+          "decision::phase11_proposal::07ad3e8b431f"
+        ],
+        "headline": "Task Submit",
+        "next_steps": [
+          "use conversation_turn",
+          "inspect trace_export"
+        ],
+        "reason_code": "reserved_surface_fail_closed",
+        "schema": "agifcore.phase_13.fail_closed_ux.v1",
+        "state_hash": "234990fc52d6b93fd79d2fbc336cd7b72c2422410b2ed3d1209743b14d183e9e",
+        "state_id": "fail_closed::task_submit::reserved_surface_fail_closed",
+        "surface_name": "task_submit",
+        "transfer_execution_enabled": false,
+        "user_guidance": "Task submission stays blocked in the first Phase 13 slice. Use conversation_turn instead."
+      },
+      "route": "/api/task-submit",
+      "schema": "agifcore.phase_13.gateway_response.v1",
+      "status": "blocked",
+      "surface_name": "task_submit"
+    },
+    "blocked_unknown_route": {
+      "envelope": {
+        "allowed": false,
+        "allowlisted_routes": [
+          "/api/session-open",
+          "/api/conversation-turn",
+          "/api/state-export",
+          "/api/trace-export",
+          "/api/memory-review-export",
+          "/api/safe-shutdown",
+          "/api/task-submit",
+          "/api/policy-update",
+          "/api/fail-closed-help",
+          "/api/installer-status"
+        ],
+        "deny_reason": "unknown_route",
+        "envelope_hash": "d539fde3ac0af2593cc7bca59135aa1d6eb970fb7960a23005ab713abbb3d9ca",
+        "method": "POST",
+        "occurred_at": "2026-04-01T11:32:52+00:00",
+        "payload_size_bytes": 2,
+        "policy_hash": "ec7f9f6e4656f6c9319df98688e02853e9f69e8384a450fc28e1d48269b57a9c",
+        "request_count": 3,
+        "request_id": "e82a5fb7766f8778",
+        "requested_surface": "unknown_surface",
+        "route": "/api/not-real",
+        "schema": "agifcore.phase_13.gateway_envelope.v1",
+        "session_id": "phase13_session::ff1815e1d727"
+      },
+      "policy_hash": "ec7f9f6e4656f6c9319df98688e02853e9f69e8384a450fc28e1d48269b57a9c",
+      "response": {
+        "evidence_refs": [
+          "phase8.summary.ref.001",
+          "phase8.summary.ref.002",
+          "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+          "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797",
+          "e8386a01375de8b82858e0e81748c9d5e02bdac3a9cef8a808316099b5d132d9",
+          "86e4c43144503e72da9429fc68abd2c34a2cbf7067527496bb73c669121147cf",
+          "2ff7d18c8932c3abafb1bf08dfa681f882a07a590381d3203bd61b4b99413595",
+          "f065456200aded7dc74db12d3526eff162ec5d08ee8924f3e9bcc929fd888efb",
+          "measurement::phase11_proposal::f93c8ce20e8b",
+          "measurement::phase11_proposal::07ad3e8b431f",
+          "decision::phase11_proposal::f93c8ce20e8b",
+          "decision::phase11_proposal::07ad3e8b431f"
+        ],
+        "headline": "Gateway Route",
+        "next_steps": [
+          "retry with an allowlisted route",
+          "inspect session_open"
+        ],
+        "reason_code": "unknown_route",
+        "schema": "agifcore.phase_13.fail_closed_ux.v1",
+        "state_hash": "9e62fcbe102cc379e6a9d558d80a51b128174aaeb517f92edfba5a205a03ee32",
+        "state_id": "fail_closed::gateway_route::unknown_route",
+        "surface_name": "gateway_route",
+        "transfer_execution_enabled": false,
+        "user_guidance": "The requested local route is not allowlisted for this product shell."
+      },
+      "route": "/api/not-real",
+      "schema": "agifcore.phase_13.gateway_response.v1",
+      "status": "blocked",
+      "surface_name": "unknown_surface"
+    },
+    "conversation_route": {
+      "envelope": {
+        "allowed": true,
+        "allowlisted_routes": [
+          "/api/session-open",
+          "/api/conversation-turn",
+          "/api/state-export",
+          "/api/trace-export",
+          "/api/memory-review-export",
+          "/api/safe-shutdown",
+          "/api/task-submit",
+          "/api/policy-update",
+          "/api/fail-closed-help",
+          "/api/installer-status"
+        ],
+        "deny_reason": null,
+        "envelope_hash": "b0ab63e0371a729fcbba7b676de63db13110c63bfe8502060906ecd7c4cd016a",
+        "method": "POST",
+        "occurred_at": "2026-04-01T11:32:52+00:00",
+        "payload_size_bytes": 34,
+        "policy_hash": "ec7f9f6e4656f6c9319df98688e02853e9f69e8384a450fc28e1d48269b57a9c",
+        "request_count": 1,
+        "request_id": "c43b6ad1f793a1db",
+        "requested_surface": "conversation_turn",
+        "route": "/api/conversation-turn",
+        "schema": "agifcore.phase_13.gateway_envelope.v1",
+        "session_id": "phase13_session::ff1815e1d727"
+      },
+      "policy_hash": "ec7f9f6e4656f6c9319df98688e02853e9f69e8384a450fc28e1d48269b57a9c",
+      "response": {
+        "abstain_or_answer": "abstain",
+        "conversation_id": "conv-p10-weak",
+        "evidence_refs": [
+          "phase8.summary.ref.001",
+          "phase8.summary.ref.002",
+          "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+          "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797",
+          "e8386a01375de8b82858e0e81748c9d5e02bdac3a9cef8a808316099b5d132d9",
+          "86e4c43144503e72da9429fc68abd2c34a2cbf7067527496bb73c669121147cf",
+          "2ff7d18c8932c3abafb1bf08dfa681f882a07a590381d3203bd61b4b99413595",
+          "f065456200aded7dc74db12d3526eff162ec5d08ee8924f3e9bcc929fd888efb",
+          "measurement::phase11_proposal::f93c8ce20e8b",
+          "measurement::phase11_proposal::07ad3e8b431f",
+          "decision::phase11_proposal::f93c8ce20e8b",
+          "decision::phase11_proposal::07ad3e8b431f",
+          "inquiry::d1657daaa896",
+          "phase12_gap::6061daca1549",
+          "phase12_gap::7cf580032ce2",
+          "phase12_theory::6e1c2b18e5e2",
+          "phase12_domain_genesis::b7f9afcbfe5d",
+          "phase12_procedure_tool::e6bcb91b12c2",
+          "phase12_reorganization::09ea57a79e12",
+          "dc54e0867e9708352cbc0fa0ffaf30a6328aedda038ec16fc62c641dfa6034fd",
+          "5df43dd942d8223120c35caabca11ef3cd7e3e5c4d0e2ca4e598770cf6bcb381",
+          "91918ef29258bcb918e7c81125f97ce3275066f6379a8def247f869bc2070a65"
+        ],
+        "final_answer_mode": "search_needed",
+        "knowledge_gap_reason": "needs_fresh_information",
+        "memory_review_ref": "memory_review::798850d90bd6",
+        "next_action": "search_local",
+        "phase10_turn_hash": "dc54e0867e9708352cbc0fa0ffaf30a6328aedda038ec16fc62c641dfa6034fd",
+        "phase11_cycle_hash": "5df43dd942d8223120c35caabca11ef3cd7e3e5c4d0e2ca4e598770cf6bcb381",
+        "phase12_cycle_hash": "91918ef29258bcb918e7c81125f97ce3275066f6379a8def247f869bc2070a65",
+        "request_text": "gateway pass path",
+        "response_kind": "guided_search",
+        "response_text": "The answer is bounded but weak because support is incomplete, so the next safe move is to re-check support.",
+        "schema": "agifcore.phase_13.conversation_turn.v1",
+        "selected_outcome": "recheck_support",
+        "session_id": "phase13_session::ff1815e1d727",
+        "structural_growth_refs": [
+          "phase12_gap::6061daca1549",
+          "phase12_gap::7cf580032ce2"
+        ],
+        "support_honesty_preserved": true,
+        "support_state": "search_needed",
+        "trace_anchor_refs": [
+          "meta_observer::80e48682c6ef",
+          "weak_answer_diagnosis::9b56ed826747",
+          "strategy_journal::a39c7f7e13e6",
+          "self_model::8b2b3db44440",
+          "skeptic::5d11aa5a2796",
+          "inquiry::d1657daaa896",
+          "phase12_gap::6061daca1549",
+          "phase12_gap::7cf580032ce2",
+          "phase12_theory::6e1c2b18e5e2",
+          "phase12_domain_genesis::b7f9afcbfe5d",
+          "phase12_procedure_tool::e6bcb91b12c2",
+          "phase12_reorganization::09ea57a79e12"
+        ],
+        "turn_hash": "0a913827cb1c2c1e0315cd28a201cecd976469c538c298764c9f55a0dc1136a4",
+        "turn_id": "turn-p10-weak"
+      },
+      "route": "/api/conversation-turn",
+      "schema": "agifcore.phase_13.gateway_response.v1",
+      "status": "pass",
+      "surface_name": "conversation_turn"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "allowlisted-route-count-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "conversation-route-passes",
+      "result": "pass"
+    },
+    {
+      "id": "reserved-surfaces-blocked",
+      "result": "pass"
+    },
+    {
+      "id": "unknown-route-and-policy-mismatch-blocked",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_13_PRODUCT_RUNTIME_AND_UX.md",
+    "projects/agifcore_master/01_plan/PHASE_12_STRUCTURAL_GROWTH.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/03_design/PRODUCT_RUNTIME_MODEL.md",
+    "projects/agifcore_master/03_design/BUNDLE_INTEGRITY_MODEL.md",
+    "projects/agifcore_master/03_design/DEPLOYMENT_MODEL.md",
+    "projects/agifcore_master/03_design/SANDBOX_MODEL.md",
+    "projects/agifcore_master/03_design/PUBLIC_RELEASE_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/workspace_state.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/event_bus.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/replay_ledger.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_improvement_cycle.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/structural_growth_cycle.py",
+    "projects/agifcore_master/05_testing/phase_12_structural_growth/_phase_12_verifier_common.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/contracts.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/embeddable_runtime_api.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/local_runner.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/local_gateway.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/desktop_ui.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/state_export.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/trace_export.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/memory_review_export.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/safe_shutdown.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/fail_closed_ux.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/installer_distribution.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/product_runtime_shell.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/__init__.py",
+    "projects/agifcore_master/05_testing/phase_13_product_runtime_and_ux/_phase_13_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_13_product_runtime_and_ux/verify_phase_13_local_gateway.py"
+  ],
+  "notes": [
+    "the local gateway enforces allowlisted routes, policy hash checks, and fail-closed blocking",
+    "Phase 13 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_evidence/phase_13_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_evidence/phase_13_local_gateway_report.json"
+  },
+  "phase": "13",
+  "status": "pass",
+  "verifier": "verify_phase_13_local_gateway"
+}

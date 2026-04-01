@@ -1,0 +1,218 @@
+{
+  "anchors": {
+    "state_export": {
+      "conversation_id": "conv-p10-weak",
+      "phase11_cycle_hash": "5df43dd942d8223120c35caabca11ef3cd7e3e5c4d0e2ca4e598770cf6bcb381",
+      "phase12_cycle_hash": "91918ef29258bcb918e7c81125f97ce3275066f6379a8def247f869bc2070a65",
+      "schema": "agifcore.phase_13.state_export.v1",
+      "session_id": "phase13_session::ff1815e1d727",
+      "snapshot_hash": "4ae7a3808145dabcfd4349fb412b89bb86230a117c02189e18af701bfe874241",
+      "source_payload_bytes": 4794,
+      "source_state_export": {
+        "cells": [
+          {
+            "cell_id": "local_runner",
+            "cell_ref": "workspace://phase13-runtime-phase13_session::ff1815e1d727/cell/local_runner",
+            "lifecycle_state": "running",
+            "quarantine_ref": null,
+            "role_family": "product_runtime_surface",
+            "rollback_ref": null,
+            "updated_at": "2026-04-01T11:32:52+00:00",
+            "workspace_ref": "workspace://phase13-runtime-phase13_session::ff1815e1d727/cell/local_runner"
+          },
+          {
+            "cell_id": "local_gateway",
+            "cell_ref": "workspace://phase13-runtime-phase13_session::ff1815e1d727/cell/local_gateway",
+            "lifecycle_state": "serving",
+            "quarantine_ref": null,
+            "role_family": "product_runtime_surface",
+            "rollback_ref": null,
+            "updated_at": "2026-04-01T11:32:52+00:00",
+            "workspace_ref": "workspace://phase13-runtime-phase13_session::ff1815e1d727/cell/local_gateway"
+          },
+          {
+            "cell_id": "local_desktop_ui",
+            "cell_ref": "workspace://phase13-runtime-phase13_session::ff1815e1d727/cell/local_desktop_ui",
+            "lifecycle_state": "presenting",
+            "quarantine_ref": null,
+            "role_family": "product_runtime_surface",
+            "rollback_ref": null,
+            "updated_at": "2026-04-01T11:32:52+00:00",
+            "workspace_ref": "workspace://phase13-runtime-phase13_session::ff1815e1d727/cell/local_desktop_ui"
+          }
+        ],
+        "created_at": "2026-04-01T11:32:52+00:00",
+        "evidence_refs": [
+          "phase8.summary.ref.001",
+          "phase8.summary.ref.002",
+          "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+          "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797",
+          "e8386a01375de8b82858e0e81748c9d5e02bdac3a9cef8a808316099b5d132d9",
+          "86e4c43144503e72da9429fc68abd2c34a2cbf7067527496bb73c669121147cf",
+          "2ff7d18c8932c3abafb1bf08dfa681f882a07a590381d3203bd61b4b99413595",
+          "f065456200aded7dc74db12d3526eff162ec5d08ee8924f3e9bcc929fd888efb",
+          "measurement::phase11_proposal::f93c8ce20e8b",
+          "measurement::phase11_proposal::07ad3e8b431f",
+          "decision::phase11_proposal::f93c8ce20e8b",
+          "decision::phase11_proposal::07ad3e8b431f",
+          "inquiry::d1657daaa896",
+          "phase12_gap::6061daca1549",
+          "phase12_gap::7cf580032ce2",
+          "phase12_theory::6e1c2b18e5e2",
+          "phase12_domain_genesis::b7f9afcbfe5d",
+          "phase12_procedure_tool::e6bcb91b12c2",
+          "phase12_reorganization::09ea57a79e12",
+          "dc54e0867e9708352cbc0fa0ffaf30a6328aedda038ec16fc62c641dfa6034fd",
+          "5df43dd942d8223120c35caabca11ef3cd7e3e5c4d0e2ca4e598770cf6bcb381",
+          "91918ef29258bcb918e7c81125f97ce3275066f6379a8def247f869bc2070a65"
+        ],
+        "memory_hook_surface": {
+          "memory_review_refs": [
+            {
+              "conversation_id": "conv-p10-weak",
+              "memory_review_ref": "memory_review::798850d90bd6",
+              "turn_id": "turn-p10-weak"
+            }
+          ],
+          "notes": [
+            "references only",
+            "no semantic memory",
+            "no procedural memory auto-execution",
+            "review export stays inspectable and bounded"
+          ],
+          "retention_candidate_refs": [
+            "phase12_theory::6e1c2b18e5e2",
+            "phase12_domain_genesis::b7f9afcbfe5d",
+            "phase12_procedure_tool::e6bcb91b12c2"
+          ],
+          "schema": "agifcore.phase_02.memory_review_export.v1",
+          "workspace_id": "phase13-runtime-phase13_session::ff1815e1d727"
+        },
+        "operator_commands": [
+          "inspect_state",
+          "plan_governed_action",
+          "verify_or_replay",
+          "rollback_or_quarantine",
+          "export_evidence"
+        ],
+        "operator_log": [
+          {
+            "command_class": "inspect_state",
+            "occurred_at": "2026-04-01T11:32:52+00:00",
+            "turn_ref": "workspace://phase13-runtime-phase13_session::ff1815e1d727/turn/conv-p10-weak/turn-p10-weak"
+          },
+          {
+            "command_class": "export_evidence",
+            "occurred_at": "2026-04-01T11:32:52+00:00",
+            "turn_ref": "workspace://phase13-runtime-phase13_session::ff1815e1d727/turn/conv-p10-weak/turn-p10-weak"
+          }
+        ],
+        "quarantine_refs": [],
+        "replay_refs": [
+          "replay://phase13/ea43fbd6b45ca6be"
+        ],
+        "rollback_refs": [],
+        "schema": "agifcore.phase_02.state_export.v1",
+        "turns": [
+          {
+            "abstain_or_answer": "abstain",
+            "active_context_refs": [
+              "meta_observer::80e48682c6ef",
+              "weak_answer_diagnosis::9b56ed826747",
+              "strategy_journal::a39c7f7e13e6",
+              "self_model::8b2b3db44440"
+            ],
+            "conversation_id": "conv-p10-weak",
+            "critic_trace_ref": "weak_answer_diagnosis::9b56ed826747",
+            "discourse_mode": "explain",
+            "final_answer_mode": "search_needed",
+            "governance_trace_ref": "532d11ea8cb5ab58f562e92e201c1fdbc98afddf0d8ff86a3eeb20fc3d2bbf89",
+            "knowledge_gap_reason": "needs_fresh_information",
+            "last_event_type": "response_ready",
+            "memory_review_ref": "memory_review::798850d90bd6",
+            "next_action": "search_local",
+            "planner_trace_ref": "strategy_journal::a39c7f7e13e6",
+            "response_text": "The answer is bounded but weak because support is incomplete, so the next safe move is to re-check support.",
+            "simulation_trace_ref": "2ff7d18c8932c3abafb1bf08dfa681f882a07a590381d3203bd61b4b99413595",
+            "support_state": "search_needed",
+            "turn_id": "turn-p10-weak",
+            "turn_ref": "workspace://phase13-runtime-phase13_session::ff1815e1d727/turn/conv-p10-weak/turn-p10-weak",
+            "user_intent": "Why was this weak and what should be checked first?",
+            "workspace_updated_at": "2026-04-01T11:32:52+00:00"
+          }
+        ],
+        "workspace_id": "phase13-runtime-phase13_session::ff1815e1d727"
+      },
+      "turn_id": "turn-p10-weak"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "wrapper-schema-correct",
+      "result": "pass"
+    },
+    {
+      "id": "phase2-state-export-preserved",
+      "result": "pass"
+    },
+    {
+      "id": "surface-separation-visible",
+      "result": "pass"
+    },
+    {
+      "id": "payload-size-bounded",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_13_PRODUCT_RUNTIME_AND_UX.md",
+    "projects/agifcore_master/01_plan/PHASE_12_STRUCTURAL_GROWTH.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/03_design/PRODUCT_RUNTIME_MODEL.md",
+    "projects/agifcore_master/03_design/BUNDLE_INTEGRITY_MODEL.md",
+    "projects/agifcore_master/03_design/DEPLOYMENT_MODEL.md",
+    "projects/agifcore_master/03_design/SANDBOX_MODEL.md",
+    "projects/agifcore_master/03_design/PUBLIC_RELEASE_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/workspace_state.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/event_bus.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/replay_ledger.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_improvement_cycle.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/structural_growth_cycle.py",
+    "projects/agifcore_master/05_testing/phase_12_structural_growth/_phase_12_verifier_common.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/contracts.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/embeddable_runtime_api.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/local_runner.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/local_gateway.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/desktop_ui.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/state_export.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/trace_export.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/memory_review_export.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/safe_shutdown.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/fail_closed_ux.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/installer_distribution.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/product_runtime_shell.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/__init__.py",
+    "projects/agifcore_master/05_testing/phase_13_product_runtime_and_ux/_phase_13_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_13_product_runtime_and_ux/verify_phase_13_state_export.py"
+  ],
+  "notes": [
+    "state export wraps a bounded Phase 2-style workspace snapshot instead of inventing a second storage lane",
+    "Phase 13 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_evidence/phase_13_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_evidence/phase_13_state_export_report.json"
+  },
+  "phase": "13",
+  "status": "pass",
+  "verifier": "verify_phase_13_state_export"
+}

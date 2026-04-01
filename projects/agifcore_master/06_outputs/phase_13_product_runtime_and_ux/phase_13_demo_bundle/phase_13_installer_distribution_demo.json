@@ -1,0 +1,156 @@
+{
+  "bundle_dir": "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_demo_bundle/local_distribution_bundle",
+  "demo_id": "installer_distribution",
+  "evidence_reports": [
+    "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_evidence/phase_13_installer_distribution_report.json",
+    "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_evidence/phase_13_evidence_manifest.json"
+  ],
+  "installer_distribution": {
+    "artifact_count": 6,
+    "artifacts": [
+      {
+        "artifact_id": "bundle_manifest",
+        "executable": false,
+        "filename": "phase_13_bundle_manifest.json",
+        "path": "/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_demo_bundle/local_distribution_bundle/phase_13_bundle_manifest.json",
+        "purpose": "local distribution inventory"
+      },
+      {
+        "artifact_id": "integrity_manifest",
+        "executable": false,
+        "filename": "phase_13_integrity_manifest.json",
+        "path": "/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_demo_bundle/local_distribution_bundle/phase_13_integrity_manifest.json",
+        "purpose": "local integrity proof"
+      },
+      {
+        "artifact_id": "install_local",
+        "executable": false,
+        "filename": "INSTALL_LOCAL.md",
+        "path": "/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_demo_bundle/local_distribution_bundle/INSTALL_LOCAL.md",
+        "purpose": "local install instructions"
+      },
+      {
+        "artifact_id": "launcher_runner",
+        "executable": true,
+        "filename": "launch_phase_13_local_runner.sh",
+        "path": "/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_demo_bundle/local_distribution_bundle/launch_phase_13_local_runner.sh",
+        "purpose": "local runner launcher"
+      },
+      {
+        "artifact_id": "launcher_gateway",
+        "executable": true,
+        "filename": "launch_phase_13_local_gateway.sh",
+        "path": "/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_demo_bundle/local_distribution_bundle/launch_phase_13_local_gateway.sh",
+        "purpose": "local gateway launcher"
+      },
+      {
+        "artifact_id": "launcher_desktop_ui",
+        "executable": true,
+        "filename": "launch_phase_13_local_desktop_ui.sh",
+        "path": "/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_demo_bundle/local_distribution_bundle/launch_phase_13_local_desktop_ui.sh",
+        "purpose": "local desktop UI launcher"
+      }
+    ],
+    "bundle_manifest": {
+      "artifacts": [
+        "phase_13_bundle_manifest.json",
+        "phase_13_integrity_manifest.json",
+        "INSTALL_LOCAL.md",
+        "launch_phase_13_local_runner.sh",
+        "launch_phase_13_local_gateway.sh",
+        "launch_phase_13_local_desktop_ui.sh"
+      ],
+      "bundle_name": "agifcore_phase13_local_bundle_phase13_session::ff1815e1d727",
+      "public_release_blocked": true,
+      "runtime_entrypoint": "agifcore_phase13_product_runtime.product_runtime_shell.ProductRuntimeShell",
+      "scope": "local_distribution_only",
+      "session_id": "phase13_session::ff1815e1d727"
+    },
+    "integrity_manifest": {
+      "artifact_hashes": {
+        "INSTALL_LOCAL.md": "df5bf05fd4046fd54cc39d483fdd8f8fee2f15bb50076389b1ecb3b08734324f",
+        "launch_phase_13_local_desktop_ui.sh": "49a7763492608f1e914e0da641199d35e8bcd83fd4f0330c33076458745afd99",
+        "launch_phase_13_local_gateway.sh": "425af3aa0b548eea96693f2cde70d6a425fdead3f808d5c6e99cd15d7308120d",
+        "launch_phase_13_local_runner.sh": "22eb9a1c87117c9a0fdd6a083351d366045760daa03a6fd453e71f7500137074"
+      },
+      "integrity_hash": "f904f2426f9c8bc3efbf72b5310d7041f406913d9a5156bdbd98c192b47f87e4",
+      "policy_hash": "ec7f9f6e4656f6c9319df98688e02853e9f69e8384a450fc28e1d48269b57a9c",
+      "public_release_blocked": true,
+      "session_id": "phase13_session::ff1815e1d727",
+      "shell_snapshot_hash": "84bc09e2fbcdead1ffe755f4a06070e4e4ec39b8a7820833b68abd20aaf9e659"
+    },
+    "local_install_steps": [
+      "inspect the integrity manifest",
+      "run one local launcher",
+      "compare the printed ids to the bundle manifest"
+    ],
+    "public_release_blocked": true,
+    "schema": "agifcore.phase_13.installer_distribution.v1",
+    "session_id": "phase13_session::ff1815e1d727",
+    "shell_snapshot_hash": "84bc09e2fbcdead1ffe755f4a06070e4e4ec39b8a7820833b68abd20aaf9e659",
+    "snapshot_hash": "630ddfd3a9702dc81a0be0eb42ae488427903a9287307c76736812a3849bf447"
+  },
+  "notes": [
+    "review-only installer/distribution demo",
+    "Phase 13 remains open",
+    "no approval implied"
+  ],
+  "phase": "13",
+  "product_shell": {
+    "allowlisted_routes": [
+      "/api/session-open",
+      "/api/conversation-turn",
+      "/api/state-export",
+      "/api/trace-export",
+      "/api/memory-review-export",
+      "/api/safe-shutdown",
+      "/api/task-submit",
+      "/api/policy-update",
+      "/api/fail-closed-help",
+      "/api/installer-status"
+    ],
+    "available_surfaces": [
+      "session_open",
+      "conversation_turn",
+      "state_export",
+      "trace_export",
+      "memory_review_export",
+      "safe_shutdown"
+    ],
+    "blocked_surface_names": [
+      "task_submit",
+      "policy_update"
+    ],
+    "conversation_id": "conv-p10-weak",
+    "gateway_surface_count": 10,
+    "installer_snapshot_hash": "630ddfd3a9702dc81a0be0eb42ae488427903a9287307c76736812a3849bf447",
+    "memory_review_export_hash": "a2d31910f16f441d6f86aea504d0b3fa733a5e83da3c31081e174da6e6c24fb8",
+    "phase10_turn_hash": "dc54e0867e9708352cbc0fa0ffaf30a6328aedda038ec16fc62c641dfa6034fd",
+    "phase11_cycle_hash": "5df43dd942d8223120c35caabca11ef3cd7e3e5c4d0e2ca4e598770cf6bcb381",
+    "phase12_cycle_hash": "91918ef29258bcb918e7c81125f97ce3275066f6379a8def247f869bc2070a65",
+    "policy_hash": "ec7f9f6e4656f6c9319df98688e02853e9f69e8384a450fc28e1d48269b57a9c",
+    "schema": "agifcore.phase_13.product_runtime_shell.v1",
+    "session_id": "phase13_session::ff1815e1d727",
+    "snapshot_hash": "605bec74374bad77328021c6f4d013ecc80076a2ac0da7d0e30e9c8ddc725230",
+    "state_export_hash": "6ab85b95b3e97e3ee9a4b20a9e940f1868f64e8ab4d58e59560817326e8581cc",
+    "support_state": "search_needed",
+    "trace_export_hash": "9d852dcee5e5dc16e1a7a4587b85d47b72a3149db8ed0191a29a372ef608a13e",
+    "turn_id": "turn-p10-weak",
+    "ui_view_count": 7,
+    "ui_view_ids": [
+      "session_overview",
+      "conversation_result",
+      "trace_export_view",
+      "state_export_view",
+      "memory_review_view",
+      "fail_closed_help_view",
+      "installer_distribution_view"
+    ]
+  },
+  "runner_launcher_output": {
+    "launcher": "local_runner",
+    "session_id": "phase13_session::ff1815e1d727",
+    "support_state": "search_needed"
+  },
+  "status": "open"
+}

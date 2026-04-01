@@ -1,0 +1,33 @@
+# Phase 13 Governor Verification Record
+
+- Verification date: `2026-04-01`
+- Verifier: `Program Governor`
+- Scope verified directly:
+  - `projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/`
+  - `projects/agifcore_master/05_testing/phase_13_product_runtime_and_ux/`
+  - `projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/`
+- Commands run directly:
+  - `python3 -m compileall projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime`
+  - `python3 -m compileall projects/agifcore_master/05_testing/phase_13_product_runtime_and_ux`
+  - all 10 `verify_phase_13_*` scripts under `projects/agifcore_master/05_testing/phase_13_product_runtime_and_ux/`
+  - all 3 demo runners:
+    - `run_phase_13_end_to_end_product_demo.py`
+    - `run_phase_13_fail_closed_ux_demo.py`
+    - `run_phase_13_installer_distribution_demo.py`
+- Direct results:
+  - runtime imports and compile pass succeeded
+  - the evidence manifest at `projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_evidence/phase_13_evidence_manifest.json` reports `phase_13_verifier_family_pass`
+  - the demo bundle contains:
+    - `phase_13_end_to_end_product_demo.md`
+    - `phase_13_fail_closed_ux_demo.md`
+    - `phase_13_installer_distribution_demo.md`
+    - `phase_13_demo_index.md`
+  - the installer/distribution review path is now `sh`-compatible and bundle-local path discovery no longer depends on the live repo path
+- Governor judgment:
+  - the Phase 13 execution package is inspectable and review-ready
+  - the package stayed inside product-runtime and UX boundaries
+  - Phase 14 and Phase 16 behavior remain out of scope
+  - user review is still required before any approval or closeout action
+- Truth note:
+  - Phase 13 remains `open`
+  - no approval is implied by this record

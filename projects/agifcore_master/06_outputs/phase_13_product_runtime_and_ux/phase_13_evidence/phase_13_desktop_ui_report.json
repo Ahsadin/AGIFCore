@@ -1,0 +1,185 @@
+{
+  "anchors": {
+    "ui_snapshot": {
+      "schema": "agifcore.phase_13.local_desktop_ui.v1",
+      "selected_view": "session_overview",
+      "session_id": "phase13_session::ff1815e1d727",
+      "snapshot_hash": "cfbac60c38bfdfb2419b0ed60e5aa6d138ac176eda8e34e1eb5abda0074481f1",
+      "view_count": 7,
+      "views": [
+        {
+          "evidence_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+            "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797"
+          ],
+          "status": "ready",
+          "summary_lines": [
+            "session_id=phase13_session::ff1815e1d727",
+            "support_state=search_needed",
+            "available_surfaces=6"
+          ],
+          "title": "Session Overview",
+          "view_id": "session_overview"
+        },
+        {
+          "evidence_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+            "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797"
+          ],
+          "status": "ready",
+          "summary_lines": [
+            "The answer is bounded but weak because support is incomplete, so the next safe move is to re-check support.",
+            "final_answer_mode=search_needed",
+            "next_action=search_local"
+          ],
+          "title": "Conversation Result",
+          "view_id": "conversation_result"
+        },
+        {
+          "evidence_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+            "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797"
+          ],
+          "status": "ready",
+          "summary_lines": [
+            "trace_record_count=2",
+            "trace_anchor_hash=ea43fbd6b45ca6beb588dff234f0f5ce0445e620a0a2d5029648dc9537d8d514"
+          ],
+          "title": "Trace Export",
+          "view_id": "trace_export_view"
+        },
+        {
+          "evidence_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+            "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797"
+          ],
+          "status": "ready",
+          "summary_lines": [
+            "state_schema=agifcore.phase_02.state_export.v1",
+            "payload_bytes=4794"
+          ],
+          "title": "State Export",
+          "view_id": "state_export_view"
+        },
+        {
+          "evidence_refs": [
+            "5df43dd942d8223120c35caabca11ef3cd7e3e5c4d0e2ca4e598770cf6bcb381",
+            "91918ef29258bcb918e7c81125f97ce3275066f6379a8def247f869bc2070a65",
+            "669c174e25f890252fd4495af3d72a8d1702232b582f09bae06e7332700cc452"
+          ],
+          "status": "ready",
+          "summary_lines": [
+            "memory_ref_count=1",
+            "continuity_ref_count=3"
+          ],
+          "title": "Memory Review Export",
+          "view_id": "memory_review_view"
+        },
+        {
+          "evidence_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+            "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797"
+          ],
+          "status": "blocked_states_visible",
+          "summary_lines": [
+            "blocked_state_count=6",
+            "reserved surfaces stay explicit and inspectable"
+          ],
+          "title": "Fail-Closed Help",
+          "view_id": "fail_closed_help_view"
+        },
+        {
+          "evidence_refs": [
+            "50b2308c7141d78920db61d2aaf6590928a244e7b6ba929affe423912dad9713"
+          ],
+          "status": "local_only",
+          "summary_lines": [
+            "artifact_count=6",
+            "public_release_blocked=True"
+          ],
+          "title": "Installer Distribution",
+          "view_id": "installer_distribution_view"
+        }
+      ]
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "ui-schema-correct",
+      "result": "pass"
+    },
+    {
+      "id": "view-count-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "fail-closed-view-present",
+      "result": "pass"
+    },
+    {
+      "id": "ui-does-not-rewrite-runner-output",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_13_PRODUCT_RUNTIME_AND_UX.md",
+    "projects/agifcore_master/01_plan/PHASE_12_STRUCTURAL_GROWTH.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/03_design/PRODUCT_RUNTIME_MODEL.md",
+    "projects/agifcore_master/03_design/BUNDLE_INTEGRITY_MODEL.md",
+    "projects/agifcore_master/03_design/DEPLOYMENT_MODEL.md",
+    "projects/agifcore_master/03_design/SANDBOX_MODEL.md",
+    "projects/agifcore_master/03_design/PUBLIC_RELEASE_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/workspace_state.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/event_bus.py",
+    "projects/agifcore_master/04_execution/phase_02_fabric_kernel_and_workspace/agifcore_phase2_kernel/replay_ledger.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_improvement_cycle.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/structural_growth_cycle.py",
+    "projects/agifcore_master/05_testing/phase_12_structural_growth/_phase_12_verifier_common.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/contracts.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/embeddable_runtime_api.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/local_runner.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/local_gateway.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/desktop_ui.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/state_export.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/trace_export.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/memory_review_export.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/safe_shutdown.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/fail_closed_ux.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/installer_distribution.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/product_runtime_shell.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/__init__.py",
+    "projects/agifcore_master/05_testing/phase_13_product_runtime_and_ux/_phase_13_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_13_product_runtime_and_ux/verify_phase_13_desktop_ui.py"
+  ],
+  "notes": [
+    "the desktop UI stays presentation-only and keeps blocked states visible",
+    "Phase 13 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_evidence/phase_13_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_evidence/phase_13_desktop_ui_report.json"
+  },
+  "phase": "13",
+  "status": "pass",
+  "verifier": "verify_phase_13_desktop_ui"
+}

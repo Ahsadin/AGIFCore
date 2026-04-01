@@ -129,6 +129,7 @@
 ## 2026-04-01
 
 - Tightened `.codex/agents/phase_builder.toml` so the reusable build-pod agent setup explicitly covers `Meta & Growth Pod Lead`.
+- Tightened `.codex/agents/phase_builder.toml` so the reusable build-pod agent setup also explicitly covers `Product & Sandbox Pod Lead`.
 - Materialized `01_plan/PHASE_11_GOVERNED_SELF_IMPROVEMENT.md` and the Phase 11 planning task-card set under `00_admin/codex_threads/tasks/phase_11/`.
 - Completed the full Phase 11 runtime package under `04_execution/phase_11_governed_self_improvement/`, with paired verifiers and demo runners under `05_testing/phase_11_governed_self_improvement/` and evidence/demo outputs under `06_outputs/phase_11_governed_self_improvement/`.
 - Added the Phase 11 final audit report, danger-zone audit report, Governor verification record, validation request, user verdict, and closeout task-card surfaces under `00_admin/codex_threads/`.
@@ -142,5 +143,17 @@
 - Completed the full Phase 12 runtime package under `04_execution/phase_12_structural_growth/`, with paired verifiers and demo runners under `05_testing/phase_12_structural_growth/` and evidence/demo outputs under `06_outputs/phase_12_structural_growth/`.
 - Added the Phase 12 final audit report, danger-zone audit report, Governor verification record, validation request, additional human checkpoint, user verdict, and closeout task-card surfaces under `00_admin/codex_threads/`.
 - Exported the standalone Phase 12 review bundle for user inspection and repaired its copied dependency set so reruns work from the bundle itself.
+- Materialized `01_plan/PHASE_13_PRODUCT_RUNTIME_AND_UX.md`, the Phase 13 task-card set, and the `.codex` builder wording update needed for the Product & Sandbox Pod Lead.
+- Completed the Phase 13 runtime package under `04_execution/phase_13_product_runtime_and_ux/`, with paired verifiers under `05_testing/phase_13_product_runtime_and_ux/` and evidence/demo outputs under `06_outputs/phase_13_product_runtime_and_ux/`.
+- Added the Phase 13 execution-start brief, freeze handoff, audit report, Governor verification record, validation request, and user verdict under `00_admin/codex_threads/`.
+- Rebuilt the standalone Phase 13 review bundle so it is fully self-contained, rerunnable from the extracted folder, and no longer requires `zsh` for the installer/distribution review path.
+- Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 13 is now `approved`.
 - Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 12 is now `approved`.
 - Logged the earned Phase 12 approval state in `DECISIONS.md` while keeping Phase 13 not started and ready for a separate planning run.
+- Materialized `01_plan/PHASE_13_PRODUCT_RUNTIME_AND_UX.md` and the Phase 13 planning task-card set under `00_admin/codex_threads/tasks/phase_13/`.
+- Froze the approved Phase 13 planning baseline for execution start in `01_plan/PHASE_13_PRODUCT_RUNTIME_AND_UX.md`.
+- Added `00_admin/codex_threads/handoffs/PHASE_13_PLAN_FREEZE_HANDOFF.md` and `00_admin/codex_threads/handoffs/PHASE_13_EXECUTION_START_BRIEF.md`.
+- Logged that the Phase 13 planning baseline is frozen for execution start while Phase 13 remains `open` and Phase 14 has not started.
+- Completed the full Phase 13 runtime package under `04_execution/phase_13_product_runtime_and_ux/`, with paired verifiers and demo runners under `05_testing/phase_13_product_runtime_and_ux/` and evidence/demo outputs under `06_outputs/phase_13_product_runtime_and_ux/`.
+- Added the Phase 13 execution-control, runtime-implementation, verifier-evidence, and demo-bundle task-card surfaces under `00_admin/codex_threads/tasks/phase_13/`.
+- Added the local distribution bundle under `06_outputs/phase_13_product_runtime_and_ux/phase_13_demo_bundle/local_distribution_bundle/` and verified its launchers run locally without public-release flow.
