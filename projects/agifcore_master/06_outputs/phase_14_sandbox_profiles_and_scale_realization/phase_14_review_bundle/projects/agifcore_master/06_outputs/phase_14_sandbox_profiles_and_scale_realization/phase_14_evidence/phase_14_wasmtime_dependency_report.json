@@ -1,0 +1,24 @@
+{
+  "all_phase14_demos_passed": true,
+  "all_phase14_verifiers_passed": true,
+  "checked_at": "2026-04-01T14:21:07+00:00",
+  "evidence_manifest_status": "phase_14_verifier_family_pass",
+  "notes": [
+    "no runtime code was changed in this proof-gap rerun",
+    "no approval implied"
+  ],
+  "outcome": "wasmtime_present_and_proof_passed",
+  "phase": "14",
+  "phase_remains_open": true,
+  "proof_gap_status": {
+    "run_phase_14_sandbox_enforcement_demo": 0,
+    "verify_phase_14_sandbox": 0,
+    "verify_phase_14_wasmtime_fuel": 0,
+    "verify_phase_14_wasmtime_memory": 0,
+    "verify_phase_14_wasmtime_wall_time": 0
+  },
+  "remaining_blocker": null,
+  "wasmtime_command": "/Users/ahsadin/.wasmtime/bin/wasmtime",
+  "wasmtime_found_on_path": true,
+  "wasmtime_version": "wasmtime 42.0.1 (6844a83b5 2026-02-25)"
+}

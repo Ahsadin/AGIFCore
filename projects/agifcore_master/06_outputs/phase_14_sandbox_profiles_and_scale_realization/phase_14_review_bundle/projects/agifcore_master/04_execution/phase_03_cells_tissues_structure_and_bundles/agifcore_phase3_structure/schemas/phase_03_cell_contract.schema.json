@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agifcore.phase_03.cell_contract.schema.json",
+  "title": "AGIFCore Phase 3 Slice 1 CellContract",
+  "type": "object",
+  "required": [
+    "cell_id",
+    "bundle_ref",
+    "role_family",
+    "role_name",
+    "allowed_tissues",
+    "split_policy",
+    "merge_policy",
+    "trust_profile",
+    "policy_envelope"
+  ],
+  "properties": {
+    "cell_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "bundle_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "role_family": {
+      "type": "string",
+      "minLength": 1
+    },
+    "role_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "allowed_tissues": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "maxItems": 16
+    },
+    "split_policy": {
+      "type": "object"
+    },
+    "merge_policy": {
+      "type": "object"
+    },
+    "trust_profile": {
+      "type": "object"
+    },
+    "policy_envelope": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,346 @@
+{
+  "anchors": {
+    "manifest_audit": {
+      "audit_checks": [
+        {
+          "expected": "exactly 1 same contract hash",
+          "id": "same-contract-hash-single",
+          "observed": 1,
+          "passed": true
+        },
+        {
+          "expected": 1024,
+          "id": "literal-cell-count",
+          "observed": 1024,
+          "passed": true
+        },
+        {
+          "expected": 32,
+          "id": "literal-tissue-count",
+          "observed": 32,
+          "passed": true
+        },
+        {
+          "expected": "16 families with >=4 activation classes and >=4 evidence classes",
+          "id": "family-differentiation-present",
+          "observed": {
+            "activation_budget_class_count": 6,
+            "evidence_requirement_class_count": 7,
+            "family_count": 16
+          },
+          "passed": true
+        },
+        {
+          "expected": ">=2 tissue variants with >=2 continuity and >=2 escalation handling classes",
+          "id": "tissue-specialization-present",
+          "observed": {
+            "continuity_handling_class_count": 2,
+            "escalation_handling_class_count": 2,
+            "tissue_variant_count": 2
+          },
+          "passed": true
+        },
+        {
+          "expected": ">=3 profile patterns, >=3 dormancy classes, >=3 continuity classes",
+          "id": "constraint-diversity-present",
+          "observed": {
+            "allowed_profile_pattern_count": 3,
+            "continuity_requirement_class_count": 3,
+            "dormancy_behavior_class_count": 3
+          },
+          "passed": true
+        },
+        {
+          "expected": ">=8 exemplar classes, >=24 contract variants, >=8 operation signatures",
+          "id": "exemplar-layer-present",
+          "observed": {
+            "contract_variant_count": 128,
+            "exemplar_class_count": 8,
+            "operation_set_signature_count": 80
+          },
+          "passed": true
+        },
+        {
+          "expected": "mobile < laptop < builder active-cap totals",
+          "id": "profile-cap-ordering-valid",
+          "observed": {
+            "builder": 256,
+            "laptop": 128,
+            "mobile": 48
+          },
+          "passed": true
+        }
+      ],
+      "audit_hash": "150eeb90bbb4725450f9d90ee783fdede3c06465b21d1d4a610e2e42500efeed",
+      "audit_status": "pass",
+      "blocked_reason_codes": [],
+      "cell_manifest_hash": "6df63e0b7c7d1cf74a3a5b482e0a3cd551c6180835b30efa5f088c4b1bf1bd9a",
+      "differentiation_metrics": {
+        "activation_budget_class_count": 6,
+        "allowed_profile_pattern_count": 3,
+        "continuity_handling_class_count": 2,
+        "continuity_requirement_class_count": 3,
+        "contract_variant_count": 128,
+        "dormancy_behavior_class_count": 3,
+        "escalation_handling_class_count": 2,
+        "evidence_requirement_class_count": 7,
+        "exemplar_class_count": 8,
+        "family_count": 16,
+        "operation_set_signature_count": 80,
+        "tissue_variant_count": 2
+      },
+      "logical_cell_count": 1024,
+      "per_profile_total_active_cap": {
+        "builder": 256,
+        "laptop": 128,
+        "mobile": 48
+      },
+      "profile_count": 3,
+      "profile_manifest_hash": "51e5c47da22d2ce40b3f5885589863dbb77bd9dff2bda7e9527664ab7ddef83f",
+      "same_contract_hash_count": 1,
+      "same_contract_hashes": [
+        "a4b5ddf226b315733337354ea7731744c45d57a5ea440bee9824dbc33b06a0be"
+      ],
+      "schema": "agifcore.phase_14.manifest_audit.v1",
+      "tissue_count": 32,
+      "tissue_manifest_hash": "2d5a08fd64a67fb64584ddb66e555a7d1254fd379d07761ab2d5fbf2dbc2b800"
+    },
+    "manifest_differentiation": {
+      "budget": {
+        "budget_state": "within_budget",
+        "profile": "laptop",
+        "reason_code": "ACTIVE_CELL_BUDGET_WITHIN_LIMITS",
+        "selected_activation_priority_max": 128,
+        "selected_activation_priority_min": 93,
+        "selected_activation_priority_total": 10785,
+        "selected_active_cell_count": 96,
+        "selected_active_tissue_count": 22,
+        "selected_audit_replay_required_count": 41,
+        "selected_continuity_requirement_counts": {
+          "checkpointed": 16,
+          "strict": 80
+        },
+        "selected_dormancy_behavior_counts": {
+          "checkpoint_restore": 16,
+          "warm_standby": 80
+        },
+        "selected_exemplar_class_counts": {
+          "anchor": 80,
+          "checkpoint": 16
+        },
+        "selected_family_counts": {
+          "attention": 8,
+          "audit_replay": 5,
+          "compression_retirement": 5,
+          "continuity_self_history": 5,
+          "critic_error_monitor": 5,
+          "episodic_memory": 8,
+          "governance_authority": 5,
+          "intake_router": 8,
+          "language_realizer": 5,
+          "planner": 5,
+          "procedural_skill": 6,
+          "scheduler_resource": 5,
+          "semantic_abstraction": 8,
+          "transfer_broker": 5,
+          "working_memory": 8,
+          "world_model_simulator": 5
+        },
+        "selected_sandbox_required_count": 21,
+        "selected_tissue_variant_counts": {
+          "continuity_backstop": 16,
+          "primary_path": 80
+        }
+      },
+      "cell_manifest_hash": "6df63e0b7c7d1cf74a3a5b482e0a3cd551c6180835b30efa5f088c4b1bf1bd9a",
+      "constraint_diversity": {
+        "activation_budget_class_count": 6,
+        "allowed_profile_pattern_count": 3,
+        "audit_replay_required_cell_count": 512,
+        "continuity_requirement_class_count": 3,
+        "dormancy_behavior_class_count": 3,
+        "evidence_requirement_class_count": 7,
+        "export_visibility_class_count": 4,
+        "operation_set_signature_count": 80,
+        "sandbox_required_cell_count": 256,
+        "tissue_variant_count": 2
+      },
+      "continuity_handling_class_counts": {
+        "checkpoint_guard": 16,
+        "inline_handoff": 16
+      },
+      "contract_variant_count": 128,
+      "escalation_handling_class_counts": {
+        "forward_escalation": 16,
+        "stabilize_then_escalate": 16
+      },
+      "exemplar_class_count": 8,
+      "exemplar_class_counts": {
+        "anchor": 128,
+        "audit": 128,
+        "bridge": 128,
+        "checkpoint": 128,
+        "handoff": 128,
+        "operator": 128,
+        "recovery": 128,
+        "reserve": 128
+      },
+      "family_count": 16,
+      "family_signature_count": 16,
+      "family_signature_hash": "5bbd57cf736a7d4a291c590072339f8fff61a7f44d4997ed32541b80bd960448",
+      "focus_family_tissue_counts": {
+        "attention": 2,
+        "audit_replay": 2,
+        "compression_retirement": 2,
+        "continuity_self_history": 2,
+        "critic_error_monitor": 2,
+        "episodic_memory": 2,
+        "governance_authority": 2,
+        "intake_router": 2,
+        "language_realizer": 2,
+        "planner": 2,
+        "procedural_skill": 2,
+        "scheduler_resource": 2,
+        "semantic_abstraction": 2,
+        "transfer_broker": 2,
+        "working_memory": 2,
+        "world_model_simulator": 2
+      },
+      "per_profile_total_active_cap": {
+        "builder": 256,
+        "laptop": 128,
+        "mobile": 48
+      },
+      "profile": "laptop",
+      "profile_manifest_hash": "51e5c47da22d2ce40b3f5885589863dbb77bd9dff2bda7e9527664ab7ddef83f",
+      "proof": {
+        "case_count": 8,
+        "continuity_requirement_class_count": 3,
+        "covered_continuity_requirement_classes": [
+          "checkpointed",
+          "journaled",
+          "strict"
+        ],
+        "covered_dormancy_behavior_classes": [
+          "checkpoint_restore",
+          "cold_retention",
+          "warm_standby"
+        ],
+        "covered_evidence_requirement_classes": [
+          "audit_receipt",
+          "decision_trace",
+          "handoff_trace",
+          "policy_receipt",
+          "request_receipt",
+          "retention_receipt",
+          "sandbox_receipt"
+        ],
+        "covered_exemplar_class_ids": [
+          "anchor",
+          "audit",
+          "bridge",
+          "checkpoint",
+          "handoff",
+          "operator",
+          "reserve"
+        ],
+        "covered_tissue_variant_ids": [
+          "continuity_backstop",
+          "primary_path"
+        ],
+        "dormancy_behavior_class_count": 3,
+        "exemplar_class_count": 8,
+        "tissue_variant_count": 2
+      },
+      "summary_hash": "9dd06d290167f1871f71c59fae5f50c12fbed0b73248e8341698e5dd4adbcf90",
+      "tissue_count": 32,
+      "tissue_manifest_hash": "2d5a08fd64a67fb64584ddb66e555a7d1254fd379d07761ab2d5fbf2dbc2b800",
+      "tissue_signature_count": 32,
+      "tissue_signature_hash": "8a25f44370a591efbc380cdf9b6d1cf39d8ad9ebdec904e3ecef084d0a74864d",
+      "tissue_variant_count": 2,
+      "tissue_variant_counts": {
+        "continuity_backstop": 16,
+        "primary_path": 16
+      }
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "family-differentiation-real",
+      "result": "pass"
+    },
+    {
+      "id": "tissue-specialization-real",
+      "result": "pass"
+    },
+    {
+      "id": "constraint-diversity-real",
+      "result": "pass"
+    },
+    {
+      "id": "exemplar-structure-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "budget-selection-uses-priority",
+      "result": "pass"
+    },
+    {
+      "id": "dormant-proof-covers-differentiated-classes",
+      "result": "pass"
+    },
+    {
+      "id": "manifest-audit-remains-consistent",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_14_SANDBOX_PROFILES_AND_SCALE_REALIZATION.md",
+    "projects/agifcore_master/01_plan/PHASE_13_PRODUCT_RUNTIME_AND_UX.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/03_design/SANDBOX_MODEL.md",
+    "projects/agifcore_master/03_design/DEPLOYMENT_MODEL.md",
+    "projects/agifcore_master/03_design/PRODUCT_RUNTIME_MODEL.md",
+    "projects/agifcore_master/03_design/BUNDLE_INTEGRITY_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/active_dormant_control.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/profile_budget_rules.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/tissue_manifests.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/contracts.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/product_runtime_shell.py",
+    "projects/agifcore_master/05_testing/phase_13_product_runtime_and_ux/_phase_13_verifier_common.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/contracts.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/sandbox_policy.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/wasmtime_fuel_limits.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/wasmtime_memory_limits.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/wasmtime_wall_time_limits.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/cell_manifest.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/tissue_manifest.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/profile_manifests.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/active_cell_budget.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/dormant_cell_survival.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/sandbox_profile_shell.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/__init__.py",
+    "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/_phase_14_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/verify_phase_14_manifest_differentiation.py"
+  ],
+  "notes": [
+    "family differentiation is proven through stable family signatures and per-family structural counts",
+    "tissue specialization is proven through variant counts, focus counts, and profile caps",
+    "budget and dormant proofs consume the differentiated structure and remain bounded",
+    "Phase 14 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_manifest_differentiation_report.json"
+  },
+  "phase": "14",
+  "status": "pass",
+  "verifier": "verify_phase_14_manifest_differentiation"
+}

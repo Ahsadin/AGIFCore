@@ -157,3 +157,12 @@
 - Completed the full Phase 13 runtime package under `04_execution/phase_13_product_runtime_and_ux/`, with paired verifiers and demo runners under `05_testing/phase_13_product_runtime_and_ux/` and evidence/demo outputs under `06_outputs/phase_13_product_runtime_and_ux/`.
 - Added the Phase 13 execution-control, runtime-implementation, verifier-evidence, and demo-bundle task-card surfaces under `00_admin/codex_threads/tasks/phase_13/`.
 - Added the local distribution bundle under `06_outputs/phase_13_product_runtime_and_ux/phase_13_demo_bundle/local_distribution_bundle/` and verified its launchers run locally without public-release flow.
+- Froze the approved Phase 14 planning baseline for execution start in `01_plan/PHASE_14_SANDBOX_PROFILES_AND_SCALE_REALIZATION.md`.
+- Added `00_admin/codex_threads/handoffs/PHASE_14_PLAN_FREEZE_HANDOFF.md` and `00_admin/codex_threads/handoffs/PHASE_14_EXECUTION_START_BRIEF.md`.
+- Logged that the Phase 14 planning baseline is frozen for execution start while Phase 14 remains `open` and Phase 15 has not started.
+- Completed the full Phase 14 runtime package under `04_execution/phase_14_sandbox_profiles_and_scale_realization/`, with paired verifiers and demo runners under `05_testing/phase_14_sandbox_profiles_and_scale_realization/` and evidence/demo outputs under `06_outputs/phase_14_sandbox_profiles_and_scale_realization/`.
+- Added the Phase 14 execution-control, runtime-implementation, verifier-evidence, and demo-bundle task-card surfaces under `00_admin/codex_threads/tasks/phase_14/`.
+- Strengthened the Phase 14 `1024`-cell and `32`-tissue manifests with machine-checkable family invariants, tissue variants, constraint diversity, bounded exemplars, budget-priority selection, and richer dormant-survival coverage.
+- Added the extra Phase 14 manifest-differentiation verifier and refreshed the evidence/demo outputs so the strengthened manifest structure is machine-readable and reviewable.
+- Added the Phase 14 closeout task card, user verdict, refreshed Governor verification record, refreshed validation request, and refreshed standalone Phase 14 review bundle.
+- Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 14 is now `approved`.

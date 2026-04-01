@@ -1,0 +1,159 @@
+{
+  "anchors": {
+    "profile_manifests": {
+      "manifest_count": 3,
+      "manifest_hash": "51e5c47da22d2ce40b3f5885589863dbb77bd9dff2bda7e9527664ab7ddef83f",
+      "profiles": [
+        {
+          "active_cell_band": {
+            "max": 24,
+            "min": 8
+          },
+          "correctness_privilege": false,
+          "diagnostics_scope": "bounded local diagnostics only",
+          "profile": "mobile",
+          "profile_hash": "8132cde1ea5f35cce06612042ae47177b581bb2d691752bd742b9f57aa47ff5c",
+          "profile_role": "constrained product runtime",
+          "same_architecture_preserved": true,
+          "same_blocked_surface_names": [
+            "task_submit",
+            "policy_update"
+          ],
+          "same_contract_hash": "a4b5ddf226b315733337354ea7731744c45d57a5ea440bee9824dbc33b06a0be",
+          "same_gateway_route_count": 10,
+          "same_public_surfaces": [
+            "session_open",
+            "conversation_turn",
+            "state_export",
+            "trace_export",
+            "memory_review_export",
+            "safe_shutdown"
+          ],
+          "same_ui_view_count": 7,
+          "schema": "agifcore.phase_14.profile_manifest.v1",
+          "target_active_cells": 16
+        },
+        {
+          "active_cell_band": {
+            "max": 128,
+            "min": 64
+          },
+          "correctness_privilege": false,
+          "diagnostics_scope": "reference evidence capture",
+          "profile": "laptop",
+          "profile_hash": "bf2b42009e83f7886e5991e41e5a206215ce0fc6b3441a8767be498a5a331ba6",
+          "profile_role": "reference product runtime",
+          "same_architecture_preserved": true,
+          "same_blocked_surface_names": [
+            "task_submit",
+            "policy_update"
+          ],
+          "same_contract_hash": "a4b5ddf226b315733337354ea7731744c45d57a5ea440bee9824dbc33b06a0be",
+          "same_gateway_route_count": 10,
+          "same_public_surfaces": [
+            "session_open",
+            "conversation_turn",
+            "state_export",
+            "trace_export",
+            "memory_review_export",
+            "safe_shutdown"
+          ],
+          "same_ui_view_count": 7,
+          "schema": "agifcore.phase_14.profile_manifest.v1",
+          "target_active_cells": 96
+        },
+        {
+          "active_cell_band": {
+            "max": 256,
+            "min": 128
+          },
+          "correctness_privilege": false,
+          "diagnostics_scope": "deeper diagnostics without correctness privilege",
+          "profile": "builder",
+          "profile_hash": "c387c248c62e32a1f872577e239f4a6cca182f66b1a188dd49268f0b72c1c12b",
+          "profile_role": "diagnostic and instrumentation runtime",
+          "same_architecture_preserved": true,
+          "same_blocked_surface_names": [
+            "task_submit",
+            "policy_update"
+          ],
+          "same_contract_hash": "a4b5ddf226b315733337354ea7731744c45d57a5ea440bee9824dbc33b06a0be",
+          "same_gateway_route_count": 10,
+          "same_public_surfaces": [
+            "session_open",
+            "conversation_turn",
+            "state_export",
+            "trace_export",
+            "memory_review_export",
+            "safe_shutdown"
+          ],
+          "same_ui_view_count": 7,
+          "schema": "agifcore.phase_14.profile_manifest.v1",
+          "target_active_cells": 160
+        }
+      ],
+      "schema": "agifcore.phase_14.profile_manifest.v1"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "exact-profile-count",
+      "result": "pass"
+    },
+    {
+      "id": "same-contract-hash-preserved",
+      "result": "pass"
+    },
+    {
+      "id": "no-correctness-privilege",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_14_SANDBOX_PROFILES_AND_SCALE_REALIZATION.md",
+    "projects/agifcore_master/01_plan/PHASE_13_PRODUCT_RUNTIME_AND_UX.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/03_design/SANDBOX_MODEL.md",
+    "projects/agifcore_master/03_design/DEPLOYMENT_MODEL.md",
+    "projects/agifcore_master/03_design/PRODUCT_RUNTIME_MODEL.md",
+    "projects/agifcore_master/03_design/BUNDLE_INTEGRITY_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/active_dormant_control.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/profile_budget_rules.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/tissue_manifests.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/contracts.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/product_runtime_shell.py",
+    "projects/agifcore_master/05_testing/phase_13_product_runtime_and_ux/_phase_13_verifier_common.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/contracts.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/sandbox_policy.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/wasmtime_fuel_limits.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/wasmtime_memory_limits.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/wasmtime_wall_time_limits.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/cell_manifest.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/tissue_manifest.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/profile_manifests.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/active_cell_budget.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/dormant_cell_survival.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/sandbox_profile_shell.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/__init__.py",
+    "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/_phase_14_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/verify_phase_14_profile_manifests.py"
+  ],
+  "notes": [
+    "mobile, laptop, and builder preserve the same public contract while differing only in explicit bounded budgets",
+    "Phase 14 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_profile_manifest_report.json"
+  },
+  "phase": "14",
+  "status": "pass",
+  "verifier": "verify_phase_14_profile_manifests"
+}

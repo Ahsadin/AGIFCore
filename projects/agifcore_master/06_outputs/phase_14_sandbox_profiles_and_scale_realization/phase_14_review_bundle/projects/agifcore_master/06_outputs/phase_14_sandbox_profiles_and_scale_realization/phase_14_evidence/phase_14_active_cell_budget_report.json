@@ -1,0 +1,1982 @@
+{
+  "anchors": {
+    "ceiling_blocked": {
+      "allowed": false,
+      "budget_state": "ceiling_blocked",
+      "budget_state_catalog": [
+        "within_budget",
+        "near_ceiling",
+        "ceiling_blocked",
+        "hibernate_required",
+        "profile_mismatch"
+      ],
+      "cell_manifest_hash": "f3e60107b7e35faf04155af2671c3f871286603ebb76d2f88d98116430c9ebde",
+      "current_active_cells": 0,
+      "current_active_tissues": 0,
+      "dormant_cell_count": 1000,
+      "dormant_cell_preview_ids": [
+        "cell_0003",
+        "cell_0004",
+        "cell_0005",
+        "cell_0006",
+        "cell_0007",
+        "cell_0008",
+        "cell_0009",
+        "cell_0010",
+        "cell_0011",
+        "cell_0012",
+        "cell_0013",
+        "cell_0014",
+        "cell_0015",
+        "cell_0016",
+        "cell_0017",
+        "cell_0018",
+        "cell_0019",
+        "cell_0020",
+        "cell_0021",
+        "cell_0022",
+        "cell_0023",
+        "cell_0024",
+        "cell_0025",
+        "cell_0026",
+        "cell_0027",
+        "cell_0028",
+        "cell_0029",
+        "cell_0030",
+        "cell_0031",
+        "cell_0032",
+        "cell_0033",
+        "cell_0034"
+      ],
+      "eligible_cell_count": 640,
+      "enforcement_action": "deny",
+      "hibernate_candidate_ids": [],
+      "invalid_requested_cell_ids": [],
+      "max_active_cells": 24,
+      "max_active_tissues": 16,
+      "min_active_cells": 8,
+      "profile": "mobile",
+      "profile_manifest_hash": "8132cde1ea5f35cce06612042ae47177b581bb2d691752bd742b9f57aa47ff5c",
+      "reason_code": "ACTIVE_CELL_BUDGET_EXCEEDED",
+      "receipt_hash": "32e90cfab4822ee1bfd59eb8d6f384a4dfbafcfc1406320263f2908ad922b819",
+      "requested_active_cells": 30,
+      "requested_active_tissues": 15,
+      "schema": "agifcore.phase_14.active_cell_budget.v1",
+      "selected_activation_priority_max": 132,
+      "selected_activation_priority_min": 107,
+      "selected_activation_priority_total": 2918,
+      "selected_active_cell_count": 24,
+      "selected_active_cell_ids": [
+        "cell_0001",
+        "cell_0002",
+        "cell_0065",
+        "cell_0066",
+        "cell_0129",
+        "cell_0130",
+        "cell_0193",
+        "cell_0194",
+        "cell_0257",
+        "cell_0258",
+        "cell_0321",
+        "cell_0322",
+        "cell_0449",
+        "cell_0450",
+        "cell_0577",
+        "cell_0578",
+        "cell_0641",
+        "cell_0642",
+        "cell_0705",
+        "cell_0706",
+        "cell_0769",
+        "cell_0770",
+        "cell_0833",
+        "cell_0834"
+      ],
+      "selected_active_tissue_count": 12,
+      "selected_active_tissue_ids": [
+        "tissue_01",
+        "tissue_03",
+        "tissue_05",
+        "tissue_07",
+        "tissue_09",
+        "tissue_11",
+        "tissue_15",
+        "tissue_19",
+        "tissue_21",
+        "tissue_23",
+        "tissue_25",
+        "tissue_27"
+      ],
+      "selected_audit_replay_required_count": 8,
+      "selected_continuity_requirement_counts": {
+        "strict": 24
+      },
+      "selected_dormancy_behavior_counts": {
+        "warm_standby": 24
+      },
+      "selected_exemplar_class_counts": {
+        "anchor": 24
+      },
+      "selected_family_counts": {
+        "attention": 2,
+        "continuity_self_history": 2,
+        "episodic_memory": 2,
+        "governance_authority": 2,
+        "intake_router": 2,
+        "language_realizer": 2,
+        "planner": 2,
+        "procedural_skill": 2,
+        "scheduler_resource": 2,
+        "semantic_abstraction": 2,
+        "transfer_broker": 2,
+        "working_memory": 2
+      },
+      "selected_sandbox_required_count": 4,
+      "selected_tissue_variant_counts": {
+        "primary_path": 24
+      },
+      "target_active_cells": 16,
+      "tissue_manifest_hash": "2d5a08fd64a67fb64584ddb66e555a7d1254fd379d07761ab2d5fbf2dbc2b800",
+      "tissue_selection_trace": [
+        {
+          "activation_priority_boost": 12,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0001",
+            "cell_0002"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_01",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 12,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0065",
+            "cell_0066"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_03",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 12,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0129",
+            "cell_0130"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_05",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 12,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0193",
+            "cell_0194"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_07",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 12,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0257",
+            "cell_0258"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_09",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 12,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0321",
+            "cell_0322"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_11",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 12,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0449",
+            "cell_0450"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_15",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 12,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0577",
+            "cell_0578"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_19",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 12,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0641",
+            "cell_0642"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_21",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 12,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0705",
+            "cell_0706"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_23",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 12,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0769",
+            "cell_0770"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_25",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 12,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0833",
+            "cell_0834"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_27",
+          "tissue_variant_id": "primary_path"
+        }
+      ]
+    },
+    "hibernate_required": {
+      "allowed": false,
+      "budget_state": "hibernate_required",
+      "budget_state_catalog": [
+        "within_budget",
+        "near_ceiling",
+        "ceiling_blocked",
+        "hibernate_required",
+        "profile_mismatch"
+      ],
+      "cell_manifest_hash": "f3e60107b7e35faf04155af2671c3f871286603ebb76d2f88d98116430c9ebde",
+      "current_active_cells": 300,
+      "current_active_tissues": 32,
+      "dormant_cell_count": 864,
+      "dormant_cell_preview_ids": [
+        "cell_0009",
+        "cell_0010",
+        "cell_0011",
+        "cell_0012",
+        "cell_0013",
+        "cell_0014",
+        "cell_0015",
+        "cell_0016",
+        "cell_0017",
+        "cell_0018",
+        "cell_0019",
+        "cell_0020",
+        "cell_0021",
+        "cell_0022",
+        "cell_0023",
+        "cell_0024",
+        "cell_0025",
+        "cell_0026",
+        "cell_0027",
+        "cell_0028",
+        "cell_0029",
+        "cell_0030",
+        "cell_0031",
+        "cell_0032",
+        "cell_0041",
+        "cell_0042",
+        "cell_0043",
+        "cell_0044",
+        "cell_0045",
+        "cell_0046",
+        "cell_0047",
+        "cell_0048"
+      ],
+      "eligible_cell_count": 1024,
+      "enforcement_action": "hibernate",
+      "hibernate_candidate_ids": [
+        "cell_0545",
+        "cell_0546",
+        "cell_0547",
+        "cell_0548",
+        "cell_0549",
+        "cell_0550",
+        "cell_0551",
+        "cell_0552",
+        "cell_0929",
+        "cell_0930",
+        "cell_0931",
+        "cell_0932",
+        "cell_0933",
+        "cell_0934",
+        "cell_0935",
+        "cell_0936",
+        "cell_0993",
+        "cell_0994",
+        "cell_0995",
+        "cell_0996",
+        "cell_0997",
+        "cell_0998",
+        "cell_0999",
+        "cell_1000",
+        "cell_0193",
+        "cell_0194",
+        "cell_0195",
+        "cell_0196",
+        "cell_0197",
+        "cell_0198",
+        "cell_0199",
+        "cell_0200",
+        "cell_0225",
+        "cell_0226",
+        "cell_0227",
+        "cell_0228",
+        "cell_0229",
+        "cell_0230",
+        "cell_0231",
+        "cell_0232",
+        "cell_0801",
+        "cell_0802",
+        "cell_0803",
+        "cell_0804"
+      ],
+      "invalid_requested_cell_ids": [],
+      "max_active_cells": 256,
+      "max_active_tissues": 32,
+      "min_active_cells": 128,
+      "profile": "builder",
+      "profile_manifest_hash": "c387c248c62e32a1f872577e239f4a6cca182f66b1a188dd49268f0b72c1c12b",
+      "reason_code": "ACTIVE_CELL_BUDGET_HIBERNATE_REQUIRED",
+      "receipt_hash": "58de792aa13170016be6062a99e989be4d7073079d1cf3b84292212352c74bd2",
+      "requested_active_cells": 160,
+      "requested_active_tissues": 20,
+      "schema": "agifcore.phase_14.active_cell_budget.v1",
+      "selected_activation_priority_max": 126,
+      "selected_activation_priority_min": 91,
+      "selected_activation_priority_total": 17856,
+      "selected_active_cell_count": 160,
+      "selected_active_cell_ids": [
+        "cell_0033",
+        "cell_0034",
+        "cell_0035",
+        "cell_0036",
+        "cell_0037",
+        "cell_0038",
+        "cell_0039",
+        "cell_0040",
+        "cell_0097",
+        "cell_0098",
+        "cell_0099",
+        "cell_0100",
+        "cell_0101",
+        "cell_0102",
+        "cell_0103",
+        "cell_0104",
+        "cell_0161",
+        "cell_0162",
+        "cell_0163",
+        "cell_0164",
+        "cell_0165",
+        "cell_0166",
+        "cell_0167",
+        "cell_0168",
+        "cell_0225",
+        "cell_0226",
+        "cell_0227",
+        "cell_0228",
+        "cell_0229",
+        "cell_0230",
+        "cell_0231",
+        "cell_0232",
+        "cell_0289",
+        "cell_0290",
+        "cell_0291",
+        "cell_0292",
+        "cell_0293",
+        "cell_0294",
+        "cell_0295",
+        "cell_0296",
+        "cell_0353",
+        "cell_0354",
+        "cell_0355",
+        "cell_0356",
+        "cell_0357",
+        "cell_0358",
+        "cell_0359",
+        "cell_0360",
+        "cell_0417",
+        "cell_0418",
+        "cell_0419",
+        "cell_0420",
+        "cell_0421",
+        "cell_0422",
+        "cell_0423",
+        "cell_0424",
+        "cell_0481",
+        "cell_0482",
+        "cell_0483",
+        "cell_0484",
+        "cell_0485",
+        "cell_0486",
+        "cell_0487",
+        "cell_0488",
+        "cell_0545",
+        "cell_0546",
+        "cell_0547",
+        "cell_0548",
+        "cell_0549",
+        "cell_0550",
+        "cell_0551",
+        "cell_0552",
+        "cell_0609",
+        "cell_0610",
+        "cell_0611",
+        "cell_0612",
+        "cell_0613",
+        "cell_0614",
+        "cell_0615",
+        "cell_0616",
+        "cell_0673",
+        "cell_0674",
+        "cell_0675",
+        "cell_0676",
+        "cell_0677",
+        "cell_0678",
+        "cell_0679",
+        "cell_0680",
+        "cell_0737",
+        "cell_0738",
+        "cell_0739",
+        "cell_0740",
+        "cell_0741",
+        "cell_0742",
+        "cell_0743",
+        "cell_0744",
+        "cell_0801",
+        "cell_0802",
+        "cell_0803",
+        "cell_0804",
+        "cell_0805",
+        "cell_0806",
+        "cell_0807",
+        "cell_0808",
+        "cell_0865",
+        "cell_0866",
+        "cell_0867",
+        "cell_0868",
+        "cell_0869",
+        "cell_0870",
+        "cell_0871",
+        "cell_0872",
+        "cell_0929",
+        "cell_0930",
+        "cell_0931",
+        "cell_0932",
+        "cell_0933",
+        "cell_0934",
+        "cell_0935",
+        "cell_0936",
+        "cell_0993",
+        "cell_0994",
+        "cell_0995",
+        "cell_0996",
+        "cell_0997",
+        "cell_0998",
+        "cell_0999",
+        "cell_1000",
+        "cell_0001",
+        "cell_0002",
+        "cell_0003",
+        "cell_0004",
+        "cell_0005",
+        "cell_0006",
+        "cell_0007",
+        "cell_0008",
+        "cell_0065",
+        "cell_0066",
+        "cell_0067",
+        "cell_0068",
+        "cell_0069",
+        "cell_0070",
+        "cell_0071",
+        "cell_0072",
+        "cell_0129",
+        "cell_0130",
+        "cell_0131",
+        "cell_0132",
+        "cell_0133",
+        "cell_0134",
+        "cell_0135",
+        "cell_0136",
+        "cell_0193",
+        "cell_0194",
+        "cell_0195",
+        "cell_0196",
+        "cell_0197",
+        "cell_0198",
+        "cell_0199",
+        "cell_0200"
+      ],
+      "selected_active_tissue_count": 20,
+      "selected_active_tissue_ids": [
+        "tissue_02",
+        "tissue_04",
+        "tissue_06",
+        "tissue_08",
+        "tissue_10",
+        "tissue_12",
+        "tissue_14",
+        "tissue_16",
+        "tissue_18",
+        "tissue_20",
+        "tissue_22",
+        "tissue_24",
+        "tissue_26",
+        "tissue_28",
+        "tissue_30",
+        "tissue_32",
+        "tissue_01",
+        "tissue_03",
+        "tissue_05",
+        "tissue_07"
+      ],
+      "selected_audit_replay_required_count": 64,
+      "selected_continuity_requirement_counts": {
+        "checkpointed": 128,
+        "strict": 32
+      },
+      "selected_dormancy_behavior_counts": {
+        "checkpoint_restore": 128,
+        "warm_standby": 32
+      },
+      "selected_exemplar_class_counts": {
+        "anchor": 32,
+        "checkpoint": 128
+      },
+      "selected_family_counts": {
+        "attention": 16,
+        "audit_replay": 8,
+        "compression_retirement": 8,
+        "continuity_self_history": 8,
+        "critic_error_monitor": 8,
+        "episodic_memory": 16,
+        "governance_authority": 8,
+        "intake_router": 16,
+        "language_realizer": 8,
+        "planner": 8,
+        "procedural_skill": 8,
+        "scheduler_resource": 8,
+        "semantic_abstraction": 8,
+        "transfer_broker": 8,
+        "working_memory": 16,
+        "world_model_simulator": 8
+      },
+      "selected_sandbox_required_count": 32,
+      "selected_tissue_variant_counts": {
+        "continuity_backstop": 128,
+        "primary_path": 32
+      },
+      "target_active_cells": 160,
+      "tissue_manifest_hash": "2d5a08fd64a67fb64584ddb66e555a7d1254fd379d07761ab2d5fbf2dbc2b800",
+      "tissue_selection_trace": [
+        {
+          "activation_priority_boost": 10,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0033",
+            "cell_0034",
+            "cell_0035",
+            "cell_0036",
+            "cell_0037",
+            "cell_0038",
+            "cell_0039",
+            "cell_0040"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_02",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 10,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0097",
+            "cell_0098",
+            "cell_0099",
+            "cell_0100",
+            "cell_0101",
+            "cell_0102",
+            "cell_0103",
+            "cell_0104"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_04",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 10,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0161",
+            "cell_0162",
+            "cell_0163",
+            "cell_0164",
+            "cell_0165",
+            "cell_0166",
+            "cell_0167",
+            "cell_0168"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_06",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 10,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0225",
+            "cell_0226",
+            "cell_0227",
+            "cell_0228",
+            "cell_0229",
+            "cell_0230",
+            "cell_0231",
+            "cell_0232"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_08",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 10,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0289",
+            "cell_0290",
+            "cell_0291",
+            "cell_0292",
+            "cell_0293",
+            "cell_0294",
+            "cell_0295",
+            "cell_0296"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_10",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 10,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0353",
+            "cell_0354",
+            "cell_0355",
+            "cell_0356",
+            "cell_0357",
+            "cell_0358",
+            "cell_0359",
+            "cell_0360"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_12",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 10,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0417",
+            "cell_0418",
+            "cell_0419",
+            "cell_0420",
+            "cell_0421",
+            "cell_0422",
+            "cell_0423",
+            "cell_0424"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_14",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 10,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0481",
+            "cell_0482",
+            "cell_0483",
+            "cell_0484",
+            "cell_0485",
+            "cell_0486",
+            "cell_0487",
+            "cell_0488"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_16",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 10,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0545",
+            "cell_0546",
+            "cell_0547",
+            "cell_0548",
+            "cell_0549",
+            "cell_0550",
+            "cell_0551",
+            "cell_0552"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_18",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 10,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0609",
+            "cell_0610",
+            "cell_0611",
+            "cell_0612",
+            "cell_0613",
+            "cell_0614",
+            "cell_0615",
+            "cell_0616"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_20",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 10,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0673",
+            "cell_0674",
+            "cell_0675",
+            "cell_0676",
+            "cell_0677",
+            "cell_0678",
+            "cell_0679",
+            "cell_0680"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_22",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 10,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0737",
+            "cell_0738",
+            "cell_0739",
+            "cell_0740",
+            "cell_0741",
+            "cell_0742",
+            "cell_0743",
+            "cell_0744"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_24",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 10,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0801",
+            "cell_0802",
+            "cell_0803",
+            "cell_0804",
+            "cell_0805",
+            "cell_0806",
+            "cell_0807",
+            "cell_0808"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_26",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 10,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0865",
+            "cell_0866",
+            "cell_0867",
+            "cell_0868",
+            "cell_0869",
+            "cell_0870",
+            "cell_0871",
+            "cell_0872"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_28",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 10,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0929",
+            "cell_0930",
+            "cell_0931",
+            "cell_0932",
+            "cell_0933",
+            "cell_0934",
+            "cell_0935",
+            "cell_0936"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_30",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 10,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0993",
+            "cell_0994",
+            "cell_0995",
+            "cell_0996",
+            "cell_0997",
+            "cell_0998",
+            "cell_0999",
+            "cell_1000"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_32",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 4,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0001",
+            "cell_0002",
+            "cell_0003",
+            "cell_0004",
+            "cell_0005",
+            "cell_0006",
+            "cell_0007",
+            "cell_0008"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_01",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 4,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0065",
+            "cell_0066",
+            "cell_0067",
+            "cell_0068",
+            "cell_0069",
+            "cell_0070",
+            "cell_0071",
+            "cell_0072"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_03",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 4,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0129",
+            "cell_0130",
+            "cell_0131",
+            "cell_0132",
+            "cell_0133",
+            "cell_0134",
+            "cell_0135",
+            "cell_0136"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_05",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 4,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0193",
+            "cell_0194",
+            "cell_0195",
+            "cell_0196",
+            "cell_0197",
+            "cell_0198",
+            "cell_0199",
+            "cell_0200"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_07",
+          "tissue_variant_id": "primary_path"
+        }
+      ]
+    },
+    "near_ceiling": {
+      "allowed": true,
+      "budget_state": "near_ceiling",
+      "budget_state_catalog": [
+        "within_budget",
+        "near_ceiling",
+        "ceiling_blocked",
+        "hibernate_required",
+        "profile_mismatch"
+      ],
+      "cell_manifest_hash": "f3e60107b7e35faf04155af2671c3f871286603ebb76d2f88d98116430c9ebde",
+      "current_active_cells": 0,
+      "current_active_tissues": 0,
+      "dormant_cell_count": 908,
+      "dormant_cell_preview_ids": [
+        "cell_0006",
+        "cell_0007",
+        "cell_0008",
+        "cell_0009",
+        "cell_0010",
+        "cell_0011",
+        "cell_0012",
+        "cell_0013",
+        "cell_0014",
+        "cell_0015",
+        "cell_0016",
+        "cell_0017",
+        "cell_0018",
+        "cell_0019",
+        "cell_0020",
+        "cell_0021",
+        "cell_0022",
+        "cell_0023",
+        "cell_0024",
+        "cell_0025",
+        "cell_0026",
+        "cell_0027",
+        "cell_0028",
+        "cell_0029",
+        "cell_0030",
+        "cell_0031",
+        "cell_0032",
+        "cell_0036",
+        "cell_0037",
+        "cell_0038",
+        "cell_0039",
+        "cell_0040"
+      ],
+      "eligible_cell_count": 896,
+      "enforcement_action": "admit_with_warning",
+      "hibernate_candidate_ids": [],
+      "invalid_requested_cell_ids": [],
+      "max_active_cells": 128,
+      "max_active_tissues": 32,
+      "min_active_cells": 64,
+      "profile": "laptop",
+      "profile_manifest_hash": "bf2b42009e83f7886e5991e41e5a206215ce0fc6b3441a8767be498a5a331ba6",
+      "reason_code": "ACTIVE_CELL_BUDGET_NEAR_CEILING",
+      "receipt_hash": "12195e65429386b1d8374e4eb8858925653c7d87c7dae2c150618ab27620b059",
+      "requested_active_cells": 120,
+      "requested_active_tissues": 30,
+      "schema": "agifcore.phase_14.active_cell_budget.v1",
+      "selected_activation_priority_max": 128,
+      "selected_activation_priority_min": 93,
+      "selected_activation_priority_total": 12960,
+      "selected_active_cell_count": 116,
+      "selected_active_cell_ids": [
+        "cell_0001",
+        "cell_0002",
+        "cell_0003",
+        "cell_0004",
+        "cell_0005",
+        "cell_0065",
+        "cell_0066",
+        "cell_0067",
+        "cell_0068",
+        "cell_0069",
+        "cell_0129",
+        "cell_0130",
+        "cell_0131",
+        "cell_0132",
+        "cell_0133",
+        "cell_0193",
+        "cell_0194",
+        "cell_0195",
+        "cell_0196",
+        "cell_0197",
+        "cell_0257",
+        "cell_0258",
+        "cell_0259",
+        "cell_0260",
+        "cell_0261",
+        "cell_0321",
+        "cell_0322",
+        "cell_0323",
+        "cell_0324",
+        "cell_0325",
+        "cell_0385",
+        "cell_0386",
+        "cell_0387",
+        "cell_0388",
+        "cell_0389",
+        "cell_0449",
+        "cell_0450",
+        "cell_0451",
+        "cell_0452",
+        "cell_0453",
+        "cell_0513",
+        "cell_0514",
+        "cell_0515",
+        "cell_0516",
+        "cell_0517",
+        "cell_0577",
+        "cell_0578",
+        "cell_0579",
+        "cell_0580",
+        "cell_0581",
+        "cell_0641",
+        "cell_0642",
+        "cell_0643",
+        "cell_0644",
+        "cell_0645",
+        "cell_0705",
+        "cell_0706",
+        "cell_0707",
+        "cell_0708",
+        "cell_0709",
+        "cell_0769",
+        "cell_0770",
+        "cell_0771",
+        "cell_0772",
+        "cell_0773",
+        "cell_0833",
+        "cell_0834",
+        "cell_0835",
+        "cell_0836",
+        "cell_0837",
+        "cell_0897",
+        "cell_0898",
+        "cell_0899",
+        "cell_0900",
+        "cell_0901",
+        "cell_0961",
+        "cell_0962",
+        "cell_0963",
+        "cell_0964",
+        "cell_0965",
+        "cell_0033",
+        "cell_0034",
+        "cell_0035",
+        "cell_0097",
+        "cell_0098",
+        "cell_0099",
+        "cell_0161",
+        "cell_0162",
+        "cell_0163",
+        "cell_0225",
+        "cell_0226",
+        "cell_0227",
+        "cell_0289",
+        "cell_0290",
+        "cell_0291",
+        "cell_0353",
+        "cell_0354",
+        "cell_0355",
+        "cell_0481",
+        "cell_0482",
+        "cell_0483",
+        "cell_0609",
+        "cell_0610",
+        "cell_0611",
+        "cell_0673",
+        "cell_0674",
+        "cell_0675",
+        "cell_0737",
+        "cell_0738",
+        "cell_0739",
+        "cell_0801",
+        "cell_0802",
+        "cell_0803",
+        "cell_0865",
+        "cell_0866",
+        "cell_0867"
+      ],
+      "selected_active_tissue_count": 28,
+      "selected_active_tissue_ids": [
+        "tissue_01",
+        "tissue_03",
+        "tissue_05",
+        "tissue_07",
+        "tissue_09",
+        "tissue_11",
+        "tissue_13",
+        "tissue_15",
+        "tissue_17",
+        "tissue_19",
+        "tissue_21",
+        "tissue_23",
+        "tissue_25",
+        "tissue_27",
+        "tissue_29",
+        "tissue_31",
+        "tissue_02",
+        "tissue_04",
+        "tissue_06",
+        "tissue_08",
+        "tissue_10",
+        "tissue_12",
+        "tissue_16",
+        "tissue_20",
+        "tissue_22",
+        "tissue_24",
+        "tissue_26",
+        "tissue_28"
+      ],
+      "selected_audit_replay_required_count": 52,
+      "selected_continuity_requirement_counts": {
+        "checkpointed": 36,
+        "strict": 80
+      },
+      "selected_dormancy_behavior_counts": {
+        "checkpoint_restore": 36,
+        "warm_standby": 80
+      },
+      "selected_exemplar_class_counts": {
+        "anchor": 80,
+        "checkpoint": 36
+      },
+      "selected_family_counts": {
+        "attention": 8,
+        "audit_replay": 5,
+        "compression_retirement": 5,
+        "continuity_self_history": 8,
+        "critic_error_monitor": 5,
+        "episodic_memory": 8,
+        "governance_authority": 8,
+        "intake_router": 8,
+        "language_realizer": 8,
+        "planner": 8,
+        "procedural_skill": 8,
+        "scheduler_resource": 8,
+        "semantic_abstraction": 8,
+        "transfer_broker": 8,
+        "working_memory": 8,
+        "world_model_simulator": 5
+      },
+      "selected_sandbox_required_count": 26,
+      "selected_tissue_variant_counts": {
+        "continuity_backstop": 36,
+        "primary_path": 80
+      },
+      "target_active_cells": 96,
+      "tissue_manifest_hash": "2d5a08fd64a67fb64584ddb66e555a7d1254fd379d07761ab2d5fbf2dbc2b800",
+      "tissue_selection_trace": [
+        {
+          "activation_priority_boost": 8,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0001",
+            "cell_0002",
+            "cell_0003",
+            "cell_0004",
+            "cell_0005"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_01",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 8,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0065",
+            "cell_0066",
+            "cell_0067",
+            "cell_0068",
+            "cell_0069"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_03",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 8,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0129",
+            "cell_0130",
+            "cell_0131",
+            "cell_0132",
+            "cell_0133"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_05",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 8,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0193",
+            "cell_0194",
+            "cell_0195",
+            "cell_0196",
+            "cell_0197"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_07",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 8,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0257",
+            "cell_0258",
+            "cell_0259",
+            "cell_0260",
+            "cell_0261"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_09",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 8,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0321",
+            "cell_0322",
+            "cell_0323",
+            "cell_0324",
+            "cell_0325"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_11",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 8,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0385",
+            "cell_0386",
+            "cell_0387",
+            "cell_0388",
+            "cell_0389"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_13",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 8,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0449",
+            "cell_0450",
+            "cell_0451",
+            "cell_0452",
+            "cell_0453"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_15",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 8,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0513",
+            "cell_0514",
+            "cell_0515",
+            "cell_0516",
+            "cell_0517"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_17",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 8,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0577",
+            "cell_0578",
+            "cell_0579",
+            "cell_0580",
+            "cell_0581"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_19",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 8,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0641",
+            "cell_0642",
+            "cell_0643",
+            "cell_0644",
+            "cell_0645"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_21",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 8,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0705",
+            "cell_0706",
+            "cell_0707",
+            "cell_0708",
+            "cell_0709"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_23",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 8,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0769",
+            "cell_0770",
+            "cell_0771",
+            "cell_0772",
+            "cell_0773"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_25",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 8,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0833",
+            "cell_0834",
+            "cell_0835",
+            "cell_0836",
+            "cell_0837"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_27",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 8,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0897",
+            "cell_0898",
+            "cell_0899",
+            "cell_0900",
+            "cell_0901"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_29",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 8,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0961",
+            "cell_0962",
+            "cell_0963",
+            "cell_0964",
+            "cell_0965"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_31",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 4,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0033",
+            "cell_0034",
+            "cell_0035"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_02",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 4,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0097",
+            "cell_0098",
+            "cell_0099"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_04",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 4,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0161",
+            "cell_0162",
+            "cell_0163"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_06",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 4,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0225",
+            "cell_0226",
+            "cell_0227"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_08",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 4,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0289",
+            "cell_0290",
+            "cell_0291"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_10",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 4,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0353",
+            "cell_0354",
+            "cell_0355"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_12",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 4,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0481",
+            "cell_0482",
+            "cell_0483"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_16",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 4,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0609",
+            "cell_0610",
+            "cell_0611"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_20",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 4,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0673",
+            "cell_0674",
+            "cell_0675"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_22",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 4,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0737",
+            "cell_0738",
+            "cell_0739"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_24",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 4,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0801",
+            "cell_0802",
+            "cell_0803"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_26",
+          "tissue_variant_id": "continuity_backstop"
+        },
+        {
+          "activation_priority_boost": 4,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0865",
+            "cell_0866",
+            "cell_0867"
+          ],
+          "specialization_tag": "continuity_backstop",
+          "tissue_id": "tissue_28",
+          "tissue_variant_id": "continuity_backstop"
+        }
+      ]
+    },
+    "profile_mismatch": {
+      "allowed": false,
+      "budget_state": "profile_mismatch",
+      "budget_state_catalog": [
+        "within_budget",
+        "near_ceiling",
+        "ceiling_blocked",
+        "hibernate_required",
+        "profile_mismatch"
+      ],
+      "cell_manifest_hash": "f3e60107b7e35faf04155af2671c3f871286603ebb76d2f88d98116430c9ebde",
+      "current_active_cells": 0,
+      "current_active_tissues": 0,
+      "dormant_cell_count": 1016,
+      "dormant_cell_preview_ids": [
+        "cell_0003",
+        "cell_0004",
+        "cell_0005",
+        "cell_0006",
+        "cell_0007",
+        "cell_0008",
+        "cell_0009",
+        "cell_0010",
+        "cell_0011",
+        "cell_0012",
+        "cell_0013",
+        "cell_0014",
+        "cell_0015",
+        "cell_0016",
+        "cell_0017",
+        "cell_0018",
+        "cell_0019",
+        "cell_0020",
+        "cell_0021",
+        "cell_0022",
+        "cell_0023",
+        "cell_0024",
+        "cell_0025",
+        "cell_0026",
+        "cell_0027",
+        "cell_0028",
+        "cell_0029",
+        "cell_0030",
+        "cell_0031",
+        "cell_0032",
+        "cell_0033",
+        "cell_0034"
+      ],
+      "eligible_cell_count": 640,
+      "enforcement_action": "deny",
+      "hibernate_candidate_ids": [],
+      "invalid_requested_cell_ids": [
+        "cell_0353"
+      ],
+      "max_active_cells": 24,
+      "max_active_tissues": 16,
+      "min_active_cells": 8,
+      "profile": "mobile",
+      "profile_manifest_hash": "8132cde1ea5f35cce06612042ae47177b581bb2d691752bd742b9f57aa47ff5c",
+      "reason_code": "PROFILE_NOT_ALLOWED",
+      "receipt_hash": "43ac9b32119d4c06587752a07062125d6f4a673990f4b6bb9d5b1d24e821fc9f",
+      "requested_active_cells": 8,
+      "requested_active_tissues": 4,
+      "schema": "agifcore.phase_14.active_cell_budget.v1",
+      "selected_activation_priority_max": 132,
+      "selected_activation_priority_min": 107,
+      "selected_activation_priority_total": 986,
+      "selected_active_cell_count": 8,
+      "selected_active_cell_ids": [
+        "cell_0001",
+        "cell_0002",
+        "cell_0065",
+        "cell_0066",
+        "cell_0129",
+        "cell_0130",
+        "cell_0193",
+        "cell_0194"
+      ],
+      "selected_active_tissue_count": 4,
+      "selected_active_tissue_ids": [
+        "tissue_01",
+        "tissue_03",
+        "tissue_05",
+        "tissue_07"
+      ],
+      "selected_audit_replay_required_count": 0,
+      "selected_continuity_requirement_counts": {
+        "strict": 8
+      },
+      "selected_dormancy_behavior_counts": {
+        "warm_standby": 8
+      },
+      "selected_exemplar_class_counts": {
+        "anchor": 8
+      },
+      "selected_family_counts": {
+        "attention": 2,
+        "episodic_memory": 2,
+        "intake_router": 2,
+        "working_memory": 2
+      },
+      "selected_sandbox_required_count": 0,
+      "selected_tissue_variant_counts": {
+        "primary_path": 8
+      },
+      "target_active_cells": 16,
+      "tissue_manifest_hash": "2d5a08fd64a67fb64584ddb66e555a7d1254fd379d07761ab2d5fbf2dbc2b800",
+      "tissue_selection_trace": [
+        {
+          "activation_priority_boost": 12,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0001",
+            "cell_0002"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_01",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 12,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0065",
+            "cell_0066"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_03",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 12,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0129",
+            "cell_0130"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_05",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 12,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0193",
+            "cell_0194"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_07",
+          "tissue_variant_id": "primary_path"
+        }
+      ]
+    },
+    "within_budget": {
+      "allowed": true,
+      "budget_state": "within_budget",
+      "budget_state_catalog": [
+        "within_budget",
+        "near_ceiling",
+        "ceiling_blocked",
+        "hibernate_required",
+        "profile_mismatch"
+      ],
+      "cell_manifest_hash": "f3e60107b7e35faf04155af2671c3f871286603ebb76d2f88d98116430c9ebde",
+      "current_active_cells": 0,
+      "current_active_tissues": 0,
+      "dormant_cell_count": 1012,
+      "dormant_cell_preview_ids": [
+        "cell_0003",
+        "cell_0004",
+        "cell_0005",
+        "cell_0006",
+        "cell_0007",
+        "cell_0008",
+        "cell_0009",
+        "cell_0010",
+        "cell_0011",
+        "cell_0012",
+        "cell_0013",
+        "cell_0014",
+        "cell_0015",
+        "cell_0016",
+        "cell_0017",
+        "cell_0018",
+        "cell_0019",
+        "cell_0020",
+        "cell_0021",
+        "cell_0022",
+        "cell_0023",
+        "cell_0024",
+        "cell_0025",
+        "cell_0026",
+        "cell_0027",
+        "cell_0028",
+        "cell_0029",
+        "cell_0030",
+        "cell_0031",
+        "cell_0032",
+        "cell_0033",
+        "cell_0034"
+      ],
+      "eligible_cell_count": 640,
+      "enforcement_action": "admit",
+      "hibernate_candidate_ids": [],
+      "invalid_requested_cell_ids": [],
+      "max_active_cells": 24,
+      "max_active_tissues": 16,
+      "min_active_cells": 8,
+      "profile": "mobile",
+      "profile_manifest_hash": "8132cde1ea5f35cce06612042ae47177b581bb2d691752bd742b9f57aa47ff5c",
+      "reason_code": "ACTIVE_CELL_BUDGET_WITHIN_LIMITS",
+      "receipt_hash": "2551d17b8f9abba5fdf9593c1cdf57c9b3cf0dd12778d2d939b752af5931dbaf",
+      "requested_active_cells": 12,
+      "requested_active_tissues": 6,
+      "schema": "agifcore.phase_14.active_cell_budget.v1",
+      "selected_activation_priority_max": 132,
+      "selected_activation_priority_min": 107,
+      "selected_activation_priority_total": 1464,
+      "selected_active_cell_count": 12,
+      "selected_active_cell_ids": [
+        "cell_0001",
+        "cell_0002",
+        "cell_0065",
+        "cell_0066",
+        "cell_0129",
+        "cell_0130",
+        "cell_0193",
+        "cell_0194",
+        "cell_0257",
+        "cell_0258",
+        "cell_0321",
+        "cell_0322"
+      ],
+      "selected_active_tissue_count": 6,
+      "selected_active_tissue_ids": [
+        "tissue_01",
+        "tissue_03",
+        "tissue_05",
+        "tissue_07",
+        "tissue_09",
+        "tissue_11"
+      ],
+      "selected_audit_replay_required_count": 2,
+      "selected_continuity_requirement_counts": {
+        "strict": 12
+      },
+      "selected_dormancy_behavior_counts": {
+        "warm_standby": 12
+      },
+      "selected_exemplar_class_counts": {
+        "anchor": 12
+      },
+      "selected_family_counts": {
+        "attention": 2,
+        "episodic_memory": 2,
+        "intake_router": 2,
+        "procedural_skill": 2,
+        "semantic_abstraction": 2,
+        "working_memory": 2
+      },
+      "selected_sandbox_required_count": 2,
+      "selected_tissue_variant_counts": {
+        "primary_path": 12
+      },
+      "target_active_cells": 16,
+      "tissue_manifest_hash": "2d5a08fd64a67fb64584ddb66e555a7d1254fd379d07761ab2d5fbf2dbc2b800",
+      "tissue_selection_trace": [
+        {
+          "activation_priority_boost": 12,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0001",
+            "cell_0002"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_01",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 12,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0065",
+            "cell_0066"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_03",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 12,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0129",
+            "cell_0130"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_05",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 12,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0193",
+            "cell_0194"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_07",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 12,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0257",
+            "cell_0258"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_09",
+          "tissue_variant_id": "primary_path"
+        },
+        {
+          "activation_priority_boost": 12,
+          "available_candidate_count": 32,
+          "selected_cell_ids": [
+            "cell_0321",
+            "cell_0322"
+          ],
+          "specialization_tag": "online_path",
+          "tissue_id": "tissue_11",
+          "tissue_variant_id": "primary_path"
+        }
+      ]
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "within-budget-admits",
+      "result": "pass"
+    },
+    {
+      "id": "near-ceiling-admits-with-warning",
+      "result": "pass"
+    },
+    {
+      "id": "ceiling-blocks",
+      "result": "pass"
+    },
+    {
+      "id": "hibernate-required-blocks",
+      "result": "pass"
+    },
+    {
+      "id": "profile-mismatch-blocks",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_14_SANDBOX_PROFILES_AND_SCALE_REALIZATION.md",
+    "projects/agifcore_master/01_plan/PHASE_13_PRODUCT_RUNTIME_AND_UX.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/03_design/SANDBOX_MODEL.md",
+    "projects/agifcore_master/03_design/DEPLOYMENT_MODEL.md",
+    "projects/agifcore_master/03_design/PRODUCT_RUNTIME_MODEL.md",
+    "projects/agifcore_master/03_design/BUNDLE_INTEGRITY_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/active_dormant_control.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/profile_budget_rules.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/tissue_manifests.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/contracts.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/product_runtime_shell.py",
+    "projects/agifcore_master/05_testing/phase_13_product_runtime_and_ux/_phase_13_verifier_common.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/contracts.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/sandbox_policy.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/wasmtime_fuel_limits.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/wasmtime_memory_limits.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/wasmtime_wall_time_limits.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/cell_manifest.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/tissue_manifest.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/profile_manifests.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/active_cell_budget.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/dormant_cell_survival.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/sandbox_profile_shell.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/__init__.py",
+    "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/_phase_14_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/verify_phase_14_active_cell_budget.py"
+  ],
+  "notes": [
+    "budget enforcement stays explicit and does not silently widen profile bands",
+    "Phase 14 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_active_cell_budget_report.json"
+  },
+  "phase": "14",
+  "status": "pass",
+  "verifier": "verify_phase_14_active_cell_budget"
+}

@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agifcore.phase_03.bundle_manifest.schema.json",
+  "title": "AGIFCore Phase 3 Slice 1 BundleManifest",
+  "type": "object",
+  "required": [
+    "bundle_id",
+    "bundle_version",
+    "bundle_type",
+    "entry_contracts",
+    "schema_refs",
+    "payload_inventory",
+    "provenance_fields"
+  ],
+  "properties": {
+    "bundle_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "bundle_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "bundle_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "entry_contracts": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "schema_refs": {
+      "type": "object",
+      "required": [
+        "cell_contract",
+        "tissue_manifest",
+        "bundle_manifest"
+      ],
+      "properties": {
+        "cell_contract": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tissue_manifest": {
+          "type": "string",
+          "minLength": 1
+        },
+        "bundle_manifest": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": true
+    },
+    "payload_inventory": {
+      "type": "object",
+      "required": [
+        "cell_contract",
+        "tissue_manifest"
+      ],
+      "properties": {
+        "cell_contract": {
+          "type": "object"
+        },
+        "tissue_manifest": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": true
+    },
+    "provenance_fields": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

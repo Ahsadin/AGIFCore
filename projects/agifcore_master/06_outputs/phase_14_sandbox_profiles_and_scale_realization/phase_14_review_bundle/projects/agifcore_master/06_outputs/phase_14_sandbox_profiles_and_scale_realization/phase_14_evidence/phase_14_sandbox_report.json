@@ -1,0 +1,289 @@
+{
+  "anchors": {
+    "allowed_receipt": {
+      "admitted": true,
+      "bundle_integrity_verified": true,
+      "command": [
+        "/Users/ahsadin/.wasmtime/bin/wasmtime",
+        "run",
+        "-W",
+        "fuel=100000000",
+        "-W",
+        "max-memory-size=268435456",
+        "-W",
+        "timeout=1000ms",
+        "-W",
+        "trap-on-grow-failure=y",
+        "--invoke",
+        "add",
+        "/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/sandbox_packages/phase14_laptop_valid_sample_module.wat",
+        "1",
+        "2"
+      ],
+      "executed_at": "2026-04-01T16:03:03+00:00",
+      "exit_code": 0,
+      "fuel_limit": 100000000,
+      "function_args": [
+        "1",
+        "2"
+      ],
+      "function_name": "add",
+      "memory_limit_bytes": 268435456,
+      "memory_limit_mb": 256,
+      "package_id": "phase14_wasm_package::laptop::valid",
+      "phase15_blocked": true,
+      "phase16_blocked": true,
+      "policy_id": "laptop_default_policy",
+      "profile": "laptop",
+      "profile_allowed": true,
+      "reason_code": "none",
+      "receipt_hash": "42db9d7f0b4cafc51b4be0d2f382d46507aefcf160b852c0b31e6bf497748b7b",
+      "sandbox_backend": "wasmtime_cli",
+      "sandboxed_execution": true,
+      "schema": "agifcore.phase_14.sandbox_execution_receipt.v1",
+      "status": "pass",
+      "stderr": "warning: using `--invoke` with a function that takes arguments is experimental and may break in the future\nwarning: using `--invoke` with a function that returns values is experimental and may break in the future",
+      "stdout": "3",
+      "wall_time_limit_ms": 1000,
+      "wasmtime_cli_path": "/Users/ahsadin/.wasmtime/bin/wasmtime"
+    },
+    "policy_catalog": {
+      "catalog_hash": "97d34c76f7ae47569ab743d8a3722bc616e447cb78598ea157641444fcd3bfdc",
+      "policies": [
+        {
+          "allowed_profiles": [
+            "mobile"
+          ],
+          "bundle_integrity_required": true,
+          "description": "mobile fail-closed constrained package execution",
+          "fuel_class_id": "mobile_constrained",
+          "memory_class_id": "mobile_constrained",
+          "phase15_blocked": true,
+          "phase16_blocked": true,
+          "policy_hash": "92668271683484a55e35e23df1c1500aa96ad5ea54ceaae1477dcf40123202c8",
+          "policy_id": "mobile_constrained_policy",
+          "sandbox_process_model": "dedicated_wasmtime_subprocess",
+          "schema": "agifcore.phase_14.sandbox_policy.v1",
+          "wall_time_class_id": "mobile_constrained"
+        },
+        {
+          "allowed_profiles": [
+            "laptop"
+          ],
+          "bundle_integrity_required": true,
+          "description": "reference laptop package execution",
+          "fuel_class_id": "laptop_default",
+          "memory_class_id": "laptop_default",
+          "phase15_blocked": true,
+          "phase16_blocked": true,
+          "policy_hash": "ed0885f814295d22a74b90bf8f9600e379e7bc5bbb71b5197ced9395c2e69554",
+          "policy_id": "laptop_default_policy",
+          "sandbox_process_model": "dedicated_wasmtime_subprocess",
+          "schema": "agifcore.phase_14.sandbox_policy.v1",
+          "wall_time_class_id": "laptop_default"
+        },
+        {
+          "allowed_profiles": [
+            "builder"
+          ],
+          "bundle_integrity_required": true,
+          "description": "builder diagnostics without correctness privilege",
+          "fuel_class_id": "builder_diagnostic",
+          "memory_class_id": "builder_diagnostic",
+          "phase15_blocked": true,
+          "phase16_blocked": true,
+          "policy_hash": "ee649a3828b01fc40dd9068a6ddd47207bd623ba55c5abc9f0881216c74205fe",
+          "policy_id": "builder_diagnostic_policy",
+          "sandbox_process_model": "dedicated_wasmtime_subprocess",
+          "schema": "agifcore.phase_14.sandbox_policy.v1",
+          "wall_time_class_id": "builder_diagnostic"
+        },
+        {
+          "allowed_profiles": [
+            "mobile",
+            "laptop",
+            "builder"
+          ],
+          "bundle_integrity_required": true,
+          "description": "strict deny-first sandbox envelope",
+          "fuel_class_id": "strict_fail_closed",
+          "memory_class_id": "strict_fail_closed",
+          "phase15_blocked": true,
+          "phase16_blocked": true,
+          "policy_hash": "71d54a05a95f3317a88c17737f8320f79fc4c86a2cb9eed33d03bea46c17e82b",
+          "policy_id": "strict_fail_closed_policy",
+          "sandbox_process_model": "dedicated_wasmtime_subprocess",
+          "schema": "agifcore.phase_14.sandbox_policy.v1",
+          "wall_time_class_id": "strict_fail_closed"
+        }
+      ],
+      "policy_count": 4,
+      "reason_codes": [
+        "WASMTIME_UNAVAILABLE",
+        "INVALID_WASM_MODULE",
+        "BUNDLE_INTEGRITY_REQUIRED",
+        "PROFILE_NOT_ALLOWED",
+        "FUEL_LIMIT_EXCEEDED",
+        "MEMORY_LIMIT_EXCEEDED",
+        "WALL_TIMEOUT_EXCEEDED"
+      ],
+      "schema": "agifcore.phase_14.sandbox_policy.v1"
+    },
+    "profile_mismatch_receipt": {
+      "admitted": false,
+      "bundle_integrity_verified": true,
+      "command": [],
+      "executed_at": "2026-04-01T16:03:03+00:00",
+      "exit_code": null,
+      "fuel_limit": 25000000,
+      "function_args": [
+        "1",
+        "2"
+      ],
+      "function_name": "add",
+      "memory_limit_bytes": 67108864,
+      "memory_limit_mb": 64,
+      "package_id": "phase14_wasm_package::mobile::valid",
+      "phase15_blocked": true,
+      "phase16_blocked": true,
+      "policy_id": "mobile_constrained_policy",
+      "profile": "mobile",
+      "profile_allowed": false,
+      "reason_code": "PROFILE_NOT_ALLOWED",
+      "receipt_hash": "5a0bbf2d0a2b49196abba586d8b461b834ba02d33cff6944adced5baf4892744",
+      "sandbox_backend": "wasmtime_cli",
+      "sandboxed_execution": true,
+      "schema": "agifcore.phase_14.sandbox_execution_receipt.v1",
+      "status": "blocked",
+      "stderr": "",
+      "stdout": "",
+      "wall_time_limit_ms": 250,
+      "wasmtime_cli_path": "/Users/ahsadin/.wasmtime/bin/wasmtime"
+    },
+    "shell_snapshot": {
+      "blocked_surface_names": [
+        "task_submit",
+        "policy_update"
+      ],
+      "cell_count": 1024,
+      "phase13_memory_review_export_hash": "a2d31910f16f441d6f86aea504d0b3fa733a5e83da3c31081e174da6e6c24fb8",
+      "phase13_safe_shutdown_hash": "3ecb823a7fb9927c7b2e140b9857167ab13e0eea0ad1c463bbb6cb89b79cc65d",
+      "phase13_session_id": "phase13_session::ff1815e1d727",
+      "phase13_shell_hash": "aad310f27861420cf365ef4179dbddcf3f20f6b53fda2d88f2f8b2af178ef0ef",
+      "phase13_state_export_hash": "f7a4e33aac74b73205fd1264f37ee5621e942d221f3fae5081eef7fa38f8f823",
+      "phase15_blocked": true,
+      "phase16_blocked": true,
+      "profile_manifest_count": 3,
+      "public_surfaces": [
+        "session_open",
+        "conversation_turn",
+        "state_export",
+        "trace_export",
+        "memory_review_export",
+        "safe_shutdown"
+      ],
+      "sandbox_policy_count": 4,
+      "schema": "agifcore.phase_14.sandbox_profile_runtime.v1",
+      "snapshot_hash": "7159aedd8555e3931f293fdbc2c111d4c99ae34b7c24a4cda0490b2b4ed7e1af",
+      "tissue_count": 32,
+      "wasmtime_available": true,
+      "wasmtime_cli_path": "/Users/ahsadin/.wasmtime/bin/wasmtime"
+    },
+    "tampered_receipt": {
+      "admitted": false,
+      "bundle_integrity_verified": false,
+      "command": [],
+      "executed_at": "2026-04-01T16:03:03+00:00",
+      "exit_code": null,
+      "fuel_limit": 100000000,
+      "function_args": [
+        "1",
+        "2"
+      ],
+      "function_name": "add",
+      "memory_limit_bytes": 268435456,
+      "memory_limit_mb": 256,
+      "package_id": "phase14_wasm_package::laptop::tampered",
+      "phase15_blocked": true,
+      "phase16_blocked": true,
+      "policy_id": "laptop_default_policy",
+      "profile": "laptop",
+      "profile_allowed": true,
+      "reason_code": "BUNDLE_INTEGRITY_REQUIRED",
+      "receipt_hash": "d8e04eda2fa0cf118e52cc8121d106ada817a9eb37e75c6b1dbcd8262340e0e7",
+      "sandbox_backend": "wasmtime_cli",
+      "sandboxed_execution": true,
+      "schema": "agifcore.phase_14.sandbox_execution_receipt.v1",
+      "status": "blocked",
+      "stderr": "",
+      "stdout": "",
+      "wall_time_limit_ms": 1000,
+      "wasmtime_cli_path": "/Users/ahsadin/.wasmtime/bin/wasmtime"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "policy-catalog-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "valid-packaged-execution-passes",
+      "result": "pass"
+    },
+    {
+      "id": "tampered-package-fail-closed",
+      "result": "pass"
+    },
+    {
+      "id": "profile-mismatch-fail-closed",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_14_SANDBOX_PROFILES_AND_SCALE_REALIZATION.md",
+    "projects/agifcore_master/01_plan/PHASE_13_PRODUCT_RUNTIME_AND_UX.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/03_design/SANDBOX_MODEL.md",
+    "projects/agifcore_master/03_design/DEPLOYMENT_MODEL.md",
+    "projects/agifcore_master/03_design/PRODUCT_RUNTIME_MODEL.md",
+    "projects/agifcore_master/03_design/BUNDLE_INTEGRITY_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/active_dormant_control.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/profile_budget_rules.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/tissue_manifests.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/contracts.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/product_runtime_shell.py",
+    "projects/agifcore_master/05_testing/phase_13_product_runtime_and_ux/_phase_13_verifier_common.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/contracts.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/sandbox_policy.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/wasmtime_fuel_limits.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/wasmtime_memory_limits.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/wasmtime_wall_time_limits.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/cell_manifest.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/tissue_manifest.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/profile_manifests.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/active_cell_budget.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/dormant_cell_survival.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/sandbox_profile_shell.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/__init__.py",
+    "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/_phase_14_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/verify_phase_14_sandbox.py"
+  ],
+  "notes": [
+    "sandbox execution uses a dedicated local wasmtime subprocess when available",
+    "Phase 14 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_sandbox_report.json"
+  },
+  "phase": "14",
+  "status": "pass",
+  "verifier": "verify_phase_14_sandbox"
+}

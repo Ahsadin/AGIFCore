@@ -1,0 +1,177 @@
+{
+  "checked_at": "2026-04-01T14:21:07+00:00",
+  "compileall": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "compileall",
+        "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox"
+      ],
+      "exit_code": 0,
+      "log_path": "projects/agifcore_master/08_logs/phase_14_compileall_runtime_2026-04-01.log",
+      "stderr_preview": "",
+      "stdout_preview": "Listing 'projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox'...\nCompiling 'projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/__init__.py'...\nCompiling 'projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/active_cell_budg"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "compileall",
+        "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization"
+      ],
+      "exit_code": 0,
+      "log_path": "projects/agifcore_master/08_logs/phase_14_compileall_testing_2026-04-01.log",
+      "stderr_preview": "",
+      "stdout_preview": "Listing 'projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization'...\nCompiling 'projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/_phase_14_verifier_common.py'...\nCompiling 'projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/run_phase_14_laptop_profile_demo.py'...\nCompiling 'projects/agifcore_master/05_t"
+    }
+  ],
+  "cwd": "/Users/ahsadin/Documents/AGIFCore",
+  "demos": {
+    "run_phase_14_laptop_profile_demo": {
+      "command": [
+        "python3",
+        "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/run_phase_14_laptop_profile_demo.py"
+      ],
+      "exit_code": 0,
+      "log_path": "projects/agifcore_master/08_logs/run_phase_14_laptop_profile_demo_2026-04-01.log",
+      "stderr_preview": "",
+      "stdout_preview": "{\n  \"active_cell_budget\": {\n    \"allowed\": true,\n    \"budget_state\": \"within_budget\",\n    \"budget_state_catalog\": [\n      \"within_budget\",\n      \"near_ceiling\",\n      \"ceiling_blocked\",\n      \"hibernate_required\",\n      \"profile_mismatch\"\n    ],\n    \"cell_manifest_hash\": \"9a54b2f10f616b7d70d8ecb7c0d0684d8583b0a4918bfbd7a4ecc97236849b18\",\n    \"current_active_cells\": 0,\n    \"current_active_tissues\":"
+    },
+    "run_phase_14_manifest_audit_demo": {
+      "command": [
+        "python3",
+        "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/run_phase_14_manifest_audit_demo.py"
+      ],
+      "exit_code": 0,
+      "log_path": "projects/agifcore_master/08_logs/run_phase_14_manifest_audit_demo_2026-04-01.log",
+      "stderr_preview": "",
+      "stdout_preview": "{\n  \"builder_proof\": {\n    \"active_budget_hash\": \"142823c7b2f84be3f550104295d385be70119ed2a2365e6b3e7c2b69bc379c94\",\n    \"active_cell_count\": 160,\n    \"case_count\": 4,\n    \"cases\": [\n      {\n        \"case_hash\": \"ee61638d7b6e910c19c203a01363bc72028cec2c60fb1413ee1db131855ac895\",\n        \"case_id\": \"builder_dormant_survival_01\",\n        \"cell_id\": \"cell_0009\",\n        \"lineage_id\": \"lineage_0003\",\n"
+    },
+    "run_phase_14_mobile_constrained_demo": {
+      "command": [
+        "python3",
+        "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/run_phase_14_mobile_constrained_demo.py"
+      ],
+      "exit_code": 0,
+      "log_path": "projects/agifcore_master/08_logs/run_phase_14_mobile_constrained_demo_2026-04-01.log",
+      "stderr_preview": "",
+      "stdout_preview": "{\n  \"blocked_budget\": {\n    \"allowed\": false,\n    \"budget_state\": \"ceiling_blocked\",\n    \"budget_state_catalog\": [\n      \"within_budget\",\n      \"near_ceiling\",\n      \"ceiling_blocked\",\n      \"hibernate_required\",\n      \"profile_mismatch\"\n    ],\n    \"cell_manifest_hash\": \"d583e8f9a6f7c878c1c90cb5e498b547e1d28b6688620e589ead60f5d9ab3bd0\",\n    \"current_active_cells\": 0,\n    \"current_active_tissues\": "
+    },
+    "run_phase_14_sandbox_enforcement_demo": {
+      "command": [
+        "python3",
+        "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/run_phase_14_sandbox_enforcement_demo.py"
+      ],
+      "exit_code": 0,
+      "log_path": "projects/agifcore_master/08_logs/run_phase_14_sandbox_enforcement_demo_2026-04-01.log",
+      "stderr_preview": "",
+      "stdout_preview": "{\n  \"allowed_receipt\": {\n    \"admitted\": true,\n    \"bundle_integrity_verified\": true,\n    \"command\": [\n      \"/Users/ahsadin/.wasmtime/bin/wasmtime\",\n      \"run\",\n      \"-W\",\n      \"fuel=100000000\",\n      \"-W\",\n      \"max-memory-size=268435456\",\n      \"-W\",\n      \"timeout=1000ms\",\n      \"-W\",\n      \"trap-on-grow-failure=y\",\n      \"--invoke\",\n      \"add\",\n      \"/Users/ahsadin/Documents/AGIFCore/pr"
+    }
+  },
+  "evidence_manifest_status": "phase_14_verifier_family_pass",
+  "notes": [
+    "this diagnostic was regenerated from the current Codex environment",
+    "no approval implied"
+  ],
+  "path": "/Users/ahsadin/.codex/tmp/arg0/codex-arg0epFLbC:/Users/ahsadin/.wasmtime/bin:/Users/ahsadin/.wasmtime/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/Library/Apple/usr/bin:/Users/ahsadin/.cargo/bin:/Applications/Codex.app/Contents/Resources",
+  "phase": "14",
+  "phase_remains_open": true,
+  "verifiers": {
+    "verify_phase_14_active_cell_budget": {
+      "command": [
+        "python3",
+        "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/verify_phase_14_active_cell_budget.py"
+      ],
+      "exit_code": 0,
+      "log_path": "projects/agifcore_master/08_logs/verify_phase_14_active_cell_budget_2026-04-01.log",
+      "stderr_preview": "",
+      "stdout_preview": "{\n  \"anchors\": {\n    \"ceiling_blocked\": {\n      \"allowed\": false,\n      \"budget_state\": \"ceiling_blocked\",\n      \"budget_state_catalog\": [\n        \"within_budget\",\n        \"near_ceiling\",\n        \"ceiling_blocked\",\n        \"hibernate_required\",\n        \"profile_mismatch\"\n      ],\n      \"cell_manifest_hash\": \"c293157371015f89d8c9501f21e0069e0e54528465890d7432ae76f7496bd57b\",\n      \"current_active_c"
+    },
+    "verify_phase_14_cell_manifest": {
+      "command": [
+        "python3",
+        "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/verify_phase_14_cell_manifest.py"
+      ],
+      "exit_code": 0,
+      "log_path": "projects/agifcore_master/08_logs/verify_phase_14_cell_manifest_2026-04-01.log",
+      "stderr_preview": "",
+      "stdout_preview": "{\n  \"anchors\": {\n    \"cell_manifest\": {\n      \"cell_count\": 1024,\n      \"cells\": [\n        {\n          \"allowed_profiles\": [\n            \"mobile\",\n            \"laptop\",\n            \"builder\"\n          ],\n          \"bundle_ref\": \"bundle::intake_router::0001\",\n          \"cell_hash\": \"6dd5ba74cf5fe758ccd808d7d403921dd35097404784143b882edfe771399b23\",\n          \"cell_id\": \"cell_0001\",\n          \"conti"
+    },
+    "verify_phase_14_dormant_cell_survival": {
+      "command": [
+        "python3",
+        "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/verify_phase_14_dormant_cell_survival.py"
+      ],
+      "exit_code": 0,
+      "log_path": "projects/agifcore_master/08_logs/verify_phase_14_dormant_cell_survival_2026-04-01.log",
+      "stderr_preview": "",
+      "stdout_preview": "{\n  \"anchors\": {\n    \"builder_proof\": {\n      \"active_budget_hash\": \"189aa927196dd06f06d1c975a7af3f285001d9fa19cb1a5367a1781b9fabbeec\",\n      \"active_cell_count\": 160,\n      \"case_count\": 4,\n      \"cases\": [\n        {\n          \"case_hash\": \"e293b4c57243709eaf8018f2f166aa154e08d8f9ee81af5fffd79f6030e3f429\",\n          \"case_id\": \"builder_dormant_survival_01\",\n          \"cell_id\": \"cell_0009\",\n     "
+    },
+    "verify_phase_14_profile_manifests": {
+      "command": [
+        "python3",
+        "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/verify_phase_14_profile_manifests.py"
+      ],
+      "exit_code": 0,
+      "log_path": "projects/agifcore_master/08_logs/verify_phase_14_profile_manifests_2026-04-01.log",
+      "stderr_preview": "",
+      "stdout_preview": "{\n  \"anchors\": {\n    \"profile_manifests\": {\n      \"manifest_count\": 3,\n      \"manifest_hash\": \"51e5c47da22d2ce40b3f5885589863dbb77bd9dff2bda7e9527664ab7ddef83f\",\n      \"profiles\": [\n        {\n          \"active_cell_band\": {\n            \"max\": 24,\n            \"min\": 8\n          },\n          \"correctness_privilege\": false,\n          \"diagnostics_scope\": \"bounded local diagnostics only\",\n          \"p"
+    },
+    "verify_phase_14_sandbox": {
+      "command": [
+        "python3",
+        "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/verify_phase_14_sandbox.py"
+      ],
+      "exit_code": 0,
+      "log_path": "projects/agifcore_master/08_logs/verify_phase_14_sandbox_2026-04-01.log",
+      "stderr_preview": "",
+      "stdout_preview": "{\n  \"anchors\": {\n    \"allowed_receipt\": {\n      \"admitted\": true,\n      \"bundle_integrity_verified\": true,\n      \"command\": [\n        \"/Users/ahsadin/.wasmtime/bin/wasmtime\",\n        \"run\",\n        \"-W\",\n        \"fuel=100000000\",\n        \"-W\",\n        \"max-memory-size=268435456\",\n        \"-W\",\n        \"timeout=1000ms\",\n        \"-W\",\n        \"trap-on-grow-failure=y\",\n        \"--invoke\",\n        \"ad"
+    },
+    "verify_phase_14_tissue_manifest": {
+      "command": [
+        "python3",
+        "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/verify_phase_14_tissue_manifest.py"
+      ],
+      "exit_code": 0,
+      "log_path": "projects/agifcore_master/08_logs/verify_phase_14_tissue_manifest_2026-04-01.log",
+      "stderr_preview": "",
+      "stdout_preview": "{\n  \"anchors\": {\n    \"tissue_manifest\": {\n      \"manifest_hash\": \"8fd38cc42a2a84a21d614cc8c5ded2db24f87099f9666f395af9cfbb0530970d\",\n      \"schema\": \"agifcore.phase_14.tissue_manifest.v1\",\n      \"tissue_band\": {\n        \"max\": 40,\n        \"min\": 24\n      },\n      \"tissue_count\": 32,\n      \"tissues\": [\n        {\n          \"active_cell_cap_by_profile\": {\n            \"builder\": 8,\n            \"laptop"
+    },
+    "verify_phase_14_wasmtime_fuel": {
+      "command": [
+        "python3",
+        "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/verify_phase_14_wasmtime_fuel.py"
+      ],
+      "exit_code": 0,
+      "log_path": "projects/agifcore_master/08_logs/verify_phase_14_wasmtime_fuel_2026-04-01.log",
+      "stderr_preview": "",
+      "stdout_preview": "{\n  \"anchors\": {\n    \"fuel_limits\": {\n      \"class_count\": 4,\n      \"classes\": [\n        {\n          \"class_id\": \"mobile_constrained\",\n          \"fuel_limit\": 25000000,\n          \"notes\": [\n            \"mobile profile uses the smallest bounded Wasmtime fuel class\"\n          ]\n        },\n        {\n          \"class_id\": \"laptop_default\",\n          \"fuel_limit\": 100000000,\n          \"notes\": [\n      "
+    },
+    "verify_phase_14_wasmtime_memory": {
+      "command": [
+        "python3",
+        "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/verify_phase_14_wasmtime_memory.py"
+      ],
+      "exit_code": 0,
+      "log_path": "projects/agifcore_master/08_logs/verify_phase_14_wasmtime_memory_2026-04-01.log",
+      "stderr_preview": "",
+      "stdout_preview": "{\n  \"anchors\": {\n    \"memory_limits\": {\n      \"class_count\": 4,\n      \"classes\": [\n        {\n          \"class_id\": \"mobile_constrained\",\n          \"memory_limit_mb\": 64,\n          \"notes\": [\n            \"mobile profile keeps the smallest explicit memory cap\"\n          ]\n        },\n        {\n          \"class_id\": \"laptop_default\",\n          \"memory_limit_mb\": 256,\n          \"notes\": [\n            \""
+    },
+    "verify_phase_14_wasmtime_wall_time": {
+      "command": [
+        "python3",
+        "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/verify_phase_14_wasmtime_wall_time.py"
+      ],
+      "exit_code": 0,
+      "log_path": "projects/agifcore_master/08_logs/verify_phase_14_wasmtime_wall_time_2026-04-01.log",
+      "stderr_preview": "",
+      "stdout_preview": "{\n  \"anchors\": {\n    \"timeout_receipt\": {\n      \"admitted\": true,\n      \"bundle_integrity_verified\": true,\n      \"command\": [\n        \"/Users/ahsadin/.wasmtime/bin/wasmtime\",\n        \"run\",\n        \"-W\",\n        \"fuel=5000000000\",\n        \"-W\",\n        \"max-memory-size=33554432\",\n        \"-W\",\n        \"timeout=100ms\",\n        \"-W\",\n        \"trap-on-grow-failure=y\",\n        \"--invoke\",\n        \"spi"
+    }
+  },
+  "wasmtime": {
+    "available": true,
+    "command_v": "/Users/ahsadin/.wasmtime/bin/wasmtime",
+    "version": "wasmtime 42.0.1 (6844a83b5 2026-02-25)"
+  }
+}

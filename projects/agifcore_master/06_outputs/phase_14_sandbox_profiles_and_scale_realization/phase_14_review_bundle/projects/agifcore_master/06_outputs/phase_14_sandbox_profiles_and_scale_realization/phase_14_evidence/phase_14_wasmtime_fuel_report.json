@@ -1,0 +1,142 @@
+{
+  "anchors": {
+    "fuel_limits": {
+      "class_count": 4,
+      "classes": [
+        {
+          "class_id": "mobile_constrained",
+          "fuel_limit": 25000000,
+          "notes": [
+            "mobile profile uses the smallest bounded Wasmtime fuel class"
+          ]
+        },
+        {
+          "class_id": "laptop_default",
+          "fuel_limit": 100000000,
+          "notes": [
+            "laptop profile inherits the donor-side reference Wasmtime fuel limit"
+          ]
+        },
+        {
+          "class_id": "builder_diagnostic",
+          "fuel_limit": 200000000,
+          "notes": [
+            "builder may widen diagnostics but has no correctness privilege"
+          ]
+        },
+        {
+          "class_id": "strict_fail_closed",
+          "fuel_limit": 5000000000,
+          "notes": [
+            "strict fail-closed class exists for deny-first sandbox checks"
+          ]
+        }
+      ],
+      "schema": "agifcore.phase_14.wasmtime_fuel_limits.v1",
+      "snapshot_hash": "a0982ddb5654d229df70b3b8533594ef5f79f8190fc31154c56730227e0a4b5d"
+    },
+    "fuel_receipt": {
+      "admitted": true,
+      "bundle_integrity_verified": true,
+      "command": [
+        "/Users/ahsadin/.wasmtime/bin/wasmtime",
+        "run",
+        "-W",
+        "fuel=25000000",
+        "-W",
+        "max-memory-size=67108864",
+        "-W",
+        "timeout=250ms",
+        "-W",
+        "trap-on-grow-failure=y",
+        "--invoke",
+        "spin",
+        "/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/sandbox_packages/phase14_mobile_valid_sample_module.wat"
+      ],
+      "executed_at": "2026-04-01T16:03:03+00:00",
+      "exit_code": 134,
+      "fuel_limit": 25000000,
+      "function_args": [],
+      "function_name": "spin",
+      "memory_limit_bytes": 67108864,
+      "memory_limit_mb": 64,
+      "package_id": "phase14_wasm_package::mobile::valid",
+      "phase15_blocked": true,
+      "phase16_blocked": true,
+      "policy_id": "mobile_constrained_policy",
+      "profile": "mobile",
+      "profile_allowed": true,
+      "reason_code": "FUEL_LIMIT_EXCEEDED",
+      "receipt_hash": "0ea262125307dfb998610ba1286ca0dfd9be03c09866bb609106a60637c2cacb",
+      "sandbox_backend": "wasmtime_cli",
+      "sandboxed_execution": true,
+      "schema": "agifcore.phase_14.sandbox_execution_receipt.v1",
+      "status": "blocked",
+      "stderr": "Error: failed to run main module `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/sandbox_packages/phase14_mobile_valid_sample_module.wat`\n\nCaused by:\n    0: failed to invoke `spin`\n    1: error while executing at wasm backtrace:\n    0:     0x5a - <unknown>!<wasm function 1>\n    2: wasm trap: all fuel consumed by WebAssembly",
+      "stdout": "",
+      "wall_time_limit_ms": 250,
+      "wasmtime_cli_path": "/Users/ahsadin/.wasmtime/bin/wasmtime"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "fuel-class-count-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "mobile-fuel-limit-trips",
+      "result": "pass"
+    },
+    {
+      "id": "fuel-reason-code-deterministic",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_14_SANDBOX_PROFILES_AND_SCALE_REALIZATION.md",
+    "projects/agifcore_master/01_plan/PHASE_13_PRODUCT_RUNTIME_AND_UX.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/03_design/SANDBOX_MODEL.md",
+    "projects/agifcore_master/03_design/DEPLOYMENT_MODEL.md",
+    "projects/agifcore_master/03_design/PRODUCT_RUNTIME_MODEL.md",
+    "projects/agifcore_master/03_design/BUNDLE_INTEGRITY_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/active_dormant_control.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/profile_budget_rules.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/tissue_manifests.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/contracts.py",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/product_runtime_shell.py",
+    "projects/agifcore_master/05_testing/phase_13_product_runtime_and_ux/_phase_13_verifier_common.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/contracts.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/sandbox_policy.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/wasmtime_fuel_limits.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/wasmtime_memory_limits.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/wasmtime_wall_time_limits.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/cell_manifest.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/tissue_manifest.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/profile_manifests.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/active_cell_budget.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/dormant_cell_survival.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/sandbox_profile_shell.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/__init__.py",
+    "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/_phase_14_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/verify_phase_14_wasmtime_fuel.py"
+  ],
+  "notes": [
+    "fuel ceilings are explicit classed limits enforced by wasmtime",
+    "Phase 14 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_wasmtime_fuel_report.json"
+  },
+  "phase": "14",
+  "status": "pass",
+  "verifier": "verify_phase_14_wasmtime_fuel"
+}

@@ -1,0 +1,16 @@
+{
+  "notes": [
+    "summary only",
+    "Phase 14 remains open",
+    "no approval implied"
+  ],
+  "phase": "14",
+  "scenario_files": [
+    "phase_14_sandbox_enforcement_demo.json",
+    "phase_14_laptop_profile_demo.json",
+    "phase_14_mobile_constrained_demo.json",
+    "phase_14_manifest_audit_demo.json"
+  ],
+  "status": "open",
+  "supporting_evidence_manifest": "phase_14_evidence_manifest.json"
+}

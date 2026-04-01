@@ -1,0 +1,645 @@
+{
+  "active_cell_budget": {
+    "allowed": true,
+    "budget_state": "within_budget",
+    "budget_state_catalog": [
+      "within_budget",
+      "near_ceiling",
+      "ceiling_blocked",
+      "hibernate_required",
+      "profile_mismatch"
+    ],
+    "cell_manifest_hash": "b258c8920f0166707351d66c57386ff84fea18a115757bf9780afe3a6a2d76c5",
+    "current_active_cells": 0,
+    "current_active_tissues": 0,
+    "dormant_cell_count": 928,
+    "dormant_cell_preview_ids": [
+      "cell_0006",
+      "cell_0007",
+      "cell_0008",
+      "cell_0009",
+      "cell_0010",
+      "cell_0011",
+      "cell_0012",
+      "cell_0013",
+      "cell_0014",
+      "cell_0015",
+      "cell_0016",
+      "cell_0017",
+      "cell_0018",
+      "cell_0019",
+      "cell_0020",
+      "cell_0021",
+      "cell_0022",
+      "cell_0023",
+      "cell_0024",
+      "cell_0025",
+      "cell_0026",
+      "cell_0027",
+      "cell_0028",
+      "cell_0029",
+      "cell_0030",
+      "cell_0031",
+      "cell_0032",
+      "cell_0036",
+      "cell_0037",
+      "cell_0038",
+      "cell_0039",
+      "cell_0040"
+    ],
+    "eligible_cell_count": 896,
+    "enforcement_action": "admit",
+    "hibernate_candidate_ids": [],
+    "invalid_requested_cell_ids": [],
+    "max_active_cells": 128,
+    "max_active_tissues": 32,
+    "min_active_cells": 64,
+    "profile": "laptop",
+    "profile_manifest_hash": "bf2b42009e83f7886e5991e41e5a206215ce0fc6b3441a8767be498a5a331ba6",
+    "reason_code": "ACTIVE_CELL_BUDGET_WITHIN_LIMITS",
+    "receipt_hash": "30f8f0a0134e59c451988f05acc194a7db9e3994a8d062f38cbfe4867e2c055f",
+    "requested_active_cells": 96,
+    "requested_active_tissues": 24,
+    "schema": "agifcore.phase_14.active_cell_budget.v1",
+    "selected_activation_priority_max": 128,
+    "selected_activation_priority_min": 93,
+    "selected_activation_priority_total": 10785,
+    "selected_active_cell_count": 96,
+    "selected_active_cell_ids": [
+      "cell_0001",
+      "cell_0002",
+      "cell_0003",
+      "cell_0004",
+      "cell_0005",
+      "cell_0065",
+      "cell_0066",
+      "cell_0067",
+      "cell_0068",
+      "cell_0069",
+      "cell_0129",
+      "cell_0130",
+      "cell_0131",
+      "cell_0132",
+      "cell_0133",
+      "cell_0193",
+      "cell_0194",
+      "cell_0195",
+      "cell_0196",
+      "cell_0197",
+      "cell_0257",
+      "cell_0258",
+      "cell_0259",
+      "cell_0260",
+      "cell_0261",
+      "cell_0321",
+      "cell_0322",
+      "cell_0323",
+      "cell_0324",
+      "cell_0325",
+      "cell_0385",
+      "cell_0386",
+      "cell_0387",
+      "cell_0388",
+      "cell_0389",
+      "cell_0449",
+      "cell_0450",
+      "cell_0451",
+      "cell_0452",
+      "cell_0453",
+      "cell_0513",
+      "cell_0514",
+      "cell_0515",
+      "cell_0516",
+      "cell_0517",
+      "cell_0577",
+      "cell_0578",
+      "cell_0579",
+      "cell_0580",
+      "cell_0581",
+      "cell_0641",
+      "cell_0642",
+      "cell_0643",
+      "cell_0644",
+      "cell_0645",
+      "cell_0705",
+      "cell_0706",
+      "cell_0707",
+      "cell_0708",
+      "cell_0709",
+      "cell_0769",
+      "cell_0770",
+      "cell_0771",
+      "cell_0772",
+      "cell_0773",
+      "cell_0833",
+      "cell_0834",
+      "cell_0835",
+      "cell_0836",
+      "cell_0837",
+      "cell_0897",
+      "cell_0898",
+      "cell_0899",
+      "cell_0900",
+      "cell_0901",
+      "cell_0961",
+      "cell_0962",
+      "cell_0963",
+      "cell_0964",
+      "cell_0965",
+      "cell_0033",
+      "cell_0034",
+      "cell_0035",
+      "cell_0097",
+      "cell_0098",
+      "cell_0099",
+      "cell_0161",
+      "cell_0162",
+      "cell_0163",
+      "cell_0225",
+      "cell_0226",
+      "cell_0227",
+      "cell_0289",
+      "cell_0290",
+      "cell_0291",
+      "cell_0353"
+    ],
+    "selected_active_tissue_count": 22,
+    "selected_active_tissue_ids": [
+      "tissue_01",
+      "tissue_03",
+      "tissue_05",
+      "tissue_07",
+      "tissue_09",
+      "tissue_11",
+      "tissue_13",
+      "tissue_15",
+      "tissue_17",
+      "tissue_19",
+      "tissue_21",
+      "tissue_23",
+      "tissue_25",
+      "tissue_27",
+      "tissue_29",
+      "tissue_31",
+      "tissue_02",
+      "tissue_04",
+      "tissue_06",
+      "tissue_08",
+      "tissue_10",
+      "tissue_12"
+    ],
+    "selected_audit_replay_required_count": 41,
+    "selected_continuity_requirement_counts": {
+      "checkpointed": 16,
+      "strict": 80
+    },
+    "selected_dormancy_behavior_counts": {
+      "checkpoint_restore": 16,
+      "warm_standby": 80
+    },
+    "selected_exemplar_class_counts": {
+      "anchor": 80,
+      "checkpoint": 16
+    },
+    "selected_family_counts": {
+      "attention": 8,
+      "audit_replay": 5,
+      "compression_retirement": 5,
+      "continuity_self_history": 5,
+      "critic_error_monitor": 5,
+      "episodic_memory": 8,
+      "governance_authority": 5,
+      "intake_router": 8,
+      "language_realizer": 5,
+      "planner": 5,
+      "procedural_skill": 6,
+      "scheduler_resource": 5,
+      "semantic_abstraction": 8,
+      "transfer_broker": 5,
+      "working_memory": 8,
+      "world_model_simulator": 5
+    },
+    "selected_sandbox_required_count": 21,
+    "selected_tissue_variant_counts": {
+      "continuity_backstop": 16,
+      "primary_path": 80
+    },
+    "target_active_cells": 96,
+    "tissue_manifest_hash": "2d5a08fd64a67fb64584ddb66e555a7d1254fd379d07761ab2d5fbf2dbc2b800",
+    "tissue_selection_trace": [
+      {
+        "activation_priority_boost": 8,
+        "available_candidate_count": 32,
+        "selected_cell_ids": [
+          "cell_0001",
+          "cell_0002",
+          "cell_0003",
+          "cell_0004",
+          "cell_0005"
+        ],
+        "specialization_tag": "online_path",
+        "tissue_id": "tissue_01",
+        "tissue_variant_id": "primary_path"
+      },
+      {
+        "activation_priority_boost": 8,
+        "available_candidate_count": 32,
+        "selected_cell_ids": [
+          "cell_0065",
+          "cell_0066",
+          "cell_0067",
+          "cell_0068",
+          "cell_0069"
+        ],
+        "specialization_tag": "online_path",
+        "tissue_id": "tissue_03",
+        "tissue_variant_id": "primary_path"
+      },
+      {
+        "activation_priority_boost": 8,
+        "available_candidate_count": 32,
+        "selected_cell_ids": [
+          "cell_0129",
+          "cell_0130",
+          "cell_0131",
+          "cell_0132",
+          "cell_0133"
+        ],
+        "specialization_tag": "online_path",
+        "tissue_id": "tissue_05",
+        "tissue_variant_id": "primary_path"
+      },
+      {
+        "activation_priority_boost": 8,
+        "available_candidate_count": 32,
+        "selected_cell_ids": [
+          "cell_0193",
+          "cell_0194",
+          "cell_0195",
+          "cell_0196",
+          "cell_0197"
+        ],
+        "specialization_tag": "online_path",
+        "tissue_id": "tissue_07",
+        "tissue_variant_id": "primary_path"
+      },
+      {
+        "activation_priority_boost": 8,
+        "available_candidate_count": 32,
+        "selected_cell_ids": [
+          "cell_0257",
+          "cell_0258",
+          "cell_0259",
+          "cell_0260",
+          "cell_0261"
+        ],
+        "specialization_tag": "online_path",
+        "tissue_id": "tissue_09",
+        "tissue_variant_id": "primary_path"
+      },
+      {
+        "activation_priority_boost": 8,
+        "available_candidate_count": 32,
+        "selected_cell_ids": [
+          "cell_0321",
+          "cell_0322",
+          "cell_0323",
+          "cell_0324",
+          "cell_0325"
+        ],
+        "specialization_tag": "online_path",
+        "tissue_id": "tissue_11",
+        "tissue_variant_id": "primary_path"
+      },
+      {
+        "activation_priority_boost": 8,
+        "available_candidate_count": 32,
+        "selected_cell_ids": [
+          "cell_0385",
+          "cell_0386",
+          "cell_0387",
+          "cell_0388",
+          "cell_0389"
+        ],
+        "specialization_tag": "online_path",
+        "tissue_id": "tissue_13",
+        "tissue_variant_id": "primary_path"
+      },
+      {
+        "activation_priority_boost": 8,
+        "available_candidate_count": 32,
+        "selected_cell_ids": [
+          "cell_0449",
+          "cell_0450",
+          "cell_0451",
+          "cell_0452",
+          "cell_0453"
+        ],
+        "specialization_tag": "online_path",
+        "tissue_id": "tissue_15",
+        "tissue_variant_id": "primary_path"
+      },
+      {
+        "activation_priority_boost": 8,
+        "available_candidate_count": 32,
+        "selected_cell_ids": [
+          "cell_0513",
+          "cell_0514",
+          "cell_0515",
+          "cell_0516",
+          "cell_0517"
+        ],
+        "specialization_tag": "online_path",
+        "tissue_id": "tissue_17",
+        "tissue_variant_id": "primary_path"
+      },
+      {
+        "activation_priority_boost": 8,
+        "available_candidate_count": 32,
+        "selected_cell_ids": [
+          "cell_0577",
+          "cell_0578",
+          "cell_0579",
+          "cell_0580",
+          "cell_0581"
+        ],
+        "specialization_tag": "online_path",
+        "tissue_id": "tissue_19",
+        "tissue_variant_id": "primary_path"
+      },
+      {
+        "activation_priority_boost": 8,
+        "available_candidate_count": 32,
+        "selected_cell_ids": [
+          "cell_0641",
+          "cell_0642",
+          "cell_0643",
+          "cell_0644",
+          "cell_0645"
+        ],
+        "specialization_tag": "online_path",
+        "tissue_id": "tissue_21",
+        "tissue_variant_id": "primary_path"
+      },
+      {
+        "activation_priority_boost": 8,
+        "available_candidate_count": 32,
+        "selected_cell_ids": [
+          "cell_0705",
+          "cell_0706",
+          "cell_0707",
+          "cell_0708",
+          "cell_0709"
+        ],
+        "specialization_tag": "online_path",
+        "tissue_id": "tissue_23",
+        "tissue_variant_id": "primary_path"
+      },
+      {
+        "activation_priority_boost": 8,
+        "available_candidate_count": 32,
+        "selected_cell_ids": [
+          "cell_0769",
+          "cell_0770",
+          "cell_0771",
+          "cell_0772",
+          "cell_0773"
+        ],
+        "specialization_tag": "online_path",
+        "tissue_id": "tissue_25",
+        "tissue_variant_id": "primary_path"
+      },
+      {
+        "activation_priority_boost": 8,
+        "available_candidate_count": 32,
+        "selected_cell_ids": [
+          "cell_0833",
+          "cell_0834",
+          "cell_0835",
+          "cell_0836",
+          "cell_0837"
+        ],
+        "specialization_tag": "online_path",
+        "tissue_id": "tissue_27",
+        "tissue_variant_id": "primary_path"
+      },
+      {
+        "activation_priority_boost": 8,
+        "available_candidate_count": 32,
+        "selected_cell_ids": [
+          "cell_0897",
+          "cell_0898",
+          "cell_0899",
+          "cell_0900",
+          "cell_0901"
+        ],
+        "specialization_tag": "online_path",
+        "tissue_id": "tissue_29",
+        "tissue_variant_id": "primary_path"
+      },
+      {
+        "activation_priority_boost": 8,
+        "available_candidate_count": 32,
+        "selected_cell_ids": [
+          "cell_0961",
+          "cell_0962",
+          "cell_0963",
+          "cell_0964",
+          "cell_0965"
+        ],
+        "specialization_tag": "online_path",
+        "tissue_id": "tissue_31",
+        "tissue_variant_id": "primary_path"
+      },
+      {
+        "activation_priority_boost": 4,
+        "available_candidate_count": 32,
+        "selected_cell_ids": [
+          "cell_0033",
+          "cell_0034",
+          "cell_0035"
+        ],
+        "specialization_tag": "continuity_backstop",
+        "tissue_id": "tissue_02",
+        "tissue_variant_id": "continuity_backstop"
+      },
+      {
+        "activation_priority_boost": 4,
+        "available_candidate_count": 32,
+        "selected_cell_ids": [
+          "cell_0097",
+          "cell_0098",
+          "cell_0099"
+        ],
+        "specialization_tag": "continuity_backstop",
+        "tissue_id": "tissue_04",
+        "tissue_variant_id": "continuity_backstop"
+      },
+      {
+        "activation_priority_boost": 4,
+        "available_candidate_count": 32,
+        "selected_cell_ids": [
+          "cell_0161",
+          "cell_0162",
+          "cell_0163"
+        ],
+        "specialization_tag": "continuity_backstop",
+        "tissue_id": "tissue_06",
+        "tissue_variant_id": "continuity_backstop"
+      },
+      {
+        "activation_priority_boost": 4,
+        "available_candidate_count": 32,
+        "selected_cell_ids": [
+          "cell_0225",
+          "cell_0226",
+          "cell_0227"
+        ],
+        "specialization_tag": "continuity_backstop",
+        "tissue_id": "tissue_08",
+        "tissue_variant_id": "continuity_backstop"
+      },
+      {
+        "activation_priority_boost": 4,
+        "available_candidate_count": 32,
+        "selected_cell_ids": [
+          "cell_0289",
+          "cell_0290",
+          "cell_0291"
+        ],
+        "specialization_tag": "continuity_backstop",
+        "tissue_id": "tissue_10",
+        "tissue_variant_id": "continuity_backstop"
+      },
+      {
+        "activation_priority_boost": 4,
+        "available_candidate_count": 32,
+        "selected_cell_ids": [
+          "cell_0353"
+        ],
+        "specialization_tag": "continuity_backstop",
+        "tissue_id": "tissue_12",
+        "tissue_variant_id": "continuity_backstop"
+      }
+    ]
+  },
+  "demo_id": "laptop_profile",
+  "evidence_reports": [
+    "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_profile_manifest_report.json",
+    "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_active_cell_budget_report.json",
+    "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_sandbox_report.json",
+    "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_evidence_manifest.json"
+  ],
+  "laptop_profile_manifest": {
+    "active_cell_band": {
+      "max": 128,
+      "min": 64
+    },
+    "correctness_privilege": false,
+    "diagnostics_scope": "reference evidence capture",
+    "profile": "laptop",
+    "profile_hash": "bf2b42009e83f7886e5991e41e5a206215ce0fc6b3441a8767be498a5a331ba6",
+    "profile_role": "reference product runtime",
+    "same_architecture_preserved": true,
+    "same_blocked_surface_names": [
+      "task_submit",
+      "policy_update"
+    ],
+    "same_contract_hash": "a4b5ddf226b315733337354ea7731744c45d57a5ea440bee9824dbc33b06a0be",
+    "same_gateway_route_count": 10,
+    "same_public_surfaces": [
+      "session_open",
+      "conversation_turn",
+      "state_export",
+      "trace_export",
+      "memory_review_export",
+      "safe_shutdown"
+    ],
+    "same_ui_view_count": 7,
+    "schema": "agifcore.phase_14.profile_manifest.v1",
+    "target_active_cells": 96
+  },
+  "notes": [
+    "review-only laptop profile demo",
+    "Phase 14 remains open",
+    "no approval implied"
+  ],
+  "phase": "14",
+  "phase14_shell": {
+    "blocked_surface_names": [
+      "task_submit",
+      "policy_update"
+    ],
+    "cell_count": 1024,
+    "phase13_memory_review_export_hash": "a2d31910f16f441d6f86aea504d0b3fa733a5e83da3c31081e174da6e6c24fb8",
+    "phase13_safe_shutdown_hash": "78a1f43f865bd2aadf1d69d47e1d915124fa7423e3d462c59b6fe08a2d98382d",
+    "phase13_session_id": "phase13_session::ff1815e1d727",
+    "phase13_shell_hash": "0631e6644cf655966fc8a79f1f75a5cd60b5bb14c5fdc76a7799f5b0ef63c638",
+    "phase13_state_export_hash": "f8489a376b14b6eca60be78e44e6a5f1bbcfaac1d20e33c7fa988b1b1b1fa5c7",
+    "phase15_blocked": true,
+    "phase16_blocked": true,
+    "profile_manifest_count": 3,
+    "public_surfaces": [
+      "session_open",
+      "conversation_turn",
+      "state_export",
+      "trace_export",
+      "memory_review_export",
+      "safe_shutdown"
+    ],
+    "sandbox_policy_count": 4,
+    "schema": "agifcore.phase_14.sandbox_profile_runtime.v1",
+    "snapshot_hash": "107a07ec42fb9b96bdc26e18a420316c11c08b2f98267e6e447b1637bec65860",
+    "tissue_count": 32,
+    "wasmtime_available": true,
+    "wasmtime_cli_path": "/Users/ahsadin/.wasmtime/bin/wasmtime"
+  },
+  "sandbox_receipt": {
+    "admitted": true,
+    "bundle_integrity_verified": true,
+    "command": [
+      "/Users/ahsadin/.wasmtime/bin/wasmtime",
+      "run",
+      "-W",
+      "fuel=100000000",
+      "-W",
+      "max-memory-size=268435456",
+      "-W",
+      "timeout=1000ms",
+      "-W",
+      "trap-on-grow-failure=y",
+      "--invoke",
+      "add",
+      "/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_demo_bundle/sandbox_packages/phase14_laptop_valid_sample_module.wat",
+      "2",
+      "5"
+    ],
+    "executed_at": "2026-04-01T16:03:05+00:00",
+    "exit_code": 0,
+    "fuel_limit": 100000000,
+    "function_args": [
+      "2",
+      "5"
+    ],
+    "function_name": "add",
+    "memory_limit_bytes": 268435456,
+    "memory_limit_mb": 256,
+    "package_id": "phase14_wasm_package::laptop::valid",
+    "phase15_blocked": true,
+    "phase16_blocked": true,
+    "policy_id": "laptop_default_policy",
+    "profile": "laptop",
+    "profile_allowed": true,
+    "reason_code": "none",
+    "receipt_hash": "dfe4a08be37c9fa2ae8d40a3240f17379c6ca89b6919b236e308418c7af591d7",
+    "sandbox_backend": "wasmtime_cli",
+    "sandboxed_execution": true,
+    "schema": "agifcore.phase_14.sandbox_execution_receipt.v1",
+    "status": "pass",
+    "stderr": "warning: using `--invoke` with a function that takes arguments is experimental and may break in the future\nwarning: using `--invoke` with a function that returns values is experimental and may break in the future",
+    "stdout": "7",
+    "wall_time_limit_ms": 1000,
+    "wasmtime_cli_path": "/Users/ahsadin/.wasmtime/bin/wasmtime"
+  },
+  "status": "open"
+}
