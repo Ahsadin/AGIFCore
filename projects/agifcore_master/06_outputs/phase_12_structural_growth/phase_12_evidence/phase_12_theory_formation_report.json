@@ -1,0 +1,156 @@
+{
+  "anchors": {
+    "contradiction_case": {
+      "candidate_count": 2,
+      "candidates": [
+        {
+          "assumption_refs": [
+            "self_model::bf9c904c4761",
+            "meta_observer::51986fa94cb9"
+          ],
+          "candidate_hash": "9fc1a70e7bae14e4a3a3938ba9d79620c4afc3630219ef0aa0b2411e7aff04e9",
+          "candidate_id": "phase12_theory::9fc1a70e7bae",
+          "falsifier_refs": [
+            "phase12.falsifier.same_contradiction_without_route_isolation"
+          ],
+          "growth_status": "refine_existing",
+          "mechanism_step_refs": [
+            "phase12.mechanism.isolate_conflict_check",
+            "phase12.mechanism.route_before_adoption"
+          ],
+          "predicted_observable_refs": [
+            "phase12.observable.lower_monitoring_regression",
+            "phase12.observable.cleaner_reorganization_candidate"
+          ],
+          "source_fragment_ref": "self_model::bf9c904c4761",
+          "theory_confidence_band": "medium",
+          "theory_label": "contradiction_sensitive_boundary_refinement",
+          "theory_statement": "Contradiction repair improves when the review lane isolates conflict checking from explanation shaping before adoption decisions land.",
+          "verification_next_step": "Replay the contradiction pack and compare whether the route-isolated candidate lowers regression pressure."
+        },
+        {
+          "assumption_refs": [
+            "meta_observer::51986fa94cb9",
+            "strategy_journal::341942aad13a"
+          ],
+          "candidate_hash": "183cedbfdd55abb36629de7800218169ba847359aee10eb96b7232b13d3359e1",
+          "candidate_id": "phase12_theory::183cedbfdd55",
+          "falsifier_refs": [
+            "phase12.falsifier.domain_candidate_adds_no_explanatory_gain"
+          ],
+          "growth_status": "new_candidate",
+          "mechanism_step_refs": [
+            "phase12.mechanism.boundary_candidate",
+            "phase12.mechanism.local_condition_split"
+          ],
+          "predicted_observable_refs": [
+            "phase12.observable.domain_candidate_needed",
+            "phase12.observable.fewer_cross_domain_conflicts"
+          ],
+          "source_fragment_ref": "strategy_journal::341942aad13a",
+          "theory_confidence_band": "low",
+          "theory_label": "micro_domain_boundary_candidate",
+          "theory_statement": "A missing micro-domain boundary between broad world reasoning and local infrastructure-like conditions can hide stable contradiction patterns.",
+          "verification_next_step": "Hold one bounded domain candidate and check whether it explains the contradiction pattern better than a pure route change alone."
+        }
+      ],
+      "conversation_id": "conv-p10-contradiction",
+      "schema": "agifcore.phase_12.theory_formation.v1",
+      "snapshot_hash": "f06a9a6ede1d24dd583089daf36091f7660c0ad4abc0531337c7b8fd6222793f",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "weak_case": {
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "assumption_refs": [
+            "self_model::8b2b3db44440",
+            "meta_observer::80e48682c6ef"
+          ],
+          "candidate_hash": "6e1c2b18e5e2eaef2f3fe011c146bd104e9893be0cc1852eb1a7e1321c170314",
+          "candidate_id": "phase12_theory::6e1c2b18e5e2",
+          "falsifier_refs": [
+            "phase12.falsifier.fresh_local_measurement_still_weak"
+          ],
+          "growth_status": "new_candidate",
+          "mechanism_step_refs": [
+            "phase12.mechanism.local_evidence_gate",
+            "phase12.mechanism.defer_explanation_reuse"
+          ],
+          "predicted_observable_refs": [
+            "phase12.observable.weaker_support_flag",
+            "phase12.observable.review_protocol_needed"
+          ],
+          "source_fragment_ref": "self_model::8b2b3db44440",
+          "theory_confidence_band": "medium",
+          "theory_label": "local_measurement_dependency_boundary",
+          "theory_statement": "Weak answers recur when local evidence freshness is missing and the explanation lane reuses general reasoning too early.",
+          "verification_next_step": "Replay the weak-support pack with a fresh local evidence ref and compare whether the structural pressure remains."
+        }
+      ],
+      "conversation_id": "conv-p10-weak",
+      "schema": "agifcore.phase_12.theory_formation.v1",
+      "snapshot_hash": "bcc97a1fa8014feb0818c407bd441054f4403516811d53a43187b5f84a598d90",
+      "turn_id": "turn-p10-weak"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "candidate-count-stays-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "falsifiers-present",
+      "result": "pass"
+    },
+    {
+      "id": "mechanism-and-next-step-present",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_12_STRUCTURAL_GROWTH.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/02_requirements/DOMAIN_MATRIX.md",
+    "projects/agifcore_master/03_design/CELL_FAMILIES.md",
+    "projects/agifcore_master/03_design/GRAPH_STACK_MODEL.md",
+    "projects/agifcore_master/03_design/SKILL_GRAPH_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/contracts.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_improvement_cycle.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/tissue_manifests.py",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/skill_graph.py",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/transfer_graph.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/contracts.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/self_model_feedback.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/reflection_control.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/curiosity_gap_selection.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/theory_formation.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/procedure_tool_invention.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/self_reorganization.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/domain_genesis.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/structural_growth_cycle.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/__init__.py",
+    "projects/agifcore_master/05_testing/phase_12_structural_growth/_phase_12_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_12_structural_growth/verify_phase_12_theory_formation.py"
+  ],
+  "notes": [
+    "theory formation stays falsifiable and grounded to bounded evidence refs",
+    "Phase 12 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_theory_formation_report.json"
+  },
+  "phase": "12",
+  "status": "pass",
+  "verifier": "verify_phase_12_theory_formation"
+}

@@ -1,0 +1,131 @@
+{
+  "anchors": {
+    "contradiction_case": {
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_hash": "2557e5a5bfd2d6a6fd2d10b83476105f91cf924b155cfeb613eb5c427cb824e4",
+          "candidate_id": "phase12_procedure_tool::2557e5a5bfd2",
+          "candidate_state": "candidate",
+          "invention_kind": "review_protocol",
+          "limits": [
+            "candidate only",
+            "no automatic execution",
+            "no phase13_or_phase14_scope"
+          ],
+          "non_auto_execute": true,
+          "preconditions": [
+            "adopted proposal exists",
+            "monitoring refs present"
+          ],
+          "procedure_statement": "When contradiction pressure repeats after an adopted improvement, run one bounded boundary review before proposing domain growth.",
+          "sandbox_compatibility_note": "planning-only candidate; stays outside runtime execution and connector enablement.",
+          "skill_anchor_ref": "skill::phase12.contradiction_boundary_review_protocol",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "84739b2c42b16a086303dbb52b1ee5296b43a721a79d3bca649809f81653fede",
+            "4cf0213cbe82acf4d8587c6b380b51eb4df286b0ae1c635099d230fd40930070"
+          ]
+        }
+      ],
+      "conversation_id": "conv-p10-contradiction",
+      "schema": "agifcore.phase_12.procedure_tool_invention.v1",
+      "snapshot_hash": "5c56cd4ab305c6db3fd3f6c57461170f179baeb6405c01cbddd63b189da4f6e8",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "weak_case": {
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_hash": "e6bcb91b12c20c68169d6836575693eb102dd680490b0403989b03263e08a936",
+          "candidate_id": "phase12_procedure_tool::e6bcb91b12c2",
+          "candidate_state": "candidate",
+          "invention_kind": "triage_checklist",
+          "limits": [
+            "candidate only",
+            "no automatic execution",
+            "no external search"
+          ],
+          "non_auto_execute": true,
+          "preconditions": [
+            "support_state=search_needed",
+            "local evidence still missing or stale"
+          ],
+          "procedure_statement": "Before reusing a weak explanation, require one bounded freshness check on the local evidence lane and defer all wider restructuring.",
+          "sandbox_compatibility_note": "planning-only candidate; stays outside runtime execution and connector enablement.",
+          "skill_anchor_ref": "skill::phase12.local_evidence_recheck_protocol",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+            "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797"
+          ]
+        }
+      ],
+      "conversation_id": "conv-p10-weak",
+      "schema": "agifcore.phase_12.procedure_tool_invention.v1",
+      "snapshot_hash": "0ca049c6f8793f4cfd2b5c30f719561fae7930529800b5413353242e6d7aaf09",
+      "turn_id": "turn-p10-weak"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "single-candidate-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "skill-anchor-present",
+      "result": "pass"
+    },
+    {
+      "id": "non-auto-execute-enforced",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_12_STRUCTURAL_GROWTH.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/02_requirements/DOMAIN_MATRIX.md",
+    "projects/agifcore_master/03_design/CELL_FAMILIES.md",
+    "projects/agifcore_master/03_design/GRAPH_STACK_MODEL.md",
+    "projects/agifcore_master/03_design/SKILL_GRAPH_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/contracts.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_improvement_cycle.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/tissue_manifests.py",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/skill_graph.py",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/transfer_graph.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/contracts.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/self_model_feedback.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/reflection_control.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/curiosity_gap_selection.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/theory_formation.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/procedure_tool_invention.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/self_reorganization.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/domain_genesis.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/structural_growth_cycle.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/__init__.py",
+    "projects/agifcore_master/05_testing/phase_12_structural_growth/_phase_12_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_12_structural_growth/verify_phase_12_procedure_tool_invention.py"
+  ],
+  "notes": [
+    "procedure and tool invention stays candidate-only and anchored to the governed skill surface",
+    "Phase 12 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_procedure_tool_invention_report.json"
+  },
+  "phase": "12",
+  "status": "pass",
+  "verifier": "verify_phase_12_procedure_tool_invention"
+}

@@ -1,0 +1,187 @@
+{
+  "anchors": {
+    "contradiction_case": {
+      "conversation_id": "conv-p10-contradiction",
+      "item_count": 4,
+      "items": [
+        {
+          "bounded_next_step": "Refine one contradiction-sensitive theory candidate directly from the approved Phase 11 evidence chain.",
+          "feedback_hash": "0ef53c3dc27dcf8c3eb541a9b7bcd973f809abd45035585951904bf7e06980e2",
+          "feedback_id": "phase12_self_model_feedback::0ef53c3dc27d",
+          "pressure_kind": "contradiction_sensitive_theory_gap",
+          "problem_statement": "Contradiction handling now produces improvement records, but the structural theory behind those improvements remains fragmented.",
+          "recommended_lane": "theory_formation",
+          "supporting_refs": [
+            "self_model::bf9c904c4761",
+            "meta_observer::51986fa94cb9",
+            "strategy_journal::341942aad13a",
+            "skeptic::4383ef6b7df8",
+            "surprise::880d6e453e4b"
+          ]
+        },
+        {
+          "bounded_next_step": "Propose one bounded route-shape change with explicit before, after, rejected alternative, and rollback target refs.",
+          "feedback_hash": "6d79edad46f0222e2d50e047b91b0e3f65167298549bf5f339cddc9196b7ad65",
+          "feedback_id": "phase12_self_model_feedback::6d79edad46f0",
+          "pressure_kind": "review_lane_congestion",
+          "problem_statement": "Adopted improvements and monitoring refs show that the current review lane is doing too much structural coordination in one place.",
+          "recommended_lane": "self_reorganization",
+          "supporting_refs": [
+            "self_model::bf9c904c4761",
+            "meta_observer::51986fa94cb9",
+            "strategy_journal::341942aad13a",
+            "skeptic::4383ef6b7df8",
+            "surprise::880d6e453e4b",
+            "weak_answer_diagnosis::7ca0eacd5389"
+          ]
+        },
+        {
+          "bounded_next_step": "Propose one bounded domain candidate without widening the proof-domain set or mutating the existing domain map.",
+          "feedback_hash": "50eaa752d982eb8091648c0471700a84b2db5329366c43382231710a40981a8a",
+          "feedback_id": "phase12_self_model_feedback::50eaa752d982",
+          "pressure_kind": "domain_boundary_pressure",
+          "problem_statement": "The contradiction pattern suggests a missing boundary between broad domain reasoning and local infrastructure-like conditions.",
+          "recommended_lane": "domain_genesis",
+          "supporting_refs": [
+            "self_model::bf9c904c4761",
+            "meta_observer::51986fa94cb9",
+            "strategy_journal::341942aad13a",
+            "skeptic::4383ef6b7df8",
+            "surprise::880d6e453e4b",
+            "weak_answer_diagnosis::7ca0eacd5389"
+          ]
+        },
+        {
+          "bounded_next_step": "Propose one candidate review protocol anchored to the skill graph and explicitly non-auto-executing.",
+          "feedback_hash": "bb46d6b56eb0d5af08f61d475ae39c840178825e118acadefb6d70be4c8f8736",
+          "feedback_id": "phase12_self_model_feedback::bb46d6b56eb0",
+          "pressure_kind": "procedure_reuse_gap",
+          "problem_statement": "The improvement chain solved the immediate contradiction, but the reusable procedure for repeating that repair is still implicit.",
+          "recommended_lane": "procedure_tool_invention",
+          "supporting_refs": [
+            "self_model::bf9c904c4761",
+            "meta_observer::51986fa94cb9",
+            "strategy_journal::341942aad13a",
+            "skeptic::4383ef6b7df8"
+          ]
+        }
+      ],
+      "schema": "agifcore.phase_12.self_model_feedback.v1",
+      "snapshot_hash": "03344d38b85c8148432b02b38f1da6a7a73fdd0a83374b35965eb7ab266bb519",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "weak_case": {
+      "conversation_id": "conv-p10-weak",
+      "item_count": 3,
+      "items": [
+        {
+          "bounded_next_step": "Propose one reusable review protocol that checks local evidence freshness before explanation reuse.",
+          "feedback_hash": "010f8fc4d971643bcb6a8ea016d339241c50dd94a3ef09362b449065458284a2",
+          "feedback_id": "phase12_self_model_feedback::010f8fc4d971",
+          "pressure_kind": "support_gap_repeats",
+          "problem_statement": "Repeated weak-support turns show that the current structure does not isolate local-evidence refresh from explanation drafting cleanly enough.",
+          "recommended_lane": "procedure_tool_invention",
+          "supporting_refs": [
+            "self_model::8b2b3db44440",
+            "meta_observer::80e48682c6ef",
+            "strategy_journal::a39c7f7e13e6",
+            "skeptic::5d11aa5a2796"
+          ]
+        },
+        {
+          "bounded_next_step": "Form one bounded theory candidate that explains when missing local evidence should block stronger reuse.",
+          "feedback_hash": "c3588854a5b4939cc7e8f19ed2c8cefd2bb4e173f237f641f84d75d301bd0fdd",
+          "feedback_id": "phase12_self_model_feedback::c3588854a5b4",
+          "pressure_kind": "theory_boundary_thin",
+          "problem_statement": "The current theory-fragment surface captures weak explanations, but the structural reason why those weak explanations recur is still under-specified.",
+          "recommended_lane": "theory_formation",
+          "supporting_refs": [
+            "self_model::8b2b3db44440",
+            "meta_observer::80e48682c6ef",
+            "strategy_journal::a39c7f7e13e6",
+            "skeptic::5d11aa5a2796",
+            "surprise::df2eb69ba9cb"
+          ]
+        },
+        {
+          "bounded_next_step": "Select at most two structural blind spots and defer all others explicitly.",
+          "feedback_hash": "2bb55a8c9c0aeb08e57e2b0fb032a60f3a76178184a10ccab72b1c1670419e1c",
+          "feedback_id": "phase12_self_model_feedback::2bb55a8c9c0a",
+          "pressure_kind": "bounded_inquiry_queue_pressure",
+          "problem_statement": "Bounded inquiry is active, but the selector still needs a clearer rule for when evidence gaps should trigger structural review instead of another answer attempt.",
+          "recommended_lane": "curiosity_gap_selection",
+          "supporting_refs": [
+            "self_model::8b2b3db44440",
+            "meta_observer::80e48682c6ef",
+            "strategy_journal::a39c7f7e13e6",
+            "skeptic::5d11aa5a2796",
+            "surprise::df2eb69ba9cb",
+            "weak_answer_diagnosis::9b56ed826747"
+          ]
+        }
+      ],
+      "schema": "agifcore.phase_12.self_model_feedback.v1",
+      "snapshot_hash": "a21272fb07777517ba9cebb78ed4afc8bc26cab95a0a37f8c9647c8c46f43af7",
+      "turn_id": "turn-p10-weak"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "item-count-stays-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "lanes-are-typed",
+      "result": "pass"
+    },
+    {
+      "id": "supporting-refs-present",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_12_STRUCTURAL_GROWTH.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/02_requirements/DOMAIN_MATRIX.md",
+    "projects/agifcore_master/03_design/CELL_FAMILIES.md",
+    "projects/agifcore_master/03_design/GRAPH_STACK_MODEL.md",
+    "projects/agifcore_master/03_design/SKILL_GRAPH_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/contracts.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_improvement_cycle.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/tissue_manifests.py",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/skill_graph.py",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/transfer_graph.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/contracts.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/self_model_feedback.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/reflection_control.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/curiosity_gap_selection.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/theory_formation.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/procedure_tool_invention.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/self_reorganization.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/domain_genesis.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/structural_growth_cycle.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/__init__.py",
+    "projects/agifcore_master/05_testing/phase_12_structural_growth/_phase_12_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_12_structural_growth/verify_phase_12_self_model_feedback.py"
+  ],
+  "notes": [
+    "self-model feedback stays typed and bounded before any structural candidate runs",
+    "Phase 12 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_self_model_feedback_report.json"
+  },
+  "phase": "12",
+  "status": "pass",
+  "verifier": "verify_phase_12_self_model_feedback"
+}

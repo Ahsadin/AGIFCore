@@ -1,0 +1,14 @@
+{
+  "notes": [
+    "summary only",
+    "Phase 12 remains open",
+    "no approval implied"
+  ],
+  "phase": "12",
+  "scenario_files": [
+    "phase_12_structural_growth_demo.json",
+    "phase_12_theory_growth_demo.json"
+  ],
+  "status": "open",
+  "supporting_evidence_manifest": "phase_12_evidence_manifest.json"
+}

@@ -1,0 +1,215 @@
+{
+  "demo_id": "theory_growth",
+  "evidence_reports": [
+    "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_self_model_feedback_report.json",
+    "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_theory_formation_report.json",
+    "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_procedure_tool_invention_report.json",
+    "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_structural_growth_cycle_report.json",
+    "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_evidence_manifest.json"
+  ],
+  "notes": [
+    "review-only theory-growth demo",
+    "Phase 12 remains open",
+    "no approval implied"
+  ],
+  "original_prompt": "Why was this weak and what should be checked first?",
+  "phase": "12",
+  "phase11_inputs": {
+    "held_proposal_ids": [
+      "phase11_proposal::f93c8ce20e8b",
+      "phase11_proposal::07ad3e8b431f"
+    ],
+    "read_only_phase10_refs": [
+      "self_model::8b2b3db44440",
+      "meta_observer::80e48682c6ef",
+      "strategy_journal::a39c7f7e13e6",
+      "skeptic::5d11aa5a2796",
+      "surprise::df2eb69ba9cb",
+      "weak_answer_diagnosis::9b56ed826747",
+      "attention_redirect::30b84eb19b01",
+      "attention_redirect::2afb4070bc1e"
+    ],
+    "support_state": "search_needed"
+  },
+  "phase12_outputs": {
+    "overlay_contract": {
+      "candidate_domain_ids": [
+        "phase12_domain_genesis::b7f9afcbfe5d"
+      ],
+      "candidate_procedure_ids": [
+        "phase12_procedure_tool::e6bcb91b12c2"
+      ],
+      "candidate_theory_ids": [
+        "phase12_theory::6e1c2b18e5e2"
+      ],
+      "contract_hash": "532d11ea8cb5ab58f562e92e201c1fdbc98afddf0d8ff86a3eeb20fc3d2bbf89",
+      "conversation_id": "conv-p10-weak",
+      "evidence_refs": [
+        "phase8.summary.ref.001",
+        "phase8.summary.ref.002",
+        "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+        "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797",
+        "e8386a01375de8b82858e0e81748c9d5e02bdac3a9cef8a808316099b5d132d9",
+        "86e4c43144503e72da9429fc68abd2c34a2cbf7067527496bb73c669121147cf",
+        "2ff7d18c8932c3abafb1bf08dfa681f882a07a590381d3203bd61b4b99413595",
+        "f065456200aded7dc74db12d3526eff162ec5d08ee8924f3e9bcc929fd888efb",
+        "phase12_gap::6061daca1549",
+        "phase12_gap::7cf580032ce2",
+        "phase12_theory::6e1c2b18e5e2",
+        "phase12_domain_genesis::b7f9afcbfe5d",
+        "phase12_procedure_tool::e6bcb91b12c2",
+        "phase12_reorganization::09ea57a79e12"
+      ],
+      "phase11_interfaces": [
+        "agifcore.phase_11.self_improvement_cycle.v1",
+        "agifcore.phase_11.overlay_contract.v1"
+      ],
+      "read_only_phase11_refs": [
+        "phase8.summary.ref.001",
+        "phase8.summary.ref.002",
+        "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+        "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797",
+        "e8386a01375de8b82858e0e81748c9d5e02bdac3a9cef8a808316099b5d132d9",
+        "86e4c43144503e72da9429fc68abd2c34a2cbf7067527496bb73c669121147cf",
+        "2ff7d18c8932c3abafb1bf08dfa681f882a07a590381d3203bd61b4b99413595",
+        "f065456200aded7dc74db12d3526eff162ec5d08ee8924f3e9bcc929fd888efb"
+      ],
+      "reorganization_refs": [
+        "phase12_reorganization::09ea57a79e12"
+      ],
+      "schema": "agifcore.phase_12.overlay_contract.v1",
+      "selected_gap_ids": [
+        "phase12_gap::6061daca1549",
+        "phase12_gap::7cf580032ce2"
+      ],
+      "support_state": "search_needed",
+      "turn_id": "turn-p10-weak"
+    },
+    "procedure_tool_invention": {
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_hash": "e6bcb91b12c20c68169d6836575693eb102dd680490b0403989b03263e08a936",
+          "candidate_id": "phase12_procedure_tool::e6bcb91b12c2",
+          "candidate_state": "candidate",
+          "invention_kind": "triage_checklist",
+          "limits": [
+            "candidate only",
+            "no automatic execution",
+            "no external search"
+          ],
+          "non_auto_execute": true,
+          "preconditions": [
+            "support_state=search_needed",
+            "local evidence still missing or stale"
+          ],
+          "procedure_statement": "Before reusing a weak explanation, require one bounded freshness check on the local evidence lane and defer all wider restructuring.",
+          "sandbox_compatibility_note": "planning-only candidate; stays outside runtime execution and connector enablement.",
+          "skill_anchor_ref": "skill::phase12.local_evidence_recheck_protocol",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+            "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797"
+          ]
+        }
+      ],
+      "conversation_id": "conv-p10-weak",
+      "schema": "agifcore.phase_12.procedure_tool_invention.v1",
+      "snapshot_hash": "0ca049c6f8793f4cfd2b5c30f719561fae7930529800b5413353242e6d7aaf09",
+      "turn_id": "turn-p10-weak"
+    },
+    "self_model_feedback": {
+      "conversation_id": "conv-p10-weak",
+      "item_count": 3,
+      "items": [
+        {
+          "bounded_next_step": "Propose one reusable review protocol that checks local evidence freshness before explanation reuse.",
+          "feedback_hash": "010f8fc4d971643bcb6a8ea016d339241c50dd94a3ef09362b449065458284a2",
+          "feedback_id": "phase12_self_model_feedback::010f8fc4d971",
+          "pressure_kind": "support_gap_repeats",
+          "problem_statement": "Repeated weak-support turns show that the current structure does not isolate local-evidence refresh from explanation drafting cleanly enough.",
+          "recommended_lane": "procedure_tool_invention",
+          "supporting_refs": [
+            "self_model::8b2b3db44440",
+            "meta_observer::80e48682c6ef",
+            "strategy_journal::a39c7f7e13e6",
+            "skeptic::5d11aa5a2796"
+          ]
+        },
+        {
+          "bounded_next_step": "Form one bounded theory candidate that explains when missing local evidence should block stronger reuse.",
+          "feedback_hash": "c3588854a5b4939cc7e8f19ed2c8cefd2bb4e173f237f641f84d75d301bd0fdd",
+          "feedback_id": "phase12_self_model_feedback::c3588854a5b4",
+          "pressure_kind": "theory_boundary_thin",
+          "problem_statement": "The current theory-fragment surface captures weak explanations, but the structural reason why those weak explanations recur is still under-specified.",
+          "recommended_lane": "theory_formation",
+          "supporting_refs": [
+            "self_model::8b2b3db44440",
+            "meta_observer::80e48682c6ef",
+            "strategy_journal::a39c7f7e13e6",
+            "skeptic::5d11aa5a2796",
+            "surprise::df2eb69ba9cb"
+          ]
+        },
+        {
+          "bounded_next_step": "Select at most two structural blind spots and defer all others explicitly.",
+          "feedback_hash": "2bb55a8c9c0aeb08e57e2b0fb032a60f3a76178184a10ccab72b1c1670419e1c",
+          "feedback_id": "phase12_self_model_feedback::2bb55a8c9c0a",
+          "pressure_kind": "bounded_inquiry_queue_pressure",
+          "problem_statement": "Bounded inquiry is active, but the selector still needs a clearer rule for when evidence gaps should trigger structural review instead of another answer attempt.",
+          "recommended_lane": "curiosity_gap_selection",
+          "supporting_refs": [
+            "self_model::8b2b3db44440",
+            "meta_observer::80e48682c6ef",
+            "strategy_journal::a39c7f7e13e6",
+            "skeptic::5d11aa5a2796",
+            "surprise::df2eb69ba9cb",
+            "weak_answer_diagnosis::9b56ed826747"
+          ]
+        }
+      ],
+      "schema": "agifcore.phase_12.self_model_feedback.v1",
+      "snapshot_hash": "a21272fb07777517ba9cebb78ed4afc8bc26cab95a0a37f8c9647c8c46f43af7",
+      "turn_id": "turn-p10-weak"
+    },
+    "theory_formation": {
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "assumption_refs": [
+            "self_model::8b2b3db44440",
+            "meta_observer::80e48682c6ef"
+          ],
+          "candidate_hash": "6e1c2b18e5e2eaef2f3fe011c146bd104e9893be0cc1852eb1a7e1321c170314",
+          "candidate_id": "phase12_theory::6e1c2b18e5e2",
+          "falsifier_refs": [
+            "phase12.falsifier.fresh_local_measurement_still_weak"
+          ],
+          "growth_status": "new_candidate",
+          "mechanism_step_refs": [
+            "phase12.mechanism.local_evidence_gate",
+            "phase12.mechanism.defer_explanation_reuse"
+          ],
+          "predicted_observable_refs": [
+            "phase12.observable.weaker_support_flag",
+            "phase12.observable.review_protocol_needed"
+          ],
+          "source_fragment_ref": "self_model::8b2b3db44440",
+          "theory_confidence_band": "medium",
+          "theory_label": "local_measurement_dependency_boundary",
+          "theory_statement": "Weak answers recur when local evidence freshness is missing and the explanation lane reuses general reasoning too early.",
+          "verification_next_step": "Replay the weak-support pack with a fresh local evidence ref and compare whether the structural pressure remains."
+        }
+      ],
+      "conversation_id": "conv-p10-weak",
+      "schema": "agifcore.phase_12.theory_formation.v1",
+      "snapshot_hash": "bcc97a1fa8014feb0818c407bd441054f4403516811d53a43187b5f84a598d90",
+      "turn_id": "turn-p10-weak"
+    }
+  },
+  "status": "open",
+  "theory_candidate_ids": [
+    "phase12_theory::6e1c2b18e5e2"
+  ]
+}

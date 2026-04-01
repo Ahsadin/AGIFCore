@@ -1,0 +1,107 @@
+{
+  "anchors": {
+    "contradiction_case": {
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "action_kind": "transfer_reshape",
+          "after_state_ref": "phase03.structure.after::contradiction_boundary_review_lane",
+          "before_state_ref": "phase03.structure.before::shared_growth_review_lane",
+          "candidate_hash": "939e125576d2a713e49e794dc08e709317cc651f24e5f51b2d908906be9ce824",
+          "candidate_id": "phase12_reorganization::939e125576d2",
+          "candidate_state": "candidate",
+          "pressure_score_delta": 0.23,
+          "rationale": "The contradiction case supports one bounded route reshape that separates contradiction repair from downstream adoption review.",
+          "rejected_alternative_ref": "phase12.rejected_alternative::one_giant_growth_engine",
+          "rollback_target": "phase12.rollback::restore_phase11_review_shape",
+          "target_structure_ref": "phase03.tissue_manifests::meta_growth_structural_review_lane"
+        }
+      ],
+      "conversation_id": "conv-p10-contradiction",
+      "schema": "agifcore.phase_12.self_reorganization.v1",
+      "snapshot_hash": "c7eb6d87ba822b01aee2f52eefb1eecefec9cd8730e8562db2eca5aad5ff1222",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "weak_case": {
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "action_kind": "route_tuning",
+          "after_state_ref": "phase03.structure.after::support_recheck_subroute",
+          "before_state_ref": "phase03.structure.before::single_review_lane",
+          "candidate_hash": "09ea57a79e12b34550835763b01eeef3d9cd41f718eca5d8b22c1343aed6dbe1",
+          "candidate_id": "phase12_reorganization::09ea57a79e12",
+          "candidate_state": "held",
+          "pressure_score_delta": 0.08,
+          "rationale": "The weak-support case suggests a route split candidate, but structural mutation stays held until contradiction pressure is stronger.",
+          "rejected_alternative_ref": "phase12.rejected_alternative::one_giant_growth_engine",
+          "rollback_target": "phase12.rollback::restore_phase11_review_shape",
+          "target_structure_ref": "phase03.tissue_manifests::critic_or_error_monitor_review_lane"
+        }
+      ],
+      "conversation_id": "conv-p10-weak",
+      "schema": "agifcore.phase_12.self_reorganization.v1",
+      "snapshot_hash": "c9138eb62a2276b0f574aae53dc0f1f39b03095aafdc611d9dd0fafcfdc91aa0",
+      "turn_id": "turn-p10-weak"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "single-candidate-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "rollback-and-rejected-alternative-present",
+      "result": "pass"
+    },
+    {
+      "id": "before-after-refs-present",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_12_STRUCTURAL_GROWTH.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/02_requirements/DOMAIN_MATRIX.md",
+    "projects/agifcore_master/03_design/CELL_FAMILIES.md",
+    "projects/agifcore_master/03_design/GRAPH_STACK_MODEL.md",
+    "projects/agifcore_master/03_design/SKILL_GRAPH_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/contracts.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_improvement_cycle.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/tissue_manifests.py",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/skill_graph.py",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/transfer_graph.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/contracts.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/self_model_feedback.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/reflection_control.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/curiosity_gap_selection.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/theory_formation.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/procedure_tool_invention.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/self_reorganization.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/domain_genesis.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/structural_growth_cycle.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/__init__.py",
+    "projects/agifcore_master/05_testing/phase_12_structural_growth/_phase_12_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_12_structural_growth/verify_phase_12_self_reorganization.py"
+  ],
+  "notes": [
+    "self-reorganization stays candidate-bound and carries rollback and rejected-alternative refs",
+    "Phase 12 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_self_reorganization_report.json"
+  },
+  "phase": "12",
+  "status": "pass",
+  "verifier": "verify_phase_12_self_reorganization"
+}

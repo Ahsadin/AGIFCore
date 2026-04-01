@@ -1,0 +1,302 @@
+{
+  "demo_id": "structural_growth",
+  "evidence_reports": [
+    "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_self_model_feedback_report.json",
+    "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_reflection_control_report.json",
+    "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_self_reorganization_report.json",
+    "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_domain_genesis_report.json",
+    "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_curiosity_gap_selection_report.json",
+    "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_structural_growth_cycle_report.json",
+    "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_evidence_manifest.json"
+  ],
+  "notes": [
+    "review-only structural-growth demo",
+    "Phase 12 remains open",
+    "no approval implied"
+  ],
+  "original_prompt": "These signals contradict each other. Compare them and show where the answer could break.",
+  "phase": "12",
+  "phase11_inputs": {
+    "adopted_proposal_ids": [
+      "phase11_proposal::85d913641a4b"
+    ],
+    "monitoring_refs": [
+      "monitoring::phase11_proposal::85d913641a4b"
+    ],
+    "support_state": "inferred"
+  },
+  "phase12_outputs": {
+    "curiosity_gap_selection": {
+      "conversation_id": "conv-p10-contradiction",
+      "gap_count": 2,
+      "gaps": [
+        {
+          "chosen_target_lane": "self_reorganization",
+          "deferred_alternatives": [
+            "procedure_tool_invention"
+          ],
+          "gap_hash": "b04fe61b3ac1857ee4e67e7f3cb46fccd3c5c5bc2a6a06866f34628fa763cc28",
+          "gap_id": "phase12_gap::b04fe61b3ac1",
+          "gap_kind": "structural_gap",
+          "ranked_priority": 1,
+          "stop_condition": "stop after one bounded structural candidate",
+          "supporting_refs": [
+            "self_model::bf9c904c4761",
+            "meta_observer::51986fa94cb9",
+            "strategy_journal::341942aad13a",
+            "skeptic::4383ef6b7df8",
+            "surprise::880d6e453e4b"
+          ],
+          "why_selected": "The adopted-improvement and monitoring chain point to one congested structural review lane."
+        },
+        {
+          "chosen_target_lane": "domain_genesis",
+          "deferred_alternatives": [
+            "self_reorganization",
+            "procedure_tool_invention"
+          ],
+          "gap_hash": "077eaa165f0d2dad2415a2e7ff6f8780ebe4cc8b86f50bc4cf308569a2bb4728",
+          "gap_id": "phase12_gap::077eaa165f0d",
+          "gap_kind": "domain_gap",
+          "ranked_priority": 2,
+          "stop_condition": "stop after one bounded domain candidate",
+          "supporting_refs": [
+            "self_model::bf9c904c4761",
+            "meta_observer::51986fa94cb9",
+            "strategy_journal::341942aad13a",
+            "skeptic::4383ef6b7df8",
+            "surprise::880d6e453e4b",
+            "weak_answer_diagnosis::7ca0eacd5389"
+          ],
+          "why_selected": "The contradiction pattern suggests one missing boundary candidate between broad reasoning and local condition handling."
+        }
+      ],
+      "schema": "agifcore.phase_12.curiosity_gap_selection.v1",
+      "snapshot_hash": "707eaeae27c775587414fc314c1bbee9567daa5640ab419c1f638eef08bb11e3",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "domain_genesis": {
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "activation_signals": [
+            "contradiction-sensitive theory candidate",
+            "adopted improvement plus monitoring refs",
+            "cross-domain boundary pressure"
+          ],
+          "boundary_statement": "This candidate would separate local infrastructure-like condition handling from broad world reasoning when contradiction patterns repeat under the same proof-domain family.",
+          "candidate_hash": "20356b09f2d19d1b2b0c11961400dcaed01965c90002057eba495f2bafd23e21",
+          "candidate_id": "phase12_domain_genesis::20356b09f2d1",
+          "candidate_state": "candidate",
+          "domain_label": "microclimate_infrastructure_boundary",
+          "parent_domain_ref": "building_home_infrastructure_events",
+          "peer_domain_refs": [
+            "maintenance_diagnostics",
+            "planning_coordination_workflows"
+          ],
+          "rejection_path": "Reject the candidate and keep the current proof-domain map unchanged if one bounded route change explains the pressure just as well.",
+          "supporting_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "84739b2c42b16a086303dbb52b1ee5296b43a721a79d3bca649809f81653fede",
+            "4cf0213cbe82acf4d8587c6b380b51eb4df286b0ae1c635099d230fd40930070"
+          ]
+        }
+      ],
+      "conversation_id": "conv-p10-contradiction",
+      "schema": "agifcore.phase_12.domain_genesis.v1",
+      "snapshot_hash": "b37631ea620f3620ee0dad0d13346b9a25c57b0c57f316cea660011250c1ac6b",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "overlay_contract": {
+      "candidate_domain_ids": [
+        "phase12_domain_genesis::20356b09f2d1"
+      ],
+      "candidate_procedure_ids": [
+        "phase12_procedure_tool::2557e5a5bfd2"
+      ],
+      "candidate_theory_ids": [
+        "phase12_theory::9fc1a70e7bae",
+        "phase12_theory::183cedbfdd55"
+      ],
+      "contract_hash": "1853616955a442acbe92e6573d05eadc4b803c74cc4a94112279766c1df03b63",
+      "conversation_id": "conv-p10-contradiction",
+      "evidence_refs": [
+        "phase8.summary.ref.001",
+        "phase8.summary.ref.002",
+        "84739b2c42b16a086303dbb52b1ee5296b43a721a79d3bca649809f81653fede",
+        "4cf0213cbe82acf4d8587c6b380b51eb4df286b0ae1c635099d230fd40930070",
+        "86ea18bdab9d6783ca832fee5e5fb87530460776980a04517cb6f1971872f156",
+        "21ac664c6c3dbdc112394976b10ae87c5ef24954a29f0f171076d41b5cc4260c",
+        "9bee10cfd1fb4599da833a1465376a907e7fd8dd86261f20e58eabf55be34319",
+        "f84e9c4bfb5414dddb4ade3191ffcfe5a75a1bee0fb835dc9b381ea2e23e087b",
+        "phase12_gap::b04fe61b3ac1",
+        "phase12_gap::077eaa165f0d",
+        "phase12_theory::9fc1a70e7bae",
+        "phase12_theory::183cedbfdd55",
+        "phase12_domain_genesis::20356b09f2d1",
+        "phase12_procedure_tool::2557e5a5bfd2",
+        "phase12_reorganization::939e125576d2"
+      ],
+      "phase11_interfaces": [
+        "agifcore.phase_11.self_improvement_cycle.v1",
+        "agifcore.phase_11.overlay_contract.v1"
+      ],
+      "read_only_phase11_refs": [
+        "phase8.summary.ref.001",
+        "phase8.summary.ref.002",
+        "84739b2c42b16a086303dbb52b1ee5296b43a721a79d3bca649809f81653fede",
+        "4cf0213cbe82acf4d8587c6b380b51eb4df286b0ae1c635099d230fd40930070",
+        "86ea18bdab9d6783ca832fee5e5fb87530460776980a04517cb6f1971872f156",
+        "21ac664c6c3dbdc112394976b10ae87c5ef24954a29f0f171076d41b5cc4260c",
+        "9bee10cfd1fb4599da833a1465376a907e7fd8dd86261f20e58eabf55be34319",
+        "f84e9c4bfb5414dddb4ade3191ffcfe5a75a1bee0fb835dc9b381ea2e23e087b"
+      ],
+      "reorganization_refs": [
+        "phase12_reorganization::939e125576d2"
+      ],
+      "schema": "agifcore.phase_12.overlay_contract.v1",
+      "selected_gap_ids": [
+        "phase12_gap::b04fe61b3ac1",
+        "phase12_gap::077eaa165f0d"
+      ],
+      "support_state": "inferred",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "reflection_control": {
+      "action_count": 3,
+      "actions": [
+        {
+          "action_hash": "373d4809cb8c7ad6699f283b65c9617e23f24a6f60960d540cb4e1c50d9593d9",
+          "action_id": "phase12_reflection_control::373d4809cb8c",
+          "decision": "advance",
+          "reason": "Contradiction-linked evidence is strong enough to refine theory candidates now.",
+          "stop_reason": "stop after at most two theory candidates",
+          "supporting_feedback_ids": [
+            "phase12_self_model_feedback::0ef53c3dc27d"
+          ],
+          "target_lane": "theory_formation"
+        },
+        {
+          "action_hash": "9ec1054e6e59beb754a117ac2d18e861ea8b41a9a6c0f84e6863fcded9c7e965",
+          "action_id": "phase12_reflection_control::9ec1054e6e59",
+          "decision": "advance",
+          "reason": "The adopted-improvement chain provides enough support to model one bounded structural candidate.",
+          "stop_reason": "stop after one reorganization candidate",
+          "supporting_feedback_ids": [
+            "phase12_self_model_feedback::6d79edad46f0"
+          ],
+          "target_lane": "self_reorganization"
+        },
+        {
+          "action_hash": "ca8b938517ac7f49104eb3c2e36c42327e50ca388d6b12bf3cb47c95f9516dfc",
+          "action_id": "phase12_reflection_control::ca8b938517ac",
+          "decision": "hold",
+          "reason": "Domain genesis stays candidate-bound and may not widen the domain surface until the theory path is visible.",
+          "stop_reason": "hold domain adoption and keep one candidate only",
+          "supporting_feedback_ids": [
+            "phase12_self_model_feedback::50eaa752d982"
+          ],
+          "target_lane": "domain_genesis"
+        }
+      ],
+      "conversation_id": "conv-p10-contradiction",
+      "schema": "agifcore.phase_12.reflection_control.v1",
+      "snapshot_hash": "083e5a358d87d45fd65c1bc0d7013c2b02bff7535a1a03113978753ff6fbf2f9",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "self_model_feedback": {
+      "conversation_id": "conv-p10-contradiction",
+      "item_count": 4,
+      "items": [
+        {
+          "bounded_next_step": "Refine one contradiction-sensitive theory candidate directly from the approved Phase 11 evidence chain.",
+          "feedback_hash": "0ef53c3dc27dcf8c3eb541a9b7bcd973f809abd45035585951904bf7e06980e2",
+          "feedback_id": "phase12_self_model_feedback::0ef53c3dc27d",
+          "pressure_kind": "contradiction_sensitive_theory_gap",
+          "problem_statement": "Contradiction handling now produces improvement records, but the structural theory behind those improvements remains fragmented.",
+          "recommended_lane": "theory_formation",
+          "supporting_refs": [
+            "self_model::bf9c904c4761",
+            "meta_observer::51986fa94cb9",
+            "strategy_journal::341942aad13a",
+            "skeptic::4383ef6b7df8",
+            "surprise::880d6e453e4b"
+          ]
+        },
+        {
+          "bounded_next_step": "Propose one bounded route-shape change with explicit before, after, rejected alternative, and rollback target refs.",
+          "feedback_hash": "6d79edad46f0222e2d50e047b91b0e3f65167298549bf5f339cddc9196b7ad65",
+          "feedback_id": "phase12_self_model_feedback::6d79edad46f0",
+          "pressure_kind": "review_lane_congestion",
+          "problem_statement": "Adopted improvements and monitoring refs show that the current review lane is doing too much structural coordination in one place.",
+          "recommended_lane": "self_reorganization",
+          "supporting_refs": [
+            "self_model::bf9c904c4761",
+            "meta_observer::51986fa94cb9",
+            "strategy_journal::341942aad13a",
+            "skeptic::4383ef6b7df8",
+            "surprise::880d6e453e4b",
+            "weak_answer_diagnosis::7ca0eacd5389"
+          ]
+        },
+        {
+          "bounded_next_step": "Propose one bounded domain candidate without widening the proof-domain set or mutating the existing domain map.",
+          "feedback_hash": "50eaa752d982eb8091648c0471700a84b2db5329366c43382231710a40981a8a",
+          "feedback_id": "phase12_self_model_feedback::50eaa752d982",
+          "pressure_kind": "domain_boundary_pressure",
+          "problem_statement": "The contradiction pattern suggests a missing boundary between broad domain reasoning and local infrastructure-like conditions.",
+          "recommended_lane": "domain_genesis",
+          "supporting_refs": [
+            "self_model::bf9c904c4761",
+            "meta_observer::51986fa94cb9",
+            "strategy_journal::341942aad13a",
+            "skeptic::4383ef6b7df8",
+            "surprise::880d6e453e4b",
+            "weak_answer_diagnosis::7ca0eacd5389"
+          ]
+        },
+        {
+          "bounded_next_step": "Propose one candidate review protocol anchored to the skill graph and explicitly non-auto-executing.",
+          "feedback_hash": "bb46d6b56eb0d5af08f61d475ae39c840178825e118acadefb6d70be4c8f8736",
+          "feedback_id": "phase12_self_model_feedback::bb46d6b56eb0",
+          "pressure_kind": "procedure_reuse_gap",
+          "problem_statement": "The improvement chain solved the immediate contradiction, but the reusable procedure for repeating that repair is still implicit.",
+          "recommended_lane": "procedure_tool_invention",
+          "supporting_refs": [
+            "self_model::bf9c904c4761",
+            "meta_observer::51986fa94cb9",
+            "strategy_journal::341942aad13a",
+            "skeptic::4383ef6b7df8"
+          ]
+        }
+      ],
+      "schema": "agifcore.phase_12.self_model_feedback.v1",
+      "snapshot_hash": "03344d38b85c8148432b02b38f1da6a7a73fdd0a83374b35965eb7ab266bb519",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "self_reorganization": {
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "action_kind": "transfer_reshape",
+          "after_state_ref": "phase03.structure.after::contradiction_boundary_review_lane",
+          "before_state_ref": "phase03.structure.before::shared_growth_review_lane",
+          "candidate_hash": "939e125576d2a713e49e794dc08e709317cc651f24e5f51b2d908906be9ce824",
+          "candidate_id": "phase12_reorganization::939e125576d2",
+          "candidate_state": "candidate",
+          "pressure_score_delta": 0.23,
+          "rationale": "The contradiction case supports one bounded route reshape that separates contradiction repair from downstream adoption review.",
+          "rejected_alternative_ref": "phase12.rejected_alternative::one_giant_growth_engine",
+          "rollback_target": "phase12.rollback::restore_phase11_review_shape",
+          "target_structure_ref": "phase03.tissue_manifests::meta_growth_structural_review_lane"
+        }
+      ],
+      "conversation_id": "conv-p10-contradiction",
+      "schema": "agifcore.phase_12.self_reorganization.v1",
+      "snapshot_hash": "c7eb6d87ba822b01aee2f52eefb1eecefec9cd8730e8562db2eca5aad5ff1222",
+      "turn_id": "turn-p10-contradiction"
+    }
+  },
+  "status": "open"
+}

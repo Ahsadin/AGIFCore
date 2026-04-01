@@ -1,0 +1,33 @@
+# P12-TC-SC-01: Phase 12 Provenance And Reuse
+
+- Task card ID: `P12-TC-SC-01`
+- Role owner: `Source Cartographer`
+- Model tier: `gpt-5.4-mini`
+- Objective: map every major Phase 12 subsystem to source basis, disposition, and reuse limits
+- Exact files allowed to touch:
+  - `projects/agifcore_master/00_admin/codex_threads/tasks/phase_12/P12-TC-SC-01_PHASE_12_PROVENANCE_AND_REUSE.md`
+- Files forbidden to touch:
+  - `.codex/`
+  - all `projects/agifcore_master/04_execution/*`
+  - all `projects/agifcore_master/05_testing/*`
+  - all `projects/agifcore_master/06_outputs/*`
+  - all Phase 13 and later artifacts
+- Required reads first:
+  - `projects/agifcore_master/01_plan/COMPONENT_CATALOG.md`
+  - `projects/agifcore_master/01_plan/SOURCE_INHERITANCE_MATRIX.md`
+  - `projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md`
+  - approved Phase 10 and Phase 11 plans and execution surfaces
+  - inspected donor structural-growth, theory-growth, and reorganization files
+- Step-by-step work method:
+  1. map all seven Phase 12 subsystems
+  2. assign one allowed disposition to each subsystem
+  3. flag where exact record inheritance is stronger than runtime portability
+  4. pass unresolved seam notes to `Architecture & Contract Lead` and `Program Governor`
+- Required cross-checks:
+  - no fifth disposition
+  - no silent omission
+  - no treating historical packages as earned AGIFCore runtime
+- Exit criteria: each subsystem has source basis, disposition, and rationale
+- Handoff target: `Architecture & Contract Lead` then `Program Governor`
+- Anti-drift rule: do not claim inspected historical code is already valid AGIFCore runtime
+- Explicit proof that no approval is implied: provenance mapping does not earn the phase

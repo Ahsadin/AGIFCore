@@ -22,7 +22,7 @@ Phase order may not be rearranged by execution convenience.
 | 9 | rich expression and composition | define and later build higher-order composition and expressive response capabilities | `approved` |
 | 10 | meta-cognition and critique | define and later build critique, self-check, and failure-detection layers | `approved` |
 | 11 | governed self-improvement | define and later build tightly governed improvement loops without hidden autonomy | `approved` |
-| 12 | structural growth | define and later build controlled growth of fabric, tissues, and transfer structures | `open` |
+| 12 | structural growth | define and later build controlled growth of fabric, tissues, and transfer structures | `approved` |
 | 13 | product runtime and UX | define and later build the user-facing runtime, runner, gateway, and UX split | `open` |
 | 14 | sandbox, profiles, and scale realization | define and later build sandbox controls, machine profiles, and scale boundaries | `open` |
 | 15 | final intelligence proof and closure audit | prove the full system against the locked domains and closure rules | `open` |

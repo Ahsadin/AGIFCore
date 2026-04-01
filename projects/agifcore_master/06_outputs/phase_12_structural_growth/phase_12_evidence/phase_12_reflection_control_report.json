@@ -1,0 +1,105 @@
+{
+  "anchors": {
+    "contradiction_case": {
+      "action_count": 3,
+      "actions": [
+        {
+          "action_hash": "373d4809cb8c7ad6699f283b65c9617e23f24a6f60960d540cb4e1c50d9593d9",
+          "action_id": "phase12_reflection_control::373d4809cb8c",
+          "decision": "advance",
+          "reason": "Contradiction-linked evidence is strong enough to refine theory candidates now.",
+          "stop_reason": "stop after at most two theory candidates",
+          "supporting_feedback_ids": [
+            "phase12_self_model_feedback::0ef53c3dc27d"
+          ],
+          "target_lane": "theory_formation"
+        },
+        {
+          "action_hash": "9ec1054e6e59beb754a117ac2d18e861ea8b41a9a6c0f84e6863fcded9c7e965",
+          "action_id": "phase12_reflection_control::9ec1054e6e59",
+          "decision": "advance",
+          "reason": "The adopted-improvement chain provides enough support to model one bounded structural candidate.",
+          "stop_reason": "stop after one reorganization candidate",
+          "supporting_feedback_ids": [
+            "phase12_self_model_feedback::6d79edad46f0"
+          ],
+          "target_lane": "self_reorganization"
+        },
+        {
+          "action_hash": "ca8b938517ac7f49104eb3c2e36c42327e50ca388d6b12bf3cb47c95f9516dfc",
+          "action_id": "phase12_reflection_control::ca8b938517ac",
+          "decision": "hold",
+          "reason": "Domain genesis stays candidate-bound and may not widen the domain surface until the theory path is visible.",
+          "stop_reason": "hold domain adoption and keep one candidate only",
+          "supporting_feedback_ids": [
+            "phase12_self_model_feedback::50eaa752d982"
+          ],
+          "target_lane": "domain_genesis"
+        }
+      ],
+      "conversation_id": "conv-p10-contradiction",
+      "schema": "agifcore.phase_12.reflection_control.v1",
+      "snapshot_hash": "083e5a358d87d45fd65c1bc0d7013c2b02bff7535a1a03113978753ff6fbf2f9",
+      "turn_id": "turn-p10-contradiction"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "action-count-stays-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "decisions-stay-governed",
+      "result": "pass"
+    },
+    {
+      "id": "supporting-feedback-ids-present",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_12_STRUCTURAL_GROWTH.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/02_requirements/DOMAIN_MATRIX.md",
+    "projects/agifcore_master/03_design/CELL_FAMILIES.md",
+    "projects/agifcore_master/03_design/GRAPH_STACK_MODEL.md",
+    "projects/agifcore_master/03_design/SKILL_GRAPH_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/contracts.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_improvement_cycle.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/tissue_manifests.py",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/skill_graph.py",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/transfer_graph.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/contracts.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/self_model_feedback.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/reflection_control.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/curiosity_gap_selection.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/theory_formation.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/procedure_tool_invention.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/self_reorganization.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/domain_genesis.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/structural_growth_cycle.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/__init__.py",
+    "projects/agifcore_master/05_testing/phase_12_structural_growth/_phase_12_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_12_structural_growth/verify_phase_12_reflection_control.py"
+  ],
+  "notes": [
+    "reflection control limits the number of structural-growth lanes that can move in one cycle",
+    "Phase 12 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_reflection_control_report.json"
+  },
+  "phase": "12",
+  "status": "pass",
+  "verifier": "verify_phase_12_reflection_control"
+}

@@ -135,3 +135,12 @@
 - Exported the standalone Phase 11 review bundle for user inspection.
 - Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 11 is now `approved`.
 - Logged the earned Phase 11 approval state in `DECISIONS.md` while keeping Phase 12 not started and ready for a separate run.
+- Materialized `01_plan/PHASE_12_STRUCTURAL_GROWTH.md` and the Phase 12 planning task-card set under `00_admin/codex_threads/tasks/phase_12/`.
+- Froze the approved Phase 12 planning baseline for execution start in `01_plan/PHASE_12_STRUCTURAL_GROWTH.md`.
+- Added `00_admin/codex_threads/handoffs/PHASE_12_PLAN_FREEZE_HANDOFF.md` and `00_admin/codex_threads/handoffs/PHASE_12_EXECUTION_START_BRIEF.md`.
+- Logged that the Phase 12 planning baseline is frozen for execution start while Phase 12 remains `open` and Phase 13 has not started.
+- Completed the full Phase 12 runtime package under `04_execution/phase_12_structural_growth/`, with paired verifiers and demo runners under `05_testing/phase_12_structural_growth/` and evidence/demo outputs under `06_outputs/phase_12_structural_growth/`.
+- Added the Phase 12 final audit report, danger-zone audit report, Governor verification record, validation request, additional human checkpoint, user verdict, and closeout task-card surfaces under `00_admin/codex_threads/`.
+- Exported the standalone Phase 12 review bundle for user inspection and repaired its copied dependency set so reruns work from the bundle itself.
+- Updated `01_plan/PHASE_GATE_CHECKLIST.md` and `01_plan/PHASE_INDEX.md` so Phase 12 is now `approved`.
+- Logged the earned Phase 12 approval state in `DECISIONS.md` while keeping Phase 13 not started and ready for a separate planning run.

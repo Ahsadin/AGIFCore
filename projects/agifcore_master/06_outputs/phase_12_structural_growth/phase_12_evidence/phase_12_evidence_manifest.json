@@ -1,0 +1,57 @@
+{
+  "available_report_count": 8,
+  "invalid_reports": [],
+  "missing_reports": [],
+  "notes": [
+    "this manifest tracks machine-readable verifier outputs only",
+    "Phase 12 remains open",
+    "manifest is rebuilt from actual report files on disk",
+    "no approval implied"
+  ],
+  "phase": "12",
+  "phase_remains_open": true,
+  "reports": [
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_self_model_feedback_report.json",
+      "report_id": "self_model_feedback",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_reflection_control_report.json",
+      "report_id": "reflection_control",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_self_reorganization_report.json",
+      "report_id": "self_reorganization",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_domain_genesis_report.json",
+      "report_id": "domain_genesis",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_theory_formation_report.json",
+      "report_id": "theory_formation",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_procedure_tool_invention_report.json",
+      "report_id": "procedure_tool_invention",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_curiosity_gap_selection_report.json",
+      "report_id": "curiosity_gap_selection",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_structural_growth_cycle_report.json",
+      "report_id": "structural_growth_cycle",
+      "status": "pass"
+    }
+  ],
+  "required_report_count": 8,
+  "status": "phase_12_verifier_family_pass"
+}

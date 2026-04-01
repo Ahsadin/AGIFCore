@@ -1,0 +1,159 @@
+{
+  "anchors": {
+    "contradiction_case": {
+      "conversation_id": "conv-p10-contradiction",
+      "gap_count": 2,
+      "gaps": [
+        {
+          "chosen_target_lane": "self_reorganization",
+          "deferred_alternatives": [
+            "procedure_tool_invention"
+          ],
+          "gap_hash": "b04fe61b3ac1857ee4e67e7f3cb46fccd3c5c5bc2a6a06866f34628fa763cc28",
+          "gap_id": "phase12_gap::b04fe61b3ac1",
+          "gap_kind": "structural_gap",
+          "ranked_priority": 1,
+          "stop_condition": "stop after one bounded structural candidate",
+          "supporting_refs": [
+            "self_model::bf9c904c4761",
+            "meta_observer::51986fa94cb9",
+            "strategy_journal::341942aad13a",
+            "skeptic::4383ef6b7df8",
+            "surprise::880d6e453e4b"
+          ],
+          "why_selected": "The adopted-improvement and monitoring chain point to one congested structural review lane."
+        },
+        {
+          "chosen_target_lane": "domain_genesis",
+          "deferred_alternatives": [
+            "self_reorganization",
+            "procedure_tool_invention"
+          ],
+          "gap_hash": "077eaa165f0d2dad2415a2e7ff6f8780ebe4cc8b86f50bc4cf308569a2bb4728",
+          "gap_id": "phase12_gap::077eaa165f0d",
+          "gap_kind": "domain_gap",
+          "ranked_priority": 2,
+          "stop_condition": "stop after one bounded domain candidate",
+          "supporting_refs": [
+            "self_model::bf9c904c4761",
+            "meta_observer::51986fa94cb9",
+            "strategy_journal::341942aad13a",
+            "skeptic::4383ef6b7df8",
+            "surprise::880d6e453e4b",
+            "weak_answer_diagnosis::7ca0eacd5389"
+          ],
+          "why_selected": "The contradiction pattern suggests one missing boundary candidate between broad reasoning and local condition handling."
+        }
+      ],
+      "schema": "agifcore.phase_12.curiosity_gap_selection.v1",
+      "snapshot_hash": "707eaeae27c775587414fc314c1bbee9567daa5640ab419c1f638eef08bb11e3",
+      "turn_id": "turn-p10-contradiction"
+    },
+    "weak_case": {
+      "conversation_id": "conv-p10-weak",
+      "gap_count": 2,
+      "gaps": [
+        {
+          "chosen_target_lane": "procedure_tool_invention",
+          "deferred_alternatives": [
+            "domain_genesis",
+            "self_reorganization"
+          ],
+          "gap_hash": "6061daca15496cd5c39a763a6f02ecf741fe8e0df6aa59ad2d0e8750d141e2fc",
+          "gap_id": "phase12_gap::6061daca1549",
+          "gap_kind": "procedure_gap",
+          "ranked_priority": 1,
+          "stop_condition": "stop after one candidate review protocol",
+          "supporting_refs": [
+            "self_model::8b2b3db44440",
+            "meta_observer::80e48682c6ef",
+            "strategy_journal::a39c7f7e13e6",
+            "skeptic::5d11aa5a2796"
+          ],
+          "why_selected": "The highest-yield local improvement is a bounded review protocol for local evidence freshness."
+        },
+        {
+          "chosen_target_lane": "theory_formation",
+          "deferred_alternatives": [
+            "self_reorganization"
+          ],
+          "gap_hash": "7cf580032ce29e46eb00999b5b718265b4a6ea9950b0d1231d101618cda3305e",
+          "gap_id": "phase12_gap::7cf580032ce2",
+          "gap_kind": "theory_gap",
+          "ranked_priority": 2,
+          "stop_condition": "stop after one weak-support theory candidate",
+          "supporting_refs": [
+            "self_model::8b2b3db44440",
+            "meta_observer::80e48682c6ef",
+            "strategy_journal::a39c7f7e13e6",
+            "skeptic::5d11aa5a2796",
+            "surprise::df2eb69ba9cb"
+          ],
+          "why_selected": "The second gap is structural explanation quality, not new domain creation."
+        }
+      ],
+      "schema": "agifcore.phase_12.curiosity_gap_selection.v1",
+      "snapshot_hash": "a1435a31a0d1967328a2c1ef12106a493ee7294a316fd2a6c00215e680030204",
+      "turn_id": "turn-p10-weak"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "gap-count-stays-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "priorities-stay-ordered",
+      "result": "pass"
+    },
+    {
+      "id": "stop-conditions-present",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_12_STRUCTURAL_GROWTH.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/02_requirements/DOMAIN_MATRIX.md",
+    "projects/agifcore_master/03_design/CELL_FAMILIES.md",
+    "projects/agifcore_master/03_design/GRAPH_STACK_MODEL.md",
+    "projects/agifcore_master/03_design/SKILL_GRAPH_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/contracts.py",
+    "projects/agifcore_master/04_execution/phase_11_governed_self_improvement/agifcore_phase11_self_improvement/self_improvement_cycle.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/contracts.py",
+    "projects/agifcore_master/04_execution/phase_10_meta_cognition_and_critique/agifcore_phase10_meta_cognition/meta_cognition_turn.py",
+    "projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/tissue_manifests.py",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/skill_graph.py",
+    "projects/agifcore_master/04_execution/phase_05_graph_and_knowledge_structures/agifcore_phase5_graph/transfer_graph.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/contracts.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/self_model_feedback.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/reflection_control.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/curiosity_gap_selection.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/theory_formation.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/procedure_tool_invention.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/self_reorganization.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/domain_genesis.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/structural_growth_cycle.py",
+    "projects/agifcore_master/04_execution/phase_12_structural_growth/agifcore_phase12_structural_growth/__init__.py",
+    "projects/agifcore_master/05_testing/phase_12_structural_growth/_phase_12_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_12_structural_growth/verify_phase_12_curiosity_gap_selection.py"
+  ],
+  "notes": [
+    "curiosity and gap selection stays bounded, ranked, and explicitly stoppable",
+    "Phase 12 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_curiosity_gap_selection_report.json"
+  },
+  "phase": "12",
+  "status": "pass",
+  "verifier": "verify_phase_12_curiosity_gap_selection"
+}
