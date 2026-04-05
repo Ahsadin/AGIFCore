@@ -25,8 +25,8 @@ Phase order may not be rearranged by execution convenience.
 | 12 | structural growth | define and later build controlled growth of fabric, tissues, and transfer structures | `approved` |
 | 13 | product runtime and UX | define and later build the user-facing runtime, runner, gateway, and UX split | `approved` |
 | 14 | sandbox, profiles, and scale realization | define and later build sandbox controls, machine profiles, and scale boundaries | `approved` |
-| 15 | final intelligence proof and closure audit | prove the full system against the locked domains and closure rules | `open` |
-| 16 | release, publication, and public evidence package | prepare the final publication, evidence package, and public-facing release lane | `open` |
+| 15 | final intelligence proof and closure audit | prove the full system against the locked domains and closure rules | `approved` |
+| 16 | release, publication, and public evidence package | prepare the final publication, evidence package, and public-facing release lane | `approved` |
 
 ## Phase-order rules
 
@@ -34,6 +34,8 @@ Phase order may not be rearranged by execution convenience.
 - No later phase may be treated as started just because planning language exists.
 - No phase may move from `open` to `approved` without audit, governor verification, validation request, and explicit user approval.
 - Phase 1 is the last planning-heavy freeze before broader runtime execution begins.
+- Phase 15 and Phase 16 are approved only under the bounded-intelligence closeout claim.
+- Broad open-ended chat intelligence remains unproven/deferred after closeout.
 
 ## Cross-References
 

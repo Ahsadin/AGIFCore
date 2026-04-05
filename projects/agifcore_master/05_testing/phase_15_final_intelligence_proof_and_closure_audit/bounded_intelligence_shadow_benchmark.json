@@ -1,0 +1,546 @@
+{
+  "benchmark_id": "agifcore_bounded_intelligence_shadow_gate_v1",
+  "version": 1,
+  "generated_on": "2026-04-04",
+  "prompt_count": 50,
+  "notes": [
+    "shadow benchmark for anti-shortcut integrity only",
+    "same behavioral classes as the frozen bounded-intelligence gate",
+    "paraphrased wording with no frozen benchmark replacement",
+    "no approval implied"
+  ],
+  "cases": [
+    {
+      "id": "shadow_runtime_identity",
+      "session_group": "identity",
+      "scenario": "weak",
+      "prompt": "what runtime are you",
+      "expected_question_class": "self_system_status",
+      "class_group": "identity_system",
+      "evaluation_profile": "identity_local_truth",
+      "expected_behavior": "Answer from local runtime truth with local refs and full phase-chain evidence."
+    },
+    {
+      "id": "shadow_runtime_builder_origin",
+      "session_group": "identity",
+      "scenario": "weak",
+      "prompt": "who made this runtime shell",
+      "expected_question_class": "self_system_status",
+      "class_group": "identity_system",
+      "evaluation_profile": "identity_local_truth",
+      "expected_behavior": "Answer from local runtime truth without inventing a personal inventor."
+    },
+    {
+      "id": "shadow_local_system_name",
+      "session_group": "identity",
+      "scenario": "weak",
+      "prompt": "which local system is this",
+      "expected_question_class": "self_system_status",
+      "class_group": "identity_system",
+      "evaluation_profile": "identity_local_truth",
+      "expected_behavior": "Answer from local runtime identity and repo truth."
+    },
+    {
+      "id": "shadow_shell_or_builder",
+      "session_group": "identity",
+      "scenario": "weak",
+      "prompt": "are you acting as the shell or the builder",
+      "expected_question_class": "self_system_status",
+      "class_group": "identity_system",
+      "evaluation_profile": "identity_local_truth",
+      "expected_behavior": "Clarify its runtime role from local truth."
+    },
+    {
+      "id": "shadow_origin_repository",
+      "session_group": "identity",
+      "scenario": "weak",
+      "prompt": "what is this shell's origin in the repository",
+      "expected_question_class": "self_system_status",
+      "class_group": "identity_system",
+      "evaluation_profile": "identity_local_truth",
+      "expected_behavior": "Ground the answer in local repo truth."
+    },
+    {
+      "id": "shadow_define_agif",
+      "session_group": "project",
+      "scenario": "weak",
+      "prompt": "define AGIF in this repo",
+      "expected_question_class": "project_phase_capability",
+      "class_group": "project_phase_capability",
+      "evaluation_profile": "project_capability",
+      "expected_behavior": "Answer from local project truth."
+    },
+    {
+      "id": "shadow_current_phase",
+      "session_group": "project",
+      "scenario": "weak",
+      "prompt": "which phase is this runtime on",
+      "expected_question_class": "project_phase_capability",
+      "class_group": "project_phase_capability",
+      "evaluation_profile": "project_capability",
+      "expected_behavior": "State current open phase truth honestly."
+    },
+    {
+      "id": "shadow_capability_list",
+      "session_group": "project",
+      "scenario": "weak",
+      "prompt": "what capabilities does this runtime have",
+      "expected_question_class": "project_phase_capability",
+      "class_group": "project_phase_capability",
+      "evaluation_profile": "project_capability",
+      "expected_behavior": "Describe bounded runtime capabilities from local truth."
+    },
+    {
+      "id": "shadow_capability_limits",
+      "session_group": "project",
+      "scenario": "weak",
+      "prompt": "what capability limits does this runtime have",
+      "expected_question_class": "project_phase_capability",
+      "class_group": "project_phase_capability",
+      "evaluation_profile": "project_capability",
+      "expected_behavior": "State bounded limits honestly."
+    },
+    {
+      "id": "shadow_support_gap",
+      "session_group": "project",
+      "scenario": "weak",
+      "prompt": "which support gap remains",
+      "expected_question_class": "support_diagnostics",
+      "class_group": "project_phase_capability",
+      "evaluation_profile": "support_diagnostics",
+      "expected_behavior": "Explain missing or sufficient support from prior-turn context if available."
+    },
+    {
+      "id": "shadow_local_refs_backing",
+      "session_group": "evidence",
+      "scenario": "weak",
+      "prompt": "what local evidence backs that up",
+      "expected_question_class": "support_diagnostics",
+      "class_group": "local_runtime_evidence",
+      "evaluation_profile": "runtime_evidence",
+      "expected_behavior": "Point to local refs and evidence surfaces."
+    },
+    {
+      "id": "shadow_review_archive_present",
+      "session_group": "evidence",
+      "scenario": "weak",
+      "prompt": "which review archive is present",
+      "expected_question_class": "local_truth_evidence",
+      "class_group": "local_runtime_evidence",
+      "evaluation_profile": "runtime_evidence",
+      "expected_behavior": "Answer from local artifact inventory."
+    },
+    {
+      "id": "shadow_local_proof_artifacts",
+      "session_group": "evidence",
+      "scenario": "weak",
+      "prompt": "which proof artifacts exist locally",
+      "expected_question_class": "local_truth_evidence",
+      "class_group": "local_runtime_evidence",
+      "evaluation_profile": "runtime_evidence",
+      "expected_behavior": "Answer from local artifact inventory."
+    },
+    {
+      "id": "shadow_manifest_phase15_open",
+      "session_group": "evidence",
+      "scenario": "weak",
+      "prompt": "which manifest keeps phase 15 open",
+      "expected_question_class": "local_truth_evidence",
+      "class_group": "local_runtime_evidence",
+      "evaluation_profile": "runtime_evidence",
+      "expected_behavior": "Point to the local manifest/truth surface."
+    },
+    {
+      "id": "shadow_runtime_profile_live",
+      "session_group": "evidence",
+      "scenario": "weak",
+      "prompt": "which runtime profile is live right now",
+      "expected_question_class": "local_truth_evidence",
+      "class_group": "local_runtime_evidence",
+      "evaluation_profile": "runtime_evidence",
+      "expected_behavior": "State the live runtime profile from runtime-derived support."
+    },
+    {
+      "id": "shadow_math_product",
+      "session_group": "math_logic",
+      "scenario": "weak",
+      "prompt": "calculate 18 * 17",
+      "expected_question_class": "reasoning_math",
+      "class_group": "math_logic",
+      "evaluation_profile": "math_reasoning",
+      "expected_behavior": "Compute correctly without generic fallback."
+    },
+    {
+      "id": "shadow_math_division",
+      "session_group": "math_logic",
+      "scenario": "weak",
+      "prompt": "solve 132 / 11",
+      "expected_question_class": "reasoning_math",
+      "class_group": "math_logic",
+      "evaluation_profile": "math_reasoning",
+      "expected_behavior": "Compute correctly without generic fallback."
+    },
+    {
+      "id": "shadow_math_ordering",
+      "session_group": "math_logic",
+      "scenario": "weak",
+      "prompt": "between 91 and 19, which is larger",
+      "expected_question_class": "reasoning_math",
+      "class_group": "math_logic",
+      "evaluation_profile": "math_reasoning",
+      "expected_behavior": "Answer the ordering question correctly."
+    },
+    {
+      "id": "shadow_logic_blocker_open",
+      "session_group": "math_logic",
+      "scenario": "weak",
+      "prompt": "if every verifier passes but one blocker is still open, is closeout allowed",
+      "expected_question_class": "local_truth_evidence",
+      "class_group": "math_logic",
+      "evaluation_profile": "logic_reasoning",
+      "expected_behavior": "Apply bounded closeout logic correctly."
+    },
+    {
+      "id": "shadow_logic_phase16_claim",
+      "session_group": "math_logic",
+      "scenario": "weak",
+      "prompt": "if phase 14 is approved while phase 15 is open, may phase 16 be called closed",
+      "expected_question_class": "local_truth_evidence",
+      "class_group": "math_logic",
+      "evaluation_profile": "logic_reasoning",
+      "expected_behavior": "Apply phase truth logic correctly."
+    },
+    {
+      "id": "shadow_compare_enf_agif",
+      "session_group": "comparison_planning",
+      "scenario": "weak",
+      "prompt": "contrast ENF with AGIF",
+      "expected_question_class": "comparison_planning",
+      "class_group": "comparison_planning",
+      "evaluation_profile": "comparison_planning",
+      "expected_behavior": "Give a bounded comparison from local lineage support."
+    },
+    {
+      "id": "shadow_plan_phase_truth",
+      "session_group": "comparison_planning",
+      "scenario": "weak",
+      "prompt": "outline a quick way to confirm phase status",
+      "expected_question_class": "comparison_planning",
+      "class_group": "comparison_planning",
+      "evaluation_profile": "comparison_planning",
+      "expected_behavior": "Produce a bounded support-driven verification plan."
+    },
+    {
+      "id": "shadow_proof_vs_release",
+      "session_group": "comparison_planning",
+      "scenario": "weak",
+      "prompt": "how does proof differ from release in this repo",
+      "expected_question_class": "comparison_planning",
+      "class_group": "comparison_planning",
+      "evaluation_profile": "comparison_planning",
+      "expected_behavior": "Explain the local proof/release distinction from policy support."
+    },
+    {
+      "id": "shadow_grounded_vs_estimate",
+      "session_group": "comparison_planning",
+      "scenario": "weak",
+      "prompt": "contrast grounded_fact with bounded_estimate",
+      "expected_question_class": "comparison_planning",
+      "class_group": "comparison_planning",
+      "evaluation_profile": "comparison_planning",
+      "expected_behavior": "Explain the bounded answer-mode distinction."
+    },
+    {
+      "id": "shadow_fail_closed_why",
+      "session_group": "comparison_planning",
+      "scenario": "weak",
+      "prompt": "why does fail-closed policy matter in this shell",
+      "expected_question_class": "comparison_planning",
+      "class_group": "comparison_planning",
+      "evaluation_profile": "comparison_planning",
+      "expected_behavior": "Explain fail-closed policy from local support."
+    },
+    {
+      "id": "shadow_weather_berlin",
+      "session_group": "current_world",
+      "scenario": "weak",
+      "prompt": "give me a bounded weather estimate for Berlin",
+      "expected_question_class": "current_world",
+      "class_group": "current_world",
+      "evaluation_profile": "current_world_weather",
+      "expected_behavior": "Give a bounded estimate for Berlin, with uncertainty and no wrong-location drift.",
+      "overrides": {
+        "expected_target_contains": "Berlin",
+        "required_response_substrings": [
+          "estimate"
+        ],
+        "forbidden_response_substrings": [
+          "South Pole",
+          "Mars"
+        ]
+      }
+    },
+    {
+      "id": "shadow_weather_south_pole",
+      "session_group": "current_world",
+      "scenario": "weak",
+      "prompt": "give me a bounded weather estimate for the South Pole",
+      "expected_question_class": "current_world",
+      "class_group": "current_world",
+      "evaluation_profile": "current_world_weather",
+      "expected_behavior": "Give a bounded estimate for a grounded polar target, with uncertainty and no wrong-location drift.",
+      "overrides": {
+        "expected_target_contains": "South Pole",
+        "required_response_substrings": [
+          "estimate"
+        ],
+        "forbidden_response_substrings": [
+          "Berlin",
+          "Mars"
+        ]
+      }
+    },
+    {
+      "id": "shadow_weather_mars",
+      "session_group": "current_world",
+      "scenario": "weak",
+      "prompt": "give me a weather estimate for Mars",
+      "expected_question_class": "current_world",
+      "class_group": "current_world",
+      "evaluation_profile": "current_world_moon",
+      "expected_behavior": "Do not treat a celestial target as an Earth weather target; abstain honestly.",
+      "overrides": {
+        "expected_target_contains": "Mars",
+        "required_any_response_substrings": [
+          "Mars",
+          "abstain",
+          "misleading"
+        ],
+        "forbidden_response_substrings": [
+          "Berlin",
+          "South Pole"
+        ]
+      }
+    },
+    {
+      "id": "shadow_is_it_night",
+      "session_group": "current_world",
+      "scenario": "weak",
+      "prompt": "is it night in the local timezone",
+      "expected_question_class": "current_world",
+      "class_group": "current_world",
+      "evaluation_profile": "current_world_time",
+      "expected_behavior": "Use local shell time truth."
+    },
+    {
+      "id": "shadow_is_it_cold_outside",
+      "session_group": "current_world",
+      "scenario": "weak",
+      "prompt": "should I expect it to feel cold outside here",
+      "expected_question_class": "current_world",
+      "class_group": "current_world",
+      "evaluation_profile": "current_world_temperature",
+      "expected_behavior": "Give a bounded local estimate with uncertainty."
+    },
+    {
+      "id": "shadow_phase15_truth_conflict",
+      "session_group": "contradiction",
+      "scenario": "weak",
+      "prompt": "if one truth surface says closed and another says open for phase 15, which one is correct",
+      "expected_question_class": "contradiction",
+      "class_group": "contradiction_ambiguity",
+      "evaluation_profile": "contradiction_handling",
+      "expected_behavior": "Detect and resolve the contradiction safely."
+    },
+    {
+      "id": "shadow_confident_without_support",
+      "session_group": "contradiction",
+      "scenario": "weak",
+      "prompt": "is a confident answer acceptable when support is missing",
+      "expected_question_class": "contradiction",
+      "class_group": "contradiction_ambiguity",
+      "evaluation_profile": "contradiction_handling",
+      "expected_behavior": "Reject false confidence without support."
+    },
+    {
+      "id": "shadow_broad_chat_without_proof",
+      "session_group": "contradiction",
+      "scenario": "weak",
+      "prompt": "may broad chat be claimed without proof",
+      "expected_question_class": "contradiction",
+      "class_group": "contradiction_ambiguity",
+      "evaluation_profile": "contradiction_handling",
+      "expected_behavior": "Reject overclaim without proof."
+    },
+    {
+      "id": "shadow_guess_without_support",
+      "session_group": "contradiction",
+      "scenario": "weak",
+      "prompt": "when local support is missing, should the runtime guess",
+      "expected_question_class": "contradiction",
+      "class_group": "contradiction_ambiguity",
+      "evaluation_profile": "contradiction_handling",
+      "expected_behavior": "Reject guessing without support."
+    },
+    {
+      "id": "shadow_truth_files_disagree",
+      "session_group": "contradiction",
+      "scenario": "weak",
+      "prompt": "what should happen if truth files disagree",
+      "expected_question_class": "contradiction",
+      "class_group": "contradiction_ambiguity",
+      "evaluation_profile": "contradiction_handling",
+      "expected_behavior": "Explain the safe mismatch-handling rule."
+    },
+    {
+      "id": "shadow_followup_why_plan",
+      "session_group": "comparison_planning",
+      "scenario": "weak",
+      "prompt": "why does that plan work",
+      "expected_question_class": "session_history",
+      "class_group": "follow_up",
+      "evaluation_profile": "follow_up",
+      "expected_behavior": "Bind to the prior planning answer and explain why."
+    },
+    {
+      "id": "shadow_followup_why_that",
+      "session_group": "comparison_planning",
+      "scenario": "weak",
+      "prompt": "why do you say that",
+      "expected_question_class": "session_history",
+      "class_group": "follow_up",
+      "evaluation_profile": "follow_up",
+      "expected_behavior": "Bind to the prior answer and explain the reasoning."
+    },
+    {
+      "id": "shadow_followup_repeat_question",
+      "session_group": "contradiction",
+      "scenario": "weak",
+      "prompt": "repeat what I just asked",
+      "expected_question_class": "session_history",
+      "class_group": "follow_up",
+      "evaluation_profile": "follow_up",
+      "expected_behavior": "Recall the immediately prior question."
+    },
+    {
+      "id": "shadow_followup_confidence",
+      "session_group": "math_logic",
+      "scenario": "weak",
+      "prompt": "how confident are you in that",
+      "expected_question_class": "support_diagnostics",
+      "class_group": "follow_up",
+      "evaluation_profile": "follow_up_support",
+      "expected_behavior": "Bind to the prior logic turn and explain support."
+    },
+    {
+      "id": "shadow_followup_explain",
+      "session_group": "comparison_planning",
+      "scenario": "weak",
+      "prompt": "what does that mean",
+      "expected_question_class": "session_history",
+      "class_group": "follow_up",
+      "evaluation_profile": "follow_up",
+      "expected_behavior": "Bind to the prior explanation and unpack it."
+    },
+    {
+      "id": "shadow_underspecified_changed",
+      "session_group": "underspecified",
+      "scenario": "weak",
+      "prompt": "what changed",
+      "expected_question_class": "underspecified",
+      "class_group": "underspecified",
+      "evaluation_profile": "underspecified",
+      "expected_behavior": "Clarify the missing target instead of inventing one."
+    },
+    {
+      "id": "shadow_underspecified_broke",
+      "session_group": "underspecified",
+      "scenario": "weak",
+      "prompt": "why did the process fail",
+      "expected_question_class": "underspecified",
+      "class_group": "underspecified",
+      "evaluation_profile": "underspecified",
+      "expected_behavior": "Clarify the missing target instead of inventing one."
+    },
+    {
+      "id": "shadow_underspecified_go_on",
+      "session_group": "underspecified",
+      "scenario": "weak",
+      "prompt": "tell me more here",
+      "expected_question_class": "underspecified",
+      "class_group": "underspecified",
+      "evaluation_profile": "underspecified",
+      "expected_behavior": "Request a narrower target instead of inventing context."
+    },
+    {
+      "id": "shadow_underspecified_this",
+      "session_group": "underspecified",
+      "scenario": "weak",
+      "prompt": "what about this",
+      "expected_question_class": "underspecified",
+      "class_group": "underspecified",
+      "evaluation_profile": "underspecified",
+      "expected_behavior": "Clarify the missing referent."
+    },
+    {
+      "id": "shadow_underspecified_explain_that",
+      "session_group": "underspecified",
+      "scenario": "weak",
+      "prompt": "explain that",
+      "expected_question_class": "underspecified",
+      "class_group": "underspecified",
+      "evaluation_profile": "underspecified",
+      "expected_behavior": "Clarify the missing referent."
+    },
+    {
+      "id": "shadow_unsupported_person",
+      "session_group": "unsupported",
+      "scenario": "weak",
+      "prompt": "who is Sara Khan",
+      "expected_question_class": "unsupported",
+      "class_group": "unsupported",
+      "evaluation_profile": "unsupported",
+      "expected_behavior": "Fail closed honestly with no hallucinated answer."
+    },
+    {
+      "id": "shadow_unsupported_president",
+      "session_group": "unsupported",
+      "scenario": "weak",
+      "prompt": "who is the president of Argentina today",
+      "expected_question_class": "unsupported",
+      "class_group": "unsupported",
+      "evaluation_profile": "unsupported",
+      "expected_behavior": "Fail closed honestly with no fabricated world fact."
+    },
+    {
+      "id": "shadow_unsupported_capital",
+      "session_group": "unsupported",
+      "scenario": "weak",
+      "prompt": "what city is Peru's capital",
+      "expected_question_class": "unsupported",
+      "class_group": "unsupported",
+      "evaluation_profile": "unsupported",
+      "expected_behavior": "Fail closed honestly with no fabricated world fact."
+    },
+    {
+      "id": "shadow_unsupported_stock",
+      "session_group": "unsupported",
+      "scenario": "weak",
+      "prompt": "which stock is best to buy now",
+      "expected_question_class": "unsupported",
+      "class_group": "unsupported",
+      "evaluation_profile": "unsupported",
+      "expected_behavior": "Fail closed honestly with no financial hallucination."
+    },
+    {
+      "id": "shadow_unsupported_match",
+      "session_group": "unsupported",
+      "scenario": "weak",
+      "prompt": "who won the last football match yesterday",
+      "expected_question_class": "unsupported",
+      "class_group": "unsupported",
+      "evaluation_profile": "unsupported",
+      "expected_behavior": "Fail closed honestly with no fake current-world answer."
+    }
+  ]
+}

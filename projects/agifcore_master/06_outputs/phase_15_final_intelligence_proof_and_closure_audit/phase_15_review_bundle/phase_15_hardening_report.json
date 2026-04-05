@@ -1,0 +1,186 @@
+{
+  "anchors": {
+    "evidence_manifest": {
+      "available_report_count": 9,
+      "bundle_size_bytes": 2613311,
+      "bundle_size_within_ceiling": true,
+      "manifest_hash": "f444cdc205d9376a9beeba760324bd5c89b536a59245c7b091ad336c2a7ec876",
+      "manifest_path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_evidence_manifest.json",
+      "manifest_size_bytes": 2341,
+      "manifest_status": "phase_15_verifier_family_pass",
+      "required_report_count": 9
+    },
+    "hardening_package": {
+      "families": [
+        {
+          "expected": {
+            "reason_code": "BUNDLE_INTEGRITY_REQUIRED",
+            "status": "blocked"
+          },
+          "issue_family_id": "tampered_bundle_fail_closed",
+          "observed": {
+            "reason_code": "BUNDLE_INTEGRITY_REQUIRED",
+            "receipt_hash": "214e12fa1a6f95742e84bfcb4bba74eb5a1d296d5432ce2f6e78334cdfaac8ca",
+            "status": "blocked"
+          },
+          "passed": true
+        },
+        {
+          "expected": {
+            "reason_code": "INVALID_WASM_MODULE",
+            "status": "blocked"
+          },
+          "issue_family_id": "invalid_module_fail_closed",
+          "observed": {
+            "reason_code": "INVALID_WASM_MODULE",
+            "receipt_hash": "ec5256eb85c5e982c1490a17fd9e6d6282c86168eb7953266ff4f3fd44fbe725",
+            "status": "blocked"
+          },
+          "passed": true
+        },
+        {
+          "expected": {
+            "reason_code": "PROFILE_NOT_ALLOWED",
+            "status": "blocked"
+          },
+          "issue_family_id": "profile_mismatch_fail_closed",
+          "observed": {
+            "reason_code": "PROFILE_NOT_ALLOWED",
+            "receipt_hash": "bcc790fba2d735b2048f6487334578017bb8c2699c33f5e84790555b82c3ded5",
+            "status": "blocked"
+          },
+          "passed": true
+        },
+        {
+          "expected": {
+            "reason_code": "FUEL_LIMIT_EXCEEDED",
+            "status": "blocked"
+          },
+          "issue_family_id": "fuel_limit_fail_closed",
+          "observed": {
+            "reason_code": "FUEL_LIMIT_EXCEEDED",
+            "receipt_hash": "e1ea12b71a46db52f8e23d499654e091e042f3be7b66272b05dfb17d4dd5a2f2",
+            "status": "blocked"
+          },
+          "passed": true
+        },
+        {
+          "expected": {
+            "reason_code": "MEMORY_LIMIT_EXCEEDED",
+            "status": "blocked"
+          },
+          "issue_family_id": "memory_limit_fail_closed",
+          "observed": {
+            "reason_code": "MEMORY_LIMIT_EXCEEDED",
+            "receipt_hash": "4cbe7ba1c2988bb30f8de89531c7e07f2f2d07b495da95b99caaf18689fed48c",
+            "status": "blocked"
+          },
+          "passed": true
+        },
+        {
+          "expected": {
+            "reason_code": "WALL_TIMEOUT_EXCEEDED",
+            "status": "blocked"
+          },
+          "issue_family_id": "wall_time_limit_fail_closed",
+          "observed": {
+            "reason_code": "WALL_TIMEOUT_EXCEEDED",
+            "receipt_hash": "261cad44a71cb1bfd28eece4aa89f5a4a1bf7f1f4a43d8ab801aaca3dccf5093",
+            "status": "blocked"
+          },
+          "passed": true
+        },
+        {
+          "expected": {
+            "forbidden_keyword_hits": []
+          },
+          "issue_family_id": "phase16_publication_excluded",
+          "observed": {
+            "forbidden_keyword_hits": []
+          },
+          "passed": true
+        },
+        {
+          "expected": {
+            "phase13_manifest_present": true,
+            "phase14_manifest_present": true
+          },
+          "issue_family_id": "upstream_phase_manifests_present",
+          "observed": {
+            "phase13_manifest_present": true,
+            "phase14_manifest_present": true
+          },
+          "passed": true
+        }
+      ],
+      "issue_family_count": 8,
+      "package_hash": "2db4d6d14757803b5ea2ea2f339e93fe22991e48aac8c3894dd6b2762aa186ec",
+      "phase16_blocked": true,
+      "schema": "agifcore.phase_15.hardening_package.v1",
+      "status": "pass"
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "hardening-issue-family-count-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "fail-closed-hardening-checks-pass",
+      "result": "pass"
+    },
+    {
+      "id": "phase16-publication-excluded",
+      "result": "pass"
+    },
+    {
+      "id": "upstream-evidence-manifests-present",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_15_FINAL_INTELLIGENCE_PROOF_AND_CLOSURE_AUDIT.md",
+    "projects/agifcore_master/01_plan/PHASE_14_SANDBOX_PROFILES_AND_SCALE_REALIZATION.md",
+    "projects/agifcore_master/01_plan/PHASE_13_PRODUCT_RUNTIME_AND_UX.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/03_design/PRODUCT_RUNTIME_MODEL.md",
+    "projects/agifcore_master/03_design/SANDBOX_MODEL.md",
+    "projects/agifcore_master/03_design/DEPLOYMENT_MODEL.md",
+    "projects/agifcore_master/03_design/PUBLIC_RELEASE_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/product_runtime_shell.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/sandbox_profile_shell.py",
+    "projects/agifcore_master/05_testing/phase_13_product_runtime_and_ux/_phase_13_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/_phase_14_verifier_common.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/contracts.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/proof_runtime_shell.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/blind_packs.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/hidden_packs.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/live_demo_pack.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/soak_harness.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/hardening_package.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/reproducibility_package.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/closure_audit.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/__init__.py",
+    "projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/_phase_15_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_phase_15_hardening_package.py"
+  ],
+  "notes": [
+    "hardening stays internal and fail-closed",
+    "Phase 15 does not leak Phase 16 publication or public-release behavior",
+    "Phase 15 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_hardening_report.json"
+  },
+  "phase": "15",
+  "status": "pass",
+  "verifier": "verify_phase_15_hardening_package"
+}

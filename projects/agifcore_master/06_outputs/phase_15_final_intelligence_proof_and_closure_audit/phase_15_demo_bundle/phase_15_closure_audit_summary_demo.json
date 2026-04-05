@@ -1,0 +1,339 @@
+{
+  "closure_audit": {
+    "anchors": {
+      "closure_audit": {
+        "audit_hash": "b06ff9573cb7c69a89420f45e083ac6660356c740aa45cbb9b514176d2e20b3a",
+        "finding_count": 0,
+        "findings": [],
+        "gate_status": "review_ready",
+        "non_claims": [
+          "does not approve Phase 15",
+          "does not start Phase 16",
+          "does not claim release or publication completion"
+        ],
+        "phase15_manifest_status_before_closure_report": "phase_15_verifier_family_pass",
+        "phase15_missing_reports_before_closure_report": [],
+        "phase15_non_pass_reports_before_closure_report": [],
+        "phase15_status": "open",
+        "phase16_blocked": true,
+        "phase16_status": "open",
+        "review_surface_paths": [
+          "projects/agifcore_master/01_plan/PHASE_15_FINAL_INTELLIGENCE_PROOF_AND_CLOSURE_AUDIT.md",
+          "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_evidence_manifest.json",
+          "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_blind_pack_report.json",
+          "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_hidden_pack_report.json",
+          "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_live_demo_pack_report.json",
+          "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_soak_summary.json",
+          "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_hardening_report.json",
+          "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_interactive_chat_report.json",
+          "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_reproducibility_report.json",
+          "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_closure_audit_report.json",
+          "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/phase_15_demo_index.md",
+          "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/phase_15_final_demo.md",
+          "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/phase_15_soak_summary_demo.md",
+          "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/phase_15_closure_audit_summary_demo.md",
+          "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/INTERACTIVE_CHAT.md",
+          "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/launch_phase_15_interactive_chat.sh",
+          "projects/agifcore_master/00_admin/codex_threads/tasks/phase_15/P15-AUDIT-01_PHASE_15_FINAL_PACKAGE_AUDIT_REPORT.md",
+          "projects/agifcore_master/00_admin/codex_threads/handoffs/PHASE_15_GOVERNOR_VERIFICATION_RECORD.md",
+          "projects/agifcore_master/00_admin/codex_threads/handoffs/PHASE_15_VALIDATION_REQUEST.md"
+        ],
+        "schema": "agifcore.phase_15.closure_audit.v1",
+        "verification_commands": [
+          "python3 -m compileall projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof",
+          "python3 -m compileall projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit",
+          "python3 projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_phase_15_closure_audit.py"
+        ]
+      },
+      "phase13_manifest": {
+        "available_report_count": 10,
+        "invalid_reports": [],
+        "missing_reports": [],
+        "notes": [
+          "this manifest tracks machine-readable verifier outputs only",
+          "Phase 13 remains open",
+          "manifest is rebuilt from actual report files on disk",
+          "no approval implied"
+        ],
+        "phase": "13",
+        "phase_remains_open": true,
+        "reports": [
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_evidence/phase_13_runtime_api_report.json",
+            "report_id": "runtime_api",
+            "status": "pass"
+          },
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_evidence/phase_13_local_runner_report.json",
+            "report_id": "local_runner",
+            "status": "pass"
+          },
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_evidence/phase_13_local_gateway_report.json",
+            "report_id": "local_gateway",
+            "status": "pass"
+          },
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_evidence/phase_13_desktop_ui_report.json",
+            "report_id": "desktop_ui",
+            "status": "pass"
+          },
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_evidence/phase_13_state_export_report.json",
+            "report_id": "state_export",
+            "status": "pass"
+          },
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_evidence/phase_13_trace_export_report.json",
+            "report_id": "trace_export",
+            "status": "pass"
+          },
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_evidence/phase_13_memory_review_export_report.json",
+            "report_id": "memory_review_export",
+            "status": "pass"
+          },
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_evidence/phase_13_safe_shutdown_report.json",
+            "report_id": "safe_shutdown",
+            "status": "pass"
+          },
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_evidence/phase_13_fail_closed_ux_report.json",
+            "report_id": "fail_closed_ux",
+            "status": "pass"
+          },
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_evidence/phase_13_installer_distribution_report.json",
+            "report_id": "installer_distribution",
+            "status": "pass"
+          }
+        ],
+        "required_report_count": 10,
+        "status": "phase_13_verifier_family_pass"
+      },
+      "phase14_manifest": {
+        "available_report_count": 10,
+        "invalid_reports": [],
+        "missing_reports": [],
+        "notes": [
+          "this manifest tracks machine-readable verifier outputs only",
+          "Phase 14 remains open",
+          "manifest is rebuilt from actual report files on disk",
+          "no approval implied"
+        ],
+        "phase": "14",
+        "phase_remains_open": true,
+        "reports": [
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_sandbox_report.json",
+            "report_id": "sandbox",
+            "status": "pass"
+          },
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_wasmtime_fuel_report.json",
+            "report_id": "wasmtime_fuel",
+            "status": "pass"
+          },
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_wasmtime_memory_report.json",
+            "report_id": "wasmtime_memory",
+            "status": "pass"
+          },
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_wasmtime_wall_time_report.json",
+            "report_id": "wasmtime_wall_time",
+            "status": "pass"
+          },
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_cell_manifest_report.json",
+            "report_id": "cell_manifest",
+            "status": "pass"
+          },
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_tissue_manifest_report.json",
+            "report_id": "tissue_manifest",
+            "status": "pass"
+          },
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_profile_manifest_report.json",
+            "report_id": "profile_manifest",
+            "status": "pass"
+          },
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_active_cell_budget_report.json",
+            "report_id": "active_cell_budget",
+            "status": "pass"
+          },
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_dormant_survival_report.json",
+            "report_id": "dormant_survival",
+            "status": "pass"
+          },
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_manifest_differentiation_report.json",
+            "report_id": "manifest_differentiation",
+            "status": "pass"
+          }
+        ],
+        "required_report_count": 10,
+        "status": "phase_14_verifier_family_pass"
+      },
+      "phase15_manifest_before_closure_report": {
+        "available_report_count": 8,
+        "invalid_reports": [],
+        "missing_reports": [],
+        "notes": [
+          "this manifest tracks machine-readable verifier outputs only",
+          "Phase 15 remains open",
+          "manifest is rebuilt from actual report files on disk",
+          "no approval implied"
+        ],
+        "output_bundle_size_bytes": 1056595,
+        "output_bundle_within_planning_ceiling": true,
+        "phase": "15",
+        "phase_remains_open": true,
+        "reports": [
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_blind_pack_report.json",
+            "report_id": "blind_pack_report",
+            "status": "pass"
+          },
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_hidden_pack_report.json",
+            "report_id": "hidden_pack_report",
+            "status": "pass"
+          },
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_live_demo_pack_report.json",
+            "report_id": "live_demo_pack_report",
+            "status": "pass"
+          },
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_soak_summary.json",
+            "report_id": "soak_summary",
+            "status": "pass"
+          },
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_hardening_report.json",
+            "report_id": "hardening_report",
+            "status": "pass"
+          },
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_interactive_chat_report.json",
+            "report_id": "interactive_chat_report",
+            "status": "pass"
+          },
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_reproducibility_report.json",
+            "report_id": "reproducibility_report",
+            "status": "pass"
+          },
+          {
+            "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_closure_audit_report.json",
+            "report_id": "closure_audit_report",
+            "status": "pass"
+          }
+        ],
+        "required_report_count": 8,
+        "status": "phase_15_verifier_family_pass"
+      }
+    },
+    "assertions": [
+      {
+        "id": "runtime-imports-available",
+        "result": "pass"
+      },
+      {
+        "id": "upstream-phase-evidence-pass",
+        "result": "pass"
+      },
+      {
+        "id": "phase15-open-truth-preserved",
+        "result": "pass"
+      },
+      {
+        "id": "review-surfaces-present",
+        "result": "pass"
+      },
+      {
+        "id": "closure-audit-review-ready",
+        "result": "pass"
+      }
+    ],
+    "checked_files": [
+      "projects/agifcore_master/01_plan/PHASE_15_FINAL_INTELLIGENCE_PROOF_AND_CLOSURE_AUDIT.md",
+      "projects/agifcore_master/01_plan/PHASE_14_SANDBOX_PROFILES_AND_SCALE_REALIZATION.md",
+      "projects/agifcore_master/01_plan/PHASE_13_PRODUCT_RUNTIME_AND_UX.md",
+      "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+      "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+      "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+      "projects/agifcore_master/03_design/PRODUCT_RUNTIME_MODEL.md",
+      "projects/agifcore_master/03_design/SANDBOX_MODEL.md",
+      "projects/agifcore_master/03_design/DEPLOYMENT_MODEL.md",
+      "projects/agifcore_master/03_design/PUBLIC_RELEASE_MODEL.md",
+      "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/product_runtime_shell.py",
+      "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/sandbox_profile_shell.py",
+      "projects/agifcore_master/05_testing/phase_13_product_runtime_and_ux/_phase_13_verifier_common.py",
+      "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/_phase_14_verifier_common.py",
+      "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/contracts.py",
+      "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/proof_runtime_shell.py",
+      "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/blind_packs.py",
+      "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/hidden_packs.py",
+      "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/live_demo_pack.py",
+      "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/soak_harness.py",
+      "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/hardening_package.py",
+      "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/reproducibility_package.py",
+      "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/closure_audit.py",
+      "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/__init__.py",
+      "projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/_phase_15_verifier_common.py",
+      "projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_phase_15_closure_audit.py"
+    ],
+    "notes": [
+      "closure audit stays inside Phase 15 and keeps the phase truth open",
+      "review readiness is evidence-linked and separate from user approval",
+      "Phase 15 remains open",
+      "no approval implied"
+    ],
+    "outputs": {
+      "manifest": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_evidence_manifest.json",
+      "report": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_closure_audit_report.json"
+    },
+    "phase": "15",
+    "status": "pass",
+    "verifier": "verify_phase_15_closure_audit"
+  },
+  "demo_id": "closure_audit_summary",
+  "evidence_reports": [
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_closure_audit_report.json",
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_evidence_manifest.json"
+  ],
+  "notes": [
+    "review-only closure-audit summary demo",
+    "Phase 15 remains open",
+    "no approval implied"
+  ],
+  "phase": "15",
+  "review_surface_paths": [
+    "projects/agifcore_master/01_plan/PHASE_15_FINAL_INTELLIGENCE_PROOF_AND_CLOSURE_AUDIT.md",
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_evidence_manifest.json",
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_blind_pack_report.json",
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_hidden_pack_report.json",
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_live_demo_pack_report.json",
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_soak_summary.json",
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_hardening_report.json",
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_interactive_chat_report.json",
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_reproducibility_report.json",
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_closure_audit_report.json",
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/phase_15_demo_index.md",
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/phase_15_final_demo.md",
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/phase_15_soak_summary_demo.md",
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/phase_15_closure_audit_summary_demo.md",
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/INTERACTIVE_CHAT.md",
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/launch_phase_15_interactive_chat.sh",
+    "projects/agifcore_master/00_admin/codex_threads/tasks/phase_15/P15-AUDIT-01_PHASE_15_FINAL_PACKAGE_AUDIT_REPORT.md",
+    "projects/agifcore_master/00_admin/codex_threads/handoffs/PHASE_15_GOVERNOR_VERIFICATION_RECORD.md",
+    "projects/agifcore_master/00_admin/codex_threads/handoffs/PHASE_15_VALIDATION_REQUEST.md"
+  ],
+  "status": "open"
+}

@@ -1,0 +1,3189 @@
+{
+  "contradiction_shell_snapshot": {
+    "blind_pack_count": 2,
+    "hidden_pack_count": 2,
+    "live_demo_pack_count": 1,
+    "phase13_shell_hash": "5fe4c2b4f879c401c1312cf9d87c43f2a8ee0bfcc778a2d11b4c94babc4c66c5",
+    "phase14_shell_hash": "97c440fbaad60feb52447a757fd5fb8b610f5513b91f029ca2f2d077f7aafdb4",
+    "phase16_blocked": true,
+    "schema": "agifcore.phase_15.final_proof_runtime.v1",
+    "snapshot_hash": "e000586cd5519be9f3c78e2c3a55a1cf5d1bd3c71d8304c0a936e700d032ddb7",
+    "soak_duration_class_count": 3
+  },
+  "demo_id": "final_demo",
+  "evidence_reports": [
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_live_demo_pack_report.json",
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_real_desktop_chat_demo_report.json",
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_blind_pack_report.json",
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_hidden_pack_report.json",
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_evidence_manifest.json"
+  ],
+  "live_demo_catalog": {
+    "catalog_hash": "bccd8fa5b0186abe9b0ce4e965aa08ae9b30853fdcb401ac88acc5e3510fdcce",
+    "live_demo_pack_count": 1,
+    "packs": [
+      {
+        "coverage_types": [
+          "product_runtime",
+          "bounded_honesty",
+          "trace_and_memory_export",
+          "interactive_chat_runtime",
+          "interactive_desktop_ui_host",
+          "safe_shutdown",
+          "profile_contract",
+          "sandbox_enforcement",
+          "manifest_audit"
+        ],
+        "pack_id": "phase15_final_demo_pack",
+        "phase13_hash": "f46946f2225df0bfa7a5a2295580a3ca676a5e8a68043b87fd38c136eca1b743",
+        "phase14_hash": "027c99da11fd8ddeb03dd59f601eaf4cfea79cb8c2ae16b483f875bbc96e3887",
+        "session_count": 14,
+        "sessions": [
+          {
+            "case_id": "demo_session_open",
+            "scenario": "weak",
+            "session_kind": "session_open"
+          },
+          {
+            "case_id": "demo_weak_conversation",
+            "prompt_text": "show the local-first product shell path",
+            "scenario": "weak",
+            "session_kind": "conversation_turn"
+          },
+          {
+            "case_id": "demo_weak_state_export",
+            "scenario": "weak",
+            "session_kind": "state_export"
+          },
+          {
+            "case_id": "demo_weak_trace_export",
+            "scenario": "weak",
+            "session_kind": "trace_export"
+          },
+          {
+            "case_id": "demo_weak_memory_review",
+            "scenario": "weak",
+            "session_kind": "memory_review_export"
+          },
+          {
+            "case_id": "demo_contradiction_conversation",
+            "prompt_text": "please clarify the contradiction safely",
+            "scenario": "contradiction",
+            "session_kind": "conversation_turn"
+          },
+          {
+            "case_id": "demo_interactive_turn",
+            "prompt_text": "what can you do",
+            "scenario": "weak",
+            "session_kind": "interactive_turn"
+          },
+          {
+            "case_id": "demo_interactive_desktop_ui",
+            "prompts": [
+              "what can you do",
+              "what evidence supports that"
+            ],
+            "scenario": "weak",
+            "session_kind": "interactive_desktop_ui"
+          },
+          {
+            "case_id": "demo_safe_shutdown",
+            "scenario": "contradiction",
+            "session_kind": "safe_shutdown"
+          },
+          {
+            "case_id": "demo_laptop_profile_manifest",
+            "profile": "laptop",
+            "scenario": "weak",
+            "session_kind": "profile_manifest"
+          },
+          {
+            "case_id": "demo_mobile_profile_manifest",
+            "profile": "mobile",
+            "scenario": "weak",
+            "session_kind": "profile_manifest"
+          },
+          {
+            "case_id": "demo_sandbox_allowed",
+            "execution_request": {
+              "function_args": [
+                1,
+                2
+              ],
+              "function_name": "add",
+              "profile": "laptop"
+            },
+            "scenario": "weak",
+            "session_kind": "sandbox_execute"
+          },
+          {
+            "case_id": "demo_sandbox_tampered",
+            "execution_request": {
+              "function_args": [
+                1,
+                2
+              ],
+              "function_name": "add",
+              "profile": "laptop",
+              "variant": "tampered"
+            },
+            "scenario": "weak",
+            "session_kind": "sandbox_execute"
+          },
+          {
+            "case_id": "demo_manifest_audit",
+            "scenario": "weak",
+            "session_kind": "manifest_audit"
+          }
+        ]
+      }
+    ],
+    "phase16_blocked": true,
+    "schema": "agifcore.phase_15.live_demo_pack.v1"
+  },
+  "live_demo_result": {
+    "coverage_types": [
+      "product_runtime",
+      "bounded_honesty",
+      "trace_and_memory_export",
+      "interactive_chat_runtime",
+      "interactive_desktop_ui_host",
+      "safe_shutdown",
+      "profile_contract",
+      "sandbox_enforcement",
+      "manifest_audit"
+    ],
+    "pack_id": "phase15_final_demo_pack",
+    "phase16_blocked": true,
+    "result_hash": "e7fcc775292adc8c7fbe95113f03d2624461061f9845c19b7274fa650e888119",
+    "schema": "agifcore.phase_15.live_demo_pack.v1",
+    "session_count": 14,
+    "session_results": [
+      {
+        "case_id": "demo_session_open",
+        "payload": {
+          "available_surfaces": [
+            "session_open",
+            "conversation_turn",
+            "state_export",
+            "trace_export",
+            "memory_review_export",
+            "safe_shutdown"
+          ],
+          "blocked_surfaces": [
+            {
+              "evidence_refs": [
+                "phase8.summary.ref.001",
+                "phase8.summary.ref.002",
+                "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+                "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797",
+                "e8386a01375de8b82858e0e81748c9d5e02bdac3a9cef8a808316099b5d132d9",
+                "86e4c43144503e72da9429fc68abd2c34a2cbf7067527496bb73c669121147cf",
+                "2ff7d18c8932c3abafb1bf08dfa681f882a07a590381d3203bd61b4b99413595",
+                "f065456200aded7dc74db12d3526eff162ec5d08ee8924f3e9bcc929fd888efb",
+                "measurement::phase11_proposal::f93c8ce20e8b",
+                "measurement::phase11_proposal::07ad3e8b431f",
+                "decision::phase11_proposal::f93c8ce20e8b",
+                "decision::phase11_proposal::07ad3e8b431f",
+                "inquiry::d1657daaa896",
+                "phase12_gap::6061daca1549",
+                "phase12_gap::7cf580032ce2",
+                "phase12_theory::6e1c2b18e5e2",
+                "phase12_domain_genesis::b7f9afcbfe5d",
+                "phase12_procedure_tool::e6bcb91b12c2",
+                "phase12_reorganization::09ea57a79e12",
+                "dc54e0867e9708352cbc0fa0ffaf30a6328aedda038ec16fc62c641dfa6034fd",
+                "5df43dd942d8223120c35caabca11ef3cd7e3e5c4d0e2ca4e598770cf6bcb381",
+                "91918ef29258bcb918e7c81125f97ce3275066f6379a8def247f869bc2070a65"
+              ],
+              "headline": "Task Submit",
+              "next_steps": [
+                "use conversation_turn",
+                "inspect fail_closed_help"
+              ],
+              "reason_code": "reserved_surface_fail_closed",
+              "schema": "agifcore.phase_13.fail_closed_ux.v1",
+              "state_hash": "d1ff1442f20add25d236c172742eba560086042e8e52cdf942ed43154a8e1128",
+              "state_id": "fail_closed::task_submit::reserved_surface_fail_closed",
+              "surface_name": "task_submit",
+              "transfer_execution_enabled": false,
+              "user_guidance": "This control surface stays blocked in the first Phase 13 slice so the product shell cannot widen runtime authority."
+            },
+            {
+              "evidence_refs": [
+                "phase8.summary.ref.001",
+                "phase8.summary.ref.002",
+                "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+                "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797",
+                "e8386a01375de8b82858e0e81748c9d5e02bdac3a9cef8a808316099b5d132d9",
+                "86e4c43144503e72da9429fc68abd2c34a2cbf7067527496bb73c669121147cf",
+                "2ff7d18c8932c3abafb1bf08dfa681f882a07a590381d3203bd61b4b99413595",
+                "f065456200aded7dc74db12d3526eff162ec5d08ee8924f3e9bcc929fd888efb",
+                "measurement::phase11_proposal::f93c8ce20e8b",
+                "measurement::phase11_proposal::07ad3e8b431f",
+                "decision::phase11_proposal::f93c8ce20e8b",
+                "decision::phase11_proposal::07ad3e8b431f",
+                "inquiry::d1657daaa896",
+                "phase12_gap::6061daca1549",
+                "phase12_gap::7cf580032ce2",
+                "phase12_theory::6e1c2b18e5e2",
+                "phase12_domain_genesis::b7f9afcbfe5d",
+                "phase12_procedure_tool::e6bcb91b12c2",
+                "phase12_reorganization::09ea57a79e12",
+                "dc54e0867e9708352cbc0fa0ffaf30a6328aedda038ec16fc62c641dfa6034fd",
+                "5df43dd942d8223120c35caabca11ef3cd7e3e5c4d0e2ca4e598770cf6bcb381",
+                "91918ef29258bcb918e7c81125f97ce3275066f6379a8def247f869bc2070a65"
+              ],
+              "headline": "Policy Update",
+              "next_steps": [
+                "use conversation_turn",
+                "inspect fail_closed_help"
+              ],
+              "reason_code": "reserved_surface_fail_closed",
+              "schema": "agifcore.phase_13.fail_closed_ux.v1",
+              "state_hash": "431e5fb2999be958381370be91d7ce10070a39ea8d98f48ad5f224d6b216a5be",
+              "state_id": "fail_closed::policy_update::reserved_surface_fail_closed",
+              "surface_name": "policy_update",
+              "transfer_execution_enabled": false,
+              "user_guidance": "This control surface stays blocked in the first Phase 13 slice so the product shell cannot widen runtime authority."
+            }
+          ],
+          "conversation_id": "conv-p10-weak",
+          "evidence_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+            "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797",
+            "e8386a01375de8b82858e0e81748c9d5e02bdac3a9cef8a808316099b5d132d9",
+            "86e4c43144503e72da9429fc68abd2c34a2cbf7067527496bb73c669121147cf",
+            "2ff7d18c8932c3abafb1bf08dfa681f882a07a590381d3203bd61b4b99413595",
+            "f065456200aded7dc74db12d3526eff162ec5d08ee8924f3e9bcc929fd888efb",
+            "measurement::phase11_proposal::f93c8ce20e8b",
+            "measurement::phase11_proposal::07ad3e8b431f",
+            "decision::phase11_proposal::f93c8ce20e8b",
+            "decision::phase11_proposal::07ad3e8b431f",
+            "inquiry::d1657daaa896",
+            "phase12_gap::6061daca1549",
+            "phase12_gap::7cf580032ce2",
+            "phase12_theory::6e1c2b18e5e2",
+            "phase12_domain_genesis::b7f9afcbfe5d",
+            "phase12_procedure_tool::e6bcb91b12c2",
+            "phase12_reorganization::09ea57a79e12",
+            "dc54e0867e9708352cbc0fa0ffaf30a6328aedda038ec16fc62c641dfa6034fd",
+            "5df43dd942d8223120c35caabca11ef3cd7e3e5c4d0e2ca4e598770cf6bcb381",
+            "91918ef29258bcb918e7c81125f97ce3275066f6379a8def247f869bc2070a65"
+          ],
+          "phase10_turn_hash": "dc54e0867e9708352cbc0fa0ffaf30a6328aedda038ec16fc62c641dfa6034fd",
+          "phase11_cycle_hash": "5df43dd942d8223120c35caabca11ef3cd7e3e5c4d0e2ca4e598770cf6bcb381",
+          "phase12_cycle_hash": "91918ef29258bcb918e7c81125f97ce3275066f6379a8def247f869bc2070a65",
+          "policy_hash": "ec7f9f6e4656f6c9319df98688e02853e9f69e8384a450fc28e1d48269b57a9c",
+          "public_explanation": "The answer is bounded but weak because support is incomplete, so the next safe move is to re-check support.",
+          "route_count": 10,
+          "schema": "agifcore.phase_13.session_open.v1",
+          "session_hash": "72f28b07a2c3e1268a7324c0a46cb751a1ea340e7a54ce23981048a916418eaa",
+          "session_id": "phase13_session::ff1815e1d727",
+          "support_honesty_preserved": true,
+          "support_state": "search_needed",
+          "turn_id": "turn-p10-weak",
+          "ui_view_count": 7
+        },
+        "scenario": "weak",
+        "session_kind": "session_open",
+        "summary": {
+          "available_surface_count": 6,
+          "support_state": "search_needed"
+        }
+      },
+      {
+        "case_id": "demo_weak_conversation",
+        "payload": {
+          "api_surface": "conversation_turn",
+          "contract_hash": "c0565d483973835e51bd425e5945ffe9b12d1bf00eba6a0d1b0cf13f72f4714e",
+          "gateway_response": {
+            "envelope": {
+              "allowed": true,
+              "allowlisted_routes": [
+                "/api/session-open",
+                "/api/conversation-turn",
+                "/api/state-export",
+                "/api/trace-export",
+                "/api/memory-review-export",
+                "/api/safe-shutdown",
+                "/api/task-submit",
+                "/api/policy-update",
+                "/api/fail-closed-help",
+                "/api/installer-status"
+              ],
+              "deny_reason": null,
+              "envelope_hash": "9783bc80500c7ff6140c8889b1f7fbcb2c1459c2e550f69b11de57cbd2ba21a9",
+              "method": "POST",
+              "occurred_at": "2026-04-02T07:46:53+00:00",
+              "payload_size_bytes": 56,
+              "policy_hash": "ec7f9f6e4656f6c9319df98688e02853e9f69e8384a450fc28e1d48269b57a9c",
+              "request_count": 1,
+              "request_id": "ae8cdcfa4bdd25ce",
+              "requested_surface": "conversation_turn",
+              "route": "/api/conversation-turn",
+              "schema": "agifcore.phase_13.gateway_envelope.v1",
+              "session_id": "phase13_session::ff1815e1d727"
+            },
+            "policy_hash": "ec7f9f6e4656f6c9319df98688e02853e9f69e8384a450fc28e1d48269b57a9c",
+            "response": {
+              "abstain_or_answer": "abstain",
+              "conversation_id": "conv-p10-weak",
+              "evidence_refs": [
+                "phase8.summary.ref.001",
+                "phase8.summary.ref.002",
+                "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+                "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797",
+                "e8386a01375de8b82858e0e81748c9d5e02bdac3a9cef8a808316099b5d132d9",
+                "86e4c43144503e72da9429fc68abd2c34a2cbf7067527496bb73c669121147cf",
+                "2ff7d18c8932c3abafb1bf08dfa681f882a07a590381d3203bd61b4b99413595",
+                "f065456200aded7dc74db12d3526eff162ec5d08ee8924f3e9bcc929fd888efb",
+                "measurement::phase11_proposal::f93c8ce20e8b",
+                "measurement::phase11_proposal::07ad3e8b431f",
+                "decision::phase11_proposal::f93c8ce20e8b",
+                "decision::phase11_proposal::07ad3e8b431f",
+                "inquiry::d1657daaa896",
+                "phase12_gap::6061daca1549",
+                "phase12_gap::7cf580032ce2",
+                "phase12_theory::6e1c2b18e5e2",
+                "phase12_domain_genesis::b7f9afcbfe5d",
+                "phase12_procedure_tool::e6bcb91b12c2",
+                "phase12_reorganization::09ea57a79e12",
+                "dc54e0867e9708352cbc0fa0ffaf30a6328aedda038ec16fc62c641dfa6034fd",
+                "5df43dd942d8223120c35caabca11ef3cd7e3e5c4d0e2ca4e598770cf6bcb381",
+                "91918ef29258bcb918e7c81125f97ce3275066f6379a8def247f869bc2070a65"
+              ],
+              "final_answer_mode": "search_needed",
+              "knowledge_gap_reason": "needs_fresh_information",
+              "memory_review_ref": "memory_review::798850d90bd6",
+              "next_action": "search_local",
+              "phase10_turn_hash": "dc54e0867e9708352cbc0fa0ffaf30a6328aedda038ec16fc62c641dfa6034fd",
+              "phase11_cycle_hash": "5df43dd942d8223120c35caabca11ef3cd7e3e5c4d0e2ca4e598770cf6bcb381",
+              "phase12_cycle_hash": "91918ef29258bcb918e7c81125f97ce3275066f6379a8def247f869bc2070a65",
+              "request_text": "show the local-first product shell path",
+              "response_kind": "guided_search",
+              "response_text": "The answer is bounded but weak because support is incomplete, so the next safe move is to re-check support.",
+              "schema": "agifcore.phase_13.conversation_turn.v1",
+              "selected_outcome": "recheck_support",
+              "session_id": "phase13_session::ff1815e1d727",
+              "structural_growth_refs": [
+                "phase12_gap::6061daca1549",
+                "phase12_gap::7cf580032ce2"
+              ],
+              "support_honesty_preserved": true,
+              "support_state": "search_needed",
+              "trace_anchor_refs": [
+                "meta_observer::80e48682c6ef",
+                "weak_answer_diagnosis::9b56ed826747",
+                "strategy_journal::a39c7f7e13e6",
+                "self_model::8b2b3db44440",
+                "skeptic::5d11aa5a2796",
+                "inquiry::d1657daaa896",
+                "phase12_gap::6061daca1549",
+                "phase12_gap::7cf580032ce2",
+                "phase12_theory::6e1c2b18e5e2",
+                "phase12_domain_genesis::b7f9afcbfe5d",
+                "phase12_procedure_tool::e6bcb91b12c2",
+                "phase12_reorganization::09ea57a79e12"
+              ],
+              "turn_hash": "3ea638d025741110c89fcfc0972fd50e2215d2352fc31a78f374a6bc1911e1bb",
+              "turn_id": "turn-p10-weak"
+            },
+            "route": "/api/conversation-turn",
+            "schema": "agifcore.phase_13.gateway_response.v1",
+            "status": "pass",
+            "surface_name": "conversation_turn"
+          },
+          "schema": "agifcore.phase_13.embeddable_runtime_api.v1",
+          "session_id": "phase13_session::ff1815e1d727",
+          "status": "pass"
+        },
+        "scenario": "weak",
+        "session_kind": "conversation_turn",
+        "summary": {
+          "final_answer_mode": "search_needed",
+          "response_kind": "guided_search",
+          "response_text": "The answer is bounded but weak because support is incomplete, so the next safe move is to re-check support."
+        }
+      },
+      {
+        "case_id": "demo_weak_state_export",
+        "payload": {
+          "api_surface": "state_export",
+          "contract_hash": "791ea3b6c3f20ed3640badfb855f7cae61f332619716fa28dd247ef121625be7",
+          "gateway_response": {
+            "envelope": {
+              "allowed": true,
+              "allowlisted_routes": [
+                "/api/session-open",
+                "/api/conversation-turn",
+                "/api/state-export",
+                "/api/trace-export",
+                "/api/memory-review-export",
+                "/api/safe-shutdown",
+                "/api/task-submit",
+                "/api/policy-update",
+                "/api/fail-closed-help",
+                "/api/installer-status"
+              ],
+              "deny_reason": null,
+              "envelope_hash": "9fff6e1ccf889bc2726b439aa767d6e4fcf1603851024b00cc3fa187f582b88b",
+              "method": "POST",
+              "occurred_at": "2026-04-02T07:46:53+00:00",
+              "payload_size_bytes": 2,
+              "policy_hash": "ec7f9f6e4656f6c9319df98688e02853e9f69e8384a450fc28e1d48269b57a9c",
+              "request_count": 2,
+              "request_id": "99c51c2a8f806406",
+              "requested_surface": "state_export",
+              "route": "/api/state-export",
+              "schema": "agifcore.phase_13.gateway_envelope.v1",
+              "session_id": "phase13_session::ff1815e1d727"
+            },
+            "policy_hash": "ec7f9f6e4656f6c9319df98688e02853e9f69e8384a450fc28e1d48269b57a9c",
+            "response": {
+              "conversation_id": "conv-p10-weak",
+              "phase11_cycle_hash": "5df43dd942d8223120c35caabca11ef3cd7e3e5c4d0e2ca4e598770cf6bcb381",
+              "phase12_cycle_hash": "91918ef29258bcb918e7c81125f97ce3275066f6379a8def247f869bc2070a65",
+              "schema": "agifcore.phase_13.state_export.v1",
+              "session_id": "phase13_session::ff1815e1d727",
+              "snapshot_hash": "1ea9deef67ee426fb8937c3f4f5387cda7dcd9f1ac88a70e7c19f0f04ca2bd54",
+              "source_payload_bytes": 4794,
+              "source_state_export": {
+                "cells": [
+                  {
+                    "cell_id": "local_runner",
+                    "cell_ref": "workspace://phase13-runtime-phase13_session::ff1815e1d727/cell/local_runner",
+                    "lifecycle_state": "running",
+                    "quarantine_ref": null,
+                    "role_family": "product_runtime_surface",
+                    "rollback_ref": null,
+                    "updated_at": "2026-04-02T07:46:53+00:00",
+                    "workspace_ref": "workspace://phase13-runtime-phase13_session::ff1815e1d727/cell/local_runner"
+                  },
+                  {
+                    "cell_id": "local_gateway",
+                    "cell_ref": "workspace://phase13-runtime-phase13_session::ff1815e1d727/cell/local_gateway",
+                    "lifecycle_state": "serving",
+                    "quarantine_ref": null,
+                    "role_family": "product_runtime_surface",
+                    "rollback_ref": null,
+                    "updated_at": "2026-04-02T07:46:53+00:00",
+                    "workspace_ref": "workspace://phase13-runtime-phase13_session::ff1815e1d727/cell/local_gateway"
+                  },
+                  {
+                    "cell_id": "local_desktop_ui",
+                    "cell_ref": "workspace://phase13-runtime-phase13_session::ff1815e1d727/cell/local_desktop_ui",
+                    "lifecycle_state": "presenting",
+                    "quarantine_ref": null,
+                    "role_family": "product_runtime_surface",
+                    "rollback_ref": null,
+                    "updated_at": "2026-04-02T07:46:53+00:00",
+                    "workspace_ref": "workspace://phase13-runtime-phase13_session::ff1815e1d727/cell/local_desktop_ui"
+                  }
+                ],
+                "created_at": "2026-04-02T07:46:53+00:00",
+                "evidence_refs": [
+                  "phase8.summary.ref.001",
+                  "phase8.summary.ref.002",
+                  "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+                  "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797",
+                  "e8386a01375de8b82858e0e81748c9d5e02bdac3a9cef8a808316099b5d132d9",
+                  "86e4c43144503e72da9429fc68abd2c34a2cbf7067527496bb73c669121147cf",
+                  "2ff7d18c8932c3abafb1bf08dfa681f882a07a590381d3203bd61b4b99413595",
+                  "f065456200aded7dc74db12d3526eff162ec5d08ee8924f3e9bcc929fd888efb",
+                  "measurement::phase11_proposal::f93c8ce20e8b",
+                  "measurement::phase11_proposal::07ad3e8b431f",
+                  "decision::phase11_proposal::f93c8ce20e8b",
+                  "decision::phase11_proposal::07ad3e8b431f",
+                  "inquiry::d1657daaa896",
+                  "phase12_gap::6061daca1549",
+                  "phase12_gap::7cf580032ce2",
+                  "phase12_theory::6e1c2b18e5e2",
+                  "phase12_domain_genesis::b7f9afcbfe5d",
+                  "phase12_procedure_tool::e6bcb91b12c2",
+                  "phase12_reorganization::09ea57a79e12",
+                  "dc54e0867e9708352cbc0fa0ffaf30a6328aedda038ec16fc62c641dfa6034fd",
+                  "5df43dd942d8223120c35caabca11ef3cd7e3e5c4d0e2ca4e598770cf6bcb381",
+                  "91918ef29258bcb918e7c81125f97ce3275066f6379a8def247f869bc2070a65"
+                ],
+                "memory_hook_surface": {
+                  "memory_review_refs": [
+                    {
+                      "conversation_id": "conv-p10-weak",
+                      "memory_review_ref": "memory_review::798850d90bd6",
+                      "turn_id": "turn-p10-weak"
+                    }
+                  ],
+                  "notes": [
+                    "references only",
+                    "no semantic memory",
+                    "no procedural memory auto-execution",
+                    "review export stays inspectable and bounded"
+                  ],
+                  "retention_candidate_refs": [
+                    "phase12_theory::6e1c2b18e5e2",
+                    "phase12_domain_genesis::b7f9afcbfe5d",
+                    "phase12_procedure_tool::e6bcb91b12c2"
+                  ],
+                  "schema": "agifcore.phase_02.memory_review_export.v1",
+                  "workspace_id": "phase13-runtime-phase13_session::ff1815e1d727"
+                },
+                "operator_commands": [
+                  "inspect_state",
+                  "plan_governed_action",
+                  "verify_or_replay",
+                  "rollback_or_quarantine",
+                  "export_evidence"
+                ],
+                "operator_log": [
+                  {
+                    "command_class": "inspect_state",
+                    "occurred_at": "2026-04-02T07:46:53+00:00",
+                    "turn_ref": "workspace://phase13-runtime-phase13_session::ff1815e1d727/turn/conv-p10-weak/turn-p10-weak"
+                  },
+                  {
+                    "command_class": "export_evidence",
+                    "occurred_at": "2026-04-02T07:46:53+00:00",
+                    "turn_ref": "workspace://phase13-runtime-phase13_session::ff1815e1d727/turn/conv-p10-weak/turn-p10-weak"
+                  }
+                ],
+                "quarantine_refs": [],
+                "replay_refs": [
+                  "replay://phase13/26d5f8b82e7549bd"
+                ],
+                "rollback_refs": [],
+                "schema": "agifcore.phase_02.state_export.v1",
+                "turns": [
+                  {
+                    "abstain_or_answer": "abstain",
+                    "active_context_refs": [
+                      "meta_observer::80e48682c6ef",
+                      "weak_answer_diagnosis::9b56ed826747",
+                      "strategy_journal::a39c7f7e13e6",
+                      "self_model::8b2b3db44440"
+                    ],
+                    "conversation_id": "conv-p10-weak",
+                    "critic_trace_ref": "weak_answer_diagnosis::9b56ed826747",
+                    "discourse_mode": "explain",
+                    "final_answer_mode": "search_needed",
+                    "governance_trace_ref": "532d11ea8cb5ab58f562e92e201c1fdbc98afddf0d8ff86a3eeb20fc3d2bbf89",
+                    "knowledge_gap_reason": "needs_fresh_information",
+                    "last_event_type": "response_ready",
+                    "memory_review_ref": "memory_review::798850d90bd6",
+                    "next_action": "search_local",
+                    "planner_trace_ref": "strategy_journal::a39c7f7e13e6",
+                    "response_text": "The answer is bounded but weak because support is incomplete, so the next safe move is to re-check support.",
+                    "simulation_trace_ref": "2ff7d18c8932c3abafb1bf08dfa681f882a07a590381d3203bd61b4b99413595",
+                    "support_state": "search_needed",
+                    "turn_id": "turn-p10-weak",
+                    "turn_ref": "workspace://phase13-runtime-phase13_session::ff1815e1d727/turn/conv-p10-weak/turn-p10-weak",
+                    "user_intent": "Why was this weak and what should be checked first?",
+                    "workspace_updated_at": "2026-04-02T07:46:53+00:00"
+                  }
+                ],
+                "workspace_id": "phase13-runtime-phase13_session::ff1815e1d727"
+              },
+              "turn_id": "turn-p10-weak"
+            },
+            "route": "/api/state-export",
+            "schema": "agifcore.phase_13.gateway_response.v1",
+            "status": "pass",
+            "surface_name": "state_export"
+          },
+          "schema": "agifcore.phase_13.embeddable_runtime_api.v1",
+          "session_id": "phase13_session::ff1815e1d727",
+          "status": "pass"
+        },
+        "scenario": "weak",
+        "session_kind": "state_export",
+        "summary": {
+          "source_payload_bytes": 4794,
+          "state_snapshot_hash": "1ea9deef67ee426fb8937c3f4f5387cda7dcd9f1ac88a70e7c19f0f04ca2bd54",
+          "turn_count": 1
+        }
+      },
+      {
+        "case_id": "demo_weak_trace_export",
+        "payload": {
+          "api_surface": "trace_export",
+          "contract_hash": "b5eba9642d2417069932c703df391f1bf3aaff891b069ef71d3b9aff5698909f",
+          "gateway_response": {
+            "envelope": {
+              "allowed": true,
+              "allowlisted_routes": [
+                "/api/session-open",
+                "/api/conversation-turn",
+                "/api/state-export",
+                "/api/trace-export",
+                "/api/memory-review-export",
+                "/api/safe-shutdown",
+                "/api/task-submit",
+                "/api/policy-update",
+                "/api/fail-closed-help",
+                "/api/installer-status"
+              ],
+              "deny_reason": null,
+              "envelope_hash": "be7bbcf4a297f459f43bebfca140f090f8a66356fde5a7d7d88ff1574b5ac64c",
+              "method": "POST",
+              "occurred_at": "2026-04-02T07:46:53+00:00",
+              "payload_size_bytes": 2,
+              "policy_hash": "ec7f9f6e4656f6c9319df98688e02853e9f69e8384a450fc28e1d48269b57a9c",
+              "request_count": 3,
+              "request_id": "f880a21bad537433",
+              "requested_surface": "trace_export",
+              "route": "/api/trace-export",
+              "schema": "agifcore.phase_13.gateway_envelope.v1",
+              "session_id": "phase13_session::ff1815e1d727"
+            },
+            "policy_hash": "ec7f9f6e4656f6c9319df98688e02853e9f69e8384a450fc28e1d48269b57a9c",
+            "response": {
+              "conversation_id": "conv-p10-weak",
+              "evidence_refs": [
+                "phase8.summary.ref.001",
+                "phase8.summary.ref.002",
+                "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+                "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797",
+                "e8386a01375de8b82858e0e81748c9d5e02bdac3a9cef8a808316099b5d132d9",
+                "86e4c43144503e72da9429fc68abd2c34a2cbf7067527496bb73c669121147cf",
+                "2ff7d18c8932c3abafb1bf08dfa681f882a07a590381d3203bd61b4b99413595",
+                "f065456200aded7dc74db12d3526eff162ec5d08ee8924f3e9bcc929fd888efb",
+                "measurement::phase11_proposal::f93c8ce20e8b",
+                "measurement::phase11_proposal::07ad3e8b431f",
+                "decision::phase11_proposal::f93c8ce20e8b",
+                "decision::phase11_proposal::07ad3e8b431f",
+                "inquiry::d1657daaa896",
+                "phase12_gap::6061daca1549",
+                "phase12_gap::7cf580032ce2",
+                "phase12_theory::6e1c2b18e5e2",
+                "phase12_domain_genesis::b7f9afcbfe5d",
+                "phase12_procedure_tool::e6bcb91b12c2",
+                "phase12_reorganization::09ea57a79e12",
+                "strategy_journal::a39c7f7e13e6",
+                "weak_answer_diagnosis::9b56ed826747",
+                "532d11ea8cb5ab58f562e92e201c1fdbc98afddf0d8ff86a3eeb20fc3d2bbf89"
+              ],
+              "schema": "agifcore.phase_13.trace_export.v1",
+              "session_id": "phase13_session::ff1815e1d727",
+              "snapshot_hash": "1f48b16d674dbfbe6a35ad05c90f21684eaeac5e2c286abff3853720d225c469",
+              "trace_anchor_hash": "26d5f8b82e7549bd6bc5d15b17118faf8c1e30d9c2fb87f6836a498d044446ec",
+              "trace_record_count": 2,
+              "trace_records": [
+                {
+                  "conversation_id": "conv-p10-weak",
+                  "critic_trace_ref": "weak_answer_diagnosis::9b56ed826747",
+                  "discourse_mode": "explain",
+                  "event_id": "evt_turn_admitted::3c68e62f6107",
+                  "event_type": "turn_admitted",
+                  "final_answer_mode": null,
+                  "governance_trace_ref": "532d11ea8cb5ab58f562e92e201c1fdbc98afddf0d8ff86a3eeb20fc3d2bbf89",
+                  "knowledge_gap_reason": "needs_fresh_information",
+                  "next_action": "search_local",
+                  "occurred_at": "2026-04-02T07:46:53+00:00",
+                  "payload_size_bytes": 105,
+                  "planner_trace_ref": "strategy_journal::a39c7f7e13e6",
+                  "producer": "phase13_local_runner",
+                  "sequence": 1,
+                  "simulation_trace_ref": "2ff7d18c8932c3abafb1bf08dfa681f882a07a590381d3203bd61b4b99413595",
+                  "support_state": "search_needed",
+                  "turn_id": "turn-p10-weak"
+                },
+                {
+                  "conversation_id": "conv-p10-weak",
+                  "critic_trace_ref": "weak_answer_diagnosis::9b56ed826747",
+                  "discourse_mode": "explain",
+                  "event_id": "evt_response_ready::987011317178",
+                  "event_type": "response_ready",
+                  "final_answer_mode": "search_needed",
+                  "governance_trace_ref": "532d11ea8cb5ab58f562e92e201c1fdbc98afddf0d8ff86a3eeb20fc3d2bbf89",
+                  "knowledge_gap_reason": "needs_fresh_information",
+                  "next_action": "search_local",
+                  "occurred_at": "2026-04-02T07:46:53+00:00",
+                  "payload_size_bytes": 166,
+                  "planner_trace_ref": "strategy_journal::a39c7f7e13e6",
+                  "producer": "phase13_local_runner",
+                  "sequence": 2,
+                  "simulation_trace_ref": "2ff7d18c8932c3abafb1bf08dfa681f882a07a590381d3203bd61b4b99413595",
+                  "support_state": "search_needed",
+                  "turn_id": "turn-p10-weak"
+                }
+              ],
+              "turn_id": "turn-p10-weak"
+            },
+            "route": "/api/trace-export",
+            "schema": "agifcore.phase_13.gateway_response.v1",
+            "status": "pass",
+            "surface_name": "trace_export"
+          },
+          "schema": "agifcore.phase_13.embeddable_runtime_api.v1",
+          "session_id": "phase13_session::ff1815e1d727",
+          "status": "pass"
+        },
+        "scenario": "weak",
+        "session_kind": "trace_export",
+        "summary": {
+          "support_state": "search_needed",
+          "trace_record_count": 2
+        }
+      },
+      {
+        "case_id": "demo_weak_memory_review",
+        "payload": {
+          "api_surface": "memory_review_export",
+          "contract_hash": "da46a9c8e6a63b12ab302127ff3559260f4c7f4c8f00f63db0757f6740b82e64",
+          "gateway_response": {
+            "envelope": {
+              "allowed": true,
+              "allowlisted_routes": [
+                "/api/session-open",
+                "/api/conversation-turn",
+                "/api/state-export",
+                "/api/trace-export",
+                "/api/memory-review-export",
+                "/api/safe-shutdown",
+                "/api/task-submit",
+                "/api/policy-update",
+                "/api/fail-closed-help",
+                "/api/installer-status"
+              ],
+              "deny_reason": null,
+              "envelope_hash": "99f280f6ffb64058600cad30dec6b7b39637a32dc4ee67a105d9e6a8947e24b5",
+              "method": "POST",
+              "occurred_at": "2026-04-02T07:46:53+00:00",
+              "payload_size_bytes": 2,
+              "policy_hash": "ec7f9f6e4656f6c9319df98688e02853e9f69e8384a450fc28e1d48269b57a9c",
+              "request_count": 4,
+              "request_id": "446836febbf53242",
+              "requested_surface": "memory_review_export",
+              "route": "/api/memory-review-export",
+              "schema": "agifcore.phase_13.gateway_envelope.v1",
+              "session_id": "phase13_session::ff1815e1d727"
+            },
+            "policy_hash": "ec7f9f6e4656f6c9319df98688e02853e9f69e8384a450fc28e1d48269b57a9c",
+            "response": {
+              "continuity_refs": [
+                "5df43dd942d8223120c35caabca11ef3cd7e3e5c4d0e2ca4e598770cf6bcb381",
+                "91918ef29258bcb918e7c81125f97ce3275066f6379a8def247f869bc2070a65",
+                "669c174e25f890252fd4495af3d72a8d1702232b582f09bae06e7332700cc452"
+              ],
+              "conversation_id": "conv-p10-weak",
+              "payload_size_bytes": 542,
+              "schema": "agifcore.phase_13.memory_review_export.v1",
+              "session_id": "phase13_session::ff1815e1d727",
+              "snapshot_hash": "a2d31910f16f441d6f86aea504d0b3fa733a5e83da3c31081e174da6e6c24fb8",
+              "source_memory_review_export": {
+                "memory_review_refs": [
+                  {
+                    "conversation_id": "conv-p10-weak",
+                    "memory_review_ref": "memory_review::798850d90bd6",
+                    "turn_id": "turn-p10-weak"
+                  }
+                ],
+                "notes": [
+                  "references only",
+                  "no semantic memory",
+                  "no procedural memory auto-execution",
+                  "review export stays inspectable and bounded"
+                ],
+                "retention_candidate_refs": [
+                  "phase12_theory::6e1c2b18e5e2",
+                  "phase12_domain_genesis::b7f9afcbfe5d",
+                  "phase12_procedure_tool::e6bcb91b12c2"
+                ],
+                "schema": "agifcore.phase_02.memory_review_export.v1",
+                "workspace_id": "phase13-runtime-phase13_session::ff1815e1d727"
+              },
+              "turn_id": "turn-p10-weak"
+            },
+            "route": "/api/memory-review-export",
+            "schema": "agifcore.phase_13.gateway_response.v1",
+            "status": "pass",
+            "surface_name": "memory_review_export"
+          },
+          "schema": "agifcore.phase_13.embeddable_runtime_api.v1",
+          "session_id": "phase13_session::ff1815e1d727",
+          "status": "pass"
+        },
+        "scenario": "weak",
+        "session_kind": "memory_review_export",
+        "summary": {
+          "memory_review_ref_count": 1,
+          "retention_candidate_count": 3
+        }
+      },
+      {
+        "case_id": "demo_contradiction_conversation",
+        "payload": {
+          "api_surface": "conversation_turn",
+          "contract_hash": "3c5eac45a3f4f4a50df6e3171eed04b57cbd0d66b5dba2d3acb9233e90e6de40",
+          "gateway_response": {
+            "envelope": {
+              "allowed": true,
+              "allowlisted_routes": [
+                "/api/session-open",
+                "/api/conversation-turn",
+                "/api/state-export",
+                "/api/trace-export",
+                "/api/memory-review-export",
+                "/api/safe-shutdown",
+                "/api/task-submit",
+                "/api/policy-update",
+                "/api/fail-closed-help",
+                "/api/installer-status"
+              ],
+              "deny_reason": null,
+              "envelope_hash": "dd1297796e44776ccff8cb86e9a4a2256c7a0e2165166f0610a443882a682bfb",
+              "method": "POST",
+              "occurred_at": "2026-04-02T07:46:53+00:00",
+              "payload_size_bytes": 56,
+              "policy_hash": "45fcfe10482df4337c115817be823b9c5f07ed65d9de89421fd578212a3658c4",
+              "request_count": 1,
+              "request_id": "cd3cfe6918bd41a3",
+              "requested_surface": "conversation_turn",
+              "route": "/api/conversation-turn",
+              "schema": "agifcore.phase_13.gateway_envelope.v1",
+              "session_id": "phase13_session::ec190ca70ff6"
+            },
+            "policy_hash": "45fcfe10482df4337c115817be823b9c5f07ed65d9de89421fd578212a3658c4",
+            "response": {
+              "abstain_or_answer": "abstain",
+              "conversation_id": "conv-p10-contradiction",
+              "evidence_refs": [
+                "phase8.summary.ref.001",
+                "phase8.summary.ref.002",
+                "84739b2c42b16a086303dbb52b1ee5296b43a721a79d3bca649809f81653fede",
+                "4cf0213cbe82acf4d8587c6b380b51eb4df286b0ae1c635099d230fd40930070",
+                "86ea18bdab9d6783ca832fee5e5fb87530460776980a04517cb6f1971872f156",
+                "21ac664c6c3dbdc112394976b10ae87c5ef24954a29f0f171076d41b5cc4260c",
+                "9bee10cfd1fb4599da833a1465376a907e7fd8dd86261f20e58eabf55be34319",
+                "f84e9c4bfb5414dddb4ade3191ffcfe5a75a1bee0fb835dc9b381ea2e23e087b",
+                "measurement::phase11_proposal::85d913641a4b",
+                "measurement::phase11_proposal::3549ec1bd2c8",
+                "decision::phase11_proposal::85d913641a4b",
+                "decision::phase11_proposal::3549ec1bd2c8",
+                "monitoring::phase11_proposal::85d913641a4b",
+                "rollback::phase11_proposal::85d913641a4b",
+                "phase12_gap::b04fe61b3ac1",
+                "phase12_gap::077eaa165f0d",
+                "phase12_theory::9fc1a70e7bae",
+                "phase12_theory::183cedbfdd55",
+                "phase12_domain_genesis::20356b09f2d1",
+                "phase12_procedure_tool::2557e5a5bfd2",
+                "phase12_reorganization::939e125576d2",
+                "65825b11909614ca0ba60296584ccb1f3cd23d009786d993414a4bbe2769ebaf",
+                "c31c355fdc53ddbeb0f6d899badfa9935b772e975ac04f7f991eac5d47e96239",
+                "259f8a427894a3174bc9b1021baaab71c762adbc30e18e757ab3d56c94906fea"
+              ],
+              "final_answer_mode": "clarify",
+              "knowledge_gap_reason": "ambiguous_request",
+              "memory_review_ref": "memory_review::981c512b0314",
+              "next_action": "clarify",
+              "phase10_turn_hash": "65825b11909614ca0ba60296584ccb1f3cd23d009786d993414a4bbe2769ebaf",
+              "phase11_cycle_hash": "c31c355fdc53ddbeb0f6d899badfa9935b772e975ac04f7f991eac5d47e96239",
+              "phase12_cycle_hash": "259f8a427894a3174bc9b1021baaab71c762adbc30e18e757ab3d56c94906fea",
+              "request_text": "please clarify the contradiction safely",
+              "response_kind": "guided_clarification",
+              "response_text": "A missing variable or ambiguity remains, so the next safe move is a bounded clarification.",
+              "schema": "agifcore.phase_13.conversation_turn.v1",
+              "selected_outcome": "clarify",
+              "session_id": "phase13_session::ec190ca70ff6",
+              "structural_growth_refs": [
+                "phase12_gap::b04fe61b3ac1",
+                "phase12_gap::077eaa165f0d"
+              ],
+              "support_honesty_preserved": true,
+              "support_state": "inferred",
+              "trace_anchor_refs": [
+                "meta_observer::51986fa94cb9",
+                "weak_answer_diagnosis::7ca0eacd5389",
+                "strategy_journal::341942aad13a",
+                "self_model::bf9c904c4761",
+                "skeptic::4383ef6b7df8",
+                "monitoring::phase11_proposal::85d913641a4b",
+                "rollback::phase11_proposal::85d913641a4b",
+                "phase12_gap::b04fe61b3ac1",
+                "phase12_gap::077eaa165f0d",
+                "phase12_theory::9fc1a70e7bae",
+                "phase12_theory::183cedbfdd55",
+                "phase12_domain_genesis::20356b09f2d1",
+                "phase12_procedure_tool::2557e5a5bfd2",
+                "phase12_reorganization::939e125576d2"
+              ],
+              "turn_hash": "46b73d7a5d5a3c943d2cc101e70fbc077ff1583474fd3141ce5c2ff377273440",
+              "turn_id": "turn-p10-contradiction"
+            },
+            "route": "/api/conversation-turn",
+            "schema": "agifcore.phase_13.gateway_response.v1",
+            "status": "pass",
+            "surface_name": "conversation_turn"
+          },
+          "schema": "agifcore.phase_13.embeddable_runtime_api.v1",
+          "session_id": "phase13_session::ec190ca70ff6",
+          "status": "pass"
+        },
+        "scenario": "contradiction",
+        "session_kind": "conversation_turn",
+        "summary": {
+          "final_answer_mode": "clarify",
+          "response_kind": "guided_clarification",
+          "response_text": "A missing variable or ambiguity remains, so the next safe move is a bounded clarification."
+        }
+      },
+      {
+        "case_id": "demo_interactive_turn",
+        "payload": {
+          "abstain_or_answer": "answer",
+          "answer_mode": "grounded_fact",
+          "conversation_id": "conv-p10-weak",
+          "critique_diagnosis_fired": false,
+          "derived_question_class": "project_phase_capability",
+          "extracted_target": null,
+          "final_answer_mode": "grounded_fact",
+          "follow_up_bound": false,
+          "graph_support_consulted": true,
+          "knowledge_gap_reason": "none",
+          "live_measurement_required": false,
+          "local_sources_consulted": [
+            {
+              "line_number": 1,
+              "path": "dynamic::runtime_limits",
+              "ref": "dynamic::runtime_limits:1",
+              "source_id": "runtime_limits"
+            },
+            {
+              "line_number": 2,
+              "path": "dynamic::runtime_limits",
+              "ref": "dynamic::runtime_limits:2",
+              "source_id": "runtime_limits"
+            },
+            {
+              "line_number": 1,
+              "path": "dynamic::runtime_shell_snapshot",
+              "ref": "dynamic::runtime_shell_snapshot:1",
+              "source_id": "runtime_shell_snapshot"
+            },
+            {
+              "line_number": 2,
+              "path": "dynamic::runtime_shell_snapshot",
+              "ref": "dynamic::runtime_shell_snapshot:2",
+              "source_id": "runtime_shell_snapshot"
+            },
+            {
+              "line_number": 1,
+              "path": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md",
+              "ref": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:1",
+              "source_id": "human_target"
+            },
+            {
+              "line_number": 2,
+              "path": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md",
+              "ref": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+              "source_id": "human_target"
+            },
+            {
+              "line_number": 1,
+              "path": "projects/agifcore_master/01_plan/PHASE_INDEX.md",
+              "ref": "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+              "source_id": "phase_truth"
+            },
+            {
+              "line_number": 2,
+              "path": "projects/agifcore_master/01_plan/PHASE_INDEX.md",
+              "ref": "projects/agifcore_master/01_plan/PHASE_INDEX.md:2",
+              "source_id": "phase_truth"
+            }
+          ],
+          "local_truth_refs": [
+            "dynamic::runtime_limits:1",
+            "dynamic::runtime_limits:2",
+            "dynamic::runtime_shell_snapshot:1",
+            "dynamic::runtime_shell_snapshot:2",
+            "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:1",
+            "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+            "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+            "projects/agifcore_master/01_plan/PHASE_INDEX.md:2"
+          ],
+          "memory_consulted": true,
+          "next_action": "answer",
+          "notes": [
+            "real live question-driven path through bounded AGIFCore phases",
+            "uses approved local truth only",
+            "keeps the older scenario harness separate for proof/demo review",
+            "no approval implied"
+          ],
+          "phase10_public_explanation": "A missing variable or ambiguity remains, so the next safe move is a bounded clarification.",
+          "phase10_selected_outcome": "clarify",
+          "phase11_read_only_refs": [],
+          "phase12_read_only_refs": [
+            "phase12_gap::6061daca1549",
+            "phase12_gap::7cf580032ce2"
+          ],
+          "phase14_budget_allowed": true,
+          "phase14_budget_state": "within_budget",
+          "phase14_profile": "laptop",
+          "phase14_selected_cell_count": 8,
+          "phase14_selected_tissue_count": 2,
+          "phase2_evidence": {
+            "replay_verification": {
+              "conversation_id": "conv-p10-weak",
+              "replay_id": "replay::020fce323df6",
+              "replay_match": false,
+              "state_anchor_hash": "700b595053d7635913f79862ce77389a0cc1a04dfae4823be831000bebaaa82d",
+              "state_match": false,
+              "trace_anchor_hash": "76c451c983392cbcaffa5edb32c46c240bba7b0b52e8fd087065e04e533df71c",
+              "trace_match": true,
+              "turn_id": "interactive::b01293416af9"
+            },
+            "trace_export": [
+              {
+                "conversation_id": "conv-p10-weak",
+                "critic_trace_ref": "critic::3fe796cf7c22",
+                "discourse_mode": "self_knowledge",
+                "event_id": "evt-41f8de0897a04f2db962e9d122d04ebe",
+                "event_type": "turn_admitted",
+                "final_answer_mode": null,
+                "governance_trace_ref": "governance::80b81a8b497a",
+                "knowledge_gap_reason": "none",
+                "next_action": "answer",
+                "occurred_at": "2026-04-02T07:46:53+00:00",
+                "payload_size_bytes": 1066,
+                "planner_trace_ref": "planner::faf7a6e921b2",
+                "producer": "phase13-live-turn",
+                "sequence": 1,
+                "simulation_trace_ref": "simulation::e673d8a986d5",
+                "support_state": "grounded",
+                "turn_id": "interactive::b01293416af9"
+              },
+              {
+                "conversation_id": "conv-p10-weak",
+                "critic_trace_ref": "critic::3fe796cf7c22",
+                "discourse_mode": "self_knowledge",
+                "event_id": "evt-a04004a99296422db5df655976af4e26",
+                "event_type": "trace_annotated",
+                "final_answer_mode": null,
+                "governance_trace_ref": "governance::80b81a8b497a",
+                "knowledge_gap_reason": "none",
+                "next_action": "answer",
+                "occurred_at": "2026-04-02T07:46:53+00:00",
+                "payload_size_bytes": 1070,
+                "planner_trace_ref": "planner::faf7a6e921b2",
+                "producer": "phase13-live-turn",
+                "sequence": 2,
+                "simulation_trace_ref": "simulation::e673d8a986d5",
+                "support_state": "grounded",
+                "turn_id": "interactive::b01293416af9"
+              },
+              {
+                "conversation_id": "conv-p10-weak",
+                "critic_trace_ref": "critic::3fe796cf7c22",
+                "discourse_mode": "self_knowledge",
+                "event_id": "evt-d5d8b4740c2f4877b2245877726dbeae",
+                "event_type": "governance_decided",
+                "final_answer_mode": null,
+                "governance_trace_ref": "governance::80b81a8b497a",
+                "knowledge_gap_reason": "none",
+                "next_action": "answer",
+                "occurred_at": "2026-04-02T07:46:53+00:00",
+                "payload_size_bytes": 1076,
+                "planner_trace_ref": "planner::faf7a6e921b2",
+                "producer": "phase13-live-turn",
+                "sequence": 3,
+                "simulation_trace_ref": "simulation::e673d8a986d5",
+                "support_state": "grounded",
+                "turn_id": "interactive::b01293416af9"
+              },
+              {
+                "conversation_id": "conv-p10-weak",
+                "critic_trace_ref": "critic::3fe796cf7c22",
+                "discourse_mode": "self_knowledge",
+                "event_id": "evt-bc2ff30467674b27866a9472933fe07d",
+                "event_type": "response_ready",
+                "final_answer_mode": "grounded_fact",
+                "governance_trace_ref": "governance::80b81a8b497a",
+                "knowledge_gap_reason": "none",
+                "next_action": "answer",
+                "occurred_at": "2026-04-02T07:46:53+00:00",
+                "payload_size_bytes": 1410,
+                "planner_trace_ref": "planner::faf7a6e921b2",
+                "producer": "phase13-live-turn",
+                "sequence": 4,
+                "simulation_trace_ref": "simulation::e673d8a986d5",
+                "support_state": "grounded",
+                "turn_id": "interactive::b01293416af9"
+              }
+            ],
+            "workspace_memory_review_export": {
+              "memory_review_refs": [
+                {
+                  "conversation_id": "conv-p10-weak",
+                  "memory_review_ref": "memory-review-00000011",
+                  "turn_id": "interactive::b01293416af9"
+                }
+              ],
+              "notes": [
+                "references only",
+                "no semantic memory",
+                "no procedural memory",
+                "no graph persistence"
+              ],
+              "retention_candidate_refs": [],
+              "schema": "agifcore.phase_02.memory_review_export.v1",
+              "workspace_id": "phase-13-live-interactive-workspace"
+            },
+            "workspace_state_export": {
+              "cells": [],
+              "created_at": "2026-04-02T07:46:53+00:00",
+              "evidence_refs": [
+                "dynamic::runtime_limits:1",
+                "dynamic::runtime_limits:2",
+                "dynamic::runtime_shell_snapshot:1",
+                "dynamic::runtime_shell_snapshot:2",
+                "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:1",
+                "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+                "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+                "projects/agifcore_master/01_plan/PHASE_INDEX.md:2"
+              ],
+              "memory_hook_surface": {
+                "memory_review_refs": [
+                  {
+                    "conversation_id": "conv-p10-weak",
+                    "memory_review_ref": "memory-review-00000011",
+                    "turn_id": "interactive::b01293416af9"
+                  }
+                ],
+                "notes": [
+                  "references only",
+                  "no semantic memory",
+                  "no procedural memory",
+                  "no graph persistence"
+                ],
+                "retention_candidate_refs": [],
+                "schema": "agifcore.phase_02.memory_review_export.v1",
+                "workspace_id": "phase-13-live-interactive-workspace"
+              },
+              "operator_commands": [
+                "inspect_state",
+                "plan_governed_action",
+                "verify_or_replay",
+                "rollback_or_quarantine",
+                "export_evidence"
+              ],
+              "operator_log": [
+                {
+                  "command_class": "inspect_state",
+                  "occurred_at": "2026-04-02T07:46:53+00:00",
+                  "turn_ref": "workspace://phase-13-live-interactive-workspace/turn/conv-p10-weak/interactive::b01293416af9"
+                }
+              ],
+              "quarantine_refs": [],
+              "replay_refs": [
+                "replay::020fce323df6"
+              ],
+              "rollback_refs": [],
+              "schema": "agifcore.phase_02.state_export.v1",
+              "turns": [
+                {
+                  "abstain_or_answer": "answer",
+                  "active_context_refs": [
+                    "dynamic::runtime_limits:1",
+                    "dynamic::runtime_limits:2",
+                    "dynamic::runtime_shell_snapshot:1",
+                    "dynamic::runtime_shell_snapshot:2",
+                    "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:1",
+                    "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+                    "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+                    "projects/agifcore_master/01_plan/PHASE_INDEX.md:2"
+                  ],
+                  "conversation_id": "conv-p10-weak",
+                  "critic_trace_ref": "critic::3fe796cf7c22",
+                  "discourse_mode": "self_knowledge",
+                  "final_answer_mode": "grounded_fact",
+                  "governance_trace_ref": "governance::80b81a8b497a",
+                  "knowledge_gap_reason": "none",
+                  "last_event_type": "response_ready",
+                  "memory_review_ref": "memory-review-00000011",
+                  "next_action": "answer",
+                  "planner_trace_ref": "planner::faf7a6e921b2",
+                  "response_text": "This local shell answers only from approved AGIFCore local truth and runtime state. Available runtime surfaces: session_open, conversation_turn, state_export, trace_export, memory_review_export, safe_shutdown.",
+                  "simulation_trace_ref": "simulation::e673d8a986d5",
+                  "support_state": "grounded",
+                  "turn_id": "interactive::b01293416af9",
+                  "turn_ref": "workspace://phase-13-live-interactive-workspace/turn/conv-p10-weak/interactive::b01293416af9",
+                  "user_intent": "self_knowledge_question",
+                  "workspace_updated_at": "2026-04-02T07:46:53+00:00"
+                }
+              ],
+              "workspace_id": "phase-13-live-interactive-workspace"
+            }
+          },
+          "phase2_replay_match": false,
+          "phase2_trace_record_count": 4,
+          "phase7_question_category": "self_knowledge",
+          "phase_usage": {
+            "phase_10": {
+              "diagnosis_ref": "weak_answer_diagnosis::b18469d1d03b",
+              "selected_outcome": "clarify",
+              "used": false
+            },
+            "phase_11": {
+              "monitoring_ref_count": 0,
+              "read_only_context": true,
+              "used": false
+            },
+            "phase_12": {
+              "read_only_context": true,
+              "selected_gap_count": 2,
+              "used": false
+            },
+            "phase_13": {
+              "session_id": "phase13_session::ff1815e1d727",
+              "shell_snapshot_hash": "f46946f2225df0bfa7a5a2295580a3ca676a5e8a68043b87fd38c136eca1b743",
+              "used": true
+            },
+            "phase_14": {
+              "budget_receipt_hash": "2bca5526823d9b65de6fb15552de5350921f6357c87b0047ec69dd9e6dc73810",
+              "budget_state": "within_budget",
+              "profile": "laptop",
+              "selected_active_cell_count": 8,
+              "used": true
+            },
+            "phase_15": {
+              "review_ready_fields_present": true,
+              "turn_evidence_ref": "phase15::interactive_turn::7883261bd7ff",
+              "used": true
+            },
+            "phase_2": {
+              "event_count": 4,
+              "replay_id": "replay::020fce323df6",
+              "trace_record_count": 4,
+              "used": true
+            },
+            "phase_3": {
+              "route_families": [
+                "planner",
+                "language_realizer",
+                "governance_authority"
+              ],
+              "selected_cell_ids": [
+                "cell_0001",
+                "cell_0002",
+                "cell_0003",
+                "cell_0004",
+                "cell_0005",
+                "cell_0065",
+                "cell_0066",
+                "cell_0067"
+              ],
+              "selected_tissue_ids": [
+                "tissue_01",
+                "tissue_03"
+              ],
+              "used": true
+            },
+            "phase_4": {
+              "continuity_anchor_count": 4,
+              "procedural_entry_count": 3,
+              "semantic_entry_count": 8,
+              "used": true
+            },
+            "phase_5": {
+              "concept_node_count": 8,
+              "descriptor_node_count": 8,
+              "selected_candidate_ids": [
+                "descriptor::desc-05",
+                "descriptor::desc-06",
+                "descriptor::desc-07",
+                "descriptor::desc-08",
+                "descriptor::desc-01"
+              ],
+              "skill_node_count": 3,
+              "used": true
+            },
+            "phase_6": {
+              "candidate_future_hash": "994435296a9308108bb724ea3d0e7fd7e4ced1e57c217be1f0af621c4140672d",
+              "simulation_hash": "a6a075e2a995db3a7b6971646085a9da355f398b4760a27f9d17f72b53d9c4ab",
+              "used": false,
+              "usefulness_hash": "32ed211e44d33bb3450da7eafdcdbcc81af879f9866b09e350f9da4bf73378da",
+              "world_model_hash": "6d31d3fe71c870b3081a9ac3e9e123dce966d55443985128e50383c537aba16b"
+            },
+            "phase_7": {
+              "answer_contract_hash": "ea6bcb68067a38a05c78e576ea7177a28149b3e6d06c66a0b56abeab47f8a074",
+              "next_action": "answer",
+              "question_category": "self_knowledge",
+              "support_state": "grounded",
+              "used": true
+            },
+            "phase_8": {
+              "entity_request_hash": "aab53dadeb3eef4fad045fb17473968dba5f7aee3acfa3995d99dcd7cb6c965b",
+              "reasoning_summary_hash": "47b9e5e95081be66cd03d2eb8031dbcf601f3949ee03cc2d682005b0dfdfeb70",
+              "used": false
+            },
+            "phase_9": {
+              "overlay_hash": "356b29f72dfaacb46a9cea696c0a11eb3a81ca83e8f396aee7f40dd2c529681a",
+              "selected_lane": "synthesis",
+              "used": true
+            }
+          },
+          "phases_exercised": [
+            2,
+            3,
+            4,
+            5,
+            7,
+            9,
+            13,
+            14,
+            15
+          ],
+          "question_class": "project_phase_capability",
+          "question_text": "what can you do",
+          "request_text": "what can you do",
+          "response_kind": "bounded_answer",
+          "response_text": "This local shell answers only from approved AGIFCore local truth and runtime state. Available runtime surfaces: session_open, conversation_turn, state_export, trace_export, memory_review_export, safe_shutdown.",
+          "schema": "agifcore.phase_13.interactive_turn.v1",
+          "selected_candidate_ids": [
+            "descriptor::desc-05",
+            "descriptor::desc-06",
+            "descriptor::desc-07",
+            "descriptor::desc-08",
+            "descriptor::desc-01"
+          ],
+          "session_id": "phase13_session::ff1815e1d727",
+          "simulation_world_model_consulted": false,
+          "source_set_used": [
+            "runtime_limits",
+            "runtime_shell_snapshot",
+            "human_target",
+            "phase_truth"
+          ],
+          "support_snippets": [
+            {
+              "ref": "dynamic::runtime_limits:1",
+              "score": 4,
+              "text": "This local shell answers only from approved AGIFCore local truth and runtime state."
+            },
+            {
+              "ref": "dynamic::runtime_limits:2",
+              "score": 4,
+              "text": "Unsupported or missing-local-support questions must fail closed with clarify, abstain, or search_needed."
+            },
+            {
+              "ref": "dynamic::runtime_shell_snapshot:1",
+              "score": 4,
+              "text": "Local AGIFCore runtime shell session phase13_session::ff1815e1d727 is active for conversation conv-p10-weak."
+            },
+            {
+              "ref": "dynamic::runtime_shell_snapshot:2",
+              "score": 4,
+              "text": "Available surfaces are session_open, conversation_turn, state_export, trace_export, memory_review_export, safe_shutdown."
+            },
+            {
+              "ref": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:1",
+              "score": 4,
+              "text": "understand messy language"
+            },
+            {
+              "ref": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+              "score": 4,
+              "text": "build and revise internal support"
+            },
+            {
+              "ref": "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+              "score": 4,
+              "text": "Phase 0 is `approved` in the live gate files, with title `AGIFCore reset and source freeze`."
+            },
+            {
+              "ref": "projects/agifcore_master/01_plan/PHASE_INDEX.md:2",
+              "score": 4,
+              "text": "Phase 1 is `approved` in the live gate files, with title `constitution and full-system blueprint`."
+            }
+          ],
+          "support_state": "grounded",
+          "target_grounded": null,
+          "turn_hash": "f44e3c758078f3e7a29548a5c5aed73461690f7cd3437e5a42380af8f6161003",
+          "turn_id": "interactive::b01293416af9",
+          "uncertainty_band": "low"
+        },
+        "scenario": "weak",
+        "session_kind": "interactive_turn",
+        "summary": {
+          "answer_mode": "grounded_fact",
+          "final_answer_mode": "grounded_fact",
+          "question_class": "project_phase_capability",
+          "response_text": "This local shell answers only from approved AGIFCore local truth and runtime state. Available runtime surfaces: session_open, conversation_turn, state_export, trace_export, memory_review_export, safe_shutdown."
+        }
+      },
+      {
+        "case_id": "demo_interactive_desktop_ui",
+        "payload": {
+          "chat_transcript": [
+            {
+              "speaker": "user",
+              "text": "what can you do"
+            },
+            {
+              "answer_mode": "grounded_fact",
+              "final_answer_mode": "grounded_fact",
+              "speaker": "assistant",
+              "text": "This local shell answers only from approved AGIFCore local truth and runtime state. Available runtime surfaces: session_open, conversation_turn, state_export, trace_export, memory_review_export, safe_shutdown."
+            },
+            {
+              "speaker": "user",
+              "text": "what can you do"
+            },
+            {
+              "answer_mode": "grounded_fact",
+              "final_answer_mode": "grounded_fact",
+              "speaker": "assistant",
+              "text": "This local shell answers only from approved AGIFCore local truth and runtime state. Available runtime surfaces: session_open, conversation_turn, state_export, trace_export, memory_review_export, safe_shutdown."
+            },
+            {
+              "speaker": "user",
+              "text": "what evidence supports that"
+            },
+            {
+              "answer_mode": "grounded_fact",
+              "final_answer_mode": "grounded_fact",
+              "speaker": "assistant",
+              "text": "The previous answer was supported by these local refs: dynamic::runtime_limits:1, dynamic::runtime_limits:2, dynamic::runtime_shell_snapshot:1, dynamic::runtime_shell_snapshot:2."
+            }
+          ],
+          "input_contract": {
+            "max_chars": 512,
+            "placeholder": "Ask the local AGIFCore shell a question"
+          },
+          "latest_turn": {
+            "abstain_or_answer": "answer",
+            "answer_mode": "grounded_fact",
+            "conversation_id": "conv-p10-weak",
+            "critique_diagnosis_fired": true,
+            "derived_question_class": "support_diagnostics",
+            "extracted_target": null,
+            "final_answer_mode": "grounded_fact",
+            "follow_up_bound": true,
+            "graph_support_consulted": true,
+            "knowledge_gap_reason": "none",
+            "live_measurement_required": false,
+            "local_sources_consulted": [
+              {
+                "line_number": 1,
+                "path": "dynamic::interactive_history",
+                "ref": "dynamic::interactive_history:1",
+                "source_id": "interactive_history"
+              },
+              {
+                "line_number": 3,
+                "path": "dynamic::interactive_history",
+                "ref": "dynamic::interactive_history:3",
+                "source_id": "interactive_history"
+              },
+              {
+                "line_number": 2,
+                "path": "dynamic::runtime_limits",
+                "ref": "dynamic::runtime_limits:2",
+                "source_id": "runtime_limits"
+              },
+              {
+                "line_number": 1,
+                "path": "dynamic::runtime_limits",
+                "ref": "dynamic::runtime_limits:1",
+                "source_id": "runtime_limits"
+              },
+              {
+                "line_number": 1,
+                "path": "dynamic::runtime_shell_snapshot",
+                "ref": "dynamic::runtime_shell_snapshot:1",
+                "source_id": "runtime_shell_snapshot"
+              },
+              {
+                "line_number": 1,
+                "path": "projects/agifcore_master/01_plan/PHASE_INDEX.md",
+                "ref": "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+                "source_id": "phase_truth"
+              },
+              {
+                "line_number": 2,
+                "path": "projects/agifcore_master/01_plan/PHASE_INDEX.md",
+                "ref": "projects/agifcore_master/01_plan/PHASE_INDEX.md:2",
+                "source_id": "phase_truth"
+              },
+              {
+                "line_number": 2,
+                "path": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md",
+                "ref": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+                "source_id": "human_target"
+              }
+            ],
+            "local_truth_refs": [
+              "dynamic::interactive_history:1",
+              "dynamic::interactive_history:3",
+              "dynamic::runtime_limits:2",
+              "dynamic::runtime_limits:1",
+              "dynamic::runtime_shell_snapshot:1",
+              "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+              "projects/agifcore_master/01_plan/PHASE_INDEX.md:2",
+              "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2"
+            ],
+            "memory_consulted": true,
+            "next_action": "answer",
+            "notes": [
+              "real live question-driven path through bounded AGIFCore phases",
+              "uses approved local truth only",
+              "keeps the older scenario harness separate for proof/demo review",
+              "no approval implied"
+            ],
+            "phase10_public_explanation": "A missing variable or ambiguity remains, so the next safe move is a bounded clarification.",
+            "phase10_selected_outcome": "clarify",
+            "phase11_read_only_refs": [],
+            "phase12_read_only_refs": [
+              "phase12_gap::6061daca1549",
+              "phase12_gap::7cf580032ce2"
+            ],
+            "phase14_budget_allowed": false,
+            "phase14_budget_state": "profile_mismatch",
+            "phase14_profile": "laptop",
+            "phase14_selected_cell_count": 8,
+            "phase14_selected_tissue_count": 2,
+            "phase2_evidence": {
+              "replay_verification": {
+                "conversation_id": "conv-p10-weak",
+                "replay_id": "replay::729e0d4a8e69",
+                "replay_match": false,
+                "state_anchor_hash": "d5726060ebe4c914ecb75415e2ab1e72b31ea1c639fc8672453ee83a326165b9",
+                "state_match": false,
+                "trace_anchor_hash": "cfc3399dc0cdaaf5cb16b2a0c1ce49aabd04ca7bd37cb26914284e8f4627b187",
+                "trace_match": true,
+                "turn_id": "interactive::76a095ae3942"
+              },
+              "trace_export": [
+                {
+                  "conversation_id": "conv-p10-weak",
+                  "critic_trace_ref": "critic::281191618657",
+                  "discourse_mode": "explain",
+                  "event_id": "evt-86ec306b76484767a692516a6b272856",
+                  "event_type": "turn_admitted",
+                  "final_answer_mode": null,
+                  "governance_trace_ref": "governance::80b81a8b497a",
+                  "knowledge_gap_reason": "none",
+                  "next_action": "answer",
+                  "occurred_at": "2026-04-02T07:46:54+00:00",
+                  "payload_size_bytes": 1060,
+                  "planner_trace_ref": "planner::b4b4c2e26a94",
+                  "producer": "phase13-live-turn",
+                  "sequence": 1,
+                  "simulation_trace_ref": "21457c8eaba789ad54767eae5d406f43cff40cea1f5249149031893e8c32a964",
+                  "support_state": "grounded",
+                  "turn_id": "interactive::76a095ae3942"
+                },
+                {
+                  "conversation_id": "conv-p10-weak",
+                  "critic_trace_ref": "critic::281191618657",
+                  "discourse_mode": "explain",
+                  "event_id": "evt-8a63d9aabe6946ad8089b46f2970fd04",
+                  "event_type": "trace_annotated",
+                  "final_answer_mode": null,
+                  "governance_trace_ref": "governance::80b81a8b497a",
+                  "knowledge_gap_reason": "none",
+                  "next_action": "answer",
+                  "occurred_at": "2026-04-02T07:46:54+00:00",
+                  "payload_size_bytes": 1064,
+                  "planner_trace_ref": "planner::b4b4c2e26a94",
+                  "producer": "phase13-live-turn",
+                  "sequence": 2,
+                  "simulation_trace_ref": "21457c8eaba789ad54767eae5d406f43cff40cea1f5249149031893e8c32a964",
+                  "support_state": "grounded",
+                  "turn_id": "interactive::76a095ae3942"
+                },
+                {
+                  "conversation_id": "conv-p10-weak",
+                  "critic_trace_ref": "critic::281191618657",
+                  "discourse_mode": "explain",
+                  "event_id": "evt-efcd273ea36e43a6b002d968c280bbe3",
+                  "event_type": "governance_decided",
+                  "final_answer_mode": null,
+                  "governance_trace_ref": "governance::80b81a8b497a",
+                  "knowledge_gap_reason": "none",
+                  "next_action": "answer",
+                  "occurred_at": "2026-04-02T07:46:54+00:00",
+                  "payload_size_bytes": 1070,
+                  "planner_trace_ref": "planner::b4b4c2e26a94",
+                  "producer": "phase13-live-turn",
+                  "sequence": 3,
+                  "simulation_trace_ref": "21457c8eaba789ad54767eae5d406f43cff40cea1f5249149031893e8c32a964",
+                  "support_state": "grounded",
+                  "turn_id": "interactive::76a095ae3942"
+                },
+                {
+                  "conversation_id": "conv-p10-weak",
+                  "critic_trace_ref": "critic::281191618657",
+                  "discourse_mode": "explain",
+                  "event_id": "evt-36193b4468dc4f2fa3eef9db2c710cfb",
+                  "event_type": "response_ready",
+                  "final_answer_mode": "grounded_fact",
+                  "governance_trace_ref": "governance::80b81a8b497a",
+                  "knowledge_gap_reason": "none",
+                  "next_action": "answer",
+                  "occurred_at": "2026-04-02T07:46:54+00:00",
+                  "payload_size_bytes": 1373,
+                  "planner_trace_ref": "planner::b4b4c2e26a94",
+                  "producer": "phase13-live-turn",
+                  "sequence": 4,
+                  "simulation_trace_ref": "21457c8eaba789ad54767eae5d406f43cff40cea1f5249149031893e8c32a964",
+                  "support_state": "grounded",
+                  "turn_id": "interactive::76a095ae3942"
+                }
+              ],
+              "workspace_memory_review_export": {
+                "memory_review_refs": [
+                  {
+                    "conversation_id": "conv-p10-weak",
+                    "memory_review_ref": "memory-review-00000011",
+                    "turn_id": "interactive::76a095ae3942"
+                  }
+                ],
+                "notes": [
+                  "references only",
+                  "no semantic memory",
+                  "no procedural memory",
+                  "no graph persistence"
+                ],
+                "retention_candidate_refs": [],
+                "schema": "agifcore.phase_02.memory_review_export.v1",
+                "workspace_id": "phase-13-live-interactive-workspace"
+              },
+              "workspace_state_export": {
+                "cells": [],
+                "created_at": "2026-04-02T07:46:54+00:00",
+                "evidence_refs": [
+                  "dynamic::interactive_history:1",
+                  "dynamic::interactive_history:3",
+                  "dynamic::runtime_limits:2",
+                  "dynamic::runtime_limits:1",
+                  "dynamic::runtime_shell_snapshot:1",
+                  "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+                  "projects/agifcore_master/01_plan/PHASE_INDEX.md:2",
+                  "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2"
+                ],
+                "memory_hook_surface": {
+                  "memory_review_refs": [
+                    {
+                      "conversation_id": "conv-p10-weak",
+                      "memory_review_ref": "memory-review-00000011",
+                      "turn_id": "interactive::76a095ae3942"
+                    }
+                  ],
+                  "notes": [
+                    "references only",
+                    "no semantic memory",
+                    "no procedural memory",
+                    "no graph persistence"
+                  ],
+                  "retention_candidate_refs": [],
+                  "schema": "agifcore.phase_02.memory_review_export.v1",
+                  "workspace_id": "phase-13-live-interactive-workspace"
+                },
+                "operator_commands": [
+                  "inspect_state",
+                  "plan_governed_action",
+                  "verify_or_replay",
+                  "rollback_or_quarantine",
+                  "export_evidence"
+                ],
+                "operator_log": [
+                  {
+                    "command_class": "inspect_state",
+                    "occurred_at": "2026-04-02T07:46:54+00:00",
+                    "turn_ref": "workspace://phase-13-live-interactive-workspace/turn/conv-p10-weak/interactive::76a095ae3942"
+                  }
+                ],
+                "quarantine_refs": [],
+                "replay_refs": [
+                  "replay::729e0d4a8e69"
+                ],
+                "rollback_refs": [],
+                "schema": "agifcore.phase_02.state_export.v1",
+                "turns": [
+                  {
+                    "abstain_or_answer": "answer",
+                    "active_context_refs": [
+                      "dynamic::interactive_history:1",
+                      "dynamic::interactive_history:3",
+                      "dynamic::runtime_limits:2",
+                      "dynamic::runtime_limits:1",
+                      "dynamic::runtime_shell_snapshot:1",
+                      "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+                      "projects/agifcore_master/01_plan/PHASE_INDEX.md:2",
+                      "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2"
+                    ],
+                    "conversation_id": "conv-p10-weak",
+                    "critic_trace_ref": "critic::281191618657",
+                    "discourse_mode": "explain",
+                    "final_answer_mode": "grounded_fact",
+                    "governance_trace_ref": "governance::80b81a8b497a",
+                    "knowledge_gap_reason": "none",
+                    "last_event_type": "response_ready",
+                    "memory_review_ref": "memory-review-00000011",
+                    "next_action": "answer",
+                    "planner_trace_ref": "planner::b4b4c2e26a94",
+                    "response_text": "The previous answer was supported by these local refs: dynamic::runtime_limits:1, dynamic::runtime_limits:2, dynamic::runtime_shell_snapshot:1, dynamic::runtime_shell_snapshot:2.",
+                    "simulation_trace_ref": "21457c8eaba789ad54767eae5d406f43cff40cea1f5249149031893e8c32a964",
+                    "support_state": "grounded",
+                    "turn_id": "interactive::76a095ae3942",
+                    "turn_ref": "workspace://phase-13-live-interactive-workspace/turn/conv-p10-weak/interactive::76a095ae3942",
+                    "user_intent": "general_question",
+                    "workspace_updated_at": "2026-04-02T07:46:54+00:00"
+                  }
+                ],
+                "workspace_id": "phase-13-live-interactive-workspace"
+              }
+            },
+            "phase2_replay_match": false,
+            "phase2_trace_record_count": 4,
+            "phase7_question_category": "ordinary",
+            "phase_usage": {
+              "phase_10": {
+                "diagnosis_ref": "weak_answer_diagnosis::5394f7430cce",
+                "selected_outcome": "clarify",
+                "used": true
+              },
+              "phase_11": {
+                "monitoring_ref_count": 0,
+                "read_only_context": true,
+                "used": false
+              },
+              "phase_12": {
+                "read_only_context": true,
+                "selected_gap_count": 2,
+                "used": false
+              },
+              "phase_13": {
+                "session_id": "phase13_session::ff1815e1d727",
+                "shell_snapshot_hash": "f46946f2225df0bfa7a5a2295580a3ca676a5e8a68043b87fd38c136eca1b743",
+                "used": true
+              },
+              "phase_14": {
+                "budget_receipt_hash": "300ca592fb335f333f420197e7dd976936c0fce252e4f8aa94f55c3c088cd409",
+                "budget_state": "profile_mismatch",
+                "profile": "laptop",
+                "selected_active_cell_count": 8,
+                "used": true
+              },
+              "phase_15": {
+                "review_ready_fields_present": true,
+                "turn_evidence_ref": "phase15::interactive_turn::5bfcdb59219f",
+                "used": true
+              },
+              "phase_2": {
+                "event_count": 4,
+                "replay_id": "replay::729e0d4a8e69",
+                "trace_record_count": 4,
+                "used": true
+              },
+              "phase_3": {
+                "route_families": [
+                  "critic_error_monitor",
+                  "audit_replay",
+                  "continuity_self_history"
+                ],
+                "selected_cell_ids": [
+                  "cell_0001",
+                  "cell_0002",
+                  "cell_0003",
+                  "cell_0004",
+                  "cell_0005",
+                  "cell_0065",
+                  "cell_0066",
+                  "cell_0067"
+                ],
+                "selected_tissue_ids": [
+                  "tissue_01",
+                  "tissue_03"
+                ],
+                "used": true
+              },
+              "phase_4": {
+                "continuity_anchor_count": 7,
+                "procedural_entry_count": 3,
+                "semantic_entry_count": 8,
+                "used": true
+              },
+              "phase_5": {
+                "concept_node_count": 8,
+                "descriptor_node_count": 8,
+                "selected_candidate_ids": [
+                  "skill::skill-local-truth-answer",
+                  "skill::skill-bounded-clarify",
+                  "skill::skill-bounded-abstain",
+                  "descriptor::desc-01",
+                  "descriptor::desc-02"
+                ],
+                "skill_node_count": 3,
+                "used": true
+              },
+              "phase_6": {
+                "candidate_future_hash": "b054a8ab02655f9fe82b66ae1b737200c62a3c0efc78e5d749d16eacafd1946c",
+                "simulation_hash": "21457c8eaba789ad54767eae5d406f43cff40cea1f5249149031893e8c32a964",
+                "used": false,
+                "usefulness_hash": "e328b63bc458250bb2d6f9016027a07becd25c6812d19fa81f3f43f9ec6d12ca",
+                "world_model_hash": "163bbe681d542f9b1c71582b46b12be9a9af53328f9e0a222351ca9dbb5096c4"
+              },
+              "phase_7": {
+                "answer_contract_hash": "353380397482a35b7388d3cf06bb6855c2976e4586116674f09e1fe261fccd0b",
+                "next_action": "answer",
+                "question_category": "ordinary",
+                "support_state": "inferred",
+                "used": true
+              },
+              "phase_8": {
+                "entity_request_hash": "aa92b6306a09fd3da0730f0a1e002471117a7837e7209be02c68356db2e634d6",
+                "reasoning_summary_hash": "28e511e359372eef604fab4c62fd998c1fe3d62915542ef77590ea8fa3752769",
+                "used": false
+              },
+              "phase_9": {
+                "overlay_hash": "a255dfb01bc891077b8b7eb276f680d27657d72bcc24c290246ddb441839b1a3",
+                "selected_lane": "synthesis",
+                "used": true
+              }
+            },
+            "phases_exercised": [
+              2,
+              3,
+              4,
+              5,
+              7,
+              9,
+              10,
+              13,
+              14,
+              15
+            ],
+            "question_class": "support_diagnostics",
+            "question_text": "what evidence supports that",
+            "request_text": "what evidence supports that",
+            "response_kind": "bounded_answer",
+            "response_text": "The previous answer was supported by these local refs: dynamic::runtime_limits:1, dynamic::runtime_limits:2, dynamic::runtime_shell_snapshot:1, dynamic::runtime_shell_snapshot:2.",
+            "schema": "agifcore.phase_13.interactive_turn.v1",
+            "selected_candidate_ids": [
+              "skill::skill-local-truth-answer",
+              "skill::skill-bounded-clarify",
+              "skill::skill-bounded-abstain",
+              "descriptor::desc-01",
+              "descriptor::desc-02"
+            ],
+            "session_id": "phase13_session::ff1815e1d727",
+            "simulation_world_model_consulted": false,
+            "source_set_used": [
+              "interactive_history",
+              "runtime_limits",
+              "runtime_shell_snapshot",
+              "phase_truth",
+              "human_target"
+            ],
+            "support_snippets": [
+              {
+                "ref": "dynamic::interactive_history:1",
+                "score": 3,
+                "text": "Recent interactive turn 1 used question class project_phase_capability with support state grounded and next action answer."
+              },
+              {
+                "ref": "dynamic::interactive_history:3",
+                "score": 3,
+                "text": "Recent interactive turn 2 used question class project_phase_capability with support state grounded and next action answer."
+              },
+              {
+                "ref": "dynamic::runtime_limits:2",
+                "score": 3,
+                "text": "Unsupported or missing-local-support questions must fail closed with clarify, abstain, or search_needed."
+              },
+              {
+                "ref": "dynamic::runtime_limits:1",
+                "score": 3,
+                "text": "This local shell answers only from approved AGIFCore local truth and runtime state."
+              },
+              {
+                "ref": "dynamic::runtime_shell_snapshot:1",
+                "score": 3,
+                "text": "Local AGIFCore runtime shell session phase13_session::ff1815e1d727 is active for conversation conv-p10-weak."
+              },
+              {
+                "ref": "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+                "score": 3,
+                "text": "Phase 0 is `approved` in the live gate files, with title `AGIFCore reset and source freeze`."
+              },
+              {
+                "ref": "projects/agifcore_master/01_plan/PHASE_INDEX.md:2",
+                "score": 3,
+                "text": "Phase 1 is `approved` in the live gate files, with title `constitution and full-system blueprint`."
+              },
+              {
+                "ref": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+                "score": 3,
+                "text": "build and revise internal support"
+              }
+            ],
+            "support_state": "grounded",
+            "target_grounded": null,
+            "turn_hash": "c36b872b00b95275048fe58a9fa978885c3f3504017200fbb0bce6db2c4c577f",
+            "turn_id": "interactive::76a095ae3942",
+            "uncertainty_band": "low"
+          },
+          "message_count": 6,
+          "schema": "agifcore.phase_13.local_desktop_chat_demo.v1",
+          "selected_view": "chat_workspace",
+          "session_id": "phase13_session::ff1815e1d727",
+          "snapshot_hash": "9eaf0ec6e66d463487b874e1d75266b4708218e78080c1fa8cc2d8927580729c",
+          "turn_count": 3,
+          "view_count": 7,
+          "views": [
+            {
+              "evidence_refs": [
+                "phase8.summary.ref.001",
+                "phase8.summary.ref.002",
+                "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+                "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797"
+              ],
+              "status": "ready",
+              "summary_lines": [
+                "session_id=phase13_session::ff1815e1d727",
+                "interactive_turn_count=3",
+                "available_surfaces=6"
+              ],
+              "title": "Session Overview",
+              "view_id": "session_overview"
+            },
+            {
+              "evidence_refs": [
+                "dynamic::interactive_history:1",
+                "dynamic::interactive_history:3",
+                "dynamic::runtime_limits:2",
+                "dynamic::runtime_limits:1"
+              ],
+              "status": "ready",
+              "summary_lines": [
+                "The previous answer was supported by these local refs: dynamic::runtime_limits:1, dynamic::runtime_limits:2, dynamic::runtime_shell_snapshot:1, dynamic::runtime_shell_snapshot:2.",
+                "message_count=6",
+                "desktop host presents runtime truth only"
+              ],
+              "title": "Chat Workspace",
+              "view_id": "chat_workspace"
+            },
+            {
+              "evidence_refs": [
+                "dynamic::interactive_history:1",
+                "dynamic::interactive_history:3",
+                "dynamic::runtime_limits:2",
+                "dynamic::runtime_limits:1"
+              ],
+              "status": "ready",
+              "summary_lines": [
+                "question_class=support_diagnostics",
+                "answer_mode=grounded_fact",
+                "support_state=grounded"
+              ],
+              "title": "Turn Evidence",
+              "view_id": "turn_evidence_view"
+            },
+            {
+              "evidence_refs": [
+                "phase8.summary.ref.001",
+                "phase8.summary.ref.002",
+                "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+                "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797"
+              ],
+              "status": "ready",
+              "summary_lines": [
+                "trace_record_count=2",
+                "phases_exercised=2, 3, 4, 5, 7, 9, 10, 13, 14, 15"
+              ],
+              "title": "Trace Export",
+              "view_id": "trace_export_view"
+            },
+            {
+              "evidence_refs": [
+                "phase8.summary.ref.001",
+                "phase8.summary.ref.002",
+                "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+                "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797"
+              ],
+              "status": "ready",
+              "summary_lines": [
+                "state_schema=agifcore.phase_02.state_export.v1",
+                "payload_bytes=4794"
+              ],
+              "title": "State Export",
+              "view_id": "state_export_view"
+            },
+            {
+              "evidence_refs": [
+                "5df43dd942d8223120c35caabca11ef3cd7e3e5c4d0e2ca4e598770cf6bcb381",
+                "91918ef29258bcb918e7c81125f97ce3275066f6379a8def247f869bc2070a65",
+                "669c174e25f890252fd4495af3d72a8d1702232b582f09bae06e7332700cc452"
+              ],
+              "status": "ready",
+              "summary_lines": [
+                "memory_ref_count=1",
+                "continuity_ref_count=3"
+              ],
+              "title": "Memory Review Export",
+              "view_id": "memory_review_view"
+            },
+            {
+              "evidence_refs": [
+                "phase8.summary.ref.001",
+                "phase8.summary.ref.002",
+                "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+                "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797"
+              ],
+              "status": "blocked_states_visible",
+              "summary_lines": [
+                "blocked_state_count=6",
+                "unsupported questions stay explicit and inspectable"
+              ],
+              "title": "Fail-Closed Help",
+              "view_id": "fail_closed_help_view"
+            }
+          ]
+        },
+        "scenario": "weak",
+        "session_kind": "interactive_desktop_ui",
+        "summary": {
+          "latest_answer_mode": "grounded_fact",
+          "latest_question_class": "support_diagnostics",
+          "message_count": 6,
+          "selected_view": "chat_workspace",
+          "view_count": 7
+        }
+      },
+      {
+        "case_id": "demo_safe_shutdown",
+        "payload": {
+          "api_surface": "safe_shutdown",
+          "contract_hash": "a04d16073a4f4547ce9f1affffd3861577aeb70ae856d2bb4e00defa7a616ea4",
+          "gateway_response": {
+            "envelope": {
+              "allowed": true,
+              "allowlisted_routes": [
+                "/api/session-open",
+                "/api/conversation-turn",
+                "/api/state-export",
+                "/api/trace-export",
+                "/api/memory-review-export",
+                "/api/safe-shutdown",
+                "/api/task-submit",
+                "/api/policy-update",
+                "/api/fail-closed-help",
+                "/api/installer-status"
+              ],
+              "deny_reason": null,
+              "envelope_hash": "1da9e81823e36a2aeaafb75109a2fd1bbb1a9d9cac67c7dc72c4a2e1e2244055",
+              "method": "POST",
+              "occurred_at": "2026-04-02T07:46:54+00:00",
+              "payload_size_bytes": 2,
+              "policy_hash": "45fcfe10482df4337c115817be823b9c5f07ed65d9de89421fd578212a3658c4",
+              "request_count": 2,
+              "request_id": "558e10ef618501b7",
+              "requested_surface": "safe_shutdown",
+              "route": "/api/safe-shutdown",
+              "schema": "agifcore.phase_13.gateway_envelope.v1",
+              "session_id": "phase13_session::ec190ca70ff6"
+            },
+            "policy_hash": "45fcfe10482df4337c115817be823b9c5f07ed65d9de89421fd578212a3658c4",
+            "response": {
+              "blocked_surfaces_after_shutdown": [
+                "session_open",
+                "conversation_turn",
+                "state_export",
+                "trace_export",
+                "memory_review_export",
+                "safe_shutdown",
+                "task_submit",
+                "policy_update"
+              ],
+              "conversation_id": "conv-p10-contradiction",
+              "dropped_work_detected": false,
+              "flush_complete": true,
+              "memory_review_export_hash": "5799a5e3c1f187a77859bd144270645c8117c7a9169ed1f5716ed1b4d0c3f891",
+              "receipt_hash": "a55a398a6b16edb1794049818611623580ff52e87825135f09f81c644dfd3760",
+              "rollback_refs": [
+                "rollback::phase11_proposal::85d913641a4b"
+              ],
+              "schema": "agifcore.phase_13.safe_shutdown.v1",
+              "session_id": "phase13_session::ec190ca70ff6",
+              "shutdown_requested_at": "2026-04-02T07:46:53+00:00",
+              "shutdown_status": "safe_stopped",
+              "state_export_hash": "5a3dd217c07e1652af0f9293346aef436846323d82c6fd87e63e7f717aeccbd2",
+              "trace_export_hash": "bba4f88fe30a4d1b9bf3959e2c61da9a2dd85937e2a71d56b2ae9ab1f4c01dd0",
+              "turn_id": "turn-p10-contradiction"
+            },
+            "route": "/api/safe-shutdown",
+            "schema": "agifcore.phase_13.gateway_response.v1",
+            "status": "pass",
+            "surface_name": "safe_shutdown"
+          },
+          "schema": "agifcore.phase_13.embeddable_runtime_api.v1",
+          "session_id": "phase13_session::ec190ca70ff6",
+          "status": "pass"
+        },
+        "scenario": "contradiction",
+        "session_kind": "safe_shutdown",
+        "summary": {
+          "blocked_surface_count": 8,
+          "flush_complete": true,
+          "shutdown_status": "safe_stopped"
+        }
+      },
+      {
+        "case_id": "demo_laptop_profile_manifest",
+        "payload": {
+          "active_cell_band": {
+            "max": 128,
+            "min": 64
+          },
+          "correctness_privilege": false,
+          "diagnostics_scope": "reference evidence capture",
+          "profile": "laptop",
+          "profile_hash": "bf2b42009e83f7886e5991e41e5a206215ce0fc6b3441a8767be498a5a331ba6",
+          "profile_role": "reference product runtime",
+          "same_architecture_preserved": true,
+          "same_blocked_surface_names": [
+            "task_submit",
+            "policy_update"
+          ],
+          "same_contract_hash": "a4b5ddf226b315733337354ea7731744c45d57a5ea440bee9824dbc33b06a0be",
+          "same_gateway_route_count": 10,
+          "same_public_surfaces": [
+            "session_open",
+            "conversation_turn",
+            "state_export",
+            "trace_export",
+            "memory_review_export",
+            "safe_shutdown"
+          ],
+          "same_ui_view_count": 7,
+          "schema": "agifcore.phase_14.profile_manifest.v1",
+          "target_active_cells": 96
+        },
+        "scenario": "weak",
+        "session_kind": "profile_manifest",
+        "summary": {
+          "active_cell_band": {
+            "max": 128,
+            "min": 64
+          },
+          "profile": "laptop",
+          "same_contract_hash": "a4b5ddf226b315733337354ea7731744c45d57a5ea440bee9824dbc33b06a0be"
+        }
+      },
+      {
+        "case_id": "demo_mobile_profile_manifest",
+        "payload": {
+          "active_cell_band": {
+            "max": 24,
+            "min": 8
+          },
+          "correctness_privilege": false,
+          "diagnostics_scope": "bounded local diagnostics only",
+          "profile": "mobile",
+          "profile_hash": "8132cde1ea5f35cce06612042ae47177b581bb2d691752bd742b9f57aa47ff5c",
+          "profile_role": "constrained product runtime",
+          "same_architecture_preserved": true,
+          "same_blocked_surface_names": [
+            "task_submit",
+            "policy_update"
+          ],
+          "same_contract_hash": "a4b5ddf226b315733337354ea7731744c45d57a5ea440bee9824dbc33b06a0be",
+          "same_gateway_route_count": 10,
+          "same_public_surfaces": [
+            "session_open",
+            "conversation_turn",
+            "state_export",
+            "trace_export",
+            "memory_review_export",
+            "safe_shutdown"
+          ],
+          "same_ui_view_count": 7,
+          "schema": "agifcore.phase_14.profile_manifest.v1",
+          "target_active_cells": 16
+        },
+        "scenario": "weak",
+        "session_kind": "profile_manifest",
+        "summary": {
+          "active_cell_band": {
+            "max": 24,
+            "min": 8
+          },
+          "profile": "mobile",
+          "same_contract_hash": "a4b5ddf226b315733337354ea7731744c45d57a5ea440bee9824dbc33b06a0be"
+        }
+      },
+      {
+        "case_id": "demo_sandbox_allowed",
+        "payload": {
+          "admitted": true,
+          "bundle_integrity_verified": true,
+          "command": [
+            "/Users/ahsadin/.wasmtime/bin/wasmtime",
+            "run",
+            "-W",
+            "fuel=100000000",
+            "-W",
+            "max-memory-size=268435456",
+            "-W",
+            "timeout=1000ms",
+            "-W",
+            "trap-on-grow-failure=y",
+            "--invoke",
+            "add",
+            "/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/sandbox_packages/phase14_laptop_valid_sample_module.wat",
+            "1",
+            "2"
+          ],
+          "executed_at": "2026-04-02T07:46:54+00:00",
+          "exit_code": 0,
+          "fuel_limit": 100000000,
+          "function_args": [
+            "1",
+            "2"
+          ],
+          "function_name": "add",
+          "memory_limit_bytes": 268435456,
+          "memory_limit_mb": 256,
+          "package_id": "phase14_wasm_package::laptop::valid",
+          "phase15_blocked": true,
+          "phase16_blocked": true,
+          "policy_id": "laptop_default_policy",
+          "profile": "laptop",
+          "profile_allowed": true,
+          "reason_code": "none",
+          "receipt_hash": "1d1dbcf747458947cd782d9bc89e2cd789ba6b14e02f7614b87b2cc571c0c8f9",
+          "sandbox_backend": "wasmtime_cli",
+          "sandboxed_execution": true,
+          "schema": "agifcore.phase_14.sandbox_execution_receipt.v1",
+          "status": "pass",
+          "stderr": "warning: using `--invoke` with a function that takes arguments is experimental and may break in the future\nwarning: using `--invoke` with a function that returns values is experimental and may break in the future",
+          "stdout": "3",
+          "wall_time_limit_ms": 1000,
+          "wasmtime_cli_path": "/Users/ahsadin/.wasmtime/bin/wasmtime"
+        },
+        "scenario": "weak",
+        "session_kind": "sandbox_execute",
+        "summary": {
+          "reason_code": "none",
+          "status": "pass",
+          "stdout": "3"
+        }
+      },
+      {
+        "case_id": "demo_sandbox_tampered",
+        "payload": {
+          "admitted": false,
+          "bundle_integrity_verified": false,
+          "command": [],
+          "executed_at": "2026-04-02T07:46:54+00:00",
+          "exit_code": null,
+          "fuel_limit": 100000000,
+          "function_args": [
+            "1",
+            "2"
+          ],
+          "function_name": "add",
+          "memory_limit_bytes": 268435456,
+          "memory_limit_mb": 256,
+          "package_id": "phase14_wasm_package::laptop::tampered",
+          "phase15_blocked": true,
+          "phase16_blocked": true,
+          "policy_id": "laptop_default_policy",
+          "profile": "laptop",
+          "profile_allowed": true,
+          "reason_code": "BUNDLE_INTEGRITY_REQUIRED",
+          "receipt_hash": "918cce1502413c9ae4960461c1d54962682f8535bf0e54428396d684e874746c",
+          "sandbox_backend": "wasmtime_cli",
+          "sandboxed_execution": true,
+          "schema": "agifcore.phase_14.sandbox_execution_receipt.v1",
+          "status": "blocked",
+          "stderr": "",
+          "stdout": "",
+          "wall_time_limit_ms": 1000,
+          "wasmtime_cli_path": "/Users/ahsadin/.wasmtime/bin/wasmtime"
+        },
+        "scenario": "weak",
+        "session_kind": "sandbox_execute",
+        "summary": {
+          "reason_code": "BUNDLE_INTEGRITY_REQUIRED",
+          "status": "blocked",
+          "stdout": ""
+        }
+      },
+      {
+        "case_id": "demo_manifest_audit",
+        "payload": {
+          "audit_checks": [
+            {
+              "expected": "exactly 1 same contract hash",
+              "id": "same-contract-hash-single",
+              "observed": 1,
+              "passed": true
+            },
+            {
+              "expected": 1024,
+              "id": "literal-cell-count",
+              "observed": 1024,
+              "passed": true
+            },
+            {
+              "expected": 32,
+              "id": "literal-tissue-count",
+              "observed": 32,
+              "passed": true
+            },
+            {
+              "expected": "16 families with >=4 activation classes and >=4 evidence classes",
+              "id": "family-differentiation-present",
+              "observed": {
+                "activation_budget_class_count": 6,
+                "evidence_requirement_class_count": 7,
+                "family_count": 16
+              },
+              "passed": true
+            },
+            {
+              "expected": ">=2 tissue variants with >=2 continuity and >=2 escalation handling classes",
+              "id": "tissue-specialization-present",
+              "observed": {
+                "continuity_handling_class_count": 2,
+                "escalation_handling_class_count": 2,
+                "tissue_variant_count": 2
+              },
+              "passed": true
+            },
+            {
+              "expected": ">=3 profile patterns, >=3 dormancy classes, >=3 continuity classes",
+              "id": "constraint-diversity-present",
+              "observed": {
+                "allowed_profile_pattern_count": 3,
+                "continuity_requirement_class_count": 3,
+                "dormancy_behavior_class_count": 3
+              },
+              "passed": true
+            },
+            {
+              "expected": ">=8 exemplar classes, >=24 contract variants, >=8 operation signatures",
+              "id": "exemplar-layer-present",
+              "observed": {
+                "contract_variant_count": 128,
+                "exemplar_class_count": 8,
+                "operation_set_signature_count": 80
+              },
+              "passed": true
+            },
+            {
+              "expected": "mobile < laptop < builder active-cap totals",
+              "id": "profile-cap-ordering-valid",
+              "observed": {
+                "builder": 256,
+                "laptop": 128,
+                "mobile": 48
+              },
+              "passed": true
+            }
+          ],
+          "audit_hash": "5ccba9f8ae3f72abbce312f395d087b3983cbeafdb7304390bbc73da4ffd1525",
+          "audit_status": "pass",
+          "blocked_reason_codes": [],
+          "cell_manifest_hash": "c9074852a31b3bfa6caa9d0a05f4b24d035a392743c590573ae1a208c99659cf",
+          "differentiation_metrics": {
+            "activation_budget_class_count": 6,
+            "allowed_profile_pattern_count": 3,
+            "continuity_handling_class_count": 2,
+            "continuity_requirement_class_count": 3,
+            "contract_variant_count": 128,
+            "dormancy_behavior_class_count": 3,
+            "escalation_handling_class_count": 2,
+            "evidence_requirement_class_count": 7,
+            "exemplar_class_count": 8,
+            "family_count": 16,
+            "operation_set_signature_count": 80,
+            "tissue_variant_count": 2
+          },
+          "logical_cell_count": 1024,
+          "per_profile_total_active_cap": {
+            "builder": 256,
+            "laptop": 128,
+            "mobile": 48
+          },
+          "profile_count": 3,
+          "profile_manifest_hash": "51e5c47da22d2ce40b3f5885589863dbb77bd9dff2bda7e9527664ab7ddef83f",
+          "same_contract_hash_count": 1,
+          "same_contract_hashes": [
+            "a4b5ddf226b315733337354ea7731744c45d57a5ea440bee9824dbc33b06a0be"
+          ],
+          "schema": "agifcore.phase_14.manifest_audit.v1",
+          "tissue_count": 32,
+          "tissue_manifest_hash": "2d5a08fd64a67fb64584ddb66e555a7d1254fd379d07761ab2d5fbf2dbc2b800"
+        },
+        "scenario": "weak",
+        "session_kind": "manifest_audit",
+        "summary": {
+          "audit_status": "pass",
+          "logical_cell_count": 1024,
+          "tissue_count": 32
+        }
+      }
+    ],
+    "status": "pass"
+  },
+  "notes": [
+    "review-only final demo",
+    "Phase 15 remains open",
+    "no approval implied"
+  ],
+  "phase": "15",
+  "real_desktop_chat_demo": {
+    "api_routes": [
+      "/api/state",
+      "/api/turn",
+      "/api/reset",
+      "/api/scenario"
+    ],
+    "demo_id": "real_desktop_chat_demo",
+    "host_kind": "local_desktop_ui_browser_host",
+    "launch_command": "sh /Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/launch_phase_15_real_desktop_chat_demo.sh",
+    "notes": [
+      "local desktop chat demo only",
+      "desktop host presents runtime truth and does not own correctness",
+      "Phase 15 remains open",
+      "no approval implied"
+    ],
+    "phase": "15",
+    "runtime_host": "approved_phase13_desktop_ui",
+    "sample_prompts": [
+      "who are you",
+      "what can you do",
+      "what evidence supports that"
+    ],
+    "scenario": "weak",
+    "schema": "agifcore.phase_15.real_desktop_chat_demo.v1",
+    "status": "open",
+    "turn_summaries": [
+      {
+        "answer_mode": "grounded_fact",
+        "final_answer_mode": "grounded_fact",
+        "local_truth_refs": [
+          "dynamic::runtime_shell_snapshot:2",
+          "dynamic::runtime_shell_snapshot:1",
+          "dynamic::runtime_limits:1",
+          "dynamic::runtime_limits:2"
+        ],
+        "phases_exercised": [
+          2,
+          3,
+          4,
+          5,
+          7,
+          9,
+          13,
+          14,
+          15
+        ],
+        "question_class": "self_system_status",
+        "question_text": "who are you",
+        "response_text": "Available surfaces are session_open, conversation_turn, state_export, trace_export, memory_review_export, safe_shutdown. Local AGIFCore runtime shell session phase13_session::ff1815e1d727 is active for conversation conv-p10-weak.",
+        "support_state": "grounded"
+      },
+      {
+        "answer_mode": "grounded_fact",
+        "final_answer_mode": "grounded_fact",
+        "local_truth_refs": [
+          "dynamic::runtime_limits:1",
+          "dynamic::runtime_limits:2",
+          "dynamic::runtime_shell_snapshot:1",
+          "dynamic::runtime_shell_snapshot:2"
+        ],
+        "phases_exercised": [
+          2,
+          3,
+          4,
+          5,
+          7,
+          9,
+          13,
+          14,
+          15
+        ],
+        "question_class": "project_phase_capability",
+        "question_text": "what can you do",
+        "response_text": "This local shell answers only from approved AGIFCore local truth and runtime state. Available runtime surfaces: session_open, conversation_turn, state_export, trace_export, memory_review_export, safe_shutdown.",
+        "support_state": "grounded"
+      },
+      {
+        "answer_mode": "grounded_fact",
+        "final_answer_mode": "grounded_fact",
+        "local_truth_refs": [
+          "dynamic::memory_review_export:2",
+          "dynamic::memory_review_export:1",
+          "dynamic::interactive_history:1",
+          "dynamic::interactive_history:3"
+        ],
+        "phases_exercised": [
+          2,
+          3,
+          4,
+          5,
+          7,
+          9,
+          10,
+          13,
+          14,
+          15
+        ],
+        "question_class": "support_diagnostics",
+        "question_text": "what evidence supports that",
+        "response_text": "The previous answer was supported by these local refs: dynamic::runtime_limits:1, dynamic::runtime_limits:2, dynamic::runtime_shell_snapshot:1, dynamic::runtime_shell_snapshot:2.",
+        "support_state": "grounded"
+      }
+    ],
+    "ui_schema": "agifcore.phase_13.local_desktop_chat_demo.v1",
+    "ui_snapshot": {
+      "chat_transcript": [
+        {
+          "speaker": "user",
+          "text": "who are you"
+        },
+        {
+          "answer_mode": "grounded_fact",
+          "final_answer_mode": "grounded_fact",
+          "speaker": "assistant",
+          "text": "Available surfaces are session_open, conversation_turn, state_export, trace_export, memory_review_export, safe_shutdown. Local AGIFCore runtime shell session phase13_session::ff1815e1d727 is active for conversation conv-p10-weak."
+        },
+        {
+          "speaker": "user",
+          "text": "what can you do"
+        },
+        {
+          "answer_mode": "grounded_fact",
+          "final_answer_mode": "grounded_fact",
+          "speaker": "assistant",
+          "text": "This local shell answers only from approved AGIFCore local truth and runtime state. Available runtime surfaces: session_open, conversation_turn, state_export, trace_export, memory_review_export, safe_shutdown."
+        },
+        {
+          "speaker": "user",
+          "text": "what evidence supports that"
+        },
+        {
+          "answer_mode": "grounded_fact",
+          "final_answer_mode": "grounded_fact",
+          "speaker": "assistant",
+          "text": "The previous answer was supported by these local refs: dynamic::runtime_limits:1, dynamic::runtime_limits:2, dynamic::runtime_shell_snapshot:1, dynamic::runtime_shell_snapshot:2."
+        }
+      ],
+      "input_contract": {
+        "max_chars": 512,
+        "placeholder": "Ask the local AGIFCore shell a question"
+      },
+      "latest_turn": {
+        "abstain_or_answer": "answer",
+        "answer_mode": "grounded_fact",
+        "conversation_id": "conv-p10-weak",
+        "critique_diagnosis_fired": true,
+        "derived_question_class": "support_diagnostics",
+        "extracted_target": null,
+        "final_answer_mode": "grounded_fact",
+        "follow_up_bound": true,
+        "graph_support_consulted": true,
+        "knowledge_gap_reason": "none",
+        "live_measurement_required": false,
+        "local_sources_consulted": [
+          {
+            "line_number": 2,
+            "path": "dynamic::memory_review_export",
+            "ref": "dynamic::memory_review_export:2",
+            "source_id": "memory_review_export"
+          },
+          {
+            "line_number": 1,
+            "path": "dynamic::memory_review_export",
+            "ref": "dynamic::memory_review_export:1",
+            "source_id": "memory_review_export"
+          },
+          {
+            "line_number": 1,
+            "path": "dynamic::interactive_history",
+            "ref": "dynamic::interactive_history:1",
+            "source_id": "interactive_history"
+          },
+          {
+            "line_number": 3,
+            "path": "dynamic::interactive_history",
+            "ref": "dynamic::interactive_history:3",
+            "source_id": "interactive_history"
+          },
+          {
+            "line_number": 2,
+            "path": "dynamic::runtime_limits",
+            "ref": "dynamic::runtime_limits:2",
+            "source_id": "runtime_limits"
+          },
+          {
+            "line_number": 1,
+            "path": "dynamic::runtime_limits",
+            "ref": "dynamic::runtime_limits:1",
+            "source_id": "runtime_limits"
+          },
+          {
+            "line_number": 1,
+            "path": "dynamic::runtime_shell_snapshot",
+            "ref": "dynamic::runtime_shell_snapshot:1",
+            "source_id": "runtime_shell_snapshot"
+          },
+          {
+            "line_number": 2,
+            "path": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md",
+            "ref": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+            "source_id": "human_target"
+          }
+        ],
+        "local_truth_refs": [
+          "dynamic::memory_review_export:2",
+          "dynamic::memory_review_export:1",
+          "dynamic::interactive_history:1",
+          "dynamic::interactive_history:3",
+          "dynamic::runtime_limits:2",
+          "dynamic::runtime_limits:1",
+          "dynamic::runtime_shell_snapshot:1",
+          "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2"
+        ],
+        "memory_consulted": true,
+        "next_action": "answer",
+        "notes": [
+          "real live question-driven path through bounded AGIFCore phases",
+          "uses approved local truth only",
+          "keeps the older scenario harness separate for proof/demo review",
+          "no approval implied"
+        ],
+        "phase10_public_explanation": "A missing variable or ambiguity remains, so the next safe move is a bounded clarification.",
+        "phase10_selected_outcome": "clarify",
+        "phase11_read_only_refs": [],
+        "phase12_read_only_refs": [
+          "phase12_gap::6061daca1549",
+          "phase12_gap::7cf580032ce2"
+        ],
+        "phase14_budget_allowed": false,
+        "phase14_budget_state": "profile_mismatch",
+        "phase14_profile": "laptop",
+        "phase14_selected_cell_count": 8,
+        "phase14_selected_tissue_count": 2,
+        "phase2_evidence": {
+          "replay_verification": {
+            "conversation_id": "conv-p10-weak",
+            "replay_id": "replay::729e0d4a8e69",
+            "replay_match": false,
+            "state_anchor_hash": "c1ca2be879ea32a6b15f546ab77989f2ea9a53a4178f1705594952e4fa5ec635",
+            "state_match": false,
+            "trace_anchor_hash": "dfc7d87213f9271cd5c675357970345f26be387dac9d479e1defc40fd0183160",
+            "trace_match": true,
+            "turn_id": "interactive::76a095ae3942"
+          },
+          "trace_export": [
+            {
+              "conversation_id": "conv-p10-weak",
+              "critic_trace_ref": "critic::281191618657",
+              "discourse_mode": "explain",
+              "event_id": "evt-d505b0887a1f4b5abf7e0ad42c9356fc",
+              "event_type": "turn_admitted",
+              "final_answer_mode": null,
+              "governance_trace_ref": "governance::80b81a8b497a",
+              "knowledge_gap_reason": "none",
+              "next_action": "answer",
+              "occurred_at": "2026-04-02T07:46:54+00:00",
+              "payload_size_bytes": 1024,
+              "planner_trace_ref": "planner::b4b4c2e26a94",
+              "producer": "phase13-live-turn",
+              "sequence": 1,
+              "simulation_trace_ref": "bc068e7756b8d947efc9db03c2dc15b18788eed0a1f6463609eadd953b50060a",
+              "support_state": "grounded",
+              "turn_id": "interactive::76a095ae3942"
+            },
+            {
+              "conversation_id": "conv-p10-weak",
+              "critic_trace_ref": "critic::281191618657",
+              "discourse_mode": "explain",
+              "event_id": "evt-2cbd2a2028db4820a7dcaa923487797c",
+              "event_type": "trace_annotated",
+              "final_answer_mode": null,
+              "governance_trace_ref": "governance::80b81a8b497a",
+              "knowledge_gap_reason": "none",
+              "next_action": "answer",
+              "occurred_at": "2026-04-02T07:46:54+00:00",
+              "payload_size_bytes": 1028,
+              "planner_trace_ref": "planner::b4b4c2e26a94",
+              "producer": "phase13-live-turn",
+              "sequence": 2,
+              "simulation_trace_ref": "bc068e7756b8d947efc9db03c2dc15b18788eed0a1f6463609eadd953b50060a",
+              "support_state": "grounded",
+              "turn_id": "interactive::76a095ae3942"
+            },
+            {
+              "conversation_id": "conv-p10-weak",
+              "critic_trace_ref": "critic::281191618657",
+              "discourse_mode": "explain",
+              "event_id": "evt-fef4c134089d427e8f8d02f48f068c14",
+              "event_type": "governance_decided",
+              "final_answer_mode": null,
+              "governance_trace_ref": "governance::80b81a8b497a",
+              "knowledge_gap_reason": "none",
+              "next_action": "answer",
+              "occurred_at": "2026-04-02T07:46:54+00:00",
+              "payload_size_bytes": 1034,
+              "planner_trace_ref": "planner::b4b4c2e26a94",
+              "producer": "phase13-live-turn",
+              "sequence": 3,
+              "simulation_trace_ref": "bc068e7756b8d947efc9db03c2dc15b18788eed0a1f6463609eadd953b50060a",
+              "support_state": "grounded",
+              "turn_id": "interactive::76a095ae3942"
+            },
+            {
+              "conversation_id": "conv-p10-weak",
+              "critic_trace_ref": "critic::281191618657",
+              "discourse_mode": "explain",
+              "event_id": "evt-13087b2361af4d938d5e87873cad9133",
+              "event_type": "response_ready",
+              "final_answer_mode": "grounded_fact",
+              "governance_trace_ref": "governance::80b81a8b497a",
+              "knowledge_gap_reason": "none",
+              "next_action": "answer",
+              "occurred_at": "2026-04-02T07:46:54+00:00",
+              "payload_size_bytes": 1337,
+              "planner_trace_ref": "planner::b4b4c2e26a94",
+              "producer": "phase13-live-turn",
+              "sequence": 4,
+              "simulation_trace_ref": "bc068e7756b8d947efc9db03c2dc15b18788eed0a1f6463609eadd953b50060a",
+              "support_state": "grounded",
+              "turn_id": "interactive::76a095ae3942"
+            }
+          ],
+          "workspace_memory_review_export": {
+            "memory_review_refs": [
+              {
+                "conversation_id": "conv-p10-weak",
+                "memory_review_ref": "memory-review-00000011",
+                "turn_id": "interactive::76a095ae3942"
+              }
+            ],
+            "notes": [
+              "references only",
+              "no semantic memory",
+              "no procedural memory",
+              "no graph persistence"
+            ],
+            "retention_candidate_refs": [],
+            "schema": "agifcore.phase_02.memory_review_export.v1",
+            "workspace_id": "phase-13-live-interactive-workspace"
+          },
+          "workspace_state_export": {
+            "cells": [],
+            "created_at": "2026-04-02T07:46:54+00:00",
+            "evidence_refs": [
+              "dynamic::memory_review_export:2",
+              "dynamic::memory_review_export:1",
+              "dynamic::interactive_history:1",
+              "dynamic::interactive_history:3",
+              "dynamic::runtime_limits:2",
+              "dynamic::runtime_limits:1",
+              "dynamic::runtime_shell_snapshot:1",
+              "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2"
+            ],
+            "memory_hook_surface": {
+              "memory_review_refs": [
+                {
+                  "conversation_id": "conv-p10-weak",
+                  "memory_review_ref": "memory-review-00000011",
+                  "turn_id": "interactive::76a095ae3942"
+                }
+              ],
+              "notes": [
+                "references only",
+                "no semantic memory",
+                "no procedural memory",
+                "no graph persistence"
+              ],
+              "retention_candidate_refs": [],
+              "schema": "agifcore.phase_02.memory_review_export.v1",
+              "workspace_id": "phase-13-live-interactive-workspace"
+            },
+            "operator_commands": [
+              "inspect_state",
+              "plan_governed_action",
+              "verify_or_replay",
+              "rollback_or_quarantine",
+              "export_evidence"
+            ],
+            "operator_log": [
+              {
+                "command_class": "inspect_state",
+                "occurred_at": "2026-04-02T07:46:54+00:00",
+                "turn_ref": "workspace://phase-13-live-interactive-workspace/turn/conv-p10-weak/interactive::76a095ae3942"
+              }
+            ],
+            "quarantine_refs": [],
+            "replay_refs": [
+              "replay::729e0d4a8e69"
+            ],
+            "rollback_refs": [],
+            "schema": "agifcore.phase_02.state_export.v1",
+            "turns": [
+              {
+                "abstain_or_answer": "answer",
+                "active_context_refs": [
+                  "dynamic::memory_review_export:2",
+                  "dynamic::memory_review_export:1",
+                  "dynamic::interactive_history:1",
+                  "dynamic::interactive_history:3",
+                  "dynamic::runtime_limits:2",
+                  "dynamic::runtime_limits:1",
+                  "dynamic::runtime_shell_snapshot:1",
+                  "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2"
+                ],
+                "conversation_id": "conv-p10-weak",
+                "critic_trace_ref": "critic::281191618657",
+                "discourse_mode": "explain",
+                "final_answer_mode": "grounded_fact",
+                "governance_trace_ref": "governance::80b81a8b497a",
+                "knowledge_gap_reason": "none",
+                "last_event_type": "response_ready",
+                "memory_review_ref": "memory-review-00000011",
+                "next_action": "answer",
+                "planner_trace_ref": "planner::b4b4c2e26a94",
+                "response_text": "The previous answer was supported by these local refs: dynamic::runtime_limits:1, dynamic::runtime_limits:2, dynamic::runtime_shell_snapshot:1, dynamic::runtime_shell_snapshot:2.",
+                "simulation_trace_ref": "bc068e7756b8d947efc9db03c2dc15b18788eed0a1f6463609eadd953b50060a",
+                "support_state": "grounded",
+                "turn_id": "interactive::76a095ae3942",
+                "turn_ref": "workspace://phase-13-live-interactive-workspace/turn/conv-p10-weak/interactive::76a095ae3942",
+                "user_intent": "general_question",
+                "workspace_updated_at": "2026-04-02T07:46:54+00:00"
+              }
+            ],
+            "workspace_id": "phase-13-live-interactive-workspace"
+          }
+        },
+        "phase2_replay_match": false,
+        "phase2_trace_record_count": 4,
+        "phase7_question_category": "ordinary",
+        "phase_usage": {
+          "phase_10": {
+            "diagnosis_ref": "weak_answer_diagnosis::bdcc292d0a45",
+            "selected_outcome": "clarify",
+            "used": true
+          },
+          "phase_11": {
+            "monitoring_ref_count": 0,
+            "read_only_context": true,
+            "used": false
+          },
+          "phase_12": {
+            "read_only_context": true,
+            "selected_gap_count": 2,
+            "used": false
+          },
+          "phase_13": {
+            "session_id": "phase13_session::ff1815e1d727",
+            "shell_snapshot_hash": "70904b5be0bbdc51aaa64a37ce8bb28f7bd18fcf0edafe539aef72a9f1d70b76",
+            "used": true
+          },
+          "phase_14": {
+            "budget_receipt_hash": "300ca592fb335f333f420197e7dd976936c0fce252e4f8aa94f55c3c088cd409",
+            "budget_state": "profile_mismatch",
+            "profile": "laptop",
+            "selected_active_cell_count": 8,
+            "used": true
+          },
+          "phase_15": {
+            "review_ready_fields_present": true,
+            "turn_evidence_ref": "phase15::interactive_turn::85bbae65ff5d",
+            "used": true
+          },
+          "phase_2": {
+            "event_count": 4,
+            "replay_id": "replay::729e0d4a8e69",
+            "trace_record_count": 4,
+            "used": true
+          },
+          "phase_3": {
+            "route_families": [
+              "critic_error_monitor",
+              "audit_replay",
+              "continuity_self_history"
+            ],
+            "selected_cell_ids": [
+              "cell_0001",
+              "cell_0002",
+              "cell_0003",
+              "cell_0004",
+              "cell_0005",
+              "cell_0065",
+              "cell_0066",
+              "cell_0067"
+            ],
+            "selected_tissue_ids": [
+              "tissue_01",
+              "tissue_03"
+            ],
+            "used": true
+          },
+          "phase_4": {
+            "continuity_anchor_count": 7,
+            "procedural_entry_count": 3,
+            "semantic_entry_count": 8,
+            "used": true
+          },
+          "phase_5": {
+            "concept_node_count": 8,
+            "descriptor_node_count": 8,
+            "selected_candidate_ids": [
+              "descriptor::desc-04",
+              "concept::concept-04",
+              "descriptor::desc-07",
+              "concept::concept-07",
+              "skill::skill-local-truth-answer"
+            ],
+            "skill_node_count": 3,
+            "used": true
+          },
+          "phase_6": {
+            "candidate_future_hash": "6e7ad491c076ac3836e6d81dc02b38953fcd186ec3f63e087deadd923a9cb9c7",
+            "simulation_hash": "bc068e7756b8d947efc9db03c2dc15b18788eed0a1f6463609eadd953b50060a",
+            "used": false,
+            "usefulness_hash": "c2f2ec8778e1d7cdf4e9a81b533914722f9aaa69b8cca55519017db7063eb5fc",
+            "world_model_hash": "69d2ecc34301ecf1f573db9085a0e573e24ffc5479a72458b167b3d8f9176d76"
+          },
+          "phase_7": {
+            "answer_contract_hash": "67cd4157ab7133cb9e9fc22a33962765e00d616a42676b485d12762fb2cc592d",
+            "next_action": "answer",
+            "question_category": "ordinary",
+            "support_state": "inferred",
+            "used": true
+          },
+          "phase_8": {
+            "entity_request_hash": "6a2dbb6570ba124ce8958d1aaa8c8fe6e192c5e9c2ae2b36c1d5a7b20d4d1d28",
+            "reasoning_summary_hash": "76606062a0ec9fbf064ecb0fefefd2e5b4e1078067381bc7ea969bd5828b1d7e",
+            "used": false
+          },
+          "phase_9": {
+            "overlay_hash": "2b03321393c94d7e19241be5a51f8d22dba10a429bb64f3a88f8a675775ef6b4",
+            "selected_lane": "synthesis",
+            "used": true
+          }
+        },
+        "phases_exercised": [
+          2,
+          3,
+          4,
+          5,
+          7,
+          9,
+          10,
+          13,
+          14,
+          15
+        ],
+        "question_class": "support_diagnostics",
+        "question_text": "what evidence supports that",
+        "request_text": "what evidence supports that",
+        "response_kind": "bounded_answer",
+        "response_text": "The previous answer was supported by these local refs: dynamic::runtime_limits:1, dynamic::runtime_limits:2, dynamic::runtime_shell_snapshot:1, dynamic::runtime_shell_snapshot:2.",
+        "schema": "agifcore.phase_13.interactive_turn.v1",
+        "selected_candidate_ids": [
+          "descriptor::desc-04",
+          "concept::concept-04",
+          "descriptor::desc-07",
+          "concept::concept-07",
+          "skill::skill-local-truth-answer"
+        ],
+        "session_id": "phase13_session::ff1815e1d727",
+        "simulation_world_model_consulted": false,
+        "source_set_used": [
+          "memory_review_export",
+          "interactive_history",
+          "runtime_limits",
+          "runtime_shell_snapshot",
+          "human_target"
+        ],
+        "support_snippets": [
+          {
+            "ref": "dynamic::memory_review_export:2",
+            "score": 6,
+            "text": "Memory review export supports session phase13_session::ff1815e1d727."
+          },
+          {
+            "ref": "dynamic::memory_review_export:1",
+            "score": 5,
+            "text": "Memory review export hash is a2d31910f16f441d6f86aea504d0b3fa733a5e83da3c31081e174da6e6c24fb8."
+          },
+          {
+            "ref": "dynamic::interactive_history:1",
+            "score": 3,
+            "text": "Recent interactive turn 1 used question class project_phase_capability with support state grounded and next action answer."
+          },
+          {
+            "ref": "dynamic::interactive_history:3",
+            "score": 3,
+            "text": "Recent interactive turn 2 used question class self_system_status with support state grounded and next action answer."
+          },
+          {
+            "ref": "dynamic::runtime_limits:2",
+            "score": 3,
+            "text": "Unsupported or missing-local-support questions must fail closed with clarify, abstain, or search_needed."
+          },
+          {
+            "ref": "dynamic::runtime_limits:1",
+            "score": 3,
+            "text": "This local shell answers only from approved AGIFCore local truth and runtime state."
+          },
+          {
+            "ref": "dynamic::runtime_shell_snapshot:1",
+            "score": 3,
+            "text": "Local AGIFCore runtime shell session phase13_session::ff1815e1d727 is active for conversation conv-p10-weak."
+          },
+          {
+            "ref": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+            "score": 3,
+            "text": "build and revise internal support"
+          }
+        ],
+        "support_state": "grounded",
+        "target_grounded": null,
+        "turn_hash": "3e42e50a3d4c81c47738e3b78d29f8f6938de99ea9a72031eece439f9a13e137",
+        "turn_id": "interactive::76a095ae3942",
+        "uncertainty_band": "low"
+      },
+      "message_count": 6,
+      "schema": "agifcore.phase_13.local_desktop_chat_demo.v1",
+      "selected_view": "chat_workspace",
+      "session_id": "phase13_session::ff1815e1d727",
+      "snapshot_hash": "8e3fdf74f1fc1d59b21e6f0ba97fcd8dd86e25b5e64fab57bc52dcaa32017d5c",
+      "turn_count": 3,
+      "view_count": 7,
+      "views": [
+        {
+          "evidence_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+            "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797"
+          ],
+          "status": "ready",
+          "summary_lines": [
+            "session_id=phase13_session::ff1815e1d727",
+            "interactive_turn_count=3",
+            "available_surfaces=6"
+          ],
+          "title": "Session Overview",
+          "view_id": "session_overview"
+        },
+        {
+          "evidence_refs": [
+            "dynamic::memory_review_export:2",
+            "dynamic::memory_review_export:1",
+            "dynamic::interactive_history:1",
+            "dynamic::interactive_history:3"
+          ],
+          "status": "ready",
+          "summary_lines": [
+            "The previous answer was supported by these local refs: dynamic::runtime_limits:1, dynamic::runtime_limits:2, dynamic::runtime_shell_snapshot:1, dynamic::runtime_shell_snapshot:2.",
+            "message_count=6",
+            "desktop host presents runtime truth only"
+          ],
+          "title": "Chat Workspace",
+          "view_id": "chat_workspace"
+        },
+        {
+          "evidence_refs": [
+            "dynamic::memory_review_export:2",
+            "dynamic::memory_review_export:1",
+            "dynamic::interactive_history:1",
+            "dynamic::interactive_history:3"
+          ],
+          "status": "ready",
+          "summary_lines": [
+            "question_class=support_diagnostics",
+            "answer_mode=grounded_fact",
+            "support_state=grounded"
+          ],
+          "title": "Turn Evidence",
+          "view_id": "turn_evidence_view"
+        },
+        {
+          "evidence_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+            "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797"
+          ],
+          "status": "ready",
+          "summary_lines": [
+            "trace_record_count=2",
+            "phases_exercised=2, 3, 4, 5, 7, 9, 10, 13, 14, 15"
+          ],
+          "title": "Trace Export",
+          "view_id": "trace_export_view"
+        },
+        {
+          "evidence_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+            "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797"
+          ],
+          "status": "ready",
+          "summary_lines": [
+            "state_schema=agifcore.phase_02.state_export.v1",
+            "payload_bytes=4794"
+          ],
+          "title": "State Export",
+          "view_id": "state_export_view"
+        },
+        {
+          "evidence_refs": [
+            "5df43dd942d8223120c35caabca11ef3cd7e3e5c4d0e2ca4e598770cf6bcb381",
+            "91918ef29258bcb918e7c81125f97ce3275066f6379a8def247f869bc2070a65",
+            "669c174e25f890252fd4495af3d72a8d1702232b582f09bae06e7332700cc452"
+          ],
+          "status": "ready",
+          "summary_lines": [
+            "memory_ref_count=1",
+            "continuity_ref_count=3"
+          ],
+          "title": "Memory Review Export",
+          "view_id": "memory_review_view"
+        },
+        {
+          "evidence_refs": [
+            "phase8.summary.ref.001",
+            "phase8.summary.ref.002",
+            "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+            "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797"
+          ],
+          "status": "blocked_states_visible",
+          "summary_lines": [
+            "blocked_state_count=6",
+            "unsupported questions stay explicit and inspectable"
+          ],
+          "title": "Fail-Closed Help",
+          "view_id": "fail_closed_help_view"
+        }
+      ]
+    }
+  },
+  "status": "open",
+  "weak_shell_snapshot": {
+    "blind_pack_count": 2,
+    "hidden_pack_count": 2,
+    "live_demo_pack_count": 1,
+    "phase13_shell_hash": "f46946f2225df0bfa7a5a2295580a3ca676a5e8a68043b87fd38c136eca1b743",
+    "phase14_shell_hash": "027c99da11fd8ddeb03dd59f601eaf4cfea79cb8c2ae16b483f875bbc96e3887",
+    "phase16_blocked": true,
+    "schema": "agifcore.phase_15.final_proof_runtime.v1",
+    "snapshot_hash": "5008c032d313b51f3ba6e32b2292616c9dfef1c7dfa699fa0b5dbf75a926e059",
+    "soak_duration_class_count": 3
+  }
+}

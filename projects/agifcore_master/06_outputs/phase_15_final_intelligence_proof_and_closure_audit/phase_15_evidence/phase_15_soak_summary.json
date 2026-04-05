@@ -1,0 +1,318 @@
+{
+  "anchors": {
+    "evidence_manifest": {
+      "available_report_count": 9,
+      "bundle_size_bytes": 2613312,
+      "bundle_size_within_ceiling": true,
+      "manifest_hash": "3b542980b9a269ed7b807c81c887470bebe12a8754be77eab181354d9549995d",
+      "manifest_path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_evidence_manifest.json",
+      "manifest_size_bytes": 2341,
+      "manifest_status": "phase_15_verifier_family_pass",
+      "required_report_count": 9
+    },
+    "soak_contract": {
+      "bounded_local_soak_only": true,
+      "contract_hash": "fbd15af8ea55615fbcd02110056d9f54a61db911291c8e439ca7555d433be579",
+      "duration_class_count": 3,
+      "duration_classes": [
+        {
+          "duration_class_id": "short_cycle",
+          "iteration_count": 3
+        },
+        {
+          "duration_class_id": "medium_cycle",
+          "iteration_count": 6
+        },
+        {
+          "duration_class_id": "extended_cycle",
+          "iteration_count": 9
+        }
+      ],
+      "phase13_hash": "7e84f0d5f0af5d11ee45d1117adff750c910936b64658d701631ce149c617a7c",
+      "phase14_hash": "f1267f3f58d313aff39e42fd41d0b67ffa40aff63cd75f902cddcb17e0003943",
+      "phase16_blocked": true,
+      "schema": "agifcore.phase_15.soak_harness.v1"
+    },
+    "soak_result": {
+      "bounded_local_soak_only": true,
+      "class_results": [
+        {
+          "class_duration_ms": 19.843,
+          "class_passed": true,
+          "duration_class_id": "short_cycle",
+          "failed_iteration_count": 0,
+          "iteration_count": 3,
+          "iteration_results": [
+            {
+              "audit_status": "pass",
+              "final_answer_mode": "search_needed",
+              "iteration_id": "short_cycle::1",
+              "iteration_ms": 8.573,
+              "passed": true,
+              "sandbox_status": "pass",
+              "scenario": "weak",
+              "shutdown_status": "safe_stopped"
+            },
+            {
+              "audit_status": "pass",
+              "final_answer_mode": "clarify",
+              "iteration_id": "short_cycle::2",
+              "iteration_ms": 5.938,
+              "passed": true,
+              "sandbox_status": "pass",
+              "scenario": "contradiction",
+              "shutdown_status": "safe_stopped"
+            },
+            {
+              "audit_status": "pass",
+              "final_answer_mode": "search_needed",
+              "iteration_id": "short_cycle::3",
+              "iteration_ms": 5.31,
+              "passed": true,
+              "sandbox_status": "pass",
+              "scenario": "weak",
+              "shutdown_status": "safe_stopped"
+            }
+          ],
+          "passed_iteration_count": 3
+        },
+        {
+          "class_duration_ms": 31.628,
+          "class_passed": true,
+          "duration_class_id": "medium_cycle",
+          "failed_iteration_count": 0,
+          "iteration_count": 6,
+          "iteration_results": [
+            {
+              "audit_status": "pass",
+              "final_answer_mode": "search_needed",
+              "iteration_id": "medium_cycle::1",
+              "iteration_ms": 5.65,
+              "passed": true,
+              "sandbox_status": "pass",
+              "scenario": "weak",
+              "shutdown_status": "safe_stopped"
+            },
+            {
+              "audit_status": "pass",
+              "final_answer_mode": "clarify",
+              "iteration_id": "medium_cycle::2",
+              "iteration_ms": 5.333,
+              "passed": true,
+              "sandbox_status": "pass",
+              "scenario": "contradiction",
+              "shutdown_status": "safe_stopped"
+            },
+            {
+              "audit_status": "pass",
+              "final_answer_mode": "search_needed",
+              "iteration_id": "medium_cycle::3",
+              "iteration_ms": 5.266,
+              "passed": true,
+              "sandbox_status": "pass",
+              "scenario": "weak",
+              "shutdown_status": "safe_stopped"
+            },
+            {
+              "audit_status": "pass",
+              "final_answer_mode": "clarify",
+              "iteration_id": "medium_cycle::4",
+              "iteration_ms": 5.106,
+              "passed": true,
+              "sandbox_status": "pass",
+              "scenario": "contradiction",
+              "shutdown_status": "safe_stopped"
+            },
+            {
+              "audit_status": "pass",
+              "final_answer_mode": "search_needed",
+              "iteration_id": "medium_cycle::5",
+              "iteration_ms": 4.93,
+              "passed": true,
+              "sandbox_status": "pass",
+              "scenario": "weak",
+              "shutdown_status": "safe_stopped"
+            },
+            {
+              "audit_status": "pass",
+              "final_answer_mode": "clarify",
+              "iteration_id": "medium_cycle::6",
+              "iteration_ms": 5.31,
+              "passed": true,
+              "sandbox_status": "pass",
+              "scenario": "contradiction",
+              "shutdown_status": "safe_stopped"
+            }
+          ],
+          "passed_iteration_count": 6
+        },
+        {
+          "class_duration_ms": 47.013,
+          "class_passed": true,
+          "duration_class_id": "extended_cycle",
+          "failed_iteration_count": 0,
+          "iteration_count": 9,
+          "iteration_results": [
+            {
+              "audit_status": "pass",
+              "final_answer_mode": "search_needed",
+              "iteration_id": "extended_cycle::1",
+              "iteration_ms": 5.105,
+              "passed": true,
+              "sandbox_status": "pass",
+              "scenario": "weak",
+              "shutdown_status": "safe_stopped"
+            },
+            {
+              "audit_status": "pass",
+              "final_answer_mode": "clarify",
+              "iteration_id": "extended_cycle::2",
+              "iteration_ms": 5.201,
+              "passed": true,
+              "sandbox_status": "pass",
+              "scenario": "contradiction",
+              "shutdown_status": "safe_stopped"
+            },
+            {
+              "audit_status": "pass",
+              "final_answer_mode": "search_needed",
+              "iteration_id": "extended_cycle::3",
+              "iteration_ms": 5.168,
+              "passed": true,
+              "sandbox_status": "pass",
+              "scenario": "weak",
+              "shutdown_status": "safe_stopped"
+            },
+            {
+              "audit_status": "pass",
+              "final_answer_mode": "clarify",
+              "iteration_id": "extended_cycle::4",
+              "iteration_ms": 5.691,
+              "passed": true,
+              "sandbox_status": "pass",
+              "scenario": "contradiction",
+              "shutdown_status": "safe_stopped"
+            },
+            {
+              "audit_status": "pass",
+              "final_answer_mode": "search_needed",
+              "iteration_id": "extended_cycle::5",
+              "iteration_ms": 5.38,
+              "passed": true,
+              "sandbox_status": "pass",
+              "scenario": "weak",
+              "shutdown_status": "safe_stopped"
+            },
+            {
+              "audit_status": "pass",
+              "final_answer_mode": "clarify",
+              "iteration_id": "extended_cycle::6",
+              "iteration_ms": 5.091,
+              "passed": true,
+              "sandbox_status": "pass",
+              "scenario": "contradiction",
+              "shutdown_status": "safe_stopped"
+            },
+            {
+              "audit_status": "pass",
+              "final_answer_mode": "search_needed",
+              "iteration_id": "extended_cycle::7",
+              "iteration_ms": 5.101,
+              "passed": true,
+              "sandbox_status": "pass",
+              "scenario": "weak",
+              "shutdown_status": "safe_stopped"
+            },
+            {
+              "audit_status": "pass",
+              "final_answer_mode": "clarify",
+              "iteration_id": "extended_cycle::8",
+              "iteration_ms": 5.134,
+              "passed": true,
+              "sandbox_status": "pass",
+              "scenario": "contradiction",
+              "shutdown_status": "safe_stopped"
+            },
+            {
+              "audit_status": "pass",
+              "final_answer_mode": "search_needed",
+              "iteration_id": "extended_cycle::9",
+              "iteration_ms": 5.093,
+              "passed": true,
+              "sandbox_status": "pass",
+              "scenario": "weak",
+              "shutdown_status": "safe_stopped"
+            }
+          ],
+          "passed_iteration_count": 9
+        }
+      ],
+      "duration_class_count": 3,
+      "phase16_blocked": true,
+      "result_hash": "9c34b12b5bf8e4f6631369c589882b16779c86ba8efb37547a20c42eb0eb0b18",
+      "schema": "agifcore.phase_15.soak_harness.v1",
+      "status": "pass",
+      "total_failures": 0,
+      "total_iterations": 18
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "soak-duration-classes-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "soak-total-iterations-match-contract",
+      "result": "pass"
+    },
+    {
+      "id": "soak-runs-pass",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_15_FINAL_INTELLIGENCE_PROOF_AND_CLOSURE_AUDIT.md",
+    "projects/agifcore_master/01_plan/PHASE_14_SANDBOX_PROFILES_AND_SCALE_REALIZATION.md",
+    "projects/agifcore_master/01_plan/PHASE_13_PRODUCT_RUNTIME_AND_UX.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/03_design/PRODUCT_RUNTIME_MODEL.md",
+    "projects/agifcore_master/03_design/SANDBOX_MODEL.md",
+    "projects/agifcore_master/03_design/DEPLOYMENT_MODEL.md",
+    "projects/agifcore_master/03_design/PUBLIC_RELEASE_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/product_runtime_shell.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/sandbox_profile_shell.py",
+    "projects/agifcore_master/05_testing/phase_13_product_runtime_and_ux/_phase_13_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/_phase_14_verifier_common.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/contracts.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/proof_runtime_shell.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/blind_packs.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/hidden_packs.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/live_demo_pack.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/soak_harness.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/hardening_package.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/reproducibility_package.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/closure_audit.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/__init__.py",
+    "projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/_phase_15_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_phase_15_soak_harness.py"
+  ],
+  "notes": [
+    "the soak harness stays bounded to local duration classes only",
+    "soak checks reuse the approved runtime, manifest audit, and sandbox paths instead of inventing a separate correctness path",
+    "Phase 15 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_soak_summary.json"
+  },
+  "phase": "15",
+  "status": "pass",
+  "verifier": "verify_phase_15_soak_harness"
+}

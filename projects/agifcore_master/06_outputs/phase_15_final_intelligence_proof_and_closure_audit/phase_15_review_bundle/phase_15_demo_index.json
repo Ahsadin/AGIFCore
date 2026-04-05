@@ -1,0 +1,18 @@
+{
+  "notes": [
+    "summary only",
+    "Phase 15 remains open",
+    "no approval implied"
+  ],
+  "phase": "15",
+  "scenario_files": [
+    "phase_15_real_desktop_chat_demo.json",
+    "phase_15_final_demo.json",
+    "phase_15_soak_summary_demo.json",
+    "phase_15_closure_audit_summary_demo.json",
+    "launch_phase_15_real_desktop_chat_demo.sh",
+    "launch_phase_15_interactive_chat.sh"
+  ],
+  "status": "open",
+  "supporting_evidence_manifest": "phase_15_evidence_manifest.json"
+}

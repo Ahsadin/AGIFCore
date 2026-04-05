@@ -1,0 +1,1062 @@
+{
+  "answer_mode": "abstain",
+  "conversation_id": "conv-p10-weak",
+  "critique_diagnosis_fired": true,
+  "derived_question_class": "unsupported",
+  "evidence_hash": "c1b2c1dcc689f5a7928f94ecd6eb49e3d563973fd67642405831b175d220067a",
+  "final_answer_mode": "unknown",
+  "final_response": "I do not have local support for that question in the current AGIFCore shell. It needs current information outside the approved local project truth surface.",
+  "follow_up_bound": false,
+  "followup_anchor_turn_id": null,
+  "followup_binding_confidence": 0.0,
+  "followup_binding_reason": "prompt does not require prior-turn binding",
+  "followup_binding_success": false,
+  "followup_detected": false,
+  "followup_intent": null,
+  "graph_support_consulted": true,
+  "local_sources_consulted": [
+    {
+      "line_number": 3,
+      "path": "dynamic::runtime_limits",
+      "ref": "dynamic::runtime_limits:3",
+      "source_id": "runtime_limits"
+    },
+    {
+      "line_number": 1,
+      "path": "dynamic::runtime_limits",
+      "ref": "dynamic::runtime_limits:1",
+      "source_id": "runtime_limits"
+    },
+    {
+      "line_number": 2,
+      "path": "dynamic::runtime_limits",
+      "ref": "dynamic::runtime_limits:2",
+      "source_id": "runtime_limits"
+    },
+    {
+      "line_number": 1,
+      "path": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md",
+      "ref": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:1",
+      "source_id": "human_target"
+    },
+    {
+      "line_number": 2,
+      "path": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md",
+      "ref": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+      "source_id": "human_target"
+    },
+    {
+      "line_number": 3,
+      "path": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md",
+      "ref": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:3",
+      "source_id": "human_target"
+    },
+    {
+      "line_number": 4,
+      "path": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md",
+      "ref": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:4",
+      "source_id": "human_target"
+    },
+    {
+      "line_number": 5,
+      "path": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md",
+      "ref": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:5",
+      "source_id": "human_target"
+    }
+  ],
+  "local_truth_refs": [
+    "dynamic::runtime_limits:3",
+    "dynamic::runtime_limits:1",
+    "dynamic::runtime_limits:2",
+    "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:1",
+    "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+    "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:3",
+    "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:4",
+    "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:5"
+  ],
+  "memory_consulted": true,
+  "next_action": "abstain",
+  "phase_results": [
+    {
+      "inputs_used": [
+        "conversation_id",
+        "turn_id",
+        "phase7.answer_contract",
+        "final_response",
+        "local_truth_refs"
+      ],
+      "outputs_added": [
+        "event_export",
+        "trace_export",
+        "workspace_state_export",
+        "workspace_memory_review_export",
+        "replay_export",
+        "replay_verification"
+      ],
+      "phase_id": 2,
+      "reason": "phase 2 recorded trace, replay, workspace, and fail-closed evidence for the live turn",
+      "refs_used": [
+        "dynamic::runtime_limits:3",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:1",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:3",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:4",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:5"
+      ],
+      "state_changed": true,
+      "status": "used",
+      "support_delta": null
+    },
+    {
+      "inputs_used": [
+        "question_class",
+        "profile",
+        "target_domain_hint"
+      ],
+      "outputs_added": [
+        "route.family_order",
+        "route.selected_cell_ids",
+        "route.selected_tissue_ids",
+        "route.route_refs",
+        "route.budget"
+      ],
+      "phase_id": 3,
+      "reason": "phase 3 routed the turn through governed families, cells, and tissues",
+      "refs_used": [
+        "phase14::cell::cell_0001",
+        "phase14::cell::cell_0002",
+        "phase14::cell::cell_0003",
+        "phase14::cell::cell_0004",
+        "phase14::cell::cell_0005",
+        "phase14::cell::cell_0065",
+        "phase14::cell::cell_0066",
+        "phase14::cell::cell_0067",
+        "phase14::tissue::tissue_01",
+        "phase14::tissue::tissue_03",
+        "phase14::budget::8f0fd4f31a6879918d85632e0284d4a4c893587700635a7586c7654a8c1a89e1"
+      ],
+      "state_changed": true,
+      "status": "used",
+      "support_delta": null
+    },
+    {
+      "inputs_used": [
+        "question_text",
+        "candidate_lines",
+        "prior_turn",
+        "recent_turns",
+        "route",
+        "shell_snapshot"
+      ],
+      "outputs_added": [
+        "continuity_memory_state",
+        "working_memory_state",
+        "memory_review_state",
+        "semantic_memory_state",
+        "procedural_memory_state"
+      ],
+      "phase_id": 4,
+      "reason": "phase 4 built continuity, working, semantic, procedural, and review memory for this turn",
+      "refs_used": [
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:1",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+        "dynamic::runtime_limits:3",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:3",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:4",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:5",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:6",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:7",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:8",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:9"
+      ],
+      "state_changed": true,
+      "status": "used",
+      "support_delta": {
+        "note": "memory_context_prepared",
+        "procedural_candidate_count": 3,
+        "semantic_candidate_count": 8
+      }
+    },
+    {
+      "inputs_used": [
+        "question_text",
+        "question_class",
+        "target_domain",
+        "phase4.semantic_memory_state",
+        "phase4.procedural_memory_state"
+      ],
+      "outputs_added": [
+        "descriptor_graph_state",
+        "skill_graph_state",
+        "concept_graph_state",
+        "transfer_graph_state",
+        "support_selection_result"
+      ],
+      "phase_id": 5,
+      "reason": "phase 5 selected graph-backed support from descriptor, concept, skill, and transfer structures",
+      "refs_used": [
+        "dynamic::runtime_limits:3",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:1",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:3",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:4",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:5"
+      ],
+      "state_changed": true,
+      "status": "used",
+      "support_delta": {
+        "note": "graph_support_selected",
+        "selected_candidate_count": 5
+      }
+    },
+    {
+      "inputs_used": [
+        "phase4.semantic_memory_state",
+        "phase4.procedural_memory_state",
+        "phase4.continuity_memory_state",
+        "phase5.support_selection_result"
+      ],
+      "outputs_added": [
+        "target_domain_registry_state",
+        "world_model_state",
+        "candidate_future_state",
+        "what_if_simulation_state",
+        "usefulness_state"
+      ],
+      "phase_id": 6,
+      "reason": "phase 6 was visited, but world-model simulation was not needed for this turn",
+      "refs_used": [
+        "dynamic::runtime_limits:3",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:1",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:3",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:4",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:5"
+      ],
+      "state_changed": false,
+      "status": "no_op",
+      "support_delta": null
+    },
+    {
+      "inputs_used": [
+        "question_text",
+        "question_class",
+        "active_context_refs",
+        "phase4_state",
+        "phase5_state",
+        "phase6_state"
+      ],
+      "outputs_added": [
+        "intake",
+        "interpretation",
+        "support_resolution",
+        "answer_contract",
+        "utterance_plan",
+        "guardrail_result"
+      ],
+      "phase_id": 7,
+      "reason": "phase 7 performed intake, interpretation, support-state routing, and answer-contract selection",
+      "refs_used": [
+        "phase14::cell::cell_0001",
+        "phase14::cell::cell_0002",
+        "phase14::cell::cell_0003",
+        "phase14::cell::cell_0004",
+        "phase14::cell::cell_0005",
+        "phase14::cell::cell_0065",
+        "phase14::cell::cell_0066",
+        "phase14::cell::cell_0067",
+        "phase14::tissue::tissue_01",
+        "phase14::tissue::tissue_03",
+        "phase14::budget::8f0fd4f31a6879918d85632e0284d4a4c893587700635a7586c7654a8c1a89e1",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:1",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2"
+      ],
+      "state_changed": true,
+      "status": "used",
+      "support_delta": {
+        "after": "inferred",
+        "next_action": "answer",
+        "note": "support_state_resolved"
+      }
+    },
+    {
+      "inputs_used": [
+        "phase7.intake",
+        "phase7.interpretation",
+        "phase7.support_resolution",
+        "phase6.world_model_state",
+        "phase6.what_if_simulation_state",
+        "phase5.support_selection_result"
+      ],
+      "outputs_added": [
+        "entity_request_inference",
+        "visible_reasoning_summary",
+        "overlay_contract"
+      ],
+      "phase_id": 8,
+      "reason": "phase 8 was visited, but science/world-awareness reasoning was not needed for this turn",
+      "refs_used": [
+        "dynamic::runtime_limits:3",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:1",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:3",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:4",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:5"
+      ],
+      "state_changed": false,
+      "status": "no_op",
+      "support_delta": null
+    },
+    {
+      "inputs_used": [
+        "phase7.intake",
+        "phase7.interpretation",
+        "phase7.support_resolution",
+        "phase7.utterance_plan",
+        "phase7.answer_contract",
+        "phase8_turn"
+      ],
+      "outputs_added": [
+        "selected_lane",
+        "overlay_contract"
+      ],
+      "phase_id": 9,
+      "reason": "phase 9 was visited, but no richer public expression layer was allowed beyond the fail-closed outcome",
+      "refs_used": [
+        "dynamic::runtime_limits:3",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:1",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:3",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:4",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:5"
+      ],
+      "state_changed": false,
+      "status": "no_op",
+      "support_delta": null
+    },
+    {
+      "inputs_used": [
+        "phase7.support_resolution",
+        "phase7.answer_contract",
+        "phase7.self_knowledge",
+        "phase8_turn",
+        "phase9_turn",
+        "phase4.continuity_memory_state"
+      ],
+      "outputs_added": [
+        "overlay_contract",
+        "selected_outcome",
+        "public_explanation"
+      ],
+      "phase_id": 10,
+      "reason": "phase 10 ran critique, contradiction, or weak-answer diagnosis before the final answer",
+      "refs_used": [
+        "dynamic::runtime_limits:3",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:1",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:3",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:4",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:5",
+        "weak_answer_diagnosis::12c805380a2d"
+      ],
+      "state_changed": true,
+      "status": "used",
+      "support_delta": {
+        "after": "unknown",
+        "before": "inferred",
+        "diagnosis_ref": "weak_answer_diagnosis::12c805380a2d",
+        "note": "critique_pass_complete",
+        "selected_outcome": "clarify"
+      }
+    },
+    {
+      "inputs_used": [
+        "phase11_cycle_state.overlay_contract",
+        "phase11_cycle_state.monitoring_refs"
+      ],
+      "outputs_added": [
+        "read_only_monitoring_context"
+      ],
+      "phase_id": 11,
+      "reason": "phase 11 was visited, but no read-only self-improvement overlay was relevant to this turn",
+      "refs_used": [],
+      "state_changed": false,
+      "status": "no_op",
+      "support_delta": null
+    },
+    {
+      "inputs_used": [
+        "phase12_cycle_state.overlay_contract",
+        "phase12_cycle_state.selected_gap_ids"
+      ],
+      "outputs_added": [
+        "read_only_structural_context"
+      ],
+      "phase_id": 12,
+      "reason": "phase 12 was visited, but no read-only structural overlay was relevant to this turn",
+      "refs_used": [
+        "phase12_gap::6061daca1549",
+        "phase12_gap::7cf580032ce2"
+      ],
+      "state_changed": false,
+      "status": "no_op",
+      "support_delta": null
+    },
+    {
+      "inputs_used": [
+        "session_open",
+        "shell_snapshot",
+        "state_export",
+        "memory_review_export",
+        "safe_shutdown"
+      ],
+      "outputs_added": [
+        "interactive_turn_payload",
+        "session_history_update_ready"
+      ],
+      "phase_id": 13,
+      "reason": "phase 13 hosted the live turn inside the real product runtime shell",
+      "refs_used": [],
+      "state_changed": false,
+      "status": "used",
+      "support_delta": null
+    },
+    {
+      "inputs_used": [
+        "profile",
+        "route",
+        "budget",
+        "selected_active_cells",
+        "selected_active_tissues"
+      ],
+      "outputs_added": [
+        "budget_receipt",
+        "budget_state",
+        "selected_active_cell_count",
+        "selected_active_tissue_count"
+      ],
+      "phase_id": 14,
+      "reason": "phase 14 enforced sandbox profile, routing budget, and active-cell selection",
+      "refs_used": [
+        "phase14::cell::cell_0001",
+        "phase14::cell::cell_0002",
+        "phase14::cell::cell_0003",
+        "phase14::cell::cell_0004",
+        "phase14::cell::cell_0005",
+        "phase14::cell::cell_0065",
+        "phase14::cell::cell_0066",
+        "phase14::cell::cell_0067",
+        "phase14::tissue::tissue_01",
+        "phase14::tissue::tissue_03",
+        "phase14::budget::8f0fd4f31a6879918d85632e0284d4a4c893587700635a7586c7654a8c1a89e1"
+      ],
+      "state_changed": true,
+      "status": "used",
+      "support_delta": {
+        "allowed": true,
+        "budget_state": "within_budget",
+        "note": "budget_enforced"
+      }
+    },
+    {
+      "inputs_used": [
+        "final_response",
+        "phase_usage_raw",
+        "local_truth_refs",
+        "phase2_evidence",
+        "question_class",
+        "follow_up_bound"
+      ],
+      "outputs_added": [
+        "phase_results",
+        "phase_usage",
+        "phases_exercised",
+        "phase_chain_completed",
+        "phase_status_counts"
+      ],
+      "phase_id": 15,
+      "reason": "phase 15 wrote per-turn proof, review, and machine-readable evidence fields",
+      "refs_used": [
+        "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/interactive_turn_records/phase13_session_ff1815e1d727/interactive_5f57a0d86b64.json"
+      ],
+      "state_changed": true,
+      "status": "used",
+      "support_delta": {
+        "after": "unknown",
+        "final_answer_mode": "unknown",
+        "note": "proof_record_written"
+      }
+    }
+  ],
+  "phase_usage": {
+    "phase_10": {
+      "diagnosis_ref": "weak_answer_diagnosis::12c805380a2d",
+      "inputs_used": [
+        "phase7.support_resolution",
+        "phase7.answer_contract",
+        "phase7.self_knowledge",
+        "phase8_turn",
+        "phase9_turn",
+        "phase4.continuity_memory_state"
+      ],
+      "outputs_added": [
+        "overlay_contract",
+        "selected_outcome",
+        "public_explanation"
+      ],
+      "reason": "phase 10 ran critique, contradiction, or weak-answer diagnosis before the final answer",
+      "refs_used": [
+        "dynamic::runtime_limits:3",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:1",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:3",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:4",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:5",
+        "weak_answer_diagnosis::12c805380a2d"
+      ],
+      "selected_outcome": "clarify",
+      "state_changed": true,
+      "status": "used",
+      "support_delta": {
+        "after": "unknown",
+        "before": "inferred",
+        "diagnosis_ref": "weak_answer_diagnosis::12c805380a2d",
+        "note": "critique_pass_complete",
+        "selected_outcome": "clarify"
+      },
+      "used": true
+    },
+    "phase_11": {
+      "inputs_used": [
+        "phase11_cycle_state.overlay_contract",
+        "phase11_cycle_state.monitoring_refs"
+      ],
+      "monitoring_ref_count": 0,
+      "outputs_added": [
+        "read_only_monitoring_context"
+      ],
+      "read_only_context": true,
+      "reason": "phase 11 was visited, but no read-only self-improvement overlay was relevant to this turn",
+      "refs_used": [],
+      "state_changed": false,
+      "status": "no_op",
+      "support_delta": null,
+      "used": false
+    },
+    "phase_12": {
+      "inputs_used": [
+        "phase12_cycle_state.overlay_contract",
+        "phase12_cycle_state.selected_gap_ids"
+      ],
+      "outputs_added": [
+        "read_only_structural_context"
+      ],
+      "read_only_context": true,
+      "reason": "phase 12 was visited, but no read-only structural overlay was relevant to this turn",
+      "refs_used": [
+        "phase12_gap::6061daca1549",
+        "phase12_gap::7cf580032ce2"
+      ],
+      "selected_gap_count": 2,
+      "state_changed": false,
+      "status": "no_op",
+      "support_delta": null,
+      "used": false
+    },
+    "phase_13": {
+      "inputs_used": [
+        "session_open",
+        "shell_snapshot",
+        "state_export",
+        "memory_review_export",
+        "safe_shutdown"
+      ],
+      "outputs_added": [
+        "interactive_turn_payload",
+        "session_history_update_ready"
+      ],
+      "reason": "phase 13 hosted the live turn inside the real product runtime shell",
+      "refs_used": [],
+      "session_id": "phase13_session::ff1815e1d727",
+      "shell_snapshot_hash": "9d90b8a305a0064434dd7dc9f53659624e50d1d733ca678618800ab4bb7a8b0a",
+      "state_changed": false,
+      "status": "used",
+      "support_delta": null,
+      "used": true
+    },
+    "phase_14": {
+      "budget_receipt_hash": "8f0fd4f31a6879918d85632e0284d4a4c893587700635a7586c7654a8c1a89e1",
+      "budget_state": "within_budget",
+      "inputs_used": [
+        "profile",
+        "route",
+        "budget",
+        "selected_active_cells",
+        "selected_active_tissues"
+      ],
+      "outputs_added": [
+        "budget_receipt",
+        "budget_state",
+        "selected_active_cell_count",
+        "selected_active_tissue_count"
+      ],
+      "profile": "laptop",
+      "reason": "phase 14 enforced sandbox profile, routing budget, and active-cell selection",
+      "refs_used": [
+        "phase14::cell::cell_0001",
+        "phase14::cell::cell_0002",
+        "phase14::cell::cell_0003",
+        "phase14::cell::cell_0004",
+        "phase14::cell::cell_0005",
+        "phase14::cell::cell_0065",
+        "phase14::cell::cell_0066",
+        "phase14::cell::cell_0067",
+        "phase14::tissue::tissue_01",
+        "phase14::tissue::tissue_03",
+        "phase14::budget::8f0fd4f31a6879918d85632e0284d4a4c893587700635a7586c7654a8c1a89e1"
+      ],
+      "selected_active_cell_count": 8,
+      "state_changed": true,
+      "status": "used",
+      "support_delta": {
+        "allowed": true,
+        "budget_state": "within_budget",
+        "note": "budget_enforced"
+      },
+      "used": true
+    },
+    "phase_15": {
+      "inputs_used": [
+        "final_response",
+        "phase_usage_raw",
+        "local_truth_refs",
+        "phase2_evidence",
+        "question_class",
+        "follow_up_bound"
+      ],
+      "outputs_added": [
+        "phase_results",
+        "phase_usage",
+        "phases_exercised",
+        "phase_chain_completed",
+        "phase_status_counts"
+      ],
+      "reason": "phase 15 wrote per-turn proof, review, and machine-readable evidence fields",
+      "refs_used": [
+        "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/interactive_turn_records/phase13_session_ff1815e1d727/interactive_5f57a0d86b64.json"
+      ],
+      "review_ready_fields_present": true,
+      "state_changed": true,
+      "status": "used",
+      "support_delta": {
+        "after": "unknown",
+        "final_answer_mode": "unknown",
+        "note": "proof_record_written"
+      },
+      "turn_evidence_ref": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/interactive_turn_records/phase13_session_ff1815e1d727/interactive_5f57a0d86b64.json",
+      "used": true
+    },
+    "phase_2": {
+      "event_count": 4,
+      "inputs_used": [
+        "conversation_id",
+        "turn_id",
+        "phase7.answer_contract",
+        "final_response",
+        "local_truth_refs"
+      ],
+      "outputs_added": [
+        "event_export",
+        "trace_export",
+        "workspace_state_export",
+        "workspace_memory_review_export",
+        "replay_export",
+        "replay_verification"
+      ],
+      "reason": "phase 2 recorded trace, replay, workspace, and fail-closed evidence for the live turn",
+      "refs_used": [
+        "dynamic::runtime_limits:3",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:1",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:3",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:4",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:5"
+      ],
+      "replay_id": "replay::12119a51dfe5",
+      "state_changed": true,
+      "status": "used",
+      "support_delta": null,
+      "trace_record_count": 4,
+      "used": true
+    },
+    "phase_3": {
+      "inputs_used": [
+        "question_class",
+        "profile",
+        "target_domain_hint"
+      ],
+      "outputs_added": [
+        "route.family_order",
+        "route.selected_cell_ids",
+        "route.selected_tissue_ids",
+        "route.route_refs",
+        "route.budget"
+      ],
+      "reason": "phase 3 routed the turn through governed families, cells, and tissues",
+      "refs_used": [
+        "phase14::cell::cell_0001",
+        "phase14::cell::cell_0002",
+        "phase14::cell::cell_0003",
+        "phase14::cell::cell_0004",
+        "phase14::cell::cell_0005",
+        "phase14::cell::cell_0065",
+        "phase14::cell::cell_0066",
+        "phase14::cell::cell_0067",
+        "phase14::tissue::tissue_01",
+        "phase14::tissue::tissue_03",
+        "phase14::budget::8f0fd4f31a6879918d85632e0284d4a4c893587700635a7586c7654a8c1a89e1"
+      ],
+      "route_families": [
+        "attention",
+        "governance_authority",
+        "language_realizer"
+      ],
+      "selected_cell_ids": [
+        "cell_0001",
+        "cell_0002",
+        "cell_0003",
+        "cell_0004",
+        "cell_0005",
+        "cell_0065",
+        "cell_0066",
+        "cell_0067"
+      ],
+      "selected_tissue_ids": [
+        "tissue_01",
+        "tissue_03"
+      ],
+      "state_changed": true,
+      "status": "used",
+      "support_delta": null,
+      "used": true
+    },
+    "phase_4": {
+      "continuity_anchor_count": 7,
+      "inputs_used": [
+        "question_text",
+        "candidate_lines",
+        "prior_turn",
+        "recent_turns",
+        "route",
+        "shell_snapshot"
+      ],
+      "outputs_added": [
+        "continuity_memory_state",
+        "working_memory_state",
+        "memory_review_state",
+        "semantic_memory_state",
+        "procedural_memory_state"
+      ],
+      "procedural_entry_count": 3,
+      "reason": "phase 4 built continuity, working, semantic, procedural, and review memory for this turn",
+      "refs_used": [
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:1",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+        "dynamic::runtime_limits:3",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:3",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:4",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:5",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:6",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:7",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:8",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:9"
+      ],
+      "semantic_entry_count": 8,
+      "state_changed": true,
+      "status": "used",
+      "support_delta": {
+        "note": "memory_context_prepared",
+        "procedural_candidate_count": 3,
+        "semantic_candidate_count": 8
+      },
+      "used": true
+    },
+    "phase_5": {
+      "concept_node_count": 8,
+      "descriptor_node_count": 8,
+      "inputs_used": [
+        "question_text",
+        "question_class",
+        "target_domain",
+        "phase4.semantic_memory_state",
+        "phase4.procedural_memory_state"
+      ],
+      "outputs_added": [
+        "descriptor_graph_state",
+        "skill_graph_state",
+        "concept_graph_state",
+        "transfer_graph_state",
+        "support_selection_result"
+      ],
+      "reason": "phase 5 selected graph-backed support from descriptor, concept, skill, and transfer structures",
+      "refs_used": [
+        "dynamic::runtime_limits:3",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:1",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:3",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:4",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:5"
+      ],
+      "selected_candidate_ids": [
+        "descriptor::desc-05",
+        "skill::skill-bounded-abstain",
+        "concept::concept-05",
+        "descriptor::desc-01",
+        "descriptor::desc-02"
+      ],
+      "skill_node_count": 3,
+      "state_changed": true,
+      "status": "used",
+      "support_delta": {
+        "note": "graph_support_selected",
+        "selected_candidate_count": 5
+      },
+      "used": true
+    },
+    "phase_6": {
+      "candidate_future_hash": "f1d23e0aba1f68c5f4e7d50f1d7c908c83526fb5827902d0f16e6fc44bdb44bd",
+      "inputs_used": [
+        "phase4.semantic_memory_state",
+        "phase4.procedural_memory_state",
+        "phase4.continuity_memory_state",
+        "phase5.support_selection_result"
+      ],
+      "outputs_added": [
+        "target_domain_registry_state",
+        "world_model_state",
+        "candidate_future_state",
+        "what_if_simulation_state",
+        "usefulness_state"
+      ],
+      "reason": "phase 6 was visited, but world-model simulation was not needed for this turn",
+      "refs_used": [
+        "dynamic::runtime_limits:3",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:1",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:3",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:4",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:5"
+      ],
+      "simulation_hash": "509cfc1facc84857c92fa4a35c0ac63c767ac50c9e52196f2f09820b60469d34",
+      "state_changed": false,
+      "status": "no_op",
+      "support_delta": null,
+      "used": false,
+      "usefulness_hash": "93b7c55c73e0dc5eaa158fa135ff00bda661e8c0ee1996ec0dbe02ea3bd0db07",
+      "world_model_hash": "74691c0307c434b91147fda2a2dd65ebaa0980e62a0587f8820aacbf08c57bbe"
+    },
+    "phase_7": {
+      "answer_contract_hash": "0c687f33d6f91f8c66104c30ade580c1f31f58e1532170bfb44ade77fa626032",
+      "inputs_used": [
+        "question_text",
+        "question_class",
+        "active_context_refs",
+        "phase4_state",
+        "phase5_state",
+        "phase6_state"
+      ],
+      "next_action": "answer",
+      "outputs_added": [
+        "intake",
+        "interpretation",
+        "support_resolution",
+        "answer_contract",
+        "utterance_plan",
+        "guardrail_result"
+      ],
+      "question_category": "ordinary",
+      "reason": "phase 7 performed intake, interpretation, support-state routing, and answer-contract selection",
+      "refs_used": [
+        "phase14::cell::cell_0001",
+        "phase14::cell::cell_0002",
+        "phase14::cell::cell_0003",
+        "phase14::cell::cell_0004",
+        "phase14::cell::cell_0005",
+        "phase14::cell::cell_0065",
+        "phase14::cell::cell_0066",
+        "phase14::cell::cell_0067",
+        "phase14::tissue::tissue_01",
+        "phase14::tissue::tissue_03",
+        "phase14::budget::8f0fd4f31a6879918d85632e0284d4a4c893587700635a7586c7654a8c1a89e1",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:1",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2"
+      ],
+      "state_changed": true,
+      "status": "used",
+      "support_delta": {
+        "after": "inferred",
+        "next_action": "answer",
+        "note": "support_state_resolved"
+      },
+      "support_state": "inferred",
+      "used": true
+    },
+    "phase_8": {
+      "entity_request_hash": "5adf310bb8b95115b8409438202e308f50964abc50742f069dd5c04fa24f5062",
+      "inputs_used": [
+        "phase7.intake",
+        "phase7.interpretation",
+        "phase7.support_resolution",
+        "phase6.world_model_state",
+        "phase6.what_if_simulation_state",
+        "phase5.support_selection_result"
+      ],
+      "outputs_added": [
+        "entity_request_inference",
+        "visible_reasoning_summary",
+        "overlay_contract"
+      ],
+      "reason": "phase 8 was visited, but science/world-awareness reasoning was not needed for this turn",
+      "reasoning_summary_hash": "2ffa9f2e8751410395d37faebe6d137ffa7048ddeaabc16ce731d71e49780ad2",
+      "refs_used": [
+        "dynamic::runtime_limits:3",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:1",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:3",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:4",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:5"
+      ],
+      "state_changed": false,
+      "status": "no_op",
+      "support_delta": null,
+      "used": false
+    },
+    "phase_9": {
+      "inputs_used": [
+        "phase7.intake",
+        "phase7.interpretation",
+        "phase7.support_resolution",
+        "phase7.utterance_plan",
+        "phase7.answer_contract",
+        "phase8_turn"
+      ],
+      "outputs_added": [
+        "selected_lane",
+        "overlay_contract"
+      ],
+      "overlay_hash": "6665c17f3950006fc67b97eb8621c6ed923dd8bc56b8acca29d0ce4e1e1df257",
+      "reason": "phase 9 was visited, but no richer public expression layer was allowed beyond the fail-closed outcome",
+      "refs_used": [
+        "dynamic::runtime_limits:3",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:1",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:3",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:4",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:5"
+      ],
+      "selected_lane": "synthesis",
+      "state_changed": false,
+      "status": "no_op",
+      "support_delta": null,
+      "used": false
+    }
+  },
+  "phases_exercised": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    10,
+    13,
+    14,
+    15
+  ],
+  "question_class": "unsupported",
+  "request_text": "who is the president of Argentina today",
+  "schema": "agifcore.phase_15.interactive_turn_evidence.v1",
+  "session_id": "phase13_session::ff1815e1d727",
+  "simulation_world_model_consulted": false,
+  "source_set_used": [
+    "runtime_limits",
+    "human_target"
+  ],
+  "support_snippets": [
+    {
+      "ref": "dynamic::runtime_limits:3",
+      "score": 6,
+      "text": "The interactive path is bounded and does not use hidden external services."
+    },
+    {
+      "ref": "dynamic::runtime_limits:1",
+      "score": 4,
+      "text": "This local shell answers only from approved AGIFCore local truth and runtime state."
+    },
+    {
+      "ref": "dynamic::runtime_limits:2",
+      "score": 4,
+      "text": "Unsupported or missing-local-support questions must fail closed with clarify, abstain, or search_needed."
+    },
+    {
+      "ref": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:1",
+      "score": 4,
+      "text": "understand messy language"
+    },
+    {
+      "ref": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+      "score": 4,
+      "text": "build and revise internal support"
+    },
+    {
+      "ref": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:3",
+      "score": 4,
+      "text": "compare, explain, teach, and plan"
+    },
+    {
+      "ref": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:4",
+      "score": 4,
+      "text": "notice contradiction and uncertainty"
+    },
+    {
+      "ref": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:5",
+      "score": 4,
+      "text": "remember and correct itself"
+    }
+  ],
+  "support_state": "unknown",
+  "turn_id": "interactive::5f57a0d86b64",
+  "uncertainty_band": "high",
+  "written_at": "2026-04-05T11:57:39"
+}

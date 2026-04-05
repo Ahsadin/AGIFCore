@@ -15,6 +15,7 @@ from .desktop_ui import LocalDesktopUI
 from .embeddable_runtime_api import EmbeddableRuntimeAPI
 from .fail_closed_ux import build_fail_closed_catalog
 from .installer_distribution import build_installer_distribution_snapshot
+from .interactive_turn import build_interactive_turn
 from .local_gateway import LocalGateway
 from .local_runner import LocalRunner
 from .memory_review_export import build_memory_review_export
@@ -106,6 +107,8 @@ class ProductRuntimeShell:
         )
         self.desktop_ui = LocalDesktopUI()
         self._shutdown_receipt: dict[str, Any] | None = None
+        self._interactive_turn_sequence = 0
+        self._interactive_turn_history: list[dict[str, Any]] = []
         self._session_open["policy_hash"] = self._policy_hash
 
     def session_open(self) -> dict[str, Any]:
@@ -115,6 +118,27 @@ class ProductRuntimeShell:
         if user_text:
             return self.runner.conversation_turn(user_text=user_text)
         return deepcopy(self._conversation_turn)
+
+    def interactive_turn(self, *, user_text: str) -> dict[str, Any]:
+        self._interactive_turn_sequence += 1
+        turn = build_interactive_turn(
+            user_text=user_text,
+            session_open=self.session_open(),
+            shell_snapshot=self.shell_snapshot(),
+            state_export=self.state_export(),
+            memory_review_export=self.memory_review_export(),
+            safe_shutdown=self.safe_shutdown(),
+            phase10_turn_state=deepcopy(self.runner.phase10_turn),
+            phase11_cycle_state=deepcopy(self.runner.phase11_cycle),
+            phase12_cycle_state=deepcopy(self.runner.phase12_cycle),
+            turn_sequence=self._interactive_turn_sequence,
+            prior_turn=deepcopy(self._interactive_turn_history[-1]) if self._interactive_turn_history else None,
+            recent_turns=deepcopy(self._interactive_turn_history[-4:]),
+        )
+        self._interactive_turn_history.append(deepcopy(turn))
+        if len(self._interactive_turn_history) > 24:
+            self._interactive_turn_history = self._interactive_turn_history[-24:]
+        return turn
 
     def state_export(self) -> dict[str, Any]:
         return deepcopy(self._state_export)
@@ -160,6 +184,19 @@ class ProductRuntimeShell:
             memory_review_export=self.memory_review_export(),
             fail_closed_catalog=self.fail_closed_catalog(),
             installer_snapshot=self.installer_distribution(),
+        )
+
+    def interactive_ui_snapshot(self) -> dict[str, Any]:
+        latest_turn = deepcopy(self._interactive_turn_history[-1]) if self._interactive_turn_history else None
+        return self.desktop_ui.render_interactive(
+            shell_snapshot=self.shell_snapshot(),
+            session_open=self.session_open(),
+            state_export=self.state_export(),
+            trace_export=self.trace_export(),
+            memory_review_export=self.memory_review_export(),
+            fail_closed_catalog=self.fail_closed_catalog(),
+            interactive_history=deepcopy(self._interactive_turn_history),
+            latest_turn=latest_turn,
         )
 
     def shell_snapshot(self) -> dict[str, Any]:

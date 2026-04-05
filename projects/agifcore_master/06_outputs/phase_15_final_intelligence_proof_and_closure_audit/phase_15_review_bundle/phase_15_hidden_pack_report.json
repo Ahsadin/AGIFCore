@@ -1,0 +1,310 @@
+{
+  "anchors": {
+    "evidence_manifest": {
+      "available_report_count": 9,
+      "bundle_size_bytes": 2539688,
+      "bundle_size_within_ceiling": true,
+      "manifest_hash": "d5deab042cbd7578507f096a507486a5fcd82210d451ba8920642aafe040f068",
+      "manifest_path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_evidence_manifest.json",
+      "manifest_size_bytes": 2341,
+      "manifest_status": "phase_15_verifier_family_pass",
+      "required_report_count": 9
+    },
+    "hidden_pack_catalog": {
+      "catalog_hash": "33fb489bda362b2bf36154383f64ba3127accd2a87d1f5eac4cb2f1ffc4c4eab",
+      "hidden_pack_count": 2,
+      "packs": [
+        {
+          "case_count": 2,
+          "cases": [
+            {
+              "case_id": "hidden_invalid_module_block",
+              "case_kind": "sandbox_execute",
+              "execution_request": {
+                "function_args": [
+                  1,
+                  2
+                ],
+                "function_name": "add",
+                "profile": "laptop",
+                "variant": "invalid"
+              },
+              "expected_contract": {
+                "reason_code": "INVALID_WASM_MODULE",
+                "status": "blocked"
+              },
+              "scenario": "weak"
+            },
+            {
+              "case_id": "hidden_profile_mismatch_block",
+              "case_kind": "sandbox_execute",
+              "execution_request": {
+                "allowed_profiles": [
+                  "laptop"
+                ],
+                "function_args": [
+                  1,
+                  2
+                ],
+                "function_name": "add",
+                "profile": "mobile"
+              },
+              "expected_contract": {
+                "reason_code": "PROFILE_NOT_ALLOWED",
+                "status": "blocked"
+              },
+              "scenario": "weak"
+            }
+          ],
+          "live_demo_excluded": true,
+          "pack_class": "sandbox_edge_cases",
+          "pack_id": "hidden_fail_closed_edge_pack",
+          "phase13_hash": "3b46733c2e580e7e90286c6cd87e266b3515309cdc9b02f8bfa6017e5b5dc329",
+          "phase14_hash": "55238f9bcf0cd7aedebac121d0a5dc6c122fac29ee62743efbf39382cccd9cff"
+        },
+        {
+          "case_count": 3,
+          "cases": [
+            {
+              "case_id": "hidden_fuel_limit_block",
+              "case_kind": "sandbox_execute",
+              "execution_request": {
+                "function_name": "spin",
+                "profile": "mobile"
+              },
+              "expected_contract": {
+                "reason_code": "FUEL_LIMIT_EXCEEDED",
+                "status": "blocked"
+              },
+              "scenario": "weak"
+            },
+            {
+              "case_id": "hidden_memory_limit_block",
+              "case_kind": "sandbox_execute",
+              "execution_request": {
+                "function_args": [
+                  600
+                ],
+                "function_name": "grow_to_pages",
+                "policy_id": "strict_fail_closed_policy",
+                "profile": "mobile"
+              },
+              "expected_contract": {
+                "reason_code": "MEMORY_LIMIT_EXCEEDED",
+                "status": "blocked"
+              },
+              "scenario": "weak"
+            },
+            {
+              "case_id": "hidden_timeout_block",
+              "case_kind": "sandbox_execute",
+              "execution_request": {
+                "function_name": "spin",
+                "policy_id": "strict_fail_closed_policy",
+                "profile": "mobile"
+              },
+              "expected_contract": {
+                "reason_code": "WALL_TIMEOUT_EXCEEDED",
+                "status": "blocked"
+              },
+              "scenario": "weak"
+            }
+          ],
+          "live_demo_excluded": true,
+          "pack_class": "resource_limit_edges",
+          "pack_id": "hidden_resource_limit_pack",
+          "phase13_hash": "3b46733c2e580e7e90286c6cd87e266b3515309cdc9b02f8bfa6017e5b5dc329",
+          "phase14_hash": "55238f9bcf0cd7aedebac121d0a5dc6c122fac29ee62743efbf39382cccd9cff"
+        }
+      ],
+      "phase16_blocked": true,
+      "schema": "agifcore.phase_15.hidden_pack.v1"
+    },
+    "hidden_pack_result": {
+      "hidden_pack_count": 2,
+      "pack_results": [
+        {
+          "case_count": 2,
+          "case_results": [
+            {
+              "case_id": "hidden_invalid_module_block",
+              "expected_contract": {
+                "live_demo_excluded": true,
+                "reason_code": "INVALID_WASM_MODULE",
+                "status": "blocked"
+              },
+              "observed": {
+                "live_demo_excluded": true,
+                "reason_code": "INVALID_WASM_MODULE",
+                "receipt_hash": "0a7ec8ba9931ef8c05cdb450a43a61ced04cea0c8f24707863b02ad1ba2bb389",
+                "status": "blocked"
+              },
+              "passed": true,
+              "scenario": "weak"
+            },
+            {
+              "case_id": "hidden_profile_mismatch_block",
+              "expected_contract": {
+                "live_demo_excluded": true,
+                "reason_code": "PROFILE_NOT_ALLOWED",
+                "status": "blocked"
+              },
+              "observed": {
+                "live_demo_excluded": true,
+                "reason_code": "PROFILE_NOT_ALLOWED",
+                "receipt_hash": "4b83b4007ca71e807c277e267880299ec5485febb8554aec7d428fbe1a001b18",
+                "status": "blocked"
+              },
+              "passed": true,
+              "scenario": "weak"
+            }
+          ],
+          "live_demo_excluded": true,
+          "pack_class": "sandbox_edge_cases",
+          "pack_id": "hidden_fail_closed_edge_pack",
+          "pack_passed": true,
+          "passed_case_count": 2
+        },
+        {
+          "case_count": 3,
+          "case_results": [
+            {
+              "case_id": "hidden_fuel_limit_block",
+              "expected_contract": {
+                "live_demo_excluded": true,
+                "reason_code": "FUEL_LIMIT_EXCEEDED",
+                "status": "blocked"
+              },
+              "observed": {
+                "live_demo_excluded": true,
+                "reason_code": "FUEL_LIMIT_EXCEEDED",
+                "receipt_hash": "a7dc6717b1b817273279dddb623b9ff2f4c69cfe2c57db29dcd3e45a49263747",
+                "status": "blocked"
+              },
+              "passed": true,
+              "scenario": "weak"
+            },
+            {
+              "case_id": "hidden_memory_limit_block",
+              "expected_contract": {
+                "live_demo_excluded": true,
+                "reason_code": "MEMORY_LIMIT_EXCEEDED",
+                "status": "blocked"
+              },
+              "observed": {
+                "live_demo_excluded": true,
+                "reason_code": "MEMORY_LIMIT_EXCEEDED",
+                "receipt_hash": "cc0de7ebc9d40d512421887cd0a22974ab2aa758f35ab680c8d4e2bc9c0c9e41",
+                "status": "blocked"
+              },
+              "passed": true,
+              "scenario": "weak"
+            },
+            {
+              "case_id": "hidden_timeout_block",
+              "expected_contract": {
+                "live_demo_excluded": true,
+                "reason_code": "WALL_TIMEOUT_EXCEEDED",
+                "status": "blocked"
+              },
+              "observed": {
+                "live_demo_excluded": true,
+                "reason_code": "WALL_TIMEOUT_EXCEEDED",
+                "receipt_hash": "39fed67b4b1762fe6dfbe6ad38ce87f008cfdc8756ec1c13650240e59c5a869a",
+                "status": "blocked"
+              },
+              "passed": true,
+              "scenario": "weak"
+            }
+          ],
+          "live_demo_excluded": true,
+          "pack_class": "resource_limit_edges",
+          "pack_id": "hidden_resource_limit_pack",
+          "pack_passed": true,
+          "passed_case_count": 3
+        }
+      ],
+      "passed_case_count": 5,
+      "phase16_blocked": true,
+      "result_hash": "5998eff4da7e26c654bb3ca1fd278a0d7bf4687db35481e78fe2bb249b2ba291",
+      "schema": "agifcore.phase_15.hidden_pack.v1",
+      "status": "pass",
+      "total_case_count": 5
+    },
+    "live_demo_case_ids": [
+      "demo_contradiction_conversation",
+      "demo_interactive_desktop_ui",
+      "demo_interactive_turn",
+      "demo_laptop_profile_manifest",
+      "demo_manifest_audit",
+      "demo_mobile_profile_manifest",
+      "demo_safe_shutdown",
+      "demo_sandbox_allowed",
+      "demo_sandbox_tampered",
+      "demo_session_open",
+      "demo_weak_conversation",
+      "demo_weak_memory_review",
+      "demo_weak_state_export",
+      "demo_weak_trace_export"
+    ]
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "hidden-pack-count-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "hidden-pack-results-pass",
+      "result": "pass"
+    },
+    {
+      "id": "hidden-cases-stay-out-of-live-demo",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_15_FINAL_INTELLIGENCE_PROOF_AND_CLOSURE_AUDIT.md",
+    "projects/agifcore_master/01_plan/PHASE_14_SANDBOX_PROFILES_AND_SCALE_REALIZATION.md",
+    "projects/agifcore_master/01_plan/PHASE_13_PRODUCT_RUNTIME_AND_UX.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/03_design/PRODUCT_RUNTIME_MODEL.md",
+    "projects/agifcore_master/03_design/SANDBOX_MODEL.md",
+    "projects/agifcore_master/03_design/DEPLOYMENT_MODEL.md",
+    "projects/agifcore_master/03_design/PUBLIC_RELEASE_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/product_runtime_shell.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/sandbox_profile_shell.py",
+    "projects/agifcore_master/05_testing/phase_13_product_runtime_and_ux/_phase_13_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/_phase_14_verifier_common.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/contracts.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/proof_runtime_shell.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/blind_packs.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/hidden_packs.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/live_demo_pack.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/soak_harness.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/hardening_package.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/reproducibility_package.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/closure_audit.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/__init__.py",
+    "projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/_phase_15_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_phase_15_hidden_packs.py"
+  ],
+  "notes": [
+    "hidden cases remain separated from the user-facing live-demo inventory",
+    "resource-limit and fail-closed hidden checks stay machine-verifiable",
+    "Phase 15 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_hidden_pack_report.json"
+  },
+  "phase": "15",
+  "status": "pass",
+  "verifier": "verify_phase_15_hidden_packs"
+}

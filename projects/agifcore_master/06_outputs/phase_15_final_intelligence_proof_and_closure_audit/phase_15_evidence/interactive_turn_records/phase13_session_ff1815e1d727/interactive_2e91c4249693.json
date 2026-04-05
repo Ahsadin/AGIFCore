@@ -1,0 +1,1065 @@
+{
+  "answer_mode": "grounded_fact",
+  "conversation_id": "conv-p10-weak",
+  "critique_diagnosis_fired": true,
+  "derived_question_class": "support_diagnostics",
+  "evidence_hash": "b7683aeba51b280477e3ce0fc2b20cb4f571badf3d6e620c487c38d75a7a3cb1",
+  "final_answer_mode": "grounded_fact",
+  "final_response": "The previous answer was supported by these local refs: dynamic::runtime_limits:1, dynamic::runtime_limits:3, projects/agifcore_master/PROJECT_README.md:1, projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:13.",
+  "follow_up_bound": true,
+  "followup_anchor_turn_id": "interactive::3a7a9befc7c5",
+  "followup_binding_confidence": 0.92,
+  "followup_binding_reason": "binding uses the most recent stored turn state",
+  "followup_binding_success": true,
+  "followup_detected": true,
+  "followup_intent": "support",
+  "graph_support_consulted": true,
+  "local_sources_consulted": [
+    {
+      "line_number": 1,
+      "path": "dynamic::interactive_history",
+      "ref": "dynamic::interactive_history:1",
+      "source_id": "interactive_history"
+    },
+    {
+      "line_number": 3,
+      "path": "dynamic::interactive_history",
+      "ref": "dynamic::interactive_history:3",
+      "source_id": "interactive_history"
+    },
+    {
+      "line_number": 28,
+      "path": "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md",
+      "ref": "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:28",
+      "source_id": "runtime_rebuild_map"
+    },
+    {
+      "line_number": 1,
+      "path": "dynamic::runtime_limits",
+      "ref": "dynamic::runtime_limits:1",
+      "source_id": "runtime_limits"
+    },
+    {
+      "line_number": 3,
+      "path": "dynamic::runtime_limits",
+      "ref": "dynamic::runtime_limits:3",
+      "source_id": "runtime_limits"
+    },
+    {
+      "line_number": 13,
+      "path": "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md",
+      "ref": "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:13",
+      "source_id": "runtime_rebuild_map"
+    },
+    {
+      "line_number": 1,
+      "path": "projects/agifcore_master/01_plan/PHASE_INDEX.md",
+      "ref": "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+      "source_id": "phase_truth"
+    },
+    {
+      "line_number": 2,
+      "path": "projects/agifcore_master/01_plan/PHASE_INDEX.md",
+      "ref": "projects/agifcore_master/01_plan/PHASE_INDEX.md:2",
+      "source_id": "phase_truth"
+    }
+  ],
+  "local_truth_refs": [
+    "dynamic::interactive_history:1",
+    "dynamic::interactive_history:3",
+    "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:28",
+    "dynamic::runtime_limits:1",
+    "dynamic::runtime_limits:3",
+    "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:13",
+    "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+    "projects/agifcore_master/01_plan/PHASE_INDEX.md:2"
+  ],
+  "memory_consulted": true,
+  "next_action": "answer",
+  "phase_results": [
+    {
+      "inputs_used": [
+        "conversation_id",
+        "turn_id",
+        "phase7.answer_contract",
+        "final_response",
+        "local_truth_refs"
+      ],
+      "outputs_added": [
+        "event_export",
+        "trace_export",
+        "workspace_state_export",
+        "workspace_memory_review_export",
+        "replay_export",
+        "replay_verification"
+      ],
+      "phase_id": 2,
+      "reason": "phase 2 recorded trace, replay, workspace, and fail-closed evidence for the live turn",
+      "refs_used": [
+        "dynamic::interactive_history:1",
+        "dynamic::interactive_history:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:28",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:13",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:2"
+      ],
+      "state_changed": true,
+      "status": "used",
+      "support_delta": null
+    },
+    {
+      "inputs_used": [
+        "question_class",
+        "profile",
+        "target_domain_hint"
+      ],
+      "outputs_added": [
+        "route.family_order",
+        "route.selected_cell_ids",
+        "route.selected_tissue_ids",
+        "route.route_refs",
+        "route.budget"
+      ],
+      "phase_id": 3,
+      "reason": "phase 3 routed the turn through governed families, cells, and tissues",
+      "refs_used": [
+        "phase14::cell::cell_0001",
+        "phase14::cell::cell_0002",
+        "phase14::cell::cell_0003",
+        "phase14::cell::cell_0004",
+        "phase14::cell::cell_0005",
+        "phase14::cell::cell_0065",
+        "phase14::cell::cell_0066",
+        "phase14::cell::cell_0067",
+        "phase14::tissue::tissue_01",
+        "phase14::tissue::tissue_03",
+        "phase14::budget::ae8fcb8ad3182181d471ca324e0e76956519e7e5e417850e4c9e537a6851b105"
+      ],
+      "state_changed": true,
+      "status": "used",
+      "support_delta": null
+    },
+    {
+      "inputs_used": [
+        "question_text",
+        "candidate_lines",
+        "prior_turn",
+        "recent_turns",
+        "route",
+        "shell_snapshot"
+      ],
+      "outputs_added": [
+        "continuity_memory_state",
+        "working_memory_state",
+        "memory_review_state",
+        "semantic_memory_state",
+        "procedural_memory_state"
+      ],
+      "phase_id": 4,
+      "reason": "phase 4 built continuity, working, semantic, procedural, and review memory for this turn",
+      "refs_used": [
+        "dynamic::interactive_history:1",
+        "dynamic::interactive_history:3",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:2",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:28",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:13",
+        "projects/agifcore_master/DECISIONS.md:1",
+        "projects/agifcore_master/PROJECT_README.md:1",
+        "projects/agifcore_master/PROJECT_README.md:2",
+        "dynamic::runtime_limits:2"
+      ],
+      "state_changed": true,
+      "status": "used",
+      "support_delta": {
+        "note": "memory_context_prepared",
+        "procedural_candidate_count": 3,
+        "semantic_candidate_count": 8
+      }
+    },
+    {
+      "inputs_used": [
+        "question_text",
+        "question_class",
+        "target_domain",
+        "phase4.semantic_memory_state",
+        "phase4.procedural_memory_state"
+      ],
+      "outputs_added": [
+        "descriptor_graph_state",
+        "skill_graph_state",
+        "concept_graph_state",
+        "transfer_graph_state",
+        "support_selection_result"
+      ],
+      "phase_id": 5,
+      "reason": "phase 5 selected graph-backed support from descriptor, concept, skill, and transfer structures",
+      "refs_used": [
+        "dynamic::interactive_history:1",
+        "dynamic::interactive_history:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:28",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:13",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:2"
+      ],
+      "state_changed": true,
+      "status": "used",
+      "support_delta": {
+        "note": "graph_support_selected",
+        "selected_candidate_count": 5
+      }
+    },
+    {
+      "inputs_used": [
+        "phase4.semantic_memory_state",
+        "phase4.procedural_memory_state",
+        "phase4.continuity_memory_state",
+        "phase5.support_selection_result"
+      ],
+      "outputs_added": [
+        "target_domain_registry_state",
+        "world_model_state",
+        "candidate_future_state",
+        "what_if_simulation_state",
+        "usefulness_state"
+      ],
+      "phase_id": 6,
+      "reason": "phase 6 was visited, but world-model simulation was not needed for this turn",
+      "refs_used": [
+        "dynamic::interactive_history:1",
+        "dynamic::interactive_history:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:28",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:13",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:2"
+      ],
+      "state_changed": false,
+      "status": "no_op",
+      "support_delta": null
+    },
+    {
+      "inputs_used": [
+        "question_text",
+        "question_class",
+        "active_context_refs",
+        "phase4_state",
+        "phase5_state",
+        "phase6_state"
+      ],
+      "outputs_added": [
+        "intake",
+        "interpretation",
+        "support_resolution",
+        "answer_contract",
+        "utterance_plan",
+        "guardrail_result"
+      ],
+      "phase_id": 7,
+      "reason": "phase 7 performed intake, interpretation, support-state routing, and answer-contract selection",
+      "refs_used": [
+        "phase14::cell::cell_0001",
+        "phase14::cell::cell_0002",
+        "phase14::cell::cell_0003",
+        "phase14::cell::cell_0004",
+        "phase14::cell::cell_0005",
+        "phase14::cell::cell_0065",
+        "phase14::cell::cell_0066",
+        "phase14::cell::cell_0067",
+        "phase14::tissue::tissue_01",
+        "phase14::tissue::tissue_03",
+        "phase14::budget::ae8fcb8ad3182181d471ca324e0e76956519e7e5e417850e4c9e537a6851b105",
+        "dynamic::interactive_history:1",
+        "dynamic::interactive_history:3",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:2"
+      ],
+      "state_changed": true,
+      "status": "used",
+      "support_delta": {
+        "after": "inferred",
+        "next_action": "answer",
+        "note": "support_state_resolved"
+      }
+    },
+    {
+      "inputs_used": [
+        "phase7.intake",
+        "phase7.interpretation",
+        "phase7.support_resolution",
+        "phase6.world_model_state",
+        "phase6.what_if_simulation_state",
+        "phase5.support_selection_result"
+      ],
+      "outputs_added": [
+        "entity_request_inference",
+        "visible_reasoning_summary",
+        "overlay_contract"
+      ],
+      "phase_id": 8,
+      "reason": "phase 8 was visited, but science/world-awareness reasoning was not needed for this turn",
+      "refs_used": [
+        "dynamic::interactive_history:1",
+        "dynamic::interactive_history:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:28",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:13",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:2"
+      ],
+      "state_changed": false,
+      "status": "no_op",
+      "support_delta": null
+    },
+    {
+      "inputs_used": [
+        "phase7.intake",
+        "phase7.interpretation",
+        "phase7.support_resolution",
+        "phase7.utterance_plan",
+        "phase7.answer_contract",
+        "phase8_turn"
+      ],
+      "outputs_added": [
+        "selected_lane",
+        "overlay_contract"
+      ],
+      "phase_id": 9,
+      "reason": "phase 9 composed the bounded response lane, synthesis, and public expression contract",
+      "refs_used": [
+        "dynamic::interactive_history:1",
+        "dynamic::interactive_history:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:28",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:13",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:2"
+      ],
+      "state_changed": true,
+      "status": "used",
+      "support_delta": null
+    },
+    {
+      "inputs_used": [
+        "phase7.support_resolution",
+        "phase7.answer_contract",
+        "phase7.self_knowledge",
+        "phase8_turn",
+        "phase9_turn",
+        "phase4.continuity_memory_state"
+      ],
+      "outputs_added": [
+        "overlay_contract",
+        "selected_outcome",
+        "public_explanation"
+      ],
+      "phase_id": 10,
+      "reason": "phase 10 ran critique, contradiction, or weak-answer diagnosis before the final answer",
+      "refs_used": [
+        "dynamic::interactive_history:1",
+        "dynamic::interactive_history:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:28",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:13",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:2",
+        "weak_answer_diagnosis::bceae63cab72"
+      ],
+      "state_changed": true,
+      "status": "used",
+      "support_delta": {
+        "after": "grounded",
+        "before": "inferred",
+        "diagnosis_ref": "weak_answer_diagnosis::bceae63cab72",
+        "note": "critique_pass_complete",
+        "selected_outcome": "clarify"
+      }
+    },
+    {
+      "inputs_used": [
+        "phase11_cycle_state.overlay_contract",
+        "phase11_cycle_state.monitoring_refs"
+      ],
+      "outputs_added": [
+        "read_only_monitoring_context"
+      ],
+      "phase_id": 11,
+      "reason": "phase 11 was visited, but no read-only self-improvement overlay was relevant to this turn",
+      "refs_used": [],
+      "state_changed": false,
+      "status": "no_op",
+      "support_delta": null
+    },
+    {
+      "inputs_used": [
+        "phase12_cycle_state.overlay_contract",
+        "phase12_cycle_state.selected_gap_ids"
+      ],
+      "outputs_added": [
+        "read_only_structural_context"
+      ],
+      "phase_id": 12,
+      "reason": "phase 12 was visited, but no read-only structural overlay was relevant to this turn",
+      "refs_used": [
+        "phase12_gap::6061daca1549",
+        "phase12_gap::7cf580032ce2"
+      ],
+      "state_changed": false,
+      "status": "no_op",
+      "support_delta": null
+    },
+    {
+      "inputs_used": [
+        "session_open",
+        "shell_snapshot",
+        "state_export",
+        "memory_review_export",
+        "safe_shutdown"
+      ],
+      "outputs_added": [
+        "interactive_turn_payload",
+        "session_history_update_ready"
+      ],
+      "phase_id": 13,
+      "reason": "phase 13 hosted the live turn inside the real product runtime shell",
+      "refs_used": [],
+      "state_changed": false,
+      "status": "used",
+      "support_delta": null
+    },
+    {
+      "inputs_used": [
+        "profile",
+        "route",
+        "budget",
+        "selected_active_cells",
+        "selected_active_tissues"
+      ],
+      "outputs_added": [
+        "budget_receipt",
+        "budget_state",
+        "selected_active_cell_count",
+        "selected_active_tissue_count"
+      ],
+      "phase_id": 14,
+      "reason": "phase 14 enforced the sandbox profile and budget gate, but the budget outcome constrained the turn",
+      "refs_used": [
+        "phase14::cell::cell_0001",
+        "phase14::cell::cell_0002",
+        "phase14::cell::cell_0003",
+        "phase14::cell::cell_0004",
+        "phase14::cell::cell_0005",
+        "phase14::cell::cell_0065",
+        "phase14::cell::cell_0066",
+        "phase14::cell::cell_0067",
+        "phase14::tissue::tissue_01",
+        "phase14::tissue::tissue_03",
+        "phase14::budget::ae8fcb8ad3182181d471ca324e0e76956519e7e5e417850e4c9e537a6851b105"
+      ],
+      "state_changed": true,
+      "status": "used",
+      "support_delta": {
+        "allowed": false,
+        "budget_state": "profile_mismatch",
+        "note": "budget_enforced"
+      }
+    },
+    {
+      "inputs_used": [
+        "final_response",
+        "phase_usage_raw",
+        "local_truth_refs",
+        "phase2_evidence",
+        "question_class",
+        "follow_up_bound"
+      ],
+      "outputs_added": [
+        "phase_results",
+        "phase_usage",
+        "phases_exercised",
+        "phase_chain_completed",
+        "phase_status_counts"
+      ],
+      "phase_id": 15,
+      "reason": "phase 15 wrote per-turn proof, review, and machine-readable evidence fields",
+      "refs_used": [
+        "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/interactive_turn_records/phase13_session_ff1815e1d727/interactive_2e91c4249693.json"
+      ],
+      "state_changed": true,
+      "status": "used",
+      "support_delta": {
+        "after": "grounded",
+        "final_answer_mode": "grounded_fact",
+        "note": "proof_record_written"
+      }
+    }
+  ],
+  "phase_usage": {
+    "phase_10": {
+      "diagnosis_ref": "weak_answer_diagnosis::bceae63cab72",
+      "inputs_used": [
+        "phase7.support_resolution",
+        "phase7.answer_contract",
+        "phase7.self_knowledge",
+        "phase8_turn",
+        "phase9_turn",
+        "phase4.continuity_memory_state"
+      ],
+      "outputs_added": [
+        "overlay_contract",
+        "selected_outcome",
+        "public_explanation"
+      ],
+      "reason": "phase 10 ran critique, contradiction, or weak-answer diagnosis before the final answer",
+      "refs_used": [
+        "dynamic::interactive_history:1",
+        "dynamic::interactive_history:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:28",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:13",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:2",
+        "weak_answer_diagnosis::bceae63cab72"
+      ],
+      "selected_outcome": "clarify",
+      "state_changed": true,
+      "status": "used",
+      "support_delta": {
+        "after": "grounded",
+        "before": "inferred",
+        "diagnosis_ref": "weak_answer_diagnosis::bceae63cab72",
+        "note": "critique_pass_complete",
+        "selected_outcome": "clarify"
+      },
+      "used": true
+    },
+    "phase_11": {
+      "inputs_used": [
+        "phase11_cycle_state.overlay_contract",
+        "phase11_cycle_state.monitoring_refs"
+      ],
+      "monitoring_ref_count": 0,
+      "outputs_added": [
+        "read_only_monitoring_context"
+      ],
+      "read_only_context": true,
+      "reason": "phase 11 was visited, but no read-only self-improvement overlay was relevant to this turn",
+      "refs_used": [],
+      "state_changed": false,
+      "status": "no_op",
+      "support_delta": null,
+      "used": false
+    },
+    "phase_12": {
+      "inputs_used": [
+        "phase12_cycle_state.overlay_contract",
+        "phase12_cycle_state.selected_gap_ids"
+      ],
+      "outputs_added": [
+        "read_only_structural_context"
+      ],
+      "read_only_context": true,
+      "reason": "phase 12 was visited, but no read-only structural overlay was relevant to this turn",
+      "refs_used": [
+        "phase12_gap::6061daca1549",
+        "phase12_gap::7cf580032ce2"
+      ],
+      "selected_gap_count": 2,
+      "state_changed": false,
+      "status": "no_op",
+      "support_delta": null,
+      "used": false
+    },
+    "phase_13": {
+      "inputs_used": [
+        "session_open",
+        "shell_snapshot",
+        "state_export",
+        "memory_review_export",
+        "safe_shutdown"
+      ],
+      "outputs_added": [
+        "interactive_turn_payload",
+        "session_history_update_ready"
+      ],
+      "reason": "phase 13 hosted the live turn inside the real product runtime shell",
+      "refs_used": [],
+      "session_id": "phase13_session::ff1815e1d727",
+      "shell_snapshot_hash": "f2b30258261b2b92185bae862b09ed51be619b793645c1de2c173d136ff4fef7",
+      "state_changed": false,
+      "status": "used",
+      "support_delta": null,
+      "used": true
+    },
+    "phase_14": {
+      "budget_receipt_hash": "ae8fcb8ad3182181d471ca324e0e76956519e7e5e417850e4c9e537a6851b105",
+      "budget_state": "profile_mismatch",
+      "inputs_used": [
+        "profile",
+        "route",
+        "budget",
+        "selected_active_cells",
+        "selected_active_tissues"
+      ],
+      "outputs_added": [
+        "budget_receipt",
+        "budget_state",
+        "selected_active_cell_count",
+        "selected_active_tissue_count"
+      ],
+      "profile": "laptop",
+      "reason": "phase 14 enforced the sandbox profile and budget gate, but the budget outcome constrained the turn",
+      "refs_used": [
+        "phase14::cell::cell_0001",
+        "phase14::cell::cell_0002",
+        "phase14::cell::cell_0003",
+        "phase14::cell::cell_0004",
+        "phase14::cell::cell_0005",
+        "phase14::cell::cell_0065",
+        "phase14::cell::cell_0066",
+        "phase14::cell::cell_0067",
+        "phase14::tissue::tissue_01",
+        "phase14::tissue::tissue_03",
+        "phase14::budget::ae8fcb8ad3182181d471ca324e0e76956519e7e5e417850e4c9e537a6851b105"
+      ],
+      "selected_active_cell_count": 8,
+      "state_changed": true,
+      "status": "used",
+      "support_delta": {
+        "allowed": false,
+        "budget_state": "profile_mismatch",
+        "note": "budget_enforced"
+      },
+      "used": true
+    },
+    "phase_15": {
+      "inputs_used": [
+        "final_response",
+        "phase_usage_raw",
+        "local_truth_refs",
+        "phase2_evidence",
+        "question_class",
+        "follow_up_bound"
+      ],
+      "outputs_added": [
+        "phase_results",
+        "phase_usage",
+        "phases_exercised",
+        "phase_chain_completed",
+        "phase_status_counts"
+      ],
+      "reason": "phase 15 wrote per-turn proof, review, and machine-readable evidence fields",
+      "refs_used": [
+        "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/interactive_turn_records/phase13_session_ff1815e1d727/interactive_2e91c4249693.json"
+      ],
+      "review_ready_fields_present": true,
+      "state_changed": true,
+      "status": "used",
+      "support_delta": {
+        "after": "grounded",
+        "final_answer_mode": "grounded_fact",
+        "note": "proof_record_written"
+      },
+      "turn_evidence_ref": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/interactive_turn_records/phase13_session_ff1815e1d727/interactive_2e91c4249693.json",
+      "used": true
+    },
+    "phase_2": {
+      "event_count": 4,
+      "inputs_used": [
+        "conversation_id",
+        "turn_id",
+        "phase7.answer_contract",
+        "final_response",
+        "local_truth_refs"
+      ],
+      "outputs_added": [
+        "event_export",
+        "trace_export",
+        "workspace_state_export",
+        "workspace_memory_review_export",
+        "replay_export",
+        "replay_verification"
+      ],
+      "reason": "phase 2 recorded trace, replay, workspace, and fail-closed evidence for the live turn",
+      "refs_used": [
+        "dynamic::interactive_history:1",
+        "dynamic::interactive_history:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:28",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:13",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:2"
+      ],
+      "replay_id": "replay::421889ad463d",
+      "state_changed": true,
+      "status": "used",
+      "support_delta": null,
+      "trace_record_count": 4,
+      "used": true
+    },
+    "phase_3": {
+      "inputs_used": [
+        "question_class",
+        "profile",
+        "target_domain_hint"
+      ],
+      "outputs_added": [
+        "route.family_order",
+        "route.selected_cell_ids",
+        "route.selected_tissue_ids",
+        "route.route_refs",
+        "route.budget"
+      ],
+      "reason": "phase 3 routed the turn through governed families, cells, and tissues",
+      "refs_used": [
+        "phase14::cell::cell_0001",
+        "phase14::cell::cell_0002",
+        "phase14::cell::cell_0003",
+        "phase14::cell::cell_0004",
+        "phase14::cell::cell_0005",
+        "phase14::cell::cell_0065",
+        "phase14::cell::cell_0066",
+        "phase14::cell::cell_0067",
+        "phase14::tissue::tissue_01",
+        "phase14::tissue::tissue_03",
+        "phase14::budget::ae8fcb8ad3182181d471ca324e0e76956519e7e5e417850e4c9e537a6851b105"
+      ],
+      "route_families": [
+        "critic_error_monitor",
+        "audit_replay",
+        "continuity_self_history"
+      ],
+      "selected_cell_ids": [
+        "cell_0001",
+        "cell_0002",
+        "cell_0003",
+        "cell_0004",
+        "cell_0005",
+        "cell_0065",
+        "cell_0066",
+        "cell_0067"
+      ],
+      "selected_tissue_ids": [
+        "tissue_01",
+        "tissue_03"
+      ],
+      "state_changed": true,
+      "status": "used",
+      "support_delta": null,
+      "used": true
+    },
+    "phase_4": {
+      "continuity_anchor_count": 7,
+      "inputs_used": [
+        "question_text",
+        "candidate_lines",
+        "prior_turn",
+        "recent_turns",
+        "route",
+        "shell_snapshot"
+      ],
+      "outputs_added": [
+        "continuity_memory_state",
+        "working_memory_state",
+        "memory_review_state",
+        "semantic_memory_state",
+        "procedural_memory_state"
+      ],
+      "procedural_entry_count": 3,
+      "reason": "phase 4 built continuity, working, semantic, procedural, and review memory for this turn",
+      "refs_used": [
+        "dynamic::interactive_history:1",
+        "dynamic::interactive_history:3",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:2",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:28",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:13",
+        "projects/agifcore_master/DECISIONS.md:1",
+        "projects/agifcore_master/PROJECT_README.md:1",
+        "projects/agifcore_master/PROJECT_README.md:2",
+        "dynamic::runtime_limits:2"
+      ],
+      "semantic_entry_count": 8,
+      "state_changed": true,
+      "status": "used",
+      "support_delta": {
+        "note": "memory_context_prepared",
+        "procedural_candidate_count": 3,
+        "semantic_candidate_count": 8
+      },
+      "used": true
+    },
+    "phase_5": {
+      "concept_node_count": 8,
+      "descriptor_node_count": 8,
+      "inputs_used": [
+        "question_text",
+        "question_class",
+        "target_domain",
+        "phase4.semantic_memory_state",
+        "phase4.procedural_memory_state"
+      ],
+      "outputs_added": [
+        "descriptor_graph_state",
+        "skill_graph_state",
+        "concept_graph_state",
+        "transfer_graph_state",
+        "support_selection_result"
+      ],
+      "reason": "phase 5 selected graph-backed support from descriptor, concept, skill, and transfer structures",
+      "refs_used": [
+        "dynamic::interactive_history:1",
+        "dynamic::interactive_history:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:28",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:13",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:2"
+      ],
+      "selected_candidate_ids": [
+        "descriptor::desc-01",
+        "descriptor::desc-02",
+        "skill::skill-bounded-abstain",
+        "concept::concept-01",
+        "concept::concept-02"
+      ],
+      "skill_node_count": 3,
+      "state_changed": true,
+      "status": "used",
+      "support_delta": {
+        "note": "graph_support_selected",
+        "selected_candidate_count": 5
+      },
+      "used": true
+    },
+    "phase_6": {
+      "candidate_future_hash": "af67c54b03ee082baa397a5511cce548e23d4e9e6306ee301c70e9b391e52aa3",
+      "inputs_used": [
+        "phase4.semantic_memory_state",
+        "phase4.procedural_memory_state",
+        "phase4.continuity_memory_state",
+        "phase5.support_selection_result"
+      ],
+      "outputs_added": [
+        "target_domain_registry_state",
+        "world_model_state",
+        "candidate_future_state",
+        "what_if_simulation_state",
+        "usefulness_state"
+      ],
+      "reason": "phase 6 was visited, but world-model simulation was not needed for this turn",
+      "refs_used": [
+        "dynamic::interactive_history:1",
+        "dynamic::interactive_history:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:28",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:13",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:2"
+      ],
+      "simulation_hash": "b80ea13436662d22316fe12a26606d67bef9ee5e5d0b748f84c4ab0110488928",
+      "state_changed": false,
+      "status": "no_op",
+      "support_delta": null,
+      "used": false,
+      "usefulness_hash": "e4a912b245016b04174876a26127543610920242ce078db2f9dce1451bba5288",
+      "world_model_hash": "a72e0a3554ac72140d8d6a6968ba76a191f08e908d50f68dfbc8c39db8fe961a"
+    },
+    "phase_7": {
+      "answer_contract_hash": "43d4a089eea2760c8f4e7467b59b690d23fb949ae3c805241d2d301ea4e9769d",
+      "inputs_used": [
+        "question_text",
+        "question_class",
+        "active_context_refs",
+        "phase4_state",
+        "phase5_state",
+        "phase6_state"
+      ],
+      "next_action": "answer",
+      "outputs_added": [
+        "intake",
+        "interpretation",
+        "support_resolution",
+        "answer_contract",
+        "utterance_plan",
+        "guardrail_result"
+      ],
+      "question_category": "ordinary",
+      "reason": "phase 7 performed intake, interpretation, support-state routing, and answer-contract selection",
+      "refs_used": [
+        "phase14::cell::cell_0001",
+        "phase14::cell::cell_0002",
+        "phase14::cell::cell_0003",
+        "phase14::cell::cell_0004",
+        "phase14::cell::cell_0005",
+        "phase14::cell::cell_0065",
+        "phase14::cell::cell_0066",
+        "phase14::cell::cell_0067",
+        "phase14::tissue::tissue_01",
+        "phase14::tissue::tissue_03",
+        "phase14::budget::ae8fcb8ad3182181d471ca324e0e76956519e7e5e417850e4c9e537a6851b105",
+        "dynamic::interactive_history:1",
+        "dynamic::interactive_history:3",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:2"
+      ],
+      "state_changed": true,
+      "status": "used",
+      "support_delta": {
+        "after": "inferred",
+        "next_action": "answer",
+        "note": "support_state_resolved"
+      },
+      "support_state": "inferred",
+      "used": true
+    },
+    "phase_8": {
+      "entity_request_hash": "2f4fb36aba8965b11c18d073caccfcb08f4b9133b1214d20d7d34c192f2a8110",
+      "inputs_used": [
+        "phase7.intake",
+        "phase7.interpretation",
+        "phase7.support_resolution",
+        "phase6.world_model_state",
+        "phase6.what_if_simulation_state",
+        "phase5.support_selection_result"
+      ],
+      "outputs_added": [
+        "entity_request_inference",
+        "visible_reasoning_summary",
+        "overlay_contract"
+      ],
+      "reason": "phase 8 was visited, but science/world-awareness reasoning was not needed for this turn",
+      "reasoning_summary_hash": "2a154eb3f68648af0c4739a69b5839941a111f90f16cf63eafd801adb03e0e57",
+      "refs_used": [
+        "dynamic::interactive_history:1",
+        "dynamic::interactive_history:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:28",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:13",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:2"
+      ],
+      "state_changed": false,
+      "status": "no_op",
+      "support_delta": null,
+      "used": false
+    },
+    "phase_9": {
+      "inputs_used": [
+        "phase7.intake",
+        "phase7.interpretation",
+        "phase7.support_resolution",
+        "phase7.utterance_plan",
+        "phase7.answer_contract",
+        "phase8_turn"
+      ],
+      "outputs_added": [
+        "selected_lane",
+        "overlay_contract"
+      ],
+      "overlay_hash": "d31590e4f3b9971cd1cb8f79e15f514719e7c8f2237ce8aab4596dd09122cf68",
+      "reason": "phase 9 composed the bounded response lane, synthesis, and public expression contract",
+      "refs_used": [
+        "dynamic::interactive_history:1",
+        "dynamic::interactive_history:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:28",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:3",
+        "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:13",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+        "projects/agifcore_master/01_plan/PHASE_INDEX.md:2"
+      ],
+      "selected_lane": "synthesis",
+      "state_changed": true,
+      "status": "used",
+      "support_delta": null,
+      "used": true
+    }
+  },
+  "phases_exercised": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    9,
+    10,
+    13,
+    14,
+    15
+  ],
+  "question_class": "support_diagnostics",
+  "request_text": "which support gap remains",
+  "schema": "agifcore.phase_15.interactive_turn_evidence.v1",
+  "session_id": "phase13_session::ff1815e1d727",
+  "simulation_world_model_consulted": false,
+  "source_set_used": [
+    "interactive_history",
+    "runtime_rebuild_map",
+    "runtime_limits",
+    "phase_truth"
+  ],
+  "support_snippets": [
+    {
+      "ref": "dynamic::interactive_history:1",
+      "score": 6,
+      "text": "Recent interactive turn 1 used question class project_phase_capability with support state grounded and next action answer."
+    },
+    {
+      "ref": "dynamic::interactive_history:3",
+      "score": 6,
+      "text": "Recent interactive turn 2 used question class project_phase_capability with support state grounded and next action answer."
+    },
+    {
+      "ref": "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:28",
+      "score": 4,
+      "text": "- `support_graph.py`, `memory_runtime.py`, `demo_shell.py`, and `contracts.py` are the most obvious carry/port candidates, but they still require direct Phase 1 verification before they can be called complete."
+    },
+    {
+      "ref": "dynamic::runtime_limits:1",
+      "score": 4,
+      "text": "This local shell answers only from approved AGIFCore local truth and runtime state."
+    },
+    {
+      "ref": "dynamic::runtime_limits:3",
+      "score": 4,
+      "text": "The interactive path is bounded and does not use hidden external services."
+    },
+    {
+      "ref": "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:13",
+      "score": 4,
+      "text": "| RRM-001 | `runtime.py` | `SRC-004 agif_v2_master` | `rebuild_clean` | AGIFCore runtime entrypoint | exact module name from the master plan |"
+    },
+    {
+      "ref": "projects/agifcore_master/01_plan/PHASE_INDEX.md:1",
+      "score": 4,
+      "text": "Phase 0 is `approved` in the live gate files, with title `AGIFCore reset and source freeze`."
+    },
+    {
+      "ref": "projects/agifcore_master/01_plan/PHASE_INDEX.md:2",
+      "score": 4,
+      "text": "Phase 1 is `approved` in the live gate files, with title `constitution and full-system blueprint`."
+    }
+  ],
+  "support_state": "grounded",
+  "turn_id": "interactive::2e91c4249693",
+  "uncertainty_band": "low",
+  "written_at": "2026-04-05T11:57:25"
+}

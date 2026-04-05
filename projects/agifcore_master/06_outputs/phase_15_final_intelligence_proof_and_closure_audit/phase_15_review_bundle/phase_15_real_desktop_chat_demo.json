@@ -1,0 +1,735 @@
+{
+  "api_routes": [
+    "/api/state",
+    "/api/turn",
+    "/api/reset",
+    "/api/scenario"
+  ],
+  "demo_id": "real_desktop_chat_demo",
+  "host_kind": "local_desktop_ui_browser_host",
+  "launch_command": "sh /Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/launch_phase_15_real_desktop_chat_demo.sh",
+  "notes": [
+    "local desktop chat demo only",
+    "desktop host presents runtime truth and does not own correctness",
+    "Phase 15 remains open",
+    "no approval implied"
+  ],
+  "phase": "15",
+  "runtime_host": "approved_phase13_desktop_ui",
+  "sample_prompts": [
+    "who are you",
+    "what can you do",
+    "what evidence supports that"
+  ],
+  "scenario": "weak",
+  "schema": "agifcore.phase_15.real_desktop_chat_demo.v1",
+  "status": "open",
+  "turn_summaries": [
+    {
+      "answer_mode": "grounded_fact",
+      "final_answer_mode": "grounded_fact",
+      "local_truth_refs": [
+        "dynamic::runtime_shell_snapshot:2",
+        "dynamic::runtime_shell_snapshot:1",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:2"
+      ],
+      "phases_exercised": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        9,
+        13,
+        14,
+        15
+      ],
+      "question_class": "self_system_status",
+      "question_text": "who are you",
+      "response_text": "Available surfaces are session_open, conversation_turn, state_export, trace_export, memory_review_export, safe_shutdown. Local AGIFCore runtime shell session phase13_session::ff1815e1d727 is active for conversation conv-p10-weak.",
+      "support_state": "grounded"
+    },
+    {
+      "answer_mode": "grounded_fact",
+      "final_answer_mode": "grounded_fact",
+      "local_truth_refs": [
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_limits:2",
+        "dynamic::runtime_shell_snapshot:1",
+        "dynamic::runtime_shell_snapshot:2"
+      ],
+      "phases_exercised": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        9,
+        13,
+        14,
+        15
+      ],
+      "question_class": "project_phase_capability",
+      "question_text": "what can you do",
+      "response_text": "This local shell answers only from approved AGIFCore local truth and runtime state. Available runtime surfaces: session_open, conversation_turn, state_export, trace_export, memory_review_export, safe_shutdown.",
+      "support_state": "grounded"
+    },
+    {
+      "answer_mode": "grounded_fact",
+      "final_answer_mode": "grounded_fact",
+      "local_truth_refs": [
+        "dynamic::memory_review_export:2",
+        "dynamic::memory_review_export:1",
+        "dynamic::interactive_history:1",
+        "dynamic::interactive_history:3"
+      ],
+      "phases_exercised": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        9,
+        10,
+        13,
+        14,
+        15
+      ],
+      "question_class": "support_diagnostics",
+      "question_text": "what evidence supports that",
+      "response_text": "The previous answer was supported by these local refs: dynamic::runtime_limits:1, dynamic::runtime_limits:2, dynamic::runtime_shell_snapshot:1, dynamic::runtime_shell_snapshot:2.",
+      "support_state": "grounded"
+    }
+  ],
+  "ui_schema": "agifcore.phase_13.local_desktop_chat_demo.v1",
+  "ui_snapshot": {
+    "chat_transcript": [
+      {
+        "speaker": "user",
+        "text": "who are you"
+      },
+      {
+        "answer_mode": "grounded_fact",
+        "final_answer_mode": "grounded_fact",
+        "speaker": "assistant",
+        "text": "Available surfaces are session_open, conversation_turn, state_export, trace_export, memory_review_export, safe_shutdown. Local AGIFCore runtime shell session phase13_session::ff1815e1d727 is active for conversation conv-p10-weak."
+      },
+      {
+        "speaker": "user",
+        "text": "what can you do"
+      },
+      {
+        "answer_mode": "grounded_fact",
+        "final_answer_mode": "grounded_fact",
+        "speaker": "assistant",
+        "text": "This local shell answers only from approved AGIFCore local truth and runtime state. Available runtime surfaces: session_open, conversation_turn, state_export, trace_export, memory_review_export, safe_shutdown."
+      },
+      {
+        "speaker": "user",
+        "text": "what evidence supports that"
+      },
+      {
+        "answer_mode": "grounded_fact",
+        "final_answer_mode": "grounded_fact",
+        "speaker": "assistant",
+        "text": "The previous answer was supported by these local refs: dynamic::runtime_limits:1, dynamic::runtime_limits:2, dynamic::runtime_shell_snapshot:1, dynamic::runtime_shell_snapshot:2."
+      }
+    ],
+    "input_contract": {
+      "max_chars": 512,
+      "placeholder": "Ask the local AGIFCore shell a question"
+    },
+    "latest_turn": {
+      "abstain_or_answer": "answer",
+      "answer_mode": "grounded_fact",
+      "conversation_id": "conv-p10-weak",
+      "critique_diagnosis_fired": true,
+      "derived_question_class": "support_diagnostics",
+      "extracted_target": null,
+      "final_answer_mode": "grounded_fact",
+      "follow_up_bound": true,
+      "graph_support_consulted": true,
+      "knowledge_gap_reason": "none",
+      "live_measurement_required": false,
+      "local_sources_consulted": [
+        {
+          "line_number": 2,
+          "path": "dynamic::memory_review_export",
+          "ref": "dynamic::memory_review_export:2",
+          "source_id": "memory_review_export"
+        },
+        {
+          "line_number": 1,
+          "path": "dynamic::memory_review_export",
+          "ref": "dynamic::memory_review_export:1",
+          "source_id": "memory_review_export"
+        },
+        {
+          "line_number": 1,
+          "path": "dynamic::interactive_history",
+          "ref": "dynamic::interactive_history:1",
+          "source_id": "interactive_history"
+        },
+        {
+          "line_number": 3,
+          "path": "dynamic::interactive_history",
+          "ref": "dynamic::interactive_history:3",
+          "source_id": "interactive_history"
+        },
+        {
+          "line_number": 2,
+          "path": "dynamic::runtime_limits",
+          "ref": "dynamic::runtime_limits:2",
+          "source_id": "runtime_limits"
+        },
+        {
+          "line_number": 1,
+          "path": "dynamic::runtime_limits",
+          "ref": "dynamic::runtime_limits:1",
+          "source_id": "runtime_limits"
+        },
+        {
+          "line_number": 1,
+          "path": "dynamic::runtime_shell_snapshot",
+          "ref": "dynamic::runtime_shell_snapshot:1",
+          "source_id": "runtime_shell_snapshot"
+        },
+        {
+          "line_number": 2,
+          "path": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md",
+          "ref": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+          "source_id": "human_target"
+        }
+      ],
+      "local_truth_refs": [
+        "dynamic::memory_review_export:2",
+        "dynamic::memory_review_export:1",
+        "dynamic::interactive_history:1",
+        "dynamic::interactive_history:3",
+        "dynamic::runtime_limits:2",
+        "dynamic::runtime_limits:1",
+        "dynamic::runtime_shell_snapshot:1",
+        "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2"
+      ],
+      "memory_consulted": true,
+      "next_action": "answer",
+      "notes": [
+        "real live question-driven path through bounded AGIFCore phases",
+        "uses approved local truth only",
+        "keeps the older scenario harness separate for proof/demo review",
+        "no approval implied"
+      ],
+      "phase10_public_explanation": "A missing variable or ambiguity remains, so the next safe move is a bounded clarification.",
+      "phase10_selected_outcome": "clarify",
+      "phase11_read_only_refs": [],
+      "phase12_read_only_refs": [
+        "phase12_gap::6061daca1549",
+        "phase12_gap::7cf580032ce2"
+      ],
+      "phase14_budget_allowed": false,
+      "phase14_budget_state": "profile_mismatch",
+      "phase14_profile": "laptop",
+      "phase14_selected_cell_count": 8,
+      "phase14_selected_tissue_count": 2,
+      "phase2_evidence": {
+        "replay_verification": {
+          "conversation_id": "conv-p10-weak",
+          "replay_id": "replay::729e0d4a8e69",
+          "replay_match": false,
+          "state_anchor_hash": "b38f62884e079bdb0beb1826b66c4a552ad2799ef55ee14f634060e01ddcc305",
+          "state_match": false,
+          "trace_anchor_hash": "4ba2270743192a1ae690fb91c9a9ca234a297e0801e893679ff68cc7ded99ba9",
+          "trace_match": true,
+          "turn_id": "interactive::76a095ae3942"
+        },
+        "trace_export": [
+          {
+            "conversation_id": "conv-p10-weak",
+            "critic_trace_ref": "critic::281191618657",
+            "discourse_mode": "explain",
+            "event_id": "evt-e1220810b51f4283b7fe7d9cc170b974",
+            "event_type": "turn_admitted",
+            "final_answer_mode": null,
+            "governance_trace_ref": "governance::80b81a8b497a",
+            "knowledge_gap_reason": "none",
+            "next_action": "answer",
+            "occurred_at": "2026-04-02T07:46:53+00:00",
+            "payload_size_bytes": 1024,
+            "planner_trace_ref": "planner::b4b4c2e26a94",
+            "producer": "phase13-live-turn",
+            "sequence": 1,
+            "simulation_trace_ref": "545413367b0a80e5009321b78353ba009effb76f27fb1748f9d688891b0ee033",
+            "support_state": "grounded",
+            "turn_id": "interactive::76a095ae3942"
+          },
+          {
+            "conversation_id": "conv-p10-weak",
+            "critic_trace_ref": "critic::281191618657",
+            "discourse_mode": "explain",
+            "event_id": "evt-bce1096771af426699191339ecf5306e",
+            "event_type": "trace_annotated",
+            "final_answer_mode": null,
+            "governance_trace_ref": "governance::80b81a8b497a",
+            "knowledge_gap_reason": "none",
+            "next_action": "answer",
+            "occurred_at": "2026-04-02T07:46:53+00:00",
+            "payload_size_bytes": 1028,
+            "planner_trace_ref": "planner::b4b4c2e26a94",
+            "producer": "phase13-live-turn",
+            "sequence": 2,
+            "simulation_trace_ref": "545413367b0a80e5009321b78353ba009effb76f27fb1748f9d688891b0ee033",
+            "support_state": "grounded",
+            "turn_id": "interactive::76a095ae3942"
+          },
+          {
+            "conversation_id": "conv-p10-weak",
+            "critic_trace_ref": "critic::281191618657",
+            "discourse_mode": "explain",
+            "event_id": "evt-c7892eb3345946ab96e649371f37fc9b",
+            "event_type": "governance_decided",
+            "final_answer_mode": null,
+            "governance_trace_ref": "governance::80b81a8b497a",
+            "knowledge_gap_reason": "none",
+            "next_action": "answer",
+            "occurred_at": "2026-04-02T07:46:53+00:00",
+            "payload_size_bytes": 1034,
+            "planner_trace_ref": "planner::b4b4c2e26a94",
+            "producer": "phase13-live-turn",
+            "sequence": 3,
+            "simulation_trace_ref": "545413367b0a80e5009321b78353ba009effb76f27fb1748f9d688891b0ee033",
+            "support_state": "grounded",
+            "turn_id": "interactive::76a095ae3942"
+          },
+          {
+            "conversation_id": "conv-p10-weak",
+            "critic_trace_ref": "critic::281191618657",
+            "discourse_mode": "explain",
+            "event_id": "evt-b0a94a88559245f1bd5a29ea71fc15b2",
+            "event_type": "response_ready",
+            "final_answer_mode": "grounded_fact",
+            "governance_trace_ref": "governance::80b81a8b497a",
+            "knowledge_gap_reason": "none",
+            "next_action": "answer",
+            "occurred_at": "2026-04-02T07:46:53+00:00",
+            "payload_size_bytes": 1337,
+            "planner_trace_ref": "planner::b4b4c2e26a94",
+            "producer": "phase13-live-turn",
+            "sequence": 4,
+            "simulation_trace_ref": "545413367b0a80e5009321b78353ba009effb76f27fb1748f9d688891b0ee033",
+            "support_state": "grounded",
+            "turn_id": "interactive::76a095ae3942"
+          }
+        ],
+        "workspace_memory_review_export": {
+          "memory_review_refs": [
+            {
+              "conversation_id": "conv-p10-weak",
+              "memory_review_ref": "memory-review-00000011",
+              "turn_id": "interactive::76a095ae3942"
+            }
+          ],
+          "notes": [
+            "references only",
+            "no semantic memory",
+            "no procedural memory",
+            "no graph persistence"
+          ],
+          "retention_candidate_refs": [],
+          "schema": "agifcore.phase_02.memory_review_export.v1",
+          "workspace_id": "phase-13-live-interactive-workspace"
+        },
+        "workspace_state_export": {
+          "cells": [],
+          "created_at": "2026-04-02T07:46:53+00:00",
+          "evidence_refs": [
+            "dynamic::memory_review_export:2",
+            "dynamic::memory_review_export:1",
+            "dynamic::interactive_history:1",
+            "dynamic::interactive_history:3",
+            "dynamic::runtime_limits:2",
+            "dynamic::runtime_limits:1",
+            "dynamic::runtime_shell_snapshot:1",
+            "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2"
+          ],
+          "memory_hook_surface": {
+            "memory_review_refs": [
+              {
+                "conversation_id": "conv-p10-weak",
+                "memory_review_ref": "memory-review-00000011",
+                "turn_id": "interactive::76a095ae3942"
+              }
+            ],
+            "notes": [
+              "references only",
+              "no semantic memory",
+              "no procedural memory",
+              "no graph persistence"
+            ],
+            "retention_candidate_refs": [],
+            "schema": "agifcore.phase_02.memory_review_export.v1",
+            "workspace_id": "phase-13-live-interactive-workspace"
+          },
+          "operator_commands": [
+            "inspect_state",
+            "plan_governed_action",
+            "verify_or_replay",
+            "rollback_or_quarantine",
+            "export_evidence"
+          ],
+          "operator_log": [
+            {
+              "command_class": "inspect_state",
+              "occurred_at": "2026-04-02T07:46:53+00:00",
+              "turn_ref": "workspace://phase-13-live-interactive-workspace/turn/conv-p10-weak/interactive::76a095ae3942"
+            }
+          ],
+          "quarantine_refs": [],
+          "replay_refs": [
+            "replay::729e0d4a8e69"
+          ],
+          "rollback_refs": [],
+          "schema": "agifcore.phase_02.state_export.v1",
+          "turns": [
+            {
+              "abstain_or_answer": "answer",
+              "active_context_refs": [
+                "dynamic::memory_review_export:2",
+                "dynamic::memory_review_export:1",
+                "dynamic::interactive_history:1",
+                "dynamic::interactive_history:3",
+                "dynamic::runtime_limits:2",
+                "dynamic::runtime_limits:1",
+                "dynamic::runtime_shell_snapshot:1",
+                "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2"
+              ],
+              "conversation_id": "conv-p10-weak",
+              "critic_trace_ref": "critic::281191618657",
+              "discourse_mode": "explain",
+              "final_answer_mode": "grounded_fact",
+              "governance_trace_ref": "governance::80b81a8b497a",
+              "knowledge_gap_reason": "none",
+              "last_event_type": "response_ready",
+              "memory_review_ref": "memory-review-00000011",
+              "next_action": "answer",
+              "planner_trace_ref": "planner::b4b4c2e26a94",
+              "response_text": "The previous answer was supported by these local refs: dynamic::runtime_limits:1, dynamic::runtime_limits:2, dynamic::runtime_shell_snapshot:1, dynamic::runtime_shell_snapshot:2.",
+              "simulation_trace_ref": "545413367b0a80e5009321b78353ba009effb76f27fb1748f9d688891b0ee033",
+              "support_state": "grounded",
+              "turn_id": "interactive::76a095ae3942",
+              "turn_ref": "workspace://phase-13-live-interactive-workspace/turn/conv-p10-weak/interactive::76a095ae3942",
+              "user_intent": "general_question",
+              "workspace_updated_at": "2026-04-02T07:46:53+00:00"
+            }
+          ],
+          "workspace_id": "phase-13-live-interactive-workspace"
+        }
+      },
+      "phase2_replay_match": false,
+      "phase2_trace_record_count": 4,
+      "phase7_question_category": "ordinary",
+      "phase_usage": {
+        "phase_10": {
+          "diagnosis_ref": "weak_answer_diagnosis::3fda9d60d5d3",
+          "selected_outcome": "clarify",
+          "used": true
+        },
+        "phase_11": {
+          "monitoring_ref_count": 0,
+          "read_only_context": true,
+          "used": false
+        },
+        "phase_12": {
+          "read_only_context": true,
+          "selected_gap_count": 2,
+          "used": false
+        },
+        "phase_13": {
+          "session_id": "phase13_session::ff1815e1d727",
+          "shell_snapshot_hash": "3f6dbc615a2b2a39ff5fc8eddf12c34b37403901a4348112d0b6e2ba6eb5ace7",
+          "used": true
+        },
+        "phase_14": {
+          "budget_receipt_hash": "5f7d7e060be642f9d0e1f49eb5cd4bbfa42cf5135a206890cd18d593df45b18b",
+          "budget_state": "profile_mismatch",
+          "profile": "laptop",
+          "selected_active_cell_count": 8,
+          "used": true
+        },
+        "phase_15": {
+          "review_ready_fields_present": true,
+          "turn_evidence_ref": "phase15::interactive_turn::85bbae65ff5d",
+          "used": true
+        },
+        "phase_2": {
+          "event_count": 4,
+          "replay_id": "replay::729e0d4a8e69",
+          "trace_record_count": 4,
+          "used": true
+        },
+        "phase_3": {
+          "route_families": [
+            "critic_error_monitor",
+            "audit_replay",
+            "continuity_self_history"
+          ],
+          "selected_cell_ids": [
+            "cell_0001",
+            "cell_0002",
+            "cell_0003",
+            "cell_0004",
+            "cell_0005",
+            "cell_0065",
+            "cell_0066",
+            "cell_0067"
+          ],
+          "selected_tissue_ids": [
+            "tissue_01",
+            "tissue_03"
+          ],
+          "used": true
+        },
+        "phase_4": {
+          "continuity_anchor_count": 7,
+          "procedural_entry_count": 3,
+          "semantic_entry_count": 8,
+          "used": true
+        },
+        "phase_5": {
+          "concept_node_count": 8,
+          "descriptor_node_count": 8,
+          "selected_candidate_ids": [
+            "descriptor::desc-04",
+            "concept::concept-04",
+            "descriptor::desc-07",
+            "concept::concept-07",
+            "skill::skill-local-truth-answer"
+          ],
+          "skill_node_count": 3,
+          "used": true
+        },
+        "phase_6": {
+          "candidate_future_hash": "08bb00d44a492597e52861275a3b22804a08b2f05de9257d206d1d272621adc2",
+          "simulation_hash": "545413367b0a80e5009321b78353ba009effb76f27fb1748f9d688891b0ee033",
+          "used": false,
+          "usefulness_hash": "9fbb3a9fc48a78135831c93f349c3258cc1edaf5dc4809edaf54f1601531cfb1",
+          "world_model_hash": "6293ad5c8a87110c89c109244d0faf7e5b5996d7eda055dfe3d3f66eb9436e6e"
+        },
+        "phase_7": {
+          "answer_contract_hash": "1ab3376980817058b4a2ed02748d377d9e1545b03042efb07d0033a7c60ad1c2",
+          "next_action": "answer",
+          "question_category": "ordinary",
+          "support_state": "inferred",
+          "used": true
+        },
+        "phase_8": {
+          "entity_request_hash": "35cb2a1c32e482b8b721b88ddfbcf8695e3b369c75c4a5d77ec155ff22c49e1d",
+          "reasoning_summary_hash": "2d9deff28e99890203d8655888060403ccff1bd3afafeef973642b7192c4a5be",
+          "used": false
+        },
+        "phase_9": {
+          "overlay_hash": "7ae6f02729eb1a529846f6fa0b3bd41c7f219e9ce14a9f92635a55d1d4bb2d87",
+          "selected_lane": "synthesis",
+          "used": true
+        }
+      },
+      "phases_exercised": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        9,
+        10,
+        13,
+        14,
+        15
+      ],
+      "question_class": "support_diagnostics",
+      "question_text": "what evidence supports that",
+      "request_text": "what evidence supports that",
+      "response_kind": "bounded_answer",
+      "response_text": "The previous answer was supported by these local refs: dynamic::runtime_limits:1, dynamic::runtime_limits:2, dynamic::runtime_shell_snapshot:1, dynamic::runtime_shell_snapshot:2.",
+      "schema": "agifcore.phase_13.interactive_turn.v1",
+      "selected_candidate_ids": [
+        "descriptor::desc-04",
+        "concept::concept-04",
+        "descriptor::desc-07",
+        "concept::concept-07",
+        "skill::skill-local-truth-answer"
+      ],
+      "session_id": "phase13_session::ff1815e1d727",
+      "simulation_world_model_consulted": false,
+      "source_set_used": [
+        "memory_review_export",
+        "interactive_history",
+        "runtime_limits",
+        "runtime_shell_snapshot",
+        "human_target"
+      ],
+      "support_snippets": [
+        {
+          "ref": "dynamic::memory_review_export:2",
+          "score": 6,
+          "text": "Memory review export supports session phase13_session::ff1815e1d727."
+        },
+        {
+          "ref": "dynamic::memory_review_export:1",
+          "score": 5,
+          "text": "Memory review export hash is a2d31910f16f441d6f86aea504d0b3fa733a5e83da3c31081e174da6e6c24fb8."
+        },
+        {
+          "ref": "dynamic::interactive_history:1",
+          "score": 3,
+          "text": "Recent interactive turn 1 used question class project_phase_capability with support state grounded and next action answer."
+        },
+        {
+          "ref": "dynamic::interactive_history:3",
+          "score": 3,
+          "text": "Recent interactive turn 2 used question class self_system_status with support state grounded and next action answer."
+        },
+        {
+          "ref": "dynamic::runtime_limits:2",
+          "score": 3,
+          "text": "Unsupported or missing-local-support questions must fail closed with clarify, abstain, or search_needed."
+        },
+        {
+          "ref": "dynamic::runtime_limits:1",
+          "score": 3,
+          "text": "This local shell answers only from approved AGIFCore local truth and runtime state."
+        },
+        {
+          "ref": "dynamic::runtime_shell_snapshot:1",
+          "score": 3,
+          "text": "Local AGIFCore runtime shell session phase13_session::ff1815e1d727 is active for conversation conv-p10-weak."
+        },
+        {
+          "ref": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:2",
+          "score": 3,
+          "text": "build and revise internal support"
+        }
+      ],
+      "support_state": "grounded",
+      "target_grounded": null,
+      "turn_hash": "ad6d924b561aa642e4d22ec37f0717e9aa5748e791aa8997045d1dbe19f60d0a",
+      "turn_id": "interactive::76a095ae3942",
+      "uncertainty_band": "low"
+    },
+    "message_count": 6,
+    "schema": "agifcore.phase_13.local_desktop_chat_demo.v1",
+    "selected_view": "chat_workspace",
+    "session_id": "phase13_session::ff1815e1d727",
+    "snapshot_hash": "d9b404232bd7b6083b04ada62596568495d7e265d3fd024351a57dd033e87255",
+    "turn_count": 3,
+    "view_count": 7,
+    "views": [
+      {
+        "evidence_refs": [
+          "phase8.summary.ref.001",
+          "phase8.summary.ref.002",
+          "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+          "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797"
+        ],
+        "status": "ready",
+        "summary_lines": [
+          "session_id=phase13_session::ff1815e1d727",
+          "interactive_turn_count=3",
+          "available_surfaces=6"
+        ],
+        "title": "Session Overview",
+        "view_id": "session_overview"
+      },
+      {
+        "evidence_refs": [
+          "dynamic::memory_review_export:2",
+          "dynamic::memory_review_export:1",
+          "dynamic::interactive_history:1",
+          "dynamic::interactive_history:3"
+        ],
+        "status": "ready",
+        "summary_lines": [
+          "The previous answer was supported by these local refs: dynamic::runtime_limits:1, dynamic::runtime_limits:2, dynamic::runtime_shell_snapshot:1, dynamic::runtime_shell_snapshot:2.",
+          "message_count=6",
+          "desktop host presents runtime truth only"
+        ],
+        "title": "Chat Workspace",
+        "view_id": "chat_workspace"
+      },
+      {
+        "evidence_refs": [
+          "dynamic::memory_review_export:2",
+          "dynamic::memory_review_export:1",
+          "dynamic::interactive_history:1",
+          "dynamic::interactive_history:3"
+        ],
+        "status": "ready",
+        "summary_lines": [
+          "question_class=support_diagnostics",
+          "answer_mode=grounded_fact",
+          "support_state=grounded"
+        ],
+        "title": "Turn Evidence",
+        "view_id": "turn_evidence_view"
+      },
+      {
+        "evidence_refs": [
+          "phase8.summary.ref.001",
+          "phase8.summary.ref.002",
+          "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+          "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797"
+        ],
+        "status": "ready",
+        "summary_lines": [
+          "trace_record_count=2",
+          "phases_exercised=2, 3, 4, 5, 7, 9, 10, 13, 14, 15"
+        ],
+        "title": "Trace Export",
+        "view_id": "trace_export_view"
+      },
+      {
+        "evidence_refs": [
+          "phase8.summary.ref.001",
+          "phase8.summary.ref.002",
+          "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+          "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797"
+        ],
+        "status": "ready",
+        "summary_lines": [
+          "state_schema=agifcore.phase_02.state_export.v1",
+          "payload_bytes=4794"
+        ],
+        "title": "State Export",
+        "view_id": "state_export_view"
+      },
+      {
+        "evidence_refs": [
+          "5df43dd942d8223120c35caabca11ef3cd7e3e5c4d0e2ca4e598770cf6bcb381",
+          "91918ef29258bcb918e7c81125f97ce3275066f6379a8def247f869bc2070a65",
+          "669c174e25f890252fd4495af3d72a8d1702232b582f09bae06e7332700cc452"
+        ],
+        "status": "ready",
+        "summary_lines": [
+          "memory_ref_count=1",
+          "continuity_ref_count=3"
+        ],
+        "title": "Memory Review Export",
+        "view_id": "memory_review_view"
+      },
+      {
+        "evidence_refs": [
+          "phase8.summary.ref.001",
+          "phase8.summary.ref.002",
+          "b5e61a9da4cca38083cd5ec400f34f0272fb716cde0b55d7bd61d2254039f534",
+          "b19a3db1803236b503233e8cf1e08b9a9f99e394c576f7e632e73174fd6dc797"
+        ],
+        "status": "blocked_states_visible",
+        "summary_lines": [
+          "blocked_state_count=6",
+          "unsupported questions stay explicit and inspectable"
+        ],
+        "title": "Fail-Closed Help",
+        "view_id": "fail_closed_help_view"
+      }
+    ]
+  }
+}

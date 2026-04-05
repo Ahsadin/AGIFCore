@@ -1,0 +1,64 @@
+{
+  "available_report_count": 9,
+  "invalid_reports": [],
+  "missing_reports": [],
+  "notes": [
+    "this manifest tracks machine-readable verifier outputs only",
+    "Phase 15 remains open",
+    "manifest is rebuilt from actual report files on disk",
+    "no approval implied"
+  ],
+  "output_bundle_size_bytes": 4027064,
+  "output_bundle_within_planning_ceiling": true,
+  "phase": "15",
+  "phase_remains_open": true,
+  "reports": [
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_blind_pack_report.json",
+      "report_id": "blind_pack_report",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_hidden_pack_report.json",
+      "report_id": "hidden_pack_report",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_live_demo_pack_report.json",
+      "report_id": "live_demo_pack_report",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_real_desktop_chat_demo_report.json",
+      "report_id": "real_desktop_chat_demo_report",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_soak_summary.json",
+      "report_id": "soak_summary",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_hardening_report.json",
+      "report_id": "hardening_report",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_interactive_chat_report.json",
+      "report_id": "interactive_chat_report",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_reproducibility_report.json",
+      "report_id": "reproducibility_report",
+      "status": "pass"
+    },
+    {
+      "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_closure_audit_report.json",
+      "report_id": "closure_audit_report",
+      "status": "pass"
+    }
+  ],
+  "required_report_count": 9,
+  "status": "phase_15_verifier_family_pass"
+}

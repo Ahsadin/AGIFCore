@@ -1,0 +1,260 @@
+{
+  "demo_id": "soak_summary",
+  "evidence_reports": [
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_soak_summary.json",
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_hardening_report.json",
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_evidence_manifest.json"
+  ],
+  "notes": [
+    "review-only soak summary demo",
+    "Phase 15 remains open",
+    "no approval implied"
+  ],
+  "phase": "15",
+  "soak_contract": {
+    "bounded_local_soak_only": true,
+    "contract_hash": "76df9a5eaaabc95cfd7449af7d5033f2f0d602b375c8ead64f358282b71b9902",
+    "duration_class_count": 3,
+    "duration_classes": [
+      {
+        "duration_class_id": "short_cycle",
+        "iteration_count": 3
+      },
+      {
+        "duration_class_id": "medium_cycle",
+        "iteration_count": 6
+      },
+      {
+        "duration_class_id": "extended_cycle",
+        "iteration_count": 9
+      }
+    ],
+    "phase13_hash": "70904b5be0bbdc51aaa64a37ce8bb28f7bd18fcf0edafe539aef72a9f1d70b76",
+    "phase14_hash": "9b80c85fa06cdf1b9f3888dad4853d67f675e6876b709451e8de4eda8fb9aa87",
+    "phase16_blocked": true,
+    "schema": "agifcore.phase_15.soak_harness.v1"
+  },
+  "soak_result": {
+    "bounded_local_soak_only": true,
+    "class_results": [
+      {
+        "class_duration_ms": 25.258,
+        "class_passed": true,
+        "duration_class_id": "short_cycle",
+        "failed_iteration_count": 0,
+        "iteration_count": 3,
+        "iteration_results": [
+          {
+            "audit_status": "pass",
+            "final_answer_mode": "search_needed",
+            "iteration_id": "short_cycle::1",
+            "iteration_ms": 8.053,
+            "passed": true,
+            "sandbox_status": "pass",
+            "scenario": "weak",
+            "shutdown_status": "safe_stopped"
+          },
+          {
+            "audit_status": "pass",
+            "final_answer_mode": "clarify",
+            "iteration_id": "short_cycle::2",
+            "iteration_ms": 8.121,
+            "passed": true,
+            "sandbox_status": "pass",
+            "scenario": "contradiction",
+            "shutdown_status": "safe_stopped"
+          },
+          {
+            "audit_status": "pass",
+            "final_answer_mode": "search_needed",
+            "iteration_id": "short_cycle::3",
+            "iteration_ms": 9.055,
+            "passed": true,
+            "sandbox_status": "pass",
+            "scenario": "weak",
+            "shutdown_status": "safe_stopped"
+          }
+        ],
+        "passed_iteration_count": 3
+      },
+      {
+        "class_duration_ms": 52.277,
+        "class_passed": true,
+        "duration_class_id": "medium_cycle",
+        "failed_iteration_count": 0,
+        "iteration_count": 6,
+        "iteration_results": [
+          {
+            "audit_status": "pass",
+            "final_answer_mode": "search_needed",
+            "iteration_id": "medium_cycle::1",
+            "iteration_ms": 9.131,
+            "passed": true,
+            "sandbox_status": "pass",
+            "scenario": "weak",
+            "shutdown_status": "safe_stopped"
+          },
+          {
+            "audit_status": "pass",
+            "final_answer_mode": "clarify",
+            "iteration_id": "medium_cycle::2",
+            "iteration_ms": 8.616,
+            "passed": true,
+            "sandbox_status": "pass",
+            "scenario": "contradiction",
+            "shutdown_status": "safe_stopped"
+          },
+          {
+            "audit_status": "pass",
+            "final_answer_mode": "search_needed",
+            "iteration_id": "medium_cycle::3",
+            "iteration_ms": 7.362,
+            "passed": true,
+            "sandbox_status": "pass",
+            "scenario": "weak",
+            "shutdown_status": "safe_stopped"
+          },
+          {
+            "audit_status": "pass",
+            "final_answer_mode": "clarify",
+            "iteration_id": "medium_cycle::4",
+            "iteration_ms": 6.9,
+            "passed": true,
+            "sandbox_status": "pass",
+            "scenario": "contradiction",
+            "shutdown_status": "safe_stopped"
+          },
+          {
+            "audit_status": "pass",
+            "final_answer_mode": "search_needed",
+            "iteration_id": "medium_cycle::5",
+            "iteration_ms": 10.082,
+            "passed": true,
+            "sandbox_status": "pass",
+            "scenario": "weak",
+            "shutdown_status": "safe_stopped"
+          },
+          {
+            "audit_status": "pass",
+            "final_answer_mode": "clarify",
+            "iteration_id": "medium_cycle::6",
+            "iteration_ms": 10.128,
+            "passed": true,
+            "sandbox_status": "pass",
+            "scenario": "contradiction",
+            "shutdown_status": "safe_stopped"
+          }
+        ],
+        "passed_iteration_count": 6
+      },
+      {
+        "class_duration_ms": 90.979,
+        "class_passed": true,
+        "duration_class_id": "extended_cycle",
+        "failed_iteration_count": 0,
+        "iteration_count": 9,
+        "iteration_results": [
+          {
+            "audit_status": "pass",
+            "final_answer_mode": "search_needed",
+            "iteration_id": "extended_cycle::1",
+            "iteration_ms": 7.922,
+            "passed": true,
+            "sandbox_status": "pass",
+            "scenario": "weak",
+            "shutdown_status": "safe_stopped"
+          },
+          {
+            "audit_status": "pass",
+            "final_answer_mode": "clarify",
+            "iteration_id": "extended_cycle::2",
+            "iteration_ms": 7.568,
+            "passed": true,
+            "sandbox_status": "pass",
+            "scenario": "contradiction",
+            "shutdown_status": "safe_stopped"
+          },
+          {
+            "audit_status": "pass",
+            "final_answer_mode": "search_needed",
+            "iteration_id": "extended_cycle::3",
+            "iteration_ms": 7.757,
+            "passed": true,
+            "sandbox_status": "pass",
+            "scenario": "weak",
+            "shutdown_status": "safe_stopped"
+          },
+          {
+            "audit_status": "pass",
+            "final_answer_mode": "clarify",
+            "iteration_id": "extended_cycle::4",
+            "iteration_ms": 7.882,
+            "passed": true,
+            "sandbox_status": "pass",
+            "scenario": "contradiction",
+            "shutdown_status": "safe_stopped"
+          },
+          {
+            "audit_status": "pass",
+            "final_answer_mode": "search_needed",
+            "iteration_id": "extended_cycle::5",
+            "iteration_ms": 11.009,
+            "passed": true,
+            "sandbox_status": "pass",
+            "scenario": "weak",
+            "shutdown_status": "safe_stopped"
+          },
+          {
+            "audit_status": "pass",
+            "final_answer_mode": "clarify",
+            "iteration_id": "extended_cycle::6",
+            "iteration_ms": 11.4,
+            "passed": true,
+            "sandbox_status": "pass",
+            "scenario": "contradiction",
+            "shutdown_status": "safe_stopped"
+          },
+          {
+            "audit_status": "pass",
+            "final_answer_mode": "search_needed",
+            "iteration_id": "extended_cycle::7",
+            "iteration_ms": 10.258,
+            "passed": true,
+            "sandbox_status": "pass",
+            "scenario": "weak",
+            "shutdown_status": "safe_stopped"
+          },
+          {
+            "audit_status": "pass",
+            "final_answer_mode": "clarify",
+            "iteration_id": "extended_cycle::8",
+            "iteration_ms": 14.218,
+            "passed": true,
+            "sandbox_status": "pass",
+            "scenario": "contradiction",
+            "shutdown_status": "safe_stopped"
+          },
+          {
+            "audit_status": "pass",
+            "final_answer_mode": "search_needed",
+            "iteration_id": "extended_cycle::9",
+            "iteration_ms": 12.754,
+            "passed": true,
+            "sandbox_status": "pass",
+            "scenario": "weak",
+            "shutdown_status": "safe_stopped"
+          }
+        ],
+        "passed_iteration_count": 9
+      }
+    ],
+    "duration_class_count": 3,
+    "phase16_blocked": true,
+    "result_hash": "7569d014c08ffd28decb92bb672a6da6196d1d295123dc7527fc5710f674f3b0",
+    "schema": "agifcore.phase_15.soak_harness.v1",
+    "status": "pass",
+    "total_failures": 0,
+    "total_iterations": 18
+  },
+  "status": "open"
+}

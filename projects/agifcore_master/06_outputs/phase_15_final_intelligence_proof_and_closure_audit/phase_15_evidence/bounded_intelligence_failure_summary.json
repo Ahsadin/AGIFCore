@@ -1,0 +1,18 @@
+{
+  "benchmark_id": "agifcore_bounded_intelligence_gate_v1",
+  "failure_counts_by_primary_failure_type": {
+    "interpretation_failure": 1,
+    "pass": 49
+  },
+  "gate_passed": true,
+  "hard_fail_reasons": [],
+  "next_step": "bounded closeout may proceed to audit/verification packaging",
+  "ranked_failures": [
+    {
+      "case_id": "what_phase_are_you_on",
+      "class_group": "project_phase_capability",
+      "primary_failure_type": "interpretation_failure",
+      "short_failure_reason": "detected class `project_phase_capability` not in allowed classes ['local_truth_evidence']"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "benchmark_id": "agifcore_bounded_intelligence_shadow_gate_v1",
+  "failure_counts_by_primary_failure_type": {
+    "pass": 50
+  },
+  "hard_fail_reasons": [],
+  "next_step": "shadow benchmark supports the frozen gate integrity review",
+  "ranked_failures": [],
+  "shadow_passed": true
+}

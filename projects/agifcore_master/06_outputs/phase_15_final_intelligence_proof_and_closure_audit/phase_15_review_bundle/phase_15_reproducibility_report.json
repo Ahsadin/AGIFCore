@@ -1,0 +1,183 @@
+{
+  "anchors": {
+    "bundle_size_bytes": 2613311,
+    "evidence_manifest_before_refresh": {
+      "available_report_count": 9,
+      "bundle_size_bytes": 2613311,
+      "bundle_size_within_ceiling": true,
+      "manifest_hash": "f444cdc205d9376a9beeba760324bd5c89b536a59245c7b091ad336c2a7ec876",
+      "manifest_path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_evidence_manifest.json",
+      "manifest_size_bytes": 2341,
+      "manifest_status": "phase_15_verifier_family_pass",
+      "required_report_count": 9
+    },
+    "reproducibility_package": {
+      "artifact_count": 12,
+      "evidence_manifest": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_evidence_manifest.json",
+      "evidence_manifest_tracked_by_path_only": true,
+      "notes": [
+        "this package is local rerun guidance only",
+        "the evidence manifest is tracked by path instead of hash because the manifest is refreshed after the final verifier writes",
+        "it does not imply approval or publication"
+      ],
+      "package_hash": "361683570eebe75ea0236652579b1fa7f19ed88d0d1a5960edd7e655ddb48893",
+      "phase16_blocked": true,
+      "schema": "agifcore.phase_15.reproducibility_package.v1",
+      "tracked_artifacts": [
+        {
+          "artifact_id": "blind_pack_report",
+          "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_blind_pack_report.json",
+          "sha256": "5e20d6dbfffe7c0acb4761b689b2e49334ac44a6c5a8a7fd6a9f373fb0580255",
+          "size_bytes": 15987
+        },
+        {
+          "artifact_id": "hidden_pack_report",
+          "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_hidden_pack_report.json",
+          "sha256": "ccac9e3b9e735120f71ade2e7ed413afc36ed15b5f46f4fba06780d73d05af65",
+          "size_bytes": 12645
+        },
+        {
+          "artifact_id": "live_demo_pack_report",
+          "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_live_demo_pack_report.json",
+          "sha256": "36f87197fed95c778fe821f950b181277b69d7ce764e66253c2754f2ff885601",
+          "size_bytes": 190894
+        },
+        {
+          "artifact_id": "real_desktop_chat_demo_report",
+          "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_real_desktop_chat_demo_report.json",
+          "sha256": "dfa7346fbfb0c67ff01120b13956cec4c7757d34d950ced9672419145c2811d5",
+          "size_bytes": 96975
+        },
+        {
+          "artifact_id": "soak_summary",
+          "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_soak_summary.json",
+          "sha256": "9ad4c584d2ac961293c7db617c9fccdfbefd044cc863d8a33c0a187f5859e8d1",
+          "size_bytes": 12930
+        },
+        {
+          "artifact_id": "hardening_report",
+          "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_hardening_report.json",
+          "sha256": "828ce926b0f3bfbc7fab45ca4967fb523c2d0c42ea2ecb2a8b7c7fb33999fffc",
+          "size_bytes": 8037
+        },
+        {
+          "artifact_id": "interactive_chat_report",
+          "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_interactive_chat_report.json",
+          "sha256": "f6c775beecde4a03856e0ec622a049360dde4264b428a1031c771be0b50e3030",
+          "size_bytes": 1109678
+        },
+        {
+          "artifact_id": "closure_audit_report",
+          "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_closure_audit_report.json",
+          "sha256": "584699c481c5e34c2e5541355ab7a0830a630e942531df805384c6482a74e41c",
+          "size_bytes": 17246
+        },
+        {
+          "artifact_id": "phase_15_real_desktop_chat_demo",
+          "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/phase_15_real_desktop_chat_demo.json",
+          "sha256": "b960f3319e9360016c20e34b618db5bf674eb045c87039fbf1d2a2b27729f869",
+          "size_bytes": 27464
+        },
+        {
+          "artifact_id": "phase_15_final_demo",
+          "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/phase_15_final_demo.json",
+          "sha256": "88e84bb282f4690c8fc098db34b99d85831695cb42ffa7cf7d76ded955ebd884",
+          "size_bytes": 138785
+        },
+        {
+          "artifact_id": "phase_15_soak_summary_demo",
+          "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/phase_15_soak_summary_demo.json",
+          "sha256": "60fa3df726c20e9035c2a0cd95a3aa45af5501beaf523110beb7947be912bfc4",
+          "size_bytes": 8670
+        },
+        {
+          "artifact_id": "phase_15_closure_audit_summary_demo",
+          "path": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/phase_15_closure_audit_summary_demo.json",
+          "sha256": "49abc1fa44fdba792352e4aea6aebf9abe603039e66c7cf750ac996b74840781",
+          "size_bytes": 20114
+        }
+      ],
+      "verification_commands": [
+        "python3 -m compileall projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime",
+        "python3 -m compileall projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof",
+        "python3 -m compileall projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit",
+        "python3 projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_phase_15_blind_packs.py",
+        "python3 projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_phase_15_hidden_packs.py",
+        "python3 projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_phase_15_live_demo_pack.py",
+        "python3 projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_phase_15_real_desktop_chat_demo.py",
+        "python3 projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_phase_15_soak_harness.py",
+        "python3 projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_phase_15_hardening_package.py",
+        "python3 projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_phase_15_interactive_chat.py",
+        "python3 projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_phase_15_reproducibility.py",
+        "python3 projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_phase_15_closure_audit.py",
+        "python3 projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/run_phase_15_real_desktop_chat_demo.py",
+        "python3 projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/run_phase_15_final_demo.py",
+        "python3 projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/run_phase_15_soak_summary_demo.py",
+        "python3 projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/run_phase_15_closure_audit_summary_demo.py"
+      ]
+    }
+  },
+  "assertions": [
+    {
+      "id": "runtime-imports-available",
+      "result": "pass"
+    },
+    {
+      "id": "required-report-and-demo-surfaces-present",
+      "result": "pass"
+    },
+    {
+      "id": "reproducibility-artifact-count-bounded",
+      "result": "pass"
+    },
+    {
+      "id": "verification-command-set-recorded",
+      "result": "pass"
+    },
+    {
+      "id": "bundle-size-within-planning-ceiling",
+      "result": "pass"
+    }
+  ],
+  "checked_files": [
+    "projects/agifcore_master/01_plan/PHASE_15_FINAL_INTELLIGENCE_PROOF_AND_CLOSURE_AUDIT.md",
+    "projects/agifcore_master/01_plan/PHASE_14_SANDBOX_PROFILES_AND_SCALE_REALIZATION.md",
+    "projects/agifcore_master/01_plan/PHASE_13_PRODUCT_RUNTIME_AND_UX.md",
+    "projects/agifcore_master/01_plan/TRACE_CONTRACT.md",
+    "projects/agifcore_master/01_plan/VALIDATION_PROTOCOL.md",
+    "projects/agifcore_master/01_plan/DEMO_PROTOCOL.md",
+    "projects/agifcore_master/03_design/PRODUCT_RUNTIME_MODEL.md",
+    "projects/agifcore_master/03_design/SANDBOX_MODEL.md",
+    "projects/agifcore_master/03_design/DEPLOYMENT_MODEL.md",
+    "projects/agifcore_master/03_design/PUBLIC_RELEASE_MODEL.md",
+    "projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/product_runtime_shell.py",
+    "projects/agifcore_master/04_execution/phase_14_sandbox_profiles_and_scale_realization/agifcore_phase14_sandbox/sandbox_profile_shell.py",
+    "projects/agifcore_master/05_testing/phase_13_product_runtime_and_ux/_phase_13_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/_phase_14_verifier_common.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/contracts.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/proof_runtime_shell.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/blind_packs.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/hidden_packs.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/live_demo_pack.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/soak_harness.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/hardening_package.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/reproducibility_package.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/closure_audit.py",
+    "projects/agifcore_master/04_execution/phase_15_final_intelligence_proof_and_closure_audit/agifcore_phase15_proof/__init__.py",
+    "projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/_phase_15_verifier_common.py",
+    "projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_phase_15_reproducibility.py"
+  ],
+  "notes": [
+    "reproducibility hashes the report and demo artifacts directly",
+    "the evidence manifest is tracked by path because it is refreshed after the last verifier writes",
+    "Phase 15 remains open",
+    "no approval implied"
+  ],
+  "outputs": {
+    "manifest": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_evidence_manifest.json",
+    "report": "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_reproducibility_report.json"
+  },
+  "phase": "15",
+  "status": "pass",
+  "verifier": "verify_phase_15_reproducibility"
+}
