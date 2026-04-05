@@ -1,5 +1,7 @@
 # AGIFCore
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19430794.svg)](https://doi.org/10.5281/zenodo.19430794)
+
 AGIFCore is the final bounded-intelligence baseline in this repository.
 
 It should be read in three separate layers:
@@ -104,6 +106,20 @@ Canonical public evidence:
 - `projects/agifcore_master/06_outputs/final_publication/final_public_review_bundle/REVIEW_FIRST.md`
 - `projects/agifcore_master/06_outputs/final_publication/closeout_records/`
 - `projects/agifcore_master/06_outputs/final_publication/public_evidence/public_evidence_manifest.json`
+
+## Citation And DOI
+
+Zenodo DOI:
+
+- [10.5281/zenodo.19430794](https://doi.org/10.5281/zenodo.19430794)
+
+GitHub release:
+
+- [AGIFCore v1.0.0](https://github.com/Ahsadin/AGIFCore/releases/tag/v1.0.0)
+
+For citation metadata, see:
+
+- `CITATION.cff`
 
 ## F. What Comes Next
 

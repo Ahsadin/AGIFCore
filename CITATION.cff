@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use AGIFCore, please cite it using the metadata in this file."
+title: "AGIFCore"
+type: software
+version: "1.0.0"
+doi: "10.5281/zenodo.19430794"
+date-released: "2026-04-05"
+license: "Apache-2.0"
+authors:
+  - family-names: "Khan"
+    given-names: "Danish Z."
+repository-code: "https://github.com/Ahsadin/AGIFCore"
+url: "https://github.com/Ahsadin/AGIFCore"
+abstract: >-
+  AGIFCore is a local-first, governed bounded-intelligence baseline.
+  The repository contains a multi-phase architecture spanning structural,
+  memory, graph, simulation, runtime, audit, and publication layers, while the
+  final supported public claim remains bounded intelligence rather than broad
+  open-ended non-neural chat.
