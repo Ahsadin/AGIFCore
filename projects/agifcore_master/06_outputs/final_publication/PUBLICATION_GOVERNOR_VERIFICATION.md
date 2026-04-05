@@ -1,7 +1,7 @@
 # Publication Governor Verification
 
 Date: `2026-04-05`
-Status: `ready_for_local_publication`
+Status: `ready_for_github_publication`
 
 ## Direct Verification Performed
 
@@ -22,14 +22,15 @@ Status: `ready_for_local_publication`
 - the final public review bundle is present at `projects/agifcore_master/06_outputs/final_publication/final_public_review_bundle/REVIEW_FIRST.md`
 - the public evidence manifest is present at `projects/agifcore_master/06_outputs/final_publication/public_evidence/public_evidence_manifest.json`
 - branch cleanup report is present at `projects/agifcore_master/06_outputs/final_publication/BRANCH_CLEANUP_REPORT.md`
-- no remote is configured, so push readiness is local-only at this time
+- GitHub publication remote is configured as `origin`
+- publication target repository is `https://github.com/Ahsadin/AGIFCore`
 
 ## Decision
 
-- Governor result: `ready_for_local_publication`
-- Push result: `blocked_by_missing_remote`
+- Governor result: `ready_for_github_publication`
+- Push result: `ready_to_push_main`
 
 ## Truth Note
 
-This verification supports local repository publication readiness.
-It does not claim a push occurred.
+This verification supports GitHub publication readiness for the configured `origin`.
+It records package truth and remote readiness; the actual push state may be newer than this document.

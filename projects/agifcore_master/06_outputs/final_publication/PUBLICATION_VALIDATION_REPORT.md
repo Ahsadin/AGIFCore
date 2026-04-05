@@ -20,10 +20,10 @@ The final public repository package is consistent with the bounded closeout trut
 
 ## Blockers
 
-- no Git remote is configured in the local repository
-- no push was performed
+- no package-integrity blocker remains
+- actual GitHub push still depends on a successful `main` push to `origin`
 
 ## Validation Result
 
 - publication package: `ready`
-- GitHub push: `not_ready_without_remote`
+- GitHub push: `ready_with_configured_remote`
