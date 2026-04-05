@@ -4,6 +4,15 @@
   "canonical_public_evidence_family": "projects/agifcore_master/06_outputs/final_publication/public_evidence",
   "canonical_public_review_bundle": "projects/agifcore_master/06_outputs/final_publication/final_public_review_bundle",
   "canonical_closeout_records": "projects/agifcore_master/06_outputs/final_publication/closeout_records",
+  "public_entrypoints": [
+    "README.md",
+    "CLAIM_BOUNDARY.md",
+    "ARCHITECTURE.md",
+    "RESULTS.md",
+    "REPRODUCIBILITY.md",
+    "paper/AGIFCore_Bounded_Intelligence_Final_Report.md",
+    "projects/agifcore_master/06_outputs/final_publication/final_public_review_bundle/REVIEW_FIRST.md"
+  ],
   "truth_boundary": {
     "bounded_intelligence": "supported",
     "broad_chat_intelligence": "unproven/deferred"
@@ -20,7 +29,12 @@
     "phase_16_user_verdict_public.md",
     "bounded_baseline_handoff_public.md",
     "../closeout_records/bounded_intelligence_gate_summary.json",
-    "../closeout_records/bounded_intelligence_shadow_summary.json"
+    "../closeout_records/bounded_intelligence_shadow_summary.json",
+    "../PUBLICATION_AUDIT_REPORT.md",
+    "../PUBLICATION_GOVERNOR_VERIFICATION.md",
+    "../PUBLICATION_VALIDATION_REPORT.md",
+    "../BRANCH_CLEANUP_REPORT.md",
+    "../publication_safety_summary.md"
   ],
   "internal_provenance_retained_in_repo": [
     "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_review_bundle/*",

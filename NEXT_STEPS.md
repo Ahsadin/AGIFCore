@@ -1,41 +1,44 @@
 # AGIFCore Next Steps
 
-## Completed
+## AGIFCore Status
 
-- bounded intelligence baseline proven
-- broad open-ended non-neural chat left unproven and deferred
-- public bounded claim boundary established
-- bounded results packaged for public review
+AGIFCore is finished.
 
-## Next project
+It is closed as a bounded intelligence baseline.
+It is not a solved broad-chat system, and it is not AGI.
+
+## Reuse Guidance
+
+Future systems may reuse AGIFCore as:
+
+- bounded local intelligence infrastructure
+- governed routing and support-state logic
+- follow-up, critique, and fail-closed baseline behavior
+- audit and evidence scaffolding for bounded releases
+
+Future systems should not reuse AGIFCore as proof of:
+
+- broad open-ended chat success
+- unrestricted conversational intelligence
+- AGI
+
+## Next Project
 
 The next project is `AGIF-X`, subtitle `AGIF + Neural Hybrid Rebuild`.
 
-That project should focus on a neural hybrid direction that is explicitly separate from the bounded baseline.
+That project is a separate effort with a separate proof burden.
+It should not inherit the AGIFCore closeout claim automatically.
 
-## Recommended direction
+## Why The Next Step Changes Direction
 
-AGIF-X should start from the bounded baseline and extend it carefully in ways that remain measurable and reviewable.
+AGIFCore showed that the bounded local core can be made honest, inspectable, and reliable inside a narrow scope.
+It also showed that the same non-neural local core did not justify a broad-chat success claim.
 
-Useful next goals:
+That is why the next project direction introduces an explicit neural hybrid layer rather than stretching the bounded baseline beyond what it proved.
 
-- stronger neural reasoning support
-- clearer follow-up continuity
-- better ambiguity handling
-- better retrieval and support selection
-- stricter evidence reporting
-- language fluency driven by an explicit neural layer instead of stretching the bounded local core
+## Guardrails For AGIF-X
 
-## What not to do next
-
-- do not claim AGI
-- do not claim broad open-ended chat success
-- do not treat the bounded baseline as a solved general assistant
-- do not merge the next project into the closeout story
-
-## How to think about the transition
-
-The bounded baseline is the finished result.
-The neural hybrid rebuild is a separate new effort.
-
-They share history, but they are not the same claim.
+- keep AGIFCore treated as bounded infrastructure
+- define a new claim boundary from scratch
+- require new evaluation and audit standards
+- do not reuse the AGIFCore closeout language as if it already proves broad chat

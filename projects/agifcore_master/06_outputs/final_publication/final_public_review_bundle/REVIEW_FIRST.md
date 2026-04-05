@@ -14,6 +14,7 @@ This is the canonical public review bundle for the bounded AGIFCore closeout.
 - Phase 16 public verification, validation, and verdict summaries
 - bounded baseline handoff
 - public evidence manifest
+- publication audit, Governor verification, validation, and safety summary
 
 ## Truth Boundary
 
@@ -24,12 +25,19 @@ This is the canonical public review bundle for the bounded AGIFCore closeout.
 
 1. `../../../../README.md`
 2. `../../../../CLAIM_BOUNDARY.md`
-3. `../../../../RESULTS.md`
-4. `../closeout_records/PHASE_15_AUDIT_PUBLIC.md`
-5. `../closeout_records/PHASE_15_GOVERNOR_VERIFICATION_PUBLIC.md`
-6. `../closeout_records/bounded_intelligence_gate_summary.json`
-7. `../closeout_records/bounded_intelligence_shadow_summary.json`
-8. `../closeout_records/PHASE_16_AUDIT_PUBLIC.md`
-9. `../closeout_records/PHASE_16_GOVERNOR_VERIFICATION_PUBLIC.md`
-10. `../closeout_records/AGIFCORE_BOUNDED_BASELINE_HANDOFF_PUBLIC.md`
-11. `../public_evidence/public_evidence_manifest.json`
+3. `../../../../ARCHITECTURE.md`
+4. `../../../../RESULTS.md`
+5. `../../../../REPRODUCIBILITY.md`
+6. `../PUBLICATION_AUDIT_REPORT.md`
+7. `../PUBLICATION_GOVERNOR_VERIFICATION.md`
+8. `../PUBLICATION_VALIDATION_REPORT.md`
+9. `../publication_safety_summary.md`
+10. `../BRANCH_CLEANUP_REPORT.md`
+11. `../closeout_records/PHASE_15_AUDIT_PUBLIC.md`
+12. `../closeout_records/PHASE_15_GOVERNOR_VERIFICATION_PUBLIC.md`
+13. `../closeout_records/bounded_intelligence_gate_summary.json`
+14. `../closeout_records/bounded_intelligence_shadow_summary.json`
+15. `../closeout_records/PHASE_16_AUDIT_PUBLIC.md`
+16. `../closeout_records/PHASE_16_GOVERNOR_VERIFICATION_PUBLIC.md`
+17. `../closeout_records/AGIFCORE_BOUNDED_BASELINE_HANDOFF_PUBLIC.md`
+18. `../public_evidence/public_evidence_manifest.json`

@@ -1,40 +1,48 @@
 # AGIFCore Claim Boundary
 
-## Supported claim
+## Supported Final Claim
 
-AGIFCore is a bounded intelligence architecture/runtime/core.
+AGIFCore is supported and closed as a bounded intelligence architecture/runtime/core.
 
-This claim is supported by the bounded closeout evidence and the public publication package.
+That claim is grounded in:
 
-## Not claimed
+- the frozen bounded-intelligence gate
+- the paraphrased shadow benchmark
+- the cleared anti-shortcut audit
+- the bounded closeout and publication package
+
+## Unsupported Claims
 
 AGIFCore does not claim:
 
-- broad open-ended chat intelligence
+- broad open-ended non-neural chat intelligence
 - unrestricted conversational intelligence
 - general AGI
-- universal world knowledge
+- unrestricted world knowledge
 
-## Broad chat status
+## Broad-Chat Status
 
-Broad open-ended non-neural chat failed, remains unproven, and is deferred.
+Broad open-ended non-neural chat did not become a supported claim.
+It failed to meet the project’s final claim standard and remains unproven and deferred.
 
-That result is important and intentional:
+This boundary is intentional:
 
-- supported bounded intelligence is closed
+- bounded intelligence is closed
 - broad chat is not closed as a success claim
 - no AGI claim is made
 
-## Allowed public language
+## Allowed Public Language
 
-Use only language that stays inside the supported bounded claim:
+Public descriptions must stay inside the supported boundary.
+
+Allowed examples:
 
 - AGIFCore is a bounded intelligence baseline
-- AGIFCore can answer supported local and runtime questions from local truth
-- AGIFCore can do bounded reasoning, follow-up binding, contradiction handling, and honest fail-closed behavior
-- AGIFCore may produce bounded estimates when exact live truth is unavailable, with uncertainty stated clearly
+- AGIFCore answers supported local and runtime questions from local truth
+- AGIFCore supports bounded reasoning, follow-up binding, contradiction handling, and fail-closed behavior
+- AGIFCore can produce bounded estimates when exact live truth is unavailable and uncertainty is stated explicitly
 
-## Forbidden public language
+## Forbidden Public Language
 
 Do not describe AGIFCore as:
 
@@ -43,8 +51,9 @@ Do not describe AGIFCore as:
 - an AGI system
 - a solved unrestricted reasoning system
 
-## Next project
+## Next Project
 
 The next project is `AGIF-X`, subtitle `AGIF + Neural Hybrid Rebuild`.
 
-That project is the next research and build step. It is separate from this bounded closeout.
+That project is separate from this closeout.
+It is a new research and build effort, not an extension of the bounded claim.

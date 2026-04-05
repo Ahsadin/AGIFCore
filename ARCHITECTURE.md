@@ -2,89 +2,187 @@
 
 ## Overview
 
-AGIFCore is a governed local intelligence baseline.
+AGIFCore is a governed local-intelligence baseline.
 
-Its purpose is to answer supported questions from local truth, maintain turn continuity, and fail closed when support is missing.
+Its job is not to answer everything.
+Its job is to answer supported questions from local truth, preserve turn continuity, choose a safe answer mode, and fail closed when support is missing.
 
 The final architecture should be read as a bounded runtime core, not as a general chat stack.
 
-## Core behavior
+## System Scope
 
-AGIFCore is designed to:
+AGIFCore is designed for:
 
-- identify the question type
-- locate the right local support
-- bind follow-up questions to prior turn state
-- detect contradiction or ambiguity
-- choose a safe answer mode
-- emit inspectable evidence for the turn
+- local project and runtime truth
+- bounded reasoning over supported inputs
+- explicit continuity between turns
+- inspectable evidence and review surfaces
 
-## Main layers
+AGIFCore is not designed for:
 
-### Memory and continuity
+- broad open-domain chat
+- unrestricted external world knowledge
+- hidden-cloud correctness
+- free-form unbounded conversational behavior
 
-- prior-turn state is kept for follow-up binding
-- runtime state tracks the previous request, answer mode, support state, and unresolved ambiguity
-- follow-up handling is grounded in stored turn structure rather than generic repetition
+## Runtime Flow
+
+The live turn path follows a bounded chain:
+
+1. classify the request into a supported question family
+2. detect whether the turn is standalone, follow-up, contradictory, underspecified, or unsupported
+3. gather local support from runtime state, project files, manifests, evidence, or prior-turn structure
+4. decide whether the target is grounded enough to answer safely
+5. choose an answer mode
+6. produce the final response only after the bounded chain completes
+7. write machine-readable evidence about what was used and why
+
+## Core Subsystems
+
+### Question interpretation
+
+The runtime first decides what kind of question it is handling.
+That classification controls what evidence is allowed and which answer modes are legal.
+
+The bounded gate evaluated ten major class families:
+
+- identity and system questions
+- project, phase, and capability questions
+- local runtime and evidence questions
+- math and structured reasoning
+- comparison and planning
+- bounded current-world estimates
+- contradiction and inconsistency handling
+- follow-up questions
+- underspecified questions
+- unsupported questions
 
 ### Local truth and retrieval
 
-- supported answers come from local project files, manifests, evidence, and runtime-facing records
-- the runtime distinguishes supported local truth from unsupported external truth
-- unsupported questions fail closed instead of being converted into fake grounded answers
+Supported answers come from local project truth and runtime truth.
+Typical sources include:
 
-### Graph, world, and critique support
+- project planning and requirement files
+- runtime snapshots and exported state
+- evidence manifests and review bundles
+- prior-turn memory and continuity state
+- graph and provenance references when explanation needs traceable support
 
-- graph and provenance structures support local retrieval and explanation
-- bounded world reasoning supports narrow estimate-style answers when exact live truth is unavailable
-- critique and diagnosis lanes help detect contradiction, ambiguity, or support gaps before response composition
+The runtime explicitly separates:
 
-### Runtime governance
+- grounded local support
+- bounded estimate support
+- insufficient support
+- unsupported external truth
 
-- question class selection determines the allowed answer mode
-- answer modes stay bounded to grounded fact, bounded estimate, clarify, abstain, or search-needed behavior
-- the runtime records which phases and support surfaces were actually exercised
+That separation is what keeps the system fail-closed instead of hallucinating.
+
+### Continuity and follow-up binding
+
+AGIFCore stores structured prior-turn state rather than relying on generic conversational repetition.
+
+Follow-up handling uses fields such as:
+
+- prior request text
+- detected question class
+- support state
+- next action
+- answer mode
+- unresolved ambiguity
+- extracted target or entity
+
+This allows prompts such as `why`, `what did I ask`, or `are you sure` to bind back to the right prior turn when confidence is high enough.
+
+### Critique, contradiction, and ambiguity handling
+
+Before composing a response, the runtime checks whether the turn is internally contradictory, too vague, or missing support.
+
+This critique path can push the system toward:
+
+- clarify
+- abstain
+- search needed
+- bounded answer with explicit uncertainty
+
+The goal is not conversational smoothness at any cost.
+The goal is support-state honesty.
+
+### Bounded world reasoning
+
+AGIFCore supports narrow estimate-style current-world questions only when they fit the bounded contract.
+
+That means:
+
+- the target kind must be recognized
+- the system must stay explicit about uncertainty
+- no fake live factual grounding is allowed
+- unsupported current-world questions must fail closed
+
+This is deliberately narrower than general world knowledge.
+
+### Answer modes
+
+The runtime uses a small bounded set of answer modes rather than an open-ended response policy.
+
+The important public modes are:
+
+- `grounded_fact`
+- `bounded_estimate`
+- `clarify`
+- `abstain`
+- `search_needed`
+
+Each mode implies different obligations for support, caution, and evidence recording.
 
 ### Proof and audit surfaces
 
-- machine-readable gate outputs support the bounded claim
-- shadow-benchmark outputs check paraphrase generalization
-- anti-shortcut review checks that the claim is not benchmark-shaped or synthetic
-- publication packaging creates a cleaner public-facing evidence layer without widening the claim
+AGIFCore does not rely on answer text alone.
+It writes machine-readable records that describe what the system did on each turn.
 
-## What the runtime is not
+The bounded gate spec requires fields such as:
 
-AGIFCore is not:
+- `request_text`
+- `detected_question_class`
+- `local_sources_consulted`
+- `support_state`
+- `next_action`
+- `answer_mode`
+- `phases_actually_exercised`
+- `memory_used`
+- `graph_or_provenance_used`
+- `simulation_or_world_model_used`
+- `critique_or_diagnosis_fired`
+- `final_response`
+- `pass_or_fail`
 
-- a broad open-ended chat system
-- a general AGI system
-- a free-form world model for everything
-- a hidden-cloud answer service
+These records feed three proof layers:
 
-## High-level flow
+- the frozen bounded-intelligence gate
+- the paraphrased shadow benchmark
+- the anti-shortcut audit
 
-1. A user asks a question.
-2. The runtime classifies the question.
-3. The runtime checks local support and prior-turn state.
-4. The runtime selects a safe answer mode.
-5. The runtime produces a final response only after the bounded chain completes.
-6. The runtime records machine-readable evidence for review.
-
-## Supported behavior
+## Supported Behavior
 
 The verified baseline supports:
 
 - local system and project questions
 - runtime and evidence questions
 - simple math and structured reasoning
-- comparison and planning questions
-- follow-up questions
+- comparison and planning inside local support limits
+- follow-up questions grounded in prior state
 - contradiction and ambiguity handling
 - bounded current-world estimates
 - honest unsupported-question fail-closed behavior
 
-## Design principle
+## Why The Architecture Is Bounded
 
-The system should behave like a bounded local intelligence core, not like a polished general chat product.
+AGIFCore is strongest when it stays tied to:
 
-That distinction is part of the claim boundary.
+- known local support
+- explicit answer modes
+- inspectable evidence
+- selective continuity
+- fail-closed behavior
+
+That is enough to support the bounded-intelligence claim.
+It is not enough to support a broad general-chat claim, and the architecture is intentionally not presented that way.

@@ -1,6 +1,6 @@
 # Publication Safety Summary
 
-- scanned files: `1540`
+- scanned files: `1541`
 - flagged files: `0`
 - total findings: `0`
 
