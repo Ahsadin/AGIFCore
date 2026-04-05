@@ -39,7 +39,7 @@
       "admitted": true,
       "bundle_integrity_verified": true,
       "command": [
-        "/Users/ahsadin/.wasmtime/bin/wasmtime",
+        "<local_wasmtime_bin>/wasmtime",
         "run",
         "-W",
         "fuel=5000000000",
@@ -51,7 +51,7 @@
         "trap-on-grow-failure=y",
         "--invoke",
         "grow_to_pages",
-        "/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/sandbox_packages/phase14_mobile_valid_sample_module.wat",
+        "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/sandbox_packages/phase14_mobile_valid_sample_module.wat",
         "600"
       ],
       "executed_at": "2026-04-01T16:03:03+00:00",
@@ -75,10 +75,10 @@
       "sandboxed_execution": true,
       "schema": "agifcore.phase_14.sandbox_execution_receipt.v1",
       "status": "blocked",
-      "stderr": "warning: using `--invoke` with a function that takes arguments is experimental and may break in the future\nError: failed to run main module `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/sandbox_packages/phase14_mobile_valid_sample_module.wat`\n\nCaused by:\n    0: failed to invoke `grow_to_pages`\n    1: error while executing at wasm backtrace:\n    0:     0x64 - <unknown>!<wasm function 2>\n    2: forcing trap when growing memory to 39387136 bytes",
+      "stderr": "warning: using `--invoke` with a function that takes arguments is experimental and may break in the future\nError: failed to run main module `projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/sandbox_packages/phase14_mobile_valid_sample_module.wat`\n\nCaused by:\n    0: failed to invoke `grow_to_pages`\n    1: error while executing at wasm backtrace:\n    0:     0x64 - <unknown>!<wasm function 2>\n    2: forcing trap when growing memory to 39387136 bytes",
       "stdout": "",
       "wall_time_limit_ms": 100,
-      "wasmtime_cli_path": "/Users/ahsadin/.wasmtime/bin/wasmtime"
+      "wasmtime_cli_path": "<local_wasmtime_bin>/wasmtime"
     }
   },
   "assertions": [

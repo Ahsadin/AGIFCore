@@ -41,7 +41,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p5-tc-ma-01-phase-5-merge-integration`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P5-TC-MA-01`
+- Worktree Path: `.worktrees/P5-TC-MA-01`
 - Rollback Tag Name: `rollback/P5-TC-MA-01/<yyyymmdd-hhmm>`
 
 ## Objective

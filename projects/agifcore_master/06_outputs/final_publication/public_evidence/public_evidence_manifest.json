@@ -1,0 +1,34 @@
+{
+  "status": "public_evidence_manifest_ready",
+  "date": "2026-04-05",
+  "canonical_public_evidence_family": "projects/agifcore_master/06_outputs/final_publication/public_evidence",
+  "canonical_public_review_bundle": "projects/agifcore_master/06_outputs/final_publication/final_public_review_bundle",
+  "canonical_closeout_records": "projects/agifcore_master/06_outputs/final_publication/closeout_records",
+  "truth_boundary": {
+    "bounded_intelligence": "supported",
+    "broad_chat_intelligence": "unproven/deferred"
+  },
+  "included_public_safe_copies": [
+    "claim_boundary_summary.md",
+    "phase_15_closeout_summary_public.md",
+    "phase_15_audit_report_public.md",
+    "phase_15_governor_verification_public.md",
+    "phase_15_validation_request_public.md",
+    "../closeout_records/PHASE_16_AUDIT_PUBLIC.md",
+    "phase_16_governor_verification_public.md",
+    "phase_16_validation_request_public.md",
+    "phase_16_user_verdict_public.md",
+    "bounded_baseline_handoff_public.md",
+    "../closeout_records/bounded_intelligence_gate_summary.json",
+    "../closeout_records/bounded_intelligence_shadow_summary.json"
+  ],
+  "internal_provenance_retained_in_repo": [
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_review_bundle/*",
+    "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/interactive_turn_records/*",
+    "projects/agifcore_master/06_outputs/phase_16_bounded_release_and_publication/phase_16_bounded_review_bundle/*"
+  ],
+  "path_hygiene": {
+    "absolute_local_paths_removed_where_possible": true,
+    "remaining_path_risk": "no current tracked-file findings; rerun the publication-safety scan before any future push"
+  }
+}

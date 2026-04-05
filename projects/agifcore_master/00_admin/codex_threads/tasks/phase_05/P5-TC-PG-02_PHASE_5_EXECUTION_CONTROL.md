@@ -61,7 +61,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p5-tc-pg-02-phase-5-execution-startup`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P5-TC-PG-02`
+- Worktree Path: `.worktrees/P5-TC-PG-02`
 - Rollback Tag Name: `rollback/P5-TC-PG-02/<yyyymmdd-hhmm>`
 
 ## Objective

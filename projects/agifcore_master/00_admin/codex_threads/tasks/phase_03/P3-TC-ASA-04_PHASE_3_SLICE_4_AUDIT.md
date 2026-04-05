@@ -44,7 +44,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p3-tc-asa-04-phase-3-slice-4-audit`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-ASA-04`
+- Worktree Path: `.worktrees/P3-TC-ASA-04`
 - Rollback Tag Name: `rollback/P3-TC-ASA-04/20260330-0000`
 
 ## Objective

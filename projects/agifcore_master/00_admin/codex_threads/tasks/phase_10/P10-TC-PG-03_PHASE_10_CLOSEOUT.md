@@ -54,7 +54,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p10-tc-pg-02-phase-10-execution-control`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore`
+- Worktree Path: `<repo_root>`
 - Rollback Tag Name: `rollback/P10-TC-PG-03/20260331-0000`
 
 ## Objective

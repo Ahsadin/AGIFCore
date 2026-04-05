@@ -64,7 +64,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p6-tc-wcpl-02-phase-6-world-simulator-implementation`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P6-TC-WCPL-02`
+- Worktree Path: `.worktrees/P6-TC-WCPL-02`
 - Rollback Tag Name: `rollback/P6-TC-WCPL-02/<yyyymmdd-hhmm>`
 
 ## Objective

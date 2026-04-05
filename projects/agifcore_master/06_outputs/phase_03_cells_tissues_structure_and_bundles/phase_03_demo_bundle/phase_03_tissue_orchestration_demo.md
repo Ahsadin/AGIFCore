@@ -4,8 +4,8 @@ Phase 3 remains open. This page shows the tissue orchestration review surface fo
 
 ## Inspect
 
-- `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-PG-05/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_tissue_orchestration_report.json`
-- `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-PG-05/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json`
+- `.worktrees/P3-TC-PG-05/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_tissue_orchestration_report.json`
+- `.worktrees/P3-TC-PG-05/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json`
 
 ## What this proves
 

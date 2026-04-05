@@ -10614,7 +10614,7 @@
       "expected_question_class": "comparison_planning",
       "extracted_target_or_entity": null,
       "final_answer_after_full_chain": true,
-      "final_response": "Bounded local comparison for enf and agif: enf: - Verified historical root paths exist at `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2` and `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master`. agif: - Verified historical root paths exist at `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2` and `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master`.",
+      "final_response": "Bounded local comparison for enf and agif: enf: - Verified historical root paths exist at `<historical_local_source>/agif_fabric_v2` and `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master`. agif: - Verified historical root paths exist at `<historical_local_source>/agif_fabric_v2` and `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master`.",
       "followup_anchor_turn_id": null,
       "followup_binding_confidence": 0.0,
       "followup_binding_reason": "prompt does not require prior-turn binding",

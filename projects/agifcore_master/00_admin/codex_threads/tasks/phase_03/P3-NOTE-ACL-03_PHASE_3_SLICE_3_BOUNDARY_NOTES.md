@@ -19,14 +19,14 @@ Reference surfaces reviewed before writing this note:
 - approved Phase 2 `scheduler.py`
 - approved Phase 2 `workspace_state.py`
 - KPL runtime commit `e878e7d`:
-  - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-KPL-03/projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/split_merge_rules.py`
-  - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-KPL-03/projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/profile_budget_rules.py`
+  - `.worktrees/P3-TC-KPL-03/projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/split_merge_rules.py`
+  - `.worktrees/P3-TC-KPL-03/projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/profile_budget_rules.py`
 - TRL verifier commit `8f08a2206c71cd0b511ad89c128f29beddad93a2`:
-  - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-03/projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_split_merge.py`
-  - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-03/projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_profile_budgets.py`
-  - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-03/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_split_merge_report.json`
-  - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-03/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_profile_budget_report.json`
-  - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-03/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json`
+  - `.worktrees/P3-TC-TRL-03/projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_split_merge.py`
+  - `.worktrees/P3-TC-TRL-03/projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_profile_budgets.py`
+  - `.worktrees/P3-TC-TRL-03/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_split_merge_report.json`
+  - `.worktrees/P3-TC-TRL-03/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_profile_budget_report.json`
+  - `.worktrees/P3-TC-TRL-03/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json`
 
 ## Inspection result
 

@@ -45,7 +45,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/phase-14-manifest-strengthening-closeout`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore`
+- Worktree Path: `<repo_root>`
 - Rollback Tag Name: `rollback/P14-TC-PG-04/20260401-0000`
 
 ## Objective

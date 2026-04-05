@@ -2223,7 +2223,7 @@
           "admitted": true,
           "bundle_integrity_verified": true,
           "command": [
-            "/Users/ahsadin/.wasmtime/bin/wasmtime",
+            "<local_wasmtime_bin>/wasmtime",
             "run",
             "-W",
             "fuel=100000000",
@@ -2235,7 +2235,7 @@
             "trap-on-grow-failure=y",
             "--invoke",
             "add",
-            "/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/sandbox_packages/phase14_laptop_valid_sample_module.wat",
+            "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/sandbox_packages/phase14_laptop_valid_sample_module.wat",
             "1",
             "2"
           ],
@@ -2264,7 +2264,7 @@
           "stderr": "warning: using `--invoke` with a function that takes arguments is experimental and may break in the future\nwarning: using `--invoke` with a function that returns values is experimental and may break in the future",
           "stdout": "3",
           "wall_time_limit_ms": 1000,
-          "wasmtime_cli_path": "/Users/ahsadin/.wasmtime/bin/wasmtime"
+          "wasmtime_cli_path": "<local_wasmtime_bin>/wasmtime"
         },
         "scenario": "weak",
         "session_kind": "sandbox_execute",
@@ -2305,7 +2305,7 @@
           "stderr": "",
           "stdout": "",
           "wall_time_limit_ms": 1000,
-          "wasmtime_cli_path": "/Users/ahsadin/.wasmtime/bin/wasmtime"
+          "wasmtime_cli_path": "<local_wasmtime_bin>/wasmtime"
         },
         "scenario": "weak",
         "session_kind": "sandbox_execute",
@@ -2448,7 +2448,7 @@
     ],
     "demo_id": "real_desktop_chat_demo",
     "host_kind": "local_desktop_ui_browser_host",
-    "launch_command": "sh /Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/launch_phase_15_real_desktop_chat_demo.sh",
+    "launch_command": "sh projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/launch_phase_15_real_desktop_chat_demo.sh",
     "notes": [
       "local desktop chat demo only",
       "desktop host presents runtime truth and does not own correctness",

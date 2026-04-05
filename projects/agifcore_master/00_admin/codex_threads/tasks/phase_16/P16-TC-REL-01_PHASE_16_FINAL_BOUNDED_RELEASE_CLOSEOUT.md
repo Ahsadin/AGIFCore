@@ -59,7 +59,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p15-pg-04-final-bounded-closeout`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore`
+- Worktree Path: `<repo_root>`
 - Rollback Tag Name: `not_created`
 
 ## Objective
@@ -84,8 +84,8 @@
 ## Verification
 
 - Required Test Commands:
-  - `python3 /Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_bounded_intelligence_gate.py`
-  - `python3 /Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_bounded_intelligence_shadow_benchmark.py`
+  - `python3 projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_bounded_intelligence_gate.py`
+  - `python3 projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_bounded_intelligence_shadow_benchmark.py`
 - Required Build Commands:
   - `none`
 - Required Verifier Paths:

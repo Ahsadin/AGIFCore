@@ -14,7 +14,7 @@ Freeze isolation rules so serious work does not happen directly on the canonical
 ## Naming
 
 - Branch format: `codex/tc-<task_card_id>-<slug>`
-- Worktree format: `/Users/ahsadin/Documents/AGIFCore/.worktrees/<task_card_id>`
+- Worktree format: `.worktrees/<task_card_id>`
 - Rollback tag format: `rollback/<task_card_id>/<yyyymmdd-hhmm>`
 
 ## Merge Rules

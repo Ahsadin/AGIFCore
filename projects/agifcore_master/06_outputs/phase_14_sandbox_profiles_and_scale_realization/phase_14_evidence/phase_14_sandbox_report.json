@@ -4,7 +4,7 @@
       "admitted": true,
       "bundle_integrity_verified": true,
       "command": [
-        "/Users/ahsadin/.wasmtime/bin/wasmtime",
+        "<local_wasmtime_bin>/wasmtime",
         "run",
         "-W",
         "fuel=100000000",
@@ -16,7 +16,7 @@
         "trap-on-grow-failure=y",
         "--invoke",
         "add",
-        "/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/sandbox_packages/phase14_laptop_valid_sample_module.wat",
+        "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/sandbox_packages/phase14_laptop_valid_sample_module.wat",
         "1",
         "2"
       ],
@@ -45,7 +45,7 @@
       "stderr": "warning: using `--invoke` with a function that takes arguments is experimental and may break in the future\nwarning: using `--invoke` with a function that returns values is experimental and may break in the future",
       "stdout": "3",
       "wall_time_limit_ms": 1000,
-      "wasmtime_cli_path": "/Users/ahsadin/.wasmtime/bin/wasmtime"
+      "wasmtime_cli_path": "<local_wasmtime_bin>/wasmtime"
     },
     "policy_catalog": {
       "catalog_hash": "97d34c76f7ae47569ab743d8a3722bc616e447cb78598ea157641444fcd3bfdc",
@@ -158,7 +158,7 @@
       "stderr": "",
       "stdout": "",
       "wall_time_limit_ms": 250,
-      "wasmtime_cli_path": "/Users/ahsadin/.wasmtime/bin/wasmtime"
+      "wasmtime_cli_path": "<local_wasmtime_bin>/wasmtime"
     },
     "shell_snapshot": {
       "blocked_surface_names": [
@@ -187,7 +187,7 @@
       "snapshot_hash": "7159aedd8555e3931f293fdbc2c111d4c99ae34b7c24a4cda0490b2b4ed7e1af",
       "tissue_count": 32,
       "wasmtime_available": true,
-      "wasmtime_cli_path": "/Users/ahsadin/.wasmtime/bin/wasmtime"
+      "wasmtime_cli_path": "<local_wasmtime_bin>/wasmtime"
     },
     "tampered_receipt": {
       "admitted": false,
@@ -218,7 +218,7 @@
       "stderr": "",
       "stdout": "",
       "wall_time_limit_ms": 1000,
-      "wasmtime_cli_path": "/Users/ahsadin/.wasmtime/bin/wasmtime"
+      "wasmtime_cli_path": "<local_wasmtime_bin>/wasmtime"
     }
   },
   "assertions": [

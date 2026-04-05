@@ -53,7 +53,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p3-tc-pg-06-phase-3-closeout`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore`
+- Worktree Path: `<repo_root>`
 - Rollback Tag Name: `rollback/P3-TC-PG-06/20260330-0000`
 
 ## Objective

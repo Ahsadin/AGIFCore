@@ -30,8 +30,8 @@ It is a cartography artifact, not an implementation artifact.
 
 ## Unresolved runtime-module items
 
-- Verified historical root paths exist at `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2` and `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master`.
-- Sample file-level verification has been performed against representative sources, including `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master/01_plan/AGIF_V3_CONCEPT.md` and the Phase 9 runtime files under `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_9_real_runtime/agif_phase9_real_runtime/`.
+- Verified historical root paths exist at `<historical_local_source>/agif_fabric_v2` and `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master`.
+- Sample file-level verification has been performed against representative sources, including `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master/01_plan/AGIF_V3_CONCEPT.md` and the Phase 9 runtime files under `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_9_real_runtime/agif_phase9_real_runtime/`.
 - Exact row-by-row supporting paths for the broader `SRC-003` and `SRC-004` historical surfaces are recorded in `SOURCE_INHERITANCE_MATRIX.md`.
 - This map is still first-pass lineage cartography, not final runtime approval.
 - This file does not claim that any runtime module is already implemented in AGIFCore.

@@ -19,7 +19,7 @@ Supporting demo payloads:
 
 Evidence source:
 
-- [phase_15_evidence_manifest.json](/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_evidence_manifest.json)
+- [phase_15_evidence_manifest.json](projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/phase_15_evidence_manifest.json)
 
 Truth note:
 

@@ -2,7 +2,7 @@
 
 ## Summary
 
-Build **AGIFCore** as the new canonical system in `/Users/ahsadin/Documents/AGIFCore`. AGIF v2 is archived as a failed historical attempt for the intended end goal. AGIFCore mines `agif_fabric_v1`, `agif-tasklet-cell`, the root v2 lineage, and `agif_v2_master`, but no old code or old proof counts as done until it is rebuilt or ported into AGIFCore, verified, demoed, and approved by you.
+Build **AGIFCore** as the new canonical system in `<repo_root>`. AGIF v2 is archived as a failed historical attempt for the intended end goal. AGIFCore mines `agif_fabric_v1`, `agif-tasklet-cell`, the root v2 lineage, and `agif_v2_master`, but no old code or old proof counts as done until it is rebuilt or ported into AGIFCore, verified, demoed, and approved by you.
 
 AGIFCore’s end goal is **human-like functional thinking under AGIF rules**:
 - understand messy language
@@ -25,20 +25,20 @@ No phase is earned until:
 ## Canonical Package And Source-Of-Truth Files
 
 Create these root files:
-- `/Users/ahsadin/Documents/AGIFCore/AGENTS.md`
-- `/Users/ahsadin/Documents/AGIFCore/README.md`
-- `/Users/ahsadin/Documents/AGIFCore/PROJECT_README.md`
-- `/Users/ahsadin/Documents/AGIFCore/DECISIONS.md`
-- `/Users/ahsadin/Documents/AGIFCore/CHANGELOG.md`
+- `AGENTS.md`
+- `README.md`
+- `PROJECT_README.md`
+- `DECISIONS.md`
+- `CHANGELOG.md`
 
 Create this canonical project:
-- `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/`
+- `projects/agifcore_master/`
 
 Create these required project-level truth files:
-- `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/AGENTS.override.md`
-- `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/PROJECT_README.md`
-- `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/DECISIONS.md`
-- `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/CHANGELOG.md`
+- `projects/agifcore_master/AGENTS.override.md`
+- `projects/agifcore_master/PROJECT_README.md`
+- `projects/agifcore_master/DECISIONS.md`
+- `projects/agifcore_master/CHANGELOG.md`
 
 Required structure:
 - `00_admin/`
@@ -180,10 +180,10 @@ Each proof domain must eventually include:
 
 ### Mandatory row-by-row inheritance matrix
 `SOURCE_INHERITANCE_MATRIX.md` must inventory all relevant source logic and truth from:
-- `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v1`
-- `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif-tasklet-cell`
-- `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2`
-- `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master`
+- `<historical_local_source>/agif_fabric_v1`
+- `<historical_local_source>/agif-tasklet-cell`
+- `<historical_local_source>/agif_fabric_v2`
+- `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master`
 
 Every inherited item must be marked exactly one way:
 - `rebuild_clean`
@@ -883,7 +883,7 @@ Final AGIFCore acceptance must prove:
 
 ## Assumptions And Defaults
 
-- AGIFCore is a new canonical build in `/Users/ahsadin/Documents/AGIFCore`.
+- AGIFCore is a new canonical build in `<repo_root>`.
 - AGIF v2 remains archived as historical failure for the intended end goal.
 - Old repos are mined aggressively, but nothing is trusted without AGIFCore re-verification.
 - v1 supplies the strongest fabric, shared workspace, reviewed memory, routing, authority, tissue, rollback, quarantine, operator command, and soak foundations.

@@ -71,7 +71,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p4-tc-trl-02-phase-4-memory-verifiers`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P4-TC-TRL-02`
+- Worktree Path: `.worktrees/P4-TC-TRL-02`
 - Rollback Tag Name: `rollback/P4-TC-TRL-02/<yyyymmdd-hhmm>`
 
 ## Objective

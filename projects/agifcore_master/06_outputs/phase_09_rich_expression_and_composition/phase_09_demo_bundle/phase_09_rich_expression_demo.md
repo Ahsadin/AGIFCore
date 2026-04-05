@@ -4,13 +4,13 @@ Phase 9 remains `open`. This page is for inspection only.
 
 What to inspect:
 
-- [phase_09_teaching_report.json](/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_teaching_report.json)
-- [phase_09_comparison_report.json](/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_comparison_report.json)
-- [phase_09_planning_report.json](/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_planning_report.json)
-- [phase_09_synthesis_report.json](/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_synthesis_report.json)
-- [phase_09_analogy_report.json](/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_analogy_report.json)
-- [phase_09_concept_composition_report.json](/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_concept_composition_report.json)
-- [phase_09_cross_domain_composition_report.json](/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_cross_domain_composition_report.json)
+- [phase_09_teaching_report.json](projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_teaching_report.json)
+- [phase_09_comparison_report.json](projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_comparison_report.json)
+- [phase_09_planning_report.json](projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_planning_report.json)
+- [phase_09_synthesis_report.json](projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_synthesis_report.json)
+- [phase_09_analogy_report.json](projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_analogy_report.json)
+- [phase_09_concept_composition_report.json](projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_concept_composition_report.json)
+- [phase_09_cross_domain_composition_report.json](projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_cross_domain_composition_report.json)
 
 Evidence-backed summary:
 

@@ -2644,7 +2644,7 @@
       ],
       "demo_id": "real_desktop_chat_demo",
       "host_kind": "local_desktop_ui_browser_host",
-      "launch_command": "sh /Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/launch_phase_15_real_desktop_chat_demo.sh",
+      "launch_command": "sh projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/launch_phase_15_real_desktop_chat_demo.sh",
       "notes": [
         "local desktop chat demo only",
         "desktop host presents runtime truth and does not own correctness",

@@ -61,7 +61,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p6-tc-pg-02-phase-6-execution-control`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P6-TC-PG-02`
+- Worktree Path: `.worktrees/P6-TC-PG-02`
 - Rollback Tag Name: `rollback/P6-TC-PG-02/<yyyymmdd-hhmm>`
 
 ## Objective

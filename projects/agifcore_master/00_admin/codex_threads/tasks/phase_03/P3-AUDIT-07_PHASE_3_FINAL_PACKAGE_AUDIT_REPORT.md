@@ -48,4 +48,4 @@
 
 ## Changed File
 
-- `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-ASA-05/projects/agifcore_master/00_admin/codex_threads/tasks/phase_03/P3-AUDIT-07_PHASE_3_FINAL_PACKAGE_AUDIT_REPORT.md`
+- `.worktrees/P3-TC-ASA-05/projects/agifcore_master/00_admin/codex_threads/tasks/phase_03/P3-AUDIT-07_PHASE_3_FINAL_PACKAGE_AUDIT_REPORT.md`

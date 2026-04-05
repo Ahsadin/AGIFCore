@@ -3,4 +3,5 @@ __pycache__/
 .DS_Store
 .env
 .venv/
-
+.codex/
+projects/agifcore_master/08_logs/

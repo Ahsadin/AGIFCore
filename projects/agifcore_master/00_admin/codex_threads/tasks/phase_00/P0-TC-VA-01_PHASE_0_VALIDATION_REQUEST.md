@@ -42,7 +42,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p0-tc-va-01-phase-0-validation-request`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P0-TC-VA-01`
+- Worktree Path: `.worktrees/P0-TC-VA-01`
 - Rollback Tag Name: `rollback/P0-TC-VA-01/20260329-2124`
 
 ## Objective

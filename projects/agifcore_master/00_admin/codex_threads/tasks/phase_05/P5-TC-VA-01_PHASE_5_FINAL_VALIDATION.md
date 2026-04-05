@@ -47,7 +47,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p5-tc-va-01-phase-5-final-validation`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P5-TC-VA-01`
+- Worktree Path: `.worktrees/P5-TC-VA-01`
 - Rollback Tag Name: `rollback/P5-TC-VA-01/<yyyymmdd-hhmm>`
 
 ## Objective

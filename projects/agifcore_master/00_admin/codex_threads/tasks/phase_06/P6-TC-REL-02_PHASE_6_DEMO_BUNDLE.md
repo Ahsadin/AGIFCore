@@ -48,7 +48,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p6-tc-rel-02-phase-6-demo-bundle`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P6-TC-REL-02`
+- Worktree Path: `.worktrees/P6-TC-REL-02`
 - Rollback Tag Name: `rollback/P6-TC-REL-02/<yyyymmdd-hhmm>`
 
 ## Objective

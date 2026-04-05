@@ -5,7 +5,7 @@
   "derived_question_class": "comparison_planning",
   "evidence_hash": "19de2cd6c6871053ce6d0b7eb459af084a38d8cb6e5cc419fe7bca4e3d2ac1f4",
   "final_answer_mode": "derived_explanation",
-  "final_response": "Bounded local comparison for enf and agif: enf: - Verified historical root paths exist at `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2` and `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master`. agif: - Verified historical root paths exist at `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2` and `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master`.",
+  "final_response": "Bounded local comparison for enf and agif: enf: - Verified historical root paths exist at `<historical_local_source>/agif_fabric_v2` and `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master`. agif: - Verified historical root paths exist at `<historical_local_source>/agif_fabric_v2` and `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master`.",
   "follow_up_bound": false,
   "followup_anchor_turn_id": null,
   "followup_binding_confidence": 0.0,
@@ -1022,7 +1022,7 @@
     {
       "ref": "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:33",
       "score": 8,
-      "text": "- Verified historical root paths exist at `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2` and `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master`."
+      "text": "- Verified historical root paths exist at `<historical_local_source>/agif_fabric_v2` and `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master`."
     },
     {
       "ref": "projects/agifcore_master/02_requirements/ROLE_AUTHORITY_RULES.md:127",
@@ -1037,7 +1037,7 @@
     {
       "ref": "projects/agifcore_master/01_plan/RUNTIME_REBUILD_MAP.md:34",
       "score": 7,
-      "text": "- Sample file-level verification has been performed against representative sources, including `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master/01_plan/AGIF_V3_CONCEPT.md` and the Phase 9 runtime files under `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_9_real_runtime/agif_phase9_real_runtime/`."
+      "text": "- Sample file-level verification has been performed against representative sources, including `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master/01_plan/AGIF_V3_CONCEPT.md` and the Phase 9 runtime files under `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_9_real_runtime/agif_phase9_real_runtime/`."
     },
     {
       "ref": "projects/agifcore_master/01_plan/HUMAN_THINKING_TARGET.md:3",

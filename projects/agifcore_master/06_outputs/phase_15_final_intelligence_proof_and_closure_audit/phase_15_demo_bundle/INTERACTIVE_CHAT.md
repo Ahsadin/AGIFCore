@@ -6,8 +6,8 @@ This terminal path remains available as a secondary debug and evidence-inspectio
 ## Primary Demo First
 
 ```sh
-cd /Users/ahsadin/Documents/AGIFCore
-sh /Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/launch_phase_15_real_desktop_chat_demo.sh
+cd <repo_root>
+sh projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/launch_phase_15_real_desktop_chat_demo.sh
 ```
 
 Use the browser-hosted desktop UI if you want a real non-terminal chat experience.
@@ -15,8 +15,8 @@ Use the browser-hosted desktop UI if you want a real non-terminal chat experienc
 ## Run
 
 ```sh
-cd /Users/ahsadin/Documents/AGIFCore
-sh /Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/launch_phase_15_interactive_chat.sh
+cd <repo_root>
+sh projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/launch_phase_15_interactive_chat.sh
 ```
 
 ## What You Can Do

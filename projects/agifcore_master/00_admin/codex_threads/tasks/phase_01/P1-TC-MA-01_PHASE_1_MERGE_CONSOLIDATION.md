@@ -39,7 +39,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p1-tc-ma-01-phase-1-merge-consolidation`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P1-TC-MA-01`
+- Worktree Path: `.worktrees/P1-TC-MA-01`
 - Rollback Tag Name: `rollback/P1-TC-MA-01/20260329-2240`
 
 ## Objective

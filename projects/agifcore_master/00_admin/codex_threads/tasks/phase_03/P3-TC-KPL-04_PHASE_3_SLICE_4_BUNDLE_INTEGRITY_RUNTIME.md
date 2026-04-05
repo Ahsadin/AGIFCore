@@ -43,7 +43,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p3-tc-kpl-04-phase-3-slice-4-bundle-integrity-runtime`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-KPL-04`
+- Worktree Path: `.worktrees/P3-TC-KPL-04`
 - Rollback Tag Name: `rollback/P3-TC-KPL-04/20260330-0000`
 
 ## Objective

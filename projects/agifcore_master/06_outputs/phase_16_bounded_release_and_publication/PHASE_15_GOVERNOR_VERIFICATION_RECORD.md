@@ -86,11 +86,11 @@ I directly verified the final integrity repair cycle for the bounded-intelligenc
 
 Direct checks added in this cycle:
 
-- `python3 -m compileall /Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime`
-- `python3 -m compileall /Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit`
-- `python3 /Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_bounded_intelligence_gate.py`
-- `python3 /Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_bounded_intelligence_shadow_benchmark.py`
-- `rg -n "who are you|who built you|what is AGIF|what phase are you on|what evidence supports that|what is the weather in Berlin|what is the weather on the Moon|what stock should I buy today|what did I ask|are you sure" /Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/interactive_turn.py /Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/product_runtime_shell.py`
+- `python3 -m compileall projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime`
+- `python3 -m compileall projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit`
+- `python3 projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_bounded_intelligence_gate.py`
+- `python3 projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_bounded_intelligence_shadow_benchmark.py`
+- `rg -n "who are you|who built you|what is AGIF|what phase are you on|what evidence supports that|what is the weather in Berlin|what is the weather on the Moon|what stock should I buy today|what did I ask|are you sure" projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/interactive_turn.py projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime/product_runtime_shell.py`
 
 Verified result in this cycle:
 

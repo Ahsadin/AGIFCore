@@ -72,7 +72,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p6-tc-trl-02-phase-6-world-simulator-verifiers`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P6-TC-TRL-02`
+- Worktree Path: `.worktrees/P6-TC-TRL-02`
 - Rollback Tag Name: `rollback/P6-TC-TRL-02/<yyyymmdd-hhmm>`
 
 ## Objective

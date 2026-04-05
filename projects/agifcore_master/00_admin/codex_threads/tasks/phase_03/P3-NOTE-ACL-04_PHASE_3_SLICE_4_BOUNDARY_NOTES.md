@@ -5,7 +5,7 @@
 - Task card: `P3-TC-ACL-04`
 - Role: `Architecture & Contract Lead`
 - Branch: `codex/tc-p3-tc-acl-04-phase-3-slice-4-boundary-check`
-- Worktree: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-ACL-04`
+- Worktree: `.worktrees/P3-TC-ACL-04`
 - Verdict: `boundary_safe_with_file_backed_evidence_blocker`
 
 ## Goal
@@ -23,15 +23,15 @@
   - `projects/agifcore_master/03_design/BUNDLE_INTEGRITY_MODEL.md`
   - `projects/agifcore_master/03_design/PRODUCT_RUNTIME_MODEL.md`
 - direct runtime inspection from KPL lane commit `5055a96722e0c8ad0026aa071c971659e87201e1`:
-  - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-KPL-04/projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/bundle_integrity_checks.py`
+  - `.worktrees/P3-TC-KPL-04/projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/bundle_integrity_checks.py`
 - direct verifier and evidence inspection from TRL lane commits:
   - `c5cfbe0aff9027bacc045f207c1327e48c5890bd`
   - `44a4aff`
-  - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-04/projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_tissue_orchestration.py`
-  - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-04/projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_bundle_integrity.py`
-  - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-04/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_tissue_orchestration_report.json`
-  - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-04/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_integrity_report.json`
-  - `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-04/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json`
+  - `.worktrees/P3-TC-TRL-04/projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_tissue_orchestration.py`
+  - `.worktrees/P3-TC-TRL-04/projects/agifcore_master/05_testing/phase_03_cells_tissues_structure_and_bundles/verify_phase_03_bundle_integrity.py`
+  - `.worktrees/P3-TC-TRL-04/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_tissue_orchestration_report.json`
+  - `.worktrees/P3-TC-TRL-04/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_integrity_report.json`
+  - `.worktrees/P3-TC-TRL-04/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json`
 
 ## Findings
 
@@ -88,11 +88,11 @@
   - `bundle_manifest_payload`
   - `integrity_inventory`
 - That removes the earlier code-level argument-shape mismatch.
-- However, the inspected file [phase_03_bundle_integrity_report.json](/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-04/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_integrity_report.json) still records:
+- However, the inspected file [phase_03_bundle_integrity_report.json](.worktrees/P3-TC-TRL-04/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_integrity_report.json) still records:
   - status `blocked`
   - blocker kind `missing_runtime_dependencies`
   - missing file `projects/agifcore_master/04_execution/phase_03_cells_tissues_structure_and_bundles/agifcore_phase3_structure/bundle_integrity_checks.py`
-- The inspected file [phase_03_evidence_manifest.json](/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-04/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json) also still reports Slice 4 as blocked for the same file-backed reason.
+- The inspected file [phase_03_evidence_manifest.json](.worktrees/P3-TC-TRL-04/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json) also still reports Slice 4 as blocked for the same file-backed reason.
 - So the remaining blocker is concrete and file-backed:
   - the code boundary is clean
   - the TRL evidence has not yet been regenerated in a lane where the KPL runtime file is actually present on disk
@@ -109,8 +109,8 @@
 
 - `boundary-safe at the code level`
 - concrete remaining blocker:
-  - [phase_03_bundle_integrity_report.json](/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-04/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_integrity_report.json) is still `blocked` because the runtime file `bundle_integrity_checks.py` was not on disk in the TRL lane when that evidence was produced.
-  - [phase_03_evidence_manifest.json](/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-04/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json) still reflects that blocked state.
+  - [phase_03_bundle_integrity_report.json](.worktrees/P3-TC-TRL-04/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_integrity_report.json) is still `blocked` because the runtime file `bundle_integrity_checks.py` was not on disk in the TRL lane when that evidence was produced.
+  - [phase_03_evidence_manifest.json](.worktrees/P3-TC-TRL-04/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json) still reflects that blocked state.
 - boundary conclusion:
   - Slice 4 is boundary-safe in the inspected code.
   - The only remaining issue is a concrete, file-backed evidence rerun gap, not a boundary violation.

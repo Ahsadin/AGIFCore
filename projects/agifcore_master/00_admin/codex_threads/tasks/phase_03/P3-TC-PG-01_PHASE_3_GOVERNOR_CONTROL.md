@@ -51,7 +51,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p3-tc-pg-01-phase-3-governor-control`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-PG-01`
+- Worktree Path: `.worktrees/P3-TC-PG-01`
 - Rollback Tag Name: `rollback/P3-TC-PG-01/20260330-0000`
 
 ## Objective

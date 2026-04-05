@@ -15,10 +15,10 @@
   - `projects/agifcore_master/06_outputs/phase_16_bounded_release_and_publication/phase_16_bounded_review_bundle/REVIEW_FIRST.md`
   - `projects/agifcore_master/00_admin/codex_threads/handoffs/AGIFCORE_BOUNDED_BASELINE_HANDOFF.md`
 - Checks Rerun:
-  - `python3 -m compileall /Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime`
-  - `python3 -m compileall /Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit`
-  - `python3 /Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_bounded_intelligence_gate.py`
-  - `python3 /Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_bounded_intelligence_shadow_benchmark.py`
+  - `python3 -m compileall projects/agifcore_master/04_execution/phase_13_product_runtime_and_ux/agifcore_phase13_product_runtime`
+  - `python3 -m compileall projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit`
+  - `python3 projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_bounded_intelligence_gate.py`
+  - `python3 projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_bounded_intelligence_shadow_benchmark.py`
 - Demo Verified:
   - `projects/agifcore_master/06_outputs/phase_16_bounded_release_and_publication/phase_16_bounded_review_bundle/REVIEW_FIRST.md`
   - `projects/agifcore_master/06_outputs/phase_16_bounded_release_and_publication/phase_16_bounded_review_bundle.zip`

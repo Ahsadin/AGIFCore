@@ -44,7 +44,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p4-tc-acl-02-phase-4-boundary-check`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P4-TC-ACL-02`
+- Worktree Path: `.worktrees/P4-TC-ACL-02`
 - Rollback Tag Name: `rollback/P4-TC-ACL-02/<yyyymmdd-hhmm>`
 
 ## Objective

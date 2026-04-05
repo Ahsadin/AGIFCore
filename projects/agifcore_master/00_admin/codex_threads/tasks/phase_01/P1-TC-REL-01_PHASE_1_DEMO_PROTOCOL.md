@@ -44,7 +44,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p1-tc-rel-01-phase-1-demo-protocol`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P1-TC-REL-01`
+- Worktree Path: `.worktrees/P1-TC-REL-01`
 - Rollback Tag Name: `rollback/P1-TC-REL-01/20260329-2240`
 
 ## Objective

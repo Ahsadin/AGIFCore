@@ -49,7 +49,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p8-tc-wcpl-02-phase-8-science-world-awareness-implementation`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore`
+- Worktree Path: `<repo_root>`
 - Rollback Tag Name: `rollback/P8-TC-ASA-02/20260331-0000`
 
 ## Objective

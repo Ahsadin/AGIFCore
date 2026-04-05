@@ -49,7 +49,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p6-tc-asa-01-phase-6-final-audit`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P6-TC-ASA-01`
+- Worktree Path: `.worktrees/P6-TC-ASA-01`
 - Rollback Tag Name: `rollback/P6-TC-ASA-01/<yyyymmdd-hhmm>`
 
 ## Objective

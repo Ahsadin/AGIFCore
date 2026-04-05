@@ -18,7 +18,7 @@ Supporting demo payloads:
 
 Evidence source:
 
-- [phase_14_evidence_manifest.json](/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_evidence_manifest.json)
+- [phase_14_evidence_manifest.json](projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_evidence/phase_14_evidence_manifest.json)
 
 Truth note:
 

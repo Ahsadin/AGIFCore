@@ -45,7 +45,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p1-tc-trl-01-phase-1-validation-protocol`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P1-TC-TRL-01`
+- Worktree Path: `.worktrees/P1-TC-TRL-01`
 - Rollback Tag Name: `rollback/P1-TC-TRL-01/20260329-2240`
 
 ## Objective

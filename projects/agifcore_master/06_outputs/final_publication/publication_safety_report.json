@@ -1,0 +1,12 @@
+{
+  "counts_by_kind": {},
+  "counts_by_treatment": {},
+  "finding_count": 0,
+  "findings": [],
+  "flagged_file_count": 0,
+  "generated_on": "2026-04-05",
+  "highest_risk_files": [],
+  "scan_root": ".",
+  "scanned_file_count": 1540,
+  "schema": "agifcore.final_publication.publication_safety_report.v1"
+}

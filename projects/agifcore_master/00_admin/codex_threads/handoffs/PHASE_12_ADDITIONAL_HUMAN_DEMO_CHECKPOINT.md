@@ -11,8 +11,8 @@
 - `projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_demo_bundle/phase_12_theory_growth_demo.md`
 - `projects/agifcore_master/06_outputs/phase_12_structural_growth/phase_12_evidence/phase_12_evidence_manifest.json`
 - exported standalone review bundle:
-  - `/Users/ahsadin/Documents/AGIFCore_phase_12_review_bundle`
-  - `/Users/ahsadin/Documents/AGIFCore_phase_12_review_bundle.zip`
+  - `phase_12_review_bundle`
+  - `phase_12_review_bundle.zip`
 
 ## Checkpoint outcome
 

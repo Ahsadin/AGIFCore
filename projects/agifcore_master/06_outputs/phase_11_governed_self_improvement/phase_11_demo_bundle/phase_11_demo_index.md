@@ -16,7 +16,7 @@ Supporting demo payloads:
 
 Evidence source:
 
-- [phase_11_evidence_manifest.json](/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_evidence_manifest.json)
+- [phase_11_evidence_manifest.json](projects/agifcore_master/06_outputs/phase_11_governed_self_improvement/phase_11_evidence/phase_11_evidence_manifest.json)
 
 Truth note:
 

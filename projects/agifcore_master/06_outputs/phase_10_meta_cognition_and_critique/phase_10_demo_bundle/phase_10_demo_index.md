@@ -14,7 +14,7 @@ Supporting demo payloads:
 
 Evidence source:
 
-- [phase_10_evidence_manifest.json](/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_evidence_manifest.json)
+- [phase_10_evidence_manifest.json](projects/agifcore_master/06_outputs/phase_10_meta_cognition_and_critique/phase_10_evidence/phase_10_evidence_manifest.json)
 
 Truth note:
 

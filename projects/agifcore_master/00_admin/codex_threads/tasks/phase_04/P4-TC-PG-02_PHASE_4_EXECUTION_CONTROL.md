@@ -55,7 +55,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p4-tc-pg-01-phase-4-governor-control`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore`
+- Worktree Path: `<repo_root>`
 - Rollback Tag Name: `rollback/P4-TC-PG-02/<yyyymmdd-hhmm>`
 
 ## Objective

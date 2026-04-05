@@ -52,7 +52,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p3-tc-trl-01-phase-3-slice-1-contract-and-bundle-verifiers`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-TRL-01`
+- Worktree Path: `.worktrees/P3-TC-TRL-01`
 - Rollback Tag Name: `rollback/P3-TC-TRL-01/20260330-0000`
 
 ## Objective

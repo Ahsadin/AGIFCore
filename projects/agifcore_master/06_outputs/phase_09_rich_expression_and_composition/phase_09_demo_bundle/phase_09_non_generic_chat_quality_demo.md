@@ -4,9 +4,9 @@ Phase 9 remains `open`. This page is for inspection only.
 
 What to inspect:
 
-- [phase_09_audience_aware_explanation_quality_report.json](/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_audience_aware_explanation_quality_report.json)
-- [phase_09_teaching_report.json](/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_teaching_report.json)
-- [phase_09_comparison_report.json](/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_comparison_report.json)
+- [phase_09_audience_aware_explanation_quality_report.json](projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_audience_aware_explanation_quality_report.json)
+- [phase_09_teaching_report.json](projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_teaching_report.json)
+- [phase_09_comparison_report.json](projects/agifcore_master/06_outputs/phase_09_rich_expression_and_composition/phase_09_evidence/phase_09_comparison_report.json)
 
 Evidence-backed summary:
 

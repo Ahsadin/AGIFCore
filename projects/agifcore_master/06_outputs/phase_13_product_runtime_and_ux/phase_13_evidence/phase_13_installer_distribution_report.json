@@ -111,42 +111,42 @@
           "artifact_id": "bundle_manifest",
           "executable": false,
           "filename": "phase_13_bundle_manifest.json",
-          "path": "/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_demo_bundle/local_distribution_bundle/phase_13_bundle_manifest.json",
+          "path": "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_demo_bundle/local_distribution_bundle/phase_13_bundle_manifest.json",
           "purpose": "local distribution inventory"
         },
         {
           "artifact_id": "integrity_manifest",
           "executable": false,
           "filename": "phase_13_integrity_manifest.json",
-          "path": "/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_demo_bundle/local_distribution_bundle/phase_13_integrity_manifest.json",
+          "path": "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_demo_bundle/local_distribution_bundle/phase_13_integrity_manifest.json",
           "purpose": "local integrity proof"
         },
         {
           "artifact_id": "install_local",
           "executable": false,
           "filename": "INSTALL_LOCAL.md",
-          "path": "/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_demo_bundle/local_distribution_bundle/INSTALL_LOCAL.md",
+          "path": "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_demo_bundle/local_distribution_bundle/INSTALL_LOCAL.md",
           "purpose": "local install instructions"
         },
         {
           "artifact_id": "launcher_runner",
           "executable": true,
           "filename": "launch_phase_13_local_runner.sh",
-          "path": "/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_demo_bundle/local_distribution_bundle/launch_phase_13_local_runner.sh",
+          "path": "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_demo_bundle/local_distribution_bundle/launch_phase_13_local_runner.sh",
           "purpose": "local runner launcher"
         },
         {
           "artifact_id": "launcher_gateway",
           "executable": true,
           "filename": "launch_phase_13_local_gateway.sh",
-          "path": "/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_demo_bundle/local_distribution_bundle/launch_phase_13_local_gateway.sh",
+          "path": "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_demo_bundle/local_distribution_bundle/launch_phase_13_local_gateway.sh",
           "purpose": "local gateway launcher"
         },
         {
           "artifact_id": "launcher_desktop_ui",
           "executable": true,
           "filename": "launch_phase_13_local_desktop_ui.sh",
-          "path": "/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_demo_bundle/local_distribution_bundle/launch_phase_13_local_desktop_ui.sh",
+          "path": "projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_demo_bundle/local_distribution_bundle/launch_phase_13_local_desktop_ui.sh",
           "purpose": "local desktop UI launcher"
         }
       ],

@@ -4,9 +4,9 @@ Phase 3 remains open. This page shows the full bundle validation surface, includ
 
 ## Inspect
 
-- `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-PG-05/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_validation_report.json`
-- `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-PG-05/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_integrity_report.json`
-- `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-PG-05/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json`
+- `.worktrees/P3-TC-PG-05/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_validation_report.json`
+- `.worktrees/P3-TC-PG-05/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_integrity_report.json`
+- `.worktrees/P3-TC-PG-05/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json`
 
 ## What this proves
 

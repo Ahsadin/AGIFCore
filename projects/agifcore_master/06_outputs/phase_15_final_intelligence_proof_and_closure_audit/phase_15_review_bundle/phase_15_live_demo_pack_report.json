@@ -3893,7 +3893,7 @@
             "admitted": true,
             "bundle_integrity_verified": true,
             "command": [
-              "/Users/ahsadin/.wasmtime/bin/wasmtime",
+              "<local_wasmtime_bin>/wasmtime",
               "run",
               "-W",
               "fuel=100000000",
@@ -3905,7 +3905,7 @@
               "trap-on-grow-failure=y",
               "--invoke",
               "add",
-              "/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/sandbox_packages/phase14_laptop_valid_sample_module.wat",
+              "projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_evidence/sandbox_packages/phase14_laptop_valid_sample_module.wat",
               "1",
               "2"
             ],
@@ -3934,7 +3934,7 @@
             "stderr": "warning: using `--invoke` with a function that takes arguments is experimental and may break in the future\nwarning: using `--invoke` with a function that returns values is experimental and may break in the future",
             "stdout": "3",
             "wall_time_limit_ms": 1000,
-            "wasmtime_cli_path": "/Users/ahsadin/.wasmtime/bin/wasmtime"
+            "wasmtime_cli_path": "<local_wasmtime_bin>/wasmtime"
           },
           "scenario": "weak",
           "session_kind": "sandbox_execute",
@@ -3975,7 +3975,7 @@
             "stderr": "",
             "stdout": "",
             "wall_time_limit_ms": 1000,
-            "wasmtime_cli_path": "/Users/ahsadin/.wasmtime/bin/wasmtime"
+            "wasmtime_cli_path": "<local_wasmtime_bin>/wasmtime"
           },
           "scenario": "weak",
           "session_kind": "sandbox_execute",

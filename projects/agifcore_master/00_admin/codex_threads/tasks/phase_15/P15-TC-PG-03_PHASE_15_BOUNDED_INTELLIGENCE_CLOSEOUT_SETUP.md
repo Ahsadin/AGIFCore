@@ -54,7 +54,7 @@
 ## Branch And Worktree
 
 - Branch Name: `current-thread`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore`
+- Worktree Path: `<repo_root>`
 - Rollback Tag Name: `not_created`
 
 ## Objective
@@ -80,7 +80,7 @@
 ## Verification
 
 - Required Test Commands:
-  - `python3 -m compileall /Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_bounded_intelligence_gate.py`
+  - `python3 -m compileall projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_and_closure_audit/verify_bounded_intelligence_gate.py`
 - Required Build Commands:
   - `none`
 - Required Verifier Paths:

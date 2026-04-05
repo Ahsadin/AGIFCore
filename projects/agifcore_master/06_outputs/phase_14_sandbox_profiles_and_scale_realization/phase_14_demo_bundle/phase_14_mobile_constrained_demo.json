@@ -282,7 +282,7 @@
     "admitted": true,
     "bundle_integrity_verified": true,
     "command": [
-      "/Users/ahsadin/.wasmtime/bin/wasmtime",
+      "<local_wasmtime_bin>/wasmtime",
       "run",
       "-W",
       "fuel=25000000",
@@ -294,7 +294,7 @@
       "trap-on-grow-failure=y",
       "--invoke",
       "spin",
-      "/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_demo_bundle/sandbox_packages/phase14_mobile_valid_sample_module.wat"
+      "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_demo_bundle/sandbox_packages/phase14_mobile_valid_sample_module.wat"
     ],
     "executed_at": "2026-04-01T16:03:05+00:00",
     "exit_code": 134,
@@ -315,10 +315,10 @@
     "sandboxed_execution": true,
     "schema": "agifcore.phase_14.sandbox_execution_receipt.v1",
     "status": "blocked",
-    "stderr": "Error: failed to run main module `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_demo_bundle/sandbox_packages/phase14_mobile_valid_sample_module.wat`\n\nCaused by:\n    0: failed to invoke `spin`\n    1: error while executing at wasm backtrace:\n    0:     0x5a - <unknown>!<wasm function 1>\n    2: wasm trap: all fuel consumed by WebAssembly",
+    "stderr": "Error: failed to run main module `projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_demo_bundle/sandbox_packages/phase14_mobile_valid_sample_module.wat`\n\nCaused by:\n    0: failed to invoke `spin`\n    1: error while executing at wasm backtrace:\n    0:     0x5a - <unknown>!<wasm function 1>\n    2: wasm trap: all fuel consumed by WebAssembly",
     "stdout": "",
     "wall_time_limit_ms": 250,
-    "wasmtime_cli_path": "/Users/ahsadin/.wasmtime/bin/wasmtime"
+    "wasmtime_cli_path": "<local_wasmtime_bin>/wasmtime"
   },
   "laptop_contract_hash": "a4b5ddf226b315733337354ea7731744c45d57a5ea440bee9824dbc33b06a0be",
   "mobile_profile_manifest": {
@@ -383,7 +383,7 @@
     "snapshot_hash": "107a07ec42fb9b96bdc26e18a420316c11c08b2f98267e6e447b1637bec65860",
     "tissue_count": 32,
     "wasmtime_available": true,
-    "wasmtime_cli_path": "/Users/ahsadin/.wasmtime/bin/wasmtime"
+    "wasmtime_cli_path": "<local_wasmtime_bin>/wasmtime"
   },
   "status": "open",
   "within_budget": {

@@ -1,0 +1,94 @@
+{
+  "benchmark_id": "agifcore_bounded_intelligence_gate_v1",
+  "class_results": {
+    "comparison_planning": {
+      "failed": 0,
+      "pass_rate": 1.0,
+      "passed": 5,
+      "total": 5
+    },
+    "contradiction_ambiguity": {
+      "failed": 0,
+      "pass_rate": 1.0,
+      "passed": 5,
+      "total": 5
+    },
+    "current_world": {
+      "failed": 0,
+      "pass_rate": 1.0,
+      "passed": 5,
+      "total": 5
+    },
+    "follow_up": {
+      "failed": 0,
+      "pass_rate": 1.0,
+      "passed": 5,
+      "total": 5
+    },
+    "identity_system": {
+      "failed": 0,
+      "pass_rate": 1.0,
+      "passed": 5,
+      "total": 5
+    },
+    "local_runtime_evidence": {
+      "failed": 0,
+      "pass_rate": 1.0,
+      "passed": 5,
+      "total": 5
+    },
+    "math_logic": {
+      "failed": 0,
+      "pass_rate": 1.0,
+      "passed": 5,
+      "total": 5
+    },
+    "project_phase_capability": {
+      "failed": 1,
+      "pass_rate": 0.8,
+      "passed": 4,
+      "total": 5
+    },
+    "underspecified": {
+      "failed": 0,
+      "pass_rate": 1.0,
+      "passed": 5,
+      "total": 5
+    },
+    "unsupported": {
+      "failed": 0,
+      "pass_rate": 1.0,
+      "passed": 5,
+      "total": 5
+    }
+  },
+  "combined_identity_project_runtime": {
+    "pass_rate": 0.9333333333333333,
+    "passed": 14,
+    "total": 15
+  },
+  "failed_count": 1,
+  "failure_counts_by_primary_failure_type": {
+    "interpretation_failure": 1,
+    "pass": 49
+  },
+  "final_claim_if_passed": "AGIFCore as bounded intelligence only; broad chat intelligence remains unproven/deferred",
+  "gate_passed": true,
+  "hard_fail_count": 0,
+  "hard_fail_reasons": [],
+  "overall_pass_rate": 0.98,
+  "passed_count": 49,
+  "prompt_count": 50,
+  "threshold_results": {
+    "comparison_planning": true,
+    "contradiction_ambiguity": true,
+    "current_world": true,
+    "follow_up": true,
+    "identity_project_runtime_combined": true,
+    "math_logic": true,
+    "overall": true,
+    "phase_chain_integrity": true,
+    "underspecified": true,
+    "unsupported": true
+  }
+}

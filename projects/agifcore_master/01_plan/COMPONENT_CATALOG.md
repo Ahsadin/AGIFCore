@@ -116,7 +116,7 @@ It is intentionally row-based. If a component is not listed here, it is still mi
 
 ## Unresolved lineage items
 
-- Verified historical roots exist at `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2` and `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master`.
+- Verified historical roots exist at `<historical_local_source>/agif_fabric_v2` and `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master`.
 - Exact row-by-row path evidence for `SRC-003` and `SRC-004` is recorded in `SOURCE_INHERITANCE_MATRIX.md`, and representative runtime-module verification is recorded in `RUNTIME_REBUILD_MAP.md`.
 - Where `SRC-003` and `SRC-004` overlap, this catalog keeps the historical surface visible at the component level while `SOURCE_INHERITANCE_MATRIX.md` carries the exact path-set coverage.
 - This catalog remains first-pass lineage cartography only. It does not claim final semantic inheritance approval.

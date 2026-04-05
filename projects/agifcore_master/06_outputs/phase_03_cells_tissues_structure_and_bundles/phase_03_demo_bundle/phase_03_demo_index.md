@@ -10,11 +10,11 @@ Phase 3 remains open. This bundle collects the full review surface for the cells
 
 ## Inspect
 
-- `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-PG-05/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json`
-- `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-PG-05/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_tissue_orchestration_report.json`
-- `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-PG-05/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_split_merge_report.json`
-- `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-PG-05/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_validation_report.json`
-- `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-PG-05/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_integrity_report.json`
+- `.worktrees/P3-TC-PG-05/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_evidence_manifest.json`
+- `.worktrees/P3-TC-PG-05/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_tissue_orchestration_report.json`
+- `.worktrees/P3-TC-PG-05/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_split_merge_report.json`
+- `.worktrees/P3-TC-PG-05/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_validation_report.json`
+- `.worktrees/P3-TC-PG-05/projects/agifcore_master/06_outputs/phase_03_cells_tissues_structure_and_bundles/phase_03_evidence/phase_03_bundle_integrity_report.json`
 
 ## What this bundle shows
 

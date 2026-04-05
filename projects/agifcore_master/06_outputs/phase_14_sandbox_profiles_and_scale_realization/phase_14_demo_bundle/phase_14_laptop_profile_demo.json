@@ -592,13 +592,13 @@
     "snapshot_hash": "107a07ec42fb9b96bdc26e18a420316c11c08b2f98267e6e447b1637bec65860",
     "tissue_count": 32,
     "wasmtime_available": true,
-    "wasmtime_cli_path": "/Users/ahsadin/.wasmtime/bin/wasmtime"
+    "wasmtime_cli_path": "<local_wasmtime_bin>/wasmtime"
   },
   "sandbox_receipt": {
     "admitted": true,
     "bundle_integrity_verified": true,
     "command": [
-      "/Users/ahsadin/.wasmtime/bin/wasmtime",
+      "<local_wasmtime_bin>/wasmtime",
       "run",
       "-W",
       "fuel=100000000",
@@ -610,7 +610,7 @@
       "trap-on-grow-failure=y",
       "--invoke",
       "add",
-      "/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_demo_bundle/sandbox_packages/phase14_laptop_valid_sample_module.wat",
+      "projects/agifcore_master/06_outputs/phase_14_sandbox_profiles_and_scale_realization/phase_14_demo_bundle/sandbox_packages/phase14_laptop_valid_sample_module.wat",
       "2",
       "5"
     ],
@@ -639,7 +639,7 @@
     "stderr": "warning: using `--invoke` with a function that takes arguments is experimental and may break in the future\nwarning: using `--invoke` with a function that returns values is experimental and may break in the future",
     "stdout": "7",
     "wall_time_limit_ms": 1000,
-    "wasmtime_cli_path": "/Users/ahsadin/.wasmtime/bin/wasmtime"
+    "wasmtime_cli_path": "<local_wasmtime_bin>/wasmtime"
   },
   "status": "open"
 }

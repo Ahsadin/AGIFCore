@@ -14,7 +14,7 @@ Phase 15 remains `open`. This demo is inspectable review material only.
 - runtime host: `approved_phase13_desktop_ui`
 - ui selected view: `chat_workspace`
 - ui message count: `6`
-- launcher: `sh /Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/launch_phase_15_real_desktop_chat_demo.sh`
+- launcher: `sh projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/launch_phase_15_real_desktop_chat_demo.sh`
 
 ## Runtime Snapshots
 

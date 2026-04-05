@@ -51,7 +51,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p1-tc-sc-01-phase-1-inheritance-and-provenance`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P1-TC-SC-01`
+- Worktree Path: `.worktrees/P1-TC-SC-01`
 - Rollback Tag Name: `rollback/P1-TC-SC-01/20260329-2240`
 
 ## Objective

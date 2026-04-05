@@ -16,7 +16,7 @@ Supporting demo payloads:
 
 Evidence source:
 
-- [phase_13_evidence_manifest.json](/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_evidence/phase_13_evidence_manifest.json)
+- [phase_13_evidence_manifest.json](projects/agifcore_master/06_outputs/phase_13_product_runtime_and_ux/phase_13_evidence/phase_13_evidence_manifest.json)
 
 Truth note:
 

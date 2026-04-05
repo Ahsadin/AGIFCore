@@ -67,7 +67,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p5-tc-trl-01-phase-5-graph-verifiers`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P5-TC-TRL-01`
+- Worktree Path: `.worktrees/P5-TC-TRL-01`
 - Rollback Tag Name: `rollback/P5-TC-TRL-01/<yyyymmdd-hhmm>`
 
 ## Objective

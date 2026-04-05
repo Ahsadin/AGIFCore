@@ -68,7 +68,7 @@ def build_demo_payload(
         "turn_summaries": [_turn_summary(turn) for turn in turns],
         "ui_snapshot": ui_snapshot,
         "launch_command": (
-            "sh /Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/"
+            "sh projects/agifcore_master/06_outputs/"
             "phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/"
             "launch_phase_15_real_desktop_chat_demo.sh"
         ),

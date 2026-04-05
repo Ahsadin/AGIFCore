@@ -49,23 +49,23 @@
     - `projects/agifcore_master/00_admin/BRANCH_AND_WORKTREE_POLICY.md`
     - `projects/agifcore_master/00_admin/ESCALATION_AND_FREEZE_RULES.md`
   - direct inherited-source inspection:
-    - `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v1/intelligence/fabric/utility.py`
-    - `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v1/intelligence/fabric/domain/finance.py`
-    - `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v1/intelligence/fabric/domain/pos_operations.py`
-    - `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_5_simulator/agif_phase5_simulator/contracts.py`
-    - `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_5_simulator/agif_phase5_simulator/world_model.py`
-    - `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_5_simulator/agif_phase5_simulator/simulation.py`
-    - `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_5_simulator/agif_phase5_simulator/fault_injection.py`
-    - `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_5_simulator/agif_phase5_simulator/pressure.py`
-    - `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_5_simulator/agif_phase5_simulator/transfer_conflict.py`
-    - `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_5_simulator/agif_phase5_simulator/overload.py`
-    - `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_5_simulator/agif_phase5_simulator/instrumentation.py`
-    - `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_5_simulator/agif_phase5_simulator/usefulness.py`
-    - `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_6a_domain_proofs/agif_phase6a_domain_proofs/contracts.py`
-    - `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_6a_domain_proofs/agif_phase6a_domain_proofs/transfer_path.py`
-    - `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_8b_world_awareness/README.md`
-    - `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_8b_world_awareness/agif_phase8b_world_awareness/answer_contract.py`
-    - `/Users/ahsadin/Documents/Projects/ENF/AGIF/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_9_real_runtime/agif_phase9_real_runtime/support_graph.py`
+    - `<historical_local_source>/agif_fabric_v1/intelligence/fabric/utility.py`
+    - `<historical_local_source>/agif_fabric_v1/intelligence/fabric/domain/finance.py`
+    - `<historical_local_source>/agif_fabric_v1/intelligence/fabric/domain/pos_operations.py`
+    - `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_5_simulator/agif_phase5_simulator/contracts.py`
+    - `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_5_simulator/agif_phase5_simulator/world_model.py`
+    - `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_5_simulator/agif_phase5_simulator/simulation.py`
+    - `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_5_simulator/agif_phase5_simulator/fault_injection.py`
+    - `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_5_simulator/agif_phase5_simulator/pressure.py`
+    - `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_5_simulator/agif_phase5_simulator/transfer_conflict.py`
+    - `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_5_simulator/agif_phase5_simulator/overload.py`
+    - `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_5_simulator/agif_phase5_simulator/instrumentation.py`
+    - `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_5_simulator/agif_phase5_simulator/usefulness.py`
+    - `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_6a_domain_proofs/agif_phase6a_domain_proofs/contracts.py`
+    - `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_6a_domain_proofs/agif_phase6a_domain_proofs/transfer_path.py`
+    - `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_8b_world_awareness/README.md`
+    - `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_8b_world_awareness/agif_phase8b_world_awareness/answer_contract.py`
+    - `<historical_local_source>/agif_fabric_v2/projects/agif_v2_master/04_execution/phase_9_real_runtime/agif_phase9_real_runtime/support_graph.py`
 
 ## 2. Phase mission
 

@@ -45,7 +45,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p1-tc-asa-01-phase-1-artifact-audit`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P1-TC-ASA-01`
+- Worktree Path: `.worktrees/P1-TC-ASA-01`
 - Rollback Tag Name: `rollback/P1-TC-ASA-01/20260329-2240`
 
 ## Objective

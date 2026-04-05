@@ -61,7 +61,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p7-tc-wcpl-02-phase-7-conversation-core-implementation`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore`
+- Worktree Path: `<repo_root>`
 - Rollback Tag Name: `rollback/P7-TC-PG-02/<yyyymmdd-hhmm>`
 
 ## Objective

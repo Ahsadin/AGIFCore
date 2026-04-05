@@ -45,7 +45,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p5-tc-rel-01-phase-5-demo-bundle`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P5-TC-REL-01`
+- Worktree Path: `.worktrees/P5-TC-REL-01`
 - Rollback Tag Name: `rollback/P5-TC-REL-01/<yyyymmdd-hhmm>`
 
 ## Objective

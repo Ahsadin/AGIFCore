@@ -26,7 +26,7 @@
       "stdout_preview": "Listing 'projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization'...\nCompiling 'projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/_phase_14_verifier_common.py'...\nCompiling 'projects/agifcore_master/05_testing/phase_14_sandbox_profiles_and_scale_realization/run_phase_14_laptop_profile_demo.py'...\nCompiling 'projects/agifcore_master/05_t"
     }
   ],
-  "cwd": "/Users/ahsadin/Documents/AGIFCore",
+  "cwd": "<repo_root>",
   "demos": {
     "run_phase_14_laptop_profile_demo": {
       "command": [
@@ -66,7 +66,7 @@
       "exit_code": 0,
       "log_path": "projects/agifcore_master/08_logs/run_phase_14_sandbox_enforcement_demo_2026-04-01.log",
       "stderr_preview": "",
-      "stdout_preview": "{\n  \"allowed_receipt\": {\n    \"admitted\": true,\n    \"bundle_integrity_verified\": true,\n    \"command\": [\n      \"/Users/ahsadin/.wasmtime/bin/wasmtime\",\n      \"run\",\n      \"-W\",\n      \"fuel=100000000\",\n      \"-W\",\n      \"max-memory-size=268435456\",\n      \"-W\",\n      \"timeout=1000ms\",\n      \"-W\",\n      \"trap-on-grow-failure=y\",\n      \"--invoke\",\n      \"add\",\n      \"/Users/ahsadin/Documents/AGIFCore/pr"
+      "stdout_preview": "{\n  \"allowed_receipt\": {\n    \"admitted\": true,\n    \"bundle_integrity_verified\": true,\n    \"command\": [\n      \"<local_wasmtime_bin>/wasmtime\",\n      \"run\",\n      \"-W\",\n      \"fuel=100000000\",\n      \"-W\",\n      \"max-memory-size=268435456\",\n      \"-W\",\n      \"timeout=1000ms\",\n      \"-W\",\n      \"trap-on-grow-failure=y\",\n      \"--invoke\",\n      \"add\",\n      \"pr"
     }
   },
   "evidence_manifest_status": "phase_14_verifier_family_pass",
@@ -74,7 +74,7 @@
     "this diagnostic was regenerated from the current Codex environment",
     "no approval implied"
   ],
-  "path": "/Users/ahsadin/.codex/tmp/arg0/codex-arg0epFLbC:/Users/ahsadin/.wasmtime/bin:/Users/ahsadin/.wasmtime/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/Library/Apple/usr/bin:/Users/ahsadin/.cargo/bin:/Applications/Codex.app/Contents/Resources",
+  "path": "<local_environment_path_redacted>",
   "phase": "14",
   "phase_remains_open": true,
   "verifiers": {
@@ -126,7 +126,7 @@
       "exit_code": 0,
       "log_path": "projects/agifcore_master/08_logs/verify_phase_14_sandbox_2026-04-01.log",
       "stderr_preview": "",
-      "stdout_preview": "{\n  \"anchors\": {\n    \"allowed_receipt\": {\n      \"admitted\": true,\n      \"bundle_integrity_verified\": true,\n      \"command\": [\n        \"/Users/ahsadin/.wasmtime/bin/wasmtime\",\n        \"run\",\n        \"-W\",\n        \"fuel=100000000\",\n        \"-W\",\n        \"max-memory-size=268435456\",\n        \"-W\",\n        \"timeout=1000ms\",\n        \"-W\",\n        \"trap-on-grow-failure=y\",\n        \"--invoke\",\n        \"ad"
+      "stdout_preview": "{\n  \"anchors\": {\n    \"allowed_receipt\": {\n      \"admitted\": true,\n      \"bundle_integrity_verified\": true,\n      \"command\": [\n        \"<local_wasmtime_bin>/wasmtime\",\n        \"run\",\n        \"-W\",\n        \"fuel=100000000\",\n        \"-W\",\n        \"max-memory-size=268435456\",\n        \"-W\",\n        \"timeout=1000ms\",\n        \"-W\",\n        \"trap-on-grow-failure=y\",\n        \"--invoke\",\n        \"ad"
     },
     "verify_phase_14_tissue_manifest": {
       "command": [
@@ -166,12 +166,12 @@
       "exit_code": 0,
       "log_path": "projects/agifcore_master/08_logs/verify_phase_14_wasmtime_wall_time_2026-04-01.log",
       "stderr_preview": "",
-      "stdout_preview": "{\n  \"anchors\": {\n    \"timeout_receipt\": {\n      \"admitted\": true,\n      \"bundle_integrity_verified\": true,\n      \"command\": [\n        \"/Users/ahsadin/.wasmtime/bin/wasmtime\",\n        \"run\",\n        \"-W\",\n        \"fuel=5000000000\",\n        \"-W\",\n        \"max-memory-size=33554432\",\n        \"-W\",\n        \"timeout=100ms\",\n        \"-W\",\n        \"trap-on-grow-failure=y\",\n        \"--invoke\",\n        \"spi"
+      "stdout_preview": "{\n  \"anchors\": {\n    \"timeout_receipt\": {\n      \"admitted\": true,\n      \"bundle_integrity_verified\": true,\n      \"command\": [\n        \"<local_wasmtime_bin>/wasmtime\",\n        \"run\",\n        \"-W\",\n        \"fuel=5000000000\",\n        \"-W\",\n        \"max-memory-size=33554432\",\n        \"-W\",\n        \"timeout=100ms\",\n        \"-W\",\n        \"trap-on-grow-failure=y\",\n        \"--invoke\",\n        \"spi"
     }
   },
   "wasmtime": {
     "available": true,
-    "command_v": "/Users/ahsadin/.wasmtime/bin/wasmtime",
+    "command_v": "<local_wasmtime_bin>/wasmtime",
     "version": "wasmtime 42.0.1 (6844a83b5 2026-02-25)"
   }
 }

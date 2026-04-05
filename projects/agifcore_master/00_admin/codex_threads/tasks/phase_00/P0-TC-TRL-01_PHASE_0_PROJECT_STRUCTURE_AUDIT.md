@@ -47,7 +47,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p0-tc-trl-01-phase-0-project-structure-audit`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P0-TC-TRL-01`
+- Worktree Path: `.worktrees/P0-TC-TRL-01`
 - Rollback Tag Name: `rollback/P0-TC-TRL-01/20260329-2124`
 
 ## Objective

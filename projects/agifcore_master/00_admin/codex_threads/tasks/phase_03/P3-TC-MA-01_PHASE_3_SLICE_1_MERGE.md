@@ -57,7 +57,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p3-tc-ma-01-phase-3-slice-1-merge`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-MA-01`
+- Worktree Path: `.worktrees/P3-TC-MA-01`
 - Rollback Tag Name: `rollback/P3-TC-MA-01/20260330-0000`
 
 ## Objective

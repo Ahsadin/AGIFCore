@@ -2,20 +2,20 @@
 
 ## Frozen source-of-truth files
 
-- `/Users/ahsadin/Documents/AGIFCore/AGENTS.md`
-- `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/AGENTS.override.md`
-- `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/PROJECT_README.md`
-- `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/DECISIONS.md`
-- `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/CHANGELOG.md`
-- `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/01_plan/MASTER_PLAN.md`
-- `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/01_plan/PHASE_01_CONSTITUTION_AND_FULL_SYSTEM_BLUEPRINT.md`
-- `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/02_requirements/ROLE_AUTHORITY_RULES.md`
-- `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/02_requirements/EXECUTION_CHAIN_OF_COMMAND.md`
-- `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/00_admin/TASK_CARD_TEMPLATE.md`
-- `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/00_admin/MODEL_MANIFEST.md`
-- `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/00_admin/TOOL_PERMISSION_MATRIX.md`
-- `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/00_admin/BRANCH_AND_WORKTREE_POLICY.md`
-- `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/00_admin/ESCALATION_AND_FREEZE_RULES.md`
+- `AGENTS.md`
+- `projects/agifcore_master/AGENTS.override.md`
+- `projects/agifcore_master/PROJECT_README.md`
+- `projects/agifcore_master/DECISIONS.md`
+- `projects/agifcore_master/CHANGELOG.md`
+- `projects/agifcore_master/01_plan/MASTER_PLAN.md`
+- `projects/agifcore_master/01_plan/PHASE_01_CONSTITUTION_AND_FULL_SYSTEM_BLUEPRINT.md`
+- `projects/agifcore_master/02_requirements/ROLE_AUTHORITY_RULES.md`
+- `projects/agifcore_master/02_requirements/EXECUTION_CHAIN_OF_COMMAND.md`
+- `projects/agifcore_master/00_admin/TASK_CARD_TEMPLATE.md`
+- `projects/agifcore_master/00_admin/MODEL_MANIFEST.md`
+- `projects/agifcore_master/00_admin/TOOL_PERMISSION_MATRIX.md`
+- `projects/agifcore_master/00_admin/BRANCH_AND_WORKTREE_POLICY.md`
+- `projects/agifcore_master/00_admin/ESCALATION_AND_FREEZE_RULES.md`
 
 ## Current Phase 1 status
 
@@ -56,15 +56,15 @@
 
 ## First files the next Governor may touch
 
-- `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/00_admin/codex_threads/tasks/phase_01/`
-- `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/01_plan/PHASE_INDEX.md`
-- `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/01_plan/PHASE_GATE_CHECKLIST.md`
-- `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/01_plan/PROOF_DOMAIN_MATRIX.md`
-- `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/01_plan/SYSTEM_CONSTITUTION.md`
+- `projects/agifcore_master/00_admin/codex_threads/tasks/phase_01/`
+- `projects/agifcore_master/01_plan/PHASE_INDEX.md`
+- `projects/agifcore_master/01_plan/PHASE_GATE_CHECKLIST.md`
+- `projects/agifcore_master/01_plan/PROOF_DOMAIN_MATRIX.md`
+- `projects/agifcore_master/01_plan/SYSTEM_CONSTITUTION.md`
 
 ## Forbidden actions
 
-- Do not change `/Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/01_plan/MASTER_PLAN.md`.
+- Do not change `projects/agifcore_master/01_plan/MASTER_PLAN.md`.
 - Do not re-plan the team.
 - Do not do Phase 2 planning.
 - Do not mark Phase 1 execution complete.

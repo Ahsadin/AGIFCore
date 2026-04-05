@@ -49,7 +49,7 @@
 ## Branch And Worktree
 
 - Branch Name: `codex/tc-p3-tc-acl-01-phase-3-slice-1-boundary-check`
-- Worktree Path: `/Users/ahsadin/Documents/AGIFCore/.worktrees/P3-TC-ACL-01`
+- Worktree Path: `.worktrees/P3-TC-ACL-01`
 - Rollback Tag Name: `rollback/P3-TC-ACL-01/20260330-0000`
 
 ## Objective

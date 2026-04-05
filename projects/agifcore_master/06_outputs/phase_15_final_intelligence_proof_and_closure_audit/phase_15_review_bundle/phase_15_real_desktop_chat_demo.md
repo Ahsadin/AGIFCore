@@ -4,7 +4,7 @@ Phase 15 remains `open`. This is local review material only.
 
 ## Launch
 
-- launcher: `sh /Users/ahsadin/Documents/AGIFCore/projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/launch_phase_15_real_desktop_chat_demo.sh`
+- launcher: `sh projects/agifcore_master/06_outputs/phase_15_final_intelligence_proof_and_closure_audit/phase_15_demo_bundle/launch_phase_15_real_desktop_chat_demo.sh`
 - host kind: `local_desktop_ui_browser_host`
 - runtime host: `approved_phase13_desktop_ui`
 
