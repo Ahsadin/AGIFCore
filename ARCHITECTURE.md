@@ -2,129 +2,259 @@
 
 ## Overview
 
-AGIFCore is a governed local-intelligence baseline.
+AGIFCore is a governed local-first intelligence architecture.
 
-Its job is not to answer everything.
-Its job is to answer supported questions from local truth, preserve turn continuity, choose a safe answer mode, and fail closed when support is missing.
+It should not be reduced to only the final live turn path.
+The repository contains a multi-phase build that spans foundations, structure, memory, knowledge, simulation, conversation, critique, runtime, sandboxing, proof, and publication.
 
-The final architecture should be read as a bounded runtime core, not as a general chat stack.
+The final claim is narrower than the full stack:
 
-## System Scope
+- the full stack was built
+- a bounded subset of that stack was formally proven in the final closeout
 
-AGIFCore is designed for:
+That distinction matters.
 
-- local project and runtime truth
-- bounded reasoning over supported inputs
-- explicit continuity between turns
-- inspectable evidence and review surfaces
+## How To Read The Architecture
 
-AGIFCore is not designed for:
+There are two useful ways to read AGIFCore:
 
-- broad open-domain chat
-- unrestricted external world knowledge
-- hidden-cloud correctness
-- free-form unbounded conversational behavior
+1. as a full built system spanning phases `0` through `16`
+2. as a narrower bounded runtime that was exercised directly in the final proof lane
 
-## Runtime Flow
+This file covers the first view first and the second view second.
 
+## Full System Scope
+
+The full AGIFCore stack includes:
+
+- governance and blueprint foundations
+- kernel and workspace substrate
+- cells, tissues, structural composition, and bundles
+- memory planes and lifecycle handling
+- graph and knowledge structures
+- world-model and simulator layers
+- conversation and answer-flow layers
+- science and world-awareness support
+- rich expression and composition
+- critique and meta-cognition
+- governed self-improvement scaffolding
+- structural growth controls
+- product runtime and user experience
+- sandbox, profile, and scale controls
+- proof, closure, and publication layers
+
+## Foundations And Governance
+
+### Source freeze and constitutional framing
+
+The early phases define the operating rules of the whole system.
+Those phases matter because later runtime behavior is not meant to grow ad hoc.
+
+The foundational layers establish:
+
+- source-freeze boundaries
+- phase ordering
+- role separation
+- audit and validation rules
+- closure conditions
+- public claim-boundary discipline
+
+This governance layer is part of the architecture, not just project paperwork.
+It determines how AGIFCore can evolve and what counts as trustworthy evidence.
+
+### Fabric kernel and workspace
+
+The fabric kernel and workspace layers provide the substrate that later phases build on.
+This includes:
+
+- governed workspace behavior
+- shared structural conventions
+- basic execution boundaries
+- the early local-first operating surface
+
+This layer matters because later memory, graph, runtime, and sandbox systems need a stable base.
+
+## Structural Composition Layer
+
+### Cells, tissues, structure, and bundles
+
+AGIFCore builds a compositional structure layer around cells, tissues, and bundles.
+This is the system's internal organization model.
+
+It provides:
+
+- structural grouping
+- packaging boundaries
+- bundle integrity rules
+- reusable composition units
+
+This layer matters because it keeps the system from becoming one flat runtime with no internal structure.
+
+## State And Knowledge Layers
+
+### Memory planes
+
+The memory stack is not a single conversation buffer.
+It includes explicit memory planes and lifecycle handling.
+
+These layers were built to support:
+
+- short-horizon working state
+- longer-horizon retention
+- lifecycle control
+- pressure handling
+- retirement or forgetting policies
+
+This matters because a bounded intelligence core needs controlled memory behavior, not just string replay.
+
+### Graph and knowledge structures
+
+AGIFCore also includes graph and knowledge layers.
+These were built to support:
+
+- descriptor structures
+- skill and concept relationships
+- transfer and linkage patterns
+- traceable support references
+
+This matters because explanations and support-state decisions can draw on structured relationships rather than only raw text files.
+
+## World And Reasoning Layers
+
+### World model and simulator
+
+AGIFCore includes a world-model and simulator layer.
+This is the part of the architecture meant to support bounded internal modeling rather than open-ended factual recall.
+
+Its role is to support:
+
+- scenario reasoning
+- bounded internal modeling
+- controlled estimate behavior
+- simulation-aware analysis
+
+### Science and world-awareness
+
+The science and world-awareness layer extends that reasoning stance.
+Its purpose is not to turn AGIFCore into an unrestricted world oracle.
+Its purpose is to support:
+
+- falsification-aware reasoning
+- structured scientific stance
+- explicit uncertainty
+- better world-facing analysis within bounded support limits
+
+## Interaction And Expression Layers
+
+### Conversation core
+
+AGIFCore includes a conversation layer, but it is only one part of the whole system.
+That layer is responsible for:
+
+- governed answer flow
+- request interpretation
+- turn continuity
+- response shaping
+- trace-aware handling of local support
+
+### Rich expression and composition
+
+The rich expression layer sits above basic conversation.
+It is responsible for more complex composition and output behavior.
+
+This matters because the system was built to do more than short direct replies.
+It was designed to support structured explanations and composed outputs even though the final closeout claim stayed narrower than the full expressive build.
+
+## Critique And Self-Regulation Layers
+
+### Critique and meta-cognition
+
+AGIFCore includes explicit critique and meta-cognition layers.
+These handle:
+
+- self-checking
+- contradiction detection
+- ambiguity diagnosis
+- failure detection
+- support-state honesty before answer emission
+
+This is one of the key reasons the project should not be read as a naive response generator.
+
+### Governed self-improvement
+
+AGIFCore also includes governed self-improvement scaffolding.
+This does not mean open autonomy.
+It means the system was built with controlled improvement loops and governance constraints rather than with uncontrolled self-modification.
+
+### Structural growth
+
+The structural growth layer handles controlled expansion of fabric, tissues, and transfer structures.
+Its role is to make system growth explicit and governable rather than accidental.
+
+## Runtime, Sandbox, And Scale Layers
+
+### Product runtime and UX
+
+The product runtime and UX layer is the user-facing surface for the architecture.
+It includes:
+
+- the interactive turn path
+- runtime shell behavior
+- UX-facing answer surfaces
+- public proof-path entrypoints
+
+This is the layer most directly exercised by the final bounded evaluation.
+But it sits on top of the broader architecture described above.
+
+### Sandbox, profiles, and scale realization
+
+AGIFCore also includes sandbox and scale controls.
+These layers provide:
+
+- environment constraints
+- machine or profile boundaries
+- safer operating modes
+- scale realization boundaries
+
+These controls matter because AGIFCore was built as a governed system that should remain auditable and bounded under different operating contexts.
+
+## Proof, Closure, And Publication Layers
+
+### Final intelligence proof and closure audit
+
+Phase 15 is part of the architecture story, not just the repo closeout.
+It adds the formal proof lane:
+
+- frozen bounded-intelligence gate
+- machine-readable per-turn evidence
+- shadow benchmark for paraphrase/generalization checking
+- anti-shortcut audit
+
+### Release, publication, and public evidence package
+
+Phase 16 turns that proof lane into a public-facing evidence package.
+That includes:
+
+- claims matrix
+- publication summary
+- review bundles
+- public-safe evidence surfaces
+- handoff materials for future systems
+
+## The Live Bounded Runtime Path
+
+The final proof exercises a narrower slice of the total build.
 The live turn path follows a bounded chain:
 
 1. classify the request into a supported question family
 2. detect whether the turn is standalone, follow-up, contradictory, underspecified, or unsupported
-3. gather local support from runtime state, project files, manifests, evidence, or prior-turn structure
+3. gather local support from runtime state, project files, manifests, evidence, graphs, simulation-aware layers, or prior-turn structure
 4. decide whether the target is grounded enough to answer safely
 5. choose an answer mode
 6. produce the final response only after the bounded chain completes
 7. write machine-readable evidence about what was used and why
 
-## Core Subsystems
-
-### Question interpretation
-
-The runtime first decides what kind of question it is handling.
-That classification controls what evidence is allowed and which answer modes are legal.
-
-The bounded gate evaluated ten major class families:
-
-- identity and system questions
-- project, phase, and capability questions
-- local runtime and evidence questions
-- math and structured reasoning
-- comparison and planning
-- bounded current-world estimates
-- contradiction and inconsistency handling
-- follow-up questions
-- underspecified questions
-- unsupported questions
-
-### Local truth and retrieval
-
-Supported answers come from local project truth and runtime truth.
-Typical sources include:
-
-- project planning and requirement files
-- runtime snapshots and exported state
-- evidence manifests and review bundles
-- prior-turn memory and continuity state
-- graph and provenance references when explanation needs traceable support
-
-The runtime explicitly separates:
-
-- grounded local support
-- bounded estimate support
-- insufficient support
-- unsupported external truth
-
-That separation is what keeps the system fail-closed instead of hallucinating.
-
-### Continuity and follow-up binding
-
-AGIFCore stores structured prior-turn state rather than relying on generic conversational repetition.
-
-Follow-up handling uses fields such as:
-
-- prior request text
-- detected question class
-- support state
-- next action
-- answer mode
-- unresolved ambiguity
-- extracted target or entity
-
-This allows prompts such as `why`, `what did I ask`, or `are you sure` to bind back to the right prior turn when confidence is high enough.
-
-### Critique, contradiction, and ambiguity handling
-
-Before composing a response, the runtime checks whether the turn is internally contradictory, too vague, or missing support.
-
-This critique path can push the system toward:
-
-- clarify
-- abstain
-- search needed
-- bounded answer with explicit uncertainty
-
-The goal is not conversational smoothness at any cost.
-The goal is support-state honesty.
-
-### Bounded world reasoning
-
-AGIFCore supports narrow estimate-style current-world questions only when they fit the bounded contract.
-
-That means:
-
-- the target kind must be recognized
-- the system must stay explicit about uncertainty
-- no fake live factual grounding is allowed
-- unsupported current-world questions must fail closed
-
-This is deliberately narrower than general world knowledge.
-
-### Answer modes
-
-The runtime uses a small bounded set of answer modes rather than an open-ended response policy.
-
-The important public modes are:
+The public answer modes are:
 
 - `grounded_fact`
 - `bounded_estimate`
@@ -132,57 +262,50 @@ The important public modes are:
 - `abstain`
 - `search_needed`
 
-Each mode implies different obligations for support, caution, and evidence recording.
+This path is what the final bounded proof tests directly.
 
-### Proof and audit surfaces
+## What The Full Stack Supports
 
-AGIFCore does not rely on answer text alone.
-It writes machine-readable records that describe what the system did on each turn.
+Taken as a built system, AGIFCore provides:
 
-The bounded gate spec requires fields such as:
+- a governed multi-phase architecture
+- structured memory and lifecycle handling
+- graph and knowledge organization
+- world-model and simulation support
+- conversation and composed output layers
+- critique and self-checking layers
+- product runtime and UX surfaces
+- sandbox and scale controls
+- proof and publication infrastructure
 
-- `request_text`
-- `detected_question_class`
-- `local_sources_consulted`
-- `support_state`
-- `next_action`
-- `answer_mode`
-- `phases_actually_exercised`
-- `memory_used`
-- `graph_or_provenance_used`
-- `simulation_or_world_model_used`
-- `critique_or_diagnosis_fired`
-- `final_response`
-- `pass_or_fail`
+## What The Final Proof Supports
 
-These records feed three proof layers:
+The final proof supports a narrower claim:
 
-- the frozen bounded-intelligence gate
-- the paraphrased shadow benchmark
-- the anti-shortcut audit
-
-## Supported Behavior
-
-The verified baseline supports:
-
-- local system and project questions
-- runtime and evidence questions
-- simple math and structured reasoning
-- comparison and planning inside local support limits
-- follow-up questions grounded in prior state
+- supported local truth handling
+- bounded reasoning and simple math
+- follow-up binding from prior turn state
 - contradiction and ambiguity handling
-- bounded current-world estimates
-- honest unsupported-question fail-closed behavior
+- bounded current-world estimates with explicit uncertainty
+- honest fail-closed behavior on unsupported requests
+- auditable machine-readable evidence
 
-## Why The Architecture Is Bounded
+## Why The Final Claim Is Narrower Than The Build
 
-AGIFCore is strongest when it stays tied to:
+AGIFCore built more than it proved.
+That is not a contradiction.
 
-- known local support
-- explicit answer modes
-- inspectable evidence
-- selective continuity
-- fail-closed behavior
+Architecture completion answers:
 
-That is enough to support the bounded-intelligence claim.
-It is not enough to support a broad general-chat claim, and the architecture is intentionally not presented that way.
+- did the project build the planned stack?
+
+The final bounded proof answers:
+
+- what claim can be supported honestly by direct final evidence?
+
+The answer to the second question is narrower:
+
+- bounded intelligence baseline: supported
+- broad open-ended non-neural chat: unproven/deferred
+
+That distinction is the right way to read the final architecture.

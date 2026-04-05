@@ -5,7 +5,8 @@
 This file explains how to rerun the final bounded-intelligence checks and the publication-safety scan.
 
 These reruns support the bounded claim only.
-They do not justify any broad-chat or AGI claim.
+They do not justify any broader chat claim.
+They also do not re-prove every built architecture layer individually.
 
 ## Prerequisites
 
@@ -112,12 +113,14 @@ A successful rerun means:
 - the publication-safety scan is clean
 - the bounded claim remains supported by the recorded evidence
 
+The rerun confirms the final proof lane.
+It does not by itself restate the entire phase-by-phase build history.
+
 ## What Not To Claim
 
 Do not claim:
 
 - broad open-ended non-neural chat success
-- general AGI
 - unrestricted conversational intelligence
 
 The only supported final claim is:

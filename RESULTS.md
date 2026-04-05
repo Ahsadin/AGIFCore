@@ -4,7 +4,40 @@
 
 AGIFCore is supported and closed as a bounded intelligence baseline.
 
-## Evaluation Set
+These results need to be read in three separate categories:
+
+- built system scope
+- evaluated bounded claim
+- unsupported or unproven claims
+
+## 1. Built System Scope
+
+AGIFCore did not stop at a small answer shell.
+The approved project build spans phases `0` through `16` and includes:
+
+- source freeze, constitutional framing, and governed execution rules
+- fabric kernel and workspace foundations
+- cells, tissues, structure, and bundle composition
+- memory planes and lifecycle controls
+- graph and knowledge structures
+- world model and simulator layers
+- conversation core
+- science and world-awareness support
+- rich expression and composition
+- critique and meta-cognition
+- governed self-improvement scaffolding
+- structural growth controls
+- product runtime and UX
+- sandbox, profile, and scale controls
+- proof, closure, and publication layers
+
+Architecture completion therefore means the full planned stack was built and closed through the governed phase system.
+
+## 2. Evaluated Bounded Claim
+
+The final supported claim is narrower than the build:
+
+- AGIFCore is supported as a bounded intelligence baseline
 
 The final claim relies on three checks:
 
@@ -12,12 +45,13 @@ The final claim relies on three checks:
 2. a paraphrased shadow benchmark with the same class coverage
 3. an anti-shortcut audit that checks for benchmark-shaped behavior and synthetic proof signaling
 
-## Frozen Gate Result
+### Top-Line Proof Results
 
-- overall: `49/50`
-- pass rate: `98%`
-- hard fails: `0`
-- final gate result: `pass`
+| Surface | Result | Hard Fails | Status |
+| --- | ---: | ---: | --- |
+| Frozen bounded gate | `49/50` (`98%`) | `0` | `pass` |
+| Shadow benchmark | `50/50` (`100%`) | `0` | `pass` |
+| Anti-shortcut audit | cleared | n/a | `pass` |
 
 ### Frozen Gate Class Results
 
@@ -55,18 +89,50 @@ The only frozen-gate failure was a class-label mismatch on the prompt `what phas
 - detected class: `project_phase_capability`
 - recorded failure type: `interpretation_failure`
 
-The response itself stayed grounded and safe, but the case still counted as a failure because the verifier expected a different allowed class family.
+The response stayed grounded and safe, but the verifier still counted the case as a miss because it expected a different allowed class family.
 
-## Shadow Benchmark Result
+### What The Evaluated Bounded Claim Supports
 
-- overall: `50/50`
-- pass rate: `100%`
-- hard fails: `0`
-- final shadow result: `pass`
+The evaluated proof supports:
 
-All ten shadow-benchmark classes passed at `5/5`.
+- supported local truth handling
+- bounded reasoning and simple math
+- follow-up binding
+- contradiction and ambiguity handling
+- bounded current-world estimates
+- honest unsupported-question fail-closed behavior
+- bounded generalization beyond the exact frozen wording
 
-## Audit Result
+## 3. Built Scope Versus Proof Scope
+
+The built system is broader than the directly evaluated claim.
+
+| Area | Built In The Repo | Directly Proven By The Final Gate |
+| --- | --- | --- |
+| kernel, workspace, and structural substrate | yes | indirectly, as part of the full system |
+| memory, graph, and knowledge layers | yes | partially, through support retrieval and continuity behavior |
+| world model, science, and simulation layers | yes | partially, through bounded estimate and reasoning behavior |
+| conversation, expression, and runtime layers | yes | yes, directly exercised in the live bounded proof lane |
+| critique, self-check, and fail-closed controls | yes | yes, directly exercised |
+| sandbox, profile, and scale controls | yes | not the main focus of the final gate |
+| proof, audit, and publication layers | yes | yes, directly exercised by closeout and release review |
+
+This is the main public framing point:
+
+- AGIFCore built more than it proved
+- the final supported claim is narrower than the architecture completion
+
+## 4. Unsupported Or Unproven Claims
+
+The results do not support:
+
+- broad open-ended non-neural chat intelligence
+- unrestricted conversational intelligence
+- unrestricted live world knowledge
+
+Those claims remain unproven and deferred.
+
+## 5. Audit Result
 
 The anti-shortcut audit cleared the bounded claim.
 
@@ -77,39 +143,16 @@ That audit confirmed:
 - benchmark-shaped branching was removed from the live runtime path
 - the recorded evidence remained runtime-derived rather than synthetic
 
-## What The Results Support
-
-The results support these claims:
-
-- supported local truth handling
-- bounded reasoning and simple math
-- follow-up binding
-- contradiction and ambiguity handling
-- bounded current-world estimates
-- honest unsupported-question fail-closed behavior
-- bounded generalization beyond the exact frozen wording
-
-## What The Results Do Not Support
-
-The results do not support:
-
-- broad open-ended non-neural chat intelligence
-- unrestricted conversational intelligence
-- general AGI
-
-Those claims remain unproven and deferred.
-
-## Evidence Locations
+## 6. Evidence Locations
 
 - `projects/agifcore_master/06_outputs/final_publication/closeout_records/bounded_intelligence_gate_summary.json`
 - `projects/agifcore_master/06_outputs/final_publication/closeout_records/bounded_intelligence_shadow_summary.json`
 - `projects/agifcore_master/06_outputs/final_publication/PUBLICATION_AUDIT_REPORT.md`
 - `projects/agifcore_master/06_outputs/final_publication/final_public_review_bundle/REVIEW_FIRST.md`
 
-## Status Language
+## 7. Status Language
 
 Use this wording only:
 
 - supported and closed: bounded intelligence baseline
 - failed / unproven / deferred: broad open-ended non-neural chat
-- not claimed: AGI

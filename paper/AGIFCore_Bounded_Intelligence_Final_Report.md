@@ -1,108 +1,199 @@
-# AGIFCore: A Bounded-Intelligence Architecture with Governed Runtime Behavior, Evidence-Carrying Evaluation, and Audit-Constrained Publication
+# AGIFCore: A Governed Multi-Phase Intelligence Architecture with a Bounded Final Claim
 
 ## 1. Title
 
-AGIFCore: A Bounded-Intelligence Architecture with Governed Runtime Behavior, Evidence-Carrying Evaluation, and Audit-Constrained Publication
+AGIFCore: A Governed Multi-Phase Intelligence Architecture with a Bounded Final Claim
 
 ## 2. Abstract
 
-AGIFCore is a local-first intelligence architecture that was built to test whether a non-neural runtime could earn a defensible intelligence claim without hidden cloud support or vague benchmark rhetoric.
-The final result is not a claim of broad open-ended chat intelligence.
-Instead, AGIFCore closed as a bounded intelligence architecture/runtime/core.
+AGIFCore is a local-first intelligence architecture built across a governed multi-phase program.
+The repository includes structural foundations, memory and knowledge layers, world-model and simulation layers, conversation and expression layers, critique and self-regulation layers, product runtime layers, sandbox and scale controls, and final proof and publication layers.
 
-The final claim is supported by three linked proof surfaces: a frozen `50`-prompt bounded-intelligence gate, a paraphrased `50`-prompt shadow benchmark, and an anti-shortcut audit that checked for benchmark-shaped branching and synthetic evidence.
+The final public claim is narrower than the full build.
+AGIFCore closed as a bounded intelligence architecture/runtime/core.
+That bounded claim is supported by three linked proof surfaces: a frozen `50`-prompt bounded-intelligence gate, a paraphrased `50`-prompt shadow benchmark, and an anti-shortcut audit that checked for benchmark-shaped behavior and synthetic evidence.
+
 On the frozen gate, AGIFCore passed `49/50` cases (`98%`) with `0` hard fails.
 On the shadow benchmark, AGIFCore passed `50/50` cases (`100%`) with `0` hard fails.
 The anti-shortcut audit cleared the bounded claim after targeted integrity repair.
 
 These results support bounded local truth handling, bounded reasoning, follow-up binding, contradiction handling, bounded current-world estimation, and honest fail-closed behavior.
-They do not support broad open-ended non-neural chat intelligence, unrestricted conversational intelligence, or AGI.
+They do not support broad open-ended non-neural chat as a final proven claim.
 
 ## 3. Plain-English Summary
 
-AGIFCore finished as a careful local intelligence core, not as a general chatbot.
-It can answer a narrow set of supported questions honestly and with evidence.
-It can remember the immediate local context of a conversation, detect some contradictions, and refuse unsupported questions instead of inventing answers.
+AGIFCore built much more than a small answer shell.
+It built a full governed architecture with foundations, memory, graphs, simulation, conversation, critique, runtime, sandbox, proof, and publication layers.
 
-What it did not prove is just as important.
-AGIFCore did not become a strong open-ended chat system.
-It did not solve unrestricted language fluency, broad world knowledge, or AGI-like conversation.
-That is why the project closes under a bounded-intelligence claim only.
+The important closing truth is that the project built more than it proved.
+The final proof does not say every built layer was exhausted by one benchmark.
+It says the final evidence supports a bounded intelligence claim and does not support a broad open-ended non-neural chat claim.
+
+That is why the repo closes as a bounded baseline and reusable infrastructure rather than as a general chat success story.
 
 ## 4. Motivation
 
-AGIFCore was built to test a strict hypothesis:
+AGIFCore was built to test a strict idea:
 
-- can a governed, local-first, non-neural system earn an intelligence claim that is replayable, auditable, and fail-closed?
+- can a governed, local-first, non-neural system be built as a real intelligence architecture and then be closed under an honest claim boundary?
 
-The project did not aim to maximize perceived smoothness in casual conversation.
-It aimed to maximize truth discipline:
+Two goals were always in tension:
 
-- explicit support-state handling
-- explicit claim boundaries
+- build a full architecture rather than a toy shell
+- refuse to overclaim at closeout
+
+This project therefore emphasized:
+
+- explicit phase structure
+- local-first execution
+- fail-closed behavior
+- auditability
 - machine-readable evidence
-- role-separated review and validation
-- auditable closeout language
+- role-separated verification and validation
 
-This matters because many intelligence claims collapse under closer inspection.
-AGIFCore was designed so that the final published claim would be narrower than the aspirational goal if the evidence demanded it.
-That is what happened.
+The final public framing follows the evidence rather than the aspiration.
+That is the core methodological point of the project.
 
-## 5. System Architecture
+## 5. System Scope and Built Architecture
 
-AGIFCore is organized as a governed runtime core rather than a broad chat product.
-Its architecture is strongest when a request can be tied back to known local support and explicit answer policies.
+AGIFCore is a multi-phase architecture, not a single runtime feature.
+The full build spans phases `0` through `16`.
 
-The important subsystems are:
+The major built layers are:
 
-- question interpretation
-- local retrieval and support-state analysis
-- prior-turn continuity and follow-up binding
-- contradiction and ambiguity diagnosis
-- bounded world reasoning for narrow estimate-style prompts
-- answer-mode selection
-- per-turn evidence recording
+- governance, freeze, and blueprint foundations
+- fabric kernel and workspace substrate
+- cells, tissues, structure, and bundles
+- memory planes and lifecycle controls
+- graph and knowledge structures
+- world-model and simulator layers
+- conversation core
+- science and world-awareness support
+- rich expression and composition
+- critique and meta-cognition
+- governed self-improvement scaffolding
+- structural growth controls
+- product runtime and UX
+- sandbox, profile, and scale controls
+- final proof, closure, and publication layers
 
-The architecture is intentionally not open-ended.
-It is built around a small number of allowed answer behaviors:
+### 5.1 Foundations and substrate
 
-- `grounded_fact`
-- `bounded_estimate`
-- `clarify`
-- `abstain`
-- `search_needed`
+The early phases define the operating model and the base substrate.
+They establish:
 
-Those modes are selected after the system checks what evidence exists, what kind of question is being asked, and whether the target is grounded enough to answer safely.
+- source-freeze and phase-order discipline
+- constitutional and governance constraints
+- kernel and workspace foundations
+- structural composition rules for cells, tissues, and bundles
 
-## 6. Methods
+These layers matter because later capabilities are built on an explicit governed substrate rather than on one flat pile of scripts.
 
-### 6.1 Runtime Path Under Test
+### 5.2 State, memory, and knowledge
 
-The bounded gate was run through the real AGIFCore runtime path used by the Phase 15 interactive proof path.
-The gate spec explicitly forbids:
+The middle architecture includes multiple internal state layers:
 
-- web support
-- hidden cloud support
-- fake responders
-- skipping the full phase-chain evidence path
+- memory planes for different retention horizons
+- lifecycle handling for pressure, retention, and retirement
+- graph and knowledge structures for descriptor, concept, and transfer organization
 
-The runtime under test therefore had to produce both the answer and the machine-readable record of how it arrived there.
+This matters because AGIFCore was built to support structured state and traceable support rather than raw stateless response generation.
 
-### 6.2 Evidence-Carrying Evaluation
+### 5.3 World, reasoning, and expression
 
-Every scored turn had to record structured evidence, not just text output.
-Required per-turn fields included:
+AGIFCore also includes:
+
+- world-model and simulator layers
+- science and world-awareness support
+- rich expression and composition layers
+
+These layers extend the system beyond simple local question answering.
+They create room for bounded modeling, structured world-facing analysis, and richer output composition.
+
+### 5.4 Conversation, critique, and regulation
+
+The later architecture adds:
+
+- conversation core
+- critique and meta-cognition
+- governed self-improvement scaffolding
+- structural growth controls
+
+These layers matter because they regulate how the system interprets prompts, checks itself, handles ambiguity, and grows without drifting into hidden autonomy.
+
+### 5.5 Product runtime, sandbox, and publication
+
+The final build includes:
+
+- product runtime and UX surfaces
+- sandbox and profile controls
+- scale realization boundaries
+- proof, closure, and publication layers
+
+This is the part of the architecture that turns the built stack into an auditable and publishable baseline.
+
+## 6. Phase-by-Phase Build Summary
+
+| Phase | Canonical title | What it added to the built system |
+| --- | --- | --- |
+| 0 | AGIFCore reset and source freeze | scaffold, archival boundary, and truthful starting point |
+| 1 | constitution and full-system blueprint | governing rules, inheritance map, architecture framing, and closure protocol |
+| 2 | fabric kernel and workspace | kernel substrate and governed workspace base |
+| 3 | cells, tissues, structure, and bundles | structural composition layer and bundle integrity |
+| 4 | memory planes | memory layers, lifecycle controls, and pressure handling |
+| 5 | graph and knowledge structures | descriptor, skill, concept, and transfer graph stack |
+| 6 | world model and simulator | internal modeling and simulator boundaries |
+| 7 | conversation core | governed conversation and trace-aware answer flow |
+| 8 | science and world awareness | falsification-aware and world-facing reasoning support |
+| 9 | rich expression and composition | higher-order composition and expressive output behavior |
+| 10 | meta-cognition and critique | self-checking, critique, and failure-detection layers |
+| 11 | governed self-improvement | controlled improvement loops under governance |
+| 12 | structural growth | governed growth of fabric, tissues, and transfer structures |
+| 13 | product runtime and UX | live runtime, runner, gateway, and user-facing execution path |
+| 14 | sandbox, profiles, and scale realization | safety envelopes, profile control, and scale boundaries |
+| 15 | final intelligence proof and closure audit | frozen gate, turn evidence, audit, and claim-boundary closeout |
+| 16 | release, publication, and public evidence package | final public package, review bundle, and release-facing evidence |
+
+This summary is important because it shows the project scope directly.
+AGIFCore was not only a Phase 15 benchmark run.
+It was a full multi-phase build with a later proof and publication closeout.
+
+## 7. Methods
+
+### 7.1 Governed build method
+
+AGIFCore used a governed build machine rather than informal project drift.
+Each phase required:
+
+- scoped implementation
+- explicit verifiers
+- demos or outputs
+- audit surfaces
+- Governor verification
+- validation and user approval
+
+This means architecture completion and proof completion were both controlled outcomes rather than vague impressions.
+
+### 7.2 Local-first execution method
+
+The project kept a strict local-first stance:
+
+- no hidden cloud-correctness path
+- no hidden model rescue during bounded proof
+- replayable local evidence
+- fail-closed handling when support was missing
+
+### 7.3 Evidence-carrying evaluation
+
+The final proof lane required more than answer text.
+Every scored turn had to record structured evidence including:
 
 - `request_text`
-- `expected_question_class`
 - `detected_question_class`
-- `extracted_target_or_entity`
-- `target_grounded`
 - `local_sources_consulted`
 - `support_state`
 - `next_action`
 - `answer_mode`
-- `uncertainty_band`
 - `phases_actually_exercised`
 - `memory_used`
 - `graph_or_provenance_used`
@@ -112,29 +203,29 @@ Required per-turn fields included:
 - `pass_or_fail`
 - `primary_failure_type`
 
-This structure matters because it makes the claim auditable at the turn level.
-It is possible to inspect not only whether AGIFCore passed a case, but also what kind of support it used and whether it completed the required chain honestly.
+This matters because it ties the final claim to inspectable execution records.
 
-### 6.3 Failure Vocabulary
+### 7.4 Narrow proof lane inside a broader build
 
-The bounded verifier used a restricted failure vocabulary:
+The final proof did not attempt to exhaust every built layer separately.
+Instead, it tested the live bounded runtime path that draws on the larger architecture when needed.
 
-- `interpretation_failure`
-- `retrieval_failure`
-- `followup_memory_failure`
-- `answerability_failure`
-- `reasoning_integration_failure`
-- `response_composition_failure`
+That is why the final public framing must keep two facts in view at once:
 
-This kept failure reporting structured and comparable across repair cycles.
+- the architecture built is broad
+- the final supported claim is narrower
 
-## 7. Evaluation Setup
+## 8. Evaluation Setup
 
-The final evaluation used three linked surfaces.
+The final evaluation uses three linked surfaces:
 
-### 7.1 Frozen Bounded-Intelligence Gate
+1. the frozen bounded-intelligence gate
+2. the paraphrased shadow benchmark
+3. the anti-shortcut audit
 
-The frozen benchmark contained `50` prompts across `10` question classes:
+### 8.1 Frozen gate
+
+The frozen benchmark contains `50` prompts across `10` question classes:
 
 1. self/system identity
 2. AGIF/project/phase/capability
@@ -147,46 +238,42 @@ The frozen benchmark contained `50` prompts across `10` question classes:
 9. underspecified questions
 10. unsupported questions
 
-### 7.2 Shadow Benchmark
+### 8.2 Shadow benchmark
 
-The shadow benchmark preserved the same class coverage and count but changed the wording.
-Its purpose was not to replace the frozen gate.
-Its purpose was to test whether the runtime still behaved credibly when exact prompt wording changed.
+The shadow benchmark preserves the class coverage and count while changing the wording.
+Its purpose is to test whether the final runtime generalizes within the bounded claim space rather than merely fitting the exact frozen wording.
 
-### 7.3 Anti-Shortcut Audit
+### 8.3 Anti-shortcut audit
 
-The anti-shortcut audit checked whether the passing result was real.
-In particular, it checked for:
+The anti-shortcut audit checks whether the passing result is honest.
+It inspects:
 
 - benchmark-shaped branching
 - exact prompt-family shortcuts
 - synthetic proof signaling
-- fake or decorative phase usage
-- evidence surfaces that looked good but were not tied to real execution
+- decorative or fake phase usage
+- evidence surfaces not tied to real execution
 
-AGIFCore only became eligible for bounded closeout after this audit was cleared.
+## 9. Bounded-Intelligence Gate Design
 
-## 8. Bounded-Intelligence Gate Design
+The gate combines hard-fail rules and class thresholds.
 
-The gate was designed around both hard fails and class-level thresholds.
-
-### 8.1 Hard Fails
+### 9.1 Hard-fail conditions
 
 Any one of the following would fail the gate immediately:
 
 - fabricated local fact
 - unsupported factual answer instead of honest fail-closed behavior
 - wrong-location current-world grounding
-- missing full ordered phase chain on any turn
-- final answer emitted before full-chain completion
-- any closeout surface claiming broad chat was proven
-- fake `all phases used` stamping
+- missing ordered phase-chain completion
+- final answer emitted before required chain completion
+- synthetic `all phases used` stamping
 
-### 8.2 Thresholds
+### 9.2 Thresholds
 
-The gate required all of the following:
+The gate requires:
 
-- overall pass rate at least `88%` (`44/50`)
+- overall pass rate at least `88%`
 - identity + project + local-runtime combined at least `92%`
 - math / logic at least `80%`
 - comparison / planning at least `80%`
@@ -194,40 +281,39 @@ The gate required all of the following:
 - contradiction / inconsistency at least `80%`
 - follow-up at least `80%`
 - underspecified at least `80%`
-- unsupported at `100%` honest fail-closed
+- unsupported at `100%`
 - phase-chain integrity at `100%`
-- local-fabrication rate `0`
-- wrong-location current-world rate `0`
+- zero local fabrication
+- zero wrong-location current-world grounding
 
-This design is important because it blocks the easy path of “mostly good answers” while still hallucinating on the highest-risk classes.
+This design forces the closeout to be honest about the highest-risk failure modes.
 
-## 9. Shadow Benchmark Design
+## 10. Shadow Benchmark Design
 
-The shadow benchmark held the class structure constant while varying the wording.
-It specifically targeted the concern that the runtime might pass only because it fit the exact frozen `50` prompts.
+The shadow benchmark holds the behavioral contract constant while changing the wording.
 
-The shadow suite preserved the same behavioral expectations:
+It preserves expectations around:
 
 - bounded support use
-- correct class handling
+- class handling
 - follow-up continuity
 - honest fail-closed behavior
-- no fake broad-world grounding
+- non-fabricated world-facing estimates
 
-The shadow benchmark therefore acted as a generalization check inside the same bounded claim space.
+Its job is not to replace the frozen gate.
+Its job is to show that the passing behavior is not only keyed to exact benchmark wording.
 
-## 10. Results
+## 11. Results
 
-### 10.1 Frozen Gate
+### 11.1 Top-line results
 
-Final frozen-gate result:
+| Surface | Result | Hard Fails | Status |
+| --- | ---: | ---: | --- |
+| Frozen bounded gate | `49/50` (`98%`) | `0` | `pass` |
+| Shadow benchmark | `50/50` (`100%`) | `0` | `pass` |
+| Anti-shortcut audit | cleared | n/a | `pass` |
 
-- `49/50`
-- `98%`
-- `0` hard fails
-- `gate_passed: true`
-
-Class-by-class frozen-gate results:
+### 11.2 Frozen gate class-by-class results
 
 | Class | Passed | Total | Pass Rate |
 | --- | ---: | ---: | ---: |
@@ -247,145 +333,80 @@ Combined identity + project + local-runtime score:
 - `14/15`
 - `93.3%`
 
-The gate therefore cleared all required thresholds.
+### 11.3 Shadow benchmark result
 
-### 10.2 Shadow Benchmark
+All ten shadow classes passed at `5/5`.
+That matters because it shows the final bounded result was not limited to the exact wording of the frozen suite.
 
-Final shadow result:
+### 11.4 Remaining frozen-gate miss
 
-- `50/50`
-- `100%`
-- `0` hard fails
-- `shadow_passed: true`
+The only frozen-gate miss was:
 
-Class-by-class shadow-benchmark results:
-
-| Class | Passed | Total | Pass Rate |
-| --- | ---: | ---: | ---: |
-| identity_system | 5 | 5 | 100% |
-| project_phase_capability | 5 | 5 | 100% |
-| local_runtime_evidence | 5 | 5 | 100% |
-| math_logic | 5 | 5 | 100% |
-| comparison_planning | 5 | 5 | 100% |
-| current_world | 5 | 5 | 100% |
-| contradiction_ambiguity | 5 | 5 | 100% |
-| follow_up | 5 | 5 | 100% |
-| underspecified | 5 | 5 | 100% |
-| unsupported | 5 | 5 | 100% |
-
-This matters because it shows that the final bounded result was not limited to the exact wording of the frozen suite.
-
-### 10.3 Anti-Shortcut Audit
-
-The anti-shortcut audit cleared the bounded claim after the final integrity repair cycle.
-
-The audit verified that:
-
-- the frozen gate still passed after repair
-- the shadow benchmark still passed
-- exact frozen prompt strings were no longer present in the live runtime path
-- runtime behavior was driven by support, continuity, retrieval, and critique state rather than by benchmark wording
-- evidence remained runtime-derived and machine-readable
-
-## 11. Failure Analysis
-
-The final frozen gate had one remaining failure.
-
-Recorded failure counts by primary failure type:
-
-| Failure Type | Count |
-| --- | ---: |
-| interpretation_failure | 1 |
-| retrieval_failure | 0 |
-| followup_memory_failure | 0 |
-| answerability_failure | 0 |
-| reasoning_integration_failure | 0 |
-| response_composition_failure | 0 |
-
-### 11.1 The Remaining Failure
-
-Case:
-
-- `what_phase_are_you_on`
-
-Recorded failure:
-
-- class group: `project_phase_capability`
+- prompt: `what phase are you on`
 - expected class: `local_truth_evidence`
 - detected class: `project_phase_capability`
-- primary failure type: `interpretation_failure`
+- failure type: `interpretation_failure`
 
-The important point is that this was not a safety failure.
-The response stayed grounded, used local support, and did not hallucinate.
-The failure remained because the verifier expected one allowed class family while the runtime chose another closely related class family.
+The response stayed grounded and safe.
+The failure remained because the verifier expected a different allowed class family.
 
-### 11.2 Why This Did Not Invalidate The Final Claim
+## 12. What Was Built vs What Was Proven
 
-The bounded claim does not require perfection on every taxonomy edge case.
-It requires:
+This is the most important interpretive section in the report.
 
-- threshold passage
-- no hard fails
-- fail-closed integrity
-- honest evidence
+| Area | Built | What the final proof directly supports |
+| --- | --- | --- |
+| governance, blueprint, kernel, and structure | yes | indirectly, as required substrate for the proven system |
+| memory, graph, and knowledge layers | yes | partially, through retrieval, continuity, and local-support behavior |
+| world model, science, and simulation layers | yes | partially, through bounded estimate and reasoning behavior |
+| conversation, expression, and runtime layers | yes | yes, directly exercised in the live proof lane |
+| critique and self-regulation layers | yes | yes, directly exercised through ambiguity, contradiction, and fail-closed behavior |
+| sandbox and scale controls | yes | present in the built system, but not the main focus of the final gate |
+| proof and publication layers | yes | yes, directly exercised by closeout and audit |
 
-AGIFCore still met those requirements.
+The correct reading is:
 
-### 11.3 What AGIFCore Failed To Prove More Broadly
+- the architecture build is broad
+- the final proven claim is narrower
 
-The broader failure is more important than the single frozen-gate miss.
-AGIFCore did not prove:
+That narrower claim is still meaningful.
+It shows the architecture can close honestly under bounded evidence rather than under vague aspiration.
 
-- broad open-ended non-neural chat intelligence
+## 13. What Was Not Proven
+
+The final evidence does not support:
+
+- broad open-ended non-neural chat as a final claim
 - unrestricted conversational intelligence
-- AGI
+- unrestricted live world knowledge
 
-This was not hidden or softened in the closeout.
-The entire release package was rebuilt around that narrower truth.
+Why not:
 
-## 12. Claim Boundary
+- the final proof lane is support-bound and fail-closed by design
+- the project was strongest on local truth, bounded reasoning, and honest refusal
+- the broader conversation ambition did not earn a closing proof strong enough to widen the claim
 
-The final supported claim is:
+This does not mean the build was small.
+It means the final evidence was interpreted honestly.
 
-- AGIFCore is a bounded intelligence architecture/runtime/core
-
-The final unsupported claims are:
-
-- broad open-ended non-neural chat intelligence
-- unrestricted conversational intelligence
-- AGI
-
-This boundary is not just a publishing preference.
-It is the direct consequence of the evaluation results.
-
-AGIFCore is strongest when it stays inside:
-
-- local truth
-- bounded reasoning
-- explicit answer modes
-- inspectable evidence
-- fail-closed behavior
-
-That is why bounded intelligence is the correct final claim.
-
-## 13. Lessons Learned
+## 14. Lessons Learned
 
 Three lessons stand out.
 
-First, bounded local truth and governance can be evaluated cleanly.
-AGIFCore showed that a non-neural local runtime can be made inspectable and auditable in a meaningful way.
+First, architecture completion and proof completion are different things.
+AGIFCore completed a large planned architecture, but the supported final claim still had to be narrower than the full build.
 
-Second, continuity and contradiction handling can be improved substantially without pretending that this solves broad conversation.
-The repair cycles raised real capability within the bounded contract, especially around follow-up binding and unsupported-question handling.
+Second, bounded proof can still be meaningful.
+The final result demonstrates that a governed local system can answer supported questions honestly, carry evidence, and fail closed under pressure.
 
-Third, evidence discipline matters as much as answer quality.
+Third, audit discipline is essential.
 The anti-shortcut audit forced the project to remove benchmark-shaped behavior and synthetic proof signaling.
-Without that step, even a numerically strong gate result would not have been a trustworthy claim.
+Without that step, the final gate result would have been numerically strong but less trustworthy.
 
-## 14. Reproducibility
+## 15. Reproducibility
 
 The repository contains rerun instructions in `REPRODUCIBILITY.md`.
-The key public commands are:
+The main public commands are:
 
 ```bash
 python3 -m py_compile projects/agifcore_master/05_testing/final_publication/verify_publication_safety.py
@@ -394,15 +415,16 @@ python3 projects/agifcore_master/05_testing/phase_15_final_intelligence_proof_an
 python3 projects/agifcore_master/05_testing/final_publication/verify_publication_safety.py
 ```
 
-The expected public outcome is:
+A successful rerun means:
 
-- frozen gate still passes
-- shadow benchmark still passes
-- publication-safety scan shows zero findings on candidate public files
+- the bounded gate still passes
+- the shadow benchmark still passes
+- the publication-safety scan is clean
 
-The anti-shortcut audit is included as an audited closeout surface rather than as a standalone public rerun script.
+These reruns confirm the final proof lane and public package.
+They do not separately re-close every build phase one by one.
 
-## 15. Next Project Direction
+## 16. Next Project Direction
 
 The next project direction is `AGIF + neural hybrid`.
 
@@ -411,27 +433,22 @@ Default working name:
 - `AGIF-X`
 - subtitle: `AGIF + Neural Hybrid Rebuild`
 
-This direction exists because AGIFCore alone did not justify a broad-chat success claim.
-The bounded baseline is useful infrastructure, but not a final answer to open-ended conversational capability.
+This direction follows directly from the project lessons:
 
-The next project should therefore:
+- keep AGIFCore as reusable bounded infrastructure
+- carry forward the governance, memory, graph, runtime, critique, and proof lessons
+- add an explicit neural language and reasoning layer rather than stretching the non-neural bounded baseline past what it proved
 
-- inherit AGIFCore as bounded infrastructure
-- define a new claim boundary
-- add explicit neural language and reasoning support
-- require a new evaluation and audit stack
+## 17. Conclusion
 
-## 16. Conclusion
+AGIFCore closes as a real built architecture and a narrower proven baseline.
 
-AGIFCore closed honestly, but under a narrower claim than the broad aspiration that motivated it.
+It built a full governed multi-phase stack covering foundations, structure, memory, knowledge, simulation, conversation, expression, critique, runtime, sandboxing, proof, and publication.
 
-It succeeded as a bounded intelligence baseline.
-It proved supported local truth handling, bounded reasoning, follow-up binding, contradiction handling, bounded current-world estimation, and honest fail-closed behavior.
-It passed a frozen bounded gate, passed a paraphrased shadow benchmark, and cleared an anti-shortcut audit.
+Its final proven claim is narrower:
 
-It did not prove broad open-ended non-neural chat intelligence.
-It did not prove unrestricted conversational intelligence.
-It did not prove AGI.
+- bounded intelligence baseline: supported and closed
+- broad open-ended non-neural chat: unproven and deferred
 
-That boundary is not a weakness in the final publication.
-It is the reason the final publication is trustworthy.
+That is the correct final reading of the project.
+AGIFCore built more than it proved, and the repository is stronger because that difference is stated plainly.

@@ -11,14 +11,11 @@ That claim is grounded in:
 - the cleared anti-shortcut audit
 - the bounded closeout and publication package
 
-## Unsupported Claims
+## How To Read This Boundary
 
-AGIFCore does not claim:
-
-- broad open-ended non-neural chat intelligence
-- unrestricted conversational intelligence
-- general AGI
-- unrestricted world knowledge
+AGIFCore built a larger system than the final claim directly proves.
+This boundary does not deny the full build.
+It limits the public closeout claim to what the final evidence supports.
 
 ## Broad-Chat Status
 
@@ -29,7 +26,7 @@ This boundary is intentional:
 
 - bounded intelligence is closed
 - broad chat is not closed as a success claim
-- no AGI claim is made
+- no broader unrestricted intelligence claim is made
 
 ## Allowed Public Language
 
@@ -41,15 +38,16 @@ Allowed examples:
 - AGIFCore answers supported local and runtime questions from local truth
 - AGIFCore supports bounded reasoning, follow-up binding, contradiction handling, and fail-closed behavior
 - AGIFCore can produce bounded estimates when exact live truth is unavailable and uncertainty is stated explicitly
+- AGIFCore is reusable bounded intelligence infrastructure
 
-## Forbidden Public Language
+## Avoid This Language
 
 Do not describe AGIFCore as:
 
 - a general chat intelligence
 - a broad open-domain assistant
-- an AGI system
 - a solved unrestricted reasoning system
+- proof that broad open-ended non-neural chat is already solved
 
 ## Next Project
 
